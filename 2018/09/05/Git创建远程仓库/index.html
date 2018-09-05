@@ -47,7 +47,7 @@
 <meta property="og:description" content="首先要有一个GitHub账户，这是必须的。然后我们访问https://github.com/new ，开始在GitHub网站上创建一个新的仓库。其中对其中三个选项具体说明一下。Initialize this repository with a README: 在 Initialize this repository with a README选项上打钩，随后 GitHub会自动初始化仓库并设置RE">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fuyxi82k49j30g407vt91.jpg">
-<meta property="og:updated_time" content="2018-09-05T13:13:56.474Z">
+<meta property="og:updated_time" content="2018-09-05T13:20:48.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git创建远程仓库">
 <meta name="twitter:description" content="首先要有一个GitHub账户，这是必须的。然后我们访问https://github.com/new ，开始在GitHub网站上创建一个新的仓库。其中对其中三个选项具体说明一下。Initialize this repository with a README: 在 Initialize this repository with a README选项上打钩，随后 GitHub会自动初始化仓库并设置RE">
@@ -427,7 +427,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fuyxi82k49j30g407vt91.jpg" rel="gallery_cjlp5zxnw000048wa338yx7ho"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fuyxi82k49j30g407vt91.jpg" rel="gallery_cjlp68u3p000044wapfyd8igg"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyxi82k49j30g407vt91.jpg" itemprop="contentUrl"/>
               </a>
@@ -445,9 +445,9 @@
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyicgrvej30ds02l748.jpg" alt=""><br>然后，我们进入/ubuntu-guide目录创建一个文件，并写入一点东西进去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ touch ubuntu-wiki.md</span><br><span class="line">$ vim ubuntu-wiki.md</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyjmzyy4j30fy08wjrh.jpg" alt=""><br>操作方式和Linux基本一致。保存退出后，我们可以查看一下是否已经成功写入。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cat ubuntu-wiki.md</span><br><span class="line">ubuntu是一款以桌面应用为主的开源GNU/Linux操作系统</span><br></pre></td></tr></table></figure></p>
 <p>我们可以查看一下当前的状态。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyjmzyy4j30fy08wjrh.jpg" alt=""><br>然后我们需要关联远程仓库，使本地的git和GitHub关联在一起，以便我们可以在本地管理并提交代码到GitHub上去<br>初次使用的时候，需要先进行连接。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@email.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyz5nm03lj30fa045749.jpg" alt=""><br>可以从中看出我们新建的<code>ubuntu-wiki.md</code>还未提交。<br>然后我们需要关联远程仓库，使本地的git和GitHub关联在一起，以便我们可以在本地管理并提交代码到GitHub上去<br>初次使用的时候，需要先进行连接。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@email.com&quot;</span><br></pre></td></tr></table></figure></p>
 <p>一直回车即可。<br>git会提示你key的目录，你进入该目录，找到<code>id_rsa.pub</code>文件，打开即可看到key了。id_rsa.pub 是公开密钥。<br>我们打开后，把里面的内容全部复制粘贴进<a href="https://github.com/settings/ssh/new" target="_blank" rel="noopener">https://github.com/settings/ssh/new</a>中的key里，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>你需要手动输入一下你的GitHub的登陆密码。<br>如图所示，已经成功连接。<br> <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyypxwwxfj30g001zwed.jpg" alt=""><br> 现在我们可以把我们刚才新建的<code>ubuntu-wiki.md</code>提交到GitHub上去了。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add .  #  .表示提交全部文件，你也可以后跟具体文件名，指定只提交某个文件</span><br><span class="line">$ git commit -m &quot;添加描述&quot;  # 添加描述是为了以后方便进行版本回退，找到历史版本</span><br><span class="line">$ git push  # 提交暂存区到仓库区</span><br></pre></td></tr></table></figure></p>
+<p>你需要手动输入一下你的GitHub的登陆密码。<br>如图所示，已经成功连接。<br> <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyypxwwxfj30g001zwed.jpg" alt=""><br> 现在我们可以把我们刚才新建的<code>ubuntu-wiki.md</code>提交到GitHub上去了。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add .  #  向暂存区中添加文件，.表示提交全部文件，你也可以后跟具体文件名，指定只提交某个文件</span><br><span class="line">$ git commit -m &quot;添加描述&quot;  # 添加描述是为了以后方便进行版本回退，找到历史版本</span><br><span class="line">$ git push  # 提交暂存区到仓库区</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyu8axh8j30gr07g3z1.jpg" alt=""><br>我们刷新一下GitHub的页面，可以看到已经把新建的<code>ubuntu-wiki.md</code>文件提交到了GitHub上去。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyya1zdmj31170j275o.jpg" alt=""><br>我们以后需要做的就是，在本地写好代码，然后继续按照<code>git add .</code>—-→<code>git commit -m &quot;&quot;</code>—-→ ‘git push’的顺序提交给GitHub上去就可以了。</p>
 </span>
       
