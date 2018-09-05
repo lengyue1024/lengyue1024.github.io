@@ -1,0 +1,510 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> IPv6的工具包描述</h2><p style="text-align: justify;">该SI6网络公司的IPv6工具箱是一套IPv6的安全评估和故障排除工具。它可以被利用来执行IPv6网络的安全性评估，通过执行真实世界的攻击他们评估IPv6设备的弹性和麻烦射击IPv6的网络问题。包括从包各具特色的工具，该工具包范围的工具，在那里（我们scan6工具）任意邻居发现报文发送到最全面的IPv6网络扫描工具。 </p><p>包括工具： </p><ul><li> addr6：IPv6地址分析和操作工具</li><li> flow6：进行IPv6的流标签的安全asseessment的工具</li><li> frag6：一个工具来执行IPv6碎片的攻击，并执行了许多碎片相关方面安全评估</li><li> ICMP6：这种工具可以根据差错报消息进行攻击</li><li> jumbo6：一种工具来评估IPv6中的超长报文的处理潜在缺陷</li><li> NA6：这种工具可以发送任意邻居通告消息</li><li> NI6：一种工具，在这样的数据包的处理发送任意的ICMPv6节点信息的消息，并评估可能出现的瑕疵</li><li> NS6：发送任意的邻居请求消息的工具</li><li> RA6：发送任意的路由器通告信息的工具</li><li> RD6：这种工具可以发送任意的ICMPv6重定向报文</li><li> RS6：发送任意的路由器请求消息的工具</li><li> scan6：IPv6地址扫描工具</li><li> TCP6：发送任意的TCP段和执行各种基于TCP的攻击的工具。 </li></ul><p>资料来源：http://www.si6networks.com/tool​​s/ipv6toolkit/ <br> <a href="javascript:if(confirm('http://www.si6networks.com/tools/ipv6toolkit/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.si6networks.com/tools/ipv6toolkit/'" tppabs="http://www.si6networks.com/tools/ipv6toolkit/" variation="deepblue" target="blank">IPv6的工具包首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/ipv6-toolkit.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/ipv6-toolkit.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/ipv6-toolkit.git;a=summary" variation="deepblue" target="blank">卡利IPv6的工具包回购</a> </p><ul><li>作者：费尔南多Gont </li><li>许可：GPLv3的</li></ul><h3>包括在IPv6的工具包工具</h3><h5> flow6 - 安全评估工具对IPv6的流标签字段</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="2a5845455e6a414b4643">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# flow6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+flow6: Security assessment tool for the IPv6 Flow Label field<br>
+<br>
+usage: flow6 -i INTERFACE -d DST_ADDR [-S LINK_SRC_ADDR] [-D LINK-DST-ADDR]<br>
+       [-s SRC_ADDR[/LEN]] [-A HOP_LIMIT] [-P PROTOCOL] [-p PORT]<br>
+       [-W] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i           Network interface<br>
+  --link-src-address, -S    Link-layer Destination Address<br>
+  --link-dst-address, -D    Link-layer Source Address<br>
+  --src-address, -s         IPv6 Source Address<br>
+  --dst-address, -d         IPv6 Destination Address<br>
+  --hop-limit, -A           IPv6 Hop Limit<br>
+  --protocol, -P            IPv6 Payload protocol (valid: TCP, UDP)<br>
+  --dst-port, -p            Transport Protocol Destination Port<br>
+  --flow-label-policy, -W   Assess the Flow Label generation policy<br>
+  --help, -h                Print help for the flow6 tool<br>
+  --verbose, -v             Be verbose<br>
+<br>
+Programmed by Fernando Gont on behalf of SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="6006070f0e14201309560e0514170f120b134e030f0d">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> ICMP6 - 评估工具，攻击向量的基础上的ICMPv6错误信息</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="24564b4b50644f45484d">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# icmp6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+icmp6: Assessment tool for attack vectors based on ICMPv6 error messages<br>
+<br>
+usage: icmp6 -i INTERFACE [-s SRC_ADDR[/LEN]] [-d DST_ADDR]<br>
+       [-S LINK_SRC_ADDR] [-D LINK-DST-ADDR] [-c HOP_LIMIT] [-y FRAG_SIZE]<br>
+       [-u DST_OPT_HDR_SIZE] [-U DST_OPT_U_HDR_SIZE] [-H HBH_OPT_HDR_SIZE]<br>
+       [-t TYPE[:CODE] | -e CODE | -A CODE -V CODE -R CODE] [-r TARGET_ADDR]<br>
+       [-x PEER_ADDR] [-c HOP_LIMIT] [-m MTU] [-O POINTER] [-p PAYLOAD_TYPE]<br>
+       [-P PAYLOAD_SIZE] [-n] [-a SRC_PORTL[:SRC_PORTH]]<br>
+       [-o DST_PORTL[:DST_PORTH]] [-X TCP_FLAGS] [-q TCP_SEQ] [-Q TCP_ACK]<br>
+       [-V TCP_URP] [-w TCP_WIN] [-M] [-j PREFIX[/LEN]] [-k PREFIX[/LEN]]<br>
+       [-J LINK_ADDR] [-K LINK_ADDR] [-b PREFIX[/LEN]] [-g PREFIX[/LEN]]<br>
+       [-B LINK_ADDR] [-G LINK_ADDR] [-f] [-L | -l] [-z] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i             Network interface<br>
+  --src-address, -s           IPv6 Source Address<br>
+  --dst-address, -d           IPv6 Destination Address<br>
+  --hop-limit, -c             IPv6 Hop Limit<br>
+  --frag-hdr. -y              Fragment Header<br>
+  --dst-opt-hdr, -u           Destination Options Header (Fragmentable Part)<br>
+  --dst-opt-u-hdr, -U         Destination Options Header (Unfragmentable Part)<br>
+  --hbh-opt-hdr, -H           Hop by Hop Options Header<br>
+  --link-src-address, -S      Link-layer Destination Address<br>
+  --link-dst-address, -D      Link-layer Source Address<br>
+  --icmp6, -t                 ICMPv6 Type:Code<br>
+  --icmp6-dest-unreach, -e    ICMPv6 Destination Unreachable<br>
+  --icmp6-packet-too-big, -E  ICMPv6 Packet Too Big<br>
+  --icmp6-time-exceeded, -A   ICMPv6 Time Exceeeded<br>
+  --icmp6-param-problem, -R   ICMPv6 Parameter Problem<br>
+  --mtu, -m                   Next-Hop MTU (ICMPv6 Packet Too Big)<br>
+  --pointer, -O               Pointer (ICMPv6 Parameter Problem<br>
+  --payload-type, -p          Redirected Header Payload Type<br>
+  --payload-size, -P          Redirected Header Payload Size<br>
+  --no-payload, -n            Do not include a Redirected Header Option<br>
+  --ipv6-hlim, -C             ICMPv6 Payload's Hop Limit<br>
+  --target-addr, -r           ICMPv6 Payload's IPv6 Source Address<br>
+  --peer-addr, -x             ICMPv6 Payload's IPv6 Destination Address<br>
+  --target-port, -o           ICMPv6 Payload's Source Port<br>
+  --peer-port, -a             ICMPv6 Payload's Destination Port<br>
+  --tcp-flags, -X             ICMPv6 Payload's TCP Flags<br>
+  --tcp-seq, -q               ICMPv6 Payload's TCP SEQ Number<br>
+  --tcp-ack, -Q               ICMPv6 Payload's TCP ACK Number<br>
+  --tcp-urg, -V               ICMPv6 Payload's TCP URG Pointer<br>
+  --tcp-win, -w               ICMPv6 Payload's TCP Window<br>
+  --resp-mcast, -M            Respond to Multicast Packets<br>
+  --block-src, -j             Block IPv6 Source Address prefix<br>
+  --block-dst, -k             Block IPv6 Destination Address prefix<br>
+  --block-link-src, -J        Block Ethernet Source Address<br>
+  --block-link-dst, -K        Block Ethernet Destination Address<br>
+  --accept-src, -b            Accept IPv6 Source Addres prefix<br>
+  --accept-dst, -g            Accept IPv6 Destination Address prefix<br>
+  --accept-link-src, -B       Accept Ethernet Source Address<br>
+  --accept-link-dst, -G       Accept Ethernet Destination Address<br>
+  --sanity-filters, -f        Add sanity filters<br>
+  --listen, -L                Listen to incoming traffic<br>
+  --loop, -l                  Send periodic ICMPv6 error messages<br>
+  --sleep, -z                 Pause between sending ICMPv6 error messages<br>
+  --help, -h                  Print help for the icmp6 tool<br>
+  --verbose, -v               Be verbose<br>
+<br>
+ Programmed by Fernando Gont for SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+ Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="4b2d2c24253f0b38227d252e3f3c2439203865282426">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> NS6 - 安全评估工具基于NS报文的攻击向量</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="5f2d30302b1f343e3336">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# ns6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+ns6: Security assessment tool for attack vectors based on NS messages<br>
+<br>
+usage: ns6 -i INTERFACE [-s SRC_ADDR[/LEN]] [-d DST_ADDR] [-y FRAG_SIZE] [-u DST_OPT_HDR_SIZE] [-U DST_OPT_U_HDR_SIZE] [-H HBH_OPT_HDR_SIZE] [-S LINK_SRC_ADDR] [-D LINK-DST-ADDR] [-E LINK_ADDR] [-e] [-t TARGET_ADDR[/LEN]] [-F N_SOURCES] [-T N_TARGETS] [-z SECONDS] [-l] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i            Network interface<br>
+  --src-address, -s          IPv6 Source Address<br>
+  --dst-address, -d          IPv6 Destination Address<br>
+  --frag-hdr. -y             Fragment Header<br>
+  --dst-opt-hdr, -u          Destination Options Header (Fragmentable Part)<br>
+  --dst-opt-u-hdr, -U        Destination Options Header (Unfragmentable Part)<br>
+  --hbh-opt-hdr, -H          Hop by Hop Options Header<br>
+  --link-src-address, -S     Link-layer Destination Address<br>
+  --link-dst-address, -D     Link-layer Source Address<br>
+  --target-address, -t       ND Target Address<br>
+  --source-lla-opt, -E       Source link-layer address option<br>
+  --add-slla-opt, -e         Add Source link-layer address option<br>
+  --flood-sources, -F        Number of Source Addresses to forge randomly<br>
+  --flood-targets, -T        Flood with NA's for multiple Target Addresses<br>
+  --loop, -l                 Send Neighbor Solicitations periodically<br>
+  --sleep, -z                Pause between peiodic Neighbor Solicitations<br>
+  --help, -h                 Print help for the ns6 tool<br>
+  --verbose, -v              Be verbose<br>
+<br>
+Programmed by Fernando Gont for SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="e78180888993a7948ed18982939088958c94c984888a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> NA6 - 安全评估工具的基础上NA报文攻击向量</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="9ae8f5f5eedaf1fbf6f3">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# na6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+na6: Security Assessment tool for attack vectors based on NA messages<br>
+<br>
+usage: na6 -i INTERFACE [-s SRC_ADDR[/LEN]] [-d DST_ADDR] [-S LINK_SRC_ADDR] [-y FRAG_SIZE] [-u DST_OPT_HDR_SIZE] [-U DST_OPT_U_HDR_SIZE] [-H HBH_OPT_HDR_SIZE] [-D LINK-DST-ADDR] [-t TARGET_ADDR[/LEN]] [-r] [-c] [-o] [-E LINK_ADDR] [-e] [-j PREFIX[/LEN]] [-k PREFIX[/LEN]] [-J LINK_ADDR] [-K LINK_ADDR] [-w PREFIX[/LEN]] [-b PREFIX[/LEN]] [-g PREFIX[/LEN]] [-B LINK_ADDR] [-G LINK_ADDR] [-W PREFIX[/LEN]] [-F N_SOURCES] [-T N_TARGETS] [-L | -l] [-z] [-v] [-V] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i            Network interface<br>
+  --src-address, -s          IPv6 Source Address<br>
+  --dst-address, -d          IPv6 Destination Address<br>
+  --frag-hdr. -y             Fragment Header<br>
+  --dst-opt-hdr, -u          Destination Options Header (Fragmentable Part)<br>
+  --dst-opt-u-hdr, -U        Destination Options Header (Unfragmentable Part)<br>
+  --hbh-opt-hdr, -H          Hop by Hop Options Header<br>
+  --link-src-address, -S     Link-layer Destination Address<br>
+  --link-dst-address, -D     Link-layer Source Address<br>
+  --target, -t               ND IPv6 Target Address<br>
+  --target-lla-opt, -E       Source link-layer address option<br>
+  --add-tlla-opt, -e         Add Source link-layer address option<br>
+  --router, -r               Set the 'Router Flag'<br>
+  --solicited, -c            Set the 'Solicited' flag<br>
+  --override, -o             Set the 'Override' flag<br>
+  --block-src, -j            Block IPv6 Source Address prefix<br>
+  --block-dst, -k            Block IPv6 Destination Address prefix<br>
+  --block-link-src, -J       Block Ethernet Source Address<br>
+  --block-link-dst, -K       Block Ethernet Destination Address<br>
+  --block-target, -w         Block ND Target IPv6 prefix<br>
+  --accept-src, -b           Accept IPv6 Source Addres prefix<br>
+  --accept-dst, -g           Accept IPv6 Destination Addres prefix<br>
+  --accept-link-src, -B      Accept Ethernet Source Address<br>
+  --accept-link-dst, -G      Accept Ethernet Destination Address<br>
+  --accept-target, -W        Accept ND Target IPv6 prefix<br>
+  --flood-targets, -T        Flood with NA's for multiple Target Addresses<br>
+  --flood-sources, -F        Number of Source Addresses to forge randomly<br>
+  --listen, -L               Listen to Neighbor Solicitation messages<br>
+  --loop, -l                 Send periodic Neighbor Advertisements<br>
+  --sleep, -z                Pause between sending NA messages<br>
+  --help, -h                 Print help for the na6 tool<br>
+  --verbose, -v              Be verbose<br>
+<br>
+Programmed by Fernando Gont for SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="a8cecfc7c6dce8dbc19ec6cddcdfc7dac3db86cbc7c5">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> scan6 - 高级IPv6地址扫描工具</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="3c4e5353487c575d5055">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# scan6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+scan6: An advanced IPv6 Address Scanning tool<br>
+<br>
+usage: scan6 -i INTERFACE (-L | -d) [-s SRC_ADDR[/LEN] | -f]<br>
+       [-S LINK_SRC_ADDR | -F] [-p PROBE_TYPE] [-Z PAYLOAD_SIZE] [-o SRC_PORT]<br>
+       [-a DST_PORT] [-X TCP_FLAGS] [-P ADDRESS_TYPE] [-q] [-e] [-t]<br>
+       [-x RETRANS] [-o TIMEOUT] [-V VM_TYPE] [-b] [-B ENCODING] [-g]<br>
+       [-k IEEE_OUI] [-K VENDOR] [-m PREFIXES_FILE] [-w IIDS_FILE] [-W IID]<br>
+       [-Q IPV4_PREFIX[/LEN]] [-T] [-I INC_SIZE] [-r RATE(bps|pps)] [-l]<br>
+       [-z SECONDS] [-c CONFIG_FILE] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i             Network interface<br>
+  --src-address, -s           IPv6 Source Address<br>
+  --dst-address, -d           IPv6 Destination Range or Prefix<br>
+  --prefixes-file, -m         Prefixes file<br>
+  --link-src-address, -S      Link-layer Destination Address<br>
+  --probe-type, -p            Probe type {echo, unrec, all}<br>
+  --payload-size, -Z          TCP/UDP Payload Size<br>
+  --src-port, -o              TCP/UDP Source Port<br>
+  --dst-port, -a              TCP/UDP Destination Port<br>
+  --tcp-flags, -X             TCP Flags<br>
+  --print-type, -P            Print address type {local, global, all}<br>
+  --print-unique, -q          Print only one IPv6 addresses per Ethernet address<br>
+  --print-link-addr, -e       Print link-layer addresses<br>
+  --print-timestamp, -t       Print timestamp for each alive node<br>
+  --retrans, -x               Number of retransmissions of each probe<br>
+  --timeout, -O               Timeout in seconds (default: 1 second)<br>
+  --local-scan, -L            Scan the local subnet<br>
+  --rand-src-addr, -f         Randomize the IPv6 Source Address<br>
+  --rand-link-src-addr, -F    Randomize the Ethernet Source Address<br>
+  --tgt-virtual-machines, -V  Target virtual machines<br>
+  --tgt-low-byte, -b          Target low-byte addresses<br>
+  --tgt-ipv4-embedded, -B     Target embedded-IPv4 addresses<br>
+  --tgt-port-embedded, -g     Target embedded-port addresses<br>
+  --tgt-ieee-oui, -k          Target IPv6 addresses embedding IEEE OUI<br>
+  --tgt-vendor, -K            Target IPv6 addresses for vendor's IEEE OUIs<br>
+  --tgt-iids-file, -w         Target Interface IDs (IIDs) in specified file<br>
+  --tgt-iid, -W               Target Interface IDs (IIDs)<br>
+  --ipv4-host, -Q             Host IPv4 Address/Prefix<br>
+  --sort-ouis, -T             Sort IEEE OUIs<br>
+  --inc-size, -I              Increments size<br>
+  --rate-limit, -r            Rate limit the address scan to specified rate<br>
+  --loop, -l                  Send periodic probes to the specified targets<br>
+  --sleep, -z                 Pause between periodic probes<br>
+  --config-file, -c           Use alternate configuration file<br>
+  --help, -h                  Print help for the scan6 tool<br>
+  --verbose, -v               Be verbose<br>
+<br>
+ Programmed by Fernando Gont for SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+ Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="6d0b0a0203192d1e045b0308191a021f061e430e0200">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> RA6 - 基于RA消息的安全评估工具，攻击向量</h3><h100>五</h100><h3> frag6 - 安全评估工具，基于IPv6分片攻击向量</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="86f4e9e9f2c6ede7eaef">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# frag6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+frag6: A security assessment tool for attack vectors based on IPv6 fragments<br>
+<br>
+usage: frag6 -i INTERFACE -d DST_ADDR [-S LINK_SRC_ADDR] [-D LINK-DST-ADDR]<br>
+       [-s SRC_ADDR[/LEN]] [-A HOP_LIMIT] [-u DST_OPT_HDR_SIZE]<br>
+       [-U DST_OPT_U_HDR_SIZE] [-H HBH_OPT_HDR_SIZE] [-P FRAG_SIZE]<br>
+       [-O FRAG_TYPE] [-o FRAG_OFFSET] [-I FRAG_ID] [-T] [-n]<br>
+       [-p | -W | -X | -F N_FRAGS] [-l] [-z SECONDS] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i           Network interface<br>
+  --link-src-address, -S    Link-layer Destination Address<br>
+  --link-dst-address, -D    Link-layer Source Address<br>
+  --src-address, -s         IPv6 Source Address<br>
+  --dst-address, -d         IPv6 Destination Address<br>
+  --hop-limit, -A           IPv6 Hop Limit<br>
+  --dst-opt-hdr, -u         Destination Options Header (Fragmentable Part)<br>
+  --dst-opt-u-hdr, -U       Destination Options Header (Unfragmentable Part)<br>
+  --hbh-opt-hdr, -H         Hop by Hop Options Header<br>
+  --frag-size, -P           IPv6 fragment payload size<br>
+  --frag-type, -O           IPv6 Fragment Type {first, last, middle, atomic}<br>
+  --frag-offset, -o         IPv6 Fragment Offset<br>
+  --frag-id, -I             IPv6 Fragment Identification<br>
+  --no-timestamp, -T        Do not include a timestamp in the payload<br>
+  --no-responses, -n        Do not print responses to transmitted packets<br>
+  --frag-reass-policy, -p   Assess fragment reassembly policy<br>
+  --frag-id-policy, -W      Assess the Fragment ID generation policy<br>
+  --pod-attack, -X          Perform a 'Ping of Death' attack<br>
+  --flood-frags, -F         Flood target with IPv6 fragments<br>
+  --loop, -l                Send IPv6 fragments periodically<br>
+  --sleep, -z               Pause between sending IPv6 fragments<br>
+  --verbose, -v             Be verbose<br>
+  --help, -h                Print help for the frag6 tool<br>
+<br>
+Programmed by Fernando Gont for SI6 Networks (http://www.si6networks.com)<br>
+Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="3157565e5f45714258075f5445465e435a421f525e5c">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> TCP6 - 安全评估工具，基于TCP / IPv6数据包的攻击向量</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="94e6fbfbe0d4fff5f8fd">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# tcp6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+tcp6: Security assessment tool for attack vectors based on TCP/IPv6 packets<br>
+<br>
+usage: tcp6 -i INTERFACE [-S LINK_SRC_ADDR] [-D LINK-DST-ADDR] [-s SRC_ADDR[/LEN]] [-d DST_ADDR] [-A HOP_LIMIT] [-y FRAG_SIZE] [-u DST_OPT_HDR_SIZE] [-U DST_OPT_U_HDR_SIZE] [-H HBH_OPT_HDR_SIZE] [-P PAYLOAD_SIZE] [-o SRC_PORT] [-a DST_PORT] [-X TCP_FLAGS] [-q TCP_SEQ] [-Q TCP_ACK] [-V TCP_URP] [-w TCP_WIN] [-N] [-f] [-j PREFIX[/LEN]] [-k PREFIX[/LEN]] [-J LINK_ADDR] [-K LINK_ADDR] [-b PREFIX[/LEN]] [-g PREFIX[/LEN]] [-B LINK_ADDR] [-G LINK_ADDR] [-F N_SOURCES] [-T N_PORTS] [-L | -l] [-z SECONDS] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i           Network interface<br>
+  --src-address, -s         IPv6 Source Address<br>
+  --dst-address, -d         IPv6 Destination Address<br>
+  --hop-limit, -A           IPv6 Hop Limit<br>
+  --frag-hdr. -y            Fragment Header<br>
+  --dst-opt-hdr, -u         Destination Options Header (Fragmentable Part)<br>
+  --dst-opt-u-hdr, -U       Destination Options Header (Unfragmentable Part)<br>
+  --hbh-opt-hdr, -H         Hop by Hop Options Header<br>
+  --link-src-address, -S    Link-layer Destination Address<br>
+  --link-dst-address, -D    Link-layer Source Address<br>
+  --payload-size, -P        TCP Payload Size<br>
+  --src-port, -o            TCP Source Port<br>
+  --dst-port, -a            TCP Destination Port<br>
+  --tcp-flags, -X           TCP Flags<br>
+  --tcp-seq, -q             TCP Sequence Number<br>
+  --tcp-ack, -Q             TCP Acknowledgment Number<br>
+  --tcp-urg, -V             TCP Urgent Pointer<br>
+  --tcp-win, -w             TCP Window<br>
+  --not-ack-data, -N        Do not acknowledge the TCP payload<br>
+  --not-ack-flags, -f       Do not acknowledge the TCP flags<br>
+  --block-src, -j           Block IPv6 Source Address prefix<br>
+  --block-dst, -k           Block IPv6 Destination Address prefix<br>
+  --block-link-src, -J      Block Ethernet Source Address<br>
+  --block-link-dst, -K      Block Ethernet Destination Address<br>
+  --accept-src, -b          Accept IPv6 Source Addres prefix<br>
+  --accept-dst, -g          Accept IPv6 Destination Address prefix<br>
+  --accept-link-src, -B     Accept Ethernet Source Address<br>
+  --accept-link-dst, -G     Accept Ethernet Destination Address<br>
+  --flood-sources, -F       Flood from multiple IPv6 Source Addresses<br>
+  --flood-ports, -T         Flood from multiple TCP Source Ports<br>
+  --listen, -L              Listen to incoming packets<br>
+  --loop, -l                Send periodic TCP segments<br>
+  --sleep, -z               Pause between sending TCP segments<br>
+  --help, -h                Print help for the tcp6 tool<br>
+  --verbose, -v             Be verbose<br>
+<br>
+Programmed by Fernando Gont for SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="c4a2a3abaab084b7adf2aaa1b0b3abb6afb7eaa7aba9">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> RS6 - 基于RS消息的安全评估工具，攻击向量</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="2755484853674c464b4e">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# rs6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+rs6: Security assessment tool for attack vectors based on RS messages<br>
+<br>
+usage: rs6 -i INTERFACE [-s SRC_ADDR[/LEN]] [-d DST_ADDR] [-y FRAG_SIZE] [-u DST_OPT_HDR_SIZE] [-U DST_OPT_U_HDR_SIZE] [-H HBH_OPT_HDR_SIZE] [-S LINK_SRC_ADDR] [-D LINK-DST-ADDR] [-E LINK_ADDR] [-e] [-F N_SOURCES] [-z SECONDS] [-l] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i            Network interface<br>
+  --src-address, -s          IPv6 Source Address<br>
+  --dst-address, -d          IPv6 Destination Address<br>
+  --frag-hdr. -y             Fragment Header<br>
+  --dst-opt-hdr, -u          Destination Options Header (Fragmentable Part)<br>
+  --dst-opt-u-hdr, -U        Destination Options Header (Unfragmentable Part)<br>
+  --hbh-opt-hdr, -H          Hop by Hop Options Header<br>
+  --link-src-address, -S     Link-layer Destination Address<br>
+  --link-dst-address, -D     Link-layer Source Address<br>
+  --src-link-opt, -E         Source link-layer address option<br>
+  --add-slla-opt, -e         Add Source link-layer address option<br>
+  --flood-sources, -F        Number of Source Addresses to forge randomly<br>
+  --loop, -l                 Send Router Solicitations periodically<br>
+  --sleep, -z                Pause between peiodic Router Solicitations<br>
+  --help, -h                 Print help for the rs6 tool<br>
+  --verbose, -v              Be verbose<br>
+<br>
+Programmed by Fernando Gont for SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="a4c2c3cbcad0e4d7cd92cac1d0d3cbd6cfd78ac7cbc9">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> RD6 - 安全评估工具的基础上重定向报文攻击向量</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="41332e2e35012a202d28">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# rd6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+rd6: Security assessment tool for attack vectors based on Redirect messages<br>
+<br>
+usage: rd6 -i INTERFACE [-s SRC_ADDR[/LEN]] [-d DST_ADDR] [-S LINK_SRC_ADDR] [-D LINK-DST-ADDR] [-A HOP_LIMIT] [-y FRAG_SIZE] [-u DST_OPT_HDR_SIZE] [-U DST_OPT_U_HDR_SIZE] [-H HBH_OPT_HDR_SIZE] [-r RD_DESTADDR/LEN] [-t RD_TARGETADDR/LEN] [-p PAYLOAD_TYPE] [-P PAYLOAD_SIZE] [-n] [-c HOP_LIMIT] [-x SRC_ADDR] [-a SRC_PORT] [-o DST_PORT] [-X TCP_FLAGS] [-q TCP_SEQ] [-Q TCP_ACK] [-V TCP_URP] [-w TCP_WIN] [-M] [-O] [-N] [-E LINK_ADDR] [-e] [-j PREFIX[/LEN]] [-k PREFIX[/LEN]] [-J LINK_ADDR] [-K LINK_ADDR] [-b PREFIX[/LEN]] [-g PREFIX[/LEN]] [-B LINK_ADDR] [-G LINK_ADDR] [-f] [-R N_DESTS] [-T N_TARGETS] [-F N_SOURCES] [-L | -l] [-z] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i           Network interface<br>
+  --src-address, -s         IPv6 Source Address<br>
+  --dst-address, -d         IPv6 Destination Address<br>
+  --hop-limit, -A           IPv6 Hop Limit<br>
+  --frag-hdr. -y            Fragment Header<br>
+  --dst-opt-hdr, -u         Destination Options Header (Fragmentable Part)<br>
+  --dst-opt-u-hdr, -U       Destination Options Header (Unfragmentable Part)<br>
+  --hbh-opt-hdr, -H         Hop by Hop Options Header<br>
+  --link-src-address, -S    Link-layer Destination Address<br>
+  --link-dst-address, -D    Link-layer Source Address<br>
+  --redir-dest, -r          Redirect Destination Address<br>
+  --redir-target, -t        Redirect Target Address<br>
+  --payload-type, -p        Redirected Header Payload Type<br>
+  --payload-size, -P        Redirected Header Payload Size<br>
+  --no-payload, -n          Do not include a Redirected Header Option<br>
+  --ipv6-hlim, -c           Redirected Header Payload's Hop Limit<br>
+  --peer-addr, -x           Redirected Header Payload's IPv6 Source Address<br>
+  --peer-port, -a           Redirected Header Payload's Source Port<br>
+  --redir-port, -o          Redirected Header Payload's Destination Port<br>
+  --tcp-flags, -X           Redirected Header Payload's TCP Flags<br>
+  --tcp-seq, -q             Redirected Header Payload's TCP SEQ Number<br>
+  --tcp-ack, -Q             Redirected Header Payload's TCP ACK Number<br>
+  --tcp-urg, -V             Redirected Header Payload's TCP URG Pointer<br>
+  --tcp-win, -w             Redirected Header Payload's TCP Window<br>
+  --resp-mcast, -M          Respond to Multicast Packets<br>
+  --make-onlink, O          Make victim on-link<br>
+  --learn-router, N         Dynamically learn local router addresses<br>
+  --target-lla-opt, -E      Target link-layer address option<br>
+  --add-tlla-opt, -e        Add Target link-layer address option<br>
+  --block-src, -j           Block IPv6 Source Address prefix<br>
+  --block-dst, -k           Block IPv6 Destination Address prefix<br>
+  --block-link-src, -J      Block Ethernet Source Address<br>
+  --block-link-dst, -K      Block Ethernet Destination Address<br>
+  --accept-src, -b          Accept IPv6 Source Addres prefix<br>
+  --accept-dst, -g          Accept IPv6 Destination Address prefix<br>
+  --accept-link-src, -B     Accept Ethernet Source Address<br>
+  --accept-link-dst, -G     Accept Ethernet Destination Address<br>
+  --sanity-filters, -f      Add sanity filters<br>
+  --flood-dests, -R         Flood with multiple Redirect Destination Addresses<br>
+  --flood-targets, -T       Flood with multiple Redirect Target Addresses<br>
+  --flood-sources, -F       Flood with multiple IPv6 Source Addresses<br>
+  --listen, -L              Listen to incoming packets<br>
+  --loop, -l                Send periodic Redirect messages<br>
+  --sleep, -z               Pause between sending Redirect messages<br>
+  --help, -h                Print help for the rd6 tool<br>
+  --verbose, -v             Be verbose<br>
+<br>
+Programmed by Fernando Gont for SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="83e5e4ecedf7c3f0eab5ede6f7f4ecf1e8f0ade0ecee">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> NI6 - 基于ICMPv6的NI消息Securty评估工具的攻击向量</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="93e1fcfce7d3f8f2fffa">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# ni6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+ni6: Securty assessment tool for attack vectors based on ICMPv6 NI messages<br>
+<br>
+usage:<br>
+ ni6 -i INTERFACE [-S LINK_SRC_ADDR | -R] [-D LINK-DST-ADDR]<br>
+     [-s SRC_ADDR[/LEN] | -r] [-d DST_ADDR] [-c HOP_LIMIT] [-y FRAG_SIZE]<br>
+     [-u DST_OPT_HDR_SIZE] [-U DST_OPT_U_HDR_SIZE] [-H HBH_OPT_HDR_SIZE]<br>
+     [-P SIZE | -6 IPV6_ADDR | -4 IPV4_ADDR | -n NAME | -N LEN | -x LEN -o TYPE]<br>
+     [-Z SIZE] [-e] [-C ICMP6_CODE] [-q NI_QTYPE] [-X NI_FLAGS]<br>
+     [-P SIZE | -w IPV6_ADDR | -W IPV4_ADDR | -a NAME | -A LEN | -Q LEN -O TYPE]<br>
+     [-E] [-j PREFIX[/LEN]] [-k PREFIX[/LEN]] [-J LINK_ADDR]<br>
+     [-K LINK_ADDR] [-b PREFIX[/LEN]] [-g PREFIX[/LEN]] [-B LINK_ADDR]<br>
+     [-G LINK_ADDR] [-L | -l] [-z] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i            Network interface<br>
+  --link-src-address, -S     Link-layer Destination Address<br>
+  --link-dst-address, -D     Link-layer Source Address<br>
+  --src-address, -s          IPv6 Source Address<br>
+  --dst-address, -d          IPv6 Destination Address<br>
+  --hop-limit, -c            IPv6 Hop Limit<br>
+  --frag-hdr. -y             Fragment Header<br>
+  --dst-opt-hdr, -u          Destination Options Header (Fragmentable Part)<br>
+  --dst-opt-u-hdr, -U        Destination Options Header (Unfragmentable Part)<br>
+  --hbh-opt-hdr, -H          Hop by Hop Options Header<br>
+  --payload-size, -P         ICMPv6 NI payload size<br>
+  --subject-ipv6. -6         Subject IPv6 Address<br>
+  --subject-ipv4, -4         Subject IPv4 address<br>
+  --subject-name, -n         Subject Name<br>
+  --subject-fname, -N        Forge Subject Name of specific length<br>
+  --subject-ename, -x        For (malformed) Subject name of specified length<br>
+  --subject-nloop, -o        Subject is a Name with a DNS compression loop<br>
+  --max-label-size, -Z       Maximum DNS label size (defaults to 63)<br>
+  --sname-slabel, -e         Subject Name is a single-label name<br>
+  --code, -C                 ICMPv6 code<br>
+  --qtype, -q                ICMPv6 NI Qtype<br>
+  --flags, -X                ICMPv6 NI flags<br>
+  --data-ipv6, -w            Data IPv6 Address<br>
+  --data-ipv4, W             Data IPv4 Address<br>
+  --data-name, -a            Data Name<br>
+  --data-fname, -A           Forge Data Name of specific length<br>
+  --data-ename, -Q           For (malformed) Data Name of specified length<br>
+  --data-nloop, -O           Data is a Name with a DNS compression loop<br>
+  --dname-slabel, -E         Subject Name is a single-label name<br>
+  --block-src, -j            Block IPv6 Source Address prefix<br>
+  --block-dst, -k            Block IPv6 Destination Address prefix<br>
+  --block-link-src, -J       Block Ethernet Source Address<br>
+  --block-link-dst, -K       Block Ethernet Destination Address<br>
+  --accept-src, -b           Accept IPv6 Source Addres prefix<br>
+  --accept-dst, -g           Accept IPv6 Destination Address prefix<br>
+  --accept-link-src, -B      Accept Ethernet Source Address<br>
+  --accept-link-dst, -G      Accept Ethernet Destination Address<br>
+  --forge-src-addr, -r       Forge IPv6 Source Address<br>
+  --forge-link-src-addr, -R  Forge link-layer Source Address<br>
+  --loop, -l                 Send periodic ICMPv6 error messages<br>
+  --sleep, -z                Pause between sending ICMPv6 messages<br>
+  --listen, -L               Listen to incoming traffic<br>
+  --help, -h                 Print help for the ni6 tool<br>
+  --verbose, -v              Be verbose<br>
+<br>
+ Programmed by Fernando Gont for SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+ Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="88eeefe7e6fcc8fbe1bee6edfcffe7fae3fba6ebe7e5">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> jumbo6 - 安全评估工具，基于IPv6的巨型数据包的攻击向量</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="96e4f9f9e2d6fdf7faff">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# jumbo6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+jumbo6: Security assessment tool for attack vectors based on IPv6 jumbo packets<br>
+<br>
+usage: jumbo6 -i INTERFACE [-S LINK_SRC_ADDR] [-D LINK-DST-ADDR]<br>
+       [-s SRC_ADDR[/LEN]] [-d DST_ADDR] [-A HOP_LIMIT] [-H HBH_OPT_HDR_SIZE]<br>
+       [-U DST_OPT_U_HDR_SIZE] [-y FRAG_SIZE] [-u DST_OPT_HDR_SIZE]<br>
+       [-q IPV6_LENGTH] [-Q JUMBO_LENGTH] [-P PAYLOAD_SIZE] [-j PREFIX[/LEN]]<br>
+       [-k PREFIX[/LEN]] [-J LINK_ADDR] [-K LINK_ADDR] [-b PREFIX[/LEN]]<br>
+       [-g PREFIX[/LEN]] [-B LINK_ADDR] [-G LINK_ADDR] [-L | -l] [-z SECONDS]<br>
+       [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --interface, -i           Network interface<br>
+  --link-src-address, -S    Link-layer Destination Address<br>
+  --link-dst-address, -D    Link-layer Source Address<br>
+  --src-address, -s         IPv6 Source Address<br>
+  --dst-address, -d         IPv6 Destination Address<br>
+  --hop-limit, -A           IPv6 Hop Limit<br>
+  --frag-hdr. -y            Fragment Header<br>
+  --dst-opt-hdr, -u         Destination Options Header (Fragmentable Part)<br>
+  --dst-opt-u-hdr, -U       Destination Options Header (Unfragmentable Part)<br>
+  --hbh-opt-hdr, -H         Hop by Hop Options Header<br>
+  --ipv6-length, -q         IPv6 Payload Length<br>
+  --jumbo-length, -Q        Jumbo Payload Length<br>
+  --payload-size, -P        ICMPv6 payload size<br>
+  --block-src, -j           Block IPv6 Source Address prefix<br>
+  --block-dst, -k           Block IPv6 Destination Address prefix<br>
+  --block-link-src, -J      Block Ethernet Source Address<br>
+  --block-link-dst, -K      Block Ethernet Destination Address<br>
+  --accept-src, -b          Accept IPv6 Source Addres prefix<br>
+  --accept-dst, -g          Accept IPv6 Destination Address prefix<br>
+  --accept-link-src, -B     Accept Ethernet Source Address<br>
+  --accept-link-dst, -G     Accept Ethernet Destination Address<br>
+  --loop, -l                Send periodic Redirect messages<br>
+  --sleep, -z               Pause between sending Redirect messages<br>
+  --listen, -L              Listen to incoming packets<br>
+  --verbose, -v             Be verbose<br>
+  --help, -h                Print help for the jumbo6 tool<br>
+<br>
+Programmed by Fernando Gont on behalf of CPNI (http://www.cpni.gov.uk)<br>
+Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="3355545c5d4773405a055d5647445c4158401d505c5e">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> addr6 - IPv6地址的分析工具</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="53213c3c271338323f3a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# addr6 -h<br>
+SI6 Networks' IPv6 Toolkit v1.4.1<br>
+addr6: An IPv6 address analysis tool<br>
+<br>
+usage: addr6 (-i | -a) [-d | -s | -q] [-v] [-h]<br>
+<br>
+OPTIONS:<br>
+  --address, -a             IPv6 address to be decoded<br>
+  --stdin, -i               Read IPv6 addresses from stdin (standard input)<br>
+  --print-decode, -d        Decode IPv6 addresses<br>
+  --print-stats, -s         Print statistics about IPv6 addresses<br>
+  --print-unique, -q        Discard duplicate IPv6 addresses<br>
+  --accept, -j              Accept IPv6 addresses from specified IPv6 prefix<br>
+  --accept-type, -b         Accept IPv6 addresses of specified type<br>
+  --accept-scope, -k        Accept IPv6 addresses of specified scope<br>
+  --accept-utype, -w        Accept IPv6 unicast addresses of specified type<br>
+  --accept-iid, -g          Accept IPv6 addresses with IIDs of specified type<br>
+  --block, -J               Block IPv6 addresses from specified IPv6 prefix<br>
+  --block-type, -B          Block IPv6 addresses of specified type<br>
+  --block-scope, -K         Block IPv6 addresses of specified scope<br>
+  --block-utype, -W         Block IPv6 unicast addresses of specified type<br>
+  --block-iid, -G           Block IPv6 addresses with IIDs of specified type<br>
+  --verbose, -v             Be verbose<br>
+  --help, -h                Print help for the addr6 tool<br>
+<br>
+ Programmed by Fernando Gont for SI6 Networks &lt;http://www.si6networks.com&gt;<br>
+ Please send any bug reports to &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="6503020a0b1125160c530b0011120a170e164b060a08">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;</code><h3> IPv6的工具使用示例</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="c3b1acacb783a8a2afaa">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# coming soon</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

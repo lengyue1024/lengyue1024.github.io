@@ -1,0 +1,108 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<section class="l-section"><div class="l-section-h i-cf"><h2>ntop Package Description</h2>
+<p style="text-align: justify;">ntop is a tool that shows the network usage, similar to what the popular top Unix command does. ntop is based on pcapture (ftp://ftp.ee.lbl.gov/pcapture.tar.Z) and it has been written in a portable way in order to virtually run on every Unix platform.</p>
+<p>ntop can be used in both interactive or web mode. In the first case, ntop displays the network status on the user’s terminal whereas in web mode a web browser (e.g. netscape) can attach to ntop (that acts as a web server) and get a dump of the network status. In the latter case, ntop can be seen as a simple RMON-like agent with an embedded web interface.</p>
+<p>ntop uses libpcap, a system-independent interface for user-level packet capture.</p>
+<p>Source: ntop README<br>
+<a href="javascript:if(confirm('http://www.ntop.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.ntop.org/'" tppabs="http://www.ntop.org/" variation="deepblue" target="blank">ntop Homepage</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/ntop.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/ntop.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/ntop.git;a=summary" variation="deepblue" target="blank">Kali ntop Repo</a></p>
+<ul>
+<li>Author: Luca Deri</li>
+<li>License: GPLv2</li>
+</ul>
+<h3>Tools included in the ntop package</h3>
+<h5>ntop – display network usage in web browser</h5>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="592b36362d1932383530">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# ntop -h<br>
+Welcome to ntop v.4.99.3 (32 bit)<br>
+[Configured on Mar  2 2013  6:00:33, built on Mar  2 2013 06:01:55]<br>
+Copyright 1998-2012 by Luca Deri &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="761213041f361802190658190411">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;<br>
+<br>
+Get the freshest ntop from http://www.ntop.org/<br>
+<br>
+Usage: ntop [OPTION]<br>
+<br>
+Basic options:<br>
+    [-h             | --help]                             Display this help and exit<br>
+    [-u &lt;user&gt;      | --user &lt;user&gt;]                      Userid/name to run ntop under (see man page)<br>
+    [-t &lt;number&gt;    | --trace-level &lt;number&gt;]             Trace level [0-6]<br>
+    [-P &lt;path&gt;      | --db-file-path &lt;path&gt;]              Path for ntop internal database files<br>
+    [-Q &lt;path&gt;      | --spool-file-path &lt;path&gt;]           Path for ntop spool files<br>
+    [-w &lt;port&gt;      | --http-server &lt;port&gt;]               Web server (http:) port (or address:port) to listen on<br>
+<br>
+Advanced options:<br>
+    [-4             | --ipv4]                             Use IPv4 connections<br>
+    [-6             | --ipv6]                             Use IPv6 connections<br>
+    [-a &lt;file&gt;      | --access-log-file &lt;file&gt;]           File for ntop web server access log<br>
+    [-b             | --disable-decoders]                 Disable protocol decoders<br>
+    [-c             | --sticky-hosts]                     Idle hosts are not purged from memory<br>
+    [-d             | --daemon]                           Run ntop in daemon mode<br>
+    [-e &lt;number&gt;    | --max-table-rows &lt;number&gt;]          Maximum number of table rows to report<br>
+    [-f &lt;file&gt;      | --traffic-dump-file &lt;file&gt;]         Traffic dump file (see tcpdump)<br>
+    [-g             | --track-local-hosts]                Track only local hosts<br>
+    [-i &lt;name&gt;      | --interface &lt;name&gt;]                 Interface name or names to monitor<br>
+    [-j             | --create-other-packets]             Create file ntop-other-pkts.XXX.pcap file<br>
+    [-l &lt;path&gt;      | --pcap-log &lt;path&gt;]                  Dump packets captured to a file (debug only!)<br>
+    [-m &lt;addresses&gt; | --local-subnets &lt;addresses&gt;]        Local subnetwork(s) (see man page)<br>
+    [-n &lt;mode&gt;      | --numeric-ip-addresses &lt;mode&gt;]      Numeric IP addresses DNS resolution mode:<br>
+                                                          0 - No DNS resolution at all<br>
+                                                          1 - DNS resolution for local hosts only<br>
+                                                          2 - DNS resolution for remote hosts only<br>
+    [-p &lt;list&gt;      | --protocols &lt;list&gt;]                 List of IP protocols to monitor (see man page)<br>
+    [-q             | --create-suspicious-packets]        Create file ntop-suspicious-pkts.XXX.pcap file<br>
+    [-r &lt;number&gt;    | --refresh-time &lt;number&gt;]            Refresh time in seconds, default is 120<br>
+    [-s             | --no-promiscuous]                   Disable promiscuous mode<br>
+    [-x &lt;max num hash entries&gt; ]                          Max num. hash entries ntop can handle (default 8192)<br>
+    [-z             | --disable-sessions]                 Disable TCP session tracking<br>
+    [-A]                                                  Ask admin user password and exit<br>
+    [               | --set-admin-password=&lt;pass&gt;]        Set password for the admin user to &lt;pass&gt;<br>
+    [               | --w3c]                              Add extra headers to make better html<br>
+    [-B &lt;filter&gt;]   | --filter-expression                 Packet filter expression, like tcpdump (for all interfaces)<br>
+                                                          You can also set per-interface filter:<br>
+                                                          eth0=tcp,eth1=udp ....<br>
+    [-C &lt;rate&gt;]     | --sampling-rate                     Packet capture sampling rate [default: 1 (no sampling)]<br>
+    [-D &lt;name&gt;      | --domain &lt;name&gt;]                    Internet domain name<br>
+    [-F &lt;spec&gt;      | --flow-spec &lt;specs&gt;]                Flow specs (see man page)<br>
+    [-K             | --enable-debug]                     Enable debug mode<br>
+    [-L]                                                  Do logging via syslog<br>
+    [               | --use-syslog=&lt;facility&gt;]            Do logging via syslog, facility ('=' is REQUIRED)<br>
+    [-M             | --no-interface-merge]               Don't merge network interfaces (see man page)<br>
+    [-O &lt;path&gt;      | --pcap-file-path &lt;path&gt;]            Path for log files in pcap format<br>
+    [-U &lt;URL&gt;       | --mapper &lt;URL&gt;]                     URL (mapper.pl) for displaying host location<br>
+    [-V             | --version]                          Output version information and exit<br>
+    [-X &lt;max num TCP sessions&gt; ]                          Max num. TCP sessions ntop can handle (default 32768)<br>
+    [--disable-instantsessionpurge]                       Disable instant FIN session purge<br>
+    [--disable-mutexextrainfo]                            Disable extra mutex info<br>
+    [--disable-stopcap]                                   Capture packets even if there's no memory left<br>
+    [--disable-ndpi]                                      Disable nDPI for protocol discovery<br>
+    [--disable-python]                                    Disable Python interpreter<br>
+    [--instance &lt;name&gt;]                                   Set log name for this ntop instance<br>
+    [--p3p-cp]                                            Set return value for p3p compact policy, header<br>
+    [--p3p-uri]                                           Set return value for p3p policyref header<br>
+    [--skip-version-check]                                Skip ntop version check<br>
+    [--known-subnets &lt;networks&gt;]                          List of known subnets (separated by ,)<br>
+                                                          If the argument starts with @ it is assumed it is a file path<br>
+                                                          E.g. 192.168.0.0/14=home,172.16.0.0/16=private<br>
+<br>
+NOTE<br>
+    * You can configure further ntop options via the web<br>
+      interface [Menu Admin -&gt; Config].<br>
+    * The command line options are not permanent, i.e. they<br>
+      are not persistent across ntop initializations.</code>
+<h3>ntop Usage Example</h3>
+<p>Display network usage, filtering for a specific IP address <b><i>(-B “src host 192.168.1.1”)</i></b>:</p>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="63110c0c172308020f0a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# ntop -B "src host 192.168.1.1"</code>
+</div></section><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

@@ -1,0 +1,517 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<section class="l-section"><div class="l-section-h i-cf"><h2>SIPp Package Description</h2>
+<p style="text-align: justify;">SIPp is a free Open Source test tool / traffic generator for the SIP protocol. It includes a few basic SipStone user agent scenarios (UAC and UAS) and establishes and releases multiple calls with the INVITE and BYE methods. It can also reads custom XML scenario files describing from very simple to complex call flows. It features the dynamic display of statistics about running tests (call rate, round trip delay, and message statistics), periodic CSV statistics dumps, TCP and UDP over multiple sockets or multiplexed with retransmission management and dynamically adjustable call rates.</p>
+<p>Other advanced features include support of IPv6, TLS, SCTP, SIP authentication, conditional scenarios, UDP retransmissions, error robustness (call timeout, protocol defense), call specific variable, Posix regular expression to extract and re-inject any protocol fields, custom actions (log, system command exec, call stop) on message receive, field injection from external CSV file to emulate live users.</p>
+<p>SIPp can also send media (RTP) traffic through RTP echo and RTP / pcap replay. Media can be audio or video.</p>
+<p>While optimized for traffic, stress and performance testing, SIPp can be used to run one single call and exit, providing a passed/failed verdict.</p>
+<p>Last, but not least, SIPp has a comprehensive documentation available both in HTML and PDF format.</p>
+<p>SIPp can be used to test various real SIP equipment like SIP proxies, B2BUAs, SIP media servers, SIP/x gateways, SIP PBX, … It is also very useful to emulate thousands of user agents calling your SIP system.</p>
+<p>Source: http://sipp.sourceforge.net/<br>
+<a href="javascript:if(confirm('http://sipp.sourceforge.net/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sipp.sourceforge.net/'" tppabs="http://sipp.sourceforge.net/" variation="deepblue" target="blank">SIPp Homepage</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/sipp.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/sipp.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/sipp.git;a=summary" variation="deepblue" target="blank">Kali SIPp Repo</a></p>
+<ul>
+<li>Author: Aaron Turner</li>
+<li>License: Other</li>
+</ul>
+<h3>Tools included in the sipp package</h3>
+<h5>sipp – Traffic generator for the SIP protocol</h5>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="097b66667d4962686560">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# sipp<br>
+<br>
+Usage:<br>
+<br>
+  sipp remote_host[:remote_port] [options]<br>
+<br>
+  Available options:<br>
+<br>
+   -v               : Display version and copyright information.<br>
+<br>
+   -aa              : Enable automatic 200 OK answer for INFO, UPDATE and<br>
+                      NOTIFY messages.<br>
+<br>
+   -auth_uri        : Force the value of the URI for authentication.<br>
+                      By default, the URI is composed of<br>
+                      remote_ip:remote_port.<br>
+<br>
+   -au              : Set authorization username for authentication challenges.<br>
+                      Default is taken from -s argument<br>
+<br>
+   -ap              : Set the password for authentication challenges. Default<br>
+                      is 'password'<br>
+<br>
+   -base_cseq       : Start value of [cseq] for each call.<br>
+<br>
+   -bg              : Launch SIPp in background mode.<br>
+<br>
+   -bind_local      : Bind socket to local IP address, i.e. the local IP<br>
+                      address is used as the source IP address.  If SIPp runs<br>
+                      in server mode it will only listen on the local IP<br>
+                      address instead of all IP addresses.<br>
+<br>
+   -buff_size       : Set the send and receive buffer size.<br>
+<br>
+   -calldebug_file  : Set the name of the call debug file.<br>
+<br>
+   -calldebug_overwrite: Overwrite the call debug file (default true).<br>
+<br>
+   -cid_str         : Call ID string (default %u-%p@%s).  %u=call_number,<br>
+                      %s=ip_address, %p=process_number, %%=% (in any order).<br>
+<br>
+   -ci              : Set the local control IP address<br>
+<br>
+   -cp              : Set the local control port number. Default is 8888.<br>
+<br>
+   -d               : Controls the length of calls. More precisely, this<br>
+                      controls the duration of 'pause' instructions in the<br>
+                      scenario, if they do not have a 'milliseconds' section.<br>
+                      Default value is 0 and default unit is milliseconds.<br>
+<br>
+   -deadcall_wait   : How long the Call-ID and final status of calls should be<br>
+                      kept to improve message and error logs (default unit is<br>
+                      ms).<br>
+<br>
+   -default_behaviors: Set the default behaviors that SIPp will use.  Possbile<br>
+                      values are:<br>
+                      - all Use all default behaviors<br>
+                      - none    Use no default behaviors<br>
+                      - bye Send byes for aborted calls<br>
+                      - abortunexp  Abort calls on unexpected messages<br>
+                      - pingreply   Reply to ping requests<br>
+                      If a behavior is prefaced with a -, then it is turned<br>
+                      off.  Example: all,-bye<br>
+<br>
+<br>
+   -error_file      : Set the name of the error log file.<br>
+<br>
+   -error_overwrite : Overwrite the error log file (default true).<br>
+<br>
+   -f               : Set the statistics report frequency on screen. Default is<br>
+                      1 and default unit is seconds.<br>
+<br>
+   -fd              : Set the statistics dump log report frequency. Default is<br>
+                      60 and default unit is seconds.<br>
+<br>
+   -i               : Set the local IP address for 'Contact:','Via:', and<br>
+                      'From:' headers. Default is primary host IP address.<br>
+<br>
+<br>
+   -inf             : Inject values from an external CSV file during calls into<br>
+                      the scenarios.<br>
+                      First line of this file say whether the data is to be<br>
+                      read in sequence (SEQUENTIAL), random (RANDOM), or user<br>
+                      (USER) order.<br>
+                      Each line corresponds to one call and has one or more<br>
+                      ';' delimited data fields. Those fields can be referred<br>
+                      as [field0], [field1], ... in the xml scenario file.<br>
+                      Several CSV files can be used simultaneously (syntax:<br>
+                      -inf f1.csv -inf f2.csv ...)<br>
+<br>
+   -infindex        : file field<br>
+                      Create an index of file using field.  For example -inf<br>
+                      users.csv -infindex users.csv 0 creates an index on the<br>
+                      first key.<br>
+<br>
+   -ip_field        : Set which field from the injection file contains the IP<br>
+                      address from which the client will send its messages.<br>
+                      If this option is omitted and the '-t ui' option is<br>
+                      present, then field 0 is assumed.<br>
+                      Use this option together with '-t ui'<br>
+<br>
+   -l               : Set the maximum number of simultaneous calls. Once this<br>
+                      limit is reached, traffic is decreased until the number<br>
+                      of open calls goes down. Default:<br>
+                        (3 * call_duration (s) * rate).<br>
+<br>
+   -log_file        : Set the name of the log actions log file.<br>
+<br>
+   -log_overwrite   : Overwrite the log actions log file (default true).<br>
+<br>
+   -lost            : Set the number of packets to lose by default (scenario<br>
+                      specifications override this value).<br>
+<br>
+   -rtcheck         : Select the retransmisison detection method: full<br>
+                      (default) or loose.<br>
+<br>
+   -m               : Stop the test and exit when 'calls' calls are processed<br>
+<br>
+   -mi              : Set the local media IP address (default: local primary<br>
+                      host IP address)<br>
+<br>
+   -master          : 3pcc extended mode: indicates the master number<br>
+<br>
+   -max_recv_loops  : Set the maximum number of messages received read per<br>
+                      cycle. Increase this value for high traffic level.  The<br>
+                      default value is 1000.<br>
+<br>
+   -max_sched_loops : Set the maximum number of calsl run per event loop.<br>
+                      Increase this value for high traffic level.  The default<br>
+                      value is 1000.<br>
+<br>
+   -max_reconnect   : Set the the maximum number of reconnection.<br>
+<br>
+   -max_retrans     : Maximum number of UDP retransmissions before call ends on<br>
+                      timeout.  Default is 5 for INVITE transactions and 7 for<br>
+                      others.<br>
+<br>
+   -max_invite_retrans: Maximum number of UDP retransmissions for invite<br>
+                      transactions before call ends on timeout.<br>
+<br>
+   -max_non_invite_retrans: Maximum number of UDP retransmissions for non-invite<br>
+                      transactions before call ends on timeout.<br>
+<br>
+   -max_log_size    : What is the limit for error and message log file sizes.<br>
+<br>
+   -max_socket      : Set the max number of sockets to open simultaneously.<br>
+                      This option is significant if you use one socket per<br>
+                      call. Once this limit is reached, traffic is distributed<br>
+                      over the sockets already opened. Default value is 50000<br>
+<br>
+   -mb              : Set the RTP echo buffer size (default: 2048).<br>
+<br>
+   -message_file    : Set the name of the message log file.<br>
+<br>
+   -message_overwrite: Overwrite the message log file (default true).<br>
+<br>
+   -mp              : Set the local RTP echo port number. Default is 6000.<br>
+<br>
+   -nd              : No Default. Disable all default behavior of SIPp which<br>
+                      are the following:<br>
+                      - On UDP retransmission timeout, abort the call by<br>
+                        sending a BYE or a CANCEL<br>
+                      - On receive timeout with no ontimeout attribute, abort<br>
+                        the call by sending a BYE or a CANCEL<br>
+                      - On unexpected BYE send a 200 OK and close the call<br>
+                      - On unexpected CANCEL send a 200 OK and close the call<br>
+                      - On unexpected PING send a 200 OK and continue the call<br>
+                      - On any other unexpected message, abort the call by<br>
+                        sending a BYE or a CANCEL<br>
+<br>
+<br>
+   -nr              : Disable retransmission in UDP mode.<br>
+<br>
+   -nostdin         : Disable stdin.<br>
+<br>
+<br>
+   -p               : Set the local port number.  Default is a random free port<br>
+                      chosen by the system.<br>
+<br>
+   -pause_msg_ign   : Ignore the messages received during a pause defined in<br>
+                      the scenario<br>
+<br>
+   -periodic_rtd    : Reset response time partition counters each logging<br>
+                      interval.<br>
+<br>
+   -plugin          : Load a plugin.<br>
+<br>
+   -r               : Set the call rate (in calls per seconds).  This value can<br>
+                      bechanged during test by pressing '+','_','*' or '/'.<br>
+                      Default is 10.<br>
+                      pressing '+' key to increase call rate by 1 *<br>
+                      rate_scale,<br>
+                      pressing '-' key to decrease call rate by 1 *<br>
+                      rate_scale,<br>
+                      pressing '*' key to increase call rate by 10 *<br>
+                      rate_scale,<br>
+                      pressing '/' key to decrease call rate by 10 *<br>
+                      rate_scale.<br>
+                      If the -rp option is used, the call rate is calculated<br>
+                      with the period in ms given by the user.<br>
+<br>
+   -rp              : Specify the rate period for the call rate.  Default is 1<br>
+                      second and default unit is milliseconds.  This allows<br>
+                      you to have n calls every m milliseconds (by using -r n<br>
+                      -rp m).<br>
+                      Example: -r 7 -rp 2000 ==&gt; 7 calls every 2 seconds.<br>
+                               -r 10 -rp 5s =&gt; 10 calls every 5 seconds.<br>
+<br>
+   -rate_scale      : Control the units for the '+', '-', '*', and '/' keys.<br>
+<br>
+   -rate_increase   : Specify the rate increase every -fd units (default is<br>
+                      seconds).  This allows you to increase the load for each<br>
+                      independent logging period.<br>
+                      Example: -rate_increase 10 -fd 10s<br>
+                        ==&gt; increase calls by 10 every 10 seconds.<br>
+<br>
+   -rate_max        : If -rate_increase is set, then quit after the rate<br>
+                      reaches this value.<br>
+                      Example: -rate_increase 10 -rate_max 100<br>
+                        ==&gt; increase calls by 10 until 100 cps is hit.<br>
+<br>
+   -no_rate_quit    : If -rate_increase is set, do not quit after the rate<br>
+                      reaches -rate_max.<br>
+<br>
+   -recv_timeout    : Global receive timeout. Default unit is milliseconds. If<br>
+                      the expected message is not received, the call times out<br>
+                      and is aborted.<br>
+<br>
+   -send_timeout    : Global send timeout. Default unit is milliseconds. If a<br>
+                      message is not sent (due to congestion), the call times<br>
+                      out and is aborted.<br>
+<br>
+   -sleep           : How long to sleep for at startup. Default unit is<br>
+                      seconds.<br>
+<br>
+   -reconnect_close : Should calls be closed on reconnect?<br>
+<br>
+   -reconnect_sleep : How long (in milliseconds) to sleep between the close and<br>
+                      reconnect?<br>
+<br>
+   -ringbuffer_files: How many error/message files should be kept after<br>
+                      rotation?<br>
+<br>
+   -ringbuffer_size : How large should error/message files be before they get<br>
+                      rotated?<br>
+<br>
+   -rsa             : Set the remote sending address to host:port for sending<br>
+                      the messages.<br>
+<br>
+   -rtp_echo        : Enable RTP echo. RTP/UDP packets received on port defined<br>
+                      by -mp are echoed to their sender.<br>
+                      RTP/UDP packets coming on this port + 2 are also echoed<br>
+                      to their sender (used for sound and video echo).<br>
+<br>
+   -rtt_freq        : freq is mandatory. Dump response times every freq calls<br>
+                      in the log file defined by -trace_rtt. Default value is<br>
+                      200.<br>
+<br>
+   -s               : Set the username part of the resquest URI. Default is<br>
+                      'service'.<br>
+<br>
+   -sd              : Dumps a default scenario (embeded in the sipp executable)<br>
+<br>
+   -sf              : Loads an alternate xml scenario file.  To learn more<br>
+                      about XML scenario syntax, use the -sd option to dump<br>
+                      embedded scenarios. They contain all the necessary help.<br>
+<br>
+   -shortmessage_file: Set the name of the short message log file.<br>
+<br>
+   -shortmessage_overwrite: Overwrite the short message log file (default true).<br>
+<br>
+   -oocsf           : Load out-of-call scenario.<br>
+<br>
+   -oocsn           : Load out-of-call scenario.<br>
+<br>
+   -skip_rlimit     : Do not perform rlimit tuning of file descriptor limits.<br>
+                      Default: false.<br>
+<br>
+   -slave           : 3pcc extended mode: indicates the slave number<br>
+<br>
+   -slave_cfg       : 3pcc extended mode: indicates the file where the master<br>
+                      and slave addresses are stored<br>
+<br>
+   -sn              : Use a default scenario (embedded in the sipp executable).<br>
+                      If this option is omitted, the Standard SipStone UAC<br>
+                      scenario is loaded.<br>
+                      Available values in this version:<br>
+<br>
+                      - 'uac'      : Standard SipStone UAC (default).<br>
+                      - 'uas'      : Simple UAS responder.<br>
+                      - 'regexp'   : Standard SipStone UAC - with regexp and<br>
+                        variables.<br>
+                      - 'branchc'  : Branching and conditional branching in<br>
+                        scenarios - client.<br>
+                      - 'branchs'  : Branching and conditional branching in<br>
+                        scenarios - server.<br>
+<br>
+                      Default 3pcc scenarios (see -3pcc option):<br>
+<br>
+                      - '3pcc-C-A' : Controller A side (must be started after<br>
+                        all other 3pcc scenarios)<br>
+                      - '3pcc-C-B' : Controller B side.<br>
+                      - '3pcc-A'   : A side.<br>
+                      - '3pcc-B'   : B side.<br>
+<br>
+<br>
+   -stat_delimiter  : Set the delimiter for the statistics file<br>
+<br>
+   -stf             : Set the file name to use to dump statistics<br>
+<br>
+   -t               : Set the transport mode:<br>
+                      - u1: UDP with one socket (default),<br>
+                      - un: UDP with one socket per call,<br>
+                      - ui: UDP with one socket per IP address The IP<br>
+                        addresses must be defined in the injection file.<br>
+                      - t1: TCP with one socket,<br>
+                      - tn: TCP with one socket per call,<br>
+                      - l1: TLS with one socket,<br>
+                      - ln: TLS with one socket per call,<br>
+                      - s1: SCTP with one socket (default),<br>
+                      - sn: SCTP with one socket per call,<br>
+                      - c1: u1 + compression (only if compression plugin<br>
+                        loaded),<br>
+                      - cn: un + compression (only if compression plugin<br>
+                        loaded).  This plugin is not provided with sipp.<br>
+<br>
+<br>
+   -timeout         : Global timeout. Default unit is seconds.  If this option<br>
+                      is set, SIPp quits after nb units (-timeout 20s quits<br>
+                      after 20 seconds).<br>
+<br>
+   -timeout_error   : SIPp fails if the global timeout is reached is set<br>
+                      (-timeout option required).<br>
+<br>
+   -timer_resol     : Set the timer resolution. Default unit is milliseconds.<br>
+                      This option has an impact on timers precision.Small<br>
+                      values allow more precise scheduling but impacts CPU<br>
+                      usage.If the compression is on, the value is set to<br>
+                      50ms. The default value is 10ms.<br>
+<br>
+   -T2              : Global T2-timer in milli seconds<br>
+<br>
+   -sendbuffer_warn : Produce warnings instead of errors on SendBuffer<br>
+                      failures.<br>
+<br>
+   -trace_msg       : Displays sent and received SIP messages in &lt;scenario file<br>
+                      name&gt;_&lt;pid&gt;_messages.log<br>
+<br>
+   -trace_shortmsg  : Displays sent and received SIP messages as CSV in<br>
+                      &lt;scenario file name&gt;_&lt;pid&gt;_shortmessages.log<br>
+<br>
+   -trace_screen    : Dump statistic screens in the<br>
+                      &lt;scenario_name&gt;_&lt;pid&gt;_screens.log file when<br>
+                      quitting SIPp. Useful to get a final status report in<br>
+                      background mode (-bg option).<br>
+<br>
+   -trace_err       : Trace all unexpected messages in &lt;scenario file<br>
+                      name&gt;_&lt;pid&gt;_errors.log.<br>
+<br>
+   -trace_calldebug : Dumps debugging information about aborted calls to<br>
+                      &lt;scenario_name&gt;_&lt;pid&gt;_calldebug.log file.<br>
+<br>
+   -trace_stat      : Dumps all statistics in &lt;scenario_name&gt;_&lt;pid&gt;.csv file.<br>
+                      Use the '-h stat' option for a detailed description of<br>
+                      the statistics file content.<br>
+<br>
+   -trace_counts    : Dumps individual message counts in a CSV file.<br>
+<br>
+   -trace_rtt       : Allow tracing of all response times in &lt;scenario file<br>
+                      name&gt;_&lt;pid&gt;_rtt.csv.<br>
+<br>
+   -trace_logs      : Allow tracing of &lt;log&gt; actions in &lt;scenario file<br>
+                      name&gt;_&lt;pid&gt;_logs.log.<br>
+<br>
+   -users           : Instead of starting calls at a fixed rate, begin 'users'<br>
+                      calls at startup, and keep the number of calls constant.<br>
+<br>
+   -watchdog_interval: Set gap between watchdog timer firings.  Default is 400.<br>
+<br>
+   -watchdog_reset  : If the watchdog timer has not fired in more than this<br>
+                      time period, then reset the max triggers counters.<br>
+                      Default is 10 minutes.<br>
+<br>
+   -watchdog_minor_threshold: If it has been longer than this period between watchdog<br>
+                      executions count a minor trip.  Default is 500.<br>
+<br>
+   -watchdog_major_threshold: If it has been longer than this period between watchdog<br>
+                      executions count a major trip.  Default is 3000.<br>
+<br>
+   -watchdog_major_maxtriggers: How many times the major watchdog timer can be tripped<br>
+                      before the test is terminated.  Default is 10.<br>
+<br>
+   -watchdog_minor_maxtriggers: How many times the minor watchdog timer can be tripped<br>
+                      before the test is terminated.  Default is 120.<br>
+<br>
+   -3pcc            : Launch the tool in 3pcc mode ("Third Party call<br>
+                      control"). The passed ip address is depending on the<br>
+                      3PCC role.<br>
+                      - When the first twin command is 'sendCmd' then this is<br>
+                        the address of the remote twin socket.  SIPp will try to<br>
+                        connect to this address:port to send the twin command<br>
+                        (This instance must be started after all other 3PCC<br>
+                        scenarii).<br>
+                          Example: 3PCC-C-A scenario.<br>
+                      - When the first twin command is 'recvCmd' then this is<br>
+                        the address of the local twin socket. SIPp will open<br>
+                        this address:port to listen for twin command.<br>
+                          Example: 3PCC-C-B scenario.<br>
+<br>
+   -tdmmap          : Generate and handle a table of TDM circuits.<br>
+                      A circuit must be available for the call to be placed.<br>
+                      Format: -tdmmap {0-3}{99}{5-8}{1-31}<br>
+<br>
+   -key             : keyword value<br>
+                      Set the generic parameter named "keyword" to "value".<br>
+<br>
+   -set             : variable value<br>
+                      Set the global variable parameter named "variable" to<br>
+                      "value".<br>
+<br>
+   -dynamicStart    : variable value<br>
+                      Set the start offset of dynamic_id varaiable<br>
+<br>
+   -dynamicMax      : variable value<br>
+                      Set the maximum of dynamic_id variable<br>
+<br>
+   -dynamicStep     : variable value<br>
+                      Set the increment of dynamic_id variable<br>
+<br>
+Signal handling:<br>
+<br>
+   SIPp can be controlled using posix signals. The following signals<br>
+   are handled:<br>
+   USR1: Similar to press 'q' keyboard key. It triggers a soft exit<br>
+         of SIPp. No more new calls are placed and all ongoing calls<br>
+         are finished before SIPp exits.<br>
+         Example: kill -SIGUSR1 732<br>
+   USR2: Triggers a dump of all statistics screens in<br>
+         &lt;scenario_name&gt;_&lt;pid&gt;_screens.log file. Especially useful<br>
+         in background mode to know what the current status is.<br>
+         Example: kill -SIGUSR2 732<br>
+<br>
+Exit code:<br>
+<br>
+   Upon exit (on fatal error or when the number of asked calls (-m<br>
+   option) is reached, sipp exits with one of the following exit<br>
+   code:<br>
+    0: All calls were successful<br>
+    1: At least one call failed<br>
+   97: exit on internal command. Calls may have been processed<br>
+   99: Normal exit without calls processed<br>
+   -1: Fatal error<br>
+   -2: Fatal error binding a socket<br>
+<br>
+<br>
+Example:<br>
+<br>
+   Run sipp with embedded server (uas) scenario:<br>
+     ./sipp -sn uas<br>
+   On the same host, run sipp with embedded client (uac) scenario<br>
+     ./sipp -sn uac 127.0.0.1</code>
+<h3>sipp Usage Example</h3>
+<p>Run sipp using the embedded server <b><i>(-sn uas)</i></b> scenario:</p>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="a1d3ceced5e1cac0cdc8">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# sipp -sn uas<br>
+Warning: open file limit &gt; FD_SETSIZE; limiting max. # of open files to FD_SETSIZE = 1024<br>
+------------------------------ Scenario Screen -------- [1-9]: Change Screen --<br>
+  Port   Total-time  Total-calls  Transport<br>
+  5060      11.94 s            0  UDP<br>
+<br>
+  0 new calls during 0.926 s period      1 ms scheduler resolution<br>
+  0 calls                                Peak was 0 calls, after 0 s<br>
+  0 Running, 2 Paused, 2 Woken up<br>
+  0 dead call msg (discarded)          <br>
+  3 open sockets                        <br>
+<br>
+                                 Messages  Retrans   Timeout   Unexpected-Msg<br>
+  ----------&gt; INVITE             0         0         0         0        <br>
+<br>
+  &lt;---------- 180                0         0                            <br>
+  &lt;---------- 200                0         0         0                  <br>
+  ----------&gt; ACK         E-RTD1 0         0         0         0        <br>
+<br>
+  ----------&gt; BYE                0         0         0         0        <br>
+  &lt;---------- 200                0         0                            <br>
+  [   4000ms] Pause              0                             0</code>
+</div></section><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

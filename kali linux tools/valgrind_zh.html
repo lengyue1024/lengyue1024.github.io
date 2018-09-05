@@ -1,0 +1,242 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> Valgrind的包装说明</h2><p style="text-align: justify;"> Valgrind是用于调试和分析Linux程序的系统。凭借其工具套件，可以自动检测许多内存管理和线程错误，避免令人沮丧的bug狩猎的时间，使你的程序更加稳定。您还可以进行详细的分析，以帮助加快您的程序和使用Valgrind的建设新的工具。该Valgrind的分布目前包括六个生产质量的工具： </p><ul><li>内存错误检测器（的Memcheck） </li><li> 2线程错误探测器（Helgrind和DRD） </li><li>高速缓存和分支预测分析器（Cachegrind） </li><li>一个调用图生成缓存和分支预测分析器（Callgrind） </li><li>堆分析器（高原） </li></ul><p>它还包括三个实验工具： </p><ul><li>堆栈/全局数组超限检测器（SGCheck） </li><li>第二堆剖析器，探讨如何堆块用于（DHAT） </li><li>一个SimPoint基本块矢量发生器（BBV） </li></ul><p> <a href="javascript:if(confirm('http://www.valgrind.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.valgrind.org/'" tppabs="http://www.valgrind.org/" variation="deepblue" target="blank">Valgrind的主页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/valgrind.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/valgrind.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/valgrind.git;a=summary" variation="deepblue" target="blank">卡利Valgrind的回购</a> </p><ul><li>作者：朱西华德</li><li>许可：GPL第二版</li></ul><h3>包含在Valgrind的包装工具</h3><h5> callgrind_annotate - 后处理工具，用于Callgrind </h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="9eecf1f1eadef5fff2f7">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# callgrind_annotate -h<br>
+usage: callgrind_annotate [options] [callgrind-out-file [source-files...]]<br>
+<br>
+  options for the user, with defaults in [ ], are:<br>
+    -h --help             show this message<br>
+    --version             show version<br>
+    --show=A,B,C          only show figures for events A,B,C [all]<br>
+    --sort=A,B,C          sort columns by events A,B,C [event column order]<br>
+    --threshold=&lt;0--100&gt;  percentage of counts (of primary sort event) we<br>
+                          are interested in [99%]<br>
+    --auto=yes|no         annotate all source files containing functions<br>
+                          that helped reach the event count threshold [no]<br>
+    --context=N           print N lines of context before and after<br>
+                          annotated lines [8]<br>
+    --inclusive=yes|no    add subroutine costs to functions calls [no]<br>
+    --tree=none|caller|   print for each function their callers,<br>
+           calling|both   the called functions or both [none]<br>
+    -I --include=&lt;dir&gt;    add &lt;dir&gt; to list of directories to search for<br>
+                          source files</code><h3> callgrind_control - 观察和控制方案由Callgrind运行</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="691b06061d2902080500">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# callgrind_control -h<br>
+Observe the status and control currently active callgrind runs.<br>
+(C) 2003-2011, Josef Weidendorfer (<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="571d382432317900323e33323933382531322517303a2f793332">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>)<br>
+<br>
+Usage: callgrind_control [options] [pid|program-name...]<br>
+<br>
+If no pids/names are given, an action is applied to all currently<br>
+active Callgrind runs. Default action is printing short information.<br>
+<br>
+Options:<br>
+  -h --help         Show this help text<br>
+  --version         Show version<br>
+  -s --stat         Show statistics<br>
+  -b --back         Show stack/back trace<br>
+  -e [&lt;A&gt;,...]      Show event counters for &lt;A&gt;,... (default: all)<br>
+  --dump[=&lt;s&gt;]      Request a dump optionally using &lt;s&gt; as description<br>
+  -z --zero         Zero all event counters<br>
+  -k --kill         Kill<br>
+  -i --instr=on|off Switch instrumentation state on/off</code><h3> cg_annotate - 后处理工具Cachegrind </h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="d8aab7b7ac98b3b9b4b1">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# cg_annotate -h<br>
+usage: cg_annotate [options] cachegrind-out-file [source-files...]<br>
+<br>
+  options for the user, with defaults in [ ], are:<br>
+    -h --help             show this message<br>
+    --version             show version<br>
+    --show=A,B,C          only show figures for events A,B,C [all]<br>
+    --sort=A,B,C          sort columns by events A,B,C [event column order]<br>
+    --threshold=&lt;0--20&gt;   a function is shown if it accounts for more than x% of<br>
+                          the counts of the primary sort event [0.1]<br>
+    --auto=yes|no         annotate all source files containing functions<br>
+                          that helped reach the event count threshold [no]<br>
+    --context=N           print N lines of context before and after<br>
+                          annotated lines [8]<br>
+    -I&lt;d&gt; --include=&lt;d&gt;   add &lt;d&gt; to list of directories to search for<br>
+                          source files<br>
+<br>
+  cg_annotate is Copyright (C) 2002-2007 Nicholas Nethercote.<br>
+  and licensed under the GNU General Public License, version 2.<br>
+  Bug reports, feedback, admiration, abuse, etc, to: <a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="234d494d6355424f44514a4d470d4c51440d">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></code><h3> cg_diff - 的diff cachegrind文件</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="73011c1c073318121f1a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# cg_diff -h<br>
+usage: cg_diff [options] &lt;cachegrind-out-file1&gt; &lt;cachegrind-out-file2&gt;<br>
+<br>
+  options for the user, with defaults in [ ], are:<br>
+    -h --help             show this message<br>
+    -v --version          show version<br>
+    --mod-filename=&lt;expr&gt; a Perl search-and-replace expression that is applied<br>
+                          to filenames, eg. --mod-filename='s/prog[0-9]/projN/'<br>
+    --mod-funcname=&lt;expr&gt; like --mod-filename, but applied to function names<br>
+<br>
+  cg_diff is Copyright (C) 2010-2010 Nicholas Nethercote.<br>
+  and licensed under the GNU General Public License, version 2.<br>
+  Bug reports, feedback, admiration, abuse, etc, to: <a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="620c080c2214030e05100b0c064c0d10054c">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></code><h3> cg_merge - 合并多个cachegrind输出文件合并成一个</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="03716c6c774368626f6a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# cg_merge<br>
+cg_merge: Merges multiple cachegrind output files into one<br>
+cg_merge: usage: cg_merge [-o outfile] [files-to-merge]</code><h3> ms_print - 后处理工具地块</h3><h100>五</h100><h3> Valgrind的 - 的工具，调试和分析程序套件</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="55273a3a21153e34393c">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# valgrind -h<br>
+usage: valgrind [options] prog-and-args<br>
+<br>
+  tool-selection option, with default in [ ]:<br>
+    --tool=&lt;name&gt;             use the Valgrind tool named &lt;name&gt; [memcheck]<br>
+<br>
+  basic user options for all Valgrind tools, with defaults in [ ]:<br>
+    -h --help                 show this message<br>
+    --help-debug              show this message, plus debugging options<br>
+    --version                 show version<br>
+    -q --quiet                run silently; only print error msgs<br>
+    -v --verbose              be more verbose -- show misc extra info<br>
+    --trace-children=no|yes   Valgrind-ise child processes (follow execve)? [no]<br>
+    --trace-children-skip=patt1,patt2,...    specifies a list of executables<br>
+                              that --trace-children=yes should not trace into<br>
+    --trace-children-skip-by-arg=patt1,patt2,...   same as --trace-children-skip=<br>
+                              but check the argv[] entries for children, rather<br>
+                              than the exe name, to make a follow/no-follow decision<br>
+    --child-silent-after-fork=no|yes omit child output between fork &amp; exec? [no]<br>
+    --vgdb=no|yes|full        activate gdbserver? [yes]<br>
+                              full is slower but provides precise watchpoint/step<br>
+    --vgdb-error=&lt;number&gt;     invoke gdbserver after &lt;number&gt; errors [999999999]<br>
+                              to get started quickly, use --vgdb-error=0<br>
+                              and follow the on-screen directions<br>
+    --track-fds=no|yes        track open file descriptors? [no]<br>
+    --time-stamp=no|yes       add timestamps to log messages? [no]<br>
+    --log-fd=&lt;number&gt;         log messages to file descriptor [2=stderr]<br>
+    --log-file=&lt;file&gt;         log messages to &lt;file&gt;<br>
+    --log-socket=ipaddr:port  log messages to socket ipaddr:port<br>
+<br>
+  user options for Valgrind tools that report errors:<br>
+    --xml=yes                 emit error output in XML (some tools only)<br>
+    --xml-fd=&lt;number&gt;         XML output to file descriptor<br>
+    --xml-file=&lt;file&gt;         XML output to &lt;file&gt;<br>
+    --xml-socket=ipaddr:port  XML output to socket ipaddr:port<br>
+    --xml-user-comment=STR    copy STR verbatim into XML output<br>
+    --demangle=no|yes         automatically demangle C++ names? [yes]<br>
+    --num-callers=&lt;number&gt;    show &lt;number&gt; callers in stack traces [12]<br>
+    --error-limit=no|yes      stop showing new errors if too many? [yes]<br>
+    --error-exitcode=&lt;number&gt; exit code to return if errors found [0=disable]<br>
+    --show-below-main=no|yes  continue stack traces below main() [no]<br>
+    --suppressions=&lt;filename&gt; suppress errors described in &lt;filename&gt;<br>
+    --gen-suppressions=no|yes|all    print suppressions for errors? [no]<br>
+    --db-attach=no|yes        start debugger when errors detected? [no]<br>
+    --db-command=&lt;command&gt;    command to start debugger [/usr/bin/gdb -nw %f %p]<br>
+    --input-fd=&lt;number&gt;       file descriptor for input [0=stdin]<br>
+    --dsymutil=no|yes         run dsymutil on Mac OS X when helpful? [no]<br>
+    --max-stackframe=&lt;number&gt; assume stack switch for SP changes larger<br>
+                              than &lt;number&gt; bytes [2000000]<br>
+    --main-stacksize=&lt;number&gt; set size of main thread's stack (in bytes)<br>
+                              [use current 'ulimit' value]<br>
+<br>
+  user options for Valgrind tools that replace malloc:<br>
+    --alignment=&lt;number&gt;      set minimum alignment of heap allocations [8]<br>
+    --redzone-size=&lt;number&gt;   set minimum size of redzones added before/after<br>
+                              heap blocks (in bytes). [16]<br>
+<br>
+  uncommon user options for all Valgrind tools:<br>
+    --fullpath-after=         (with nothing after the '=')<br>
+                              show full source paths in call stacks<br>
+    --fullpath-after=string   like --fullpath-after=, but only show the<br>
+                              part of the path after 'string'.  Allows removal<br>
+                              of path prefixes.  Use this flag multiple times<br>
+                              to specify a set of prefixes to remove.<br>
+    --smc-check=none|stack|all|all-non-file [stack]<br>
+                              checks for self-modifying code: none, only for<br>
+                              code found in stacks, for all code, or for all<br>
+                              code except that from file-backed mappings<br>
+    --read-var-info=yes|no    read debug info on stack and global variables<br>
+                              and use it to print better error messages in<br>
+                              tools that make use of it (Memcheck, Helgrind,<br>
+                              DRD) [no]<br>
+    --vgdb-poll=&lt;number&gt;      gdbserver poll max every &lt;number&gt; basic blocks [5000]<br>
+    --vgdb-shadow-registers=no|yes   let gdb see the shadow registers [no]<br>
+    --vgdb-prefix=&lt;prefix&gt;    prefix for vgdb FIFOs [/tmp/vgdb-pipe]<br>
+    --run-libc-freeres=no|yes free up glibc memory at exit on Linux? [yes]<br>
+    --sim-hints=hint1,hint2,...  known hints:<br>
+                                 lax-ioctls, enable-outer, fuse-compatible [none]<br>
+    --fair-sched=no|yes|try   schedule threads fairly on multicore systems [no]<br>
+    --kernel-variant=variant1,variant2,...  known variants: bproc [none]<br>
+                              handle non-standard kernel variants<br>
+    --show-emwarns=no|yes     show warnings about emulation limits? [no]<br>
+    --require-text-symbol=:sonamepattern:symbolpattern    abort run if the<br>
+                              stated shared object doesn't have the stated<br>
+                              text symbol.  Patterns can contain ? and *.<br>
+    --soname-synonyms=syn1=pattern1,syn2=pattern2,... synonym soname<br>
+              specify patterns for function wrapping or replacement.<br>
+              To use a non-libc malloc library that is<br>
+                  in the main exe:  --soname-synonyms=somalloc=NONE<br>
+                  in libxyzzy.so:   --soname-synonyms=somalloc=libxyzzy.so<br>
+<br>
+  user options for Memcheck:<br>
+    --leak-check=no|summary|full     search for memory leaks at exit?  [summary]<br>
+    --leak-resolution=low|med|high   differentiation of leak stack traces [high]<br>
+    --show-reachable=no|yes          show reachable blocks in leak check? [no]<br>
+    --show-possibly-lost=no|yes      show possibly lost blocks in leak check?<br>
+                                     [yes]<br>
+    --undef-value-errors=no|yes      check for undefined value errors [yes]<br>
+    --track-origins=no|yes           show origins of undefined values? [no]<br>
+    --partial-loads-ok=no|yes        too hard to explain here; see manual [no]<br>
+    --freelist-vol=&lt;number&gt;          volume of freed blocks queue      [20000000]<br>
+    --freelist-big-blocks=&lt;number&gt;   releases first blocks with size &gt;= [1000000]<br>
+    --workaround-gcc296-bugs=no|yes  self explanatory [no]<br>
+    --ignore-ranges=0xPP-0xQQ[,0xRR-0xSS]   assume given addresses are OK<br>
+    --malloc-fill=&lt;hexnumber&gt;        fill malloc'd areas with given value<br>
+    --free-fill=&lt;hexnumber&gt;          fill free'd areas with given value<br>
+<br>
+  Extra options read from ~/.valgrindrc, $VALGRIND_OPTS, ./.valgrindrc<br>
+<br>
+  Memcheck is Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.<br>
+  Valgrind is Copyright (C) 2000-2012, and GNU GPL'd, by Julian Seward et al.<br>
+  LibVEX is Copyright (C) 2004-2012, and GNU GPL'd, by OpenWorks LLP et al.<br>
+<br>
+  Bug reports, feedback, admiration, abuse, etc, to: www.valgrind.org.</code><h3> Valgrind的监听器 - 用于Valgrind的日志重定向一个简单的监听程序</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="6b1904041f2b000a0702">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# valgrind-listener -h<br>
+<br>
+usage is:<br>
+<br>
+   valgrind-listener [--exit-at-zero|-e] [port-number]<br>
+<br>
+   where   --exit-at-zero or -e causes the listener to exit<br>
+           when the number of connections falls back to zero<br>
+           (the default is to keep listening forever)<br>
+<br>
+           port-number is the default port on which to listen for<br>
+           connections.  It must be between 1024 and 65535.<br>
+           Current default is 1500.</code><h3> vgdb - 发送监控命令到Valgrind的gdbserver的</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="beccd1d1cafed5dfd2d7">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# vgdb -h<br>
+Usage: vgdb [OPTION]... [[-c] COMMAND]...<br>
+vgdb (valgrind gdb) has two usages<br>
+  1. standalone to send monitor commands to a Valgrind gdbserver.<br>
+     The OPTION(s) must be followed by the command to send<br>
+     To send more than one command, separate the commands with -c<br>
+  2. relay application between gdb and a Valgrind gdbserver.<br>
+     Only OPTION(s) can be given.<br>
+<br>
+ OPTIONS are [--pid=&lt;number&gt;] [--vgdb-prefix=&lt;prefix&gt;]<br>
+             [--wait=&lt;number&gt;] [--max-invoke-ms=&lt;number&gt;]<br>
+             [--port=&lt;portnr&gt;<br>
+             [--cmd-time-out=&lt;number&gt;] [-l] [-D] [-d]<br>
+<br>
+  --pid arg must be given if multiple Valgrind gdbservers are found.<br>
+  --vgdb-prefix arg must be given to both Valgrind and vgdb utility<br>
+      if you want to change the default prefix for the FIFOs communication<br>
+      between the Valgrind gdbserver and vgdb.<br>
+  --wait (default 0) tells vgdb to check during the specified number<br>
+      of seconds if a Valgrind gdbserver can be found.<br>
+  --max-invoke-ms (default 100) gives the nr of milli-seconds after which vgdb<br>
+      will force the invocation of the Valgrind gdbserver (if the Valgrind<br>
+         process is blocked in a system call).<br>
+  --port instructs vgdb to listen for gdb on the specified port nr.<br>
+  --cmd-time-out (default 99999999) tells vgdb to exit if the found Valgrind<br>
+     gdbserver has not processed a command after number seconds<br>
+  -l  arg tells to show the list of running Valgrind gdbserver and then exit.<br>
+  -D  arg tells to show shared mem status and then exit.<br>
+  -d  arg tells to show debug info. Multiple -d args for more debug info<br>
+<br>
+  -h --help shows this message<br>
+  To get help from the Valgrind gdbserver, use vgdb help</code><h3> Valgrind的用法示例</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="dba9b4b4af9bb0bab7b2">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# coming soon</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

@@ -1,0 +1,105 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> dotdotpwn包装说明</h2><p style="text-align: justify;">这是一个非常灵活的智能模糊器来发现软件如HTTP / FTP / TFTP服务器，Web等平台的CMS，企业资源规划，博客等目录遍历漏洞</p><p>此外，它具有一个独立于协议的模块到所需的有效载荷发送到指定的主机和端口。另一方面，它也可以在使用STDOUT模块的脚本方式使用。 </p><p>这是写在Perl编程语言，无论是在* NIX或Windows平台都可以运行。这包括在BackTrack的Linux操作系统（BT4 R2）的第一个墨西哥的工具。 </p><p>模糊测试模块支持在这个版本： </p><ul><li> HTTP </li><li> HTTP URL </li><li> FTP </li><li> TFTP </li><li>有效载荷（协议独立） </li><li> STDOUT </li></ul><p>资料来源：https://github.com/wireghoul/dotdotpwn <br> <a href="javascript:if(confirm('http://dotdotpwn.blogspot.ca/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://dotdotpwn.blogspot.ca/'" tppabs="http://dotdotpwn.blogspot.ca/" variation="deepblue" target="blank">DotDotPwn首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/dotdotpwn.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/dotdotpwn.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/dotdotpwn.git;a=summary" variation="deepblue" target="blank">卡利DotDotPwn回购</a> </p><ul><li>作者：chr1x，nitr0us </li><li>许可：GPL第二版</li></ul><h3>包含在dotdotpwn包工具</h3><h5> dotdotpwn.pl - DotDotPwn - 目录遍历的Fuzzer </h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="72001d1d063219131e1b">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dotdotpwn.pl<br>
+#################################################################################<br>
+#                                                                               #<br>
+#  CubilFelino                                                       Chatsubo   #<br>
+#  Security Research Lab              and            [(in)Security Dark] Labs   #<br>
+#  chr1x.sectester.net                             chatsubo-labs.blogspot.com   #<br>
+#                                                                               #<br>
+#                               pr0udly present:                                #<br>
+#                                                                               #<br>
+#  ________            __  ________            __  __________                   #<br>
+#  \______ \    ____ _/  |_\______ \    ____ _/  |_\______   \__  _  __ ____    #<br>
+#   |    |  \  /  _ \\   __\|    |  \  /  _ \\   __\|     ___/\ \/ \/ //    \   #<br>
+#   |    `   \(  &lt;_&gt; )|  |  |    `   \(  &lt;_&gt; )|  |  |    |     \     /|   |  \  #<br>
+#  /_______  / \____/ |__| /_______  / \____/ |__|  |____|      \/\_/ |___|  /  #<br>
+#          \/                      \/                                      \/   #<br>
+#                               - DotDotPwn v3.0 -                              #<br>
+#                         The Directory Traversal Fuzzer                        #<br>
+#                         http://dotdotpwn.sectester.net                        #<br>
+#                           <a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="18dab87c776c7c776c686f76586b7d7b6c7d6b6c7d6a36767d6c">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>                            #<br>
+#                                                                               #<br>
+#                               by chr1x &amp; nitr0us                              #<br>
+#################################################################################<br>
+<br>
+Usage: ./dotdotpwn.pl -m &lt;module&gt; -h &lt;host&gt; [OPTIONS]<br>
+    Available options:<br>
+    -m  Module [http | http-url | ftp | tftp | payload | stdout]<br>
+    -h  Hostname<br>
+    -O  Operating System detection for intelligent fuzzing (nmap)<br>
+    -o  Operating System type if known ("windows", "unix" or "generic")<br>
+    -s  Service version detection (banner grabber)<br>
+    -d  Depth of traversals (e.g. deepness 3 equals to ../../../; default: 6)<br>
+    -f  Specific filename (e.g. /etc/motd; default: according to OS detected, defaults in TraversalEngine.pm)<br>
+    -E  Add @Extra_files in TraversalEngine.pm (e.g. web.config, httpd.conf, etc.)<br>
+    -S  Use SSL - for HTTP and Payload module (use https:// for in url for http-uri)<br>
+    -u  URL with the part to be fuzzed marked as TRAVERSAL (e.g. http://foo:8080/id.php?x=TRAVERSAL&amp;y=31337)<br>
+    -k  Text pattern to match in the response (http-url &amp; payload modules - e.g. "root:" if trying /etc/passwd)<br>
+    -p  Filename with the payload to be sent and the part to be fuzzed marked with the TRAVERSAL keyword<br>
+    -x  Port to connect (default: HTTP=80; FTP=21; TFTP=69)<br>
+    -t  Time in milliseconds between each test (default: 300 (.3 second))<br>
+    -X  Use the Bisection Algorithm to detect the exact deepness once a vulnerability has been found<br>
+    -e  File extension appended at the end of each fuzz string (e.g. ".php", ".jpg", ".inc")<br>
+    -U  Username (default: 'anonymous')<br>
+    -P  Password (default: <a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="99befdf6edd9fdf6edb7e9eef7">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>')<br>
+    -M  HTTP Method to use when using the 'http' module [GET | POST | HEAD | COPY | MOVE] (default: GET)<br>
+    -r  Report filename (default: 'HOST_MM-DD-YYYY_HOUR-MIN.txt')<br>
+    -b  Break after the first vulnerability is found<br>
+    -q  Quiet mode (doesn't print each attempt)<br>
+    -C  Continue if no data was received from host</code><h3> dotdotpwn用法示例</h3><p>使用HTTP扫描模块<b><i>（-m HTTP）</i></b>对<b><i>主机（-h 192.168.1.1），</i></b>使用GET方法<b><i>（GET -M）：</i></b> </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="83f1ececf7c3e8e2efea">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dotdotpwn.pl -m http -h 192.168.1.1 -M GET<br>
+#################################################################################<br>
+#                                                                               #<br>
+#  CubilFelino                                                       Chatsubo   #<br>
+#  Security Research Lab              and            [(in)Security Dark] Labs   #<br>
+#  chr1x.sectester.net                             chatsubo-labs.blogspot.com   #<br>
+#                                                                               #<br>
+#                               pr0udly present:                                #<br>
+#                                                                               #<br>
+#  ________            __  ________            __  __________                   #<br>
+#  \______ \    ____ _/  |_\______ \    ____ _/  |_\______   \__  _  __ ____    #<br>
+#   |    |  \  /  _ \\   __\|    |  \  /  _ \\   __\|     ___/\ \/ \/ //    \   #<br>
+#   |    `   \(  &lt;_&gt; )|  |  |    `   \(  &lt;_&gt; )|  |  |    |     \     /|   |  \  #<br>
+#  /_______  / \____/ |__| /_______  / \____/ |__|  |____|      \/\_/ |___|  /  #<br>
+#          \/                      \/                                      \/   #<br>
+#                               - DotDotPwn v3.0 -                              #<br>
+#                         The Directory Traversal Fuzzer                        #<br>
+#                         http://dotdotpwn.sectester.net                        #<br>
+#                           <a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="945634f0fbe0f0fbe0e4e3fad4e7f1f7e0f1e7e0f1e6bafaf1e0">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>                            #<br>
+#                                                                               #<br>
+#                               by chr1x &amp; nitr0us                              #<br>
+#################################################################################<br>
+<br>
+[+] Report name: Reports/192.168.1.1_05-20-2014_08-41.txt<br>
+<br>
+[========== TARGET INFORMATION ==========]<br>
+[+] Hostname: 192.168.1.1<br>
+[+] Protocol: http<br>
+[+] Port: 80<br>
+<br>
+[=========== TRAVERSAL ENGINE ===========]<br>
+[+] Creating Traversal patterns (mix of dots and slashes)<br>
+[+] Multiplying 6 times the traversal patterns (-d switch)<br>
+[+] Creating the Special Traversal patterns<br>
+[+] Translating (back)slashes in the filenames<br>
+[+] Adapting the filenames according to the OS type detected (generic)<br>
+[+] Including Special sufixes<br>
+[+] Traversal Engine DONE ! - Total traversal tests created: 19680<br>
+<br>
+[=========== TESTING RESULTS ============]<br>
+[+] Ready to launch 3.33 traversals per second<br>
+[+] Press Enter to start the testing (You can stop it pressing Ctrl + C)</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

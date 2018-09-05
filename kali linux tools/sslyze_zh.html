@@ -1,0 +1,136 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> SSLyze包装说明</h2><p style="text-align: justify;"> SSLyze是一个Python的工具，它可以通过连接到它分析服务器的SSL配置。它的设计是快速和全面的，应该帮助组织和测试人员找出配置错误影响了他们的SSL服务器。 </p><p>主要功能包括： </p><ul><li>多处理和多线程扫描（它的速度快） </li><li> SSL 2.0 / 3.0和TLS 1.0 / 1.1 / 1.2的兼容性</li><li>性能测试：会话恢复和TLS票支持</li><li>安全性测试：弱密码套件，不安全的重新谈判，犯罪，Heartbleed多</li><li>服务器证书验证和撤销，通过OCSP装订检查</li><li>支持对SMTP，XMPP，LDAP，POP，IMAP，RDP和FTP启动TLS握手</li><li>扫描执行相互验证的服务器时，支持客户端证书</li><li> XML输出​​，以进一步处理该扫描结果</li></ul><p>资料来源：https://github.com/iSECPartners/sslyze <br> <a href="javascript:if(confirm('https://github.com/iSECPartners/sslyze  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/iSECPartners/sslyze'" tppabs="https://github.com/iSECPartners/sslyze" variation="deepblue" target="blank">SSLyze首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/sslyze.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/sslyze.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/sslyze.git;a=summary" variation="deepblue" target="blank">卡利SSLyze回购</a> </p><ul><li>作者：iSECPartners </li><li>许可：GPL第二版</li></ul><h3>包含在sslyze包工具</h3><h5> sslyze - 快速，全功能SSL扫描器</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="f2809d9d86b299939e9b">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# sslyze -h<br>
+<br>
+<br>
+<br>
+ REGISTERING AVAILABLE PLUGINS<br>
+ -----------------------------<br>
+<br>
+  PluginSessionResumption<br>
+  PluginOpenSSLCipherSuites<br>
+  PluginCompression<br>
+  PluginCertInfo<br>
+  PluginSessionRenegotiation<br>
+<br>
+<br>
+<br>
+Usage: sslyze [options] target1.com target2.com:443 etc...<br>
+<br>
+Options:<br>
+  --version             show program's version number and exit<br>
+  -h, --help            show this help message and exit<br>
+  --xml_out=XML_FILE    Writes the scan results as an XML document to the file<br>
+                        XML_FILE.<br>
+  --targets_in=TARGETS_IN<br>
+                        Reads the list of targets to scan from the file<br>
+                        TARGETS_IN. It should contain one host:port per line.<br>
+  --timeout=TIMEOUT     Sets the timeout value in seconds used for every<br>
+                        socket connection made to the target server(s).<br>
+                        Default is 5s.<br>
+  --https_tunnel=HTTPS_TUNNEL<br>
+                        Sets an HTTP CONNECT proxy to tunnel SSL traffic to<br>
+                        the target server(s). HTTP_TUNNEL should be<br>
+                        'host:port'. Requires Python 2.7<br>
+  --starttls=STARTTLS   Identifies the target server(s) as a SMTP or an XMPP<br>
+                        server(s) and scans the server(s) using STARTTLS.<br>
+                        STARTTLS should be 'smtp' or 'xmpp'.<br>
+  --xmpp_to=XMPP_TO     Optional setting for STARTTLS XMPP.  XMPP_TO should be<br>
+                        the hostname to be put in the 'to' attribute of the<br>
+                        XMPP stream. Default is the server's hostname.<br>
+  --regular             Regular HTTPS scan; shortcut for --sslv2 --sslv3<br>
+                        --tlsv1 --reneg --resum --certinfo --http_get<br>
+                        --hide_rejected_ciphers --compression --tlsv1_1<br>
+                        --tlsv1_2<br>
+<br>
+  Client certificate support:<br>
+    --cert=CERT         Client certificate filename.<br>
+    --certform=CERTFORM<br>
+                        Client certificate format. DER or PEM (default).<br>
+    --key=KEY           Client private key filename.<br>
+    --keyform=KEYFORM   Client private key format. DER or PEM (default).<br>
+    --pass=KEYPASS      Client private key passphrase.<br>
+<br>
+  PluginSessionResumption:<br>
+    Analyzes the target server's SSL session resumption capabilities.<br>
+<br>
+    --resum             Tests the server for session ressumption support,<br>
+                        using session IDs and TLS session tickets (RFC 5077).<br>
+    --resum_rate        Performs 100 session resumptions with the target<br>
+                        server, in order to estimate the session resumption<br>
+                        rate.<br>
+<br>
+  PluginOpenSSLCipherSuites:<br>
+    Scans the target server for supported OpenSSL cipher suites.<br>
+<br>
+    --sslv2             Lists the SSL 2.0 OpenSSL cipher suites supported by<br>
+                        the server.<br>
+    --sslv3             Lists the SSL 3.0 OpenSSL cipher suites supported by<br>
+                        the server.<br>
+    --tlsv1             Lists the TLS 1.0 OpenSSL cipher suites supported by<br>
+                        the server.<br>
+    --tlsv1_1           Lists the TLS 1.1 OpenSSL cipher suites supported by<br>
+                        the server.<br>
+    --tlsv1_2           Lists the TLS 1.2 OpenSSL cipher suites supported by<br>
+                        the server.<br>
+    --http_get          Option - For each cipher suite, sends an HTTP GET<br>
+                        request after completing the SSL handshake and returns<br>
+                        the HTTP status code.<br>
+    --hide_rejected_ciphers<br>
+                        Option - Hides the (usually long) list of cipher<br>
+                        suites that were rejected by the server.<br>
+<br>
+  PluginCompression:<br>
+    --compression       Tests the server for Zlib compression support.<br>
+<br>
+  PluginCertInfo:<br>
+    --certinfo=CERTINFO<br>
+                        Verifies the target server's certificate validity<br>
+                        against Mozilla's trusted root store, and prints<br>
+                        relevant fields of the certificate. CERTINFO should be<br>
+                        'basic' or 'full'.<br>
+<br>
+  PluginSessionRenegotiation:<br>
+    --reneg             Tests the target server's support for client-initiated<br>
+                        renegotiations and secure renegotiations.</code><h3> sslyze用法示例</h3><p>启动定期扫描类型<b><i>（-regular）</i></b>对目标主机<b><i>（www.example.com）：</i></b> </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="13617c7c675378727f7a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# sslyze --regular www.example.com<br>
+<br>
+ REGISTERING AVAILABLE PLUGINS<br>
+ -----------------------------<br>
+<br>
+  PluginCompression<br>
+  PluginCertInfo<br>
+  PluginSessionResumption<br>
+  PluginSessionRenegotiation<br>
+  PluginOpenSSLCipherSuites<br>
+<br>
+<br>
+<br>
+ CHECKING HOST(S) AVAILABILITY<br>
+ -----------------------------<br>
+<br>
+   www.example.com:443                 =&gt; 93.184.216.119:443<br>
+<br>
+<br>
+<br>
+ SCAN RESULTS FOR WWW.EXAMPLE.COM:443 - 93.184.216.119:443<br>
+ ---------------------------------------------------------<br>
+<br>
+  * Compression :<br>
+        Compression Support:      Disabled<br>
+<br>
+  * Certificate :<br>
+      Validation w/ Mozilla's CA Store:  Certificate is Trusted</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

@@ -1,0 +1,136 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<section class="l-section"><div class="l-section-h i-cf"><h2>hping3 Package Description</h2>
+<p style="text-align: justify;">hping is a command-line oriented TCP/IP packet assembler/analyzer. The interface is inspired to the ping(8) unix command, but hping isn’t only able to send ICMP echo requests. It supports TCP, UDP, ICMP and RAW-IP protocols, has a traceroute mode, the ability to send files between a covered channel, and many other features.</p>
+<p>While hping was mainly used as a security tool in the past, it can be used in many ways by people that don’t care about security to test networks and hosts. A subset of the stuff you can do using hping:</p>
+<ul>
+<li>Firewall testing</li>
+<li>Advanced port scanning</li>
+<li>Network testing, using different protocols, TOS, fragmentation</li>
+<li>Manual path MTU discovery</li>
+<li>Advanced traceroute, under all the supported protocols</li>
+<li>Remote OS fingerprinting</li>
+<li>Remote uptime guessing</li>
+<li>TCP/IP stacks auditing</li>
+<li>hping can also be useful to students that are learning TCP/IP.</li>
+</ul>
+<p>Source: http://www.hping.org/<br>
+<a href="javascript:if(confirm('http://www.hping.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.hping.org/'" tppabs="http://www.hping.org/" variation="deepblue" target="blank">hping3 Homepage</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/hping3.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/hping3.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/hping3.git;a=summary" variation="deepblue" target="blank">Kali hping3 Repo</a></p>
+<ul>
+<li>Author: Salvatore Sanfilippo</li>
+<li>License: GPLv2</li>
+</ul>
+<h3>Tools included in the hping3 package</h3>
+<h5>hping3 – Active Network Smashing Tool</h5>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="55273a3a21153e34393c">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# hping3 -h<br>
+usage: hping3 host [options]<br>
+  -h  --help      show this help<br>
+  -v  --version   show version<br>
+  -c  --count     packet count<br>
+  -i  --interval  wait (uX for X microseconds, for example -i u1000)<br>
+      --fast      alias for -i u10000 (10 packets for second)<br>
+      --faster    alias for -i u1000 (100 packets for second)<br>
+      --flood      sent packets as fast as possible. Don't show replies.<br>
+  -n  --numeric   numeric output<br>
+  -q  --quiet     quiet<br>
+  -I  --interface interface name (otherwise default routing interface)<br>
+  -V  --verbose   verbose mode<br>
+  -D  --debug     debugging info<br>
+  -z  --bind      bind ctrl+z to ttl           (default to dst port)<br>
+  -Z  --unbind    unbind ctrl+z<br>
+      --beep      beep for every matching packet received<br>
+Mode<br>
+  default mode     TCP<br>
+  -0  --rawip      RAW IP mode<br>
+  -1  --icmp       ICMP mode<br>
+  -2  --udp        UDP mode<br>
+  -8  --scan       SCAN mode.<br>
+                   Example: hping --scan 1-30,70-90 -S www.target.host<br>
+  -9  --listen     listen mode<br>
+IP<br>
+  -a  --spoof      spoof source address<br>
+  --rand-dest      random destionation address mode. see the man.<br>
+  --rand-source    random source address mode. see the man.<br>
+  -t  --ttl        ttl (default 64)<br>
+  -N  --id         id (default random)<br>
+  -W  --winid      use win* id byte ordering<br>
+  -r  --rel        relativize id field          (to estimate host traffic)<br>
+  -f  --frag       split packets in more frag.  (may pass weak acl)<br>
+  -x  --morefrag   set more fragments flag<br>
+  -y  --dontfrag   set don't fragment flag<br>
+  -g  --fragoff    set the fragment offset<br>
+  -m  --mtu        set virtual mtu, implies --frag if packet size &gt; mtu<br>
+  -o  --tos        type of service (default 0x00), try --tos help<br>
+  -G  --rroute     includes RECORD_ROUTE option and display the route buffer<br>
+  --lsrr           loose source routing and record route<br>
+  --ssrr           strict source routing and record route<br>
+  -H  --ipproto    set the IP protocol field, only in RAW IP mode<br>
+ICMP<br>
+  -C  --icmptype   icmp type (default echo request)<br>
+  -K  --icmpcode   icmp code (default 0)<br>
+      --force-icmp send all icmp types (default send only supported types)<br>
+      --icmp-gw    set gateway address for ICMP redirect (default 0.0.0.0)<br>
+      --icmp-ts    Alias for --icmp --icmptype 13 (ICMP timestamp)<br>
+      --icmp-addr  Alias for --icmp --icmptype 17 (ICMP address subnet mask)<br>
+      --icmp-help  display help for others icmp options<br>
+UDP/TCP<br>
+  -s  --baseport   base source port             (default random)<br>
+  -p  --destport   [+][+]&lt;port&gt; destination port(default 0) ctrl+z inc/dec<br>
+  -k  --keep       keep still source port<br>
+  -w  --win        winsize (default 64)<br>
+  -O  --tcpoff     set fake tcp data offset     (instead of tcphdrlen / 4)<br>
+  -Q  --seqnum     shows only tcp sequence number<br>
+  -b  --badcksum   (try to) send packets with a bad IP checksum<br>
+                   many systems will fix the IP checksum sending the packet<br>
+                   so you'll get bad UDP/TCP checksum instead.<br>
+  -M  --setseq     set TCP sequence number<br>
+  -L  --setack     set TCP ack<br>
+  -F  --fin        set FIN flag<br>
+  -S  --syn        set SYN flag<br>
+  -R  --rst        set RST flag<br>
+  -P  --push       set PUSH flag<br>
+  -A  --ack        set ACK flag<br>
+  -U  --urg        set URG flag<br>
+  -X  --xmas       set X unused flag (0x40)<br>
+  -Y  --ymas       set Y unused flag (0x80)<br>
+  --tcpexitcode    use last tcp-&gt;th_flags as exit code<br>
+  --tcp-mss        enable the TCP MSS option with the given value<br>
+  --tcp-timestamp  enable the TCP timestamp option to guess the HZ/uptime<br>
+Common<br>
+  -d  --data       data size                    (default is 0)<br>
+  -E  --file       data from file<br>
+  -e  --sign       add 'signature'<br>
+  -j  --dump       dump packets in hex<br>
+  -J  --print      dump printable characters<br>
+  -B  --safe       enable 'safe' protocol<br>
+  -u  --end        tell you when --file reached EOF and prevent rewind<br>
+  -T  --traceroute traceroute mode              (implies --bind and --ttl 1)<br>
+  --tr-stop        Exit when receive the first not ICMP in traceroute mode<br>
+  --tr-keep-ttl    Keep the source TTL fixed, useful to monitor just one hop<br>
+  --tr-no-rtt       Don't calculate/show RTT information in traceroute mode<br>
+ARS packet description (new, unstable)<br>
+  --apd-send       Send the packet described with APD (see docs/APD.txt)</code>
+<h3>hping3 Usage Example</h3>
+<p>Use traceroute mode <b><i>(–traceroute)</i></b>, be verbose <b><i>(-V)</i></b> in ICMP mode <b><i>(-1)</i></b> against the target <b><i>(www.example.com)</i></b>:</p>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="04766b6b70446f65686d">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# hping3 --traceroute -V -1 www.example.com<br>
+using eth0, addr: 192.168.1.15, MTU: 1500<br>
+HPING www.example.com (eth0 93.184.216.119): icmp mode set, 28 headers + 0 data bytes<br>
+hop=1 TTL 0 during transit from ip=192.168.1.1 name=UNKNOWN<br>
+hop=1 hoprtt=0.3 ms<br>
+hop=2 TTL 0 during transit from ip=192.168.0.1 name=UNKNOWN<br>
+hop=2 hoprtt=3.3 ms</code>
+</div></section><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

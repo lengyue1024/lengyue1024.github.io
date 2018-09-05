@@ -1,0 +1,1162 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。" />
+
+
+
+  <meta name="keywords" content="Linux,试题解析," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="首先对这份迟到的解析，我要对各位说一句对不起。因为我最近一直奔波于实验室，教室，自习室，从下周开始，每周都要考试，这段时间真的很忙，博客我只能抽空去写，所以最近更新有点慢了，很对不起。1.cron 后台常驻程序 (daemon) 用于：（ ） A. 负责文件在网络中的共享 B. 管理打印子系统 C. 跟踪管理系统信息和错误 D. 管理系统日常任务的调度 2.在大多数Linux发行版本中，以下哪个属">
+<meta name="keywords" content="Linux,试题解析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux面试题解析第1天">
+<meta property="og:url" content="http://bingyublog.com/2018/05/08/Linux面试题解析第1天/index.html">
+<meta property="og:site_name" content="冰羽の博客">
+<meta property="og:description" content="首先对这份迟到的解析，我要对各位说一句对不起。因为我最近一直奔波于实验室，教室，自习室，从下周开始，每周都要考试，这段时间真的很忙，博客我只能抽空去写，所以最近更新有点慢了，很对不起。1.cron 后台常驻程序 (daemon) 用于：（ ） A. 负责文件在网络中的共享 B. 管理打印子系统 C. 跟踪管理系统信息和错误 D. 管理系统日常任务的调度 2.在大多数Linux发行版本中，以下哪个属">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fs8myocfgvj30xc0f045y.jpg">
+<meta property="og:updated_time" content="2018-08-28T11:09:03.007Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux面试题解析第1天">
+<meta name="twitter:description" content="首先对这份迟到的解析，我要对各位说一句对不起。因为我最近一直奔波于实验室，教室，自习室，从下周开始，每周都要考试，这段时间真的很忙，博客我只能抽空去写，所以最近更新有点慢了，很对不起。1.cron 后台常驻程序 (daemon) 用于：（ ） A. 负责文件在网络中的共享 B. 管理打印子系统 C. 跟踪管理系统信息和错误 D. 管理系统日常任务的调度 2.在大多数Linux发行版本中，以下哪个属">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fs8myocfgvj30xc0f045y.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title> Linux面试题解析第1天 | 冰羽の博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7b451f13126c1ccdebfa8d48ee43a5d0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">冰羽の博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Linux面试题解析第1天
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2018-05-08T22:51:27+08:00" content="2018-05-08">
+            2018-05-08
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/试题研究/" itemprop="url" rel="index">
+                  <span itemprop="name">试题研究</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fs8myocfgvj30xc0f045y.jpg" rel="gallery_cjlomhuqa001u6owats0tya6o"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fs8myocfgvj30xc0f045y.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+
+        </div>
+      
+
+      
+        <span itemprop="articleBody"><p>首先对这份迟到的解析，我要对各位说一句对不起。因为我最近一直奔波于实验室，教室，自习室，从下周开始，每周都要考试，这段时间真的很忙，博客我只能抽空去写，所以最近更新有点慢了，很对不起。<br>1.<strong>cron 后台常驻程序 (daemon) 用于：（ ）</strong></p>
+<p>A. 负责文件在网络中的共享</p>
+<p>B. 管理打印子系统</p>
+<p>C. 跟踪管理系统信息和错误</p>
+<p>D. 管理系统日常任务的调度</p>
+<p>2.<strong>在大多数Linux发行版本中，以下哪个属于块设备 (block devices) ？ （ ）</strong></p>
+<p>A. 串行口</p>
+<p>B. 硬盘</p>
+<p>C. 虚拟终端</p>
+<p>D. 打印机</p>
+<p>3.<strong>下面哪个Linux命令可以一次显示一页内容？ （ ）</strong></p>
+<p>A. pause</p>
+<p>B. cat</p>
+<p>C. more</p>
+<p>D. grep</p>
+<p>4.<strong>怎样了解您在当前目录下还有多大空间？ （ ）</strong></p>
+<p>A. Use df</p>
+<p>B. Use du /</p>
+<p>C. Use du .</p>
+<p>D. Use df .</p>
+<p>5.<strong>怎样更改一个文件的权限设置？ （ ）</strong></p>
+<p>A. attrib</p>
+<p>B. chmod</p>
+<p>C. change</p>
+<p>D. file</p>
+<p>6.<strong>假如您需要找出 /etc/my.conf 文件属于哪个包 (package) ，您可以执行：（ ）</strong></p>
+<p>A. rpm -q /etc/my.conf</p>
+<p>B. rpm -requires /etc/my.conf</p>
+<p>C. rpm -qf /etc/my.conf</p>
+<p>D. rpm -q | grep /etc/my.conf</p>
+<p>7.<strong>假如当前系统是在 level 3 运行，怎样不重启系统就可转换到 level 5 运行？ （ ）</strong></p>
+<p>A. Set level = 5</p>
+<p>B. telinit 5</p>
+<p>C. run 5</p>
+<p>D. ALT-F7-5</p>
+<p>8.<strong>那个命令用于改变 IDE 硬盘的设置？ （ ）</strong></p>
+<p>A. hdparam</p>
+<p>B. ideconfig</p>
+<p>C. hdparm</p>
+<p>D. hddparm</p>
+<p>9.<strong>下面哪个命令可以列出定义在以后特定时间运行一次的所有任务？（ ）</strong></p>
+<p>A. atq</p>
+<p>B. cron</p>
+<p>C. batch</p>
+<p>D. at</p>
+<p>10.<strong>下面命令的作用是：set PS1=”[\u\w\t]\$” ; export PS1 （ ）</strong></p>
+<p>A. 改变错误信息提示</p>
+<p>B. 改变命令提示符</p>
+<p>C. 改变一些终端参数</p>
+<p>D. 改变辅助命令提示符</p>
+<p>————————————–分割线———————————–</p>
+<p>1.<strong>cron 后台常驻程序 (daemon) 用于：（ ）</strong></p>
+<p>A. 负责文件在网络中的共享</p>
+<p>B. 管理打印子系统</p>
+<p>C. 跟踪管理系统信息和错误</p>
+<font color="#B22222" size="3">D. 管理系统日常任务的调度</font><br><strong>解析：</strong> cron服务是实现Linux定时任务的服务，也就是管理系统日常任务的调整。A.NFS和CIFS负责文件在网络中的共享,可能有人会说FTP服务，但是FTP只是文件传输协议，并不是文件共享的。D.strace常用来跟踪进程执行时的系统调用和所接收的信号。<br><br>2.<strong>在大多数Linux发行版本中，以下哪个属于块设备 (block devices) ？ （ ）</strong><br><br>A. 串行口<br><br><font color="#B22222" size="3">B. 硬盘</font>
+
+<p>C. 虚拟终端</p>
+<p>D. 打印机<br><strong>解析：</strong> Linux中I/O设备分为两类：字符设备和块设备。块设备是Linux三大设备之一，其驱动模型主要针对磁盘，Flash等存储类设备，块设备（blockdevice）是一种具有一定结构的随机存取设备，对这种设备的读写是按块(所以叫块设备)进行的，他使用缓冲区来存放暂时的数据，待条件成熟后，从缓存一次性写入设备或者从设备一次性读到缓冲区。</p>
+<p>3.<strong>下面哪个Linux命令可以一次显示一页内容？ （ ）</strong></p>
+<p>A. pause</p>
+<p>B. cat</p>
+<font color="#B22222" size="3">C. more</font>
+
+<p>D. grep<br><strong>解析：</strong> Linux命令中并没有pause命令。cat是“Concatenate(连续)”的简写，主要将一个文件的内容连续显示到屏幕上，不会进行分页。more是 一个过滤器, 用于分页显示 (一次一屏) 。文本grep是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出，通常与”cat”搭配使用。</p>
+<p>4.<strong>怎样了解您在当前目录下还有多大空间？ （ ）</strong></p>
+<p>A. Use df</p>
+<p>B. Use du /</p>
+<font color="#B22222" size="3">C. Use du .</font>
+
+<p>D. Use df .<br><strong>解析：</strong> 注意！这题的前面的”Use”是使用xxx命令的意思，不属于运行的命令。df：列出指定的每一个文件名所在的文件系统上可用磁盘空间的数量，如果没有指定文件名,则显示当前所有使用中的文件系统。du(disk usage):报告磁盘空间使用情况.题目说是当前目录下的，所以A忽略了当前目录下。B.属于主目录/。需要区分的是du会把指定目录下所有文件、目录、目录下的文件都统计。是建立在文件系统能看到的的确确是有这样一些文件的基础上的。也就是说我们能在文件系统里面看到的文件才会被du统计。df则是基于文件系统总体来计算，通过文件系统中未分配空间来确定系统中已经分配空间的大小。</p>
+<p>5.<strong>怎样更改一个文件的权限设置？ （ ）</strong></p>
+<p>A. attrib</p>
+<font color="#B22222" size="3">B. chmod </font>
+
+<p>C. change</p>
+<p>D. file<br><strong>解析：</strong> A.Linux中没有attrib命令。B.Linux中没有change命令。C.chmod是更改文件权限的命令。D.file命令用来探测给定文件的类型。</p>
+<p>6.<strong>假如您需要找出 /etc/my.conf 文件属于哪个包 (package) ，您可以执行：（ ）</strong></p>
+<p>A. rpm -q /etc/my.conf</p>
+<p>B. rpm -requires /etc/my.conf</p>
+<font color="#B22222" size="3">C. rpm -qf /etc/my.conf </font>
+
+<p>D. rpm -q | grep /etc/my.conf<br><strong>解析：</strong> rpm用来进行查询的命令格式为：rpm -q options.这也就是说你在进行查询操作的时候，是不能直接用-q的，你需要附加其他参数进行查询，所以A、D是错误的。B.–requires (or -R) 显示软件包所需的功能。不符合题目要求。C.rpm -qf /etc/my.conf 查看某个文件属于哪个软件包，可以是普通文件或可执行文件，跟文件的绝对路径。</p>
+<p>7.<strong>假如当前系统是在 level 3 运行，怎样不重启系统就可转换到 level 5 运行？ （ ）</strong></p>
+<p>A. Set level = 5</p>
+<font color="#B22222" size="3">B. telinit 5 </font>
+
+<p>C. run 5</p>
+<p>D. ALT-F7-5<br><strong>解析：</strong> 除了B选项，其他几个选项全部是瞎写的，根本不存在这几个命令以及快捷方式。C.telinit 用于设置当前系统的运行等级.可以直接跟0~6运行等级.</p>
+<p>8.<strong>那个命令用于改变 IDE 硬盘的设置？ （ ）</strong></p>
+<p>A. hdparam</p>
+<p>B. ideconfig</p>
+<font color="#B22222" size="3">C. hdparm </font>
+
+<p>D. hddparm<br><strong>解析：</strong> 除了C选项的命令，其他几个命令也是不存在Linux系统的。C.hdparm显示与设定硬盘的参数.具体参数可以查看man手册。</p>
+<p>9.<strong>下面哪个命令可以列出定义在以后特定时间运行一次的所有任务？ （ ）</strong></p>
+<font color="#B22222" size="3">A. atq </font>
+
+<p>B. cron</p>
+<p>C. batch</p>
+<p>D. at<br><strong>解析：</strong> B.cron是服务，不是命令，Linux存在crontab命令，用于定时执行操作命令。C.batch命令用于在指定时间，当系统不繁忙时执行任务。D.at命令用于在指定时间执行命令。A.atq命令显示系统中待执行的任务列表，和at -l一样。</p>
+<p>10.<strong>下面命令的作用是：set PS1=”[\u\w\t]\$” ; export PS1  （ ）</strong></p>
+<p>A. 改变错误信息提示</p>
+<font color="#B22222" size="3">B. 改变命令提示符 </font>
+
+<p>C. 改变一些终端参数</p>
+<p>D. 改变辅助命令提示符<br><strong>解析：</strong> 这是一个shell，set命令作用主要是显示系统中已经存在的shell变量，以及设置shell变量的新变量值。而PS1是命令提示符的环境变量，这个环境变量是默认的。\u：表示当前用户的帐号名称；\w：完整的工作目录之外，家目录会以 ~ 取代；\t: 显示系统时间;$：提示字符，如果是 root 时，提示符为 #，普通用户则为 $.这个shell的意思其实就是先重新设置命令行的环境变量，然后用export命令用于将新设置的变量输出为环境变量。作用就是改变命令提示符。</p>
+<p><strong>以上解析均属个人观点，如有不足之处可以联系我进行更正</strong><br><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
+</span>
+      
+    </div>
+    <div>
+   
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+
+   
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"><i class="fa tag"></i> Linux</a>
+          
+            <a href="/tags/试题解析/" rel="tag"><i class="fa tag"></i> 试题解析</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/10/kali美化-教你打造极客类型桌面/" rel="prev">kali美化教程1---教你打造极客类型3D旋转桌面</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/07/注意注意！说一件重要的事/" rel="next">注意注意！说一件重要的事</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        如果本文对您有帮助，还望赞赏一下，谢谢
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+              
+
+            
+                <a href="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">冰羽</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">你指尖跃动的电光，是我此生不变的信仰。</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">124</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945 || github" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+  
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2018
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冰羽
+  </span>
+
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UA50F9B4D7",
+    "hash": "7cce0e84b501ad9c874106f70967e299"
+});
+tpwidget("show");</script>
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2017,12,17,00,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML="本站已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  }, 1000);
+
+</script>
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
+</html>

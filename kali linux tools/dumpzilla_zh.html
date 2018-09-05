@@ -1,0 +1,74 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> Dumpzilla包装说明</h2><p style="text-align: justify;"> Dumpzilla应用程序是用Python开发的3.x和有作为的目的提取物的Firefox，Iceweasel和Seamonkey的浏览器进行分析，所有的法医有趣的信息。由于它的Python 3.x的研究与开发，可能无法在旧版本的Python正常工作，这主要与某些字符。在Unix和Windows 32/64位系统的工作原理。工程在命令行界面，这样的信息转储可能是由于管道用例如grep工具重定向，AWK，剪切，sed的...... Dumpzilla允许可视化下面的章节，搜索定制和提取某些内容。 </p><ul><li>饼干+ DOM存储（HTML 5）。 </li><li>用户首选项（域权限，代理设置...）。 </li><li>下载。 </li><li> Web表单（搜索，电子邮件，注释..）。 </li><li>市历史。 </li><li>书签。 </li><li>缓存HTML5可视化/提取（脱机缓存）。 </li><li>访问的网站“缩略图”可视化/提取。 </li><li>插件/扩展和使用的路径或URL。 </li><li>浏览器保存的密码。 </li><li> SSL证书添加为例外。 </li><li> （表单中使用的站点，参考网址和文字）会话数据。 </li><li>可视化实时用户网上冲浪，URL中使用的每个标签/窗口，和使用形式。 </li></ul><p> Dumpzilla将显示每个文件的SHA256哈希提取信息，并最后汇总与汇总。 <br>这节日期过滤器是不可能的：DOM存储，权限/首选项，插件，扩展，密码/异常，缩略图和会议</p><p>资料来源：http://www.dumpzilla.org/Manual_dumpzilla_en.txt <br> <a href="javascript:if(confirm('http://www.dumpzilla.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.dumpzilla.org/'" tppabs="http://www.dumpzilla.org/" variation="deepblue" target="blank">Dumpzilla首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/dumpzilla.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/dumpzilla.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/dumpzilla.git;a=summary" variation="deepblue" target="blank">卡利Dumpzilla回购</a> </p><ul><li>作者：Busindre </li><li>许可：GPLv3的</li></ul><h3>包含在dumpzilla包工具</h3><h5> dumpzilla - Mozilla浏览器取证工具</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="2d5f4242596d464c4144">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dumpzilla<br>
+<br>
+Version: 15/03/2013<br>
+<br>
+Usage: python dumpzilla.py browser_profile_directory [Options]<br>
+<br>
+Options:<br>
+<br>
+ --All (Shows everything but the DOM data. Doesn't extract thumbnails or HTML 5 offline)<br>
+ --Cookies [-showdom -domain &lt;string&gt; -name &lt;string&gt; -hostcookie &lt;string&gt; -access &lt;date&gt; -create &lt;date&gt; -secure &lt;0/1&gt; -httponly &lt;0/1&gt; -range_last -range_create &lt;start&gt; &lt;end&gt;]<br>
+ --Permissions [-host &lt;string&gt;]<br>
+ --Downloads [-range &lt;start&gt; &lt;end&gt;]<br>
+ --Forms    [-value &lt;string&gt; -range_forms &lt;start&gt; &lt;end&gt;]<br>
+ --History [-url &lt;string&gt; -title &lt;string&gt; -date &lt;date&gt; -range_history &lt;start&gt; &lt;end&gt; -frequency]<br>
+ --Bookmarks [-range_bookmarks &lt;start&gt; &lt;end&gt;]<br>
+ --Cacheoffline [-range_cacheoff &lt;start&gt; &lt;end&gt; -extract &lt;directory&gt;]<br>
+ --Thumbnails [-extract_thumb &lt;directory&gt;]<br>
+ --Range &lt;start date&gt; &lt;end date&gt;<br>
+ --Addons<br>
+ --Passwords (Decode only in Unix)<br>
+ --Certoverride<br>
+ --Session<br>
+ --Watch [-text &lt;string&gt;] (Shows in daemon mode the URLs and text form in real time. -text' Option allow filter,  support all grep Wildcards. Exit: Ctrl + C. only Unix).<br>
+<br>
+Wildcards: '%'  Any string of any length (Including zero length)<br>
+           '_'  Single character<br>
+       '\'  Escape character<br>
+<br>
+Date syntax: YYYY-MM-DD HH:MM:SS<br>
+<br>
+Win profile: 'C:\Documents and Settings\xx\Application Data\Mozilla\Firefox\Profiles\xxxx.default'<br>
+Unix profile: '/home/xx/.mozilla/seamonkey/xxxx.default/'</code><h3> dumpzilla用法示例</h3><p>分析Mozilla的配置文件夹<b><i>（&#39;/root/.mozilla/firefox/k780shir.default/&#39;）和</i></b>转储以外的所有影像数据<b><i>（-All）：</i></b> </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="fa8895958eba919b9693">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dumpzilla '/root/.mozilla/firefox/k780shir.default/' --All<br>
+<br>
+====================================================================================================<br>
+Cookies              [SHA256 hash: 18d35b51ec9865ea3dd21e9bc69dc3d286d4e20373bbb0b350a0e41c8bf2da42]<br>
+====================================================================================================<br>
+<br>
+<br>
+Domain: google.com<br>
+Host: .google.com<br>
+Name: PREF<br>
+Value: ID=ddcc3d04cf65b33f:TM=1400253352:LM=1400253352:S=LrFq_HXVbaconjt0l<br>
+Path: /<br>
+Expiry: 2016-05-15 11:15:52<br>
+Last acess: 2014-05-16 11:15:52<br>
+Creation Time: 2014-05-16 11:15:52<br>
+Secure: No<br>
+HttpOnly: No<br>
+<br>
+<br>
+Domain: kali.org<br>
+Host: .kali.org<br>
+Name: __utma<br>
+Value: 24402336.1888242215.144BAC0N56.1400253356.14322255.1<br>
+Path: /<br>
+Expiry: 2016-05-15 11:15:55<br>
+Last acess: 2014-05-16 11:15:55<br>
+Creation Time: 2014-05-16 11:15:55</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

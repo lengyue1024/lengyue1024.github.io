@@ -1,0 +1,67 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> smali包装说明</h2><p style="text-align: justify;"> smali / baksmali是一个汇编/反汇编器所使用的Dalvik，Android的Java虚拟机实现的DEX格式。语法是松散的基础上茉莉的/ dedexer的语法，并支持DEX格式的全部功能（注释，调试信息，线路信息等） </p><p>资料来源：https://code.google.com/p/smali/ <br> <a href="javascript:if(confirm('http://code.google.com/p/smali/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://code.google.com/p/smali/'" tppabs="http://code.google.com/p/smali/" variation="deepblue" target="blank">smali首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/smali.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/smali.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/smali.git;a=summary" variation="deepblue" target="blank">卡利smali回购</a> </p><ul><li>作者：本Gruver </li><li>许可：BSD </li></ul><h3>包含在smali包工具</h3><h5> smali - 汇编了一套smali文件转换成一个DEX文件</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="35475a5a41755e54595c">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# smali --help<br>
+usage: java -jar smali.jar [options] [--] [&lt;smali-file&gt;|folder]*<br>
+assembles a set of smali files into a dex file<br>
+ -?,--help                      prints the help message then exits. Specify twice for debug options<br>
+ -a,--api-level &lt;API_LEVEL&gt;     The numeric api-level of the file to generate, e.g. 14 for ICS. If not<br>
+                                specified, it defaults to 14 (ICS).<br>
+ -o,--output &lt;FILE&gt;             the name of the dex file that will be written. The default is out.dex<br>
+ -v,--version                   prints the version then exits<br>
+ -x,--allow-odex-instructions   allow odex instructions to be compiled into the dex file. Only a few<br>
+                                instructions are supported - the ones that can exist in a dead code path and not<br>
+                                cause dalvik to reject the class</code><h3> baksmali - 反汇编和/或转储DEX文件</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="2b5944445f6b404a4742">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# baksmali --help<br>
+usage: java -jar baksmali.jar [options] &lt;dex-file&gt;<br>
+disassembles and/or dumps a dex file<br>
+ -?,--help                                  prints the help message then exits. Specify twice for debug options<br>
+ -a,--api-level &lt;API_LEVEL&gt;                 The numeric api-level of the file being disassembled. If not<br>
+                                            specified, it defaults to 14 (ICS).<br>
+ -b,--no-debug-info                         don't write out debug info (.local, .param, .line, etc.)<br>
+ -c,--bootclasspath &lt;BOOTCLASSPATH&gt;         the bootclasspath jars to use, for analysis. Defaults to<br>
+                                            core.jar:ext.jar:framework.jar:android.policy.jar:services.jar. If<br>
+                                            the value begins with a :, it will be appended to the default<br>
+                                            bootclasspath instead of replacing it<br>
+ -d,--bootclasspath-dir &lt;DIR&gt;               the base folder to look for the bootclasspath files in. Defaults to<br>
+                                            the current directory<br>
+ -f,--code-offsets                          add comments to the disassembly containing the code offset for each<br>
+                                            address<br>
+ -l,--use-locals                            output the .locals directive with the number of non-parameter<br>
+                                            registers, rather than the .register directive with the total number<br>
+                                            of register<br>
+ -m,--no-accessor-comments                  don't output helper comments for synthetic accessors<br>
+ -o,--output &lt;DIR&gt;                          the directory where the disassembled files will be placed. The<br>
+                                            default is out<br>
+ -p,--no-parameter-registers                use the v&lt;n&gt; syntax instead of the p&lt;n&gt; syntax for registers mapped<br>
+                                            to method parameters<br>
+ -r,--register-info &lt;REGISTER_INFO_TYPES&gt;   print the specificed type(s) of register information for each<br>
+                                            instruction. "ARGS,DEST" is the default if no types are specified.<br>
+                                            Valid values are:<br>
+                                            ALL: all pre- and post-instruction registers.<br>
+                                            ALLPRE: all pre-instruction registers<br>
+                                            ALLPOST: all post-instruction registers<br>
+                                            ARGS: any pre-instruction registers used as arguments to the<br>
+                                            instruction<br>
+                                            DEST: the post-instruction destination register, if any<br>
+                                            MERGE: Any pre-instruction register has been merged from more than 1<br>
+                                            different post-instruction register from its predecessors<br>
+                                            FULLMERGE: For each register that would be printed by MERGE, also<br>
+                                            show the incoming register types that were merged<br>
+ -s,--sequential-labels                     create label names using a sequential numbering scheme per label<br>
+                                            type, rather than using the bytecode address<br>
+ -v,--version                               prints the version then exits<br>
+ -x,--deodex                                deodex the given odex file. This option is ignored if the input file<br>
+                                            is not an odex file</code><h3> smali用法示例</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="91e3fefee5d1faf0fdf8">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# coming soon</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

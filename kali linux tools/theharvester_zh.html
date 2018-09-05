@@ -1,0 +1,72 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> theharvester包装说明</h2><p style="text-align: justify;">该计划的目的是收集电子邮件，子域名，主机，员工姓名，开放的端口和横幅不同的公共来源，如搜索引擎，PGP密钥服务器和撒旦的计算机数据库。 </p><p>该工具旨在帮助在渗透测试的早期阶段，渗透测试，以了解客户的足迹在互联网上。这也是任何人都希望知道攻击者可以看到他们的组织非常有用。 </p><p>这是一个像新的功能工具的完全重写： </p><ul><li>请求之间的时间延迟</li><li>所有源搜索</li><li>虚拟主机验证</li><li>主动枚举（DNS枚举，反向查找，TLD扩展） </li><li>与撒旦的计算机数据库集成，以获得开放的端口和横幅</li><li>保存到XML和HTML </li><li>有统计数据基本图</li><li>新源</li></ul><p>资料来源：https://code.google.com/p/theharvester/ </p><p> <a href="javascript:if(confirm('https://code.google.com/p/theharvester/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.google.com/p/theharvester/'" tppabs="https://code.google.com/p/theharvester/" variation="deepblue" target="blank">theHarvester首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/theharvester.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/theharvester.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/theharvester.git;a=summary" variation="deepblue" target="blank">卡利theHarvester回购</a> </p><ul><li>作者：基督教Martorella </li><li>许可：GPL第二版</li></ul><h3>包含在theharvester包工具</h3><h5> theharvester - 收集电子邮件账户和子域的名称来自公共资源的工具</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="e1938e8e95a18a808d88">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# theharvester<br>
+<br>
+*******************************************************************<br>
+*                                                                 *<br>
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *<br>
+* | __| '_ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *<br>
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *<br>
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *<br>
+*                                                                 *<br>
+* TheHarvester Ver. 2.2a                                          *<br>
+* Coded by Christian Martorella                                   *<br>
+* Edge-Security Research                                          *<br>
+* <a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="0b68666a797f64796e67676a4b6e6f6c6e26786e687e79627f7225686466">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>                                   *<br>
+*******************************************************************<br>
+<br>
+<br>
+Usage: theharvester options<br>
+<br>
+       -d: Domain to search or company name<br>
+       -b: Data source (google,bing,bingapi,pgp,linkedin,google-profiles,people123,jigsaw,all)<br>
+       -s: Start in result number X (default 0)<br>
+       -v: Verify host name via dns resolution and search for virtual hosts<br>
+       -f: Save the results into an HTML and XML file<br>
+       -n: Perform a DNS reverse query on all ranges discovered<br>
+       -c: Perform a DNS brute force for the domain name<br>
+       -t: Perform a DNS TLD expansion discovery<br>
+       -e: Use this DNS server<br>
+       -l: Limit the number of results to work with(bing goes from 50 to 50 results,<br>
+       -h: use SHODAN database to query discovered hosts<br>
+            google 100 to 100, and pgp doesn't use this option)<br>
+<br>
+Examples: theharvester -d microsoft.com -l 500 -b google<br>
+            theharvester -d microsoft.com -b pgp<br>
+            theharvester -d microsoft -l 200 -b linkedin</code><h3> theharvester用法示例</h3><p>从搜索电子邮件地址从一个域<b><i>（-d kali.org），</i></b>结果限制为<b><i>500（-L 500），</i></b>使用谷歌<b><i>（-b谷歌）：</i></b> </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="90e2ffffe4d0fbf1fcf9">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# theharvester -d kali.org -l 500 -b google<br>
+<br>
+*******************************************************************<br>
+*                                                                 *<br>
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *<br>
+* | __| '_ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *<br>
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *<br>
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *<br>
+*                                                                 *<br>
+* TheHarvester Ver. 2.2a                                          *<br>
+* Coded by Christian Martorella                                   *<br>
+* Edge-Security Research                                          *<br>
+* <a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="67040a0615130815020b0b0627020300024a14020412150e131e4904080a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>                                   *<br>
+*******************************************************************<br>
+<br>
+<br>
+[-] Searching in Google:<br>
+        Searching 0 results...<br>
+        Searching 100 results...<br>
+        Searching 200 results...<br>
+        Searching 300 results...<br>
+        Searching 400 results...<br>
+        Searching 500 results...</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

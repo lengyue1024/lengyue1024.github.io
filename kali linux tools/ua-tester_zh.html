@@ -1,0 +1,147 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> UA-测试仪包装说明</h2><p style="text-align: justify;">该工具被设计为自动检查使用的用户（每行）提供的标准和非标准用户代理字符串列表中指定的URL。这些检查的结果随后报告给在需要进行进一步人工分析的用户。 </p><p>资料来源：https://code.google.com/p/ua-tester/ <br> <a href="javascript:if(confirm('http://code.google.com/p/ua-tester/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://code.google.com/p/ua-tester/'" tppabs="http://code.google.com/p/ua-tester/" variation="deepblue" target="blank">UA-测试仪首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/ua-tester.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/ua-tester.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/ua-tester.git;a=summary" variation="deepblue" target="blank">卡利UA-测试仪回购</a> </p><ul><li>作者：克里斯·约翰·赖利</li><li>许可：BSD </li></ul><h3>包括在UA-Tester软件包工具</h3><h5> UA-测试仪 - 用户代理字符串测试仪</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="a3d1ccccd7e3c8c2cfca">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# ua-tester<br>
+<br>
+<br>
+         _/    _/  _/_/_/_/       _/_/_/_/ _/_/_/_/ _/_/_/_/ _/_/_/_/ _/_/_/_/ _/_/_/_/<br>
+        _/    _/  _/    _/          _/    _/       _/          _/    _/       _/    _/<br>
+       _/    _/  _/_/_/_/  _/_/_/  _/    _/_/_/   _/_/_/_/    _/    _/_/_/   _/_/_/_<br>
+      _/    _/  _/    _/          _/    _/             _/    _/    _/       _/    _/<br>
+     _/_/_/_/  _/    _/          _/    _/_/_/_/ _/_/_/_/    _/    _/_/_/_/ _/      _/ [v1.06]<br>
+<br>
+                                                                 _/ User-Agent Tester ↵<br>
+                                                                  _/ AKA: Purple Pimp ↵<br>
+                                                                    _/ ChrisJohnRiley ↵<br>
+                                                                       _/ blog.c22.cc ↵<br>
+<br>
+<br>
+<br>
+  This tool is designed to automatically check a given URL using a list of standard and non-<br>
+  standard User Agent strings provided by the user (1 per line).<br>
+<br>
+  The results of these checks are then reported to the user for further manual analysis where<br>
+  required. Gathered data includes Response Codes, resulting URL in the case of a 30x response,<br>
+  MD5 and length of response body, and select Server headers.<br>
+<br>
+  Results: When in non-verbose mode, only values that do not match the initial reference connection<br>
+  are reported to the user. If no results are shown for a specific useragent then all results match<br>
+  the initial reference connection. If you require a full output of all checks regardless of matches<br>
+  to the reference, please use the verbose setting.<br>
+<br>
+     Output:  [+] Added Headers, [-] Removed Headers, [!] Altered Headers, [ ] No Change<br>
+<br>
+  Usage .:<br>
+            -u / --url Complete URL<br>
+            -f / --file &lt;Path to User Agent file&gt; / If no file is provided, -d options must be present<br>
+            -s / --single provide single user-agent string (may need to be contained within quotes)<br>
+            -d / --default Select the UA String type(s) to check. Select 1 or more of the following ↵<br>
+                           catagories. (M)obile, (D)esktop, mis(C), (T)ools, (B)ots, e(X)treme [!])<br>
+<br>
+        -o / --output &lt;Path to output file&gt; CSV formated output (FILE WILL BE OVERWRITTEN[!])<br>
+        -v / --verbose results (Displays full headers for each check) &gt;&gt; Recommended<br>
+            --debug See debug messages (This isn't the switch you're looking for)<br>
+<br>
+<br>
+  Example .:<br>
+<br>
+        ./UATester.py -u www.example.com -f ./useragentlist.txt -v<br>
+        ./UATester.py -u https://www.wordpress.com<br>
+        ./UATester.py -u http://www.defaultserver.com -v --debug<br>
+        ./UATester.py -u facebook.com -v -d MDBX<br>
+        ./UATester.py -u https://www.google.com -s "MySpecialUserAgent"<br>
+        ./UATester.py -u blog.c22.cc -d MC -o ./output.csv</code><h3> UA-测试仪用法示例</h3><p>连接到<b><i>URL（-u http://192.168.1.202/joomla），并使用</i></b>移动设备的用户代理字符串<b><i>（-d M）</i></b>来检查不同的内容： </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="b1c3dedec5f1dad0ddd8">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# ua-tester -u http://192.168.1.202/joomla -d M<br>
+<br>
+<br>
+         _/    _/  _/_/_/_/       _/_/_/_/ _/_/_/_/ _/_/_/_/ _/_/_/_/ _/_/_/_/ _/_/_/_/<br>
+        _/    _/  _/    _/          _/    _/       _/          _/    _/       _/    _/<br>
+       _/    _/  _/_/_/_/  _/_/_/  _/    _/_/_/   _/_/_/_/    _/    _/_/_/   _/_/_/_<br>
+      _/    _/  _/    _/          _/    _/             _/    _/    _/       _/    _/<br>
+     _/_/_/_/  _/    _/          _/    _/_/_/_/ _/_/_/_/    _/    _/_/_/_/ _/      _/ [v1.06]<br>
+<br>
+                                                                 _/ User-Agent Tester ↵<br>
+                                                                  _/ AKA: Purple Pimp ↵<br>
+                                                                    _/ ChrisJohnRiley ↵<br>
+                                                                       _/ blog.c22.cc ↵<br>
+<br>
+ [&gt;] Performing initial request and confirming stability<br>
+ [&gt;] Using User-Agent string Mozilla/5.0 <br>
+<br>
+    [ ] URL (ENTERED): http://192.168.1.202/joomla<br>
+    [!] URL (FINAL): http://192.168.1.202/joomla/<br>
+    [!] Response Code: 301 Moved Permanently<br>
+    [ ] Date: Fri, 16 May 2014 20:25:31 GMT<br>
+    [ ] Server: Apache/2.2.22 (Debian)<br>
+    [ ] X-Powered-By: PHP/5.4.4-14+deb7u9<br>
+    [ ] Set-Cookie: c8af288c8bfe7241582aabcb2906ad43=kj3bm3h7vp9j4imdfi17h8c081; path=/; HttpOnly<br>
+    [ ] P3P: CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"<br>
+    [ ] Expires: Mon, 1 Jan 2001 00:00:00 GMT<br>
+    [ ] Last-Modified: Fri, 16 May 2014 20:25:31 GMT<br>
+    [ ] Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0<br>
+    [ ] Pragma: no-cache<br>
+    [ ] Vary: Accept-Encoding<br>
+    [ ] Content-Length: 6005<br>
+    [ ] Connection: close<br>
+    [ ] Content-Type: text/html; charset=utf-8<br>
+    [ ] Data (MD5): d9febdb6fdb1874beae05dcbf410a95d <br>
+<br>
+ [1] Pass<br>
+ [2] Pass<br>
+ [3] Pass<br>
+<br>
+ [&gt;] URL appears stable. Beginning test<br>
+<br>
+ [&gt;] Using DEFAULT User-Agent Strings<br>
+<br>
+ [&gt;] Using Mobile User-Agent Strings <br>
+<br>
+ [&gt;] Output: [+] Added Headers, [-] Removed Headers, [!] Altered Headers, [ ] No Change<br>
+<br>
+<br>
+ [&gt;] User-Agent String : Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko)<br>
+                         Version/3.0 Mobile/1A543a Safari/419.3<br>
+<br>
+<br>
+    [!] Last-Modified: Fri, 16 May 2014 20:25:38 GMT<br>
+<br>
+<br>
+ [&gt;] User-Agent String : Mozilla/5.0 (iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10<br>
+                         (KHTML, like Gecko) Version/4.0.4 Mobile/7B314 Safari/531.21.10<br>
+<br>
+<br>
+    [!] Last-Modified: Fri, 16 May 2014 20:25:38 GMT<br>
+<br>
+<br>
+ [&gt;] User-Agent String : Mozilla/5.0 (Linux; U; Android 2.1-update1; en-at; HTC Hero Build/ERE27)<br>
+                         AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17<br>
+<br>
+<br>
+    [!] Last-Modified: Fri, 16 May 2014 20:25:38 GMT<br>
+<br>
+<br>
+ [&gt;] User-Agent String : jBrowser-WAP<br>
+<br>
+<br>
+    [!] Last-Modified: Fri, 16 May 2014 20:25:38 GMT<br>
+<br>
+<br>
+ [&gt;] User-Agent String : Nokia7650/1.0 Symbian-QP/6.1 Nokia/2.1<br>
+<br>
+<br>
+    [!] Last-Modified: Fri, 16 May 2014 20:25:38 GMT<br>
+<br>
+<br>
+ [&gt;] That's all folks... Fo' Shizzle!</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

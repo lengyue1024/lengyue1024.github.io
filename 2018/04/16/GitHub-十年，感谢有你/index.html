@@ -1,0 +1,1059 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。" />
+
+
+
+  <meta name="keywords" content="GitHub," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="本文是 GitHub 联合创始人兼 CEO：Chris Wanstrath 在计算机世界杂志写的文章。当我们回顾 GitHub 过去十年，我们并不会想起某一款软件，而是想到人们用 GitHub 发生了何种改变。 十年前，GitHub 正式上线。初衷何其简单：连接开发者，通过 Git 更好开展项目。过去十年，我们已经成为一家公司、一个平台，慢慢壮大，但是初衷从未变过。并不是一个好点子或者什么大事件让">
+<meta name="keywords" content="GitHub">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub 十年，感谢有你">
+<meta property="og:url" content="http://bingyublog.com/2018/04/16/GitHub-十年，感谢有你/index.html">
+<meta property="og:site_name" content="冰羽の博客">
+<meta property="og:description" content="本文是 GitHub 联合创始人兼 CEO：Chris Wanstrath 在计算机世界杂志写的文章。当我们回顾 GitHub 过去十年，我们并不会想起某一款软件，而是想到人们用 GitHub 发生了何种改变。 十年前，GitHub 正式上线。初衷何其简单：连接开发者，通过 Git 更好开展项目。过去十年，我们已经成为一家公司、一个平台，慢慢壮大，但是初衷从未变过。并不是一个好点子或者什么大事件让">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fqkn5mispgj31gd0nyai7.jpg">
+<meta property="og:updated_time" content="2018-08-28T11:09:02.823Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GitHub 十年，感谢有你">
+<meta name="twitter:description" content="本文是 GitHub 联合创始人兼 CEO：Chris Wanstrath 在计算机世界杂志写的文章。当我们回顾 GitHub 过去十年，我们并不会想起某一款软件，而是想到人们用 GitHub 发生了何种改变。 十年前，GitHub 正式上线。初衷何其简单：连接开发者，通过 Git 更好开展项目。过去十年，我们已经成为一家公司、一个平台，慢慢壮大，但是初衷从未变过。并不是一个好点子或者什么大事件让">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fqkn5mispgj31gd0nyai7.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title> GitHub 十年，感谢有你 | 冰羽の博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7b451f13126c1ccdebfa8d48ee43a5d0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">冰羽の博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              GitHub 十年，感谢有你
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2018-04-16T23:00:35+08:00" content="2018-04-16">
+            2018-04-16
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/GitHub/" itemprop="url" rel="index">
+                  <span itemprop="name">GitHub</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkn5mispgj31gd0nyai7.jpg" alt="1"><br><strong>本文是 GitHub 联合创始人兼 CEO：Chris Wanstrath 在计算机世界杂志写的文章。</strong><br>当我们回顾 GitHub 过去十年，我们并不会想起某一款软件，而是想到人们用 GitHub 发生了何种改变。</p>
+<p>十年前，GitHub 正式上线。初衷何其简单：连接开发者，通过 Git 更好开展项目。过去十年，我们已经成为一家公司、一个平台，慢慢壮大，但是初衷从未变过。并不是一个好点子或者什么大事件让这个平台特别，而是使用它的人，感谢 GitHub 十年，感谢有你。<br>当我们回顾过去十年，我们不会记得某一款软件，而是人们用 GitHub 做的事。全世界各地都可以用 GitHub 来分享、教授、修补、构建。在最初上线 GitHub 的时候，我们完全没有预料到它能成长如斯，如此大的体量，如此多的贡献和连接。<br>展望未来，我们依旧会保持简单。未来在你的手中，由你来定义。我们愿意跟随你。<br>与此同时，感谢你的代码，你的合并、你的文档，你共享的项目以及你在 GitHub 所做的一切。<br>谢谢你，10 years。<br>我们收集了这十年来的一些里程碑，今天在这个特别的日子，我们一起来回顾。并未下一个十年做准备。</p>
+<h2 id="2008-4-10：GitHub-正式发布"><a href="#2008-4-10：GitHub-正式发布" class="headerlink" title="2008.4.10：GitHub 正式发布"></a>2008.4.10：GitHub 正式发布</h2><p>2008 年 4 月，我们的测试版结束，GitHub 推出了正式版，目的很简单：连接开发者，通过 Git 更容易的协同编程。</p>
+<h2 id="2008-4-3：Rails-转移到-Git-和-GitHub"><a href="#2008-4-3：Rails-转移到-Git-和-GitHub" class="headerlink" title="2008.4.3：Rails 转移到 Git 和 GitHub"></a>2008.4.3：Rails 转移到 Git 和 GitHub</h2><p>Ruby on Rails 是内测时的首批大开源项目之一，考虑到 GitHub 基于 Rails 建立，这是一个重要的时刻。</p>
+<h2 id="2009-1-3：比特币的发明"><a href="#2009-1-3：比特币的发明" class="headerlink" title="2009.1.3：比特币的发明"></a>2009.1.3：比特币的发明</h2><p>比特币于 2009 年被发明并在 2010 年发布到 GitHub。迄今为止此项目已有 18000+ 的 fork，500 merged pull request 作者，它启发了数以千计其他区块链的项目。</p>
+<h2 id="2009-5-21：Node-js-启动"><a href="#2009-5-21：Node-js-启动" class="headerlink" title="2009.5.21：Node.js 启动"></a>2009.5.21：Node.js 启动</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>于 2009 年推出，导致人们使用 JavaScript 的方式发生根本性变化。借助 Node.js，开发人员可以使用 Angular，Ember，React，jQuery 和 Vue 等库和框架，在操作系统上构建复杂的服务器端和桌面应用程序。该项目有效地扩展了 JavaScript 的可能性，并成功推动了 JS。</p>
+<h2 id="2010-11-26-Rails-Girls-夏编程之夏第一次举办"><a href="#2010-11-26-Rails-Girls-夏编程之夏第一次举办" class="headerlink" title="2010.11.26:Rails Girls 夏编程之夏第一次举办"></a>2010.11.26:Rails Girls 夏编程之夏第一次举办</h2><p>Rails Girls 于 2010 年在赫尔辛基举办了首次活动。2013年，该团队开始了<a href="https://railsgirlssummerofcode.org/" target="_blank" rel="noopener">Summer of Code</a> 全球奖学金计划，除了<a href="https://summerofcode.withgoogle.com/" target="_blank" rel="noopener">Google Summer of Code</a>，<a href="https://www.outreachy.org/" target="_blank" rel="noopener">Outreachy</a>等，Rails Girls Summer of Code 对软件行业的产生了持久且积极的影响。</p>
+<h2 id="2011-2-28：Travis-CI-第一个-pull-request"><a href="#2011-2-28：Travis-CI-第一个-pull-request" class="headerlink" title="2011.2.28：Travis CI 第一个 pull request"></a>2011.2.28：Travis CI 第一个 pull request</h2><p><a href="https://travis-ci.com/" target="_blank" rel="noopener">Travis CI</a> 是目前新兴的开源持续集成构建项目，它现已成为了 GItHub 的主要集成工具。</p>
+<h2 id="2012-1-1：JavaScript-成为-GitHub上最流行的语言"><a href="#2012-1-1：JavaScript-成为-GitHub上最流行的语言" class="headerlink" title="2012.1.1：JavaScript 成为 GitHub上最流行的语言"></a>2012.1.1：JavaScript 成为 GitHub上最流行的语言</h2><p>在 2012 的开年，JavaScript 作为 GitHub 上最流行的语言，超越了 Ruby，Java 和 Python。今天它仍然是今天GitHub上最流行的语言。</p>
+<h2 id="2013-1-16：GitHub-社区用户达到-300-万"><a href="#2013-1-16：GitHub-社区用户达到-300-万" class="headerlink" title="2013.1.16：GitHub 社区用户达到 300 万"></a>2013.1.16：GitHub 社区用户达到 300 万</h2><p>在 2013 年我们创建了第 1000 万个仓库。</p>
+<h2 id="2014-6-9-Docker-1-0-发布"><a href="#2014-6-9-Docker-1-0-发布" class="headerlink" title="2014.6.9: Docker 1.0 发布"></a>2014.6.9: Docker 1.0 发布</h2><p>2014 年 6 月，Docker 1.0 推出，之后一年多，Docker 引入了企业数据中心和云。它和 Kubernetes 等项目简化了 DevOps，将团队从基础架构中解放出来，以便更专注于最重要的事情。</p>
+<h2 id="2014-7-21：Django-Grils-第一次举办"><a href="#2014-7-21：Django-Grils-第一次举办" class="headerlink" title="2014.7.21：Django Grils 第一次举办"></a>2014.7.21：Django Grils 第一次举办</h2><p><a href="https://djangogirls.org/europython2014/" target="_blank" rel="noopener">2014年</a>第一届 <a href="http://www.pyladies.com/blog/the-first-django-girls-happened/" target="_blank" rel="noopener">Django Girls</a> 在柏林举办，开启了为期四年的世界各地软件培训和女性编程支持运动。</p>
+<h2 id="2014-10-23：微软开源-NET"><a href="#2014-10-23：微软开源-NET" class="headerlink" title="2014.10.23：微软开源.NET"></a>2014.10.23：微软开源.NET</h2><p>.NET 和.NET Foundation 只是<a href="https://opensource.microsoft.com/" target="_blank" rel="noopener">微软开源计划</a>的开始。现在该公司拥有数百个开源项目。其中包括去年拥有最多贡献者的 VS Code 和 2017 年发展最快的语言之一 TypeScript。<br>微软也成为 GitHub 上最活跃的组织之一，数千名工程师，设计师和程序经理在平台和编程语言中贡献和发布软件。<br>微软和谷歌等大公司对开源软件的重视，代表了他们对软件的态度。他们向我们表明，有时候重要的不是技术，而是社区以及人们如何使用技术。</p>
+<h2 id="2015-3-2：虚幻引擎4-源代码免费提供"><a href="#2015-3-2：虚幻引擎4-源代码免费提供" class="headerlink" title="2015.3.2：虚幻引擎4 源代码免费提供"></a>2015.3.2：虚幻引擎4 源代码免费提供</h2><p>Epic Games 的团队发布了免费版本的「虚幻4」引擎，这让创意与开发更更紧密连接在一起。免费的源代码允许访问主要功能。从错误修复到 Git 集成，他们的最新版本得到了 128 个 contribution 的帮助。<br>由于开源游戏引擎，Game 成为了 2017 GitHub 最受欢迎的类目。<a href="https://github.com/photonstorm/phaser" target="_blank" rel="noopener">Phaser</a>，<a href="https://github.com/godotengine/godot" target="_blank" rel="noopener">Godot Engine</a> 和其他项目，如 <a href="https://itch.io/" target="_blank" rel="noopener">Itch.io</a>，正在塑造人们建立和分享独立游戏的方式。像 <a href="https://gabrielecirulli.github.io/2048/" target="_blank" rel="noopener">2048</a> 这样的开源学习资源和游戏，激发了数百个 Clone，邀请了更多的人来玩和创造。</p>
+<h2 id="2015-9-22：GitHub-class-开课"><a href="#2015-9-22：GitHub-class-开课" class="headerlink" title="2015.9.22：GitHub class 开课"></a>2015.9.22：GitHub class 开课</h2><p>GitHub Class 使教师更容易分发代码收集作业，今天，高中、大学、编程培训机构的学生们正在使用它来学习，现在有超过 180 万个 class 的库，但这也仅仅是 GitHub 教育资源的一部分。</p>
+<h2 id="2015-12-3：Apple-开源-Swift"><a href="#2015-12-3：Apple-开源-Swift" class="headerlink" title="2015.12.3：Apple 开源 Swift"></a>2015.12.3：Apple 开源 Swift</h2><p>Apple 这个决定提高了新开发工具的标准，并鼓励更多的公司发布开源。</p>
+<h2 id="2016-7-9：阿波罗-11-代码开源"><a href="#2016-7-9：阿波罗-11-代码开源" class="headerlink" title="2016.7.9：阿波罗 11 代码开源"></a>2016.7.9：阿波罗 11 代码开源</h2><p>阿波罗 11 号于 1969 年登月，四十七年后，它的启动源代码登录 GitHub，其中还包含了很多彩蛋，这也证明了 20 世纪 60 年代的程序员也有幽默感。<br>NASA 维护者数百个开源项目，包括火星可视化地图，通过 TensorFlow 来识别系外行星的软件等等。<br>你还可以找到 SpaceX 这些公司的开源项目。</p>
+<h2 id="2017-2-10：Python-团队打开他们的第一个-pull-request"><a href="#2017-2-10：Python-团队打开他们的第一个-pull-request" class="headerlink" title="2017.2.10：Python 团队打开他们的第一个 pull request"></a>2017.2.10：Python 团队打开他们的第一个 pull request</h2><p>在过去十年，Pyhon 已经成为增长最快的主要编程语言之一，自 2015 年来，它一直稳居 GitHub 语言前三。<br>Python 的历史可以追溯到 20 世纪 90 年代，近年来因为数据科学和机器学习使它飞速发展。像 Pandas 这样广受欢迎的库，也让 Python 更流行。</p>
+<h2 id="2017-2-15：TensorFlow-1-0-启动"><a href="#2017-2-15：TensorFlow-1-0-启动" class="headerlink" title="2017.2.15：TensorFlow 1.0 启动"></a>2017.2.15：TensorFlow 1.0 启动</h2><p>谷歌在 2015年 将其内部机器学习库 <a href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener">TensorFlow</a> 公开。去年，它是 GitHub 上最受欢迎的项目之一，<a href="https://blog.github.com/2018-02-08-open-source-project-trends-for-2018/" target="_blank" rel="noopener">TensorFlow在2017年的访问量比2016年多5.5倍</a>。现在，TensorFlow 是数据专业人员创建机器学习模型的首选工具。</p>
+<h2 id="2017-5-2：30000-个-NGO（非营利组织）用户"><a href="#2017-5-2：30000-个-NGO（非营利组织）用户" class="headerlink" title="2017.5.2：30000 个 NGO（非营利组织）用户"></a>2017.5.2：30000 个 NGO（非营利组织）用户</h2><p>非营利组织通过技术产生了难以置信的积极影响。去年，30000 个非营利用户通过我们展开了 <a href="https://www.detroitwaterproject.org/" target="_blank" rel="noopener">Human Utility</a>，<a href="https://mavenyouth.org/" target="_blank" rel="noopener">Maven</a>和<a href="">ConnectHome</a> 等活动，让世界变得更美好。<br><a href="https://www.wcs.org/" target="_blank" rel="noopener">野生动物保护协会</a>（WCS）的海洋保护涵盖 25 个国家，保护世界的珊瑚礁。在肯尼亚，<a href="https://measures.wcs.org/Metric-Details/m/2" target="_blank" rel="noopener">WCS使用软件收集全球研究人员的数据</a>，并通过收集物种数据，监测超过 252 公顷的沿海礁石，这相当于 260 个足球场那么大。帮助当地更绿色生态地进行捕捞。</p>
+<h2 id="2017-5-31：第-1-亿次-pull-request被合并"><a href="#2017-5-31：第-1-亿次-pull-request被合并" class="headerlink" title="2017.5.31：第 1 亿次 pull request被合并"></a>2017.5.31：第 1 亿次 pull request被合并</h2><p>事实上，仅在 2017 一年，有 2.9 万亿行代码被提交。</p>
+<h2 id="2018-4-10：十年的代码，协作和提交"><a href="#2018-4-10：十年的代码，协作和提交" class="headerlink" title="2018.4.10：十年的代码，协作和提交"></a>2018.4.10：十年的代码，协作和提交</h2><p>GitHub 正式推出十年后，我们的社区已经发展到全球拥有超过 8000 万个项目的 2700 万名开发人员。</p>
+<p>感谢您创建的存储库，感谢您的贡献以及您构建的软件。<br>感谢你 10 年的代码。</p>
+<p>原文：<a href="https://www.computerworld.com.au/article/636074/10-years-github/" target="_blank" rel="noopener">10 years of GitHub</a></p>
+</span>
+      
+    </div>
+    <div>
+   
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+
+   
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/GitHub/" rel="tag"><i class="fa tag"></i> GitHub</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/21/搭建Metasploitable靶机环境/" rel="prev">搭建Metasploitable靶机环境</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/16/我编程很渣，但我就是喜欢编程，我该怎么做？放弃还是继续坚持？/" rel="next">我编程很渣，但我就是喜欢编程，我该怎么做？放弃还是继续坚持？</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        如果本文对您有帮助，还望赞赏一下，谢谢
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+              
+
+            
+                <a href="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">冰羽</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">你指尖跃动的电光，是我此生不变的信仰。</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">124</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945 || github" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2008-4-10：GitHub-正式发布"><span class="nav-number">1.</span> <span class="nav-text">2008.4.10：GitHub 正式发布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2008-4-3：Rails-转移到-Git-和-GitHub"><span class="nav-number">2.</span> <span class="nav-text">2008.4.3：Rails 转移到 Git 和 GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2009-1-3：比特币的发明"><span class="nav-number">3.</span> <span class="nav-text">2009.1.3：比特币的发明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2009-5-21：Node-js-启动"><span class="nav-number">4.</span> <span class="nav-text">2009.5.21：Node.js 启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2010-11-26-Rails-Girls-夏编程之夏第一次举办"><span class="nav-number">5.</span> <span class="nav-text">2010.11.26:Rails Girls 夏编程之夏第一次举办</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2011-2-28：Travis-CI-第一个-pull-request"><span class="nav-number">6.</span> <span class="nav-text">2011.2.28：Travis CI 第一个 pull request</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2012-1-1：JavaScript-成为-GitHub上最流行的语言"><span class="nav-number">7.</span> <span class="nav-text">2012.1.1：JavaScript 成为 GitHub上最流行的语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2013-1-16：GitHub-社区用户达到-300-万"><span class="nav-number">8.</span> <span class="nav-text">2013.1.16：GitHub 社区用户达到 300 万</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2014-6-9-Docker-1-0-发布"><span class="nav-number">9.</span> <span class="nav-text">2014.6.9: Docker 1.0 发布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2014-7-21：Django-Grils-第一次举办"><span class="nav-number">10.</span> <span class="nav-text">2014.7.21：Django Grils 第一次举办</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2014-10-23：微软开源-NET"><span class="nav-number">11.</span> <span class="nav-text">2014.10.23：微软开源.NET</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2015-3-2：虚幻引擎4-源代码免费提供"><span class="nav-number">12.</span> <span class="nav-text">2015.3.2：虚幻引擎4 源代码免费提供</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2015-9-22：GitHub-class-开课"><span class="nav-number">13.</span> <span class="nav-text">2015.9.22：GitHub class 开课</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2015-12-3：Apple-开源-Swift"><span class="nav-number">14.</span> <span class="nav-text">2015.12.3：Apple 开源 Swift</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2016-7-9：阿波罗-11-代码开源"><span class="nav-number">15.</span> <span class="nav-text">2016.7.9：阿波罗 11 代码开源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2017-2-10：Python-团队打开他们的第一个-pull-request"><span class="nav-number">16.</span> <span class="nav-text">2017.2.10：Python 团队打开他们的第一个 pull request</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2017-2-15：TensorFlow-1-0-启动"><span class="nav-number">17.</span> <span class="nav-text">2017.2.15：TensorFlow 1.0 启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2017-5-2：30000-个-NGO（非营利组织）用户"><span class="nav-number">18.</span> <span class="nav-text">2017.5.2：30000 个 NGO（非营利组织）用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2017-5-31：第-1-亿次-pull-request被合并"><span class="nav-number">19.</span> <span class="nav-text">2017.5.31：第 1 亿次 pull request被合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2018-4-10：十年的代码，协作和提交"><span class="nav-number">20.</span> <span class="nav-text">2018.4.10：十年的代码，协作和提交</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+  
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2018
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冰羽
+  </span>
+
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UA50F9B4D7",
+    "hash": "7cce0e84b501ad9c874106f70967e299"
+});
+tpwidget("show");</script>
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2017,12,17,00,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML="本站已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  }, 1000);
+
+</script>
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
+</html>

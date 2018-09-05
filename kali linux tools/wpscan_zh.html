@@ -1,0 +1,167 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> WPScan包装说明</h2><p style="text-align: justify;"> WPScan是一个黑盒子的WordPress漏洞扫描器可用于扫描远程WordPress的安装找到安全问题。 </p><p>资料来源：http://wpscan.org/ <br> <a href="javascript:if(confirm('http://wpscan.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://wpscan.org/'" tppabs="http://wpscan.org/" variation="deepblue" target="blank">WPScan首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/wpscan.git;a=tree  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/wpscan.git;a=tree'" tppabs="http://git.kali.org/gitweb/?p=packages/wpscan.git;a=tree" variation="deepblue" target="blank">卡利wpscan回购</a> </p><ul><li>作者：The WPScan团队</li><li>许可：其它</li></ul><h3>包含在wpscan包工具</h3><h5> wpscan - WordPress的漏洞扫描</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="3f4d50504b7f545e5356">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# wpscan  --help<br>
+_______________________________________________________________<br>
+        __          _______   _____<br>
+        \ \        / /  __ \ / ____|<br>
+         \ \  /\  / /| |__) | (___   ___  __ _ _ __<br>
+          \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \<br>
+           \  /\  /  | |     ____) | (__| (_| | | | |<br>
+            \/  \/   |_|    |_____/ \___|\__,_|_| |_|<br>
+<br>
+        WordPress Security Scanner by the WPScan Team<br>
+                       Version 2.6<br>
+          Sponsored by Sucuri - https://sucuri.net<br>
+   @_WPScan_, @ethicalhack3r, @erwan_lr, pvdl, @_FireFart_<br>
+_______________________________________________________________<br>
+<br>
+Help :<br>
+<br>
+Some values are settable in a config file, see the example.conf.json<br>
+<br>
+--update                            Update to the database to the latest version.<br>
+--url       | -u &lt;target url&gt;       The WordPress URL/domain to scan.<br>
+--force     | -f                    Forces WPScan to not check if the remote site is running WordPress.<br>
+--enumerate | -e [option(s)]        Enumeration.<br>
+  option :<br>
+    u        usernames from id 1 to 10<br>
+    u[10-20] usernames from id 10 to 20 (you must write [] chars)<br>
+    p        plugins<br>
+    vp       only vulnerable plugins<br>
+    ap       all plugins (can take a long time)<br>
+    tt       timthumbs<br>
+    t        themes<br>
+    vt       only vulnerable themes<br>
+    at       all themes (can take a long time)<br>
+  Multiple values are allowed : "-e tt,p" will enumerate timthumbs and plugins<br>
+  If no option is supplied, the default is "vt,tt,u,vp"<br>
+<br>
+--exclude-content-based "&lt;regexp or string&gt;"<br>
+                                    Used with the enumeration option, will exclude all occurrences based on the regexp or string supplied.<br>
+                                    You do not need to provide the regexp delimiters, but you must write the quotes (simple or double).<br>
+--config-file  | -c &lt;config file&gt;   Use the specified config file, see the example.conf.json.<br>
+--user-agent   | -a &lt;User-Agent&gt;    Use the specified User-Agent.<br>
+--cookie &lt;String&gt;                   String to read cookies from.<br>
+--random-agent | -r                 Use a random User-Agent.<br>
+--follow-redirection                If the target url has a redirection, it will be followed without asking if you wanted to do so or not<br>
+--batch                             Never ask for user input, use the default behaviour.<br>
+--no-color                          Do not use colors in the output.<br>
+--wp-content-dir &lt;wp content dir&gt;   WPScan try to find the content directory (ie wp-content) by scanning the index page, however you can specified it.<br>
+                                    Subdirectories are allowed.<br>
+--wp-plugins-dir &lt;wp plugins dir&gt;   Same thing than --wp-content-dir but for the plugins directory.<br>
+                                    If not supplied, WPScan will use wp-content-dir/plugins. Subdirectories are allowed<br>
+--proxy &lt;[protocol://]host:port&gt;    Supply a proxy. HTTP, SOCKS4 SOCKS4A and SOCKS5 are supported.<br>
+                                    If no protocol is given (format host:port), HTTP will be used.<br>
+--proxy-auth &lt;username:password&gt;    Supply the proxy login credentials.<br>
+--basic-auth &lt;username:password&gt;    Set the HTTP Basic authentication.<br>
+--wordlist | -w &lt;wordlist&gt;          Supply a wordlist for the password brute forcer.<br>
+--username | -U &lt;username&gt;          Only brute force the supplied username.<br>
+--usernames     &lt;path-to-file&gt;      Only brute force the usernames from the file.<br>
+--threads  | -t &lt;number of threads&gt; The number of threads to use when multi-threading requests.<br>
+--cache-ttl       &lt;cache-ttl&gt;       Typhoeus cache TTL.<br>
+--request-timeout &lt;request-timeout&gt; Request Timeout.<br>
+--connect-timeout &lt;connect-timeout&gt; Connect Timeout.<br>
+--max-threads     &lt;max-threads&gt;     Maximum Threads.<br>
+--help     | -h                     This help screen.<br>
+--verbose  | -v                     Verbose output.<br>
+--version                           Output the current version and exit.<br>
+<br>
+<br>
+Examples :<br>
+<br>
+-Further help ...<br>
+ruby ./wpscan.rb --help<br>
+<br>
+-Do 'non-intrusive' checks ...<br>
+ruby ./wpscan.rb --url www.example.com<br>
+<br>
+-Do wordlist password brute force on enumerated users using 50 threads ...<br>
+ruby ./wpscan.rb --url www.example.com --wordlist darkc0de.lst --threads 50<br>
+<br>
+-Do wordlist password brute force on the 'admin' username only ...<br>
+ruby ./wpscan.rb --url www.example.com --wordlist darkc0de.lst --username admin<br>
+<br>
+-Enumerate installed plugins ...<br>
+ruby ./wpscan.rb --url www.example.com --enumerate p<br>
+<br>
+-Enumerate installed themes ...<br>
+ruby ./wpscan.rb --url www.example.com --enumerate t<br>
+<br>
+-Enumerate users ...<br>
+ruby ./wpscan.rb --url www.example.com --enumerate u<br>
+<br>
+-Enumerate installed timthumbs ...<br>
+ruby ./wpscan.rb --url www.example.com --enumerate tt<br>
+<br>
+-Use a HTTP proxy ...<br>
+ruby ./wpscan.rb --url www.example.com --proxy 127.0.0.1:8118<br>
+<br>
+-Use a SOCKS5 proxy ... (cURL &gt;= v7.21.7 needed)<br>
+ruby ./wpscan.rb --url www.example.com --proxy socks5://127.0.0.1:9000<br>
+<br>
+-Use custom content directory ...<br>
+ruby ./wpscan.rb -u www.example.com --wp-content-dir custom-content<br>
+<br>
+-Use custom plugins directory ...<br>
+ruby ./wpscan.rb -u www.example.com --wp-plugins-dir wp-content/custom-plugins<br>
+<br>
+-Update the DB ...<br>
+ruby ./wpscan.rb --update<br>
+<br>
+-Debug output ...<br>
+ruby ./wpscan.rb --url www.example.com --debug-output 2&gt;debug.log<br>
+<br>
+See README for further information.</code><h3> WPScan用法示例</h3><p>扫描目标WordPress的URL和枚举已安装任何插件： </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="bcced3d3c8fcd7ddd0d5">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# wpscan --url http://wordpress.local --enumerate p<br>
+_______________________________________________________________<br>
+        __          _______   _____<br>
+        \ \        / /  __ \ / ____|<br>
+         \ \  /\  / /| |__) | (___   ___  __ _ _ __<br>
+          \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \<br>
+           \  /\  /  | |     ____) | (__| (_| | | | |<br>
+            \/  \/   |_|    |_____/ \___|\__,_|_| |_|<br>
+<br>
+        WordPress Security Scanner by the WPScan Team<br>
+                       Version 2.6<br>
+          Sponsored by Sucuri - https://sucuri.net<br>
+   @_WPScan_, @ethicalhack3r, @erwan_lr, pvdl, @_FireFart_<br>
+_______________________________________________________________<br>
+<br>
+[+] URL: http://wordpress.local/<br>
+[+] Started: Mon Jan 12 14:07:40 2015<br>
+<br>
+[+] robots.txt available under: 'http://wordpress.local/robots.txt'<br>
+[+] Interesting entry from robots.txt: http://wordpress.local/search<br>
+[+] Interesting entry from robots.txt: http://wordpress.local/support/search.php<br>
+[+] Interesting entry from robots.txt: http://wordpress.local/extend/plugins/search.php<br>
+[+] Interesting entry from robots.txt: http://wordpress.local/plugins/search.php<br>
+[+] Interesting entry from robots.txt: http://wordpress.local/extend/themes/search.php<br>
+[+] Interesting entry from robots.txt: http://wordpress.local/themes/search.php<br>
+[+] Interesting entry from robots.txt: http://wordpress.local/support/rss<br>
+[+] Interesting entry from robots.txt: http://wordpress.local/archive/<br>
+[+] Interesting header: SERVER: nginx<br>
+[+] Interesting header: X-FRAME-OPTIONS: SAMEORIGIN<br>
+[+] Interesting header: X-NC: HIT lax 249<br>
+[+] XML-RPC Interface available under: http://wordpress.local/xmlrpc.php<br>
+<br>
+[+] WordPress version 4.2-alpha-31168 identified from rss generator<br>
+<br>
+[+] Enumerating installed plugins  ...<br>
+<br>
+   Time: 00:00:35 &lt;======================================================&gt; (2166 / 2166) 100.00% Time: 00:00:35<br>
+<br>
+[+] We found 2166 plugins:<br>
+...</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

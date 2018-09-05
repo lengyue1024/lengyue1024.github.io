@@ -1,0 +1,88 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kaliå·¥å…·ç®±</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<section class="l-section"><div class="l-section-h i-cf"><h2>gr-scan Package Description</h2>
+<p style="text-align: justify;">gr-scan is a program written in C++, and built upon GNU Radio, rtl-sdr, and the OsmoSDR Source Block. It is intended to scan a range of frequencies and print a list of discovered signals. It should work with any device that works with that block, including Realtek RTL2832U devices. This software was developed using a Compro U620F, which uses an E4000 tuner. That product doesnâ€™t seem to be available on the US site, but the Newsky DVB-T Receiver (RTL2832U/E4000 Device) has good reviews.</p>
+<p>Source: http://www.techmeology.co.uk/gr-scan/<br>
+<a href="javascript:if(confirm('http://www.techmeology.co.uk/gr-scan/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.techmeology.co.uk/gr-scan/'" tppabs="http://www.techmeology.co.uk/gr-scan/" variation="deepblue" target="blank">gr-scan Homepage</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/gr-scan.git;a=summary  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://git.kali.org/gitweb/?p=packages/gr-scan.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/gr-scan.git;a=summary" variation="deepblue" target="blank">Kali gr-scan Repo</a></p>
+<ul>
+<li>Author: Nicholas Tomlinson</li>
+<li>License: GPLv3</li>
+</ul>
+<h3>Tools included in the gr-scan package</h3>
+<h5>gr-scan â€“ Scans a range of frequencies and prints a list of discovered signals</h5>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="54263b3b20143f35383d">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# gr-scan --help<br>
+linux; GNU C++ version 4.7.2; Boost_104900; UHD_003.005.003-0-unknown<br>
+<br>
+Usage: gr-scan [OPTION...]<br>
+<br>
+Â  -a, --average=COUNT Â  Â  Â  Â Average over COUNT samples<br>
+Â  -c, --coarse-bandwidth=FREQ Â  Bandwidth of the coarse window in kHz<br>
+Â  -f, --fine-bandwidth=FREQ Â Bandwidth of the fine window in kHz<br>
+Â  -p, --time=TIME Â  Â  Â  Â  Â  Â Time in seconds to scan on each frequency<br>
+Â  -r, --sample-rate=RATE Â  Â  Samplerate in Msamples/s<br>
+Â  -s, --spread=FREQ Â  Â  Â  Â  Â Minimum frequency between detected signals<br>
+Â  -t, --threshold=POWER Â  Â  Â Threshold for the difference between the coarse<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â and fine filtered signals in dB<br>
+Â  -w, --fft-width=COUNT Â  Â  Â Width of FFT in samples<br>
+Â  -x, --start-frequency=FREQ Start frequency in MHz<br>
+Â  -y, --end-frequency=FREQ Â  End frequency in MHz<br>
+Â  -z, --step=FREQ Â  Â  Â  Â  Â  Â Increment step in MHz<br>
+Â  -?, --help Â  Â  Â  Â  Â  Â  Â  Â  Give this help list<br>
+Â  Â  Â  --usage Â  Â  Â  Â  Â  Â  Â  Â Give a short usage message<br>
+Â  -V, --version Â  Â  Â  Â  Â  Â  Â Print program version<br>
+<br>
+Mandatory or optional arguments to long options are also mandatory or optional<br>
+for any corresponding short options.<br>
+<br>
+Report bugs to <a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="355247184656545b754150565d58505a595a524c1b565a1b405e1b">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></code>
+<h3>gr-scan Usage Example</h3>
+<p>Start scanning at 100 MHz <b><i>(-x 100)</i></b> and end at 105 MHz <b><i>(-y 105)</i></b>, pausing for 5 seconds on each channel <b><i>(-p 5)</i></b>:</p>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="f3819c9c87b398929f9a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# gr-scan -x 100 -y 105 -p 5<br>
+linux; GNU C++ version 4.7.2; Boost_104900; UHD_003.005.003-0-unknown<br>
+<br>
+gr-osmosdr v0.0.x-xxx-xunknown (0.0.3git) gnuradio 3.6.5.1<br>
+built-in source types: file fcd rtl rtl_tcp uhd hackrf <br>
+Using device #0 Realtek RTL2838UHIDIR SN: 00000001<br>
+Found Rafael Micro R820T tuner<br>
+Using Volk machine: avx_64_mmx_orc<br>
+Exact sample rate is: 2000000.052982 Hz<br>
+gr_buffer::allocate_buffer: warning: tried to allocate<br>
+Â  Â 4 items of size 16000. Due to alignment requirements<br>
+Â  Â 32 were allocated. Â If this isn't OK, consider padding<br>
+Â  Â your structure to a power-of-two bytes.<br>
+Â  Â On this platform, our allocation granularity is 4096 bytes.<br>
+gr_buffer::allocate_buffer: warning: tried to allocate<br>
+Â  Â 16 items of size 8000. Due to alignment requirements<br>
+Â  Â 64 were allocated. Â If this isn't OK, consider padding<br>
+Â  Â your structure to a power-of-two bytes.<br>
+Â  Â On this platform, our allocation granularity is 4096 bytes.<br>
+gr_buffer::allocate_buffer: warning: tried to allocate<br>
+Â  Â 8 items of size 8000. Due to alignment requirements<br>
+Â  Â 64 were allocated. Â If this isn't OK, consider padding<br>
+Â  Â your structure to a power-of-two bytes.<br>
+Â  Â On this platform, our allocation granularity is 4096 bytes.<br>
+gr_buffer::allocate_buffer: warning: tried to allocate<br>
+Â  Â 8 items of size 8000. Due to alignment requirements<br>
+Â  Â 64 were allocated. Â If this isn't OK, consider padding<br>
+Â  Â your structure to a power-of-two bytes.<br>
+Â  Â On this platform, our allocation granularity is 4096 bytes.<br>
+00:00:01: Finished scanning 99.000000 MHz - 101.000000 MHz<br>
+[+] 00:00:01: Found signal: at 100.298500 MHz of width 63.000000 kHz, peak power -62.707417 dB (difference 8.297215 dB)<br>
+00:00:02: Finished scanning 99.000000 MHz - 101.000000 MHz<br>
+[+] 00:00:02: Found signal: at 99.299500 MHz of width 115.000000 kHz, peak power -74.849541 dB (difference 3.358849 dB)<br>
+00:00:03: Finished scanning 99.000000 MHz - 101.000000 MHz</code>
+</div></section><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

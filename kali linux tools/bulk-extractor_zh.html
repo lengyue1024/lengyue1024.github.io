@@ -1,0 +1,156 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2>批量提取包装说明</h2><p style="text-align: justify;"> bulk_extractor是一个程序，提取特征，例如电子邮件地址，信用卡号，URL和其它类型的从数字证据文件的信息。这是一个有用的取证调查工具很多任务，如恶意软件和入侵调查，身份调查和网络调查，以及分析图像，并通过字开裂。该方案提供了一些不同寻常的功能，包括： </p><ul><li>它发现的电子邮件地址，URL和信用卡号码，其他工具错过，因为它可以处理压缩的数据（如ZIP，PDF和GZIP网络LES）和不完整的或部分损坏​​的数据。它也能开JPEG文件，Office文档和其他类型的文件进行压缩数据的片段。它会检测并瓜分加密的RAR文件。 </li><li>它建立基于所有的数据中发现，即使是那些在那些在未分配空间压缩文件词语词列表。这些词汇表可用于密码破解有用。 </li><li>它是多线程的;运行bulk_extractor的计算机上的核心数量的两倍通常使其完成一个运行在一半的时间。 </li><li>它创建直方图显示最常用的电子邮件地址，网址，域名，搜索词和其他类型的驱动器上的信息。 </li></ul><p> bulk_extractor运行在磁盘映像，文件或文件的目录，并提取有用的信息，而无需解析文件系统或文件系统的结构。输入被分成页，由一个或多个扫描仪处理。结果被存储在可以很容易地进行检查，解析，或加工与其他自动化工具特征文件。 <br> bulk_extractor也创造了它找到的特征直方图。因为功能，如电子邮件地址和互联网搜索词是比较常见的往往是重要的，这非常有用。 <br>除了上述的功能，bulk_extractor还包括： </p><ul><li>图形用户界面，批量提取器，用于浏览功能存储功能，网络连接LES和发起bulk_extractor扫描</li><li>少数Python程序执行额外的分析功能，网络连接LES </li></ul><p>资料来源：http://digitalcorpora.org/downloads/bulk_extractor/BEUsersManual.pdf <br> <a href="javascript:if(confirm('https://github.com/simsong/bulk_extractor/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/simsong/bulk_extractor/'" tppabs="https://github.com/simsong/bulk_extractor/" variation="deepblue" target="blank">批量提取器首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/bulk-extractor.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/bulk-extractor.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/bulk-extractor.git;a=summary" variation="deepblue" target="blank">卡利批量提取回购</a> </p><ul><li>作者：Simson的L.加芬克尔</li><li>许可：GPL第二版</li></ul><h3>列入批量解压包工具</h3><h5> bulk_extractor - 提取信息，而不解析文件系统</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="fd8f929289bd969c9194">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# bulk_extractor<br>
+bulk_extractor version 1.3 $Rev: 10606 $<br>
+Usage: bulk_extractor [options] imagefile<br>
+  runs bulk extractor and outputs to stdout a summary of what was found where<br>
+<br>
+Required parameters:<br>
+   imagefile     - the file to extract<br>
+ or  -R filedir  - recurse through a directory of files<br>
+                  SUPPORT FOR E01 FILES COMPILED IN<br>
+                  SUPPORT FOR AFF FILES COMPILED IN<br>
+   -o outdir    - specifies output directory. Must not exist.<br>
+                  bulk_extractor creates this directory.<br>
+Options:<br>
+   -b banner.txt- Add banner.txt contents to the top of every output file.<br>
+   -r alert_list.txt  - a file containing the alert list of features to alert<br>
+                       (can be a feature file or a list of globs)<br>
+                       (can be repeated.)<br>
+   -w stop_list.txt   - a file containing the stop list of features (white list<br>
+                       (can be a feature file or a list of globs)s<br>
+                       (can be repeated.)<br>
+   -F &lt;rfile&gt;   - Read a list of regular expressions from &lt;rfile&gt; to find<br>
+   -f &lt;regex&gt;   - find occurrences of &lt;regex&gt;; may be repeated.<br>
+                  results go into find.txt<br>
+   -q nn        - Quiet Rate; only print every nn status reports. Default 0; -1 for no status at all<br>
+<br>
+Tuning parameters:<br>
+   -C NN         - specifies the size of the context window (default 16)<br>
+   -G NN         - specify the page size (default 16777216)<br>
+   -g NN         - specify margin (default 4194304)<br>
+   -W n1:n2      - Specifies minimum and maximum word size<br>
+                  (default is -w6:14)<br>
+   -B NN         - Specify the blocksize for bulk data analysis (default 512)<br>
+   -j NN         - Number of analysis threads to run (default 2)<br>
+   -M nn        - sets max recursion depth (default 5)<br>
+<br>
+Path Processing Mode:<br>
+   -p &lt;path&gt;/f  - print the value of &lt;path&gt; with a given format.<br>
+                  formats: r = raw; h = hex.<br>
+                  Specify -p - for interactive mode.<br>
+                  Specify -p -http for HTTP mode.<br>
+<br>
+Parallelizing:<br>
+   -Y &lt;o1&gt;      - Start processing at o1 (o1 may be 1, 1K, 1M or 1G)<br>
+   -Y &lt;o1&gt;-&lt;o2&gt; - Process o1-o2<br>
+   -A &lt;off&gt;     - Add &lt;off&gt; to all reported feature offsets<br>
+<br>
+Debugging:<br>
+   -h           - print this message<br>
+   -H           - print detailed info on the scanners<br>
+   -V           - print version number<br>
+   -z nn        - start on page nn<br>
+   -dN          - debug mode (see source code<br>
+   -Z           - zap (erase) output directory<br>
+<br>
+Control of Scanners:<br>
+   -P &lt;dir&gt;     - Specifies a plugin directory<br>
+   -E scanner   - turn off all scanners except scanner<br>
+   -m &lt;max&gt;     - maximum number of minutes to wait for memory starvation<br>
+                  default is 60<br>
+   -s name=value - sets a bulk extractor option name to be value<br>
+<br>
+   -e bulk - enable scanner bulk<br>
+   -e wordlist - enable scanner wordlist<br>
+<br>
+   -x accts - disable scanner accts<br>
+   -x aes - disable scanner aes<br>
+   -x base16 - disable scanner base16<br>
+   -x base64 - disable scanner base64<br>
+   -x elf - disable scanner elf<br>
+   -x email - disable scanner email<br>
+   -x exif - disable scanner exif<br>
+   -x gps - disable scanner gps<br>
+   -x gzip - disable scanner gzip<br>
+   -x hiber - disable scanner hiber<br>
+   -x json - disable scanner json<br>
+   -x kml - disable scanner kml<br>
+   -x net - disable scanner net<br>
+   -x pdf - disable scanner pdf<br>
+   -x vcard - disable scanner vcard<br>
+   -x windirs - disable scanner windirs<br>
+   -x winpe - disable scanner winpe<br>
+   -x winprefetch - disable scanner winprefetch<br>
+   -x zip - disable scanner zip</code><h3> bulk_extractor用法示例</h3><p>文件提取到输出目录<b><i>（-o批量出）</i></b>分析图像<b><i>文件（XP的笔记本电脑2005-07-04-1430.img）</i></b>后： </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="33415c5c477358525f5a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# bulk_extractor -o bulk-out xp-laptop-2005-07-04-1430.img <br>
+bulk_extractor version: 1.3<br>
+Hostname: kali<br>
+Input file: xp-laptop-2005-07-04-1430.img<br>
+Output directory: bulk-out<br>
+Disk Size: 536715264<br>
+Threads: 1<br>
+Phase 1.<br>
+13:02:46 Offset 0MB (0.00%) Done in n/a at 13:02:45<br>
+13:03:39 Offset 67MB (12.50%) Done in  0:06:14 at 13:09:53<br>
+13:04:43 Offset 134MB (25.01%) Done in  0:05:50 at 13:10:33<br>
+13:04:55 Offset 201MB (37.51%) Done in  0:03:36 at 13:08:31<br>
+13:06:01 Offset 268MB (50.01%) Done in  0:03:15 at 13:09:16<br>
+13:06:48 Offset 335MB (62.52%) Done in  0:02:25 at 13:09:13<br>
+13:07:04 Offset 402MB (75.02%) Done in  0:01:25 at 13:08:29<br>
+13:07:20 Offset 469MB (87.53%) Done in  0:00:39 at 13:07:59<br>
+All Data is Read; waiting for threads to finish...<br>
+Time elapsed waiting for 1 thread to finish:<br>
+     (please wait for another 60 min .)<br>
+Time elapsed waiting for 1 thread to finish:<br>
+    6 sec (please wait for another 59 min 54 sec.)<br>
+Thread 0: Processing 520093696<br>
+<br>
+Time elapsed waiting for 1 thread to finish:<br>
+    12 sec (please wait for another 59 min 48 sec.)<br>
+Thread 0: Processing 520093696<br>
+<br>
+Time elapsed waiting for 1 thread to finish:<br>
+    18 sec (please wait for another 59 min 42 sec.)<br>
+Thread 0: Processing 520093696<br>
+<br>
+Time elapsed waiting for 1 thread to finish:<br>
+    24 sec (please wait for another 59 min 36 sec.)<br>
+Thread 0: Processing 520093696<br>
+<br>
+Time elapsed waiting for 1 thread to finish:<br>
+    30 sec (please wait for another 59 min 30 sec.)<br>
+Thread 0: Processing 520093696<br>
+<br>
+All Threads Finished!<br>
+Producer time spent waiting: 335.984 sec.<br>
+Average consumer time spent waiting: 0.143353 sec.<br>
+*******************************************<br>
+** bulk_extractor is probably CPU bound. **<br>
+**    Run on a computer with more cores  **<br>
+**      to get better performance.       **<br>
+*******************************************<br>
+Phase 2. Shutting down scanners<br>
+Phase 3. Creating Histograms<br>
+   ccn histogram...   ccn_track2 histogram...   domain histogram...<br>
+   email histogram...   ether histogram...   find histogram...<br>
+   ip histogram...   tcp histogram...   telephone histogram...<br>
+   url histogram...   url microsoft-live...   url services...<br>
+   url facebook-address...   url facebook-id...   url searches...<br>
+<br>
+Elapsed time: 378.5 sec.<br>
+Overall performance: 1.418 MBytes/sec.<br>
+Total email features found: 899</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

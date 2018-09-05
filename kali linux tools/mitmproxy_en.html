@@ -1,0 +1,227 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<section class="l-section"><div class="l-section-h i-cf"><h2>mitmproxy Package Description</h2>
+<p style="text-align: justify;">mitmproxy is an SSL-capable man-in-the-middle HTTP proxy. It provides a console interface that allows traffic flows to be inspected and edited on the fly. Also shipped is mitmdump, the command-line version of mitmproxy, with the same functionality but without the frills. Think tcpdump for HTTP.</p>
+<p>Features:</p>
+<ul>
+<li>intercept and modify HTTP traffic on the fly</li>
+<li>save HTTP conversations for later replay and analysis</li>
+<li>replay both HTTP clients and servers</li>
+<li>make scripted changes to HTTP traffic using Python</li>
+<li>SSL interception certs generated on the fly</li>
+</ul>
+<p>Source: http://mitmproxy.org/<br>
+<a href="javascript:if(confirm('http://mitmproxy.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://mitmproxy.org/'" tppabs="http://mitmproxy.org/" variation="deepblue" target="blank">mitmproxy Homepage</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/mitmproxy.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/mitmproxy.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/mitmproxy.git;a=summary" variation="deepblue" target="blank">Kali mitmproxy Repo</a></p>
+<ul>
+<li>Author: Aldo Cortesi</li>
+<li>License: GPLv3</li>
+</ul>
+<h3>Tools included in the mitmproxy package</h3>
+<h5>mitmproxy – SSL-capable man-in-the-middle HTTP proxy</h5>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="87f5e8e8f3c7ece6ebee">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# mitmproxy -h<br>
+usage: mitmproxy [options]<br>
+<br>
+optional arguments:<br>
+  -h, --help            show this help message and exit<br>
+  --version             show program's version number and exit<br>
+  -b ADDR               Address to bind proxy to (defaults to all interfaces)<br>
+  --anticache           Strip out request headers that might cause the server<br>
+                        to return 304-not-modified.<br>
+  --confdir CONFDIR     Configuration directory. (~/.mitmproxy)<br>
+  -e                    Show event log.<br>
+  -n                    Don't start a proxy server.<br>
+  -p PORT               Proxy service port.<br>
+  -P REVERSE_PROXY      Reverse proxy to upstream server:<br>
+                        http[s]://host[:port]<br>
+  -F FORWARD_PROXY      Proxy to unconditionally forward to:<br>
+                        http[s]://host[:port]<br>
+  -q                    Quiet.<br>
+  -r RFILE              Read flows from file.<br>
+  -s "script.py --bar"  Run a script. Surround with quotes to pass script<br>
+                        arguments. Can be passed multiple times.<br>
+  -t FILTER             Set sticky cookie filter. Matched against requests.<br>
+  -T                    Set transparent proxy mode.<br>
+  -u FILTER             Set sticky auth filter. Matched against requests.<br>
+  -v                    Increase verbosity. Can be passed multiple times.<br>
+  -w WFILE              Write flows to file.<br>
+  -z                    Try to convince servers to send us un-compressed data.<br>
+  -Z SIZE               Byte size limit of HTTP request and response bodies.<br>
+                        Understands k/m/g suffixes, i.e. 3m for 3 megabytes.<br>
+  --host                Use the Host header to construct URLs for display.<br>
+  --no-upstream-cert    Don't connect to upstream server to look up<br>
+                        certificate details.<br>
+  --debug<br>
+  --palette PALETTE     Select color palette: dark, light, solarized_dark,<br>
+                        solarized_light<br>
+<br>
+Web App:<br>
+  -a                    Disable the mitmproxy web app.<br>
+  --app-host host       Domain to serve the app from. For transparent mode,<br>
+                        use an IP when a DNS entry for the app domain is not<br>
+                        present. Default: mitm.it<br>
+  --app-port 80         Port to serve the app from.<br>
+  --app-external        Serve the app outside of the proxy.<br>
+<br>
+Client Replay:<br>
+  -c PATH               Replay client requests from a saved file.<br>
+<br>
+Server Replay:<br>
+  -S PATH               Replay server responses from a saved file.<br>
+  -k                    Kill extra requests during replay.<br>
+  --rheader RHEADERS    Request headers to be considered during replay. Can be<br>
+                        passed multiple times.<br>
+  --norefresh           Disable response refresh, which updates times in<br>
+                        cookies and headers for replayed responses.<br>
+  --no-pop              Disable response pop from response flow. This makes it<br>
+                        possible to replay same response multiple times.<br>
+<br>
+Replacements:<br>
+  Replacements are of the form "/pattern/regex/replacement", where the<br>
+  separator can be any character. Please see the documentation for more<br>
+  information.<br>
+<br>
+  --replace PATTERN     Replacement pattern.<br>
+  --replace-from-file PATH<br>
+                        Replacement pattern, where the replacement clause is a<br>
+                        path to a file.<br>
+<br>
+Set Headers:<br>
+  Header specifications are of the form "/pattern/header/value", where the<br>
+  separator can be any character. Please see the documentation for more<br>
+  information.<br>
+<br>
+  --setheader PATTERN   Header set pattern.<br>
+<br>
+Proxy Authentication:<br>
+  Specify which users are allowed to access the proxy and the method used<br>
+  for authenticating them. These options are ignored if the proxy is in<br>
+  transparent or reverse proxy mode.<br>
+<br>
+  --nonanonymous        Allow access to any user long as a credentials are<br>
+                        specified.<br>
+  --singleuser USER     Allows access to a a single user, specified in the<br>
+                        form username:password.<br>
+  --htpasswd PATH       Allow access to users specified in an Apache htpasswd<br>
+                        file.<br>
+<br>
+SSL:<br>
+  --cert CERT           User-created SSL certificate file.<br>
+  --client-certs CLIENTCERTS<br>
+                        Client certificate directory.<br>
+<br>
+Filters:<br>
+  See help in mitmproxy for filter expression syntax.<br>
+<br>
+  -i INTERCEPT, --intercept INTERCEPT<br>
+                        Intercept filter expression.</code>
+<h3>mitmdump (the command-line companion to mitmproxy) – A souped-up tcpdump for HTTP</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="b2c0ddddc6f2d9d3dedb">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# mitmdump -h<br>
+usage: mitmdump [options] [filter]<br>
+<br>
+positional arguments:<br>
+  args<br>
+<br>
+optional arguments:<br>
+  -h, --help            show this help message and exit<br>
+  --version             show program's version number and exit<br>
+  -b ADDR               Address to bind proxy to (defaults to all interfaces)<br>
+  --anticache           Strip out request headers that might cause the server<br>
+                        to return 304-not-modified.<br>
+  --confdir CONFDIR     Configuration directory. (~/.mitmproxy)<br>
+  -e                    Show event log.<br>
+  -n                    Don't start a proxy server.<br>
+  -p PORT               Proxy service port.<br>
+  -P REVERSE_PROXY      Reverse proxy to upstream server:<br>
+                        http[s]://host[:port]<br>
+  -F FORWARD_PROXY      Proxy to unconditionally forward to:<br>
+                        http[s]://host[:port]<br>
+  -q                    Quiet.<br>
+  -r RFILE              Read flows from file.<br>
+  -s "script.py --bar"  Run a script. Surround with quotes to pass script<br>
+                        arguments. Can be passed multiple times.<br>
+  -t FILTER             Set sticky cookie filter. Matched against requests.<br>
+  -T                    Set transparent proxy mode.<br>
+  -u FILTER             Set sticky auth filter. Matched against requests.<br>
+  -v                    Increase verbosity. Can be passed multiple times.<br>
+  -w WFILE              Write flows to file.<br>
+  -z                    Try to convince servers to send us un-compressed data.<br>
+  -Z SIZE               Byte size limit of HTTP request and response bodies.<br>
+                        Understands k/m/g suffixes, i.e. 3m for 3 megabytes.<br>
+  --host                Use the Host header to construct URLs for display.<br>
+  --no-upstream-cert    Don't connect to upstream server to look up<br>
+                        certificate details.<br>
+  --keepserving         Continue serving after client playback or file read.<br>
+                        We exit by default.<br>
+<br>
+Web App:<br>
+  -a                    Disable the mitmproxy web app.<br>
+  --app-host host       Domain to serve the app from. For transparent mode,<br>
+                        use an IP when a DNS entry for the app domain is not<br>
+                        present. Default: mitm.it<br>
+  --app-port 80         Port to serve the app from.<br>
+  --app-external        Serve the app outside of the proxy.<br>
+<br>
+Client Replay:<br>
+  -c PATH               Replay client requests from a saved file.<br>
+<br>
+Server Replay:<br>
+  -S PATH               Replay server responses from a saved file.<br>
+  -k                    Kill extra requests during replay.<br>
+  --rheader RHEADERS    Request headers to be considered during replay. Can be<br>
+                        passed multiple times.<br>
+  --norefresh           Disable response refresh, which updates times in<br>
+                        cookies and headers for replayed responses.<br>
+  --no-pop              Disable response pop from response flow. This makes it<br>
+                        possible to replay same response multiple times.<br>
+<br>
+Replacements:<br>
+  Replacements are of the form "/pattern/regex/replacement", where the<br>
+  separator can be any character. Please see the documentation for more<br>
+  information.<br>
+<br>
+  --replace PATTERN     Replacement pattern.<br>
+  --replace-from-file PATH<br>
+                        Replacement pattern, where the replacement clause is a<br>
+                        path to a file.<br>
+<br>
+Set Headers:<br>
+  Header specifications are of the form "/pattern/header/value", where the<br>
+  separator can be any character. Please see the documentation for more<br>
+  information.<br>
+<br>
+  --setheader PATTERN   Header set pattern.<br>
+<br>
+Proxy Authentication:<br>
+  Specify which users are allowed to access the proxy and the method used<br>
+  for authenticating them. These options are ignored if the proxy is in<br>
+  transparent or reverse proxy mode.<br>
+<br>
+  --nonanonymous        Allow access to any user long as a credentials are<br>
+                        specified.<br>
+  --singleuser USER     Allows access to a a single user, specified in the<br>
+                        form username:password.<br>
+  --htpasswd PATH       Allow access to users specified in an Apache htpasswd<br>
+                        file.<br>
+<br>
+SSL:<br>
+  --cert CERT           User-created SSL certificate file.<br>
+  --client-certs CLIENTCERTS<br>
+                        Client certificate directory.</code>
+<h3>mitmproxy Usage Example</h3>
+<p>Run mitmproxy listening <b><i>(p)</i></b> on port<b><i>2139</i></b>.</p>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="f4869b9b80b49f95989d">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# mitmproxy -p 2139</code>
+</div></section><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

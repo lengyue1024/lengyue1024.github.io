@@ -1,0 +1,77 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kaliå·¥å…·ç®±</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<section class="l-section"><div class="l-section-h i-cf"><h2>SSLsplit Package Description</h2>
+<p style="text-align: justify;">SSLsplit is a tool for man-in-the-middle attacks against SSL/TLS encrypted network connections. Connections are transparently intercepted through a network address translation engine and redirected to SSLsplit. SSLsplit terminates SSL/TLS and initiates a new SSL/TLS connection to the original destination address, while logging all data transmitted. SSLsplit is intended to be useful for network forensics and penetration testing.</p>
+<p>SSLsplit supports plain TCP, plain SSL, HTTP and HTTPS connections over both IPv4 and IPv6. For SSL and HTTPS connections, SSLsplit generates and signs forged X509v3 certificates on-the-fly, based on the original server certificate subject DN and subjectAltName extension. SSLsplit fully supports Server Name Indication (SNI) and is able to work with RSA, DSA and ECDSA keys and DHE and ECDHE cipher suites. SSLsplit can also use existing certificates of which the private key is available, instead of generating forged ones. SSLsplit supports NULL-prefix CN certificates and can deny OCSP requests in a generic way. SSLsplit removes HPKP response headers in order to prevent public key pinning.</p>
+<p>Source: http://www.roe.ch/SSLsplit<br>
+<a href="javascript:if(confirm('http://www.roe.ch/SSLsplit  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.roe.ch/SSLsplit'" tppabs="http://www.roe.ch/SSLsplit" variation="deepblue" target="blank">SSLsplit Homepage</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/sslsplit.git;a=summary  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://git.kali.org/gitweb/?p=packages/sslsplit.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/sslsplit.git;a=summary" variation="deepblue" target="blank">Kali SSLsplit Repo</a></p>
+<ul>
+<li>Author: Daniel Roethlisberger</li>
+<li>License: BSD</li>
+</ul>
+<h3>Tools included in the sslsplit package</h3>
+<h5>sslsplit â€“ Transparent and scalable SSL/TLS interception</h5>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="6715080813270c060b0e">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# sslsplit -h<br>
+Usage: sslsplit [options...] [proxyspecs...]<br>
+Â  -c pemfile Â use CA cert (and key) from pemfile to sign forged certs<br>
+Â  -k pemfile Â use CA key (and cert) from pemfile to sign forged certs<br>
+Â  -C pemfile Â use CA chain from pemfile (intermediate and root CA certs)<br>
+Â  -K pemfile Â use key from pemfile for leaf certs (default: generate)<br>
+Â  -t certdir Â use cert+chain+key PEM files from certdir to target all sites<br>
+Â  Â  Â  Â  Â  Â  Â  matching the common names (non-matching: generate if CA)<br>
+Â  -O Â  Â  Â  Â  Â deny all OCSP requests on all proxyspecs<br>
+Â  -P Â  Â  Â  Â  Â passthrough SSL connections if they cannot be split because of<br>
+Â  Â  Â  Â  Â  Â  Â  client cert auth or no matching cert and no CA (default: drop)<br>
+Â  -g pemfile Â use DH group params from pemfile (default: keyfiles or auto)<br>
+Â  -G curve Â  Â use ECDH named curve (default: secp160r2 for non-RSA leafkey)<br>
+Â  -Z Â  Â  Â  Â  Â disable SSL/TLS compression on all connections<br>
+Â  -s ciphers Â use the given OpenSSL cipher suite spec (default: ALL:-aNULL)<br>
+Â  -e engine Â  specify default NAT engine to use (default: netfilter)<br>
+Â  -E Â  Â  Â  Â  Â list available NAT engines and exit<br>
+Â  -u user Â  Â  drop privileges to user (default if run as root: nobody)<br>
+Â  -j jaildir Â chroot() to jaildir (default if run as root: /var/empty)<br>
+Â  -p pidfile Â write pid to pidfile (default: no pid file)<br>
+Â  -l logfile Â connect log: log one line summary per connection to logfile<br>
+Â  -L logfile Â content log: full data to file or named pipe (excludes -S)<br>
+Â  -S logdir Â  content log: full data to separate files in dir (excludes -L)<br>
+Â  -d Â  Â  Â  Â  Â daemon mode: run in background, log error messages to syslog<br>
+Â  -D Â  Â  Â  Â  Â debug mode: run in foreground, log debug messages on stderr<br>
+Â  -V Â  Â  Â  Â  Â print version information and exit<br>
+Â  -h Â  Â  Â  Â  Â print usage information and exit<br>
+Â  proxyspec = type listenaddr+port [natengine|targetaddr+port|"sni"+port]<br>
+Â  e.g. Â  Â  Â  Â http 0.0.0.0 8080 www.roe.ch 80 Â # http/4; static hostname dst<br>
+Â  Â  Â  Â  Â  Â  Â  https ::1 8443 2001:db8::1 443 Â  # https/6; static address dst<br>
+Â  Â  Â  Â  Â  Â  Â  https 127.0.0.1 9443 sni 443 Â  Â  # https/4; SNI DNS lookups<br>
+Â  Â  Â  Â  Â  Â  Â  tcp 127.0.0.1 10025 Â  Â  Â  Â  Â  Â  Â # tcp/4; default NAT engine<br>
+Â  Â  Â  Â  Â  Â  Â  ssl 2001:db8::2 9999 pf Â  Â  Â  Â  Â # ssl/6; NAT engine 'pf'<br>
+Example:<br>
+Â  sslsplit -k ca.key -c ca.pem -P Â https 127.0.0.1 8443 Â https ::1 8443</code>
+<h3>sslsplit Usage Example</h3>
+<p>Run in debug mode <b><i>(-D)</i></b>, log the connections <b><i>(-l connections.log)</i></b>, set the chroot jail <b><i>(-j /tmp/sslsplit/)</i></b>, save files to disk <b><i>(-S /tmp/)</i></b>, specify the key <b><i>(-k ca.key)</i></b>, specify the cert <b><i>(-c ca.crt)</i></b>, specify ssl <b><i>(ssl)</i></b>, and configure the proxy <b><i>(0.0.0.0 8443 tcp 0.0.0.0 8080)</i><b></b>:</b></p>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="31435e5e45715a505d58">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# sslsplit -D -l connections.log -j /tmp/sslsplit/ -S /tmp/ -k ca.key -c ca.crt ssl 0.0.0.0 8443 tcp 0.0.0.0 8080<br>
+Generated RSA key for leaf certs.<br>
+SSLsplit 0.4.6 (built 2013-06-06)<br>
+Copyright (c) 2009-2013, Daniel Roethlisberger &lt;<a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="f397929d9a969fb3819c96dd909b">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&gt;<br>
+http://www.roe.ch/SSLsplit<br>
+Features: -DDISABLE_SSLV2_SESSION_CACHE -DHAVE_NETFILTER<br>
+NAT engines: netfilter* tproxy<br>
+netfilter: Â IP_TRANSPARENT SOL_IPV6 !IPV6_ORIGINAL_DST<br>
+compiled against OpenSSL 1.0.1e 11 Feb 2013 (1000105f)<br>
+rtlinked against OpenSSL 1.0.1e 11 Feb 2013 (1000105f)<br>
+TLS Server Name Indication (SNI) supported<br>
+OpenSSL is thread-safe with THREADID</code>
+</div></section><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

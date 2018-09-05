@@ -1,0 +1,62 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> ddrescue包装说明</h2><p style="text-align: justify;">像DD，dd_rescue从一个文件或块设备到另一台做复制数据。您可以指定文件的位置（称为寻求并跳过DD）。有几种不同： </p><ul><li> dd_rescue不提供的字符转换。 </li><li>该命令的语法是不同的。呼叫dd_rescue -h。 </li><li> dd_rescue不上的​​错误中止输入文件，除非你指定一个最大的错误号。然后，当达到这个数字dd_rescue将中止。 </li><li> dd_rescue不会截断输出文件，除非要求。 </li><li>你可以告诉dd_rescue从文件的末尾开始和向后移动。 </li><li>它使用两个块大小，大的（软），块大小和小（硬）的块大小。在错误的情况下，规模回落到了小的，没有错误的一段时间后，再次提升。 </li></ul><p>资料来源：http://www.garloff.de/kurt/linux/ddrescue/ <br> <a href="javascript:if(confirm('http://www.garloff.de/kurt/linux/ddrescue/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.garloff.de/kurt/linux/ddrescue/'" tppabs="http://www.garloff.de/kurt/linux/ddrescue/" variation="deepblue" target="blank">ddrescue首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/ddrescue.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/ddrescue.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/ddrescue.git;a=summary" variation="deepblue" target="blank">卡利ddrescue回购</a> </p><ul><li>作者：garloff </li><li>许可：GPL第二版</li></ul><h3>包含在ddrescue软件包工具</h3><h5> dd_rescue - 从一个文件或块设备复制到另一个数据</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="14667b7b60547f75787d">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dd_rescue -h<br>
+<br>
+dd_rescue Version 1.28, <a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="620503100e0d040422111711074c0607">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>, GNU GPL<br>
+ ($Id: dd_rescue.c,v 1.130 2012/05/19 20:46:14 garloff Exp $)<br>
+ (compiled Dec 15 2012 12:04:22 by gcc (Debian 4.7.2-4) 4.7.2)<br>
+ (features: O_DIRECT splice )<br>
+dd_rescue copies data from one file (or block device) to another.<br>
+USAGE: dd_rescue [options] infile outfile<br>
+Options: -s ipos    start position in  input file (default=0),<br>
+         -S opos    start position in output file (def=ipos),<br>
+         -b softbs  block size for copy operation (def=65536, 1048576 for -d),<br>
+         -B hardbs  fallback block size in case of errs (def=4096, 512 for -d),<br>
+         -e maxerr  exit after maxerr errors (def=0=infinite),<br>
+         -m maxxfer maximum amount of data to be transfered (def=0=inf),<br>
+         -y syncfrq frequency of fsync calls on outfile (def=512*softbs),<br>
+         -l logfile name of a file to log errors and summary to (def=""),<br>
+         -o bbfile  name of a file to log bad blocks numbers (def=""),<br>
+         -r         reverse direction copy (def=forward),<br>
+         -t         truncate output file (def=no),<br>
+         -d/D       use O_DIRECT for input/output (def=no),<br>
+         -k         use efficient in-kernel zerocopy splice<br>
+         -w         abort on Write errors (def=no),<br>
+         -a         spArse file writing (def=no),<br>
+         -A         Always write blocks, zeroed if err (def=no),<br>
+         -i         interactive: ask before overwriting data (def=no),<br>
+         -f         force: skip some sanity checks (def=no),<br>
+         -p         preserve: preserve ownership / perms (def=no),<br>
+         -q         quiet operation,<br>
+         -v         verbose operation,<br>
+         -V         display version and exit,<br>
+         -h         display this help and exit.<br>
+Sizes may be given in units b(=512), k(=1024), M(=1024^2) or G(1024^3) bytes<br>
+This program is useful to rescue data in case of I/O errors, because<br>
+ it does not necessarily abort or truncate the output.</code><h3> dd_rescue用法示例</h3><p>开始在输入文件的位置<b><i>100（-s 100的/ var / log / messages中）和写</i></b> ，开始在目标文件<b><i>（-S 0的/ tmp / ddrescue出）</i></b>的位置0： </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="a9dbc6c6dde9c2c8c5c0">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dd_rescue -s 100 /var/log/messages -S 0 /tmp/ddrescue-out<br>
+dd_rescue: (info): Using softbs=65536, hardbs=4096<br>
+dd_rescue: (info) expect to copy 1766kB from /var/log/messages<br>
+dd_rescue: (info): ipos:      1024.1k, opos:      1024.0k, xferd:      1024.0k<br>
+                   errs:      0, errxfer:         0.0k, succxfer:      1024.0k<br>
+             +curr.rate:  1122807kB/s, avg.rate:  1018906kB/s, avg.load:  0.0%<br>
+             &gt;.......................-.................&lt;  57%  ETA:  0:00:00 <br>
+dd_rescue: (info): read /var/log/messages (1767.0k): EOF<br>
+dd_rescue: (info): Summary for /var/log/messages -&gt; /tmp/ddrescue-out:<br>
+dd_rescue: (info): ipos:      1767.0k, opos:      1767.0k, xferd:      1767.0k<br>
+                   errs:      0, errxfer:         0.0k, succxfer:      1767.0k<br>
+             +curr.rate:   352945kB/s, avg.rate:   568151kB/s, avg.load:  0.0%<br>
+             &gt;.......................-................-&lt; 100%  ETA:  0:00:00</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

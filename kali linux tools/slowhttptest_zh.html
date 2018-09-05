@@ -1,0 +1,92 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> SlowHTTPTest包装说明</h2><p style="text-align: justify;"> SlowHTTPTest是模拟一些应用层拒绝服务攻击的高度可配置的工具。它适用于绝大多数的Linux平台，OSX和Cygwin - 一个类Unix环境和命令行界面的Microsoft Windows。 </p><p>它通过引起非常显著内存实现了最常见的低带宽应用层DoS攻击，如slowloris，慢速HTTP POST，慢读的攻击（基于TCP坚持定时漏洞）通过排泄并发连接池，以及Apache的范围头攻击CPU使用率在服务器上。 </p><p> Slowloris和慢速的HTTP POST DoS攻击依赖这样的事实：在HTTP协议，在设计上，需要被完全由服务器接收处理之前的请求。如果HTTP请求是不完整的，或者，如果传送速率是很低的，服务器保持其资源忙等待数据的其余部分。如果服务器保持太多的资源忙，这造成拒绝服务。该工具发送部分的HTTP请求，试图从目标HTTP服务器拒绝服务。 </p><p>资料来源：https://code.google.com/p/slowhttptest/ <br> <a href="javascript:if(confirm('https://code.google.com/p/slowhttptest/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.google.com/p/slowhttptest/'" tppabs="https://code.google.com/p/slowhttptest/" variation="deepblue" target="blank">SlowHTTPTest首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/slowhttptest.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/slowhttptest.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/slowhttptest.git;a=summary" variation="deepblue" target="blank">卡利SlowHTTPTest回购</a> </p><ul><li>作者：shekyan </li><li>许可：Apache 2.0的</li></ul><h3>包含在slowhttptest包工具</h3><h5> slowhttptest - 一个工具来测试缓慢的HTTP拒绝服务漏洞</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="3644595942765d575a5f">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# slowhttptest -h<br>
+<br>
+slowhttptest, a tool to test for slow HTTP DoS vulnerabilities - version 1.6<br>
+Usage: slowhttptest [options ...]<br>
+Test modes:<br>
+  -H               slow headers a.k.a. Slowloris (default)<br>
+  -B               slow body a.k.a R-U-Dead-Yet<br>
+  -R               range attack a.k.a Apache killer<br>
+  -X               slow read a.k.a Slow Read<br>
+<br>
+Reporting options:<br>
+<br>
+  -g               generate statistics with socket state changes (off)<br>
+  -o file_prefix   save statistics output in file.html and file.csv (-g required)<br>
+  -v level         verbosity level 0-4: Fatal, Info, Error, Warning, Debug<br>
+<br>
+General options:<br>
+<br>
+  -c connections   target number of connections (50)<br>
+  -i seconds       interval between followup data in seconds (10)<br>
+  -l seconds       target test length in seconds (240)<br>
+  -r rate          connections per seconds (50)<br>
+  -s bytes         value of Content-Length header if needed (4096)<br>
+  -t verb          verb to use in request, default to GET for<br>
+                   slow headers and response and to POST for slow body<br>
+  -u URL           absolute URL of target (http://localhost/)<br>
+  -x bytes         max length of each randomized name/value pair of<br>
+                   followup data per tick, e.g. -x 2 generates<br>
+                   X-xx: xx for header or &amp;xx=xx for body, where x<br>
+                   is random character (32)<br>
+<br>
+Probe/Proxy options:<br>
+<br>
+  -d host:port     all traffic directed through HTTP proxy at host:port (off)<br>
+  -e host:port     probe traffic directed through HTTP proxy at host:port (off)<br>
+  -p seconds       timeout to wait for HTTP response on probe connection,<br>
+                   after which server is considered inaccessible (5)<br>
+<br>
+Range attack specific options:<br>
+<br>
+  -a start        left boundary of range in range header (5)<br>
+  -b bytes        limit for range header right boundary values (2000)<br>
+<br>
+Slow read specific options:<br>
+<br>
+  -k num          number of times to repeat same request in the connection. Use to<br>
+                  multiply response size if server supports persistent connections (1)<br>
+  -n seconds      interval between read operations from recv buffer in seconds (1)<br>
+  -w bytes        start of the range advertised window size would be picked from (1)<br>
+  -y bytes        end of the range advertised window size would be picked from (512)<br>
+  -z bytes        bytes to slow read from receive buffer with single read() call (5)</code><h3> slowhttptest用法示例</h3><p>使用1000连接<b><i>（-c 1000）</i></b>与Slowloris模式<b><i>（H），</i></b>并生成<b><i>统计（-g&gt;</i></b>与输出文件名<b><i>​​（-o slowhttp），</i></b>用10秒的等待数据<b><i>（-i 10），200</i></b>连接<b><i>（-R 200）GET</i></b>请求<b><i>（-t GET）</i></b>针对目标<b><i>URL（-u http://192.168.1.202/index.php）</i></b>用最多为24 <b><i>个</i></b>字节<b><i>（-x 24）和</i></b> 3秒的时间长度的出<b><i>（-p 3）：</i></b> </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="89fbe6e6fdc9e2e8e5e0">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# slowhttptest -c 1000 -H -g -o slowhttp -i 10 -r 200 -t GET -u http://192.168.1.202/index.php -x 24 -p 3<br>
+Sat May 17 10:45:26 2014:<br>
+Sat May 17 10:45:26 2014:<br>
+    slowhttptest version 1.6<br>
+ - https://code.google.com/p/slowhttptest/ -<br>
+test type:                        SLOW HEADERS<br>
+number of connections:            1000<br>
+URL:                              http://192.168.1.202/index.php<br>
+verb:                             GET<br>
+Content-Length header value:      4096<br>
+follow up data max size:          52<br>
+interval between follow up data:  10 seconds<br>
+connections per seconds:          200<br>
+probe connection timeout:         3 seconds<br>
+test duration:                    240 seconds<br>
+using proxy:                      no proxy <br>
+<br>
+Sat May 17 10:45:26 2014:<br>
+slow HTTP test status on 0th second:<br>
+<br>
+initializing:        0<br>
+pending:             1<br>
+connected:           0<br>
+error:               0<br>
+closed:              0<br>
+service available:   YES</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

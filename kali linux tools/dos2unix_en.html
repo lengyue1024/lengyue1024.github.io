@@ -1,0 +1,173 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kaliå·¥å…·ç®±</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<section class="l-section"><div class="l-section-h i-cf"><h2>dos2unix Package Description</h2>
+<p style="text-align: justify;">This package contains utilities dos2unix, unix2dos, mac2unix, unix2mac to convert the line endings of text files between UNIX (LF), DOS (CRLF) and Mac (CR) formats. Text files under Windows and DOS typically have two ASCII characters at the end of each line: CR (carriage return) followed by LF (line feed). Older Macs used just CR, while UNIX uses just LF. While most modern editors can read all these formats, there may still be a need to convert files between them. This is the classic utility developed in 1989.</p>
+<p><a href="javascript:if(confirm('http://freshmeat.net/projects/dos2unix  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://freshmeat.net/projects/dos2unix'" tppabs="http://freshmeat.net/projects/dos2unix" variation="deepblue" target="blank">dos2unix Homepage</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/dos2unix.git;a=summary  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://git.kali.org/gitweb/?p=packages/dos2unix.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/dos2unix.git;a=summary" variation="deepblue" target="blank">Kali dos2unix Repo</a></p>
+<ul>
+<li>Author: Erwin Waterlander, Christian Wurll, Bernd Johannes Wuebben, Benjamin Lin</li>
+<li>License: FreeBSD</li>
+</ul>
+<h3>Tools included in the dos2unix package</h3>
+<h5>unix2dos â€“ Convert from unix to dos</h5>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="97e5f8f8e3d7fcf6fbfe">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# unix2dos -h<br>
+unix2dos 6.0 (2012-05-06)<br>
+Usage: unix2dos [options] [file ...] [-n infile outfile ...]<br>
+Â -ascii Â  Â  Â  Â  Â  Â  Â  Â convert only line breaks (default)<br>
+Â -iso Â  Â  Â  Â  Â  Â  Â  Â  Â conversion between DOS and ISO-8859-1 character set<br>
+Â  Â -1252 Â  Â  Â  Â  Â  Â  Â  Use Windows code page 1252 (Western European)<br>
+Â  Â -437 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 437 (US) (default)<br>
+Â  Â -850 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 850 (Western European)<br>
+Â  Â -860 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 860 (Portuguese)<br>
+Â  Â -863 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 863 (French Canadian)<br>
+Â  Â -865 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 865 (Nordic)<br>
+Â -7 Â  Â  Â  Â  Â  Â  Â  Â  Â  Â Convert 8 bit characters to 7 bit space<br>
+Â -c, --convmode Â  Â  Â  Â conversion mode<br>
+Â  Â convmode Â  Â  Â  Â  Â  Â ascii, 7bit, iso, mac, default to ascii<br>
+Â -f, --force Â  Â  Â  Â  Â  force conversion of binary files<br>
+Â -h, --help Â  Â  Â  Â  Â  Â give this help<br>
+Â -k, --keepdate Â  Â  Â  Â keep output file date<br>
+Â -L, --license Â  Â  Â  Â  display software license<br>
+Â -l, --newline Â  Â  Â  Â  add additional newline<br>
+Â -m, --add-bom Â  Â  Â  Â  add UTF-8 Byte Order Mark<br>
+Â -n, --newfile Â  Â  Â  Â  write to new file<br>
+Â  Â infile Â  Â  Â  Â  Â  Â  Â original file in new file mode<br>
+Â  Â outfile Â  Â  Â  Â  Â  Â  output file in new file mode<br>
+Â -o, --oldfile Â  Â  Â  Â  write to old file<br>
+Â  Â file ... Â  Â  Â  Â  Â  Â files to convert in old file mode<br>
+Â -q, --quiet Â  Â  Â  Â  Â  quiet mode, suppress all warnings<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â always on in stdio mode<br>
+Â -s, --safe Â  Â  Â  Â  Â  Â skip binary files (default)<br>
+Â -F, --follow-symlink Â follow symbolic links and convert the targets<br>
+Â -R, --replace-symlink replace symbolic links with converted files<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â (original target files remain unchanged)<br>
+Â -S, --skip-symlink Â  Â keep symbolic links and targets unchanged (default)<br>
+Â -V, --version Â  Â  Â  Â  display version number</code>
+<h3>unix2mac â€“ Convert from unix to mac</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="b7c5d8d8c3f7dcd6dbde">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# unix2mac -h<br>
+unix2mac 6.0 (2012-05-06)<br>
+Usage: unix2mac [options] [file ...] [-n infile outfile ...]<br>
+Â -ascii Â  Â  Â  Â  Â  Â  Â  Â convert only line breaks (default)<br>
+Â -iso Â  Â  Â  Â  Â  Â  Â  Â  Â conversion between DOS and ISO-8859-1 character set<br>
+Â  Â -1252 Â  Â  Â  Â  Â  Â  Â  Use Windows code page 1252 (Western European)<br>
+Â  Â -437 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 437 (US) (default)<br>
+Â  Â -850 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 850 (Western European)<br>
+Â  Â -860 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 860 (Portuguese)<br>
+Â  Â -863 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 863 (French Canadian)<br>
+Â  Â -865 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 865 (Nordic)<br>
+Â -7 Â  Â  Â  Â  Â  Â  Â  Â  Â  Â Convert 8 bit characters to 7 bit space<br>
+Â -c, --convmode Â  Â  Â  Â conversion mode<br>
+Â  Â convmode Â  Â  Â  Â  Â  Â ascii, 7bit, iso, mac, default to ascii<br>
+Â -f, --force Â  Â  Â  Â  Â  force conversion of binary files<br>
+Â -h, --help Â  Â  Â  Â  Â  Â give this help<br>
+Â -k, --keepdate Â  Â  Â  Â keep output file date<br>
+Â -L, --license Â  Â  Â  Â  display software license<br>
+Â -l, --newline Â  Â  Â  Â  add additional newline<br>
+Â -m, --add-bom Â  Â  Â  Â  add UTF-8 Byte Order Mark<br>
+Â -n, --newfile Â  Â  Â  Â  write to new file<br>
+Â  Â infile Â  Â  Â  Â  Â  Â  Â original file in new file mode<br>
+Â  Â outfile Â  Â  Â  Â  Â  Â  output file in new file mode<br>
+Â -o, --oldfile Â  Â  Â  Â  write to old file<br>
+Â  Â file ... Â  Â  Â  Â  Â  Â files to convert in old file mode<br>
+Â -q, --quiet Â  Â  Â  Â  Â  quiet mode, suppress all warnings<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â always on in stdio mode<br>
+Â -s, --safe Â  Â  Â  Â  Â  Â skip binary files (default)<br>
+Â -F, --follow-symlink Â follow symbolic links and convert the targets<br>
+Â -R, --replace-symlink replace symbolic links with converted files<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â (original target files remain unchanged)<br>
+Â -S, --skip-symlink Â  Â keep symbolic links and targets unchanged (default)<br>
+Â -V, --version Â  Â  Â  Â  display version number</code>
+<h3>dos2unix â€“ Convert from dos to unix</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="aedcc1c1daeec5cfc2c7">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dos2unix -h<br>
+dos2unix 6.0 (2012-05-06)<br>
+Usage: dos2unix [options] [file ...] [-n infile outfile ...]<br>
+Â -ascii Â  Â  Â  Â  Â  Â  Â  Â convert only line breaks (default)<br>
+Â -iso Â  Â  Â  Â  Â  Â  Â  Â  Â conversion between DOS and ISO-8859-1 character set<br>
+Â  Â -1252 Â  Â  Â  Â  Â  Â  Â  Use Windows code page 1252 (Western European)<br>
+Â  Â -437 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 437 (US) (default)<br>
+Â  Â -850 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 850 (Western European)<br>
+Â  Â -860 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 860 (Portuguese)<br>
+Â  Â -863 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 863 (French Canadian)<br>
+Â  Â -865 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 865 (Nordic)<br>
+Â -7 Â  Â  Â  Â  Â  Â  Â  Â  Â  Â Convert 8 bit characters to 7 bit space<br>
+Â -c, --convmode Â  Â  Â  Â conversion mode<br>
+Â  Â convmode Â  Â  Â  Â  Â  Â ascii, 7bit, iso, mac, default to ascii<br>
+Â -f, --force Â  Â  Â  Â  Â  force conversion of binary files<br>
+Â -h, --help Â  Â  Â  Â  Â  Â give this help<br>
+Â -k, --keepdate Â  Â  Â  Â keep output file date<br>
+Â -L, --license Â  Â  Â  Â  display software license<br>
+Â -l, --newline Â  Â  Â  Â  add additional newline<br>
+Â -m, --add-bom Â  Â  Â  Â  add UTF-8 Byte Order Mark<br>
+Â -n, --newfile Â  Â  Â  Â  write to new file<br>
+Â  Â infile Â  Â  Â  Â  Â  Â  Â original file in new file mode<br>
+Â  Â outfile Â  Â  Â  Â  Â  Â  output file in new file mode<br>
+Â -o, --oldfile Â  Â  Â  Â  write to old file<br>
+Â  Â file ... Â  Â  Â  Â  Â  Â files to convert in old file mode<br>
+Â -q, --quiet Â  Â  Â  Â  Â  quiet mode, suppress all warnings<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â always on in stdio mode<br>
+Â -s, --safe Â  Â  Â  Â  Â  Â skip binary files (default)<br>
+Â -F, --follow-symlink Â follow symbolic links and convert the targets<br>
+Â -R, --replace-symlink replace symbolic links with converted files<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â (original target files remain unchanged)<br>
+Â -S, --skip-symlink Â  Â keep symbolic links and targets unchanged (default)<br>
+Â -V, --version Â  Â  Â  Â  display version number</code>
+<h3>mac2unix â€“ Convert from mac to unix</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="11637e7e65517a707d78">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# mac2unix -h<br>
+mac2unix 6.0 (2012-05-06)<br>
+Usage: mac2unix [options] [file ...] [-n infile outfile ...]<br>
+Â -ascii Â  Â  Â  Â  Â  Â  Â  Â convert only line breaks (default)<br>
+Â -iso Â  Â  Â  Â  Â  Â  Â  Â  Â conversion between DOS and ISO-8859-1 character set<br>
+Â  Â -1252 Â  Â  Â  Â  Â  Â  Â  Use Windows code page 1252 (Western European)<br>
+Â  Â -437 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 437 (US) (default)<br>
+Â  Â -850 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 850 (Western European)<br>
+Â  Â -860 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 860 (Portuguese)<br>
+Â  Â -863 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 863 (French Canadian)<br>
+Â  Â -865 Â  Â  Â  Â  Â  Â  Â  Â Use DOS code page 865 (Nordic)<br>
+Â -7 Â  Â  Â  Â  Â  Â  Â  Â  Â  Â Convert 8 bit characters to 7 bit space<br>
+Â -c, --convmode Â  Â  Â  Â conversion mode<br>
+Â  Â convmode Â  Â  Â  Â  Â  Â ascii, 7bit, iso, mac, default to ascii<br>
+Â -f, --force Â  Â  Â  Â  Â  force conversion of binary files<br>
+Â -h, --help Â  Â  Â  Â  Â  Â give this help<br>
+Â -k, --keepdate Â  Â  Â  Â keep output file date<br>
+Â -L, --license Â  Â  Â  Â  display software license<br>
+Â -l, --newline Â  Â  Â  Â  add additional newline<br>
+Â -m, --add-bom Â  Â  Â  Â  add UTF-8 Byte Order Mark<br>
+Â -n, --newfile Â  Â  Â  Â  write to new file<br>
+Â  Â infile Â  Â  Â  Â  Â  Â  Â original file in new file mode<br>
+Â  Â outfile Â  Â  Â  Â  Â  Â  output file in new file mode<br>
+Â -o, --oldfile Â  Â  Â  Â  write to old file<br>
+Â  Â file ... Â  Â  Â  Â  Â  Â files to convert in old file mode<br>
+Â -q, --quiet Â  Â  Â  Â  Â  quiet mode, suppress all warnings<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â always on in stdio mode<br>
+Â -s, --safe Â  Â  Â  Â  Â  Â skip binary files (default)<br>
+Â -F, --follow-symlink Â follow symbolic links and convert the targets<br>
+Â -R, --replace-symlink replace symbolic links with converted files<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â (original target files remain unchanged)<br>
+Â -S, --skip-symlink Â  Â keep symbolic links and targets unchanged (default)<br>
+Â -V, --version Â  Â  Â  Â  display version number</code>
+<h3>unix2dos Usage Example</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="186a77776c5873797471">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# unix2dos -n unix.txt dos.txt<br>
+unix2dos: converting file unix.txt to file dos.txt in DOS format ...</code>
+<h3>unix2mac Usage Example</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="87f5e8e8f3c7ece6ebee">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# unix2mac -n unix.txt mac.txt<br>
+unix2mac: converting file unix.txt to file mac.txt in Mac format ...</code>
+<h3>dos2unix Usage Example</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="f684999982b69d979a9f">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dos2unix -n dos.txt unix2.txt<br>
+dos2unix: converting file dos.txt to file unix2.txt in Unix format ...</code>
+<h3>mac2unix Usage Example</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="deacb1b1aa9eb5bfb2b7">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# mac2unix -n mac.txt unix3.txt<br>
+mac2unix: converting file mac.txt to file unix3.txt in Unix format ...</code>
+</div></section><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

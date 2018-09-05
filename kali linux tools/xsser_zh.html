@@ -1,0 +1,173 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> XSSer包装说明</h2><p style="text-align: justify;">跨站“的编剧”（又名XSSer）是一个自动-framework-探测，开发和基于Web的应用程序报告XSS漏洞。它包含几个选项，试图绕过某些过滤器和代码注入的各种特殊的技术。 </p><p>资料来源：http://xsser.sourceforge.net/ <br> <a href="javascript:if(confirm('http://xsser.sourceforge.net/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://xsser.sourceforge.net/'" tppabs="http://xsser.sourceforge.net/" variation="deepblue" target="blank">XSSer首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/xsser.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/xsser.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/xsser.git;a=summary" variation="deepblue" target="blank">卡利XSSer回购</a> </p><ul><li>作者：PSY（epsylon） </li><li>许可：GPLv3的</li></ul><h3>包含在xsser包工具</h3><h5> xsser - XSS测试框架</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="12607d7d665279737e7b">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# xsser -h<br>
+Usage:<br>
+<br>
+xsser [OPTIONS] [-u &lt;url&gt; |-i &lt;file&gt; |-d &lt;dork&gt;] [-g &lt;get&gt; |-p &lt;post&gt; |-c &lt;crawl&gt;] [Request(s)] [Vector(s)] [Bypasser(s)] [Technique(s)] [Final Injection(s)]<br>
+<br>
+Cross Site "Scripter" is an automatic -framework- to detect, exploit and<br>
+report XSS vulnerabilities in web-based applications.<br>
+<br>
+Options:<br>
+  --version             show program's version number and exit<br>
+  -h, --help            show this help message and exit<br>
+  -s, --statistics      show advanced statistics output results<br>
+  -v, --verbose         active verbose mode output results<br>
+  --gtk                 launch XSSer GTK Interface (Wizard included!)<br>
+<br>
+  *Special Features*:<br>
+    You can choose Vector(s) and Bypasser(s) to inject code with this<br>
+    extra special features:<br>
+<br>
+    --imx=IMX           create a false image with XSS code embedded<br>
+    --fla=FLASH         create a false .swf file with XSS code embedded<br>
+<br>
+  *Select Target(s)*:<br>
+    At least one of these options has to be specified to set the source to<br>
+    get target(s) urls from. You need to choose to run XSSer:<br>
+<br>
+    -u URL, --url=URL   Enter target(s) to audit<br>
+    -i READFILE         Read target urls from a file<br>
+    -d DORK             Process search engine dork results as target urls<br>
+    --De=DORK_ENGINE    Search engine to use for dorking (bing, altavista,<br>
+                        yahoo, baidu, yandex, youdao, webcrawler, google, etc.<br>
+                        See dork.py file to check for available engines)<br>
+<br>
+  *Select type of HTTP/HTTPS Connection(s)*:<br>
+    These options can be used to specify which parameter(s) we want to use<br>
+    like payload to inject code.<br>
+<br>
+    -g GETDATA          Enter payload to audit using GET (ex: '/menu.php?q=')<br>
+    -p POSTDATA         Enter payload to audit using POST (ex: 'foo=1&amp;bar=')<br>
+    -c CRAWLING         Number of urls to crawl on target(s): 1-99999<br>
+    --Cw=CRAWLER_WIDTH  Deeping level of crawler: 1-5<br>
+    --Cl                Crawl only local target(s) urls (default TRUE)<br>
+<br>
+  *Configure Request(s)*:<br>
+    These options can be used to specify how to connect to target(s)<br>
+    payload(s). You can choose multiple:<br>
+<br>
+    --cookie=COOKIE     Change your HTTP Cookie header<br>
+    --drop-cookie       Ignore Set-Cookie header from response<br>
+    --user-agent=AGENT  Change your HTTP User-Agent header (default SPOOFED)<br>
+    --referer=REFERER   Use another HTTP Referer header (default NONE)<br>
+    --xforw             Set your HTTP X-Forwarded-For with random IP values<br>
+    --xclient           Set your HTTP X-Client-IP with random IP values<br>
+    --headers=HEADERS   Extra HTTP headers newline separated<br>
+    --auth-type=ATYPE   HTTP Authentication type (Basic, Digest, GSS or NTLM)<br>
+    --auth-cred=ACRED   HTTP Authentication credentials (name:password)<br>
+    --proxy=PROXY       Use proxy server (tor: http://localhost:8118)<br>
+    --ignore-proxy      Ignore system default HTTP proxy<br>
+    --timeout=TIMEOUT   Select your timeout (default 30)<br>
+    --retries=RETRIES   Retries when the connection timeouts (default 1)<br>
+    --threads=THREADS   Maximum number of concurrent HTTP requests (default 5)<br>
+    --delay=DELAY       Delay in seconds between each HTTP request (default 0)<br>
+    --tcp-nodelay       Use the TCP_NODELAY option<br>
+    --follow-redirects  XSSer will follow server redirection responses (302)<br>
+    --follow-limit=FLI  Set how many times XSSer will follow redirections<br>
+                        (default 50)<br>
+<br>
+  *Checker Systems*:<br>
+    This options are usefull to know if your target(s) have some filters<br>
+    against XSS attacks, to reduce 'false positive' results and to perform<br>
+    more advanced tests:<br>
+<br>
+    --no-head           NOT verify the stability of the url (codes: 200|302)<br>
+                        with a HEAD pre-check request<br>
+    --alive=ISALIVE     set limit of every how much errors XSSer must to<br>
+                        verify that target is alive<br>
+    --hash              send an unique hash, without vectors, to pre-check if<br>
+                        target(s) repeats all content recieved<br>
+    --heuristic         launch a heuristic testing to discover which<br>
+                        parameters are filtered on target(s) code: ;\/&lt;&gt;"'=<br>
+    --checkaturl=ALT    check for a valid XSS response from target(s) at an<br>
+                        alternative url. 'blind XSS'<br>
+    --checkmethod=ALTM  check responses from target(s) using a different<br>
+                        connection type: GET or POST (default: GET)<br>
+    --checkatdata=ALD   check responses from target(s) using an alternative<br>
+                        payload (default: same than first injection)<br>
+    --reverse-check     establish a reverse connection from target(s) to XSSer<br>
+                        to certificate that is 100% vulnerable<br>
+<br>
+  *Select Vector(s)*:<br>
+    These options can be used to specify a XSS vector source code to<br>
+    inject in each payload. Important, if you don't want to try to inject<br>
+    a common XSS vector, used by default. Choose only one option:<br>
+<br>
+    --payload=SCRIPT    OWN  - Insert your XSS construction -manually-<br>
+    --auto              AUTO - Insert XSSer 'reported' vectors from file<br>
+                        (HTML5 vectors included!)<br>
+<br>
+  *Select Bypasser(s)*:<br>
+    These options can be used to encode selected vector(s) to try to<br>
+    bypass possible anti-XSS filters on target(s) code and possible IPS<br>
+    rules, if the target use it. Also, can be combined with other<br>
+    techniques to provide encoding:<br>
+<br>
+    --Str               Use method String.FromCharCode()<br>
+    --Une               Use Unescape() function<br>
+    --Mix               Mix String.FromCharCode() and Unescape()<br>
+    --Dec               Use Decimal encoding<br>
+    --Hex               Use Hexadecimal encoding<br>
+    --Hes               Use Hexadecimal encoding, with semicolons<br>
+    --Dwo               Encode vectors IP addresses in DWORD<br>
+    --Doo               Encode vectors IP addresses in Octal<br>
+    --Cem=CEM           Try -manually- different Character Encoding Mutations<br>
+                        (reverse obfuscation: good) -&gt; (ex: 'Mix,Une,Str,Hex')<br>
+<br>
+  *Special Technique(s)*:<br>
+    These options can be used to try to inject code using different type<br>
+    of XSS techniques. You can choose multiple:<br>
+<br>
+    --Coo               COO - Cross Site Scripting Cookie injection<br>
+    --Xsa               XSA - Cross Site Agent Scripting<br>
+    --Xsr               XSR - Cross Site Referer Scripting<br>
+    --Dcp               DCP - Data Control Protocol injections<br>
+    --Dom               DOM - Document Object Model injections<br>
+    --Ind               IND - HTTP Response Splitting Induced code<br>
+    --Anchor            ANC - Use Anchor Stealth payloader (DOM shadows!)<br>
+    --Phpids            PHP - Exploit PHPIDS bug (0.6.5) to bypass filters<br>
+<br>
+  *Select Final injection(s)*:<br>
+    These options can be used to specify the final code to inject in<br>
+    vulnerable target(s). Important, if you want to exploit on-the-wild<br>
+    your discovered vulnerabilities. Choose only one option:<br>
+<br>
+    --Fp=FINALPAYLOAD   OWN    - Insert your final code to inject -manually-<br>
+    --Fr=FINALREMOTE    REMOTE - Insert your final code to inject -remotelly-<br>
+    --Doss              DOSs   - XSS Denial of service (server) injection<br>
+    --Dos               DOS    - XSS Denial of service (client) injection<br>
+    --B64               B64    - Base64 code encoding in META tag (rfc2397)<br>
+<br>
+  *Special Final injection(s)*:<br>
+    These options can be used to execute some 'special' injection(s) in<br>
+    vulnerable target(s). You can select multiple and combine with your<br>
+    final code (except with DCP code):<br>
+<br>
+    --Onm               ONM - Use onMouseMove() event to inject code<br>
+    --Ifr               IFR - Use &lt;iframe&gt; source tag to inject code<br>
+<br>
+  *Miscellaneous*:<br>
+    --silent            inhibit console output results<br>
+    --update            check for XSSer latest stable version<br>
+    --save              output all results directly to template (XSSlist.dat)<br>
+    --xml=FILEXML       output 'positives' to aXML file (--xml filename.xml)<br>
+    --short=SHORTURLS   display -final code- shortered (tinyurl, is.gd)<br>
+    --launch            launch a browser at the end with each XSS discovered<br>
+    --tweet             publish each XSS discovered into the 'Grey Swarm!'<br>
+    --tweet-tags=TT     add more tags to your XSS discovered publications<br>
+                        (default: #xss) - (ex: #xsser #vulnerability)</code><h3> xsser用法示例</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="e2908d8d96a289838e8b">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# xsser --gtk</code><p> <a href="d50f27008f2209766838c2784d938d535ce87b9e.jpg" tppabs="http://www.storysec.com/kali/kalitools/full/d50f27008f2209766838c2784d938d535ce87b9e.jpg"><img src="d50f27008f2209766838c2784d938d535ce87b9e.jpg" tppabs="http://www.storysec.com/kali/kalitools/full/d50f27008f2209766838c2784d938d535ce87b9e.jpg" alt="xsser" width="920" class="aligncenter size-full wp-image-3684"></a> </p><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

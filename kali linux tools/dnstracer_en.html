@@ -1,0 +1,48 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kaliå·¥å…·ç®±</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<section class="l-section"><div class="l-section-h i-cf"><h2>dnstracer Package Description</h2>
+<p style="text-align: justify;">dnstracer determines where a given Domain Name Server (DNS) gets its information from for a given hostname, and follows the chain of DNS servers back to the authoritative answer.</p>
+<p>Source: http://www.mavetju.org/unix/general.php<br>
+<a href="javascript:if(confirm('http://freshmeat.net/projects/dnstracer  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://freshmeat.net/projects/dnstracer'" tppabs="http://freshmeat.net/projects/dnstracer" variation="deepblue" target="blank">dnstracer Homepage</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/dnstracer.git;a=summary  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://git.kali.org/gitweb/?p=packages/dnstracer.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/dnstracer.git;a=summary" variation="deepblue" target="blank">Kali dnstracer Repo</a></p>
+<ul>
+<li>Author: Edwin Groothuis</li>
+<li>License: BSD</li>
+</ul>
+<h3>tools included in the dnstracer package</h3>
+<h5>dnstracer â€“ trace DNS queries to the source</h5>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="ea9885859eaa818b8683">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dnstracer<br>
+DNSTRACER version 1.8.1 - (c) Edwin Groothuis - http://www.mavetju.org<br>
+Usage: dnstracer [options] [host]<br>
+Â  Â  -c: disable local caching, default enabled<br>
+Â  Â  -C: enable negative caching, default disabled<br>
+Â  Â  -o: enable overview of received answers, default disabled<br>
+Â  Â  -q &lt;querytype&gt;: query-type to use for the DNS requests, default A<br>
+Â  Â  -r &lt;retries&gt;: amount of retries for DNS requests, default 3<br>
+Â  Â  -s &lt;server&gt;: use this server for the initial request, default localhost<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â If . is specified, A.ROOT-SERVERS.NET will be used.<br>
+Â  Â  -t &lt;maximum timeout&gt;: Limit time to wait per try<br>
+Â  Â  -v: verbose<br>
+Â  Â  -S &lt;ip address&gt;: use this source address.<br>
+Â  Â  -4: don't query IPv6 servers</code>
+<h3>dnstracer Usage Example</h3>
+<p>Scan a domain <b><i>(example.com)</i></b>, retry up to 3 times <b><i>(-r 3)</i></b>, and display verbose output <b><i>(-v)</i></b>:</p>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="ddafb2b2a99db6bcb1b4">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dnstracer -r 3 -v example.com<br>
+Tracing to example.com[a] via 192.168.1.1, maximum of 3 retries<br>
+192.168.1.1 (192.168.1.1) IP HEADER<br>
+- Destination address: Â 192.168.1.1<br>
+DNS HEADER (send)</code>
+</div></section><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

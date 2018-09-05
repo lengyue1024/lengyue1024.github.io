@@ -1,0 +1,55 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> patator包装说明</h2><p style="text-align: justify;"> Patator是一个多用途的蛮力压机，具有模块化设计和一个灵活的使用。目前，它支持以下模块： </p><ul><li> ftp_login：蛮力FTP </li><li> ssh_login：蛮力SSH </li><li> telnet_login：蛮力的Telnet </li><li> smtp_login：蛮力SMTP </li><li> smtp_vrfy：枚举合法用户使用SMTP“VRFY”命令</li><li> smtp_rcpt：使用SMTP枚举合法用户RCPT TO“命令</li><li> finger_lookup：枚举用手指合法用户</li><li> http_fuzz：蛮力HTTP </li><li> pop_login：蛮力POP3 </li><li> pop_passd：蛮力poppassd（http://netwinsite.com/poppassd/） </li><li> imap_login：蛮力IMAP4 - ldap_login：蛮力LDAP </li><li> smb_login：蛮力SMB </li><li> smb_lookupsid：蛮力SMB SID-查找</li><li> vmauthd_login：蛮力的VMware认证守护进程</li><li> mssql_login：蛮力MSSQL </li><li> oracle_login：蛮力甲骨文</li><li> mysql_login：蛮力的MySQL </li><li> pgsql_login：蛮力的PostgreSQL </li><li> vnc_login：蛮力VNC </li><li> dns_forward：蛮力DNS </li><li> dns_reverse：蛮力DNS（反向查找子网） </li><li> snmp_login：蛮力支持SNMPv1 / 2和SNMPv3 </li><li> unzip_pass：强力的加密ZIP文件的密码</li><li> keystore_pass：蛮力的Java密钥文件的密码</li></ul><p>资料来源：http://code.google.com/p/patator/ <br> <a href="javascript:if(confirm('http://code.google.com/p/patator/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://code.google.com/p/patator/'" tppabs="http://code.google.com/p/patator/" variation="deepblue" target="blank">patator首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/patator.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/patator.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/patator.git;a=summary" variation="deepblue" target="blank">卡利patator回购</a> </p><ul><li>作者：塞巴斯蒂安MACKE </li><li>许可：GPL第二版</li></ul><h3>包含在patator包工具“ </h3><h5> patator - 多用途蛮力动子</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="eb9984849fab808a8782">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# patator<br>
+Patator v0.5 (http://code.google.com/p/patator/)<br>
+Usage: patator.py module --help<br>
+<br>
+Available modules:<br>
+  + ftp_login     : Brute-force FTP<br>
+  + ssh_login     : Brute-force SSH<br>
+  + telnet_login  : Brute-force Telnet<br>
+  + smtp_login    : Brute-force SMTP<br>
+  + smtp_vrfy     : Enumerate valid users using SMTP VRFY<br>
+  + smtp_rcpt     : Enumerate valid users using SMTP RCPT TO<br>
+  + finger_lookup : Enumerate valid users using Finger<br>
+  + http_fuzz     : Brute-force HTTP<br>
+  + pop_login     : Brute-force POP3<br>
+  + pop_passd     : Brute-force poppassd (http://netwinsite.com/poppassd/)<br>
+  + imap_login    : Brute-force IMAP4<br>
+  + ldap_login    : Brute-force LDAP<br>
+  + smb_login     : Brute-force SMB<br>
+  + smb_lookupsid : Brute-force SMB SID-lookup<br>
+  + vmauthd_login : Brute-force VMware Authentication Daemon<br>
+  + mssql_login   : Brute-force MSSQL<br>
+  + oracle_login  : Brute-force Oracle<br>
+  + mysql_login   : Brute-force MySQL<br>
+  + mysql_query   : Brute-force MySQL queries<br>
+  + pgsql_login   : Brute-force PostgreSQL<br>
+  + vnc_login     : Brute-force VNC<br>
+  + dns_forward   : Forward lookup names<br>
+  + dns_reverse   : Reverse lookup subnets<br>
+  + snmp_login    : Brute-force SNMP v1/2/3<br>
+  + unzip_pass    : Brute-force the password of encrypted ZIP files<br>
+  + keystore_pass : Brute-force the password of Java keystore files<br>
+  + tcp_fuzz      : Fuzz TCP services<br>
+  + dummy_test    : Testing module</code><h3> patator用法示例</h3><p>做一个MySQL的蛮力攻击<b><i>（mysql_login）</i></b>与包含在文件中的根<b><i>用户（= root）和</i></b>密码<b><i>（密码= FILE0 0 = /根/ passes.txt）</i></b>对指定的主机<b><i>（主机= 127.0.0.1），</i></b>忽略指定字符串<b><i>（-x忽略：fgrep一样=“拒绝访问用户）：</i></b> </p><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="dcaeb3b3a89cb7bdb0b5">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# patator mysql_login user=root password=FILE0 0=/root/passes.txt host=127.0.0.1 -x ignore:fgrep='Access denied for user'<br>
+12:30:36 patator    INFO - Starting Patator v0.5 (http://code.google.com/p/patator/) at 2014-05-19 12:30 EDT<br>
+12:30:36 patator    INFO - <br>
+12:30:36 patator    INFO - code  size | candidate                          |   num | mesg<br>
+12:30:36 patator    INFO - ----------------------------------------------------------------------<br>
+12:30:37 patator    INFO - 0     16   | toor                               |  4493 | 5.5.37-0+wheezy1<br>
+12:30:37 patator    INFO - Hits/Done/Skip/Fail/Size: 1/4493/0/0/4493, Avg: 3582 r/s, Time: 0h 0m 1s</code><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

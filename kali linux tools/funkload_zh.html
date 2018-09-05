@@ -1,0 +1,274 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kali工具箱</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<h2> FunkLoad包装说明</h2><p style="text-align: justify;"> FunkLoad是一个功能和负载网络测试仪，用Python编写的，其主要用例有： </p><ul><li> Web项目的功能测试，从而回归测试也是如此。 </li><li>性能测试：通过加载Web应用程序和监控服务器它可以帮助你找出瓶颈，给性能测试的详细报告。 </li><li>负载测试工具，揭露错误不粗略测试中，如音量测试或寿命测试。 </li><li>压力测试工具，以压倒Web应用程序资源和测试应用程序的可恢复性。 </li><li>通过脚本任何网​​络重复性任务编写web代理。 </li></ul><p>资料来源：http://funkload.nuxeo.org/intro.html <br> <a href="javascript:if(confirm('http://funkload.nuxeo.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://funkload.nuxeo.org/'" tppabs="http://funkload.nuxeo.org/" variation="deepblue" target="blank">funkload首页</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/funkload.git;a=summary  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://git.kali.org/gitweb/?p=packages/funkload.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/funkload.git;a=summary" variation="deepblue" target="blank">卡利funkload回购</a> </p><ul><li>作者：伯努瓦Delbosc，Nuxeo的SAS </li><li>许可：GPL第二版</li></ul><h3>包含在funkload包工具</h3><h5> FL-记录 - 启动一个TCPWatch代理和记录活动</h5><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="7e0c11110a3e151f1217">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# fl-record -h<br>
+Usage<br>
+=====<br>
+  fl-record [options] [test_name]<br>
+<br>
+fl-record launch a TCPWatch proxy and record activities, then output<br>
+a FunkLoad script or generates a FunkLoad unit test if test_name is specified.<br>
+<br>
+The default proxy port is 8090.<br>
+<br>
+Note that tcpwatch.py executable must be accessible from your env.<br>
+<br>
+See http://funkload.nuxeo.org/ for more information.<br>
+<br>
+Examples<br>
+========<br>
+  fl-record foo_bar<br>
+                        Run a proxy and create a FunkLoad test case,<br>
+                        generates test_FooBar.py and FooBar.conf file.<br>
+                        To test it:  fl-run-test -dV test_FooBar.py<br>
+  fl-record -p 9090<br>
+                        Run a proxy on port 9090, output script to stdout.<br>
+  fl-record -i /tmp/tcpwatch<br>
+                        Convert a tcpwatch capture into a script.<br>
+<br>
+<br>
+Options<br>
+=======<br>
+--version               show program's version number and exit<br>
+--help, -h              show this help message and exit<br>
+--verbose, -v           Verbose output<br>
+--port=PORT, -p PORT    The proxy port.<br>
+--tcp-watch-input=TCPWATCH_PATH, -i TCPWATCH_PATH<br>
+                        Path to an existing tcpwatch capture.<br>
+--loop=LOOP, -l LOOP    Loop mode.</code><h3> FL-凭证-CTL - 在XML / RPC服务器上执行动作</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="2e5c41415a6e454f4247">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# fl-credential-ctl -h<br>
+Usage<br>
+=====<br>
+  fl-credential-ctl config_file action<br>
+<br>
+action can be: start|startd|stop|restart|status|test<br>
+<br>
+Execute action on the XML/RPC server.<br>
+<br>
+<br>
+Options<br>
+=======<br>
+--version    show program's version number and exit<br>
+--help, -h   show this help message and exit<br>
+--quiet, -q  Verbose output</code><h3> FL-运行测试 - 启动一个FunkLoad单元测试</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="dba9b4b4af9bb0bab7b2">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# fl-run-test -h<br>
+Usage<br>
+=====<br>
+  fl-run-test [options] file [class.method|class|suite] [...]<br>
+<br>
+fl-run-test launch a FunkLoad unit test.<br>
+<br>
+A FunkLoad unittest use a configuration file named [class].conf, this<br>
+configuration is overriden by the command line options.<br>
+<br>
+See http://funkload.nuxeo.org/ for more information.<br>
+<br>
+<br>
+Examples<br>
+========<br>
+  fl-run-test myFile.py<br>
+                        Run all tests (including doctest with python2.4).<br>
+  fl-run-test myFile.py test_suite<br>
+                        Run suite named test_suite.<br>
+  fl-run-test myFile.py MyTestCase.testSomething<br>
+                        Run a single test MyTestCase.testSomething.<br>
+  fl-run-test myFile.py MyTestCase<br>
+                        Run all 'test*' test methods and doctest in MyTestCase.<br>
+  fl-run-test myFile.py MyTestCase -u http://localhost<br>
+                        Same against localhost.<br>
+  fl-run-test myDocTest.txt<br>
+                        Run doctest from plain text file (requires python2.4).<br>
+  fl-run-test myDocTest.txt -d<br>
+                        Run doctest with debug output (requires python2.4).<br>
+  fl-run-test myfile.py -V<br>
+                        Run default set of tests and view in real time each<br>
+                        page fetch with firefox.<br>
+  fl-run-test myfile.py MyTestCase.testSomething -l 3 -n 100<br>
+                        Run MyTestCase.testSomething, reload one hundred<br>
+                        time the page 3 without concurrency and as fast as<br>
+                        possible. Output response time stats. You can loop<br>
+                        on many pages using slice -l 2:4.<br>
+  fl-run-test myFile.py -e [Ss]ome<br>
+                        Run all tests that match the regex [Ss]ome.<br>
+  fl-run-test myFile.py -e '!xmlrpc$'<br>
+                        Run all tests that does not ends with xmlrpc.<br>
+  fl-run-test myFile.py --list<br>
+                        List all the test names.<br>
+  fl-run-test -h<br>
+                        More options.<br>
+<br>
+<br>
+Options<br>
+=======<br>
+--version               show program's version number and exit<br>
+--help, -h              show this help message and exit<br>
+--quiet, -q             Minimal output.<br>
+--verbose, -v           Verbose output.<br>
+--debug, -d             FunkLoad and doctest debug output.<br>
+--debug-level=DEBUG_LEVEL<br>
+                        Debug level 3 is more verbose.<br>
+--url=MAIN_URL, -u MAIN_URL<br>
+                        Base URL to bench without ending '/'.<br>
+--sleep-time-min=FTEST_SLEEP_TIME_MIN, -m FTEST_SLEEP_TIME_MIN<br>
+                        Minumum sleep time between request.<br>
+--sleep-time-max=FTEST_SLEEP_TIME_MAX, -M FTEST_SLEEP_TIME_MAX<br>
+                        Maximum sleep time between request.<br>
+--dump-directory=DUMP_DIR<br>
+                        Directory to dump html pages.<br>
+--firefox-view, -V      Real time view using firefox, you must have a running<br>
+                        instance of firefox in the same host.<br>
+--no-color              Monochrome output.<br>
+--loop-on-pages=LOOP_STEPS, -l LOOP_STEPS<br>
+                        Loop as fast as possible without concurrency on pages,<br>
+                        expect a page number or a slice like 3:5. Output some<br>
+                        statistics.<br>
+--loop-number=LOOP_NUMBER, -n LOOP_NUMBER<br>
+                        Number of loop.<br>
+--accept-invalid-links  Do not fail if css/image links are not reachable.<br>
+--simple-fetch          Don't load additional links like css or images when<br>
+                        fetching an html page.<br>
+--stop-on-fail          Stop tests on first failure or error.<br>
+--regex=REGEX, -e REGEX<br>
+                        The test names must match the regex.<br>
+--list                  Just list the test names.<br>
+--pause                 Pause between request, press ENTER to continue.</code><h3> FL-集结报告 - 分析FunkLoad板凳XML结果文件和输出报表</h3><code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="dfadb0b0ab9fb4beb3b6">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# fl-build-report -h<br>
+Usage<br>
+=====<br>
+  fl-build-report [options] xmlfile [xmlfile...]<br>
+<br>
+or<br>
+<br>
+  fl-build-report --diff REPORT_PATH1 REPORT_PATH2<br>
+<br>
+fl-build-report analyze a FunkLoad bench xml result file and output a report.<br>
+If there are more than one file the xml results are merged.<br>
+<br>
+See http://funkload.nuxeo.org/ for more information.<br>
+<br>
+Examples<br>
+========<br>
+  fl-build-report funkload.xml<br>
+                        ReST rendering into stdout.<br>
+  fl-build-report --html -o /tmp funkload.xml<br>
+                        Build an HTML report in /tmp<br>
+  fl-build-report --html node1.xml node2.xml node3.xml<br>
+                        Build an HTML report merging test result from 3 nodes.<br>
+  fl-build-report --diff /tmp/test_reader-20080101 /tmp/test_reader-20080102<br>
+                        Build a differential report to compare 2 bench reports,<br>
+                        requires gnuplot.<br>
+  fl-build-report -h<br>
+                        More options.<br>
+<br>
+<br>
+Options<br>
+=======<br>
+--version               show program's version number and exit<br>
+--help, -h              show this help message and exit<br>
+--html, -H              Produce an html report.<br>
+--with-percentiles, -P  Include percentiles in tables, use 10%, 50% and 90%<br>
+                        for charts, default option.<br>
+--no-percentiles        No percentiles in tables display min, avg and max in<br>
+                        charts (gdchart only).<br>
+--diff, -d              Create differential report.<br>
+--output-directory=OUTPUT_DIR, -o OUTPUT_DIR<br>
+                        Parent directory to store reports, the directoryname<br>
+                        of the report will be generated automatically.<br>
+--report-directory=REPORT_DIR, -r REPORT_DIR<br>
+                        Directory name to store the report.<br>
+--apdex-T=APDEX_T, -T APDEX_T<br>
+                        Apdex T constant in second, default is set to 1.5s.<br>
+                        Visit http://www.apdex.org/ for more information.</code><h3>fl-run-bench – Launch a FunkLoad unit test as load test<br>
+<h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="7f0d10100b3f141e1316">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# fl-run-bench -h<br>
+Usage<br>
+=====<br>
+  fl-run-bench [options] file class.method<br>
+<br>
+fl-run-bench launch a FunkLoad unit test as load test.<br>
+<br>
+A FunkLoad unittest use a configuration file named [class].conf, this<br>
+configuration is overriden by the command line options.<br>
+<br>
+See http://funkload.nuxeo.org/ for more information.<br>
+<br>
+Examples<br>
+========<br>
+  fl-run-bench myFile.py MyTestCase.testSomething<br>
+                        Bench MyTestCase.testSomething using MyTestCase.conf.<br>
+  fl-run-bench -u http://localhost:8080 -c 10:20 -D 30 myFile.py \<br>
+      MyTestCase.testSomething<br>
+                        Bench MyTestCase.testSomething on localhost:8080<br>
+                        with 2 cycles of 10 and 20 users during 30s.<br>
+  fl-run-bench -h<br>
+                        More options.<br>
+<br>
+<br>
+Options<br>
+=======<br>
+--version               show program's version number and exit<br>
+--help, -h              show this help message and exit<br>
+--url=MAIN_URL, -u MAIN_URL<br>
+                        Base URL to bench.<br>
+--cycles=BENCH_CYCLES, -c BENCH_CYCLES<br>
+                        Cycles to bench, this is a list of number of virtual<br>
+                        concurrent users, to run a bench with 3 cycles with 5,<br>
+                        10 and 20 users use: -c 2:10:20<br>
+--duration=BENCH_DURATION, -D BENCH_DURATION<br>
+                        Duration of a cycle in seconds.<br>
+--sleep-time-min=BENCH_SLEEP_TIME_MIN, -m BENCH_SLEEP_TIME_MIN<br>
+                        Minimum sleep time between requests.<br>
+--sleep-time-max=BENCH_SLEEP_TIME_MAX, -M BENCH_SLEEP_TIME_MAX<br>
+                        Maximum sleep time between requests.<br>
+--test-sleep-time=BENCH_SLEEP_TIME, -t BENCH_SLEEP_TIME<br>
+                        Sleep time between tests.<br>
+--startup-delay=BENCH_STARTUP_DELAY, -s BENCH_STARTUP_DELAY<br>
+                        Startup delay between thread.<br>
+--as-fast-as-possible, -f<br>
+                        Remove sleep times between requests and between tests,<br>
+                        shortcut for -m0 -M0 -t0<br>
+--no-color              Monochrome output.<br>
+--accept-invalid-links  Do not fail if css/image links are not reachable.<br>
+--simple-fetch          Don't load additional links like css or images when<br>
+                        fetching an html page.<br>
+--label=LABEL, -l LABEL<br>
+                        Add a label to this bench run for easier<br>
+                        identification (it will be appended to the directory<br>
+                        name for reports generated from it).<br>
+--enable-debug-server   Instantiates a debug HTTP server which exposes an<br>
+                        interface using which parameters can be modified at<br>
+                        run-time. Currently supported parameters:<br>
+                        /cvu?inc=&lt;integer&gt; to increase the number of CVUs,<br>
+                        /cvu?dec=&lt;integer&gt; to decrease the number of CVUs,<br>
+                        /getcvu returns number of CVUs<br>
+--debug-server-port=DEBUGPORT<br>
+                        Port at which debug server should run during the test</code>
+<h3>fl-monitor-ctl – Execute action on the XML/RPC server</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="ee9c81819aae858f8287">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# fl-monitor-ctl -h<br>
+Usage<br>
+=====<br>
+  fl-monitor-ctl config_file action<br>
+<br>
+action can be: start|startd|stop|restart|status|test<br>
+<br>
+Execute action on the XML/RPC server.<br>
+<br>
+<br>
+Options<br>
+=======<br>
+--version    show program's version number and exit<br>
+--help, -h   show this help message and exit<br>
+--quiet, -q  Verbose output</code>
+<h3>FunkLoad Usage Example</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="2a5845455e6a414b4643">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# coming soon</code>
+</h3></h3><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

@@ -1,0 +1,161 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>kaliå·¥å…·ç®±</title>
+<script src="bootstrap.min.js" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css" tppabs="http://www.storysec.com/kali/kalitools/static/main.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.storysec.com/kali/kalitools/static/bootstrap.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+<main class="main-container ng-scope" ng-view="">
+<div class="main receptacle post-view ng-scope">
+<article class="entry ng-scope" ng-controller="EntryCtrl" ui-lightbox="">
+<section class="entry-content ng-binding" ng-bind-html="postContentTrustedHtml">
+<section class="l-section"><div class="l-section-h i-cf"><h2>dex2jar Package Description</h2>
+<p style="text-align: justify;">dex2jar contains following compments:</p>
+<ul>
+<li>dex-reader is designed to read the Dalvik Executable (.dex/.odex) format. It has a light weight API similar with ASM.</li>
+<li>dex-translator is designed to do the convert job. It reads the dex instruction to dex-ir format, after some optimize, convert to ASM format.</li>
+<li>dex-ir used by dex-translator, is designed to represent the dex instruction</li>
+<li>dex-tools tools to work with .class files. here are examples: Modify a apk, DeObfuscate a jar</li>
+<li>
+</li><li>d2j-smali [To be published] disassemble dex to smali files and assemble dex from smali files. different implementation to smali/baksmali, same syntax, but we support escape in type desc â€œLcom/dex2jar\t\u1234;â€</li>
+<li>dex-writer [To be published] write dex same way as dex-reader.</li>
+</ul>
+<p>Source: https://code.google.com/p/dex2jar/<br>
+<a hef='http://code.google.com/p/dex2jar/"' variation="deepblue" target="blank">dex2jar Homepage</a> | <a href="javascript:if(confirm('http://git.kali.org/gitweb/?p=packages/dex2jar.git;a=summary  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://git.kali.org/gitweb/?p=packages/dex2jar.git;a=summary'" tppabs="http://git.kali.org/gitweb/?p=packages/dex2jar.git;a=summary" variation="deepblue" target="blank">Kali dex2jar Repo</a></p>
+<ul>
+<li>Author: Panxiaobo</li>
+<li>License: Apache-2.0</li>
+</ul>
+<h3>Tools included in the dex2jar package</h3>
+<h5>d2j-jar2dex â€“ Convert jar to dex by invoking dx</h5>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="394b56564d7952585550">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-jar2dex -h<br>
+d2j-jar2dex -- Convert jar to dex by invoking dx.<br>
+usage: d2j-jar2dex [options] &lt;dir&gt;<br>
+options:<br>
+Â -f,--force Â  Â  Â  Â  Â  Â  Â  Â  Â  force overwrite<br>
+Â -h,--help Â  Â  Â  Â  Â  Â  Â  Â  Â  Â Print this help message<br>
+Â -o,--output &lt;out-dex-file&gt; Â  output .dex file, default is $current_dir/[jar-nam<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  e]-jar2dex.dex<br>
+version: 0.0.9.15</code>
+<h3>d2j-jar-remap â€“ Rename package/class/method/field name in a jar</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="c7b5a8a8b387aca6abae">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-jar-remap -h<br>
+d2j-jar-remap -- rename package/class/method/field name in a jar<br>
+usage: d2j-jar-remap [options] jar<br>
+options:<br>
+Â -c,--config &lt;config&gt; Â  Â config file for remap, this is REQUIRED<br>
+Â -f,--force Â  Â  Â  Â  Â  Â  Â force overwrite<br>
+Â -h,--help Â  Â  Â  Â  Â  Â  Â  Print this help message<br>
+Â -o,--output &lt;out-jar&gt; Â  output .jar file, default is $current_dir/[jar-name]-re<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â map.jar<br>
+version: 0.0.9.15<br>
+online help: https://code.google.com/p/dex2jar/wiki/DeObfuscateJarWithDexTool</code>
+<h3>d2j-dex2jar â€“ Convert dex to jar</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="52203d3d261239333e3b">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-dex2jar -h<br>
+d2j-dex2jar -- convert dex to jar<br>
+usage: d2j-dex2jar [options] &lt;file0&gt; [file1 ... fileN]<br>
+options:<br>
+Â -d,--debug-info Â  Â  Â  Â  Â  Â  Â translate debug info<br>
+Â -e,--exception-file &lt;file&gt; Â  detail exception file, default is $current_dir/[fi<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  le-name]-error.zip<br>
+Â -f,--force Â  Â  Â  Â  Â  Â  Â  Â  Â  force overwrite<br>
+Â -h,--help Â  Â  Â  Â  Â  Â  Â  Â  Â  Â Print this help message<br>
+Â -n,--not-handle-exception Â  Â not handle any exception throwed by dex2jar<br>
+Â -o,--output &lt;out-jar-file&gt; Â  output .jar file, default is $current_dir/[file-na<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  me]-dex2jar.jar<br>
+Â -os,--optmize-synchronized Â  optmize-synchronized<br>
+Â -p,--print-ir Â  Â  Â  Â  Â  Â  Â  Â print ir to Syste.out<br>
+Â -r,--reuse-reg Â  Â  Â  Â  Â  Â  Â  reuse regiter while generate java .class file<br>
+Â -s Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  same with --topological-sort/-ts<br>
+Â -ts,--topological-sort Â  Â  Â  sort block by topological, that will generate more<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â readable code<br>
+Â -v,--verbose Â  Â  Â  Â  Â  Â  Â  Â  show progress<br>
+version: reader-1.15, translator-0.0.9.15, ir-1.12</code>
+<h3>dex2jar â€“ This cmd is deprecated, use the d2j-dex2jar if possible</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="e4968b8b90a48f85888d">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# dex2jar<br>
+this cmd is deprecated, use the d2j-dex2jar if possible<br>
+dex2jar version: translator-0.0.9.15<br>
+dex2jar file1.dexORapk file2.dexORapk ...</code>
+<h3>d2j-jasmin2jar â€“ Assemble .j files to .class file</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="a9dbc6c6dde9c2c8c5c0">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-jasmin2jar -h<br>
+d2j-jasmin2jar -- d2j-jasmin2jar - assemble .j files to .class file<br>
+usage: d2j-jasmin2jar [options] &lt;dir&gt;<br>
+options:<br>
+Â -e,--encoding &lt;enc&gt; Â  Â  Â  Â  Â  Â  encoding for .j files, default is UTF-8<br>
+Â -f,--force Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â force overwrite<br>
+Â -g,--autogenerate-linenumbers Â  autogenerate-linenumbers<br>
+Â -h,--help Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Print this help message<br>
+Â -o,--output &lt;out-jar-file&gt; Â  Â  Â output .jar file, default is $current_dir/[jar-<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â name]-jasmin2jar.jar<br>
+version: 0.0.9.15</code>
+<h3>d2j-jar-access â€“ Add or remove class/method/field access in jar file</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="2e5c41415a6e454f4247">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-jar-access -h<br>
+d2j-jar-access -- add or remove class/method/field access in jar file<br>
+usage: d2j-jar-access [options] &lt;jar&gt;<br>
+options:<br>
+Â -ac,--add-class-access &lt;ACC&gt; Â  Â  Â  add access from class<br>
+Â -af,--add-field-access &lt;ACC&gt; Â  Â  Â  add access from field<br>
+Â -am,--add-method-access &lt;ACC&gt; Â  Â  Â add access from method<br>
+Â -f,--force Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  force overwrite<br>
+Â -h,--help Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â Print this help message<br>
+Â -o,--output &lt;out-dir&gt; Â  Â  Â  Â  Â  Â  Â output dir of .j files, default is $current_<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  dir/[jar-name]-access.jar<br>
+Â -rc,--remove-class-access &lt;ACC&gt; Â  Â remove access from class<br>
+Â -rd,--remove-debug Â  Â  Â  Â  Â  Â  Â  Â  remove debug info<br>
+Â -rf,--remove-field-access &lt;ACC&gt; Â  Â remove access from field<br>
+Â -rm,--remove-method-access &lt;ACC&gt; Â  remove access from method<br>
+version: 0.0.9.15</code>
+<h3>d2j-asm-verify â€“ Verify .class in jar</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="fb8994948fbb909a9792">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-asm-verify -h<br>
+d2j-asm-verify -- Verify .class in jar<br>
+usage: d2j-asm-verify [options] &lt;jar0&gt; [jar1 ... jarN]<br>
+options:<br>
+Â -d,--detail Â  Print detail error message<br>
+Â -h,--help Â  Â  Print this help message<br>
+version: 0.0.9.15</code>
+<h3>d2j-dex-dump</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="dcaeb3b3a89cb7bdb0b5">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-dex-dump -h<br>
+Dump in.dexORapk out.dump.jar</code>
+<h3>d2j-init-deobf â€“ Generate an init config file for deObfuscate a jar</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="6e1c01011a2e050f0207">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-init-deobf -h<br>
+d2j-init-deobf -- generate an init config file for deObfuscate a jar<br>
+usage: d2j-init-deobf [options] &lt;jar&gt;<br>
+options:<br>
+Â -f,--force Â  Â  Â  Â  Â  Â  Â  Â force overwrite<br>
+Â -h,--help Â  Â  Â  Â  Â  Â  Â  Â  Print this help message<br>
+Â -max,--max-length &lt;MAX&gt; Â  do the rename if the length &gt; MIN, default is 40<br>
+Â -min,--min-length &lt;MIN&gt; Â  do the rename if the length &lt; MIN, default is 2<br>
+Â -o,--output &lt;out-file&gt; Â  Â output .jar file, default is $current_dir/[file-name]<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â -deobf-init.txt<br>
+version: 0.0.9.15</code>
+<h3>d2j-apk-sign â€“ Sign an android apk file use a test certificate</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="394b56564d7952585550">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-apk-sign -h<br>
+d2j-apk-sign -- Sign an android apk file use a test certificate.<br>
+usage: d2j-apk-sign [options] &lt;apk&gt;<br>
+options:<br>
+Â -f,--force Â  Â  Â  Â  Â  Â  Â  Â  Â  force overwrite<br>
+Â -h,--help Â  Â  Â  Â  Â  Â  Â  Â  Â  Â Print this help message<br>
+Â -o,--output &lt;out-apk-file&gt; Â  output .apk file, default is $current_dir/[apk-nam<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  e]-signed.apk<br>
+Â -w,--sign-whole Â  Â  Â  Â  Â  Â  Â Sign whole apk file<br>
+version: 0.0.9.15</code>
+<h3>d2j-jar2jasmin â€“ Disassemble .class in jar file to jasmin file</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="7b0914140f3b101a1712">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-jar2jasmin -h<br>
+d2j-jar2jasmin -- Disassemble .class in jar file to jasmin file<br>
+usage: d2j-jar2jasmin [options] &lt;jar&gt;<br>
+options:<br>
+Â -d,--debug Â  Â  Â  Â  Â  Â  Â disassemble debug info<br>
+Â -e,--encoding &lt;enc&gt; Â  Â  encoding for .j files, default is UTF-8<br>
+Â -f,--force Â  Â  Â  Â  Â  Â  Â force overwrite<br>
+Â -h,--help Â  Â  Â  Â  Â  Â  Â  Print this help message<br>
+Â -o,--output &lt;out-dir&gt; Â  output dir of .j files, default is $current_dir/[jar-na<br>
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â me]-jar2jasmin/<br>
+version: 0.0.9.15</code>
+<h3>d2j-dex2jar Usage Example</h3>
+<code><a class="__cf_email__" href="javascript:if(confirm('http://www.storysec.com/cdn-cgi/l/email-protection  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.storysec.com/cdn-cgi/l/email-protection'" tppabs="http://www.storysec.com/cdn-cgi/l/email-protection" data-cfemail="73011c1c073318121f1a">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>:~# d2j-dex2jar /usr/share/metasploit-framework/data/android/apk/classes.dex <br>
+dex2jar /usr/share/metasploit-framework/data/android/apk/classes.dex -&gt; classes-dex2jar.jar</code>
+</div></section><div style="display:none">
+<script src="z_stat.php-id=1260038378&web_id=1260038378" tppabs="http://s11.cnzz.com/z_stat.php?id=1260038378&web_id=1260038378" language="JavaScript"></script>
+</div>
+</main></body></html>

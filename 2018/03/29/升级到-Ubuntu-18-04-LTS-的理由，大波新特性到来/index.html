@@ -1,0 +1,1040 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。" />
+
+
+
+  <meta name="keywords" content="Ubuntu," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="随着 2018 年 4 月 24 日稳定版正式发布日期的临近，也是时候来仔细研究下 Canonical 最新 Linux 发行版 Ubuntu 18.04 LTS「Bionic Beaver」的最新功能特性了。LTS 版本每两年发布一次，而 Ubuntu 18.04 是自 2016 年以来的第一个长期支持版本。Ubuntun 长期支持版本可以获得 Canonical 官方长达五年的技术支持，这意味">
+<meta name="keywords" content="Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="升级到 Ubuntu 18.04 LTS 的理由，大波新特性到来">
+<meta property="og:url" content="http://bingyublog.com/2018/03/29/升级到-Ubuntu-18-04-LTS-的理由，大波新特性到来/index.html">
+<meta property="og:site_name" content="冰羽の博客">
+<meta property="og:description" content="随着 2018 年 4 月 24 日稳定版正式发布日期的临近，也是时候来仔细研究下 Canonical 最新 Linux 发行版 Ubuntu 18.04 LTS「Bionic Beaver」的最新功能特性了。LTS 版本每两年发布一次，而 Ubuntu 18.04 是自 2016 年以来的第一个长期支持版本。Ubuntun 长期支持版本可以获得 Canonical 官方长达五年的技术支持，这意味">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0taccy9j30im0czwex.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0va5rgxj30iq0cydh4.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0vugq6aj30in0egdic.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0x80d04j30ht0ajdic.jpg">
+<meta property="og:updated_time" content="2018-08-28T11:09:02.280Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="升级到 Ubuntu 18.04 LTS 的理由，大波新特性到来">
+<meta name="twitter:description" content="随着 2018 年 4 月 24 日稳定版正式发布日期的临近，也是时候来仔细研究下 Canonical 最新 Linux 发行版 Ubuntu 18.04 LTS「Bionic Beaver」的最新功能特性了。LTS 版本每两年发布一次，而 Ubuntu 18.04 是自 2016 年以来的第一个长期支持版本。Ubuntun 长期支持版本可以获得 Canonical 官方长达五年的技术支持，这意味">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0taccy9j30im0czwex.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title> 升级到 Ubuntu 18.04 LTS 的理由，大波新特性到来 | 冰羽の博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7b451f13126c1ccdebfa8d48ee43a5d0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">冰羽の博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              升级到 Ubuntu 18.04 LTS 的理由，大波新特性到来
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2018-03-29T21:39:20+08:00" content="2018-03-29">
+            2018-03-29
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/ubuntu/" itemprop="url" rel="index">
+                  <span itemprop="name">ubuntu</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>随着 2018 年 4 月 24 日稳定版正式发布日期的临近，也是时候来仔细研究下 Canonical 最新 Linux 发行版 Ubuntu 18.04 LTS「Bionic Beaver」的最新功能特性了。<br>LTS 版本每两年发布一次，而 Ubuntu 18.04 是自 2016 年以来的第一个长期支持版本。Ubuntun 长期支持版本可以获得 Canonical 官方长达五年的技术支持，这意味着在 2023 年之前所有用户都可以放心使用 Ubuntu 18.04 LTS。<br>Ubuntu 18.04 LTS 被 Canonical 创始人 Mark Shuttleworth 命名为「Bionic Beaver，仿生海狸」，这主要是为了纪念 Ubuntu 人孜孜不倦的辛劳工作。所以，以海狸充满活力的态度，勤劳的本性，此次版本更新周期以这种哺乳动物作为吉祥物进行命名。<br>我们为什么要升级到 Ubuntu 18.04 LTS 呢？ 让我们来看看系统极客为大家总结的<strong>8</strong>大理由。<br>Ubuntu 18.04 中最有趣的新功能<br>1.安全性增强<br>首先，所有用户都应该定期升级当前的 Ubuntu 版本，以便从最新的安全补丁中受益。（系统更新可能适用于操作系统、驱动程序甚至底层硬件）<br>值得指出的是，所有操作系统都是如此，无论是基于 Linux、Windows 还是macOS，定期更新都可以提高您计算机的安全性。<br>但有一个潜在的安全问题应该注意，与微软的 Windows 10 操作系统类似，Canonical 打算从 Ubuntu 18.04 LTS 开始从用户的计算机收集一些数据。所收集的这些数据并不标示任何用户身份，只是建立计算机硬件、运行的 Ubuntu 版本、位置信息（可选）和一些其它数据的档案。<br>2.GNOME正式抵达<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0taccy9j30im0czwex.jpg" alt="1"><br>Ubuntu 18.04 LTS 发布的同时也带来了 GNOME 3.28，由于 GNOME 在 Ubuntu 17.10 中已经取代了 Unity（尽管 Unity 并未完全挂掉），因此 GNOME 也已经成为了 Ubuntu 系统默认的桌面环境。<br>当然，如果你不喜欢使用 GNOME，其他 Ubuntu 桌面环境也是可用的，如：MATE。<br>GNOME 正式来到 Ubuntu 18.04 LTS 桌面也标志着新统一风格定制的 GNOME 3.0 桌面在长期支持版本上得到支持，这也是升级到 Ubuntu 18.04 系统一个很好的理由。说明一句，在Ubuntu16.04 LTS中默认的还是unity桌面，但是我更喜欢gnome桌面。<br>3.全新的图标集<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0va5rgxj30iq0cydh4.jpg" alt="2"><br>开源图标项目 Suru 已被纳入到 Ubuntu 18.04 LTS 操作系统当中，这些图标最初出现在现已废弃的 Ubuntu Touch 移动操作系统当中。（现在 UBPorts.com 的控制下）<br>正如 Suru 官网所述，原始的移动应用程序图标已被重新用于与 GNOME 主题图标相对应。基于未发布的 Suru 概念，还添加了文件夹和文件类型图标。 此外，还创建了一个完整的符号图标集，其中有许多基于原始 Suru 系统的图标。<br>4.彩色Emojis<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0vugq6aj30in0egdic.jpg" alt="3"><br>表情符号在个人 Linux 功能愿望清单中需求度可能不会很高，但不能否认表情符号现在是现代数字通信的一个重要组成部分。包括 Fedora 在内的许多其他流行 Linux 发行版很久以前就获得了对 emoji 的支持，在 Ubuntu 18.04 LTS 正式发布时，Ubuntu 用户也终于可以享受桌面应用程序中对彩色表情符号的开箱即用支持了。<br>为确保平台之间的一致性， Ubuntu 18.04 LTS 将使用 Noto Color Emoji 字体，该字体支持最新 Unicode 版本中定义的所有表情符号。<br>最新版本 Android 操作系统中使用了相同的表情符号字体，并且可以在 Noto Emoji GitHub 存储库中找到它的所有源图像。<br>在 Ubuntu 18.04 LTS 中的 GTK 应用程序中添加表情符号将很简单，因为 Ubuntu 用户将能够唤出可搜索的表情符号选择器，所以无需记住其 Unicode 代码或名称即可轻松输入字形。<br>5.新的「待办事项」应用程序<br>「GNOME To Do」这一简单的应用程序已经成为上游 GNOME 核心体验的一部分，它将在 Ubuntu 18.04 LTS 中推出对应的「待办事项」应用程序，以帮助Ubuntu 用户管理个人任务。<br>「GNOME To Do」的设计目的不是妨碍用户使用，它提供最基本的功能来实现，包括：快速编辑、管理列表，以及使用拖放重新排序任务。 每个任务可以分配不同的优先级和颜色以简化组织，并且「GNOME To Do」还能与 GNOME Online Accounts 集成，允许同步多个在线服务。<br>6.「最小安装」选项<br>不要将「Minimal Install 」最小化安装选项与 Ubuntu 18.04 最小化版本相混淆，Ubuntu 18.04 Ubiquity 安装程序增加了一个全新的「Minimal Install 」最小化安装选项，它可以将 Ubuntu 压缩为只有 30MB 的 containers/Docker、嵌入式 Linux 环境和其他相关用例，只需使用浏览器和实用程序即可安装最少的桌面环境。<br>此安装选项可以除去 Thunderbird、Transmission、Rhythmbox、LibreOffice（包括语言包）、Cheese 和 Shotwell 等 80 项功能，在应用程序启动器中只留下 Firefox、Nautilus、Ubuntu 软件和帮助。<br>7.Linux Kernel 4.15<br>Ubuntu 18.04 LTS 还将附带了 Linux Kernel 4.15，其中包含针对 Spectre 和 Meltdown 错误的修复程序。<br>除了 Specter 和 Meltdown 错误修复之外，Linux Kernel 4.15 还为 Raspberry Pi 7 英寸触摸屏提供原生支持，并支持安全加密虚拟化。<br>8.Xorg显示服务器回归<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0x80d04j30ht0ajdic.jpg" alt="4"><br>在过去几年中，Ubuntu 经历了一段艰难的时期，随着其移动版本的退出以及 Unity 的支持结束。 最大的障碍之一是在 Ubuntu 17.10 中默认切换到了 Wayland 显示服务器。 虽然它继续被指定为未来的显示服务器，但因缺少对 Wayland 应用程序的支持，导致不少用户切换回 Xorg 显示服务器。<br>因此，Ubuntu 18.04 LTS 将 Xorg 恢复为了默认显示服务器。 但是，通过登录屏幕上的齿轮图标还是可以切换回 Wayland 滴。</p>
+<p>注明:本篇文章为转载内容<a href="https://zixun.html5.qq.com/coolread/share?ch=060000&amp;tabId=0&amp;tagId=0&amp;docId=3064771459895666214&amp;url=http%3A%2F%2Fkuaibao.qq.com%2Fs%2F20180329A0MB2G00&amp;clientWidth=360&amp;sc_id=&amp;dataSrc=" target="_blank" rel="noopener">点此可查看原文</a><br>最后补充几句个人想法，我本人是非常喜欢Ubuntu的，属于Ubuntu的忠实粉丝，不论是哪个版本发布，我都一直在关注，本次的18.04属于LTS版本，可以获得5年的技术支持，所以如果各位喜欢Ubuntu的话， 一定要下载这个版本，我也会在第一时间尝鲜的，到时候一定写篇关于新版Ubuntu的特点的文章来，也希望各位多多支持Ubuntu，Ubuntu是家庭桌面版排名第一的版本，非常适合使用。</p>
+</span>
+      
+    </div>
+    <div>
+   
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+
+   
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Ubuntu/" rel="tag"><i class="fa tag"></i> Ubuntu</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/29/用kali破解zip文件密码/" rel="prev">用kali破解zip文件密码</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/28/Ubuntu的管理员运行机制/" rel="next">Ubuntu的管理员运行机制</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        如果本文对您有帮助，还望赞赏一下，谢谢
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+              
+
+            
+                <a href="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu247m6bycj30b40b4abn.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">冰羽</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">你指尖跃动的电光，是我此生不变的信仰。</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">124</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945 || github" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+  
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2018
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冰羽
+  </span>
+
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UA50F9B4D7",
+    "hash": "7cce0e84b501ad9c874106f70967e299"
+});
+tpwidget("show");</script>
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2017,12,17,00,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML="本站已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  }, 1000);
+
+</script>
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
+</html>
