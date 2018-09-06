@@ -38,19 +38,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Linux系统能支持多种目前流行的文件系统，推荐用EXT4。 Linux下面的文件类型主要有：  1) 普通文件，分为纯文本和二进制。2) 目录文件，存储文件的地方。3) 链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为块设备和字符设备。5）管道文件，提供进程间通信6）套接字文件，与网络通信有关  Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统和完整而固定的目录组成形">
+<meta name="description" content="Linux系统能支持多种目前流行的文件系统，推荐用EXT4。 Linux下面的文件类型主要有：  1) -,普通文件，分为纯文本和二进制。2) d,目录文件，存储文件的地方。3) l,链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为b块设备和c字符设备。5）p,管道文件，提供进程间通信6）s,套接字文件，与网络通信有关  Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux文件目录">
+<meta property="og:title" content="Linux常见文件目录解析">
 <meta property="og:url" content="http://bingyublog.com/2018/09/08/Linux文件目录/index.html">
 <meta property="og:site_name" content="冰羽の博客">
-<meta property="og:description" content="Linux系统能支持多种目前流行的文件系统，推荐用EXT4。 Linux下面的文件类型主要有：  1) 普通文件，分为纯文本和二进制。2) 目录文件，存储文件的地方。3) 链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为块设备和字符设备。5）管道文件，提供进程间通信6）套接字文件，与网络通信有关  Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统和完整而固定的目录组成形">
+<meta property="og:description" content="Linux系统能支持多种目前流行的文件系统，推荐用EXT4。 Linux下面的文件类型主要有：  1) -,普通文件，分为纯文本和二进制。2) d,目录文件，存储文件的地方。3) l,链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为b块设备和c字符设备。5）p,管道文件，提供进程间通信6）s,套接字文件，与网络通信有关  Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg">
-<meta property="og:updated_time" content="2018-09-06T12:53:42.460Z">
+<meta property="og:updated_time" content="2018-09-06T13:11:36.265Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux文件目录">
-<meta name="twitter:description" content="Linux系统能支持多种目前流行的文件系统，推荐用EXT4。 Linux下面的文件类型主要有：  1) 普通文件，分为纯文本和二进制。2) 目录文件，存储文件的地方。3) 链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为块设备和字符设备。5）管道文件，提供进程间通信6）套接字文件，与网络通信有关  Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统和完整而固定的目录组成形">
+<meta name="twitter:title" content="Linux常见文件目录解析">
+<meta name="twitter:description" content="Linux系统能支持多种目前流行的文件系统，推荐用EXT4。 Linux下面的文件类型主要有：  1) -,普通文件，分为纯文本和二进制。2) d,目录文件，存储文件的地方。3) l,链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为b块设备和c字符设备。5）p,管道文件，提供进程间通信6）s,套接字文件，与网络通信有关  Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg">
 
 
@@ -70,7 +70,7 @@
   </script>
 
 
-  <title> Linux文件目录 | 冰羽の博客 </title>
+  <title> Linux常见文件目录解析 | 冰羽の博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -366,7 +366,7 @@
           
           
             
-              Linux文件目录
+              Linux常见文件目录解析
             
           
         </h1>
@@ -415,10 +415,10 @@
         <span itemprop="articleBody"><p>Linux系统能支持多种目前流行的文件系统，推荐用EXT4。</p>
 <p>Linux下面的文件类型主要有：</p>
 <blockquote>
-<p>1) 普通文件，分为纯文本和二进制。<br>2) 目录文件，存储文件的地方。<br>3) 链接文件，指向同一个文件或目录的的文件。<br>4) 设备文件，分为块设备和字符设备。<br>5）管道文件，提供进程间通信<br>6）套接字文件，与网络通信有关</p>
+<p>1) <code>-</code>,普通文件，分为纯文本和二进制。<br>2) <code>d</code>,目录文件，存储文件的地方。<br>3) <code>l</code>,链接文件，指向同一个文件或目录的的文件。<br>4) 设备文件，分为<code>b</code>块设备和<code>c</code>字符设备。<br>5）<code>p</code>,管道文件，提供进程间通信<br>6）<code>s</code>,套接字文件，与网络通信有关</p>
 </blockquote>
 <p>Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统和完整而固定的目录组成形式，并指定了每个目录的作用和其中的文件类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">目录名	简要说明</span><br><span class="line">/bin	二进制可执行命令,binary（二进制的）：许多“指令”对应的可“执行程序文件”目录</span><br><span class="line">/sbin super binary 超级的 二进制 许多“指令”对应的可“执行程序文件”目录，该目录文件对应指令都是&quot;root&quot;用户可以执行的指令普通用户不能使用该目录里的命令：</span><br><span class="line">普通用户：用$开头</span><br><span class="line">root用户：用#开头  </span><br><span class="line">/dev	设备特殊文件,device 系统硬件设备目录（linux系统所有的硬件都通过文件表示）</span><br><span class="line">/etc	系统管理和配置文件,/etc/passwd 用于存储用户信息的文件,/etc/group 用于存储组别信息的文件</span><br><span class="line"></span><br><span class="line">/etc/rc.d	启动的配置文件和脚本</span><br><span class="line">/home	用户主目录的基点，比如用户abc的主目录就是/home/user，可以用~abc表示,普通用户的“家目录”</span><br><span class="line"></span><br><span class="line">系统每增加一个普通用户的同时，都会在该目录为该目录设置一个文件目录代表该用户的“家目录”用户后期使用系统的时候首先会首先进入其目录家目录名字默认与当前用户名字一致用户对家目录拥有绝对最高的权限</span><br><span class="line"></span><br><span class="line">/lib	标准程序设计库</span><br><span class="line">/sbin	系统管理命令，这里存放的是系统管理员使用的管理程序</span><br><span class="line">/tmp	公用的临时文件存储点</span><br><span class="line">/root	系统管理员的主目录</span><br><span class="line">/mnt	系统提供这个目录是让用户临时挂载其他的文件系统。存放临时的映射文件系统.</span><br><span class="line">/lost+found	这个目录平时是空的，系统非正常关机而留下“无家可归”的文件</span><br><span class="line">/proc	虚拟的目录，是系统内存的映射。可直接访问这个目录来获取系统信息。</span><br><span class="line">/var	某些大文件的溢出区，比方说各种服务的日志文件,variable 可变的、易变的</span><br><span class="line"></span><br><span class="line">该目录存储的文件经常会发生变化（增加、修改、删除）</span><br><span class="line">/usr	unxi system resource(unix系统资源文件目录)最庞大的目录，要用到的应用程序和文件几乎都在这个目录。其中包含：</span><br><span class="line">/usr/X11R6 存放X window的目录</span><br><span class="line">/usr/bin 众多的应用程序</span><br><span class="line">/usr/sbin 超级用户的一些管理程序</span><br><span class="line">/usr/doc linux文档</span><br><span class="line">/usr/include linux下开发和编译应用程序所需要的头文件</span><br><span class="line">/usr/lib 常用的动态链接库和软件包的配置文件</span><br><span class="line">/usr/man 帮助文档</span><br><span class="line">/usr/src 源代码，linux内核的源代码就放在/usr/src/linux里</span><br><span class="line">/usr/local/bin 本地增加的命令</span><br><span class="line">/usr/local/lib 本地增加的库</span><br><span class="line">该目录类似win系统的 C:/Program files 目录</span><br><span class="line"></span><br><span class="line">该目录经常用于安装各种软件,软件安装完毕会形成对应的指令，该指令对应的可执行程序文件就存放在以下目录</span><br><span class="line"></span><br><span class="line">/usr/bin许多“指令”对应的可“执行程序文件”目录 /usr/sbin root用户执行的指令 对应的 可“执行程序文件”目录</span><br><span class="line"></span><br><span class="line">/boot 系统启动核心目录，用于储存系统启动文件</span><br><span class="line">/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">目录名	简要说明</span><br><span class="line">/bin	二进制可执行命令,binary（二进制的）：许多“指令”对应的可“执行程序文件”目录</span><br><span class="line">/sbin super binary,超级的 二进制 许多“指令”对应的可“执行程序文件”目录，该目录文件  </span><br><span class="line">对应指令都是&quot;root&quot;用户可以执行的指令普通用户不能使用该目录里的命令：  </span><br><span class="line">普通用户：用$开头  </span><br><span class="line">root用户：用#开头  </span><br><span class="line">/dev	device,系统硬件设备目录（linux系统所有的硬件都通过文件表示）</span><br><span class="line">/etc	系统管理和配置文件,/etc/passwd 用于存储用户信息的文件,/etc/group  </span><br><span class="line">用于存储组别信息的文件  </span><br><span class="line">/etc/rc.d	启动的配置文件和脚本  </span><br><span class="line">/home	用户主目录的基点，比如用户abc的主目录就是/home/user，可以用~abc表示,普通用户的“家目录”  </span><br><span class="line">系统每增加一个普通用户的同时，都会在该目录为该目录设置一个文件目录代表该用户的“家目录”用户后期使用系统的时候首先会首先进入其目录家目录名字默认与当前用户名字一致用户对家目录拥有绝对最高的权限  </span><br><span class="line">/lib	标准程序设计库</span><br><span class="line">/sbin	系统管理命令，这里存放的是系统管理员使用的管理程序</span><br><span class="line">/tmp	公用的临时文件存储点</span><br><span class="line">/root	系统管理员的主目录</span><br><span class="line">/mnt	系统提供这个目录是让用户临时挂载其他的文件系统。存放临时的映射文件系统.</span><br><span class="line">/lost+found	这个目录平时是空的，系统非正常关机而留下“无家可归”的文件</span><br><span class="line">/proc	虚拟的目录，是系统内存的映射。可直接访问这个目录来获取系统信息。</span><br><span class="line">/var	variable,某些大文件的溢出区，比方说各种服务的日志文件,该目录存储的文件经常会发生变化（增加、修改、删除）</span><br><span class="line">/usr	unxi system resource(unix系统资源文件目录)最庞大的目录，要用到的应用程序和文件几乎都在这个目录。其中包含：</span><br><span class="line">/usr/X11R6 存放X window的目录</span><br><span class="line">/usr/bin 众多的应用程序</span><br><span class="line">/usr/sbin 超级用户的一些管理程序</span><br><span class="line">/usr/doc linux文档</span><br><span class="line">/usr/include linux下开发和编译应用程序所需要的头文件</span><br><span class="line">/usr/lib 常用的动态链接库和软件包的配置文件</span><br><span class="line">/usr/man 帮助文档</span><br><span class="line">/usr/src 源代码，linux内核的源代码就放在/usr/src/linux里</span><br><span class="line">/usr/local/bin 本地增加的命令</span><br><span class="line">/usr/local/lib 本地增加的库</span><br><span class="line">该目录类似win系统的 C:/Program files 目录,该目录经常用于安装各种软件,软件安装完毕会形成对应的指令，该指令对应的可执行程序文件就存放在以下目录  </span><br><span class="line">/usr/bin 许多“指令”对应的可“执行程序文件”目录   </span><br><span class="line">/usr/sbin root用户执行的指令 对应的 可“执行程序文件”目录  </span><br><span class="line">/boot 系统启动核心目录，用于储存系统启动文件</span><br></pre></td></tr></table></figure>
 <p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
