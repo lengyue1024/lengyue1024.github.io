@@ -29,7 +29,7 @@
 
 
 
-  <meta name="keywords" content="Kali," />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -38,33 +38,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Tips:本人在虚拟机中进行操作，大家也可以在自己主机上进行操作。首先我在虚拟机里安装了一台win7的操作系统，作为被攻击人，一台kali Linux作为攻击人。WARNING:首先这2台运行在虚拟机里的操作系统是处于同一网关下的。（攻击人与被攻击人必须处于同一网关下才可以进行劫持） 我们首先查看一下win7的IP及其网关。win+R，输入cmd，打开dos窗口，输入ipconfig可以看到IP">
-<meta name="keywords" content="Kali">
+<meta name="description" content="uptime12$ uptime23:51:26 up 21:31, 1 user, load average: 30.02, 26.43, 19.0212   该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  dmesg | tail123456$ dmesg | tail[1880957.563150]">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="kali教程之内网劫持网页图片">
-<meta property="og:url" content="http://bingyublog.com/2018/02/22/kali教程之内网劫持网页图片/index.html">
+<meta property="og:title" content="Linux性能检测常用的10个基本命令 ">
+<meta property="og:url" content="http://bingyublog.com/2018/09/06/Linux性能检测常用的10个基本命令/index.html">
 <meta property="og:site_name" content="冰羽の博客">
-<meta property="og:description" content="Tips:本人在虚拟机中进行操作，大家也可以在自己主机上进行操作。首先我在虚拟机里安装了一台win7的操作系统，作为被攻击人，一台kali Linux作为攻击人。WARNING:首先这2台运行在虚拟机里的操作系统是处于同一网关下的。（攻击人与被攻击人必须处于同一网关下才可以进行劫持） 我们首先查看一下win7的IP及其网关。win+R，输入cmd，打开dos窗口，输入ipconfig可以看到IP">
+<meta property="og:description" content="uptime12$ uptime23:51:26 up 21:31, 1 user, load average: 30.02, 26.43, 19.0212   该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  dmesg | tail123456$ dmesg | tail[1880957.563150]">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fpgtfwx2xvj30gh06lwf6.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopc6oihkpj30gl05n0z4.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopea4ztlfj30jx02qdhi.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopcezz2rvj30k704v77y.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopcfw9a3jj30ib01l0z4.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopcinm64xj30jz0300z4.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopckgiputj309400k0z4.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fope3l4ugsj30bs0cn0sk.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fope50o8tej30id0b5qao.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopcpenmtbj30rf0auwii.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopcq9pvipj30mc0fr49k.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopcqvg0twj30lr0gddpi.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fopd26ng3mj309m09l0z4.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg">
-<meta property="og:updated_time" content="2018-08-28T11:09:02.065Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv02kluxqug30m80gonib.gif">
+<meta property="og:updated_time" content="2018-09-06T12:02:29.916Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kali教程之内网劫持网页图片">
-<meta name="twitter:description" content="Tips:本人在虚拟机中进行操作，大家也可以在自己主机上进行操作。首先我在虚拟机里安装了一台win7的操作系统，作为被攻击人，一台kali Linux作为攻击人。WARNING:首先这2台运行在虚拟机里的操作系统是处于同一网关下的。（攻击人与被攻击人必须处于同一网关下才可以进行劫持） 我们首先查看一下win7的IP及其网关。win+R，输入cmd，打开dos窗口，输入ipconfig可以看到IP">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fpgtfwx2xvj30gh06lwf6.jpg">
+<meta name="twitter:title" content="Linux性能检测常用的10个基本命令 ">
+<meta name="twitter:description" content="uptime12$ uptime23:51:26 up 21:31, 1 user, load average: 30.02, 26.43, 19.0212   该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  dmesg | tail123456$ dmesg | tail[1880957.563150]">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv02kluxqug30m80gonib.gif">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -83,7 +70,7 @@
   </script>
 
 
-  <title> kali教程之内网劫持网页图片 | 冰羽の博客 </title>
+  <title> Linux性能检测常用的10个基本命令  | 冰羽の博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -379,7 +366,7 @@
           
           
             
-              kali教程之内网劫持网页图片
+              Linux性能检测常用的10个基本命令 
             
           
         </h1>
@@ -388,8 +375,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2018-02-22T18:06:21+08:00" content="2018-02-22">
-            2018-02-22
+          <time itemprop="dateCreated" datetime="2018-09-06T19:50:13+08:00" content="2018-09-06">
+            2018-09-06
           </time>
         </span>
 
@@ -398,8 +385,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Kali/" itemprop="url" rel="index">
-                  <span itemprop="name">Kali</span>
+                <a href="/categories/Linux/" itemprop="url" rel="index">
+                  <span itemprop="name">Linux</span>
                 </a>
               </span>
 
@@ -423,19 +410,150 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fv02kluxqug30m80gonib.gif" rel="gallery_cjlqivon7001gb0wa7kqebbvn"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv02kluxqug30m80gonib.gif" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+
+        </div>
+      
 
       
-        <span itemprop="articleBody"><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpgtfwx2xvj30gh06lwf6.jpg" alt="1"></p>
-<h3 id="Tips-本人在虚拟机中进行操作，大家也可以在自己主机上进行操作。"><a href="#Tips-本人在虚拟机中进行操作，大家也可以在自己主机上进行操作。" class="headerlink" title="Tips:本人在虚拟机中进行操作，大家也可以在自己主机上进行操作。"></a>Tips:本人在虚拟机中进行操作，大家也可以在自己主机上进行操作。</h3><h3 id="首先我在虚拟机里安装了一台win7的操作系统，作为被攻击人，一台kali-Linux作为攻击人。"><a href="#首先我在虚拟机里安装了一台win7的操作系统，作为被攻击人，一台kali-Linux作为攻击人。" class="headerlink" title="首先我在虚拟机里安装了一台win7的操作系统，作为被攻击人，一台kali Linux作为攻击人。"></a>首先我在虚拟机里安装了一台win7的操作系统，作为被攻击人，一台kali Linux作为攻击人。</h3><p>WARNING:首先这2台运行在虚拟机里的操作系统是处于同一网关下的。（攻击人与被攻击人必须处于同一网关下才可以进行劫持）</p>
-<h3 id="我们首先查看一下win7的IP及其网关。"><a href="#我们首先查看一下win7的IP及其网关。" class="headerlink" title="我们首先查看一下win7的IP及其网关。"></a>我们首先查看一下win7的IP及其网关。</h3><p>win+R，输入cmd，打开dos窗口，输入ipconfig<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopc6oihkpj30gl05n0z4.jpg" alt="1"><br>可以看到IP地址：192.168.253.130，网关地址：192.168.253.2。</p>
-<h3 id="打开kaliLinux，打开终端，输入route-n，查看一下kali的网关，也是192-168-253-2-说明这2台虚拟机的系统确实是在同一网段下的。"><a href="#打开kaliLinux，打开终端，输入route-n，查看一下kali的网关，也是192-168-253-2-说明这2台虚拟机的系统确实是在同一网段下的。" class="headerlink" title="打开kaliLinux，打开终端，输入route -n，查看一下kali的网关，也是192.168.253.2.说明这2台虚拟机的系统确实是在同一网段下的。"></a>打开kaliLinux，打开终端，输入route -n，查看一下kali的网关，也是192.168.253.2.说明这2台虚拟机的系统确实是在同一网段下的。</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopea4ztlfj30jx02qdhi.jpg" alt="2"><br>TIps：这个操作只是为了给大家验证一下2个系统是否在同一网段下。</p>
-<h3 id="查看一下kali的网卡设备。输入ifconfig。"><a href="#查看一下kali的网卡设备。输入ifconfig。" class="headerlink" title="查看一下kali的网卡设备。输入ifconfig。"></a>查看一下kali的网卡设备。输入ifconfig。</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopcezz2rvj30k704v77y.jpg" alt="3"></p>
-<h3 id="在终端中输入arpspoof-h，查看一下帮助。（只是为了查看一下命令参数而已）"><a href="#在终端中输入arpspoof-h，查看一下帮助。（只是为了查看一下命令参数而已）" class="headerlink" title="在终端中输入arpspoof -h，查看一下帮助。（只是为了查看一下命令参数而已）"></a>在终端中输入arpspoof -h，查看一下帮助。（只是为了查看一下命令参数而已）</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopcfw9a3jj30ib01l0z4.jpg" alt="3"></p>
-<h3 id="然后输入命令：arpspoof-i-eth0-t-192-168-253-2-193-168-253-130，回车。"><a href="#然后输入命令：arpspoof-i-eth0-t-192-168-253-2-193-168-253-130，回车。" class="headerlink" title="然后输入命令：arpspoof -i eth0 -t 192.168.253.2 193.168.253.130，回车。"></a>然后输入命令：arpspoof -i eth0 -t 192.168.253.2 193.168.253.130，回车。</h3><p>解释：-i eth0(网卡设备），-t 192.168.253.2 192.168.253.130（攻击目标的网关地址和IP地址）。<br>  Tips：网关地址和内网IP地址一起才可以唯一确定在本地局域网的一台主机。<br>  <img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopcinm64xj30jz0300z4.jpg" alt="4"></p>
-<h3 id="然后再打开一个终端，输入drifnet-i-eth0"><a href="#然后再打开一个终端，输入drifnet-i-eth0" class="headerlink" title="然后再打开一个终端，输入drifnet -i eth0."></a>然后再打开一个终端，输入drifnet -i eth0.</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopckgiputj309400k0z4.jpg" alt="5"><br>会立刻弹出一个窗口<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fope3l4ugsj30bs0cn0sk.jpg" alt="6"></p>
-<h3 id="然后我们开始在win7中浏览网页，随意浏览就可以。"><a href="#然后我们开始在win7中浏览网页，随意浏览就可以。" class="headerlink" title="然后我们开始在win7中浏览网页，随意浏览就可以。"></a>然后我们开始在win7中浏览网页，随意浏览就可以。</h3><p>以下是我在win7中浏览新闻显示的图片。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fope50o8tej30id0b5qao.jpg" alt="7"><br>这是我在win7登陆的QQ空间显示的照片。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopcpenmtbj30rf0auwii.jpg" alt="8"><br>这时我在kali劫持到的图片<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopcq9pvipj30mc0fr49k.jpg" alt="9"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopcqvg0twj30lr0gddpi.jpg" alt="10"><br>好了，劫持成功。</p>
-<h3 id="下面做几点总结，方便各位操作，少走弯路。"><a href="#下面做几点总结，方便各位操作，少走弯路。" class="headerlink" title="下面做几点总结，方便各位操作，少走弯路。"></a>下面做几点总结，方便各位操作，少走弯路。</h3><h4 id="在进行劫持的时候，可能会使被攻击的主机暂时不能连上网以及打不开网页。"><a href="#在进行劫持的时候，可能会使被攻击的主机暂时不能连上网以及打不开网页。" class="headerlink" title="在进行劫持的时候，可能会使被攻击的主机暂时不能连上网以及打不开网页。"></a>在进行劫持的时候，可能会使被攻击的主机暂时不能连上网以及打不开网页。</h4><h4 id="本次操作是在同一虚拟机下的2台操作系统，你要是用虚拟机的kali来劫持宿主机，如果你虚拟机连接的是nat模式，"><a href="#本次操作是在同一虚拟机下的2台操作系统，你要是用虚拟机的kali来劫持宿主机，如果你虚拟机连接的是nat模式，" class="headerlink" title="本次操作是在同一虚拟机下的2台操作系统，你要是用虚拟机的kali来劫持宿主机，如果你虚拟机连接的是nat模式，"></a>本次操作是在同一虚拟机下的2台操作系统，你要是用虚拟机的kali来劫持宿主机，如果你虚拟机连接的是nat模式，</h4><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopd26ng3mj309m09l0z4.jpg" alt="11"><br>那么宿主机与虚拟机并不在同一网关下，你在输入命令的时候会提示你couldn’t arp for host，<br>这就是因为你的虚拟机与你的宿主机并不在同一网关下，所以不能进行arp欺骗。</p>
-<h4 id="如果你要用虚拟机里的kali来对你主机所处网段下的主机劫持的话，就需要把虚拟机网络设置为桥接模式，这样虚拟机的kali就与宿主机在同一网段了。"><a href="#如果你要用虚拟机里的kali来对你主机所处网段下的主机劫持的话，就需要把虚拟机网络设置为桥接模式，这样虚拟机的kali就与宿主机在同一网段了。" class="headerlink" title="如果你要用虚拟机里的kali来对你主机所处网段下的主机劫持的话，就需要把虚拟机网络设置为桥接模式，这样虚拟机的kali就与宿主机在同一网段了。"></a>如果你要用虚拟机里的kali来对你主机所处网段下的主机劫持的话，就需要把虚拟机网络设置为桥接模式，这样虚拟机的kali就与宿主机在同一网段了。</h4><h4 id="如果目标开启了防火墙，而且安装了被攻击的主机安装了很多防护软件，软件会提示受到arp欺骗攻击，而且会对主机做出防护，那么你的劫持就不会成功。"><a href="#如果目标开启了防火墙，而且安装了被攻击的主机安装了很多防护软件，软件会提示受到arp欺骗攻击，而且会对主机做出防护，那么你的劫持就不会成功。" class="headerlink" title="如果目标开启了防火墙，而且安装了被攻击的主机安装了很多防护软件，软件会提示受到arp欺骗攻击，而且会对主机做出防护，那么你的劫持就不会成功。"></a>如果目标开启了防火墙，而且安装了被攻击的主机安装了很多防护软件，软件会提示受到arp欺骗攻击，而且会对主机做出防护，那么你的劫持就不会成功。</h4><p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
+        <span itemprop="articleBody"><ol>
+<li>uptime<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ uptime</span><br><span class="line">23:51:26 up 21:31, 1 user, load average: 30.02, 26.43, 19.0212</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。</p>
+<ol>
+<li>dmesg | tail<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ dmesg | tail</span><br><span class="line">[1880957.563150] perl invoked oom-killer: gfp_mask=0x280da, order=0, oom_score_adj=0</span><br><span class="line">[...]</span><br><span class="line">[1880957.563400] Out of memory: Kill process 18694 (perl) score 246 or sacrifice child</span><br><span class="line">[1880957.563408] Killed process 18694 (perl) total-vm:1972392kB, anon-rss:1953348kB, file-rss:0kB</span><br><span class="line">[2320864.954447] TCP: Possible SYN flooding on port 7001. Dropping request.  Check SNMP counters.123456</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>打印内核环形缓存区中的内容，可以用来查看一些错误；</p>
+<p>上面的例子中，显示进程18694 因引内存越界被kill掉以及TCP request被丢弃的错误。通过dmesg可以快速判断是否有导致系统性能异常的问题。</p>
+<ol>
+<li>vmstat 1<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat 1</span><br><span class="line">procs ---------memory---------- ---swap-- -----io---- -system-- ------cpu-----</span><br><span class="line"> r  b swpd   free   buff  cache   si   so    bi    bo   <span class="keyword">in</span>   cs us sy id wa st</span><br><span class="line">34  0    0 200889792  73708 591828    0    0     0     5    6   10 96  1  3  0  0</span><br><span class="line">32  0    0 200889920  73708 591860    0    0     0   592 13284 4282 98  1  1  0  0</span><br><span class="line">32  0    0 200890112  73708 591860    0    0     0     0 9501 2154 99  1  0  0  0</span><br><span class="line">32  0    0 200889568  73712 591856    0    0     0    48 11900 2459 99  0  0  0  0</span><br><span class="line">32  0    0 200890208  73712 591860    0    0     0     0 15898 4840 98  1  1  0  0</span><br><span class="line">^C123456789</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>打印进程、内存、交换分区、IO和CPU等的统计信息；</p>
+<p>vmstat的格式如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; vmstat [options] [delay [count]]</span><br></pre></td></tr></table></figure></p>
+<p>vmstat第一次输出表示从开机到vmstat运行时的平均值；剩余输出的都是在指定的时间间隔内的平均值，上述例子中delay的值设置为1，除第一次以外，剩余的都是1秒统计一次，count未设置，将会一直循环打印。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat 10 3</span><br><span class="line">procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----</span><br><span class="line"> r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st</span><br><span class="line"> 1  0      0 2527112 1086888 13720228    0    0     1    14    2    1  1  1 99  0  0</span><br><span class="line"> 0  0      0 2527156 1086888 13719856    0    0     0   104 3003 4901  0  0 99  0  0</span><br><span class="line"> 0  0      0 2526412 1086888 13719904    0    0     0    10 3345 4870  0  1 99  0  0123456</span><br></pre></td></tr></table></figure></p>
+<p>上述的例子中delay设置为10，count设置为3，表示每行打印10秒内的平均值，只打印3次。</p>
+<p><strong>需要检查的列</strong></p>
+<ul>
+<li><p>r：表示正在运行或者等待CPU调度的进程数。因为该列数据不包含I/O的统计信息，因此可以用来检测CPU是否饱和。若r列中的数字大于CPU的核数，表示CPU已经处于饱和状态。</p>
+</li>
+<li><p>free：当前剩余的内存；</p>
+</li>
+<li><p>si, so：交换分区换入和换出的个数，若换入换出个数大于0，表示内存不足；</p>
+</li>
+<li><p>us, sy, id, wa：CPU的统计信息，分别表示user time、system time(kernel)、idle、wait I/O。I/O处理所用的时间包含在system time中，因此若system time超过20%，则I/O可能存在瓶颈或异常；</p>
+</li>
+</ul>
+<ol>
+<li>mpstat -P ALL 1<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ mpstat -P ALL</span><br><span class="line">Linux 3.10.0-229.el7.x86_64 (localhost.localdomain)     05/30/2018  _x86_64_    (16 CPU)</span><br><span class="line"></span><br><span class="line">04:03:55 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle</span><br><span class="line">04:03:55 PM  all    3.67    0.00    0.61    0.71    0.00    0.00    0.00    0.00    0.00   95.02</span><br><span class="line">04:03:55 PM    0    3.52    0.00    0.57    0.76    0.00    0.00    0.00    0.00    0.00   95.15</span><br><span class="line">04:03:55 PM    1    3.83    0.00    0.61    0.71    0.00    0.00    0.00    0.00    0.00   94.85</span><br><span class="line">04:03:55 PM    2    3.80    0.00    0.61    0.60    0.00    0.00    0.00    0.00    0.00   94.99</span><br><span class="line">04:03:55 PM    3    3.68    0.00    0.58    0.60    0.00    0.00    0.00    0.00    0.00   95.13</span><br><span class="line">04:03:55 PM    4    3.54    0.00    0.57    0.60    0.00    0.00    0.00    0.00    0.00   95.30</span><br><span class="line">[...]1234567891011</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>该命令用于每秒打印一次每个CPU的统计信息，可用于查看CPU的调度是否均匀。</p>
+<ol>
+<li>pidstat 1<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ pidstat 1</span><br><span class="line">Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015    _x86_64_    (32 CPU)</span><br><span class="line"></span><br><span class="line">07:41:02 PM   UID       PID    %usr %system  %guest    %CPU   CPU  Command</span><br><span class="line">07:41:03 PM     0         9    0.00    0.94    0.00    0.94     1  rcuos/0</span><br><span class="line">07:41:03 PM     0      4214    5.66    5.66    0.00   11.32    15  mesos-slave</span><br><span class="line">07:41:03 PM     0      4354    0.94    0.94    0.00    1.89     8  java</span><br><span class="line">07:41:03 PM     0      6521 1596.23    1.89    0.00 1598.11    27  java</span><br><span class="line">07:41:03 PM     0      6564 1571.70    7.55    0.00 1579.25    28  java</span><br><span class="line">07:41:03 PM 60004     60154    0.94    4.72    0.00    5.66     9  pidstat</span><br><span class="line"></span><br><span class="line">07:41:03 PM   UID       PID    %usr %system  %guest    %CPU   CPU  Command</span><br><span class="line">07:41:04 PM     0      4214    6.00    2.00    0.00    8.00    15  mesos-slave</span><br><span class="line">07:41:04 PM     0      6521 1590.00    1.00    0.00 1591.00    27  java</span><br><span class="line">07:41:04 PM     0      6564 1573.00   10.00    0.00 1583.00    28  java</span><br><span class="line">07:41:04 PM   108      6718    1.00    0.00    0.00    1.00     0  snmp-pass</span><br><span class="line">07:41:04 PM 60004     60154    1.00    4.00    0.00    5.00     9  pidstat</span><br><span class="line">^C123456789101112131415161718</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>该命令用于打印各个进程对CPU的占用情况，类似top命令中显示的内容。pidstat的优势在于，可以滚动的打印进程运行情况，而不像top那样会清屏。</p>
+<p>上述例子中，%CPU中两个java进程的cpu利用率分别达到了1590%和1573%，表示java进程占用了16颗CPU。</p>
+<ol>
+<li>iostat -xz 1</li>
+</ol>
+<p>类似vmstat，第一次输出的是从系统开机到统计这段时间的采样数据；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ iostat -xz 1</span><br><span class="line">Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015  _x86_64_ (32 CPU)</span><br><span class="line"></span><br><span class="line">avg-cpu:  %user   %nice %system %iowait  %steal   %idle</span><br><span class="line">          73.96    0.00    3.73    0.03    0.06   22.21</span><br><span class="line"></span><br><span class="line">Device:   rrqm/s   wrqm/s     r/s     w/s    rkB/s    wkB/s avgrq-sz avgqu-sz   await r_await w_await  svctm  %util</span><br><span class="line">xvda        0.00     0.23    0.21    0.18     4.52     2.08    34.37     0.00    9.98   13.80    5.42   2.44   0.09</span><br><span class="line">xvdb        0.01     0.00    1.02    8.94   127.97   598.53   145.79     0.00    0.43    1.78    0.28   0.25   0.25</span><br><span class="line">xvdc        0.01     0.00    1.02    8.86   127.79   595.94   146.50     0.00    0.45    1.82    0.30   0.27   0.26</span><br><span class="line">dm-0        0.00     0.00    0.69    2.32    10.47    31.69    28.01     0.01    3.23    0.71    3.98   0.13   0.04</span><br><span class="line">dm-1        0.00     0.00    0.00    0.94     0.01     3.78     8.00     0.33  345.84    0.04  346.81   0.01   0.00</span><br><span class="line">dm-2        0.00     0.00    0.09    0.07     1.35     0.36    22.50     0.00    2.55    0.23    5.62   1.78   0.03</span><br><span class="line">[...]</span><br><span class="line">^C123456789101112131415</span><br></pre></td></tr></table></figure></p>
+<p>检查列</p>
+<ul>
+<li><p>r/s, w/s, rkB/s, wkB/s，表示每秒向I/O设备发出的reads、writes、read Kbytes、write Kbytes的数量。</p>
+</li>
+<li><p>await，表示应用程序排队等待和被服务的平均I/O时间，该值若大于预期的时间，这表示I/O设备处于饱和状态或者异常。</p>
+</li>
+<li><p>avgqu-sz，表示请求被发送给I/O设备的平均时间，若该值大于1，则表示I/O设备可能已经饱和；</p>
+</li>
+<li><p>%util，每秒设备的利用率；若该利用率超过60%，则表示设备出现性能异常；</p>
+</li>
+</ul>
+<ol>
+<li>free -m<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ free -m</span><br><span class="line">             total       used       free     shared    buffers     cached</span><br><span class="line">Mem:        245998      24545     221453         83         59        541</span><br><span class="line">-/+ buffers/cache:      23944     222053</span><br><span class="line">Swap:            0          0          012345</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>检查的列：</p>
+<ul>
+<li><p>buffers: For the buffer cache, used for block device I/O.</p>
+</li>
+<li><p>cached: For the page cache, used by file systems.</p>
+</li>
+</ul>
+<p>若buffers和cached接近0，说明I/O的使用率过高，系统存在性能问题。<br>Linux中会用free内存作为cache，若应用程序需要分配内存，系统能够快速的将cache占用的内存回收，因此free的内存包含cache占用的部分。</p>
+<ol>
+<li>sar -n DEV 1</li>
+</ol>
+<p>sar是System Activity Reporter的缩写，系统活动状态报告。</p>
+<p>-n { keyword [,…] | ALL }，用于报告网络统计数据。keyword可以是以下的一个或者多个： DEV, EDEV, NFS, NFSD, SOCK, IP, EIP, ICMP, EICMP, TCP, ETCP, UDP, SOCK6, IP6, EIP6, ICMP6, EICMP6 和UDP6。</p>
+<p>-n DEV 1, 每秒统计一次网络的使用情况；<br>-n EDEV 1，每秒统计一次错误的网络信息；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ sar -n DEV 1</span><br><span class="line">Linux 3.10.0-229.el7.x86_64 (localhost.localdomain)     05/31/2018  _x86_64_    (16 CPU)</span><br><span class="line"></span><br><span class="line">03:54:57 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s</span><br><span class="line">03:54:58 PM     ens32   3286.00   7207.00    283.34  18333.90      0.00      0.00      0.00</span><br><span class="line">03:54:58 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">03:54:58 PM vethe915e51      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">03:54:58 PM   docker0      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line"></span><br><span class="line">03:54:58 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s</span><br><span class="line">03:54:59 PM     ens32   3304.00   7362.00    276.89  18898.51      0.00      0.00      0.00</span><br><span class="line">03:54:59 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">03:54:59 PM vethe915e51      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">03:54:59 PM   docker0      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">^C123456789101112131415</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>IFACE ，网络接口名称；</p>
+</li>
+<li><p>rxpck/s ，每秒接收到包数；</p>
+</li>
+<li><p>txpck/s ，每秒传输的报数；(transmit packages)</p>
+</li>
+<li><p>rxkB/s ，每秒接收的千字节数；</p>
+</li>
+<li><p>txkB/s ，每秒发送的千字节数；</p>
+</li>
+<li><p>rxcmp/s ，每秒接收的压缩包的数量；</p>
+</li>
+<li><p>txcmp/s ，每秒发送的压缩包的数量；</p>
+</li>
+<li><p>rxmcst/s，每秒接收的组数据包数量；</p>
+</li>
+</ul>
+<ol>
+<li>sar -n TCP,ETCP 1</li>
+</ol>
+<p>该命令可以用于粗略的判断网络的吞吐量，如发起的网络连接数量和接收的网络连接数量；</p>
+<ul>
+<li><p>TCP, 报告关于TCPv4网络流量的统计信息;</p>
+</li>
+<li><p>ETCP, 报告有关TCPv4网络错误的统计信息;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ sar -n TCP,ETCP 1</span><br><span class="line">Linux 3.10.0-514.26.2.el7.x86_64 (aushop)   05/31/2018  _x86_64_    (2 CPU)</span><br><span class="line"></span><br><span class="line">04:16:27 PM  active/s passive/s    iseg/s    oseg/s</span><br><span class="line">04:16:44 PM      0.00      2.00     15.00     13.00</span><br><span class="line">04:16:45 PM      0.00      3.00    126.00    203.00</span><br><span class="line">04:16:46 PM      0.00      0.00     99.00     99.00</span><br><span class="line">04:16:47 PM      0.00      0.00     18.00      9.00</span><br><span class="line">04:16:48 PM      0.00      0.00      5.00      6.00</span><br><span class="line">04:16:49 PM      0.00      0.00      1.00      1.00</span><br><span class="line">04:16:50 PM      0.00      1.00      4.00      4.00</span><br><span class="line">04:16:51 PM      0.00      3.00    171.00    243.00</span><br><span class="line">^C12345678910111213</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>检测的列：</p>
+<ul>
+<li><p>active/s: Number of locally-initiated TCP connections per second (e.g., via connect())，发起的网络连接数量；</p>
+</li>
+<li><p>passive/s: Number of remotely-initiated TCP connections per second (e.g., via accept())，接收的网络连接数量；</p>
+</li>
+<li><p>retrans/s: Number of TCP retransmits per second，重传的数量；</p>
+</li>
+</ul>
+<ol>
+<li>top</li>
+</ol>
+<p>top命令包含更多的指标统计，相当于一个综合命令。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ top</span><br><span class="line">top - 00:15:40 up 21:56,  1 user,  load average: 31.09, 29.87, 29.92</span><br><span class="line">Tasks: 871 total,   1 running, 868 sleeping,   0 stopped,   2 zombie</span><br><span class="line">%Cpu(s): 96.8 us,  0.4 sy,  0.0 ni,  2.7 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st</span><br><span class="line">KiB Mem:  25190241+total, 24921688 used, 22698073+free,    60448 buffers</span><br><span class="line">KiB Swap:        0 total,        0 used,        0 free.   554208 cached Mem</span><br><span class="line"></span><br><span class="line">   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND</span><br><span class="line"> 20248 root      20   0  0.227t 0.012t  18748 S  3090  5.2  29812:58 java</span><br><span class="line">  4213 root      20   0 2722544  64640  44232 S  23.5  0.0 233:35.37 mesos-slave</span><br><span class="line"> 66128 titancl+  20   0   24344   2332   1172 R   1.0  0.0   0:00.07 top</span><br><span class="line">  5235 root      20   0 38.227g 547004  49996 S   0.7  0.2   2:02.74 java</span><br><span class="line">  4299 root      20   0 20.015g 2.682g  16836 S   0.3  1.1  33:14.42 java</span><br><span class="line">     1 root      20   0   33620   2920   1496 S   0.0  0.0   0:03.82 init</span><br><span class="line">     2 root      20   0       0      0      0 S   0.0  0.0   0:00.02 kthreadd</span><br><span class="line">     3 root      20   0       0      0      0 S   0.0  0.0   0:05.35 ksoftirqd/0</span><br><span class="line">     5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H</span><br><span class="line">     6 root      20   0       0      0      0 S   0.0  0.0   0:06.94 kworker/u256:0</span><br><span class="line">     8 root      20   0       0      0      0 S   0.0  0.0   2:38.05 rcu_sched12345678910111213141516171819</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>总结</li>
+</ol>
+<p>下面的图片很好的展示了各个命令的主要作用，如使用vmstat查看系统的整体性能，mpstat用于查看cpu的性能，pidstat用于查看进程的状态，iostat用于查看io的状态，free用于产看内存的状态，sar用于产看网络的状态等。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv02i850jgj30o90d8gmo.jpg" alt="image"></p>
+<p><strong>Linux常用性能工具一览</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv02iq7vyxj30p00hiwgu.jpg" alt=""></p>
+<blockquote>
+<p>转载自<a href="https://medium.com/netflix-techblog/linux-performance-analysis-in-60-000-milliseconds-accc10403c55" target="_blank" rel="noopener">https://medium.com/netflix-techblog/linux-performance-analysis-in-60-000-milliseconds-accc10403c55</a></p>
+</blockquote>
+<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
     </div>
@@ -457,7 +575,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Kali/" rel="tag"><i class="fa tag"></i> Kali</a>
+            <a href="/tags/Linux/" rel="tag"><i class="fa tag"></i> Linux</a>
           
         </div>
       
@@ -466,13 +584,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/23/使用ssltrip突破ssl加密截获密码/" rel="prev">使用ssltrip突破ssl加密截获密码</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/21/hexo教程_1_SEO优化1/" rel="next">Hexo教程（1）——SEO优化</a>
+              <a href="/2018/09/05/Git创建远程仓库/" rel="next">Git创建远程仓库</a>
             
           </div>
         </div>
@@ -769,7 +885,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-本人在虚拟机中进行操作，大家也可以在自己主机上进行操作。"><span class="nav-number">1.</span> <span class="nav-text">Tips:本人在虚拟机中进行操作，大家也可以在自己主机上进行操作。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首先我在虚拟机里安装了一台win7的操作系统，作为被攻击人，一台kali-Linux作为攻击人。"><span class="nav-number">2.</span> <span class="nav-text">首先我在虚拟机里安装了一台win7的操作系统，作为被攻击人，一台kali Linux作为攻击人。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我们首先查看一下win7的IP及其网关。"><span class="nav-number">3.</span> <span class="nav-text">我们首先查看一下win7的IP及其网关。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开kaliLinux，打开终端，输入route-n，查看一下kali的网关，也是192-168-253-2-说明这2台虚拟机的系统确实是在同一网段下的。"><span class="nav-number">4.</span> <span class="nav-text">打开kaliLinux，打开终端，输入route -n，查看一下kali的网关，也是192.168.253.2.说明这2台虚拟机的系统确实是在同一网段下的。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看一下kali的网卡设备。输入ifconfig。"><span class="nav-number">5.</span> <span class="nav-text">查看一下kali的网卡设备。输入ifconfig。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在终端中输入arpspoof-h，查看一下帮助。（只是为了查看一下命令参数而已）"><span class="nav-number">6.</span> <span class="nav-text">在终端中输入arpspoof -h，查看一下帮助。（只是为了查看一下命令参数而已）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#然后输入命令：arpspoof-i-eth0-t-192-168-253-2-193-168-253-130，回车。"><span class="nav-number">7.</span> <span class="nav-text">然后输入命令：arpspoof -i eth0 -t 192.168.253.2 193.168.253.130，回车。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#然后再打开一个终端，输入drifnet-i-eth0"><span class="nav-number">8.</span> <span class="nav-text">然后再打开一个终端，输入drifnet -i eth0.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#然后我们开始在win7中浏览网页，随意浏览就可以。"><span class="nav-number">9.</span> <span class="nav-text">然后我们开始在win7中浏览网页，随意浏览就可以。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下面做几点总结，方便各位操作，少走弯路。"><span class="nav-number">10.</span> <span class="nav-text">下面做几点总结，方便各位操作，少走弯路。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在进行劫持的时候，可能会使被攻击的主机暂时不能连上网以及打不开网页。"><span class="nav-number">10.1.</span> <span class="nav-text">在进行劫持的时候，可能会使被攻击的主机暂时不能连上网以及打不开网页。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本次操作是在同一虚拟机下的2台操作系统，你要是用虚拟机的kali来劫持宿主机，如果你虚拟机连接的是nat模式，"><span class="nav-number">10.2.</span> <span class="nav-text">本次操作是在同一虚拟机下的2台操作系统，你要是用虚拟机的kali来劫持宿主机，如果你虚拟机连接的是nat模式，</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果你要用虚拟机里的kali来对你主机所处网段下的主机劫持的话，就需要把虚拟机网络设置为桥接模式，这样虚拟机的kali就与宿主机在同一网段了。"><span class="nav-number">10.3.</span> <span class="nav-text">如果你要用虚拟机里的kali来对你主机所处网段下的主机劫持的话，就需要把虚拟机网络设置为桥接模式，这样虚拟机的kali就与宿主机在同一网段了。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果目标开启了防火墙，而且安装了被攻击的主机安装了很多防护软件，软件会提示受到arp欺骗攻击，而且会对主机做出防护，那么你的劫持就不会成功。"><span class="nav-number">10.4.</span> <span class="nav-text">如果目标开启了防火墙，而且安装了被攻击的主机安装了很多防护软件，软件会提示受到arp欺骗攻击，而且会对主机做出防护，那么你的劫持就不会成功。</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
