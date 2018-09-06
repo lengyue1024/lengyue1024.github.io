@@ -38,17 +38,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
+<meta name="description" content="Linux系统能支持多种目前流行的文件系统，推荐用EXT4。 Linux下面的文件类型主要有：  1) 普通文件，分为纯文本和二进制。2) 目录文件，存储文件的地方。3) 链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为块设备和字符设备。5）管道文件，提供进程间通信6）套接字文件，与网络通信有关  Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统和完整而固定的目录组成形">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux简单命令总结">
-<meta property="og:url" content="http://bingyublog.com/2018/05/06/Linux简单命令小总结/index.html">
+<meta property="og:title" content="Linux文件目录">
+<meta property="og:url" content="http://bingyublog.com/2018/09/08/Linux文件目录/index.html">
 <meta property="og:site_name" content="冰羽の博客">
+<meta property="og:description" content="Linux系统能支持多种目前流行的文件系统，推荐用EXT4。 Linux下面的文件类型主要有：  1) 普通文件，分为纯文本和二进制。2) 目录文件，存储文件的地方。3) 链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为块设备和字符设备。5）管道文件，提供进程间通信6）套接字文件，与网络通信有关  Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统和完整而固定的目录组成形">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fs7ncfavsgj30sg0hstjh.jpg">
-<meta property="og:updated_time" content="2018-08-28T11:09:02.647Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg">
+<meta property="og:updated_time" content="2018-09-06T12:53:42.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux简单命令总结">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fs7ncfavsgj30sg0hstjh.jpg">
+<meta name="twitter:title" content="Linux文件目录">
+<meta name="twitter:description" content="Linux系统能支持多种目前流行的文件系统，推荐用EXT4。 Linux下面的文件类型主要有：  1) 普通文件，分为纯文本和二进制。2) 目录文件，存储文件的地方。3) 链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为块设备和字符设备。5）管道文件，提供进程间通信6）套接字文件，与网络通信有关  Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统和完整而固定的目录组成形">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -67,7 +70,7 @@
   </script>
 
 
-  <title> Linux简单命令总结 | 冰羽の博客 </title>
+  <title> Linux文件目录 | 冰羽の博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -363,7 +366,7 @@
           
           
             
-              Linux简单命令总结
+              Linux文件目录
             
           
         </h1>
@@ -372,8 +375,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2018-05-06T22:08:47+08:00" content="2018-05-06">
-            2018-05-06
+          <time itemprop="dateCreated" datetime="2018-09-08T20:39:17+08:00" content="2018-09-08">
+            2018-09-08
           </time>
         </span>
 
@@ -409,18 +412,14 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fs7ncfavsgj30sg0hstjh.jpg" alt="1"><br><a id="more"></a><br>Linux命令它们与英语口语十分相似，其命令格式如下：<br>命令 [选项] [参数]（command [options] [arguments]）<br><strong>命令</strong>：告诉linux操作系统执行什么。<br><strong>选项</strong>：说明命令的方式。选项如果是单个英语字母是以“-”字符开始，如果是多个英语字母基本都是以“–”字符开始。<br><strong>参数</strong>：说明命令影响的是什么（如一个文件、一个目录、一段正文文字）</p>
-<p><strong>查看的命令</strong><br>whoami 命令的功能是列出目前您操作系统所使用的用户名<br>who 目前有几个用户在操作系统上工作，比whoami多了系统上工作的其他用户<br>users 目前有哪些用户登陆了linux系统<br>tty 目前用户登陆linux系统所使用的终端</p>
-<p>uname 显示当前的操作系统<br>uname -n显示目前操作系统的主机名（n是nodename的第一个字符可看成缩写）<br>uname -i显示目前操作系统所使用的硬件平台名（i是information第一个字符可看成缩写）<br>uname -r显示目前操作系统发布的版本信息（r是release的第一个字符）<br>uname -s显示目前操作系统名（r是release的第一个字符）<br>uname -m显示目前机器硬件名（m是machine的第一个字符）<br>uname -p显示中央处理器的类型（p是processor的第一个字符）<br>uname -a显示所有信息（a是all的第一个字符）<br><em>这里-n、-i、-r、-s等等都是选项.即说明命令的方式。选项部分是以“-”字符开始。</em><br>uname -m -s -r空格隔开同时显示信息<br>uname -msr也能同时显示信息<br>uname –help查看uname的全部选项</p>
-<p>date 显示当前系统的日期和时间<br>cal 显示某月的日历，直接输入cal显示本月的日历（cal为calendar的前三个字符）<br>cal 8 2008显示2008年8月的日历（第一个参数为月份8，第二个参数为年2008）<br>clear 清楚窗口中的显示信息，即清屏作用(也可以使用快捷键CTR+L)</p>
-<p>获得帮助信息<br>whatis 命令获得linux命令的帮助信息<br>eg:<br>whatis uname显示uname命令的用法，这里uname被看做一个参数（whatis获得）<br>whatis who显示who命令的含义作用</p>
-<p>man是manual（手册）的前三个字符。（linux大哥有小弟无数，分堂无数。man是花名册，可以查看任何到任何小弟的名字）每个命令都对应着说明文件，这些说明文件叫做Man Pages。提供命令详细描述和使用方法。<br>man的命令格式如下<br>man []<br>eg: man su<br>浏览Man Pages<br>箭头上下左右End最后一页Home第一页<br>：/string向前查找字符串, q键为退出</p>
-<p>info以网页的结构显示命令的信息，是一种基于正文的帮助系统<br>info的命令格式如下<br>info []<br>eg: info who<br>使用控制n键转到下一小节u键跳转到上层的章节<br>输入s屏底出现“Search for string[]:”提示，此时输入要查找的字符串<br>q为退出</p>
-<p>cd切换进入目录<br>pwd显示当前目录的绝对路径（print working directory打印工作目录）</p>
-<p>ls列出当前目录<br>ls [options] [directories|files]选项目录|文件<br>ls.当前目录<br>Ls..当前目录的上级目录<br>ls . ..同屏分别同时显示这两个目录中的内容<br>ls -F参数显示类型<br>ls -l参数显示所有目录中所有非隐藏文件的细节<br>ls -ld只想知道本身的属性用d</p>
-<p><strong>创建文件</strong><br>mkdir目录名创建一个新目录（make directory，伟大随心的缩写）<br>mkdir -p目录名可以创建指定路径中所有不存在的目录<br>touch文件名创建一个新文件或多个文件，可以绝对路径可以使相对路径，touch目录名1目录名2目录名3<br>如果目标文件已存在就会修改文件的时间戳</p>
-<p><strong>复制文件</strong><br>cp[-option(s)]source(s)target<br>source（源）:可以是一个或者多个文件和目录<br>target（目的）：可以是一个文件或者一个目录<br>-i（interactive，交互的），覆盖文件给出提示信息<br>-r（recursive，递归的）复制一个目录时，复制当前目录中所有内容，包括复制其下子目录的所有内容。<br>-p（presever，维持）保留一些特性，如时间戳<br>-f（force，强制）若目标文件存在，并不咨询直接覆盖原来所有文件</p>
-<p><strong>移动文件</strong><br>mv（move的缩写）<br>mv a b从a移动到b包括移动及修改文件和目录名</p>
+        <span itemprop="articleBody"><p>Linux系统能支持多种目前流行的文件系统，推荐用EXT4。</p>
+<p>Linux下面的文件类型主要有：</p>
+<blockquote>
+<p>1) 普通文件，分为纯文本和二进制。<br>2) 目录文件，存储文件的地方。<br>3) 链接文件，指向同一个文件或目录的的文件。<br>4) 设备文件，分为块设备和字符设备。<br>5）管道文件，提供进程间通信<br>6）套接字文件，与网络通信有关</p>
+</blockquote>
+<p>Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统和完整而固定的目录组成形式，并指定了每个目录的作用和其中的文件类型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">目录名	简要说明</span><br><span class="line">/bin	二进制可执行命令,binary（二进制的）：许多“指令”对应的可“执行程序文件”目录</span><br><span class="line">/sbin super binary 超级的 二进制 许多“指令”对应的可“执行程序文件”目录，该目录文件对应指令都是&quot;root&quot;用户可以执行的指令普通用户不能使用该目录里的命令：</span><br><span class="line">普通用户：用$开头</span><br><span class="line">root用户：用#开头  </span><br><span class="line">/dev	设备特殊文件,device 系统硬件设备目录（linux系统所有的硬件都通过文件表示）</span><br><span class="line">/etc	系统管理和配置文件,/etc/passwd 用于存储用户信息的文件,/etc/group 用于存储组别信息的文件</span><br><span class="line"></span><br><span class="line">/etc/rc.d	启动的配置文件和脚本</span><br><span class="line">/home	用户主目录的基点，比如用户abc的主目录就是/home/user，可以用~abc表示,普通用户的“家目录”</span><br><span class="line"></span><br><span class="line">系统每增加一个普通用户的同时，都会在该目录为该目录设置一个文件目录代表该用户的“家目录”用户后期使用系统的时候首先会首先进入其目录家目录名字默认与当前用户名字一致用户对家目录拥有绝对最高的权限</span><br><span class="line"></span><br><span class="line">/lib	标准程序设计库</span><br><span class="line">/sbin	系统管理命令，这里存放的是系统管理员使用的管理程序</span><br><span class="line">/tmp	公用的临时文件存储点</span><br><span class="line">/root	系统管理员的主目录</span><br><span class="line">/mnt	系统提供这个目录是让用户临时挂载其他的文件系统。存放临时的映射文件系统.</span><br><span class="line">/lost+found	这个目录平时是空的，系统非正常关机而留下“无家可归”的文件</span><br><span class="line">/proc	虚拟的目录，是系统内存的映射。可直接访问这个目录来获取系统信息。</span><br><span class="line">/var	某些大文件的溢出区，比方说各种服务的日志文件,variable 可变的、易变的</span><br><span class="line"></span><br><span class="line">该目录存储的文件经常会发生变化（增加、修改、删除）</span><br><span class="line">/usr	unxi system resource(unix系统资源文件目录)最庞大的目录，要用到的应用程序和文件几乎都在这个目录。其中包含：</span><br><span class="line">/usr/X11R6 存放X window的目录</span><br><span class="line">/usr/bin 众多的应用程序</span><br><span class="line">/usr/sbin 超级用户的一些管理程序</span><br><span class="line">/usr/doc linux文档</span><br><span class="line">/usr/include linux下开发和编译应用程序所需要的头文件</span><br><span class="line">/usr/lib 常用的动态链接库和软件包的配置文件</span><br><span class="line">/usr/man 帮助文档</span><br><span class="line">/usr/src 源代码，linux内核的源代码就放在/usr/src/linux里</span><br><span class="line">/usr/local/bin 本地增加的命令</span><br><span class="line">/usr/local/lib 本地增加的库</span><br><span class="line">该目录类似win系统的 C:/Program files 目录</span><br><span class="line"></span><br><span class="line">该目录经常用于安装各种软件,软件安装完毕会形成对应的指令，该指令对应的可执行程序文件就存放在以下目录</span><br><span class="line"></span><br><span class="line">/usr/bin许多“指令”对应的可“执行程序文件”目录 /usr/sbin root用户执行的指令 对应的 可“执行程序文件”目录</span><br><span class="line"></span><br><span class="line">/boot 系统启动核心目录，用于储存系统启动文件</span><br><span class="line">/</span><br></pre></td></tr></table></figure>
+<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
     </div>
@@ -451,13 +450,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/07/注意注意！说一件重要的事/" rel="prev">注意注意！说一件重要的事</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/05/Linux必备神器-系统监测和优化器/" rel="next">Linux必备神器-系统监测和优化器</a>
+              <a href="/2018/09/06/Linux性能检测常用的10个基本命令/" rel="next">Linux性能检测常用的10个基本命令 </a>
             
           </div>
         </div>
