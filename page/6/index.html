@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next  ">
+<html class="theme-next use-motion theme-next-mala">
 <head>
   
 
@@ -17,19 +17,25 @@
 
 
 
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-<link rel="stylesheet" type="text/css" href="//main.css?v="/>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
     <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。" />
 
 
 
+  <meta name="keywords" content="Hexo,Mala" />
 
 
 
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。">
@@ -46,10 +52,18 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
-    sidebar: ''
+    scheme: 'Mala',
+    sidebar: 'post'
   };
 </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
 
 
   <title> 冰羽の博客 </title>
@@ -109,11 +123,78 @@
   
 
   
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
 
   
     <div class="site-search">
       
   
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -3239,7 +3320,7 @@
 
 </style>
 
-<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -3412,12 +3493,16 @@
 
       
         
-          <span itemprop="articleBody"><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqzp9s3p9pj30kc0fztal.jpg" alt="0"><br>在Windows上我们常用xxx助手，xxx管家进行管理电脑，今天就说一款专为Linux设计的系统监测和优化器—stacer，我感觉是你安装Linux桌面版本的必备神器，实在是太好用了。<br>GitHub项目地址: <a href="https://github.com/oguzhaninan/Stacer" target="_blank" rel="noopener">https://github.com/oguzhaninan/Stacer</a><br>我以自己的Ubuntu进行安装以及演示，其他发行版本可以去GitHub上查找安装方法，很详细。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:oguzhaninan/stacer</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get update</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install stacer</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqzp2j04imj30i8074abh.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqzp2t06wuj30jx0e6adp.jpg" alt="2"></p>
-<p>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ stacer</span><br></pre></td></tr></table></figure></p>
-<p>该神器还支持多种语言，接下来看图设置为中文。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqzp30z8dvj30kh0g0q4c.jpg" alt="4"><br>然后需要重启一下stacer,再次打开就可以看到中文界面了，使用很简单，就不一一赘述了。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqzp3itf3jj30f00fqadb.jpg" alt="5"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            在Windows上我们常用xxx助手，xxx管家进行管理电脑，今天就说一款专为Linux设计的系统监测和优化器—stacer，我感觉是你安装Linux桌面版本的必备神器，实在是太好用了。GitHub项目地址: https://github.com/oguzhaninan/Stacer我以自己的Ubu
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/05/05/Linux必备神器-系统监测和优化器/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3498,14 +3583,16 @@
 
       
         
-          <span itemprop="articleBody"><p>dirsearch是一个基于python3.x的命令行工具，旨在暴力扫描页面结构，包括网页中的目录和文件。<br>GitHub项目地址：<a href="https://github.com/maurosoria/dirsearch#overview" target="_blank" rel="noopener">https://github.com/maurosoria/dirsearch#overview</a><br>支持 WindowsXP/7/8/10 ，GNU/Linux，MacOSX操作系统。</p>
-<p>特点：<br>多线程<br>可保持连接<br>支持多种后缀（-e|–extensions asp,php）<br>生成报告（纯文本，JSON）<br>启发式检测无效的网页<br>递归的暴力扫描<br>支持HTTP代理<br>用户代理随机化<br>批量处理<br>请求延迟</p>
-<p><strong>扫描器与字典</strong><br>字典必须是文本文件，除了使用特殊的％EXT％之外，其余每行都会被处理。<br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">example/</span><br><span class="line">example.%EXT%</span><br></pre></td></tr></table></figure></p>
-<p>使用扩展名“asp”和“aspx”会生成下面的字典：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">example/</span><br><span class="line">example.asp</span><br><span class="line">example.aspx</span><br></pre></td></tr></table></figure></p>
-<p><strong>安装以及使用示例</strong>(kali下进行安装)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# git clone https://github.com/maurosoria/dirsearch.git</span><br><span class="line">root@kali:~# cd dirsearch/</span><br><span class="line">root@kali:~/dirsearch# ls</span><br><span class="line">CHANGELOG.md  default.conf  lib   README.md  thirdparty</span><br><span class="line">db            dirsearch.py  logs  reports</span><br><span class="line">root@kali:~/dirsearch# python3 dirsearch.py -u 目标网址 -e *</span><br></pre></td></tr></table></figure></p>
-<p>参数说明：<br>  必选参数：<br>    -u 目标网站<br>    -e 扩展名<br>  可选参数：<br>    其余参数均为可选参数，可以通过运行 <em>python3 dirsearch.py  –help</em> 命令来查看参数<br>  <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqykqopytcj30lt0a1q9k.jpg" alt="1"></p>
-<p>  <strong>扫码进群，我等待你的加入</strong><br>  <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqykr1n0kvj30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            dirsearch是一个基于python3.x的命令行工具，旨在暴力扫描页面结构，包括网页中的目录和文件。GitHub项目地址：https://github.com/maurosoria/dirsearch#overview支持 WindowsXP/7/8/10 ，GNU/Linux，MacOSX操
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/05/04/网站目录结构扫描器-dirsearch/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3588,7 +3675,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftjrcqpp3jj311f0rcn3h.jpg" rel="gallery_cjlrzq3oq008qokwavmy0sygt"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftjrcqpp3jj311f0rcn3h.jpg" rel="gallery_cjlrzuztw008tykwa595r5jy9"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftjrcqpp3jj311f0rcn3h.jpg" itemprop="contentUrl"/>
               </a>
@@ -3603,12 +3690,16 @@
 
       
         
-          <span itemprop="articleBody"><p>今天说一款快速轻便的网络IP扫描工具吧，支持Windows，Linux，Mac OS X系统，我感觉是同类工具中最好用最简单的。虽然有人会说nmap是最好用的扫描信息收集工具，但是其参数太多，短时间内很难上手，而这款工具即使是你第一次使用，你也可以很快知道怎么用。<br>GitHub项目地址：<a href="https://github.com/angryip/ipscan" target="_blank" rel="noopener">https://github.com/angryip/ipscan</a><br>官方网站: <a href="https://angryip.org/" target="_blank" rel="noopener">https://angryip.org/</a><br>我以kali Linux来进行演示。<br>首先需要准备java的运行环境。kali已经自带了java环境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# java -version</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqyhqqp6djj30i80281by.jpg" alt="1"><br>到官网下载与你的系统匹配的版本。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqyhylmyg6j30nx0d71by.jpg" alt="2"><br>开始安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# dpkg -i ipscan_3.5.2_amd64.deb</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqyi05g4ifj30ll04g1by.jpg" alt="3"><br>开始运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# ipscan</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqyi0gvixuj30gl0a31by.jpg" alt="1"><br>一直next即可打开运行了。<br>然后开始设置一下，自定义的空间很大，根据自己需要设置即可，初次使用可以默认设置。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqyi0tjwsrj30c30ef1by.jpg" alt="5"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqyi14zt0aj30c00ed1by.jpg" alt="6"><br>开始扫描，<strong>我随便找的IP地址，仅为演示使用，不用作其他用处。</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqyi2nom2fj30m60f21by.jpg" alt="1"><br>扫描后，会立即弹出扫描信息，你也可以进行筛选，快速找到自己需要的信息。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqyi3liw05j308q0931by.jpg" alt="7"></p>
-<p><strong>扫描进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqyi4debovj30f00fqadb.jpg" alt="8"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            今天说一款快速轻便的网络IP扫描工具吧，支持Windows，Linux，Mac OS X系统，我感觉是同类工具中最好用最简单的。虽然有人会说nmap是最好用的扫描信息收集工具，但是其参数太多，短时间内很难上手，而这款工具即使是你第一次使用，你也可以很快知道怎么用。GitHub项目地址：https:/
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/05/03/一款轻便快速的网络IP扫描工具/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3689,16 +3780,17 @@
 
       
         
-          <span itemprop="articleBody"><p>本次以kali Linux 2017.3进行演示，但是其他的Linux发行版本(eg：Ubuntu，Debian等)也是适用的。</p>
-<h2 id="首先打开网址-https-www-vpnbook-com-freevpn"><a href="#首先打开网址-https-www-vpnbook-com-freevpn" class="headerlink" title="首先打开网址:  https://www.vpnbook.com/freevpn"></a>首先打开网址:  <a href="https://www.vpnbook.com/freevpn" target="_blank" rel="noopener">https://www.vpnbook.com/freevpn</a></h2><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqxf3jfumzj311e0j4k4c.jpg" alt="1"><br>这个站是需要你可以科学上网的情况下才可以打开的，你可以通过本博客中的<a href="https://www.bingyublog.com/2018/04/13/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%95%99%E7%A8%8B2-%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6/" target="_blank" rel="noopener">该教程</a>来进行下载。我也已经将下载好的文件在群里放了一份 ，你可以通过下面的二维码扫码进群进行下载。如果你需要其他版本的该软件或者遇到安装问题不能解决，同样可以加群找我，我会很乐意为你解答的。好了，闲话少说，直接开始。</p>
-<h2 id="解压文件"><a href="#解压文件" class="headerlink" title="解压文件"></a>解压文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# unzip VPNBook.com-OpenVPN-US1.zip</span><br></pre></td></tr></table></figure>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqxf42pamcj30in035k4c.jpg" alt="2"></p>
-<h2 id="安装openvpn服务"><a href="#安装openvpn服务" class="headerlink" title="安装openvpn服务"></a>安装openvpn服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get install openvpn</span><br></pre></td></tr></table></figure>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqxf4ia44kj30m50cpk4c.jpg" alt="3"></p>
-<h2 id="开启VPN"><a href="#开启VPN" class="headerlink" title="开启VPN"></a>开启VPN</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# openvpn --config vpnbook-us1-tcp443.ovpn</span><br></pre></td></tr></table></figure>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tgy1frh2a9iv4oj30kk0a5jyj.jpg" alt="1"><br>首先会提示你输入账号、密码。而账号、密码需要到该网站查找，需要注意的是，密码是动态的，也就是说下次你用vpnbook的时候，密码你需要再次去网站找，以免密码已经更改，输入原始密码错误导致无法成功连接。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqxf51au9kj30md0ef1by.jpg" alt="4"><br>开启速度会有点慢，需要你慢慢等待，看到图中标注红线处才是成功开启。<br>现在打开浏览器，查看一下IP是不是已经成功挂了VPN。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqxf879r52j30lt0fq1by.jpg" alt="5"><br>好了，成功挂上VPN，可以做你想做的事了。不要抱怨网速慢，免费的够用就可以了。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqxf65xmzzj30f00fqadb.jpg" alt="6"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            本次以kali Linux 2017.3进行演示，但是其他的Linux发行版本(eg：Ubuntu，Debian等)也是适用的。
+首先打开网址:  https://www.vpnbook.com/freevpn这个站是需要你可以科学上网的情况下才可以打开的，你可以通过本博客中的该教程来进行下载。我也
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/05/02/科学上网教程3-在kali上挂VPN实现科学上网/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3779,13 +3871,16 @@
 
       
         
-          <span itemprop="articleBody"><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqw7nd5cfzj30m607w1by.jpg" alt="0"><br>就在今天，Kali Linux开发团队正式发布Kali Linux 2018.2。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqw7l8mzksj311s0lc1by.jpg" alt="1"><br>这个kali的发行版(kali Linux 2018.2 Release)是第一款包含了Linux 4.15 内核的，包括x86和x64修补程序， <a href="https://meltdownattack.com/" target="_blank" rel="noopener">Spectre和Meltdown 漏洞</a>,更好地<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f6705bf959efac87bca76d40050d342f1d212587" target="_blank" rel="noopener">支持AMD GPUs 并支持 AMD安全加密虚拟化</a>,可以允许加密虚拟机以至于hypervisor操作程序也不能获取到它。</p>
-<p><strong>更容易使用的Metasploit脚本</strong><br>如果你花大量的时间研究漏洞利用，你肯定熟悉各种metasploit脚本，比如 <em>pattern_create, pattern_offset, nasm_shell</em> 等。你可能也意识到这些所有有用的脚本都隐藏在 /usr/share/metasploit-framework/tools/exploit/目录里，这会有一点困难去使用这些脚本。幸运的是，比如 <em>metasploit-framework_4.16.34-0kali2</em>,你现在可以快速的使用这些脚本了，因为我们已经把这些脚本的软连接添加到了PATH里了，他们每一个都预先标注了msf-。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># msf-</span></span><br><span class="line">msf-egghunter          msf-java_deserializer  msf-nasm_shell</span><br><span class="line">msf-exe2vba            msf-jsobfu             msf-pattern_create</span><br><span class="line">msf-exe2vbs            msf-makeiplist         msf-pattern_offset</span><br><span class="line">msf-find_badchars      msf-md5_lookup         msf-pdf2xdp</span><br><span class="line">msf-halflm_second      msf-metasm_shell       msf-virustotal</span><br><span class="line">msf-hmac_sha1_crack    msf-msf_irb_shell</span><br><span class="line"></span><br><span class="line">root@kali:~<span class="comment"># msf-pattern_create -l 50 -s ABC,123</span></span><br><span class="line">A1A2A3B1B2B3C1C2C3A1A2A3B1B2B3C1C2C3A1A2A3B1B2B3C1</span><br></pre></td></tr></table></figure></p>
-<p><strong>软件包更新</strong><br>此外除了以上的更新，也更新了一些软件，包括 <a href="http://pkg.kali.org/pkg/bloodhound" target="_blank" rel="noopener">Bloodhound</a>, <a href="https://tools.kali.org/wireless-attacks/reaver" target="_blank" rel="noopener">Reaver</a>, <a href="https://tools.kali.org/wireless-attacks/pixiewps" target="_blank" rel="noopener">PixieWPS</a>, <a href="https://tools.kali.org/web-applications/burpsuite" target="_blank" rel="noopener">Burp Suite</a>, <a href="https://tools.kali.org/password-attacks/hashcat" target="_blank" rel="noopener">Hashcat</a>,等等。由于有太多的软件包含在一个默认的kali镜像中，为了查看所有的kali改变，我们建议你去看<a href="https://bugs.kali.org/changelog_page.php" target="_blank" rel="noopener">kali变更日志</a>.<br><strong>下载 Kali Linux 2018.2</strong><br>如果你想体验更新更好的kali发行版本，你可以找到下载ISO和Torrents的链接在<a href="https://www.kali.org/downloads/" target="_blank" rel="noopener">下载kali</a>,适用于虚拟机和ARM设备的images也都更新到了2018.2。如果你已经安装了kali系统，那么你应该感到高兴，你可以使用下面的命令很方便的升级到2018.2。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># apt update &amp;&amp; apt full-upgrade</span></span><br></pre></td></tr></table></figure></p>
-<p>如果您遇到任何错误，我们希望你把bug报告给<a href="https://bugs.kali.org/main_page.php" target="_blank" rel="noopener">bug tracker</a>，我们不能修复我们所不知道的bug。</p>
-<p><strong>本篇为我自己手工翻译的译文，原文来自kali官方文档.</strong><br><a href="https://www.kali.org/news/kali-linux-2018-2-release/" target="_blank" rel="noopener">点此查看原文</a></p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqw7nurc1bj30f00fqadb.jpg" alt="3"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            就在今天，Kali Linux开发团队正式发布Kali Linux 2018.2。这个kali的发行版(kali Linux 2018.2 Release)是第一款包含了Linux 4.15 内核的，包括x86和x64修补程序， Spectre和Meltdown 漏洞,更好地支持AMD GPUs 并
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/05/01/Kali-Linux-2018-2今日发布/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3866,13 +3961,18 @@
 
       
         
-          <span itemprop="articleBody"><p>首先查看自己的IP以及网关地址<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># ifconfig</span></span><br><span class="line">root@kali:~<span class="comment"># route -n</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqssmikncej30ka097jxn.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqsspp49kxj30k702ota8.jpg" alt="2"><br>接着扫描局域网内活动的主机<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># nmap -sP 192.168.217.1/24</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqssr524swj30k4090afu.jpg" alt="3"><br>再选择攻击目标并对目标进行扫描，收集信息<br>此处我选择了一台虚拟机下的Windows7.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># nmap -Pn -sS -O 192.168.217.133 -T4</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqssrwhb86j30kb06h42l.jpg" alt="4"><br>查看MITMF的参数说明,寻找有关键盘记录的参数(<em>无论任何工具在使用的时候都要先查看帮助说明</em>)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># python mitmf.py --help</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqsst243guj30kt02gdgp.jpg" alt="5"><br>然后进行中间人欺骗攻击，劫持键盘输入记录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># source /root/.virtualenvs/MITMf/bin/activate</span></span><br><span class="line">(MITMf) root@kali:~/MITMf<span class="comment"># python mitmf.py -i eth0 --spoof --arp --gateway 192.168.217.2 --target 192.168.217.133 --jskeylogger</span></span><br></pre></td></tr></table></figure></p>
-<p>我在Windows7上打开chrome浏览器，并在地址栏输入”bingyublog.com”。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqsstz944cj311x0k5ac0.jpg" alt="7"><br>可以立马在kali终端看到很多请求出现。并且劫持到了你输入的字符，还有你打开的网址，以及浏览器和主机信息。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqsstklhr8j30r0071n46.jpg" alt="6"><br>(红线标记处是劫持到的键盘记录)</p>
-</span>
+          <span itemprop="articleBody">
+            
+            首先查看自己的IP以及网关地址12root@kali:~# ifconfigroot@kali:~# route -n
+接着扫描局域网内活动的主机1root@kali:~# nmap -sP 192.168.217.1/24
+再选择攻击目标并对目标进行扫描，收集信息此处我选择了一台虚拟机下的Wind
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/04/28/MITMF劫持教程1-劫持键盘记录/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3953,9 +4053,16 @@
 
       
         
-          <span itemprop="articleBody"><p>今天介绍的这款工具是torghost，是一个通过Tor网络路由所有连接的工具，适用于Kali Linux系统，需要python2.7的环境，不适用于python3.x和Windows环境。<br>项目地址: <a href="https://github.com/susmithHCK/torghost" target="_blank" rel="noopener">https://github.com/susmithHCK/torghost</a><br>安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># git clone https://github.com/susmithHCK/torghost.git</span></span><br><span class="line">root@kali:~<span class="comment"># cd torghost/</span></span><br><span class="line">root@kali:~/torghost<span class="comment"># chmod +x install.sh</span></span><br><span class="line">root@kali:~/torghost<span class="comment"># ./install.sh</span></span><br></pre></td></tr></table></figure></p>
-<p>参数：<br>torghost start —–(开启 torghost)<br>torghost stop  —–(停止 torghost)<br>torghost switch —-(切换 IP)<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqsnpk8lxxj30ln0biagz.jpg" alt="1"><br>有一点需要说明一下，由于你换了IP，而通过tor连接的IP不会是本国内的IP，这样也起到了隐藏真实IP的作用，但是网络速度会很慢，所以你的kali出现打不开网页的情况也是很正常的，只是因为网速慢导致的，可以在网络环境良好的环境使用。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            今天介绍的这款工具是torghost，是一个通过Tor网络路由所有连接的工具，适用于Kali Linux系统，需要python2.7的环境，不适用于python3.x和Windows环境。项目地址: https://github.com/susmithHCK/torghost安装1234root@k
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/04/28/kali下隐藏真实ip/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4021,7 +4128,16 @@
 
       
         
-          <span itemprop="articleBody"></span>
+          <span itemprop="articleBody">
+            
+            
+            
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/04/27/汉化Ubuntu18-04并设置时区/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4104,7 +4220,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fv058yarz3j30xc0f0k2y.jpg" rel="gallery_cjlrzq3pb009vokway1u8qmzc"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fv058yarz3j30xc0f0k2y.jpg" rel="gallery_cjlrzuzuo009wykwa9liy15dx"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv058yarz3j30xc0f0k2y.jpg" itemprop="contentUrl"/>
               </a>
@@ -4119,23 +4235,17 @@
 
       
         
-          <span itemprop="articleBody"><p>您现在可以直接从Ubuntu 16.04 LTS系统升级至18.04。因为他们都是属于LTS版本。这意味着你不必做干净安装（重新安装）或重新格式化磁盘。我已经通过命令从16.04LTS成功升级到18.04，并且保持统一桌面和GNOME3的新特性。如果您也想要升级系统，可以遵循以下操作步骤进行。</p>
-<h3 id="使用命令升级的优点"><a href="#使用命令升级的优点" class="headerlink" title="使用命令升级的优点"></a>使用命令升级的优点</h3><blockquote>
-<p>1&gt; 保留了nity7桌面和GNOME3桌面，而不是删除它。<br>2&gt; 保留了你安装的软件，但是升级了他们的版本，而不是删除它们。<br>3&gt; 保留了你的存储文件夹和文件，没有删除它们。<br>4&gt; 不需要重新安装系统。<br>5&gt; 不需要重新格式化你的硬盘驱动器。<br>6&gt; 使用终端，使得所有过程都更加清晰并且更加容易诊断是否存在任何错误。</p>
-</blockquote>
-<h3 id="第一：升级到最新的Ubuntu16-04-LTS"><a href="#第一：升级到最新的Ubuntu16-04-LTS" class="headerlink" title="第一：升级到最新的Ubuntu16.04 LTS"></a>第一：升级到最新的Ubuntu16.04 LTS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line"></span><br><span class="line">$ sudo apt-get upgrade --yes</span><br><span class="line"></span><br><span class="line">$ sudo apt-get dist-upgrade --yes</span><br></pre></td></tr></table></figure>
-<p>这些命令可以使你的Ubuntu16.04 LTS升级为最新版本，现在最新的是16.04.4，这是十分重要的，在你升级到一个LTS版本的时候。<br>记住，这些命令将会下载达到600 MB或者更大的软件包，并且会占据至少2个小时或者更多的时间完成整个安装过程。所以耐心等待直到完成。</p>
-<h3 id="第二：升级至18-04LTS"><a href="#第二：升级至18-04LTS" class="headerlink" title="第二：升级至18.04LTS"></a>第二：升级至18.04LTS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="keyword">do</span>-release-upgrade</span><br></pre></td></tr></table></figure>
-<p>并且需要按Y和回车。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqqggoplimj30fa03haak.jpg" alt="1"><br>(你不应该看到这个图的)<br>你应该看到一个信息提示你18.04 LTS是可用的或者有许多的软件包是需要升级的(见下图)。如果你没有看到可用的升级(如上图)，然后你需要改变为如下的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="keyword">do</span>-release-upgrade -d</span><br></pre></td></tr></table></figure></p>
-<p>并且需要按Y和回车。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqqgh7kzyxj30fa095mzy.jpg" alt="2"><br>(你应该看到这个图的)<br>这个过程需要下载1GB或者更多的软件包并且占据至少2个小时或者更多的时间进行安装配置。所以耐心等待直到完成。</p>
-<h3 id="第三：接受删除安装包"><a href="#第三：接受删除安装包" class="headerlink" title="第三：接受删除安装包"></a>第三：接受删除安装包</h3><p>终端会询问是否允许删除一些安装包:<br>按Y和回车enter<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqqghja4u9j30fa0630uk.jpg" alt="3"></p>
-<h3 id="第四：接受重启"><a href="#第四：接受重启" class="headerlink" title="第四：接受重启"></a>第四：接受重启</h3><p>最后，如果不存在错误，终端屏幕将会提示你已经完成系统升级并且请求你允许是否重新启动系统以完成所有新配置：<br>按Y并回车enter。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqqghx85fdj30fa04pq4l.jpg" alt="4"><br>(升级完毕，现在重启)</p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>下图1是从Ubuntu16.04 LTS升级的18.04 新桌面，接着的图是来自16.04的unity7桌面，我们并没有删除它，并且你可以从登陆屏幕进入unity7桌面&gt;选择齿轮图标&gt;选择unity。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqqgi7frlej30b4069dgx.jpg" alt="5"><br>(原始的Ubuntu18.04桌面)<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqqgikxx5yj30b4069abc.jpg" alt="6"><br>(18.04的unity7桌面)<br>s</p>
-<blockquote>
-<p>本篇为翻译文章，是我人工翻译的，并没有使用机翻，如果出现任何错误、不当词语或者不通顺的地方可以在文章最下面扫码加群联系我进行修改。<br>原文地址: <a href="http://www.ubuntubuzz.com/2018/04/how-to-upgrade-ubuntu-from-1604-lts-to-1804-lts-using-command-lines.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="noopener">http://www.ubuntubuzz.com/2018/04/how-to-upgrade-ubuntu-from-1604-lts-to-1804-lts-using-command-lines.html?utm_source=tuicool&amp;utm_medium=referral</a></p>
-</blockquote>
-<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            您现在可以直接从Ubuntu 16.04 LTS系统升级至18.04。因为他们都是属于LTS版本。这意味着你不必做干净安装（重新安装）或重新格式化磁盘。我已经通过命令从16.04LTS成功升级到18.04，并且保持统一桌面和GNOME3的新特性。如果您也想要升级系统，可以遵循以下操作步骤进行。
+使用
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/04/27/如何使用命令从Ubuntu16-04LTS升级到18-04/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4216,18 +4326,17 @@
 
       
         
-          <span itemprop="articleBody"><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqrb0ck2ckj30u00gwt8r.jpg" alt="0"><br>Canonical 今天正式发布了可用于计算机、IoT 和云环境的 Ubuntu 18.04 LTS （<em>仿生河狸Bionic Beaver</em>） 操作系统。</p>
-<p>经过六个月的努力工作，被称之为（<em>仿生河狸Bionic Beaver</em>）的 Ubnutu 18.04 LTS 正式发布了，这也是 Ubuntu 的第七个长期支持版（LTS）。在直到 2023 年 4 月的五年内 Canonical 将为其提供安全和软件的更新，这期间将至少会有 5 个维护性更新版本，会将以后发布的 Ubuntu 中的新内核和显卡驱动更新到这个 LTS 版本当中。</p>
-<p>正如预期的那样，Ubuntu 18.04 LTS 带来了几个新功能和变化，它开始使用 X.Org 服务器作为默认显示服务器来再次取代在 Ubuntu 17.10 中使用的 Wayland。另一方面，Canonical 计划在 Ubuntu 20.04 LTS 中再次启用 Wayland 作为默认的显示服务器，而现在它将以技术预览版的方式提供，在登录屏幕上可以选择。</p>
-<p>另一个很酷的新功能是图形化安装器中的“最小安装[1]”方式，用户可以安装一个仅有 Mozilla 浏览器和一些方便的标准功能的操作系统。说到了图形安全器，它在这个新版本中进行了重新打造，所以你可以看到它添加了一些不同的选项，也有一些被移去了。<br>Ubuntu 18.04 LTS 也有了由微软合作开发的新的 Hyper-V  优化镜像，它是 Windows 桌面上最快的 Ubuntu 桌面环境。对于云环境，Ubuntu 18.04 LTS 云镜像集成了 Nvidia GPU 硬件加速功能。</p>
-<p>Canonical CEO 及 Ubuntu 的创始人 Mark Shuttleworth 说，“多云操作现在是新业态，优化了启动时间和性能的 Ubuntu 18.04 LTS 在各个主流云平台上将成为用于云计算的最快、最高效的操作系统，特别是在存储和像机器学习这样的计算密集型任务方面。”</p>
-<p><strong>GNOME 3.28 作为默认桌面</strong><br>同 Ubuntu 17.10 一样，仿生河使用最新的 GNOME 桌面作为默认环境。除了 Nautilus 文件管理器仍旧是 3.26 之外，GNOME 所提供的所有应用都更新到了 3.28，因为事实上当前该版本不再由 GNOME 桌面管理。另外，在 Ubuntu 18.04 LTS 当中，Nautilus 以暗色风格重新进行了装扮。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqrb0qp9l3j30h80cxweu.jpg" alt="1"><br>如果你从使用 GNOME 3.26 的 Ubuntu 17.10 升级的话就会发现，<strong>GNOME 3.28 自身也带来了许多变化</strong>。一个需要重点提出的功能是 GNOME Shell 界面现在支持雷雳 3 连接。另外，GNOME 3.28 新打造的 GNOME To Do 应用也被默认包括在 Ubuntu 18.04 LTS 当中了。</p>
-<p>在所选用的应用当中，我们能注意到 GNOME 日历现在支持气候预报，所包括的 GNOME 字符应用替换了老的字符映射功能，GNOME Boxes 现在使用 spice-vdagent 为 Spice 客户端提供了更好的性能。LibreOffice 6.0 是默认办公套件，Mozilla FireFox 59.0.2 是默认浏览器，OpenJDK 10 是默认 JRE/JDK。<br><strong>多个应用以 Snap 的方式提供</strong><br>由于 Canonical 在推广其 Snappy 技术，它提供了更好的隔离性和安全，以及贯穿整个 LTS 生命周期的持续升级支持，毫无疑问 Ubuntu 18.04 LTS 将预装几个默认采用 Snap 统一封装包的应用。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqrb2bb0cbj30h80cx74v.jpg" alt="2"></p>
-<p>这些应用包括 GNOME 日历、GNOME 字符、GNOME 日志和 GNOME 系统监视器等。为了使用户更易于安装 Snap 软件包，Ubuntu 软件应用现在可以让你轻松切换不同的 Snap 商店。有超过 3000 个 Snap 可以从 Snap 商店安装，包括 Firefox、Spotify、Skype 和 Slack 等流行应用。<br>其它值得一提的还有，在大多数应用中支持彩色 emoji 字符。触摸板支持双指右击，而无需物理按键（可以在 GNOME 设置功能中修改该设置）。鼠标和触摸板有了新的驱动，即 libinput，如果你觉得它不适合你，你仍然可以通过设置来切换回 Synapics 驱动，但是 Canonical 将在以后版本移除它。最后，如果在电池供电时 20 分钟不操作的话，Ubuntu 18.04 LTS 将会自动休眠笔记本。<br><strong>Ubuntu 18.04 LTS 底层情况</strong><br>在底层，Ubuntu 18.04 LTS 使用的是 Linux 4.15 系列的内核，该系列内核最近将结束支持期。不过，我们认为 Canonical 将会继续支持它，直到今年年底发布的第一个维护版本 Ubuntu 18.04.1 LTS 为止——它将使用新的内核和图形驱动。</p>
-<p>Canonical 在发布公告中称，“在 Ubuntu 18.04 LTS 中，gcc 现在默认编译程序为即时绑定的<em>独立定位的可执行程序</em>position independent executable（PIE），以更有效的利用<em>地址空间布局随机化</em>Address Space Layout Randomization（ASLR）技术。除了几个例外之外，所有主要的软件包都将重构以获得该能力。”对于 Meltdown 和 Spectre 安全漏洞的缓解措施也已经到位。</p>
-<p>从 Ubuntu 17.10 以来有一些新的功能，不过如果你计划从更旧的版本升级，你应该看看“从 Ubuntu 16.04 LTS 以来的新变化”这篇文章。Ubuntu 18.04 LTS 现在可以下载了，在升级前，你应该看看如何从之前的版本升级。</p>
-<p><strong>Ubuntu 18.04 LTS 下载</strong><br>◈ Ubuntu 桌面版和服务器版 <a href="http://releases.ubuntu.com/18.04/" target="_blank" rel="noopener">http://releases.ubuntu.com/18.04/</a><br>◈ 其它架构的 Ubuntu 服务器  <a href="http://cdimage.ubuntu.com/ubuntu/releases/18.04/release/" target="_blank" rel="noopener">http://cdimage.ubuntu.com/ubuntu/releases/18.04/release/</a><br>◈ Ubuntu 云镜像 <a href="https://www.ubuntu.com/download/cloud/" target="_blank" rel="noopener">https://www.ubuntu.com/download/cloud/</a><br>◈ Ubuntu 物联网 <a href="https://www.ubuntu.com/download/iot/" target="_blank" rel="noopener">https://www.ubuntu.com/download/iot/</a><br><a href="https://linux.cn/article-9583-1.html?utm_source=weixin" target="_blank" rel="noopener">阅读原文</a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            Canonical 今天正式发布了可用于计算机、IoT 和云环境的 Ubuntu 18.04 LTS （仿生河狸Bionic Beaver） 操作系统。
+经过六个月的努力工作，被称之为（仿生河狸Bionic Beaver）的 Ubnutu 18.04 LTS 正式发布了，这也是 Ubuntu 的第七
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/04/27/Ubuntu-18-04-LTS（仿生河狸）发布/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4277,30 +4386,30 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">你指尖跃动的电光，是我此生不变的信仰。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/">
+            <a href="/archives">
               <span class="site-state-item-count">128</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
-            
+            <a href="/tags">
               <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">标签</span>
-              
+              </a>
           </div>
 
         </nav>
@@ -4311,11 +4420,35 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
+                <a href="http://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945 || github" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
               </span>
             
           
@@ -4326,7 +4459,19 @@
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
               </span>
             
           
@@ -4336,7 +4481,7 @@
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -4371,7 +4516,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -4429,7 +4574,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -4437,17 +4582,23 @@ tpwidget("show");</script>
     
   
   
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-  <script type="text/javascript" src="//helpers.js?v="></script>
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
   
 
-  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="//nav-toggle.js?v="></script>
-  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
@@ -4468,15 +4619,17 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="//lazyload.js"></script>
+  <script type="text/javascript" src="/js/lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "//loading.gif",
+        placeholder: "/images/loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>

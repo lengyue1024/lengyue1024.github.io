@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next  ">
+<html class="theme-next use-motion theme-next-mala">
 <head>
   
 
@@ -17,19 +17,25 @@
 
 
 
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-<link rel="stylesheet" type="text/css" href="//main.css?v="/>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
     <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。" />
 
 
 
+  <meta name="keywords" content="Hexo,Mala" />
 
 
 
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。">
@@ -46,10 +52,18 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
-    sidebar: ''
+    scheme: 'Mala',
+    sidebar: 'post'
   };
 </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
 
 
   <title> 冰羽の博客 </title>
@@ -109,11 +123,78 @@
   
 
   
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
 
   
     <div class="site-search">
       
   
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -3239,7 +3320,7 @@
 
 </style>
 
-<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -3412,11 +3493,16 @@
 
       
         
-          <span itemprop="articleBody"><p>当你使用U盘制作启动盘装完系统后，你会发现你的U盘容量变小了。就拿我的来说吧，我在昨天给家里的另外一台电脑重装完系统后，突然发现自己本来是16g的U盘，结果就剩1g多了。为什么会这样呢？我们如果遇到应该怎么恢复到原来的容量呢？？？<br>下面开始开始我们的恢复U盘容量的教程。<br>你可以打开隐藏文件夹，你会看到还有文件，你格式化都不行。这个文件根本不能删除。而且你打开属性里面，你可以看到这个U盘里面制作的系统还在。格式化对他们是不起任何作用的。<br>这个时候需要磁盘操作命令，和cmd命令类似。<br>win+R，输入diskpart。打开diskpart.exe。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foxjr99tq9j30gp0390sl.jpg" alt="1"><br>diskpart其实是个内置于windows系统的小程序，不过并不被人们所熟知。<br>是属于命令行的工具，没有GUI界面。<br>然后输入命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list disk</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foxjrnm3soj30fo0390sl.jpg" alt="2"><br>选择我们的U盘，磁盘1。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select disk 1</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foxjs82rwxj308j01s0sl.jpg" alt="3"><br>开始清除其中的数据。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clean</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foxjshgofnj30an0210sl.jpg" alt="4"><br>这个时候你会发现你的U盘已经图标已经没了。<br>你再次插入U盘依然不会显示出来的。<br>因为U盘已经被系统彻底清除了，电脑中已经没有U盘可见的盘符了。这个时候我们无需担心，接下来我们就+把丢失的U盘找回来。<br>按下快捷键win+X,选择“磁盘管理”，打开。或者右击“我的电脑”，选择管理，选择“磁盘管理”。<br>找到自己的U盘。这个时候显示的还是未分配模式。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foxjt0wxe5j30ez0350sl.jpg" alt="5"><br>右击“新建简单卷”，一直跟着提示操作重新建立U盘格式就可以了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foxjtawjkwj30ep03h746.jpg" alt="6"><br>然后就成功找回自己的U盘了。<br>我们可以再次文件，你会看到自己的U盘就在那里。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foxjtzqdxmj30de00c746.jpg" alt="7"><br>Tips:如果你想了解更多的磁盘操作命令的话，你可以在diskpart中键入help，你就可以直接查看所有的命令参数了，每个参数对应的操作上面都有解释，很详细。<br>好了，教程结束，撒花<em>★,°</em>:.☆(￣▽￣)/$:<em>.°★</em> 。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            当你使用U盘制作启动盘装完系统后，你会发现你的U盘容量变小了。就拿我的来说吧，我在昨天给家里的另外一台电脑重装完系统后，突然发现自己本来是16g的U盘，结果就剩1g多了。为什么会这样呢？我们如果遇到应该怎么恢复到原来的容量呢？？？下面开始开始我们的恢复U盘容量的教程。你可以打开隐藏文件夹，你会看到还
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/01/制作系统盘的U盘容量突然变小了怎么办？/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3497,16 +3583,16 @@
 
       
         
-          <span itemprop="articleBody"><p>很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。<br>Linus虽然创建了Linux，但Linux的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为Linux编写代码，那Linux的代码是如何管理的呢？<br>事实是，在2002年以前，世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后由Linus本人通过手工方式合并代码！<br>你也许会想，为什么Linus不把Linux代码放到版本控制系统里呢？不是有CVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中式的版本控制系统不但速度慢，而且必须联网才能使用。有一些商用的版本控制系统，虽然比CVS、SVN好用，但那是付费的，和Linux的开源精神不符。<br>不过，到了2002年，Linux系统已经发展了十年了，代码库之大让Linus很难继续通过手工方式管理了，社区的弟兄们也对这种方式表达了强烈不满，于是Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。<br>安定团结的大好局面在2005年就被打破了，原因是Linux社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发Samba的Andrew试图破解BitKeeper的协议（这么干的其实也不只他一个），被BitMover公司发现了（监控工作做得不错！），于是BitMover公司怒了，要收回Linux社区的免费使用权。<br>Linus可以向BitMover公司道个歉，保证以后严格管教弟兄们，嗯，这是不可能的。实际情况是这样的：<br>Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了！牛是怎么定义的呢？大家可以体会一下。<br>Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitHub网站上线了，它为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub，包括jQuery，PHP，Ruby等等。<br>历史就是这么偶然，如果不是当年BitMover公司威胁Linux社区，可能现在我们就没有免费而超级好用的Git了。很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。<br>Linus虽然创建了Linux，但Linux的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为Linux编写代码，那Linux的代码是如何管理的呢？<br>事实是，在2002年以前，世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后由Linus本人通过手工方式合并代码！<br>你也许会想，为什么Linus不把Linux代码放到版本控制系统里呢？不是有CVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中式的版本控制系统不但速度慢，而且必须联网才能使用。有一些商用的版本控制系统，虽然比CVS、SVN好用，但那是付费的，和Linux的开源精神不符。<br>不过，到了2002年，Linux系统已经发展了十年了，代码库之大让Linus很难继续通过手工方式管理了，社区的弟兄们也对这种方式表达了强烈不满，于是Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。<br>安定团结的大好局面在2005年就被打破了，原因是Linux社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发Samba的Andrew试图破解BitKeeper的协议（这么干的其实也不只他一个），被BitMover公司发现了（监控工作做得不错！），于是BitMover公司怒了，要收回Linux社区的免费使用权。<br>Linus可以向BitMover公司道个歉，保证以后严格管教弟兄们，嗯，这是不可能的。实际情况是这样的：<br>Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了！牛是怎么定义的呢？大家可以体会一下。<br>Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitHub网站上线了，它为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub，包括jQuery，PHP，Ruby等等。<br>历史就是这么偶然，如果不是当年BitMover公司威胁Linux社区，可能现在我们就没有免费而超级好用的Git了。<br>十年前的这一周，linux 内核社区面临一个根本性的挑战：他们不再能够使用他们的修复控制系统：BitKeeper，同时其他的软件配置管理遇到了对分布式系统的新需求。Linus Torvalds，Linux的创始人，将这个挑战接手并消失了数周，创造了 Git 工具。今天 Git 被用于成千上万个工程，并且在程序员社区中掀起了一个新的社会化编码的浪潮。<br>为了庆祝这一里程碑，我们请 Linus 去分享 Git 的幕后故事，并且告诉我们这个工程队软件开发的影响。你会发现他在这个故事背后的的评论。我们跟随者Q&amp;A追寻Git的轨迹，同时我们为其他的工程也描绘了轮廓。去查找KVM，Qt，Drupal，Puppet和wine背后的故事。</p>
-<h2 id="为什么开发Git"><a href="#为什么开发Git" class="headerlink" title="为什么开发Git?"></a>为什么开发Git?</h2><p>Torvalds: 我其实根本不想做源码管理，我认为源码管理是计算机领域最无趣的事（可能数据库更无趣 ;^）。我对SCM(源码管理工具)感到愤怒。但是BitKeeper的出现让我重新认识了源码管理。BK (BitKeeper)大多数都是正确的,但有本地副本的存储库与分布式合并是一个大问题。分布式源码管理的一个主要问题是源码管理的分离——谁才可以提交改变。BK展示了如何通过每个人都有源码库来避开这个问题。但是BK也有自己的问题：几种技术导制了这种问题（恼火的重命名），但最大的问题是它不开源，这让很多人不愿意使用它。因此，当我们以几个核心的维护使用BK而告终——它们是免费使用的开源项目——但它们无处不在。BK帮助了内核开发者，但是它还是有痛点。<br>当Tridge (Andrew Tridgell)对（相当简单的） BK 协议进行逆向工程–这是有悖于BK的使用规则的–的时候，事情到了不得不解决的地步。 我花了几个星期（几个月？我觉得是那样）在Tridge 和 Larry McVoy之间做调解，但是到最后，明显不起任何作用。于是，从那个时刻起，我决定不再继续使用BK，也不愿重回使用BK之前的糟透了的日子。同时，令人遗憾的是，一些其它的SCM，尝试着做分布式的事情，但是远程访问也没有处理好。我有性能的需求，不仅仅是满足远程可用，同时我还担心代码完整性和整个工作流，于是我决定自己写一个。</p>
-<h2 id="你是如何着手做这件事的-你是整个周末都在写代码，还是只在固定的几个小时呢"><a href="#你是如何着手做这件事的-你是整个周末都在写代码，还是只在固定的几个小时呢" class="headerlink" title="你是如何着手做这件事的?你是整个周末都在写代码，还是只在固定的几个小时呢?"></a>你是如何着手做这件事的?你是整个周末都在写代码，还是只在固定的几个小时呢?</h2><p>Torvalds: 嗨，实际上，你可以从git的源代码仓库中，查看它是如何成型的，除了大概是最开始的一天。我大约花了一天时间来让git“自我管控”（self-hosting），这样，我就可以通过git来提交代码（commit）到git。所以大概第一天是隐藏的，但是所有其它的东西都在那里了。编码工作大多数在白天，但是也有少数在午夜，也有一些在凌晨2点。最有趣的部分是，它成型非常快；git树中的第一个commit并没有很多代码，但是它已经做了最基本的事情–可以提交（commit）自己。其中的技巧实际上不在于代码，而在于想出它如何组织数据的办法。<br>所以，我想说，git在大约10天左右的时间之后的样子（在这个点，我使用git做了<em>kernel</em>的第一次提交），它并不像某些疯狂的垃圾编码（而是有实际的使用价值）。早期的代码量实际上非常小，它的目标是正确实现基本点。 在整个项目开始之前，我一直在仔细考虑。我意识到其他人遇到的问题，也想到了要避免去做的事情。</p>
-<h2 id="它的存在周期达到了你的预期吗-你认为它目前应该如何工作呢-是否有一些限制呢"><a href="#它的存在周期达到了你的预期吗-你认为它目前应该如何工作呢-是否有一些限制呢" class="headerlink" title="它的存在周期达到了你的预期吗? 你认为它目前应该如何工作呢? 是否有一些限制呢?"></a>它的存在周期达到了你的预期吗? 你认为它目前应该如何工作呢? 是否有一些限制呢?</h2><p>Torvalds: 我对git非常满意。对于kernel的开发，它做的非常非常好，满足了我所有的预期。让我觉得有趣的是，它是如何接管了许多其它项目的。结果是令人吃惊的。在更换源代码管理系统的时候，有很大的惯性；看看CVS，甚至是RCS，它们占据了多长时间，但是，某个时刻起，git就完全接管了。</p>
-<h2 id="你觉得它为何如此广泛的被采用呢"><a href="#你觉得它为何如此广泛的被采用呢" class="headerlink" title="你觉得它为何如此广泛的被采用呢?"></a>你觉得它为何如此广泛的被采用呢?</h2><p>Torvalds: 我认为，其他许多人像我一样，都被同样的问题弄得灰心丧气，这些问题让我厌恶SCM。许多项目由于试着解决一两个边边角角的小问题而让人们抓狂，并不是像git这样真正的着手解决重要的问题。即便人们并不知晓“分布式”的部分有多么重要（许多人曾反对它），只要他们弄明白，git允许简单可靠的备份，同时允许人们生成他们自己私有的仓库，而不用担心一些中心仓库的拥有写访问权限的策略，他们是绝不会再回到以前的版本管理的。</p>
-<h2 id="Git会永远存在下去吗？或者说，您是否预见到在下一个10年中将会有其他的版本控制系统出现？你会是这个系统的作者之一吗？"><a href="#Git会永远存在下去吗？或者说，您是否预见到在下一个10年中将会有其他的版本控制系统出现？你会是这个系统的作者之一吗？" class="headerlink" title="Git会永远存在下去吗？或者说，您是否预见到在下一个10年中将会有其他的版本控制系统出现？你会是这个系统的作者之一吗？"></a>Git会永远存在下去吗？或者说，您是否预见到在下一个10年中将会有其他的版本控制系统出现？你会是这个系统的作者之一吗？</h2><p>Torvalds：不，我不会是这些作者中的一员。我们在10年内或许可以看到一些新的东西，但我保证这些东西也会是“类Git”的。这并不是说Git能正确地处理所有的事情，但它以一种前所未有的方式把最为基本的问题都解决了，在这之前没有一款软件配置管理工具（SCM）可以与之媲美。<br>我可以毫不谦虚地说 ;</p>
-<h2 id="为什么Git能在Linux上工作得如此好？"><a href="#为什么Git能在Linux上工作得如此好？" class="headerlink" title="为什么Git能在Linux上工作得如此好？"></a>为什么Git能在Linux上工作得如此好？</h2><p>Torvalds:好吧，很明显的它就是为了我们的工作流程而设计，因此他本身就是Linux的一部分。我已经多次提到完全“分布式”的部分，但它值得一再提及。它被设计得在面对像Linux的大型项目时有足够的效率，并且它被设计得去完成在它之前人们认为很“难”的任务——因为那些事情“我”每天都在做。<br>只举一个例子：代码合并的概念在多数源码管理工具中通常被认为是非常痛苦和困难的。你会计划你的代码合并，因为那是重大的决定。那样的情况对我而言不能接受，自从我一天在合并的窗口前做数十次的代码合并之后，最头疼的的问题不是代码合并工作本身，最重要的应该是检查其结果。Git中，代码合并只会花费数秒，编写代码合并的注释文字却会花费我很长时间。<br>因此，Git基本上按照我的需求设计和编码，也这样工作的。</p>
-<h2 id="有人说Git只是为聪明人设计的，甚至连Andrew-Morton都说：“Git经过特意设计，以便让你感到自己不够聪明。”您对此有何回应？"><a href="#有人说Git只是为聪明人设计的，甚至连Andrew-Morton都说：“Git经过特意设计，以便让你感到自己不够聪明。”您对此有何回应？" class="headerlink" title="有人说Git只是为聪明人设计的，甚至连Andrew Morton都说：“Git经过特意设计，以便让你感到自己不够聪明。”您对此有何回应？"></a>有人说Git只是为聪明人设计的，甚至连Andrew Morton都说：“Git经过特意设计，以便让你感到自己不够聪明。”您对此有何回应？</h2><p>Torvalds：我想在以前确实如此，但现在不同了。因为某些原因，人们觉得git难用，但我认为现在只剩一个原因，那就是：你可以用很多种方法完成一件事。<br>通过git你可以完成很多事请，git要求人们遵守许多规则，这些规则并非出于技术上的限制，而是为了让人们可以更好的合作。git是一个强大的工具，开始使用时你会感觉很困难，这通常是因为你可以用不同方法完成一件事，而且这些方法都能工作！一般说来，学习git最好的方法可能是，你先用它做最基本的事情，直到你熟悉这些基本操作，再去了解git的其它用法。<br> git的复杂有一些历史原因，其中之一是：它过去就很复杂！git的早期用户是那些为Kernel编程的人，他们不得不学习一系列非常难用的脚本。把绝大多数的精力花费在让git能用，而不是更易用。所以早期git给大家的印象（确实就）是，你必须很清楚自己在做什么。当然，在最初的半年或一年里，事实确实如此。<br>人们感觉git复杂的另一个原因：git不同以往的SCM。许多人使用CVS十年甚至二十年，但git不是CVS，它们一点也不像。git和CVS的设计理念不同，命令也不同。git从来没有想过模仿CVS，甚至相反。如果你曾经长时间使用CVS风格的SCM系统，就会感觉git很复杂，并且觉得那些和CVS不同的设计没有存在的必要。奇怪的修订编号会让你分心，你心想：为什么git的修订编号不能像CVS的1.3.1那样累加，而要选择一个奇怪的40字节的十六进制数呢？<br>但git并不是要故意标新立异。git确实和CVS存在差异，因为人们有不同的知识背景，所以这些差异使人们感觉其中一个比另一个复杂。CVS背景的东西正在渐渐远去，可能现在很多用过git的人从来没有用过CVS，他们就会不习惯CVS的使用方式。</p>
-<h2 id="你认为没有git，Linux-Kernel能达到目前的开发速度吗？"><a href="#你认为没有git，Linux-Kernel能达到目前的开发速度吗？" class="headerlink" title="你认为没有git，Linux Kernel能达到目前的开发速度吗？"></a>你认为没有git，Linux Kernel能达到目前的开发速度吗？</h2><p>Torvalds：呃，没有git，我认为可以。但那意味着需要有人写出与git相似的工具：一个像git一样高效的分布式的SCM。没错，我们确实需要像git这样的东西。<br>本篇文章为转载内容，具体原文可以查看以下内容。<br> <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137402760310626208b4f695940a49e5348b689d095fc000" target="_blank" rel="noopener">原文1</a><br> <a href="https://www.oschina.net/translate/10-years-of-git-an-interview-with-git-creator-linus-torvalds" target="_blank" rel="noopener">原文2</a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。Linus虽然创建了Linux，但Linux的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为Linux编写代码，那Linux的代码是如何管理的呢？事实是，在2002年以前
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/02/28/linux之父与GitHub的那些事/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3587,10 +3673,16 @@
 
       
         
-          <span itemprop="articleBody"><p>你知道Linux系统有多牛吗？<br>迄今为止，在全球范围内：<br>80%以上的智能手机用的都是基于Linux内核的Android系统。<br>全球超级计算机排名前500中有98%都在用Linux，包括中国制造、世界超算第一的神威太湖之光。<br>全球大部分证券交易市场都在用Linux，包括纽交所、纳斯达克、伦敦证券交易所、东京证券交易所等<br>75%的云计算企业报告平台都用Linux<br>全球主机行业有33.8%的服务器都用Linux，而Windows 系统服务器只占7.3%。<br>包括亚马逊、易趣网、沃尔玛等电子商务平台都在用Linux……<br>换句话说，当今世上大部分的软件和服务都运行在Linux 操作系统之上，各种云计算、大数据、移动互联网，说起来吊炸天，但如果没有Linux，一切都是浮云。<br>但你肯定想象不到，如此牛到天际的系统却是李纳斯·托沃兹（后文简称“李纳斯”）在经历各种纠结与挣扎之后的无奈发明。<br>酷爱编程的Linux之父<br>李纳斯1969年出生于芬兰赫尔辛基，十岁时因外祖父是大学统计学教授的缘故，得以接触计算机。那是一台Commodore VIC-2，在当时为世界上第一批廉价的8位家用电脑。这台电脑除了用Basic语言写程序之外别无它用。起初他只是将外祖父写在纸上的程序录入电脑，但是他天资聪颖，喜欢钻研，帮祖父录完程序后，就开始阅读电脑手册，写里面的示范程序，示范程序写完了，就自己编写程序。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze2jb2kaj30dw09rgll.jpg" alt="1"><br>一段时间后，他又开始琢磨电脑是怎样工作的，以及思索如何能让电脑运行得更快……<br>就这样三年过去了，在其他孩子都在滑雪、踢足球，进行各类户外游戏时，李纳斯却觉得外公的电脑更有意思了。<br>这时候的他已经进入了青春期，同龄的男孩子都在被窝里偷偷看playboy杂志，而他却总是在跟妈妈道完晚安之后再偷偷地从床上爬起来，然后打开电脑编程。<br>编程令他废寝忘食。他的妈妈逢人便说李纳斯是个很好养的孩子，一台电脑加一些意大利面条，就能让他心满意足。就是对女孩子不感兴趣这一点让他的父母非常担心。<br>他的爸爸给他买了一些模型飞机、轮船、汽车、铁路和模型火车等好玩的玩具，但这些东西远远比不上电脑对他有吸引力。他的父母并不限制他玩电脑，但是在对他的管教方面，却多了一个杀手锏，若是他不听话，只要剥夺他玩电脑的权利，他立马就怂。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze37vesxj30nm08r3ye.jpg" alt="2"><br>上高中后，他的数学成绩非常优秀，那时的女孩子都特别希望能得到“数学天才”的辅导，于是他的父母就发现了让他对女孩子产生兴趣的办法，隔三差五催他带女孩子回家来辅导。<br>而他自然也是照做了，只是即便这样，直到高中毕业他也没弄明白同学间说的“深度爱抚”是什么意思。为此他特意花了不少时间照顾邻居家一只十五磅重的猫，然后认为“深度爱抚”也没有什么了不起的。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpzvhb3qaaj30g80hwgm2.jpg" alt="1"></p>
-<p>##快乐不能久留，纠结与无奈常伴左右<br>后来Commodore VIC-2李纳斯已经玩得很溜了，便想买一台下一代的电脑。为此他攒了圣诞节和生日时父母给的奖励金，参加了赫尔辛基公司清洁队，当过邮差，再加上学校发的奖学金，在1987年的时候他成功地买下了一台Sinclair QL。<br>这是世界第一台32位家用计算机，采用摩托罗拉68008处理器，操作系统是Q-DOS。它的BASIC 语言非常先进，图形显示也不赖，且能进行多重任务处理。他用之做了大量编程，还编写了工具性程序。<br>但是令他无比纠结的是：VIC-2只有一个只读操作系统，无法重编程，而且虽说能进行多重任务处理，但在任何时候都会出现死机，也因为没有保存措施，只要一个任务出现差错，整个机子就死掉了。此外，给这台电脑购买配套设备是个无解的难题，因为他压根儿就找不到Sinclair QL电脑的产品目录！<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze4qvxvuj30ha0e1glm.jpg" alt="4"><br>第二年，他考上了赫尔辛基大学，主修计算机，数学和物理是辅修。这一年他没怎么写程序。主要是Sinclair QL毛病太多，让他没了心情。大学第二年，他有两个选择：要么在部队服八个月的兵役，要么从事一年的社会服务工作。他选择了去服兵役，因为他觉得在军队服役能更好玩一点。<br>服兵役也有两个选择：当一个普通大兵，服满要求的八个月或是去一所军官培训学校，当十一个月的军官。他选择了后者，因为他觉得当一名军官可能会更有意思。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze543bi8j30fe0db748.jpg" alt="5"><br>1986年的时候386芯片横空出世，它在功能上完美地取代了68020，PC机开始受追捧。而等到1990年的时候，大规模生产使其价格大幅下跌，这让手头拮据的李纳斯看到了希望。<br>这一年，恰好他服完兵役回校，当时UNIX操作系统因稳定而强大的功能在学术界掀起了的风潮，学校也在这一年引入了UNIX系统，对此他兴奋不已。<br>虽然他没钱买386，但是他可以让自己的Sinclair QL通过终端仿真进入大学的UNIX电脑，等到有了足够的钱再买自己的也不迟。而UNIX系统果然没有令他失望，他重新在电脑这里找到了快乐。<br>1991年新年，他以分期付款的方式购买了一台组装PC机。内存他选择了4兆，最大的；CPU他选择了33 兆赫，最好的。不过这台电脑自带的MS-DOS 操作系统让李纳斯很是无奈，因为这套系统甚至无法利用386芯片极大提升的性能。曾经沧海难为水，享受过UNIX的美好，叫他如何还能容忍DOS的low？<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze5qocfcj30ef06p3yh.jpg" alt="6"><br>他打心眼里想给这台电脑装UNIX，但不幸的是（却是世界之幸），UNIX太贵了，他完全负担不起！当时MINIX软件，作为UNIX的一个小型克隆也很受人们的追捧，而且价格比UNIX要低很多，他便退而求其次，购买了MINIX软件。而正是他的这一举动，最终促成了Linux后来的诞生！<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze66c8v7j30rs0fmq2z.jpg" alt="7"><br>MINIX软件从订购到拿到手李纳斯用了一个月的时间，但那时的他却感觉如同过了六年一般漫长，他花了大量时间去仔细了解它的功能和用途，最后他成功了解了它好的方面，却在同时也了解了它不好的方面。但最让他不能接受的是，MINIX的终端仿真做得太糟糕了。要知道那时的他只有依赖终端仿真，才能让家里的电脑模仿大学的电脑，从而享受UNIX的强大与稳定。这样的缺陷对他而言简直就是致命的！<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze9chgbkj30ha0e1mx6.jpg" alt="8"><br>在饱受一番折磨之后，他痛定思痛，最终决定：自己做一个终端仿真！</p>
-<p>##Linux 诞生！<br>这是李纳斯人生中的第一台PC，要做终端仿真，他需要学习很多东西。他从 BIOS 开始学习，了解 CPU 的工作原理，了解怎样写入显示器、怎样读键盘输入、怎样读写调制解调器……后来他想出两条独立的线程：一条线程从调制解调器读出，然后在显示器上显示；另一条线程从键盘上读出，然后写入调制解调器。<br>他写的最早的试验程序是使用一个线程将字母 A 写到显示器上，另一个线程写B。最后他就能改变由一连串 A 和一连串 B 组成的两个线程，使数据一个读自调制解调器，再写入显示器，另一个读自键盘，再写入调制解调器。到这时，他的终端仿真程序正式宣告制作成功！<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze7i4dz0j30d607e3yf.jpg" alt="9"><br>成功之后的那种发自内心的喜悦自然难以言喻。凭借自己的终端仿真器，他经常登录学校的电脑上，查阅电子邮件和参加 MINIX 讨论组。但是好景不长，他很快又发现了一个新问题，那就是：他无法下载和上传东西！也就是说，他必须能够向磁盘里保存东西。若要实现这个功能，他的终端仿真器必须装个磁盘驱动，外加一个文件系统驱动！<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze8lmsm0j30ha0e1q2y.jpg" alt="10"><br>这个时候，即便李纳斯极度渴望这个功能，也未免有些泄气了，因为做这些实在是太麻烦了！也不值得。<br>只是没过多久他就改变了主意，因为他发现：除此之外他没有什么可做的！大学课程非常简单，无需费太多的心思，同学聚会也让他提不起精神，而搞驱动程序的工作虽然很麻烦，但却很有意思！<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpze9qlhi0j30rs0hq0t5.jpg" alt="11"><br>于是，他开始了写磁盘驱动程序的艰苦生涯。每天睁开眼睛后第一件事——编程，饿了就嚼饼干，嚼完继续编程，困了就睡会儿，醒来继续编程，洗澡也就冲冲了事，冲完澡继续编程……没了白天和夜晚，分不清周末还是工作日，电脑之外的世界几乎与他绝缘，在这场马拉松式的编程中，某一天他突然意识到：这项工作已经不再是优化一个终端仿真器，而是再造一个操作系统！<br>Linux 操作系统就是这样开始的，而他的试验程序则变成了终端仿真组合程序。<br>又经过数个月的努力之后，外壳程序开发完成，这个时候的他感觉便如创世之时的上帝，只待说出“要有光”一样执掌一切。当他把外壳程序移到一个他为新的操作系统所建的特别区域中后，一个新的操作系统宣告了诞生！他将其命名为“Linux”！<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpzea4wr8ij30rs0fbaa9.jpg" alt="12"><br>然后，他毫不犹豫地就将Linux发布出去了，因为他一直有与人交流程序的习惯。<br>在那时的PC世界中，有一个有关软件共享的传统，就是你下载了一个程序，就应该给作者寄回十块钱左右的回报。但李纳斯并不想要钱，他只想要明信片，因为与钱相比，他更想知道都有哪儿的人在使用 Linux，结果他收到了逾百万张明信片。<br>而他当初买电脑时的欠款则在一个朋友的帮助下，成功地从一项网上募捐行动中得到了解决……为嘛这事儿听起来这么有喜感？<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpzeakjke6j30lc0lcwfb.jpg" alt="13"><br>但是这时候的Linux并未脱离MINIX而存在，似乎上帝对这样的结果仍不满意，便推了他一把：他在接下来的某一天出现操作失误，将MINIX分区破坏了！这个时候他可以选择重装MINIX，也可以通过完善Linux来彻底取代MINIX。他选择了后者，因为他觉得Linux已经足够好。<br>于是，从这时起，人们开始用Linux来做些事了。<br>因为开源的缘故，Linux 的用户开始与日俱增，获得了巨大的发展，世界各地的程序员们每天都在共同分享彼此提出的修改建议。<br>从1991年开始至今，Linux内核由10239行代码增加到了近1千万行代码，其中只有2%出自李纳斯之手。而且每天仍会新增约4752行代码，且有1671行代码会做出变更。<br>李纳斯喜欢有这么多的人给他从事这个事业的动力，他曾认为自己已接近于完成它了，但却始终没有真正做到这一点。人们一直给李纳斯更多继续的理由，以及更多困扰的棘手难题，这使得继续完善 Linux 变得更为有趣。否则，他可能早就干别的事情去了。<br>这并非耸人听闻的言论，而是李纳斯亲口所说。<br>生活的终极目标是快乐<br>李纳斯并不是离不开电脑，也不是离不开Linux。<br>早年上高中的时候，就因为感到有些课程比较有趣，比方说影响经济的因素，季风及季风成因等，可以让他放下了电脑去啃书本。<br>在与现任妻子塔芙同居的最初两周，他甚至都没有动过一下电脑，但他也并不为离开电脑而感到难受。<br>大学时期服兵役一年，离开电脑一年之久，他也没有对其有任何想念。<br>他曾花了数小时为他的宝马Z3选择合适的颜色而苦思冥想。原因无他，仅仅是觉得有意思而已。<br>在他看来，生活的进化过程主要分为三个阶段：生存、社会秩序和娱乐，而娱乐是生活的最高形式。他说，“你可以为事业而奋斗，然而最终，生活的终极目标是快乐。”<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpzeb7s8btj30m80lx0t7.jpg" alt="14"><br>编程是他的乐趣，写出Linux也是乐趣使然。在无数次追求快乐而不得的纠结与无奈过后，Linux才得以成功面世。他无心做出一个举世瞩目的产品，也无意打造自己的商业帝国。微软把Linux视为Windows操作系统最大的竞争对手，而Linux的拥趸则无时不刻不在网上发言声称：Linux终将取代Windows。<br>但他却丝毫不为此挂心，每天在自己的卧房里（很难想象那里就是举世瞩目的Linux全球总部）做着自己感兴趣的事——为Linux编程。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpzec0smpdj30ia08idjn.jpg" alt="15"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            你知道Linux系统有多牛吗？迄今为止，在全球范围内：80%以上的智能手机用的都是基于Linux内核的Android系统。全球超级计算机排名前500中有98%都在用Linux，包括中国制造、世界超算第一的神威太湖之光。全球大部分证券交易市场都在用Linux，包括纽交所、纳斯达克、伦敦证券交易所、东京
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/02/28/没有比尔·盖茨的鼎鼎大名，但他却创造了抗衡-Windows-的不朽传奇/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3671,10 +3763,16 @@
 
       
         
-          <span itemprop="articleBody"><p>katoolin其实算是个kali懒人工具集了吧，其中集成了很多实用的工具，可以让你把你的Ubuntu定制成一个渗透工具。这是托管到GitHub仓库的项目地址:<a href="https://github.com/LionSec/katoolin" target="_blank" rel="noopener">https://github.com/LionSec/katoolin</a><br>下面开始安装。<br>由于这个工具是需要python的环境的，所以首先确保你的python环境为2.7。<br>Ubuntu已经包含了python2.7和python3.5的环境了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fouzpe8xmrj30ke04ywf8.jpg" alt="1"><br>安装git，因为需要从GitHub仓库clone下来。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fouzpt423xj30ki05375t.jpg" alt="3"><br>切换到root用户。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo su</span><br></pre></td></tr></table></figure></p>
-<p>从GitHub上clone到本地并且创建目录复制进去。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fov1stspmxj30k603s75t.jpg" alt="4"><br>添加权限。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/home/lengyue<span class="comment"># chmod +x /usr/bin/katoolin</span></span><br></pre></td></tr></table></figure></p>
-<p>现在可以打开katoolin了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fov1t74p8zj30kg0baq3v.jpg" alt="6"><br>katoolin操作说明:<br>[W] Before updating your system , please remove all Kali-linux repositories to avoid any kind of problem .<br>这句话的意思是:[警告]更新你的操作系统前，请删除所有kali—Linux的软件仓库以避免一些问题。<br>1.添加软件源并且更新<br>2.查看分类<br>3.安装基本菜单<br>4.安装kali菜单<br>5.帮助<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fov1u2u1mqj30ei01675t.jpg" alt="7"><br>这里是本工具的作者及其网站，本工具集成了331个工具<br>下面我来做个简单的示范，简单的使用一下，更多操作姿势大家可以自己摸索。<br>简单的使用:<br>先输入2.<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fov1uepxfpj30ju08275t.jpg" alt="8"><br>它会提示你:选择一个类型或者按下0去安装所有的kali Linux工具。<br>其实这个时候最好不要按0安装全部的软件，因为这么多工具你根本是不可能全部用得到的，你仅仅可以把你最喜欢最会用的工具安装一下就可以了。你也可以在渗透的过程中如果需要什么工具，你再来安装即可。<br>安装太多的工具，你的Ubuntu系统一定会崩溃的，到时候会变得特别卡。<br>它上面有分类，针对不同的环境有不同的工具分类。特别人性化。<br>下面我实例安装一个我最喜欢的sqlmap和w3af。<br>哦对了，说一句，这上面有些工具kali已经不再有了，有些是属于backtrack时期才有的工具。如果你有哪些工具在kali上找不到，这个工具集里有可能有。比如这个w3af，是在BT5 r3中才有的。kali已经取消了它。其实我最喜欢这个了。而且你在kali上如果安装w3af，你会发现会需要各种依赖，python模块，有些依赖模块如果安装了，又会与当前环境冲突，由此可见这个工具集其实还是相当实用的。可以省去你很大的麻烦来处理各种依赖关系。<br>我们按下4，找到适用于web攻击的工具，<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fov1v6osrqj30jl0b4wg6.jpg" alt="9"><br>然后按33安装w3af。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fov1w2d6i6j30k30b7770.jpg" alt="10"><br>它会自动安装，稍等就可以了，你不需要格外的做任何事。(当然喝杯咖啡是可以的)<br>安装后我们打开w3af。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fov1whubsvj30m30f3ta8.jpg" alt="11"><br>下面安装sqlmap。<br>按下27进行安装。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fov1wz8nunj30km0andj8.jpg" alt="12"><br>安装后启动，<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fov1znggc4j30ki06idgg.jpg" alt="13">。<br>好了，katoolin的基本操作方式就是这些，以后我再来讲解这些工具的使用。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            katoolin其实算是个kali懒人工具集了吧，其中集成了很多实用的工具，可以让你把你的Ubuntu定制成一个渗透工具。这是托管到GitHub仓库的项目地址:https://github.com/LionSec/katoolin下面开始安装。由于这个工具是需要python的环境的，所以首先确保你的
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/02/27/Ubuntu安装kali工具集katoolin/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3755,8 +3853,16 @@
 
       
         
-          <span itemprop="articleBody"><p>1.Metasploit无法启动，通常会显示如下画面<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fou19nlrp2j30hr0b9wf8.jpg" alt="1"><br>有人说是因为Metasploit依赖postgresql数据库，这话说的完全没毛病。<br>但是你可以试试打开这个数据库，再来看看是否可以启动。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fou1e0ta10j30g8016wf8.jpg" alt="2"><br>输入如图所示的命令，再来打开看看怎么样。其实还是不能正常启动的。因为并不是数据库的问题，，当你在打开Metasploit的时候，后台是会自动启动postgresql数据库服务的。<br>这是因为内存的原因。你关闭虚拟机，在设置里再为你的kali多分配一点内存就可以了。虚拟机安装的时候会默认分配512M的，但是并不够kali正常的运行程序。其实如果你的宿主机的内存足够大的话，你可以多分配一点，比如4g。如果内存不是很大的话，你可以分配2g。然后就可以正常运行Metasploit了。<br>2.fork失败无法分配内存。会出现某程序无法打开，或者就是打开了，也会立马退出，这也是内存分配太小的情况。你可以试着分配更大的内存，就可以完美解决了，再也不会出现这种情况了。而且内存变大后，你会发现你的kali变得很丝滑，再也不会卡顿了。<br>3.kali在运行的时候经常会出现运行的程序崩溃，突然自动退出或者干脆不动，卡在那里一动不动，加大内存后就可以了。VMware默认给kali分配的内存只有512M，在2016版本中还勉强可以，在新的2017和2018中就已经不行了，当然你如果安装的不是图形化界面，而是指令化界面，则不用分配太多的内存，因为你不用分配更多的内存给图形化桌面了。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            1.Metasploit无法启动，通常会显示如下画面有人说是因为Metasploit依赖postgresql数据库，这话说的完全没毛病。但是你可以试试打开这个数据库，再来看看是否可以启动。输入如图所示的命令，再来打开看看怎么样。其实还是不能正常启动的。因为并不是数据库的问题，，当你在打开Metasp
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/02/26/Kali安装后出现的一些情况/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3837,17 +3943,16 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="在打开Ubuntu的时候，我们点击登陆的那个按钮的时候，会突然进入到客人会话模式，而且无法从客人会话模式回到主账户登录页面。"><a href="#在打开Ubuntu的时候，我们点击登陆的那个按钮的时候，会突然进入到客人会话模式，而且无法从客人会话模式回到主账户登录页面。" class="headerlink" title="在打开Ubuntu的时候，我们点击登陆的那个按钮的时候，会突然进入到客人会话模式，而且无法从客人会话模式回到主账户登录页面。"></a>在打开Ubuntu的时候，我们点击登陆的那个按钮的时候，会突然进入到客人会话模式，而且无法从客人会话模式回到主账户登录页面。</h2><h3 id="PS：客人会话模式是不需要登陆密码直接进入系统的模式，但是这个时候的系统是没经过更改最原始的状态，我们在这个模式下是看不到你用其他账户修改的文件的。而且权限很小，不能更改文件，基本上只有读-的权限，而没有写的权限。"><a href="#PS：客人会话模式是不需要登陆密码直接进入系统的模式，但是这个时候的系统是没经过更改最原始的状态，我们在这个模式下是看不到你用其他账户修改的文件的。而且权限很小，不能更改文件，基本上只有读-的权限，而没有写的权限。" class="headerlink" title="PS：客人会话模式是不需要登陆密码直接进入系统的模式，但是这个时候的系统是没经过更改最原始的状态，我们在这个模式下是看不到你用其他账户修改的文件的。而且权限很小，不能更改文件，基本上只有读 的权限，而没有写的权限。"></a>PS：客人会话模式是不需要登陆密码直接进入系统的模式，但是这个时候的系统是没经过更改最原始的状态，我们在这个模式下是看不到你用其他账户修改的文件的。而且权限很小，不能更改文件，基本上只有读 的权限，而没有写的权限。</h3><h3 id="我们要是想进入登陆界面，就需要禁止这个客人会话的模式。"><a href="#我们要是想进入登陆界面，就需要禁止这个客人会话的模式。" class="headerlink" title="我们要是想进入登陆界面，就需要禁止这个客人会话的模式。"></a>我们要是想进入登陆界面，就需要禁止这个客人会话的模式。</h3><h3 id="我们需要ctr-alt-F1，进入tty（虚拟控制台），然后再登陆自己的账户。"><a href="#我们需要ctr-alt-F1，进入tty（虚拟控制台），然后再登陆自己的账户。" class="headerlink" title="我们需要ctr+alt+F1，进入tty（虚拟控制台），然后再登陆自己的账户。"></a>我们需要ctr+alt+F1，进入tty（虚拟控制台），然后再登陆自己的账户。</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fou0plvngdj30gi07aq2u.jpg" alt="1"><br>我们已经成功登陆到自己的账户中。</p>
-<h3 id="然后执行命令："><a href="#然后执行命令：" class="headerlink" title="然后执行命令："></a>然后执行命令：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/share/lightdm/lightdm.conf.d/</span><br></pre></td></tr></table></figure>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fou0r4h1fij30e000mq2u.jpg" alt="2"></p>
-<h3 id="执行一下ls命令。"><a href="#执行一下ls命令。" class="headerlink" title="执行一下ls命令。"></a>执行一下ls命令。</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fou0rglxjjj30gz01fq2u.jpg" alt="3"></p>
-<h3 id="接着执行命令"><a href="#接着执行命令" class="headerlink" title="接着执行命令"></a>接着执行命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim 50-guest-warepper.conf</span><br></pre></td></tr></table></figure>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fou0s3e2f5j30jp00mq2u.jpg" alt="4"></p>
-<h3 id="打开这个文件后，我们可以看到如图所示："><a href="#打开这个文件后，我们可以看到如图所示：" class="headerlink" title="打开这个文件后，我们可以看到如图所示："></a>打开这个文件后，我们可以看到如图所示：</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fou0smvhu7j30lq083q2u.jpg" alt="5"></p>
-<h3 id="按i进入插入模式，进行编辑。输入如下内容。"><a href="#按i进入插入模式，进行编辑。输入如下内容。" class="headerlink" title="按i进入插入模式，进行编辑。输入如下内容。"></a>按i进入插入模式，进行编辑。输入如下内容。</h3><p> allow-guest=false<br>[SeatDefaults]<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fou0teo5trj30ll02iq2u.jpg" alt="6"></p>
-<h3 id="然后按Esc，按shift的同时按一下：，然后输入wq，进行保存退出。"><a href="#然后按Esc，按shift的同时按一下：，然后输入wq，进行保存退出。" class="headerlink" title="然后按Esc，按shift的同时按一下：，然后输入wq，进行保存退出。"></a>然后按Esc，按shift的同时按一下：，然后输入wq，进行保存退出。</h3><p>然后输入命令reboot，重启系统。<br>当我们再次进入系统的时候，就会直接看到登陆界面了。<br>此时，会话模式已经被禁止了。<br>当然如果你需要会话模式的话，你可以把这个配置文件删除就可以了。<br>命令为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /usr/share/lightdm/lightdm.conf.d/50-guest-wrapper.conf。</span><br></pre></td></tr></table></figure></p>
-<p>Tips：会话模式可以在无关人员进入你系统的时候很好的保护你的隐私以及系统，但是如果这台系统只有你个人或者其他有关人员使用的话，禁用是可以的。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            在打开Ubuntu的时候，我们点击登陆的那个按钮的时候，会突然进入到客人会话模式，而且无法从客人会话模式回到主账户登录页面。PS：客人会话模式是不需要登陆密码直接进入系统的模式，但是这个时候的系统是没经过更改最原始的状态，我们在这个模式下是看不到你用其他账户修改的文件的。而且权限很小，不能更改文件，
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/02/26/Ubuntu默认进入客人会话模式问题解决/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3928,24 +4033,16 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="1-首先下载DVWA包，网站：http-www-dvwa-co-uk-。"><a href="#1-首先下载DVWA包，网站：http-www-dvwa-co-uk-。" class="headerlink" title="1.首先下载DVWA包，网站：http://www.dvwa.co.uk/。"></a>1.首先下载DVWA包，网站：<a href="http://www.dvwa.co.uk/。" target="_blank" rel="noopener">http://www.dvwa.co.uk/。</a></h2><h2 id="2-然后下载xampp，网站：https-www-apachefriends-org-zh-cn-index-html"><a href="#2-然后下载xampp，网站：https-www-apachefriends-org-zh-cn-index-html" class="headerlink" title="2.然后下载xampp，网站：https://www.apachefriends.org/zh_cn/index.html"></a>2.然后下载xampp，网站：<a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="noopener">https://www.apachefriends.org/zh_cn/index.html</a></h2><h2 id="3-首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的-deb-rpm的软件包，而是-run的源码包。"><a href="#3-首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的-deb-rpm的软件包，而是-run的源码包。" class="headerlink" title="3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的.deb,.rpm的软件包，而是.run的源码包。"></a>3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的.deb,.rpm的软件包，而是.run的源码包。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopkvgewp1j30dk02vweq.jpg" alt="1"></p>
-<h2 id="4-对文件添加权限，不然是不能运行安装的。"><a href="#4-对文件添加权限，不然是不能运行安装的。" class="headerlink" title="4.对文件添加权限，不然是不能运行安装的。"></a>4.对文件添加权限，不然是不能运行安装的。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopldqlekzj30j9010tba.jpg" alt="2"></p>
-<h2 id="5-然后运行源码包进行安装xampp，运行后会出现一个安装界面。"><a href="#5-然后运行源码包进行安装xampp，运行后会出现一个安装界面。" class="headerlink" title="5.然后运行源码包进行安装xampp，运行后会出现一个安装界面。"></a>5.然后运行源码包进行安装xampp，运行后会出现一个安装界面。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fople6kieaj30ha00ltba.jpg" alt="3"></p>
-<h2 id="6-点击next，继续。"><a href="#6-点击next，继续。" class="headerlink" title="6.点击next，继续。"></a>6.点击next，继续。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplc07nthj30gj0cvtba.jpg" alt="4"></p>
-<h2 id="7-然后我们可以看到提示：xampp将会安装大盘-opt-lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。"><a href="#7-然后我们可以看到提示：xampp将会安装大盘-opt-lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。" class="headerlink" title="7.然后我们可以看到提示：xampp将会安装大盘/opt/lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。"></a>7.然后我们可以看到提示：xampp将会安装大盘/opt/lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplv2hdk8j30hd0cttba.jpg" alt="5"></p>
-<h3 id="8-安装已经开始了。"><a href="#8-安装已经开始了。" class="headerlink" title="8.安装已经开始了。"></a>8.安装已经开始了。</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplw23bztj30gt0cxmzg.jpg" alt="6"></p>
-<h2 id="9-安装完成。"><a href="#9-安装完成。" class="headerlink" title="9.安装完成。"></a>9.安装完成。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplb41729j30jh0detba.jpg" alt="7"></p>
-<h2 id="10-我们可以打开浏览器测试一下是否安装成功。"><a href="#10-我们可以打开浏览器测试一下是否安装成功。" class="headerlink" title="10.我们可以打开浏览器测试一下是否安装成功。"></a>10.我们可以打开浏览器测试一下是否安装成功。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplfr48gpj30k40eltba.jpg" alt="8"></p>
-<h2 id="11-然后我们开始解压DVWA。"><a href="#11-然后我们开始解压DVWA。" class="headerlink" title="11.然后我们开始解压DVWA。"></a>11.然后我们开始解压DVWA。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplg5jflwj30hf085tba.jpg" alt="9"></p>
-<h2 id="12-我们现在进入xampp的安装目录。"><a href="#12-我们现在进入xampp的安装目录。" class="headerlink" title="12.我们现在进入xampp的安装目录。"></a>12.我们现在进入xampp的安装目录。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplgten7kj30gk00ztba.jpg" alt="10"></p>
-<h2 id="13-把解压的DVWA文件复制进-htdocs-文件夹内。"><a href="#13-把解压的DVWA文件复制进-htdocs-文件夹内。" class="headerlink" title="13.把解压的DVWA文件复制进 htdocs/文件夹内。"></a>13.把解压的DVWA文件复制进 htdocs/文件夹内。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplh9hk21j30kc01itba.jpg" alt="11"></p>
-<h2 id="14-然后我们需要修改一下DVWA的配置文件。"><a href="#14-然后我们需要修改一下DVWA的配置文件。" class="headerlink" title="14.然后我们需要修改一下DVWA的配置文件。"></a>14.然后我们需要修改一下DVWA的配置文件。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplhpc3cmj30jt077tba.jpg" alt="12"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopli2r94zj30dt02otba.jpg" alt="13"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplx2wf3ej30ju01rtba.jpg" alt="19"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopljlsxtej30dl02mtba.jpg" alt="18"><br>注意:一定要留空，不然不能创建数据库。</p>
-<h2 id="15-在浏览器打开DVWA。"><a href="#15-在浏览器打开DVWA。" class="headerlink" title="15.在浏览器打开DVWA。"></a>15.在浏览器打开DVWA。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopll6f1foj30jw02mtba.jpg" alt="14"><br>提示我们把config.inc.php.dist复制到config.inc.php。</p>
-<h2 id="16-其实我们把config-inc-php-dist移动到config-inc-php就可以了，-dist是不能被浏览器打开的，需要是-php的文件。"><a href="#16-其实我们把config-inc-php-dist移动到config-inc-php就可以了，-dist是不能被浏览器打开的，需要是-php的文件。" class="headerlink" title="16.其实我们把config.inc.php.dist移动到config.inc.php就可以了，.dist是不能被浏览器打开的，需要是.php的文件。"></a>16.其实我们把config.inc.php.dist移动到config.inc.php就可以了，.dist是不能被浏览器打开的，需要是.php的文件。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopllln1anj30jy00ztba.jpg" alt="15"></p>
-<h2 id="17-刷新一下浏览器。ok，出来了。"><a href="#17-刷新一下浏览器。ok，出来了。" class="headerlink" title="17.刷新一下浏览器。ok，出来了。"></a>17.刷新一下浏览器。ok，出来了。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplm0257oj30jx0estba.jpg" alt="16"></p>
-<h2 id="18-这是登陆界面。"><a href="#18-这是登陆界面。" class="headerlink" title="18.这是登陆界面。"></a>18.这是登陆界面。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplme5g2oj30b10b4tba.jpg" alt="17"></p>
-<h2 id="19-Tips-默认账号：admin，密码：password。"><a href="#19-Tips-默认账号：admin，密码：password。" class="headerlink" title="19.Tips:默认账号：admin，密码：password。"></a>19.Tips:默认账号：admin，密码：password。</h2><p>以后使用DVWA的时候需要先启用xampp，输入以下命令就可以打开了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /opt/lampp/lampp start</span><br></pre></td></tr></table></figure></p>
-</span>
+          <span itemprop="articleBody">
+            
+            1.首先下载DVWA包，网站：http://www.dvwa.co.uk/。2.然后下载xampp，网站：https://www.apachefriends.org/zh_cn/index.html3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/02/25/Ubuntu安装gnome桌面/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4026,24 +4123,16 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="1-首先下载DVWA包，网站：http-www-dvwa-co-uk-。"><a href="#1-首先下载DVWA包，网站：http-www-dvwa-co-uk-。" class="headerlink" title="1.首先下载DVWA包，网站：http://www.dvwa.co.uk/。"></a>1.首先下载DVWA包，网站：<a href="http://www.dvwa.co.uk/。" target="_blank" rel="noopener">http://www.dvwa.co.uk/。</a></h2><h2 id="2-然后下载xampp，网站：https-www-apachefriends-org-zh-cn-index-html"><a href="#2-然后下载xampp，网站：https-www-apachefriends-org-zh-cn-index-html" class="headerlink" title="2.然后下载xampp，网站：https://www.apachefriends.org/zh_cn/index.html"></a>2.然后下载xampp，网站：<a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="noopener">https://www.apachefriends.org/zh_cn/index.html</a></h2><h2 id="3-首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的-deb-rpm的软件包，而是-run的源码包。"><a href="#3-首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的-deb-rpm的软件包，而是-run的源码包。" class="headerlink" title="3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的.deb,.rpm的软件包，而是.run的源码包。"></a>3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的.deb,.rpm的软件包，而是.run的源码包。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopkvgewp1j30dk02vweq.jpg" alt="1"></p>
-<h2 id="4-对文件添加权限，不然是不能运行安装的。"><a href="#4-对文件添加权限，不然是不能运行安装的。" class="headerlink" title="4.对文件添加权限，不然是不能运行安装的。"></a>4.对文件添加权限，不然是不能运行安装的。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopldqlekzj30j9010tba.jpg" alt="2"></p>
-<h2 id="5-然后运行源码包进行安装xampp，运行后会出现一个安装界面。"><a href="#5-然后运行源码包进行安装xampp，运行后会出现一个安装界面。" class="headerlink" title="5.然后运行源码包进行安装xampp，运行后会出现一个安装界面。"></a>5.然后运行源码包进行安装xampp，运行后会出现一个安装界面。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fople6kieaj30ha00ltba.jpg" alt="3"></p>
-<h2 id="6-点击next，继续。"><a href="#6-点击next，继续。" class="headerlink" title="6.点击next，继续。"></a>6.点击next，继续。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplc07nthj30gj0cvtba.jpg" alt="4"></p>
-<h2 id="7-然后我们可以看到提示：xampp将会安装大盘-opt-lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。"><a href="#7-然后我们可以看到提示：xampp将会安装大盘-opt-lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。" class="headerlink" title="7.然后我们可以看到提示：xampp将会安装大盘/opt/lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。"></a>7.然后我们可以看到提示：xampp将会安装大盘/opt/lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplv2hdk8j30hd0cttba.jpg" alt="5"></p>
-<h3 id="8-安装已经开始了。"><a href="#8-安装已经开始了。" class="headerlink" title="8.安装已经开始了。"></a>8.安装已经开始了。</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplw23bztj30gt0cxmzg.jpg" alt="6"></p>
-<h2 id="9-安装完成。"><a href="#9-安装完成。" class="headerlink" title="9.安装完成。"></a>9.安装完成。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplb41729j30jh0detba.jpg" alt="7"></p>
-<h2 id="10-我们可以打开浏览器测试一下是否安装成功。"><a href="#10-我们可以打开浏览器测试一下是否安装成功。" class="headerlink" title="10.我们可以打开浏览器测试一下是否安装成功。"></a>10.我们可以打开浏览器测试一下是否安装成功。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplfr48gpj30k40eltba.jpg" alt="8"></p>
-<h2 id="11-然后我们开始解压DVWA。"><a href="#11-然后我们开始解压DVWA。" class="headerlink" title="11.然后我们开始解压DVWA。"></a>11.然后我们开始解压DVWA。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplg5jflwj30hf085tba.jpg" alt="9"></p>
-<h2 id="12-我们现在进入xampp的安装目录。"><a href="#12-我们现在进入xampp的安装目录。" class="headerlink" title="12.我们现在进入xampp的安装目录。"></a>12.我们现在进入xampp的安装目录。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplgten7kj30gk00ztba.jpg" alt="10"></p>
-<h2 id="13-把解压的DVWA文件复制进-htdocs-文件夹内。"><a href="#13-把解压的DVWA文件复制进-htdocs-文件夹内。" class="headerlink" title="13.把解压的DVWA文件复制进 htdocs/文件夹内。"></a>13.把解压的DVWA文件复制进 htdocs/文件夹内。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplh9hk21j30kc01itba.jpg" alt="11"></p>
-<h2 id="14-然后我们需要修改一下DVWA的配置文件。"><a href="#14-然后我们需要修改一下DVWA的配置文件。" class="headerlink" title="14.然后我们需要修改一下DVWA的配置文件。"></a>14.然后我们需要修改一下DVWA的配置文件。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplhpc3cmj30jt077tba.jpg" alt="12"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopli2r94zj30dt02otba.jpg" alt="13"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplx2wf3ej30ju01rtba.jpg" alt="19"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopljlsxtej30dl02mtba.jpg" alt="18"><br>注意:一定要留空，不然不能创建数据库。</p>
-<h2 id="15-在浏览器打开DVWA。"><a href="#15-在浏览器打开DVWA。" class="headerlink" title="15.在浏览器打开DVWA。"></a>15.在浏览器打开DVWA。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopll6f1foj30jw02mtba.jpg" alt="14"><br>提示我们把config.inc.php.dist复制到config.inc.php。</p>
-<h2 id="16-其实我们把config-inc-php-dist移动到config-inc-php就可以了，-dist是不能被浏览器打开的，需要是-php的文件。"><a href="#16-其实我们把config-inc-php-dist移动到config-inc-php就可以了，-dist是不能被浏览器打开的，需要是-php的文件。" class="headerlink" title="16.其实我们把config.inc.php.dist移动到config.inc.php就可以了，.dist是不能被浏览器打开的，需要是.php的文件。"></a>16.其实我们把config.inc.php.dist移动到config.inc.php就可以了，.dist是不能被浏览器打开的，需要是.php的文件。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopllln1anj30jy00ztba.jpg" alt="15"></p>
-<h2 id="17-刷新一下浏览器。ok，出来了。"><a href="#17-刷新一下浏览器。ok，出来了。" class="headerlink" title="17.刷新一下浏览器。ok，出来了。"></a>17.刷新一下浏览器。ok，出来了。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplm0257oj30jx0estba.jpg" alt="16"></p>
-<h2 id="18-这是登陆界面。"><a href="#18-这是登陆界面。" class="headerlink" title="18.这是登陆界面。"></a>18.这是登陆界面。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplme5g2oj30b10b4tba.jpg" alt="17"></p>
-<h2 id="19-Tips-默认账号：admin，密码：password。"><a href="#19-Tips-默认账号：admin，密码：password。" class="headerlink" title="19.Tips:默认账号：admin，密码：password。"></a>19.Tips:默认账号：admin，密码：password。</h2><p>以后使用DVWA的时候需要先启用xampp，输入以下命令就可以打开了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /opt/lampp/lampp start</span><br></pre></td></tr></table></figure></p>
-</span>
+          <span itemprop="articleBody">
+            
+            1.首先下载DVWA包，网站：http://www.dvwa.co.uk/。2.然后下载xampp，网站：https://www.apachefriends.org/zh_cn/index.html3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/02/25/Ubuntu安装中文man手册/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4124,24 +4213,16 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="1-首先下载DVWA包，网站：http-www-dvwa-co-uk-。"><a href="#1-首先下载DVWA包，网站：http-www-dvwa-co-uk-。" class="headerlink" title="1.首先下载DVWA包，网站：http://www.dvwa.co.uk/。"></a>1.首先下载DVWA包，网站：<a href="http://www.dvwa.co.uk/。" target="_blank" rel="noopener">http://www.dvwa.co.uk/。</a></h2><h2 id="2-然后下载xampp，网站：https-www-apachefriends-org-zh-cn-index-html"><a href="#2-然后下载xampp，网站：https-www-apachefriends-org-zh-cn-index-html" class="headerlink" title="2.然后下载xampp，网站：https://www.apachefriends.org/zh_cn/index.html"></a>2.然后下载xampp，网站：<a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="noopener">https://www.apachefriends.org/zh_cn/index.html</a></h2><h2 id="3-首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的-deb-rpm的软件包，而是-run的源码包。"><a href="#3-首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的-deb-rpm的软件包，而是-run的源码包。" class="headerlink" title="3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的.deb,.rpm的软件包，而是.run的源码包。"></a>3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的.deb,.rpm的软件包，而是.run的源码包。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopkvgewp1j30dk02vweq.jpg" alt="1"></p>
-<h2 id="4-对文件添加权限，不然是不能运行安装的。"><a href="#4-对文件添加权限，不然是不能运行安装的。" class="headerlink" title="4.对文件添加权限，不然是不能运行安装的。"></a>4.对文件添加权限，不然是不能运行安装的。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopldqlekzj30j9010tba.jpg" alt="2"></p>
-<h2 id="5-然后运行源码包进行安装xampp，运行后会出现一个安装界面。"><a href="#5-然后运行源码包进行安装xampp，运行后会出现一个安装界面。" class="headerlink" title="5.然后运行源码包进行安装xampp，运行后会出现一个安装界面。"></a>5.然后运行源码包进行安装xampp，运行后会出现一个安装界面。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fople6kieaj30ha00ltba.jpg" alt="3"></p>
-<h2 id="6-点击next，继续。"><a href="#6-点击next，继续。" class="headerlink" title="6.点击next，继续。"></a>6.点击next，继续。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplc07nthj30gj0cvtba.jpg" alt="4"></p>
-<h2 id="7-然后我们可以看到提示：xampp将会安装大盘-opt-lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。"><a href="#7-然后我们可以看到提示：xampp将会安装大盘-opt-lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。" class="headerlink" title="7.然后我们可以看到提示：xampp将会安装大盘/opt/lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。"></a>7.然后我们可以看到提示：xampp将会安装大盘/opt/lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplv2hdk8j30hd0cttba.jpg" alt="5"></p>
-<h3 id="8-安装已经开始了。"><a href="#8-安装已经开始了。" class="headerlink" title="8.安装已经开始了。"></a>8.安装已经开始了。</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplw23bztj30gt0cxmzg.jpg" alt="6"></p>
-<h2 id="9-安装完成。"><a href="#9-安装完成。" class="headerlink" title="9.安装完成。"></a>9.安装完成。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplb41729j30jh0detba.jpg" alt="7"></p>
-<h2 id="10-我们可以打开浏览器测试一下是否安装成功。"><a href="#10-我们可以打开浏览器测试一下是否安装成功。" class="headerlink" title="10.我们可以打开浏览器测试一下是否安装成功。"></a>10.我们可以打开浏览器测试一下是否安装成功。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplfr48gpj30k40eltba.jpg" alt="8"></p>
-<h2 id="11-然后我们开始解压DVWA。"><a href="#11-然后我们开始解压DVWA。" class="headerlink" title="11.然后我们开始解压DVWA。"></a>11.然后我们开始解压DVWA。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplg5jflwj30hf085tba.jpg" alt="9"></p>
-<h2 id="12-我们现在进入xampp的安装目录。"><a href="#12-我们现在进入xampp的安装目录。" class="headerlink" title="12.我们现在进入xampp的安装目录。"></a>12.我们现在进入xampp的安装目录。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplgten7kj30gk00ztba.jpg" alt="10"></p>
-<h2 id="13-把解压的DVWA文件复制进-htdocs-文件夹内。"><a href="#13-把解压的DVWA文件复制进-htdocs-文件夹内。" class="headerlink" title="13.把解压的DVWA文件复制进 htdocs/文件夹内。"></a>13.把解压的DVWA文件复制进 htdocs/文件夹内。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplh9hk21j30kc01itba.jpg" alt="11"></p>
-<h2 id="14-然后我们需要修改一下DVWA的配置文件。"><a href="#14-然后我们需要修改一下DVWA的配置文件。" class="headerlink" title="14.然后我们需要修改一下DVWA的配置文件。"></a>14.然后我们需要修改一下DVWA的配置文件。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplhpc3cmj30jt077tba.jpg" alt="12"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopli2r94zj30dt02otba.jpg" alt="13"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplx2wf3ej30ju01rtba.jpg" alt="19"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopljlsxtej30dl02mtba.jpg" alt="18"><br>注意:一定要留空，不然不能创建数据库。</p>
-<h2 id="15-在浏览器打开DVWA。"><a href="#15-在浏览器打开DVWA。" class="headerlink" title="15.在浏览器打开DVWA。"></a>15.在浏览器打开DVWA。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopll6f1foj30jw02mtba.jpg" alt="14"><br>提示我们把config.inc.php.dist复制到config.inc.php。</p>
-<h2 id="16-其实我们把config-inc-php-dist移动到config-inc-php就可以了，-dist是不能被浏览器打开的，需要是-php的文件。"><a href="#16-其实我们把config-inc-php-dist移动到config-inc-php就可以了，-dist是不能被浏览器打开的，需要是-php的文件。" class="headerlink" title="16.其实我们把config.inc.php.dist移动到config.inc.php就可以了，.dist是不能被浏览器打开的，需要是.php的文件。"></a>16.其实我们把config.inc.php.dist移动到config.inc.php就可以了，.dist是不能被浏览器打开的，需要是.php的文件。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopllln1anj30jy00ztba.jpg" alt="15"></p>
-<h2 id="17-刷新一下浏览器。ok，出来了。"><a href="#17-刷新一下浏览器。ok，出来了。" class="headerlink" title="17.刷新一下浏览器。ok，出来了。"></a>17.刷新一下浏览器。ok，出来了。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplm0257oj30jx0estba.jpg" alt="16"></p>
-<h2 id="18-这是登陆界面。"><a href="#18-这是登陆界面。" class="headerlink" title="18.这是登陆界面。"></a>18.这是登陆界面。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplme5g2oj30b10b4tba.jpg" alt="17"></p>
-<h2 id="19-Tips-默认账号：admin，密码：password。"><a href="#19-Tips-默认账号：admin，密码：password。" class="headerlink" title="19.Tips:默认账号：admin，密码：password。"></a>19.Tips:默认账号：admin，密码：password。</h2><p>以后使用DVWA的时候需要先启用xampp，输入以下命令就可以打开了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /opt/lampp/lampp start</span><br></pre></td></tr></table></figure></p>
-</span>
+          <span itemprop="articleBody">
+            
+            1.首先下载DVWA包，网站：http://www.dvwa.co.uk/。2.然后下载xampp，网站：https://www.apachefriends.org/zh_cn/index.html3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/02/25/Ubuntu安装wineQQ/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4222,25 +4303,16 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="1-首先下载DVWA包，网站：http-www-dvwa-co-uk"><a href="#1-首先下载DVWA包，网站：http-www-dvwa-co-uk" class="headerlink" title="1.首先下载DVWA包，网站：http://www.dvwa.co.uk/"></a>1.首先下载DVWA包，网站：<a href="http://www.dvwa.co.uk/" target="_blank" rel="noopener">http://www.dvwa.co.uk/</a></h2><h2 id="2-然后下载xampp，网站：https-www-apachefriends-org-zh-cn-index-html"><a href="#2-然后下载xampp，网站：https-www-apachefriends-org-zh-cn-index-html" class="headerlink" title="2.然后下载xampp，网站：https://www.apachefriends.org/zh_cn/index.html"></a>2.然后下载xampp，网站：<a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="noopener">https://www.apachefriends.org/zh_cn/index.html</a></h2><h2 id="3-首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的-deb-rpm的软件包，而是-run的源码包。"><a href="#3-首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的-deb-rpm的软件包，而是-run的源码包。" class="headerlink" title="3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的.deb,.rpm的软件包，而是.run的源码包。"></a>3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的.deb,.rpm的软件包，而是.run的源码包。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopkvgewp1j30dk02vweq.jpg" alt="1"></p>
-<h2 id="4-对文件添加权限，不然是不能运行安装的。"><a href="#4-对文件添加权限，不然是不能运行安装的。" class="headerlink" title="4.对文件添加权限，不然是不能运行安装的。"></a>4.对文件添加权限，不然是不能运行安装的。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopldqlekzj30j9010tba.jpg" alt="2"></p>
-<h2 id="5-然后运行源码包进行安装xampp，运行后会出现一个安装界面。"><a href="#5-然后运行源码包进行安装xampp，运行后会出现一个安装界面。" class="headerlink" title="5.然后运行源码包进行安装xampp，运行后会出现一个安装界面。"></a>5.然后运行源码包进行安装xampp，运行后会出现一个安装界面。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fople6kieaj30ha00ltba.jpg" alt="3"></p>
-<h2 id="6-点击next，继续。"><a href="#6-点击next，继续。" class="headerlink" title="6.点击next，继续。"></a>6.点击next，继续。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplc07nthj30gj0cvtba.jpg" alt="4"></p>
-<h2 id="7-然后我们可以看到提示：xampp将会安装大盘-opt-lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。"><a href="#7-然后我们可以看到提示：xampp将会安装大盘-opt-lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。" class="headerlink" title="7.然后我们可以看到提示：xampp将会安装大盘/opt/lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。"></a>7.然后我们可以看到提示：xampp将会安装大盘/opt/lampp目录下，我们需要记住这个目录，方便我们安装DVWA和管理调试xampp。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplv2hdk8j30hd0cttba.jpg" alt="5"></p>
-<h3 id="8-安装已经开始了。"><a href="#8-安装已经开始了。" class="headerlink" title="8.安装已经开始了。"></a>8.安装已经开始了。</h3><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplw23bztj30gt0cxmzg.jpg" alt="6"></p>
-<h2 id="9-安装完成。"><a href="#9-安装完成。" class="headerlink" title="9.安装完成。"></a>9.安装完成。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplb41729j30jh0detba.jpg" alt="7"></p>
-<h2 id="10-我们可以打开浏览器测试一下是否安装成功。"><a href="#10-我们可以打开浏览器测试一下是否安装成功。" class="headerlink" title="10.我们可以打开浏览器测试一下是否安装成功。"></a>10.我们可以打开浏览器测试一下是否安装成功。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplfr48gpj30k40eltba.jpg" alt="8"></p>
-<h2 id="11-然后我们开始解压DVWA。"><a href="#11-然后我们开始解压DVWA。" class="headerlink" title="11.然后我们开始解压DVWA。"></a>11.然后我们开始解压DVWA。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplg5jflwj30hf085tba.jpg" alt="9"></p>
-<h2 id="12-我们现在进入xampp的安装目录。"><a href="#12-我们现在进入xampp的安装目录。" class="headerlink" title="12.我们现在进入xampp的安装目录。"></a>12.我们现在进入xampp的安装目录。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplgten7kj30gk00ztba.jpg" alt="10"></p>
-<h2 id="13-把解压的DVWA文件复制进-htdocs-文件夹内。"><a href="#13-把解压的DVWA文件复制进-htdocs-文件夹内。" class="headerlink" title="13.把解压的DVWA文件复制进 htdocs/文件夹内。"></a>13.把解压的DVWA文件复制进 htdocs/文件夹内。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplh9hk21j30kc01itba.jpg" alt="11"></p>
-<h2 id="14-然后我们需要修改一下DVWA的配置文件。"><a href="#14-然后我们需要修改一下DVWA的配置文件。" class="headerlink" title="14.然后我们需要修改一下DVWA的配置文件。"></a>14.然后我们需要修改一下DVWA的配置文件。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplhpc3cmj30jt077tba.jpg" alt="12"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopli2r94zj30dt02otba.jpg" alt="13"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplx2wf3ej30ju01rtba.jpg" alt="19"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopljlsxtej30dl02mtba.jpg" alt="18"><br>注意:一定要留空，不然不能创建数据库。</p>
-<h2 id="15-在浏览器打开DVWA。"><a href="#15-在浏览器打开DVWA。" class="headerlink" title="15.在浏览器打开DVWA。"></a>15.在浏览器打开DVWA。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopll6f1foj30jw02mtba.jpg" alt="14"><br>提示我们把config.inc.php.dist复制到config.inc.php。</p>
-<h2 id="16-其实我们把config-inc-php-dist移动到config-inc-php就可以了，-dist是不能被浏览器打开的，需要是-php的文件。"><a href="#16-其实我们把config-inc-php-dist移动到config-inc-php就可以了，-dist是不能被浏览器打开的，需要是-php的文件。" class="headerlink" title="16.其实我们把config.inc.php.dist移动到config.inc.php就可以了，.dist是不能被浏览器打开的，需要是.php的文件。"></a>16.其实我们把config.inc.php.dist移动到config.inc.php就可以了，.dist是不能被浏览器打开的，需要是.php的文件。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fopllln1anj30jy00ztba.jpg" alt="15"></p>
-<h2 id="17-刷新一下浏览器。ok，出来了。"><a href="#17-刷新一下浏览器。ok，出来了。" class="headerlink" title="17.刷新一下浏览器。ok，出来了。"></a>17.刷新一下浏览器。ok，出来了。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplm0257oj30jx0estba.jpg" alt="16"></p>
-<h2 id="18-这是登陆界面。"><a href="#18-这是登陆界面。" class="headerlink" title="18.这是登陆界面。"></a>18.这是登陆界面。</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1foplme5g2oj30b10b4tba.jpg" alt="17"></p>
-<h2 id="19-Tips-默认账号：admin，密码：password。"><a href="#19-Tips-默认账号：admin，密码：password。" class="headerlink" title="19.Tips:默认账号：admin，密码：password。"></a>19.Tips:默认账号：admin，密码：password。</h2><p>以后使用DVWA的时候需要先启用xampp，输入以下命令就可以打开了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /opt/lampp/lampp start</span><br></pre></td></tr></table></figure></p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            1.首先下载DVWA包，网站：http://www.dvwa.co.uk/2.然后下载xampp，网站：https://www.apachefriends.org/zh_cn/index.html3.首先我们进入下载xampp和DVWA的文件目录，安装xampp，我们可以看到xampp并不是常见的.
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/02/25/Ubuntu搭建DVWA靶机环境/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4290,30 +4362,30 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">你指尖跃动的电光，是我此生不变的信仰。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/">
+            <a href="/archives">
               <span class="site-state-item-count">128</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
-            
+            <a href="/tags">
               <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">标签</span>
-              
+              </a>
           </div>
 
         </nav>
@@ -4324,11 +4396,35 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
+                <a href="http://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945 || github" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
               </span>
             
           
@@ -4339,7 +4435,19 @@
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
               </span>
             
           
@@ -4349,7 +4457,7 @@
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -4384,7 +4492,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -4442,7 +4550,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -4450,17 +4558,23 @@ tpwidget("show");</script>
     
   
   
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-  <script type="text/javascript" src="//helpers.js?v="></script>
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
   
 
-  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="//nav-toggle.js?v="></script>
-  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
@@ -4481,15 +4595,17 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="//lazyload.js"></script>
+  <script type="text/javascript" src="/js/lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "//loading.gif",
+        placeholder: "/images/loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>

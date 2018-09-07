@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next  ">
+<html class="theme-next use-motion theme-next-mala">
 <head>
   
 
@@ -17,10 +17,12 @@
 
 
 
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-<link rel="stylesheet" type="text/css" href="//main.css?v="/>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
     <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。" />
@@ -32,6 +34,8 @@
 
 
 
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="什么是CDN加速？CDN的全称是Content Delivery Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学(MIT)的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。CDN有什么作用？CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳">
@@ -57,10 +61,18 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
-    sidebar: ''
+    scheme: 'Mala',
+    sidebar: 'post'
   };
 </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
 
 
   <title> 绕过cdn，查找真实IP | 冰羽の博客 </title>
@@ -118,11 +130,78 @@
   
 
   
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
 
   
     <div class="site-search">
       
   
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -168,7 +247,7 @@
 
 </style>
 
-<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -575,30 +654,30 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">你指尖跃动的电光，是我此生不变的信仰。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/">
+            <a href="/archives">
               <span class="site-state-item-count">128</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
-            
+            <a href="/tags">
               <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">标签</span>
-              
+              </a>
           </div>
 
         </nav>
@@ -609,11 +688,35 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
+                <a href="http://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945 || github" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
               </span>
             
           
@@ -624,7 +727,19 @@
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
               </span>
             
           
@@ -634,7 +749,7 @@
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -647,7 +762,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是CDN加速？"><span class="nav-text">什么是CDN加速？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CDN的全称是Content-Delivery-Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学-MIT-的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。"><span class="nav-text">CDN的全称是Content Delivery Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学(MIT)的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CDN有什么作用？"><span class="nav-text">CDN有什么作用？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。"><span class="nav-text">CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。"><span class="nav-text">CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对网站有什么好处？"><span class="nav-text">对网站有什么好处？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。"><span class="nav-text">首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么查看一个网站开启了CDN呢？"><span class="nav-text">怎么查看一个网站开启了CDN呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。"><span class="nav-text">方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#也可以使用一个在线的工具，ping-chinaz-com"><span class="nav-text">也可以使用一个在线的工具，ping.chinaz.com</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#还可以使用kali工具查询"><span class="nav-text">还可以使用kali工具查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么绕过CDN查找真实IP呢？"><span class="nav-text">怎么绕过CDN查找真实IP呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二级域名法"><span class="nav-text">二级域名法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nslookup法"><span class="nav-text">nslookup法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ping法"><span class="nav-text">ping法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用在线工具查询"><span class="nav-text">使用在线工具查询</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是CDN加速？"><span class="nav-number">1.</span> <span class="nav-text">什么是CDN加速？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CDN的全称是Content-Delivery-Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学-MIT-的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。"><span class="nav-number">1.1.</span> <span class="nav-text">CDN的全称是Content Delivery Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学(MIT)的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CDN有什么作用？"><span class="nav-number">2.</span> <span class="nav-text">CDN有什么作用？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。"><span class="nav-number">2.1.</span> <span class="nav-text">CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。"><span class="nav-number">2.2.</span> <span class="nav-text">CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对网站有什么好处？"><span class="nav-number">3.</span> <span class="nav-text">对网站有什么好处？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。"><span class="nav-number">3.1.</span> <span class="nav-text">首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么查看一个网站开启了CDN呢？"><span class="nav-number">4.</span> <span class="nav-text">怎么查看一个网站开启了CDN呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。"><span class="nav-number">4.1.</span> <span class="nav-text">方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#也可以使用一个在线的工具，ping-chinaz-com"><span class="nav-number">4.2.</span> <span class="nav-text">也可以使用一个在线的工具，ping.chinaz.com</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#还可以使用kali工具查询"><span class="nav-number">4.3.</span> <span class="nav-text">还可以使用kali工具查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么绕过CDN查找真实IP呢？"><span class="nav-number">5.</span> <span class="nav-text">怎么绕过CDN查找真实IP呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二级域名法"><span class="nav-number">5.1.</span> <span class="nav-text">二级域名法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nslookup法"><span class="nav-number">5.2.</span> <span class="nav-text">nslookup法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ping法"><span class="nav-number">5.3.</span> <span class="nav-text">ping法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用在线工具查询"><span class="nav-number">5.4.</span> <span class="nav-text">使用在线工具查询</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -680,7 +795,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -738,7 +853,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -746,21 +861,27 @@ tpwidget("show");</script>
     
   
   
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-  <script type="text/javascript" src="//helpers.js?v="></script>
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
   
 
-  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="//nav-toggle.js?v="></script>
-  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
   
-<script type="text/javascript" src="//bootstrap.scrollspy.js?v=" id="bootstrap.scrollspy.custom"></script>
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
 
 
 <script type="text/javascript" id="sidebar.toc.highlight">
@@ -936,15 +1057,17 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="//lazyload.js"></script>
+  <script type="text/javascript" src="/js/lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "//loading.gif",
+        placeholder: "/images/loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>

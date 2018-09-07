@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next  ">
+<html class="theme-next use-motion theme-next-mala">
 <head>
   
 
@@ -17,19 +17,25 @@
 
 
 
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-<link rel="stylesheet" type="text/css" href="//main.css?v="/>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
     <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。" />
 
 
 
+  <meta name="keywords" content="Hexo,Mala" />
 
 
 
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。">
@@ -46,10 +52,18 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
-    sidebar: ''
+    scheme: 'Mala',
+    sidebar: 'post'
   };
 </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
 
 
   <title> 冰羽の博客 </title>
@@ -109,11 +123,78 @@
   
 
   
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
 
   
     <div class="site-search">
       
   
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -3239,7 +3320,7 @@
 
 </style>
 
-<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -3414,7 +3495,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftvfhtd0n1j30xc0f0jvn.jpg" rel="gallery_cjlrzq3js001sokwa4iqn00g6"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftvfhtd0n1j30xc0f0jvn.jpg" rel="gallery_cjlrzuzpl0027ykwa43kgj5xs"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftvfhtd0n1j30xc0f0jvn.jpg" itemprop="contentUrl"/>
               </a>
@@ -3429,8 +3510,16 @@
 
       
         
-          <span itemprop="articleBody"><p>官方站点：<a href="https://www.sophos.com/zh-cn.aspx" target="_blank" rel="noopener">https://www.sophos.com/zh-cn.aspx</a><br>Linux的安全性被认为要高于其他操作系统.但是随着越来越多的Linux操作系统开始担当开发人员工作站，网站服务器和内部文档服务器等关键角色，它也逐渐成为黑客攻击的目标.除了Linux和跨平台系统容易被黑客利用外，没有得到保护的Linux设备还会成为Windows, Mac和安卓恶意软件的分布点。<br>Sophos Antivirus for Linux可以为Linux服务器和台式机提供随用随需的可计划扫描。它为分布广泛的Linux系统提供了卓越的性能，稳定性和可靠性。<br>而关于该防毒软件的特点，可以进去官网进行查看。<br>该产品有免费版和付费版，而我个人认为免费版已经足够你的使用了。<br>如果需要下载的话，首先需要注册账户，然后就没什么好说的了，就直接下载安装就好了。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            官方站点：https://www.sophos.com/zh-cn.aspxLinux的安全性被认为要高于其他操作系统.但是随着越来越多的Linux操作系统开始担当开发人员工作站，网站服务器和内部文档服务器等关键角色，它也逐渐成为黑客攻击的目标.除了Linux和跨平台系统容易被黑客利用外，没有得到保
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/08/02/Linux防毒软件-Sophos/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3513,7 +3602,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftv9wi0aj8j30xc0f0mza.jpg" rel="gallery_cjlrzq3m4004rokwamfn9ss4h"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftv9wi0aj8j30xc0f0mza.jpg" rel="gallery_cjlrzuzrl0056ykwa6ah5c212"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftv9wi0aj8j30xc0f0mza.jpg" itemprop="contentUrl"/>
               </a>
@@ -3528,10 +3617,16 @@
 
       
         
-          <span itemprop="articleBody"><p><strong>提示：以下操作存在风险，可能会导致第三方软件使用异常或系统无法进入，建议提前备份好数据后操作。</strong><br>按下快捷键 win+R，在运行里输入”msconfig”。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftv9derpj7j30b3069q2z.jpg" alt="1"><br>回车即可打开“系统配置”，选中”服务”选项卡。单击选中”隐藏所有 Microsoft 服务”复选框，然后开始勾选你需要禁用的服务，注意你一定要只禁用你认为不需要的服务，这些服务通常是一些你不常用的软件的服务，然后单击“全部禁用”即可。如果你无疑间，禁用了某个服务，导致某个软件无法正常打开，提示说xxx service或xxx服务无法正常启动，那么你直接去”服务”里打开即可正常使用了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftv9cui4wcj30if0dldgx.jpg" alt="1"><br><strong>注意：</strong> 按照此步骤操作可让 Microsoft 服务继续运行。这些服务包括网络连接、即插即用、事件日志记录、错误报告和其他服务。如果禁用这些服务，可能会永久性删除所有还原点。<br>在“系统配置”对话框的“启动”选项卡上，单击“打开任务管理器”。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftv9dkl1h7j30ie0dkt8x.jpg" alt="1"><br>在任务管理器的“启动”选项卡上，针对你认为需要禁用的启动项，选择启动项并右击“禁用”。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftv9dssie0j30ii0ghmxo.jpg" alt="1"><br>在“系统配置”对话框的“启动”选项卡上，点按或单击“确定”，会弹出”重启电脑”的对话框，然后重新启动电脑。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftv9cll1swj30b604qmx5.jpg" alt="1"></p>
-<p><strong>Tips：</strong> 如果你无意间，禁用了某个服务，导致某个软件无法正常打开，提示说xxx service或xxx服务无法正常启动，那么你直接去”服务”里打开即可正常使用了。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            提示：以下操作存在风险，可能会导致第三方软件使用异常或系统无法进入，建议提前备份好数据后操作。按下快捷键 win+R，在运行里输入”msconfig”。回车即可打开“系统配置”，选中”服务”选项卡。单击选中”隐藏所有 Microsoft 服务”复选框，然后开始勾选你需要禁用的服务，注意你一定要只禁用
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/08/02/Windows10怎么进入干净启动模式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3614,7 +3709,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftn5segdomj30nc09cabl.jpg" rel="gallery_cjlrzq3kt002sokwa7bvofawq"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftn5segdomj30nc09cabl.jpg" rel="gallery_cjlrzuzq1002vykwadnaxfij5"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftn5segdomj30nc09cabl.jpg" itemprop="contentUrl"/>
               </a>
@@ -3629,18 +3724,17 @@
 
       
         
-          <span itemprop="articleBody"><p>近日，Oracle 发布了一个黑科技”<strong>GraalVM</strong>“，号称是一个全新的通用全栈虚拟机，并具有高性能、跨语言交互等逆天特性，真有这么神奇？</p>
-<h2 id="GraalVM-简介"><a href="#GraalVM-简介" class="headerlink" title="GraalVM 简介"></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>GraalVM 简介</strong></div></h2><p>Oracle开源了一个实验性的产品GraalVM，官方称之为Universal GraalVM。它打通了不同语言之间的鸿沟，让我们可以进行混合式多语言编程。GraalVM 是一个跨语言的通用虚拟机，不仅支持了 Java、Scala、Groovy、Kotlin 等基于 JVM 的语言，以及 C、C++ 等基于 LLVM 的语言，还支持其他像 JavaScript、Ruby、Python 和 R 语言等。</p>
-<h2 id="GraalVM-的特性"><a href="#GraalVM-的特性" class="headerlink" title="GraalVM 的特性"></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>GraalVM 的特性</strong></div></h2><p>1.更加高效快速的运行代码<br>2.能与大多数编程语言直接交互<br>3.使用 Graal SDK 嵌入多语言<br>4.创建预编译的原生镜像<br>5.提供一系列工具来监视、调试和配置所有代码</p>
-<h2 id="GraalVM-的作用"><a href="#GraalVM-的作用" class="headerlink" title="GraalVM 的作用"></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>GraalVM 的作用</strong></div></h2><h3 id="支持多种语言组合编程"><a href="#支持多种语言组合编程" class="headerlink" title="支持多种语言组合编程"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color:white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>支持多种语言组合编程</strong></span></div></h3><p>来看下面这段代码<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftn6bbchiej30q60newhy.jpg" alt="1"><br>这段代码它同时使用了Node.js、Java、R三种语言拿node平台的express框架跑起了一个简单的web服务器。</p>
-<p>GraalVM 消除了各种编程语言之间的隔离性，那这种多编程语言结合使用会不会有性能影响？官方的说明是：零开销的互操作，这样，我们就可以为应用程序选择最佳的编程语言组合。</p>
-<h3 id="原生镜像加速"><a href="#原生镜像加速" class="headerlink" title="原生镜像加速"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color:white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>原生镜像加速</strong></span></div></h3><p>来看下面这段代码<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftn6epsbp1j30qm0cqjsm.jpg" alt="1"><br>GraalVM支持镜像加速，类似于Android的Ahead-Of-Time编译，将程序编译为原生的二进制程序，加速程序启动过程。GraalVM 可以预编译成原生镜像，从而极大提速了启动时间，并能减少 JVM 应用的内存占用。</p>
-<h3 id="可嵌入式运行环境"><a href="#可嵌入式运行环境" class="headerlink" title="可嵌入式运行环境"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color:white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>可嵌入式运行环境</strong></span></div></h3><p>GraalVM 可以被嵌入到各种应用程序中，既可以独立运行，也可以在已经内置好的 OpenJDK、Node.js、Oracle、MySQL 等环境中运行。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftn6ilt5x0j30v60h60v1.jpg" alt="1"></p>
-<h2 id="结合上面的特性，我们来看下-GraalVM-的架构图"><a href="#结合上面的特性，我们来看下-GraalVM-的架构图" class="headerlink" title="结合上面的特性，我们来看下 GraalVM 的架构图"></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>结合上面的特性，我们来看下 GraalVM 的架构图</strong></div></h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftn67ymiizj30dm07zmzw.jpg" alt="1"></p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>GraalVM 版本介绍</strong></div><br>如下图所示，GraalVM 提供了社区版和企业版两个版本。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftn5tto92bj311n0jdn0c.jpg" alt="1"><br>从特性来看，上述所说的高性能、内存优化貌似都在企业版中，企业版也可能只是在社区版上又增加了额外的提升吧！<br>官网下载地址 ：<a href="http://www.graalvm.org/downloads/" target="_blank" rel="noopener">http://www.graalvm.org/downloads/</a><br>社区版下载地址：<a href="https://github.com/oracle/graal/releases" target="_blank" rel="noopener">https://github.com/oracle/graal/releases</a></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>总结</strong></div></h2><p>GraalVM 总体看起来还是很不错的，可以说这就是一个全栈开发平台，不仅支持主流编程语言，还能组合在一起编程，根据不同任务来选择最佳的语言。另外。它还能提高更高的执行效率，以及占用更少的内存。即使目前仍然处于测试阶段，而且功能先对来说并没有太稳定，但是这种包含多语言功能的开发平台，仍然具有很大的改进空间和发展前景，我们不妨一试，相信会给你带来不同的体验。<br>至于应用场景，是否可应用于生产，现在还不能过早的下定论。对于这么一个变态级的产品，我们能做的只是期待它有更好的发展，仅此而已。</p>
-<p>本文参考: 1. <a href="http://www.oracle.com/technetwork/cn/oracle-labs/program-languages/overview/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/cn/oracle-labs/program-languages/overview/index.html</a><br>2.<a href="https://en.wikipedia.org/wiki/GraalVM" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/GraalVM</a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            近日，Oracle 发布了一个黑科技”GraalVM“，号称是一个全新的通用全栈虚拟机，并具有高性能、跨语言交互等逆天特性，真有这么神奇？
+GraalVM 简介Oracle开源了一个实验性的产品GraalVM，官方称之为Universal GraalVM。它打通了不同语言之间的鸿沟，让我们可以进行混
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/28/Oracle-发布了一个全栈虚拟机-GraalVM，支持-Python！/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3723,7 +3817,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftl3w3l8owj30xc0f0k2g.jpg" rel="gallery_cjlrzq3kp002lokwau5n9cdaw"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftl3w3l8owj30xc0f0k2g.jpg" rel="gallery_cjlrzuzqa0030ykwax1rnwc2e"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftl3w3l8owj30xc0f0k2g.jpg" itemprop="contentUrl"/>
               </a>
@@ -3738,25 +3832,16 @@
 
       
         
-          <span itemprop="articleBody"><table><br><tbody><br><tr><br><td style="padding: 5px 12px; width: 25px; font-size: 22px; text-align: center; background: #E8E8E8; line-height: 30px; color: #999;">导读</td><br><td style="padding: 10px 10px 12px; line-height: 20px;"><strong>Nmap 是一个网络探测和安全扫描程序，系统管理员和个人都可以使用Nmap软件扫描大型的网络，获取一台主机正在运行以及提供什么服务等信息。Nmap是在免费软件基金会的GNU General Public License (GPL)下发布的，可从 <a href="https://nmap.org/" target="_blank" rel="noopener">https://nmap.org/</a> 站点上免费下载。下载格式可以是tgz格式的源码或RPM格式。目前较稳定的版本是2.12。带有图形终端，本文集中讨论Nmap命令的使用。<br></strong></td><br></tr><br></tbody><br></table>
-
-<h2 id="简介："><a href="#简介：" class="headerlink" title="简介："></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>简介：</strong></div></h2><p>Nmap 是一个网络探测和安全扫描程序，系统管理员和个人都可以使用Nmap软件扫描大型的网络，获取一台主机正在运行以及提供什么服务等信息。Nmap支持很多扫描技术，例如：UDP、TCP connect()、TCP SYN(半开扫描)、ftp代理(bounce攻击)、反向标志、ICMP、FIN、ACK扫描、圣诞树(Xmas Tree)、SYN扫描和null扫描。Nmap还提供了一些高级的特征，例如：通过TCP/IP协议栈特征探测操作系统类型，秘密扫描，动态延时和重传计算，并行扫描，通过并行ping扫描探测关闭的主机，诱饵扫描，避开端口过滤检测，直接RPC扫描(无须端口影射)，碎片扫描，以及灵活的目标和端口设定.Nmap的命令语法相当简单。Nmap的不同选项和-s标志组成了不同的扫描类型，比如：一个Ping-scan命令就是”-sP”。在确定了目标主机和网络之后，即可进行扫描。如果以root来运行Nmap，Nmap的功能会大大的增强，因为超级用户可以创建便于Nmap利用的定制数据包。</p>
-<h2 id="Nmap命令使用详解"><a href="#Nmap命令使用详解" class="headerlink" title="Nmap命令使用详解"></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>Nmap命令使用详解</strong></div></h2><p>[Ping扫描（Ping Sweeping）]　<br>[端口扫描（Port Scanning）]　<br>[隐蔽扫描（Stealth Scanning）]<br>[UDP扫描（UDP Scanning）]<br>[操作系统识别（OS Fingerprinting）]<br>[Ident扫描（Ident Scanning）]　</p>
-<p>说明 ：<br>找出网络上的主机,测试哪些端口在监听，这些工作通常是由扫描来实现的。扫描网络是黑客进行入侵的第一步。通过使用扫描器(如Nmap)扫描网络，寻找存在漏洞的目标主机。一旦发现了有漏洞的目标，接下来就是对监听端口的扫描。Nmap通过使用TCP协议栈指纹准确地判断出被扫主机的操作系统类型。<br>在目标机上，Nmap运行灵活。使用Nmap进行单机扫描或是整个网络的扫描很简单，只要将带有”/mask”的目标地址指定给Nmap即可。地址是”victim/24”， 则目标是c类网络，地址是”victim/16”， 则目标是B类网络。<br>另外,Nmap允许你使用各类指定的网络地址，比如 192.168.7.* , 是指192.168.7.0/24, 或 192.168.7.1,4,8-12，对所选子网下的主机进行扫描。</p>
-<h3 id="Ping扫描-Ping-Sweeping"><a href="#Ping扫描-Ping-Sweeping" class="headerlink" title="Ping扫描(Ping Sweeping)"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color:white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>Ping扫描(Ping Sweeping)</strong></span></div></h3><p>入侵者使用Nmap扫描整个网络寻找目标。通过使用” -sP”命令，进行ping扫描。缺省情况下，Nmap给每个扫描到的主机发送一个ICMP echo和一个TCP ACK, 主机对任何一种的响应都会被Nmap得到。<br>举例：扫描192.168.7.0网络：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -sP 192.168.7.0/24</span><br><span class="line">Starting nmap V. 2.12 by Fyodor (fyodor@dhp.com, www.insecure.org/nmap/)</span><br><span class="line">Host (192.168.7.11) appears to be up.</span><br><span class="line">Host (192.168.7.12) appears to be up.</span><br><span class="line">Host (192.168.7.76) appears to be up.</span><br><span class="line">Nmap run completed -- 256 IP addresses (3 hosts up) scanned in 1 second</span><br></pre></td></tr></table></figure></p>
-<p>如果不发送ICMP echo请求，但要检查系统的可用性，这种扫描可能得不到一些站点的响应。在这种情况下，一个TCP”ping”就可用于扫描目标网络。<br>一个TCP”ping”将发送一个ACK到目标网络上的每个主机。网络上的主机如果在线，则会返回一个TCP RST响应。使用带有ping扫描的TCP ping选项，也就是”PT”选项可以对网络上指定端口进行扫描(本文例子中指的缺省端口是80（http）号端口)，它将可能通过目标边界路由器甚至是防火墙。注意，被探测的主机上的目标端口无须打开，关键取决于是否在网络上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -sP -PT80 192.168.7.0/24</span><br><span class="line">TCP probe port is 80</span><br><span class="line">Starting nmap V. 2.12 by Fyodor (fyodor@dhp.com, www.insecure.org/nmap/)</span><br><span class="line">Host (192.168.7.11) appears to be up.</span><br><span class="line">Host (192.168.7.12) appears to be up.</span><br><span class="line">Host (192.168.7.76) appears to be up.</span><br><span class="line">Nmap run completed -- 256 IP addresses (3 hosts up) scanned in 1 second</span><br></pre></td></tr></table></figure></p>
-<p>当潜在入侵者发现了在目标网络上运行的主机，下一步是进行端口扫描。<br>Nmap支持不同类别的端口扫描TCP连接, TCP SYN, Stealth FIN, Xmas Tree,Null和UDP扫描。</p>
-<h3 id="端口扫描-Port-Scanning"><a href="#端口扫描-Port-Scanning" class="headerlink" title="端口扫描(Port Scanning)"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color:white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>端口扫描(Port Scanning)</strong></span></div></h3><p>一个攻击者使用TCP连接扫描很容易被发现，因为Nmap将使用connect()系统调用打开目标机上相关端口的连接，并完成三次TCP握手。黑客登录到主机将显示开放的端口。一个tcp连接扫描使用”-sT”命令如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -sT 192.168.7.12</span><br><span class="line">Starting nmap V. 2.12 by Fyodor (fyodor@dhp.com, www.insecure.org/nmap/)</span><br><span class="line">Interesting ports on (192.168.7.12):</span><br><span class="line">Port State Protocol Service</span><br><span class="line">7 open tcp echo</span><br><span class="line">9 open tcp discard</span><br><span class="line">13 open tcp daytime</span><br><span class="line">19 open tcp chargen</span><br><span class="line">21 open tcp ftp</span><br><span class="line">...</span><br><span class="line">Nmap run completed -- 1 IP address (1 host up) scanned in 3 seconds</span><br></pre></td></tr></table></figure></p>
-<h3 id="隐蔽扫描-Stealth-Scanning"><a href="#隐蔽扫描-Stealth-Scanning" class="headerlink" title="隐蔽扫描(Stealth Scanning)"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color:white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>隐蔽扫描(Stealth Scanning)</strong></span></div></h3><p><br>如果一个攻击者不愿在扫描时使其信息被记录在目标系统日志上，TCP SYN扫描可帮你的忙，它很少会在目标机上留下记录，三次握手的过程从来都不会完全实现。通过发送一个SYN包（是TCP协议中的第一个包）开始一次 SYN的扫描。任何开放的端口都将有一个SYN|ACK响应。然而，攻击者发送一个RST替代ACK，连接中止。三次握手得不到实现，也就很少有站点能记录这样的探测。如果是关闭的端口，对最初的SYN信号的响应也会是RST，让NMAP知道该端口不在监听。”-sS”命令将发送一个SYN扫描探测主机或网络：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -sS 192.168.7.7</span><br><span class="line"></span><br><span class="line">Starting nmap V. 2.12 by Fyodor (fyodor@dhp.com, www.insecure.org/nmap/)</span><br><span class="line">Interesting ports on saturnlink.nac.net (192.168.7.7):</span><br><span class="line">Port State Protocol Service</span><br><span class="line">21 open tcp ftp</span><br><span class="line">25 open tcp smtp</span><br><span class="line">53 open tcp domain</span><br><span class="line">80 open tcp http</span><br><span class="line">...</span><br><span class="line">Nmap run completed -- 1 IP address (1 host up) scanned in 1 second</span><br></pre></td></tr></table></figure></p>
-<p>虽然SYN扫描可能不被注意，但他们仍会被一些入侵检测系统捕捉。Stealth FIN，Xmas树和Null scans可用于躲避包过滤和可检测进入受限制端口的SYN包。这三个扫描器对关闭的端口返回RST，对开放的端口将吸收包。一个 FIN “-sF”扫描将发送一个FIN包到每个端口。<br>然而Xmas扫描”-sX”打开FIN, URG和PUSH的标志位，一个Null scans “-sN”关闭所有的标志位。因为微软不支持TCP标准，所以FIN, Xmas Tree和Null scans在非微软公司的操作系统下才有效。</p>
-<h3 id="UDP扫描-UDP-Scanning"><a href="#UDP扫描-UDP-Scanning" class="headerlink" title="UDP扫描(UDP Scanning)"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color:white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>UDP扫描(UDP Scanning)</strong></span></div></h3><p>如果一个攻击者寻找一个流行的UDP漏洞，比如 rpcbind漏洞或cDc Back orifice。为了查出哪些端口在监听，则进行UDP扫描，即可知哪些端口对UDP是开放的。Nmap将发送一个O字节的UDP包到每个端口。如果主机返回端口不可达，则表示端口是关闭的。但这种方法受到时间的限制，因为大多数的UNIX主机限制ICMP错误速率。幸运的是，Nmap本身检测这种速率并自身减速，也就不会产生溢出主机的情况。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -sU 192.168.7.7</span><br><span class="line">WARNING: -sU is now UDP scan -- for TCP FIN scan use -sF</span><br><span class="line">Starting nmap V. 2.12 by Fyodor (fyodor@dhp.com, www.insecure.org/nmap/)</span><br><span class="line">Interesting ports on saturnlink.nac.net (192.168.7.7):</span><br><span class="line">Port State Protocol Service</span><br><span class="line">53 open udp domain</span><br><span class="line">111 open udp sunrpc</span><br><span class="line">123 open udp ntp</span><br><span class="line">137 open udp netbios-ns</span><br><span class="line">138 open udp netbios-dgm</span><br><span class="line">177 open udp xdmcp</span><br><span class="line">1024 open udp unknown</span><br><span class="line">Nmap run completed -- 1 IP address (1 host up) scanned in 2 seconds</span><br></pre></td></tr></table></figure></p>
-<h3 id="操作系统识别-OS-Fingerprinting"><a href="#操作系统识别-OS-Fingerprinting" class="headerlink" title="操作系统识别(OS Fingerprinting)"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color:white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>操作系统识别(OS Fingerprinting)</strong></span></div></h3><p>通常一个入侵者可能对某个操作系统的漏洞很熟悉，能很轻易地进入此操作系统的机器。一个常见的选项是TCP/IP上的指纹，带有”-O”选项决定远程操作系统的类型。这可以和一个端口扫描结合使用，但不能和ping扫描结合使用。Nmap通过向主机发送不同类型的探测信号，缩小查找的操作系统系统的范围。指纹验证TCP包括使用FIN探测技术发现目标机的响应类型。BOGUS的标志探测，发现远程主机对发送的带有SYN包的不明标志的反应，TCP 初始序列号(ISN)取样发现ISN数值的样式，也可以用另外的方式决定远程操作系统。有一篇权威的关于指纹（fingertprinting）的文章, 作者：Fyodor，也是namp的作者，参见地址：<a href="http://www.insecure.org/nmap/nmap-fingerprinting-article.html" target="_blank" rel="noopener">http://www.insecure.org/nmap/nmap-fingerprinting-article.html</a><br>Nmap’s操作系统的检测是很准确也是很有效的，举例：使用系统Solaris 2.7带有SYN扫描的指纹验证堆栈。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -sS -O 192.168.7.12</span><br><span class="line"></span><br><span class="line">Starting nmap V. 2.12 by Fyodor (fyodor@dhp.com, www.insecure.org/nmap/)</span><br><span class="line">Interesting ports on comet (192.168.7.12):</span><br><span class="line">Port State Protocol Service</span><br><span class="line">7 open tcp echo</span><br><span class="line">9 open tcp discard</span><br><span class="line">13 open tcp daytime</span><br><span class="line">19 open tcp chargen</span><br><span class="line">21 open tcp ftp</span><br><span class="line">...</span><br><span class="line">TCP Sequence Prediction: Class=random positive increments</span><br><span class="line">Difficulty=17818 (Worthy challenge)</span><br><span class="line">Remote operating system guess: Solaris 2.6 - 2.7</span><br><span class="line">Nmap run completed -- 1 IP address (1 host up) scanned in 5 seconds</span><br></pre></td></tr></table></figure></p>
-<h3 id="Ident扫描（Ident-Scanning）"><a href="#Ident扫描（Ident-Scanning）" class="headerlink" title="Ident扫描（Ident Scanning）"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color:white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>Ident扫描（Ident Scanning）</strong></span></div></h3><p>一个攻击者常常寻找一台对于某些进程存在漏洞的电脑。比如,一个以root运行的WEB服务器。如果目标机运行了identd,一个攻击者使用Nmap通过 “-I”选项的TCP连接,就可以发现哪个用户拥有http守护进程。我们将扫描一个Linux WEB服务器为例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -sT -p 80 -I -O www.yourserver.com</span><br><span class="line"></span><br><span class="line">Starting nmap V. 2.12 by Fyodor (fyodor@dhp.com, www.insecure.org/nmap/)</span><br><span class="line">Interesting ports on www.yourserver.com (xxx.xxx.xxx.xxx):</span><br><span class="line">Port</span><br><span class="line">State Protocol Service Owner</span><br><span class="line">80 open tcp http root</span><br><span class="line">TCP Sequence Prediction: Class=random positive increments</span><br><span class="line">Difficulty=1140492 (Good luck!)</span><br><span class="line">Remote operating system guess: Linux 2.1.122 - 2.1.132; 2.2.0-pre1 - 2.2.2</span><br><span class="line">Nmap run completed -- 1 IP address (1 host up) scanned in 1 second</span><br></pre></td></tr></table></figure></p>
-<p>如果你的WEB服务器是错误的配置并以root来运行，像上例一样，它将是很危险的。Apache 运行在root下，是不安全的。你可以通过把/etc/indeed.conf中的auth服务注销来阻止ident请求，并重新启动ident。另外也可使用ipchains或你最常用的防火墙，在网络边界上执行防火墙规则来终止ident请求，这可以阻止来路不明的人探测你的网站用户拥有哪些进程。</p>
-<h3 id="其他选项-Options"><a href="#其他选项-Options" class="headerlink" title="其他选项(Options)"></a><div style="margin-top:2em;margin-bottom:1em"><span style="color: white;letter-spacing: 2px;border-left:#FF3030 3px solid;border-right:#FF3030 3px solid;padding-left: 8px;padding-right:8px;font-size: 12pt"><strong>其他选项(Options)</strong></span></div></h3><p>除了以上这些扫描，Nmap还提供了无数选项。有一个是”-PT”,，我们已经介绍过了。在目标机或网络上常见的未经过滤的端口，进行TCP “ping”扫描。<br>另一个选项是”-P0”。在缺省设置下试图扫描一个端口之前，Nmap将用TCP ping” 和 ICMP echo命令ping一个目标机，如果ICMP 和TCP的探测扫描得不到响应，目标主机或网络就不会被扫描，即使他们是运行着的。而”-P0”选项允许在扫描之前不进行ping，即可进行扫描。<br>你应该习惯使用”-v”命令，它详细列出所有信息，能和所有的扫描选项一起使用。你能反复地使用这个选项，获得有关目标机的更多信息。<br>使用”-p “选项，可以指定扫描端口。比如 ，攻击者想探测你的web服务器的ftp（port 21），telnet (port 23), dns (port 53), http (port 80),想知道你所使用的操作系统，它将使用SYN扫描。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -sS -p 21,23,53,80 -O -v www.yourserver.com</span><br></pre></td></tr></table></figure></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>总结</strong></div></h2><p>我们可以使用工具来抵制黑客使用Nmap进行扫描，比如 Scanlogd, Courtney等，然而使用这样的工具并不能代替网络安全管理员。因为扫描只是攻击的前期准备，站点使用它只可以进行严密的监视，但是还是需要一个有着丰富经验的运维管理人员的存在的，比较没用任何工具可以代替人的。<br>关于Nmap更多的资料可以参考该网站： <a href="http://www.nmap.com.cn/" target="_blank" rel="noopener">http://www.nmap.com.cn/</a></p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            导读Nmap 是一个网络探测和安全扫描程序，系统管理员和个人都可以使用Nmap软件扫描大型的网络，获取一台主机正在运行以及提供什么服务等信息。Nmap是在免费软件基金会的GNU General Public License (GPL)下发布的，可从 https://nmap.org/ 站点上免费下载
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/25/Nmap使用详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3839,7 +3924,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftmbda1rbaj30xc0f00xa.jpg" rel="gallery_cjlrzq3ln0043okwatz9ibap6"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftmbda1rbaj30xc0f00xa.jpg" rel="gallery_cjlrzuzqy0046ykwame6607z2"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftmbda1rbaj30xc0f00xa.jpg" itemprop="contentUrl"/>
               </a>
@@ -3854,23 +3939,19 @@
 
       
         
-          <span itemprop="articleBody"><table><br><tbody><br><tr><br><td style="padding: 5px 12px; width: 25px; font-size: 22px; text-align: center; background: #E8E8E8; line-height: 30px; color: #999;">导读</td><br><td style="padding: 10px 10px 12px; line-height: 20px;"><strong>Lightbot是一款由加拿大学生Danny Yaroslavski编写的关于计算机编程的迷宫游戏，游戏的目标是让机器人举起所有的蓝色瓷砖，当然它还会为孩子提供各种各样的指导和提示，直到完成目标。</strong></td><br></tr><br></tbody><br></table>
+          <span itemprop="articleBody">
+            
+            导读Lightbot是一款由加拿大学生Danny Yaroslavski编写的关于计算机编程的迷宫游戏，游戏的目标是让机器人举起所有的蓝色瓷砖，当然它还会为孩子提供各种各样的指导和提示，直到完成目标。
 
 
-<p>安装nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install pcre pcre-devel zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.6.2.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="搭建Nginx静态服务器"><a href="#搭建Nginx静态服务器" class="headerlink" title="搭建Nginx静态服务器"></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>搭建Nginx静态服务器</strong></div></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~# sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo /etc/init.d/nginx start</span><br><span class="line">[ ok ] Starting nginx (via systemctl): nginx.service.</span><br></pre></td></tr></table></figure>
-<div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>安装MySQL数据库</strong></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br></pre></td></tr></table></figure><br><br>安装过程中会出现如下图所示的界面，你只需要一直回车就可以了。<br><img src="" alt="1"><br><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>搭建PHP环境</strong></div>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-add-repository ppa:ondrej/php</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install php7.1-cli php7.1-cgi php7.1-mysql</span><br><span class="line">sudo apt-get install php7.1-fpm</span><br></pre></td></tr></table></figure>
-<div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>配置Nginx并运行PHP程序</strong></div>
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>本文参考: <a href="http://wiki.ubuntu.org.cn/Nginx" target="_blank" rel="noopener">http://wiki.ubuntu.org.cn/Nginx</a></p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+安装nginx1yum -y install pcre pcre-devel zlib zli
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/25/Ubuntu搭建LNMP环境/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3953,7 +4034,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftkxscloi5j30xc0f00up.jpg" rel="gallery_cjlrzq3np0078okwai987psdw"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftkxscloi5j30xc0f00up.jpg" rel="gallery_cjlrzuzt5007hykwag3qdnin6"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkxscloi5j30xc0f00up.jpg" itemprop="contentUrl"/>
               </a>
@@ -3968,17 +4049,16 @@
 
       
         
-          <span itemprop="articleBody"><p>扫描的时候为了方便查看扫描的结果，那么需要开启数据库服务。metasploit默认的数据库是postgresql数据库。<br>首先开启postgresql数据库服务。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# /etc/init.d/postgresql start</span><br><span class="line">[ ok ] Starting postgresql (via systemctl): postgresql.service.</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkx4pogbgj30ft01hjrl.jpg" alt="1"><br>下面打开msfconsole，查看一下是否已连接数据库。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# msfconsole</span><br><span class="line">msf &gt; db_status</span><br><span class="line">[*] postgresql selected, no connection</span><br></pre></td></tr></table></figure></p>
-<p>表明未连接上postgresql数据库。</p>
-<p>下面初始化一下meatsploit的数据库。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf &gt; msfdb init</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkx5j4k1uj30m1071gnt.jpg" alt="1"><br>查看数据库的配置文件(主要是查看数据库名，用户名，密码)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# cat /usr/share/metasploit-framework/config/database.yml</span><br><span class="line">development:</span><br><span class="line">  adapter: postgresql</span><br><span class="line">  database: msf</span><br><span class="line">  username: msf</span><br><span class="line">  password: LlvOHTrjwhh52tjZWdNNIqDA2hHrkr4d90vGCg1+LEg=</span><br><span class="line">  host: localhost</span><br><span class="line">  port: 5432</span><br><span class="line">  pool: 5</span><br><span class="line">  timeout: 5</span><br><span class="line"></span><br><span class="line">production:</span><br><span class="line">  adapter: postgresql</span><br><span class="line">  database: msf</span><br><span class="line">  username: msf</span><br><span class="line">  password: LlvOHTrjwhh52tjZWdNNIqDA2hHrkr4d90vGCg1+LEg=</span><br><span class="line">  host: localhost</span><br><span class="line">  port: 5432</span><br><span class="line">  pool: 5</span><br><span class="line">  timeout: 5</span><br><span class="line"></span><br><span class="line">test:</span><br><span class="line">  adapter: postgresql</span><br><span class="line">  database: msf_test</span><br><span class="line">  username: msf</span><br><span class="line">  password: LlvOHTrjwhh52tjZWdNNIqDA2hHrkr4d90vGCg1+LEg=</span><br><span class="line">  host: localhost</span><br><span class="line">  port: 5432</span><br><span class="line">  pool: 5</span><br><span class="line">  timeout: 5</span><br></pre></td></tr></table></figure></p>
-<p>然后开始连接数据库。格式为:db_connect 用户名:密码@localhost:5432/数据库名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msf &gt; db_connect msf:LlvOHTrjwhh52tjZWdNNIqDA2hHrkr4d90vGCg1+LEg=@localhost:5432/msf</span><br><span class="line">[*] Rebuilding the module cache in the background...</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkx646s4gj30hn01dmxk.jpg" alt="1"></p>
-<p>我们再次查看一下数据库状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msf &gt; db_status</span><br><span class="line">[*] postgresql connected to msf</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkx7j1gr6j30bj01e74e.jpg" alt="1"><br>如图所示，我们已经成功连接上了数据库，如果你想连接其他的数据库，需要先断开当前已经连接的数据库，可以直接在msfconsole下执行 <em>msf&gt;</em> 。<br>如果你在使用search参数查找模块的时候出现 <strong>Module database cache not built yet, using slow search</strong> ，那么你首先应该查看是否已经连接数据库，然后重新构建数据库缓存,只需要运行 <em>db_rebuild_cache</em> 即可。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            扫描的时候为了方便查看扫描的结果，那么需要开启数据库服务。metasploit默认的数据库是postgresql数据库。首先开启postgresql数据库服务。12root@kali:~# /etc/init.d/postgresql start[ ok ] Starting postgresql 
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/24/metasploit初始化配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4061,7 +4141,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft68nekeu5j30xc0f043i.jpg" rel="gallery_cjlrzq3ob0089okwanunnso2a"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft68nekeu5j30xc0f043i.jpg" rel="gallery_cjlrzuztr008kykwast9rzzsq"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft68nekeu5j30xc0f043i.jpg" itemprop="contentUrl"/>
               </a>
@@ -4076,14 +4156,17 @@
 
       
         
-          <span itemprop="articleBody"><p>Dagon是一是一种先进的哈希破解工具，支持多种哈希类型的暴力破解，支持自定义字符字典进行暴力，可以自动验证散列所用算法，从Unicode到ASCII的随机slat生成，等等。<br>GitHub地址: <a href="https://github.com/Ekultek/Dagon" target="_blank" rel="noopener">https://github.com/Ekultek/Dagon</a></p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>安装</strong></div><br>运行环境:python2.7.x<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># git clone https://github.com/ekultek/dagon.git</span></span><br><span class="line">root@kali:~<span class="comment"># cd Dagon/</span></span><br><span class="line">root@kali:~/Dagon<span class="comment"># pip install -r requirements.txt   # 安装所需依赖的库</span></span><br><span class="line">![1](https://ws1.sinaimg.cn/large/006DGX4tly1ft66vh89p0j31kw18tamj.jpg)</span><br></pre></td></tr></table></figure></p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>基本用法</strong></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">python dagon.py -h  这将运行“帮助”菜单，并提供所有可能的标志</span><br><span class="line">python dagon.py -c &lt;HASH&gt; --bruteforce  这将为给定散列暴力破解尝试</span><br><span class="line">python dagon.py -l &lt;FILE-PATH&gt; --bruteforce  这将尝试暴力破解给定文件的散列(每行一个)</span><br><span class="line">python dagon.py -v &lt;HASH&gt;   这将检验hash的加密类型</span><br><span class="line">python dagon.py -V &lt;FILE-PATH&gt;  这将尝试验证每个文件的散列中，每行一个</span><br><span class="line">以上只是这个工具几个较为常用的参数，更多参数可以通过 *-h* 选项获取帮助。</span><br></pre></td></tr></table></figure></p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>使用</strong></div><br>查看hash加密类型<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Dagon<span class="comment"># python dagon.py -v 49ba59abbe56e057 -L</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft68a8bhxaj31560v80v9.jpg" alt="1"><br>破解单个加密的hash值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Dagon<span class="comment"># python dagon.py -c 49ba59abbe56e057 --bruteforce</span></span><br></pre></td></tr></table></figure></p>
-<p>以上只是最简单的操作，其余操作还需要你自己摸索。首先有必要说明一点，工具到底好不好用，hash值的破解率到底高不高，还是需要你经过测试才能知道的，而且对于MD5等加密算法，本身破解就十分有难度，目前根本不存在可以破解任何MD5加密的密码的工具。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            Dagon是一是一种先进的哈希破解工具，支持多种哈希类型的暴力破解，支持自定义字符字典进行暴力，可以自动验证散列所用算法，从Unicode到ASCII的随机slat生成，等等。GitHub地址: https://github.com/Ekultek/Dagon
+安装运行环境:python2.7.x1
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/11/一款先进的hash破解工具/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4166,7 +4249,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjlrzq3qo00c6okwa8enc0kqr"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjlrzuzw800c4ykwayfwep9i9"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" itemprop="contentUrl"/>
               </a>
@@ -4181,9 +4264,16 @@
 
       
         
-          <span itemprop="articleBody"><p>实在要说一句’对不起，各位’，上次写的<a href="https://www.bingyublog.com/2018/06/29/利用云虚拟主机搭建typecho博客/" target="_blank" rel="noopener">利用云虚拟主机搭建typecho博客</a>的教程，有一些错误在里面，所以在此进行一些修正。如果各位看了那篇文章，就知道我建的那个博客显示”该网站不能正常访问”的问题了。其实我也是最近才知道不能正常访问的。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2tz3v0q7j30nv0dxdgl.jpg" alt="1"><br>但是我根据提示来排查错误，一直找不到原因。<br>首先并不是需要备案的原因，”主机屋”的这个免费云主机是不需要备案的就可以正常访问的。<br>其次，我将其加入白名单也是不可以的，因为这个是免费云主机，其IP是公共的故不能加入白名单。<br>那就剩网站域名解析错误合格原因了。但是我检查了多次，发现并没有任何错误。解析是正常的，但是不能正常访问，那么说明解析的记录值也许是不正确的。<br>后来，我在云虚拟主机的控制台找到了这个小细节。首先有必要说明一下，该记录值是根据用户自动分配的，也就是说不同用户的解析的记录值是不一样的，你需要根据自己的记录值来解析。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2ty90byhj30i80cmjrx.jpg" alt="1"><br>果然是解析的记录值不正确。需要按照提示进行解析。在建站教程中，我是以ipv4作为记录值解析的，当时解析的IP地址就是FTP地址。其实这样解析正不正确，大家可以验证一下，如果解析正确的话，直接在浏览器输入该IP地址，也是可以正常访问到网站的，但是你会看到如下界面，则说明解析的是不正确的，该地址是没有映射到网站上去的。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2tyn3bdqj30md0fu0w0.jpg" alt="1"><br>那么，我们正确解析上去就可以了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2tyxst6sj30qt03p3yo.jpg" alt="1"><br>解析完毕后，也许不能立即生效，我们稍等一小会，再次刷新网页，就可以正常访问网站了。<br><a href="http://lengyue1024.cn/" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2tqfsbrij311l0hkarb.jpg"></a><br>ok，成功解决问题!!!网址: <a href="http://lengyue1024.cn/" target="_blank" rel="noopener">http://lengyue1024.cn/</a> ,欢迎各位的访问。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            实在要说一句’对不起，各位’，上次写的利用云虚拟主机搭建typecho博客的教程，有一些错误在里面，所以在此进行一些修正。如果各位看了那篇文章，就知道我建的那个博客显示”该网站不能正常访问”的问题了。其实我也是最近才知道不能正常访问的。但是我根据提示来排查错误，一直找不到原因。首先并不是需要备案的原
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/08/解决一下利用免费云主机暂时不能访问的问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4266,7 +4356,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fstlorpb61j30xc0f0thv.jpg" rel="gallery_cjlrzq3of008gokwa7vahau26"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fstlorpb61j30xc0f0thv.jpg" rel="gallery_cjlrzuzty008wykwaypeb64qc"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fstlorpb61j30xc0f0thv.jpg" itemprop="contentUrl"/>
               </a>
@@ -4281,14 +4371,16 @@
 
       
         
-          <span itemprop="articleBody"><p>软件官方主页: <a href="http://www.giuspen.com/cherrytree/" target="_blank" rel="noopener">http://www.giuspen.com/cherrytree/</a><br>GitHub项目地址: <a href="https://github.com/giuspen/cherrytree" target="_blank" rel="noopener">https://github.com/giuspen/cherrytree</a><br><strong>CherryTree</strong> 是一款轻型笔记软件应用，配有丰富的文字和语法高亮显示、数据存储在单个XML文件或Sqlite。一个层级式笔记记录程序，具有富文本和代码高亮的功能。<br>同时支持Windows平台和Linux平台，支持纯文本，富文本，markdown，支持代码高亮显示。今天只说Linux平台上。支持Debian、Ubuntu以及其衍生版本，支持Redhat以及其衍生版本。<br>这款编辑神器很值得你拥有。我曾多次在国外的视频教程中看到那些大佬使用CherryTree作为教学记录笔记使用。</p>
-<p>安装(以Ubuntu16.04 LTS演示)<br>第一种方法：<br>首先进入官网下载 ，然后直接用dpkg软件包管理工具安装即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo dpkg -i cherrytree_0.38.4-0_all.deb</span><br></pre></td></tr></table></figure></p>
-<p>有可能会遇到缺少依赖的问题，你只需运行以下命令即可成功安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get -f install</span><br></pre></td></tr></table></figure></p>
-<p>第二钟方法:<br>添加ppa仓库，然后再安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:giuspen/ppa</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install cherrytree</span><br></pre></td></tr></table></figure></p>
-<p>打开运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ cherrytree</span><br></pre></td></tr></table></figure></p>
-<p>使用<br>点击左上角的那个樱桃🍒图标即可新建文本，然后根据自己需求设置格式，最后点击确定即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fstic4sm3bj311w0hzgna.jpg" alt="1"><br>以下是演示文本<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsti8q7t71j311y0hs0tu.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsti8xcakqj311y0hywgm.jpg" alt="2"><br>好了，更多操作可以自己摸索，哪里不会可以联系我询问。</p>
-<p><strong>扫码进群，我等到你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            软件官方主页: http://www.giuspen.com/cherrytree/GitHub项目地址: https://github.com/giuspen/cherrytreeCherryTree 是一款轻型笔记软件应用，配有丰富的文字和语法高亮显示、数据存储在单个XML文件或Sqlite。一
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/06/30/一款运行在Linux平台的轻型笔记软件CherryTree/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4371,7 +4463,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjlrzq3p3009iokwaa1rsn31m"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjlrzuzub009hykwamdw83vfl"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" itemprop="contentUrl"/>
               </a>
@@ -4386,9 +4478,16 @@
 
       
         
-          <span itemprop="articleBody"><p>首先晒一下自己做的站，网址: <a href="http://lengyue1024.cn/" target="_blank" rel="noopener">http://lengyue1024.cn/</a><br>(没解析出wwww类型的网址，所以不能访问<a href="http://www.lengyue1024.cn" target="_blank" rel="noopener">http://www.lengyue1024.cn</a>)<br>利用的是前天领取的免费云虚拟主机做的网站，仅仅是为了做一些测试以及练习建站，并没有作为主站使用，首先各位也可以参照本教程来搭建一个博客或者个人网站。<br>OK，开始！<br>首先下载typecho博客系统.<br>官方地址: <a href="http://typecho.org/download" target="_blank" rel="noopener">http://typecho.org/download</a><br>官方文档: <a href="http://docs.typecho.org/doku.php" target="_blank" rel="noopener">http://docs.typecho.org/doku.php</a><br>主题网站: <a href="https://typecho.me/" target="_blank" rel="noopener">https://typecho.me/</a><br>插件网站: <a href="https://plugins.typecho.me/" target="_blank" rel="noopener">https://plugins.typecho.me/</a><br>首先下载FTP软件，我个人用的是“8uftp”,然后Linux系统上我推荐的是filezilla ，然后可以直接 <em>sudo apt-get install filezilla</em> 即可完成安装。<br>我们首先进入主机屋的控制台页面，然后找到自己的FTP账号与FTP地址，你需要自己设置一个FTP密码用于连接FTP服务 。然后运行8uftp软件，填写FTP地址、账号、密码，连接上。如下图即为连接成功的样子。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssei72da3j30qt0gxwk3.jpg" alt="1"><br>其中web文件存放网站程序文件，log文件为缓存的日志文件，data为备份文件。<br>我们把下载好的typecho文件解压出来，然后把解压出来的文件全部上传到web文件中。还有一点一定要记住，你不要把web文件的上层目录也一同传进去，这样你打开网站的时候，会找不到主页，多了一层目录，就需要多访问一个目录才能进入网站主页。同时把web目录默认存在的index.htm也要删除了。做的类似我图中所示这样即可。然后右击上传即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsseosascyj30qq0gudhc.jpg" alt="1"><br>此时你点击主机屋默认为你分配的网站域名，即可看到网站安装页面了。如果你看到如下图所示。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssesblzhmj311y0gwglv.jpg" alt="1"><br>该主机默认的PHP版本是5.2.9,我们需要调整一下PHP版本才可以，<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf0l5mbxj30ve0a8weg.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf0sbunfj30ia09xjr9.jpg" alt="1"><br>调整为如图所示，才可以。<br>然后刷新一下页面，好了，安装页面出来了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf20ad6hj311r0hmq45.jpg" alt="1"><br>然后可以点击”开始下一步”，进行安装。<br>这个时候我们需要MySQL数据库的信息，我们需要初始化数据库。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf6gqzgsj30vp0bj74a.jpg" alt="1"><br>即可看到数据库的信息了，我们需要设置一个数据库的密码，自己一定要记住这个密码，一会会用到。<br>我们开始填写配置信息，数据库地址设置为127.0.0.1，数据库名称、账号、密码均在数据库基本信息这里，按照你的MySQL数据库基本信息填写即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsursrcu7hj311y0lcabf.jpg" alt="1"><br>然后设置博客后台登陆账号、密码。这些一定要仔细填写，并且记住，以方便后期进入后台管理自己的博客。<br>然后即可看到安装成功的界面了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssff1dbm4j311x0hg74b.jpg" alt="1"><br>然后我们可以进入首页访问自己的博客<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssfhwk15hj311y0hp74u.jpg" alt="1"><br>这里我换个主题,将下载好的主题解压出来。 上传到/Web/usr/themes/文件夹下。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssfl5bwf8j30qk0h10uu.jpg" alt="1"><br>然后进入后台管理界面，启用刚才安装的主题即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssfm7rnj8j311w0hd3zp.jpg" alt="1"><br>刷新一下页面，即可看到新主题已经上线，嘿嘿~~~<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssgq9ezhlj311y0lcn1y.jpg" alt="1"><br>如果你需要安装什么新的插件的话，你首先下载解压出来，然后上传到/Web/usr/plugins/目录下，再到后台启用即可。<br>一切都设置好的话，我们可以自己买个域名，我这里有几个域名，都是在阿里云购买的，解析了，开始解析并绑定域名。<br>点击”域名绑定”，输入你购买的域名。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssgqe5qvej30v20adglk.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fst3cgvx8oj30i90cpt99.jpg" alt="1"><br>再进入阿里云控制台，开始解析域名，我这里解析出一个www和@类型。如果你是初次建站，你也许不理解这是什么意思，但是这里不做过多解释了，你只需按照我图示操作即可。还有一点就是，你解析出来的是什么类型的网址，你就绑定什么类型的。一定要全部绑定，否则不能正常访问。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssgptb756j30ib0cldg4.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fst3cgvx8oj30i90cpt99.jpg" alt="1"><br>其中的记录值即为FTP地址。解析成功后，点击你的域名即可打开你的博客了。<br>好了，整个过程就是这样，如果你还有哪里不懂的，可以<a href="http://shang.qq.com/open_webaio.html?sigt=eb13918e3cce45e958ba98cb6d54121ab735cb57303bfef30138cb855dfbb55c91f394d6298b31ea64a3fd9b6c049303&amp;sigu=5cb936229f2bdf3826fb23cb98883e973603d3ca92c6dce9a76944340bb2a9b534fcb423d256130b&amp;tuin=3433951572" target="_blank" rel="noopener">加我QQ</a>与我讨论。<br>我所用到的软件以及主题都传到群文件了，如果你需要的话，可以加群。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            首先晒一下自己做的站，网址: http://lengyue1024.cn/(没解析出wwww类型的网址，所以不能访问http://www.lengyue1024.cn)利用的是前天领取的免费云虚拟主机做的网站，仅仅是为了做一些测试以及练习建站，并没有作为主站使用，首先各位也可以参照本教程来搭建一个博
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/06/29/利用云虚拟主机搭建typecho博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4438,30 +4537,30 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">你指尖跃动的电光，是我此生不变的信仰。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/">
+            <a href="/archives">
               <span class="site-state-item-count">128</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
-            
+            <a href="/tags">
               <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">标签</span>
-              
+              </a>
           </div>
 
         </nav>
@@ -4472,11 +4571,35 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
+                <a href="http://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945 || github" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
               </span>
             
           
@@ -4487,7 +4610,19 @@
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
               </span>
             
           
@@ -4497,7 +4632,7 @@
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -4532,7 +4667,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -4590,7 +4725,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -4598,17 +4733,23 @@ tpwidget("show");</script>
     
   
   
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-  <script type="text/javascript" src="//helpers.js?v="></script>
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
   
 
-  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="//nav-toggle.js?v="></script>
-  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
@@ -4629,15 +4770,17 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="//lazyload.js"></script>
+  <script type="text/javascript" src="/js/lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "//loading.gif",
+        placeholder: "/images/loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next  ">
+<html class="theme-next use-motion theme-next-mala">
 <head>
   
 
@@ -17,19 +17,25 @@
 
 
 
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-<link rel="stylesheet" type="text/css" href="//main.css?v="/>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
     <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。" />
 
 
 
+  <meta name="keywords" content="Hexo,Mala" />
 
 
 
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。">
@@ -46,10 +52,18 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
-    sidebar: ''
+    scheme: 'Mala',
+    sidebar: 'post'
   };
 </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
 
 
   <title> 冰羽の博客 </title>
@@ -109,11 +123,78 @@
   
 
   
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
 
   
     <div class="site-search">
       
   
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -3239,7 +3320,7 @@
 
 </style>
 
-<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -3414,7 +3495,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fv04z5wn4yj30jg0763zc.jpg" rel="gallery_cjlrzq3jj001dokwadgfbaoi5"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fv04z5wn4yj30jg0763zc.jpg" rel="gallery_cjlrzuzp8001oykwapf3vsjoj"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv04z5wn4yj30jg0763zc.jpg" itemprop="contentUrl"/>
               </a>
@@ -3429,15 +3510,19 @@
 
       
         
-          <span itemprop="articleBody"><p>Linux系统能支持多种目前流行的文件系统，推荐用EXT4。</p>
-<p>Linux下面的文件类型主要有：</p>
-<blockquote>
-<p>1) <code>-</code>,普通文件，分为纯文本和二进制。<br>2) <code>d</code>,目录文件，存储文件的地方。<br>3) <code>l</code>,链接文件，指向同一个文件或目录的的文件。<br>4) 设备文件，分为<code>b</code>块设备和<code>c</code>字符设备。<br>5）<code>p</code>,管道文件，提供进程间通信<br>6）<code>s</code>,套接字文件，与网络通信有关</p>
-</blockquote>
-<p>Linux使用标准的目录结构，安装程序就已经为用户创建了文件系统和完整而固定的目录组成形式，并指定了每个目录的作用和其中的文件类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">目录名	简要说明</span><br><span class="line">/bin	二进制可执行命令,binary（二进制的）：许多“指令”对应的可“执行程序文件”目录</span><br><span class="line">/sbin super binary,超级的 二进制 许多“指令”对应的可“执行程序文件”目录，该目录文件  </span><br><span class="line">对应指令都是&quot;root&quot;用户可以执行的指令普通用户不能使用该目录里的命令：  </span><br><span class="line">普通用户：用$开头  </span><br><span class="line">root用户：用#开头  </span><br><span class="line">/dev	device,系统硬件设备目录（linux系统所有的硬件都通过文件表示）</span><br><span class="line">/etc	系统管理和配置文件,/etc/passwd 用于存储用户信息的文件,/etc/group  </span><br><span class="line">用于存储组别信息的文件  </span><br><span class="line">/etc/rc.d	启动的配置文件和脚本  </span><br><span class="line">/home	用户主目录的基点，比如用户abc的主目录就是/home/user，可以用~abc表示,普通用户的“家目录”  </span><br><span class="line">系统每增加一个普通用户的同时，都会在该目录为该目录设置一个文件目录代表该用户的“家目录”用户后期使用系统的时候首先会首先进入其目录家目录名字默认与当前用户名字一致用户对家目录拥有绝对最高的权限  </span><br><span class="line">/lib	标准程序设计库</span><br><span class="line">/sbin	系统管理命令，这里存放的是系统管理员使用的管理程序</span><br><span class="line">/tmp	公用的临时文件存储点</span><br><span class="line">/root	系统管理员的主目录</span><br><span class="line">/mnt	系统提供这个目录是让用户临时挂载其他的文件系统。存放临时的映射文件系统.</span><br><span class="line">/lost+found	这个目录平时是空的，系统非正常关机而留下“无家可归”的文件</span><br><span class="line">/proc	虚拟的目录，是系统内存的映射。可直接访问这个目录来获取系统信息。</span><br><span class="line">/var	variable,某些大文件的溢出区，比方说各种服务的日志文件,该目录存储的文件经常会发生变化（增加、修改、删除）</span><br><span class="line">/usr	unxi system resource(unix系统资源文件目录)最庞大的目录，要用到的应用程序和文件几乎都在这个目录。其中包含：</span><br><span class="line">/usr/X11R6 存放X window的目录</span><br><span class="line">/usr/bin 众多的应用程序</span><br><span class="line">/usr/sbin 超级用户的一些管理程序</span><br><span class="line">/usr/doc linux文档</span><br><span class="line">/usr/include linux下开发和编译应用程序所需要的头文件</span><br><span class="line">/usr/lib 常用的动态链接库和软件包的配置文件</span><br><span class="line">/usr/man 帮助文档</span><br><span class="line">/usr/src 源代码，linux内核的源代码就放在/usr/src/linux里</span><br><span class="line">/usr/local/bin 本地增加的命令</span><br><span class="line">/usr/local/lib 本地增加的库</span><br><span class="line">该目录类似win系统的 C:/Program files 目录,该目录经常用于安装各种软件,软件安装完毕会形成对应的指令，该指令对应的可执行程序文件就存放在以下目录  </span><br><span class="line">/usr/bin 许多“指令”对应的可“执行程序文件”目录   </span><br><span class="line">/usr/sbin root用户执行的指令 对应的 可“执行程序文件”目录  </span><br><span class="line">/boot 系统启动核心目录，用于储存系统启动文件</span><br></pre></td></tr></table></figure>
-<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            Linux系统能支持多种目前流行的文件系统，推荐用EXT4。
+Linux下面的文件类型主要有：
+
+1) -,普通文件，分为纯文本和二进制。2) d,目录文件，存储文件的地方。3) l,链接文件，指向同一个文件或目录的的文件。4) 设备文件，分为b块设备和c字符设备。5）p,管道文件，提供进程间通信6
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/09/08/Linux文件目录/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3503,32 +3588,28 @@
 
       
         
-          <span itemprop="articleBody"><html>
-<head>
-<title>要在标题栏上显示的文字</title>
-<head>
-</head></head><body>
+          <span itemprop="articleBody">
+            
+            
+
+要在标题栏上显示的文字
+
+
 正文部分
 
-<div class="comment"></div>
-    <script>
+
+    
         new Valine({
             // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
             av: AV,
-            el: '.comment', //
-            app_id: 'fq3aics801iEftdGyUK0emtG-gzGzoHsz', // 这里填写上面得到的APP ID
-            app_key: 'ojpgVjlcRKxhoAjMoMDIhk5v', // 这里填写上面得到的APP KEY
-            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!' // [v1.0.7 new]留言框占位提示文字
-        });
-    </script>
-
-<!--Leancloud 操作库:-->
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<!--Valine 的核心代码库:-->
-<script src="/valine/Valine.min.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
-</html>
-</span>
+            el: '.comment',
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/09/07/test/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3611,7 +3692,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fv02kluxqug30m80gonib.gif" rel="gallery_cjlrzq3jn001kokwa4thti78w"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fv02kluxqug30m80gonib.gif" rel="gallery_cjlrzuzp3001jykwaph89m7ws"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv02kluxqug30m80gonib.gif" itemprop="contentUrl"/>
               </a>
@@ -3626,99 +3707,18 @@
 
       
         
-          <span itemprop="articleBody"><h3 id="uptime"><a href="#uptime" class="headerlink" title="uptime"></a>uptime</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ uptime</span><br><span class="line">23:51:26 up 21:31, 1 user, load average: 30.02, 26.43, 19.0212</span><br></pre></td></tr></table></figure>
-<p>该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。</p>
-<h3 id="dmesg-tail"><a href="#dmesg-tail" class="headerlink" title="dmesg | tail"></a>dmesg | tail</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ dmesg | tail</span><br><span class="line">[1880957.563150] perl invoked oom-killer: gfp_mask=0x280da, order=0, oom_score_adj=0</span><br><span class="line">[...]</span><br><span class="line">[1880957.563400] Out of memory: Kill process 18694 (perl) score 246 or sacrifice child</span><br><span class="line">[1880957.563408] Killed process 18694 (perl) total-vm:1972392kB, anon-rss:1953348kB, file-rss:0kB</span><br><span class="line">[2320864.954447] TCP: Possible SYN flooding on port 7001. Dropping request.  Check SNMP counters.123456</span><br></pre></td></tr></table></figure>
-<p>打印内核环形缓存区中的内容，可以用来查看一些错误；</p>
-<p>上面的例子中，显示进程18694 因引内存越界被kill掉以及TCP request被丢弃的错误。通过dmesg可以快速判断是否有导致系统性能异常的问题。</p>
-<h3 id="vmstat-1"><a href="#vmstat-1" class="headerlink" title="vmstat 1"></a>vmstat 1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat 1</span><br><span class="line">procs ---------memory---------- ---swap-- -----io---- -system-- ------cpu-----</span><br><span class="line"> r  b swpd   free   buff  cache   si   so    bi    bo   <span class="keyword">in</span>   cs us sy id wa st</span><br><span class="line">34  0    0 200889792  73708 591828    0    0     0     5    6   10 96  1  3  0  0</span><br><span class="line">32  0    0 200889920  73708 591860    0    0     0   592 13284 4282 98  1  1  0  0</span><br><span class="line">32  0    0 200890112  73708 591860    0    0     0     0 9501 2154 99  1  0  0  0</span><br><span class="line">32  0    0 200889568  73712 591856    0    0     0    48 11900 2459 99  0  0  0  0</span><br><span class="line">32  0    0 200890208  73712 591860    0    0     0     0 15898 4840 98  1  1  0  0</span><br><span class="line">^C123456789</span><br></pre></td></tr></table></figure>
-<p>打印进程、内存、交换分区、IO和CPU等的统计信息；</p>
-<p>vmstat的格式如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; vmstat [options] [delay [count]]</span><br></pre></td></tr></table></figure></p>
-<p>vmstat第一次输出表示从开机到vmstat运行时的平均值；剩余输出的都是在指定的时间间隔内的平均值，上述例子中delay的值设置为1，除第一次以外，剩余的都是1秒统计一次，count未设置，将会一直循环打印。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat 10 3</span><br><span class="line">procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----</span><br><span class="line"> r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st</span><br><span class="line"> 1  0      0 2527112 1086888 13720228    0    0     1    14    2    1  1  1 99  0  0</span><br><span class="line"> 0  0      0 2527156 1086888 13719856    0    0     0   104 3003 4901  0  0 99  0  0</span><br><span class="line"> 0  0      0 2526412 1086888 13719904    0    0     0    10 3345 4870  0  1 99  0  0123456</span><br></pre></td></tr></table></figure></p>
-<p>上述的例子中delay设置为10，count设置为3，表示每行打印10秒内的平均值，只打印3次。</p>
-<p><strong>需要检查的列</strong></p>
-<ul>
-<li><p>r：表示正在运行或者等待CPU调度的进程数。因为该列数据不包含I/O的统计信息，因此可以用来检测CPU是否饱和。若r列中的数字大于CPU的核数，表示CPU已经处于饱和状态。</p>
-</li>
-<li><p>free：当前剩余的内存；</p>
-</li>
-<li><p>si, so：交换分区换入和换出的个数，若换入换出个数大于0，表示内存不足；</p>
-</li>
-<li><p>us, sy, id, wa：CPU的统计信息，分别表示user time、system time(kernel)、idle、wait I/O。I/O处理所用的时间包含在system time中，因此若system time超过20%，则I/O可能存在瓶颈或异常；</p>
-</li>
-</ul>
-<h3 id="mpstat-P-ALL-1"><a href="#mpstat-P-ALL-1" class="headerlink" title="mpstat -P ALL 1"></a>mpstat -P ALL 1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ mpstat -P ALL</span><br><span class="line">Linux 3.10.0-229.el7.x86_64 (localhost.localdomain)     05/30/2018  _x86_64_    (16 CPU)</span><br><span class="line"></span><br><span class="line">04:03:55 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle</span><br><span class="line">04:03:55 PM  all    3.67    0.00    0.61    0.71    0.00    0.00    0.00    0.00    0.00   95.02</span><br><span class="line">04:03:55 PM    0    3.52    0.00    0.57    0.76    0.00    0.00    0.00    0.00    0.00   95.15</span><br><span class="line">04:03:55 PM    1    3.83    0.00    0.61    0.71    0.00    0.00    0.00    0.00    0.00   94.85</span><br><span class="line">04:03:55 PM    2    3.80    0.00    0.61    0.60    0.00    0.00    0.00    0.00    0.00   94.99</span><br><span class="line">04:03:55 PM    3    3.68    0.00    0.58    0.60    0.00    0.00    0.00    0.00    0.00   95.13</span><br><span class="line">04:03:55 PM    4    3.54    0.00    0.57    0.60    0.00    0.00    0.00    0.00    0.00   95.30</span><br><span class="line">[...]1234567891011</span><br></pre></td></tr></table></figure>
-<p>该命令用于每秒打印一次每个CPU的统计信息，可用于查看CPU的调度是否均匀。</p>
-<h3 id="pidstat-1"><a href="#pidstat-1" class="headerlink" title="pidstat 1"></a>pidstat 1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ pidstat 1</span><br><span class="line">Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015    _x86_64_    (32 CPU)</span><br><span class="line"></span><br><span class="line">07:41:02 PM   UID       PID    %usr %system  %guest    %CPU   CPU  Command</span><br><span class="line">07:41:03 PM     0         9    0.00    0.94    0.00    0.94     1  rcuos/0</span><br><span class="line">07:41:03 PM     0      4214    5.66    5.66    0.00   11.32    15  mesos-slave</span><br><span class="line">07:41:03 PM     0      4354    0.94    0.94    0.00    1.89     8  java</span><br><span class="line">07:41:03 PM     0      6521 1596.23    1.89    0.00 1598.11    27  java</span><br><span class="line">07:41:03 PM     0      6564 1571.70    7.55    0.00 1579.25    28  java</span><br><span class="line">07:41:03 PM 60004     60154    0.94    4.72    0.00    5.66     9  pidstat</span><br><span class="line"></span><br><span class="line">07:41:03 PM   UID       PID    %usr %system  %guest    %CPU   CPU  Command</span><br><span class="line">07:41:04 PM     0      4214    6.00    2.00    0.00    8.00    15  mesos-slave</span><br><span class="line">07:41:04 PM     0      6521 1590.00    1.00    0.00 1591.00    27  java</span><br><span class="line">07:41:04 PM     0      6564 1573.00   10.00    0.00 1583.00    28  java</span><br><span class="line">07:41:04 PM   108      6718    1.00    0.00    0.00    1.00     0  snmp-pass</span><br><span class="line">07:41:04 PM 60004     60154    1.00    4.00    0.00    5.00     9  pidstat</span><br><span class="line">^C123456789101112131415161718</span><br></pre></td></tr></table></figure>
-<p>该命令用于打印各个进程对CPU的占用情况，类似top命令中显示的内容。pidstat的优势在于，可以滚动的打印进程运行情况，而不像top那样会清屏。</p>
-<p>上述例子中，%CPU中两个java进程的cpu利用率分别达到了1590%和1573%，表示java进程占用了16颗CPU。</p>
-<h3 id="iostat-xz-1"><a href="#iostat-xz-1" class="headerlink" title="iostat -xz 1"></a>iostat -xz 1</h3><p>类似vmstat，第一次输出的是从系统开机到统计这段时间的采样数据；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ iostat -xz 1</span><br><span class="line">Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015  _x86_64_ (32 CPU)</span><br><span class="line"></span><br><span class="line">avg-cpu:  %user   %nice %system %iowait  %steal   %idle</span><br><span class="line">          73.96    0.00    3.73    0.03    0.06   22.21</span><br><span class="line"></span><br><span class="line">Device:   rrqm/s   wrqm/s     r/s     w/s    rkB/s    wkB/s avgrq-sz avgqu-sz   await r_await w_await  svctm  %util</span><br><span class="line">xvda        0.00     0.23    0.21    0.18     4.52     2.08    34.37     0.00    9.98   13.80    5.42   2.44   0.09</span><br><span class="line">xvdb        0.01     0.00    1.02    8.94   127.97   598.53   145.79     0.00    0.43    1.78    0.28   0.25   0.25</span><br><span class="line">xvdc        0.01     0.00    1.02    8.86   127.79   595.94   146.50     0.00    0.45    1.82    0.30   0.27   0.26</span><br><span class="line">dm-0        0.00     0.00    0.69    2.32    10.47    31.69    28.01     0.01    3.23    0.71    3.98   0.13   0.04</span><br><span class="line">dm-1        0.00     0.00    0.00    0.94     0.01     3.78     8.00     0.33  345.84    0.04  346.81   0.01   0.00</span><br><span class="line">dm-2        0.00     0.00    0.09    0.07     1.35     0.36    22.50     0.00    2.55    0.23    5.62   1.78   0.03</span><br><span class="line">[...]</span><br><span class="line">^C123456789101112131415</span><br></pre></td></tr></table></figure></p>
-<p>检查列</p>
-<ul>
-<li><p>r/s, w/s, rkB/s, wkB/s，表示每秒向I/O设备发出的reads、writes、read Kbytes、write Kbytes的数量。</p>
-</li>
-<li><p>await，表示应用程序排队等待和被服务的平均I/O时间，该值若大于预期的时间，这表示I/O设备处于饱和状态或者异常。</p>
-</li>
-<li><p>avgqu-sz，表示请求被发送给I/O设备的平均时间，若该值大于1，则表示I/O设备可能已经饱和；</p>
-</li>
-<li><p>%util，每秒设备的利用率；若该利用率超过60%，则表示设备出现性能异常；</p>
-</li>
-</ul>
-<h3 id="free-m"><a href="#free-m" class="headerlink" title="free -m"></a>free -m</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ free -m</span><br><span class="line">             total       used       free     shared    buffers     cached</span><br><span class="line">Mem:        245998      24545     221453         83         59        541</span><br><span class="line">-/+ buffers/cache:      23944     222053</span><br><span class="line">Swap:            0          0          012345</span><br></pre></td></tr></table></figure>
-<p>检查的列：</p>
-<ul>
-<li><p>buffers: For the buffer cache, used for block device I/O.</p>
-</li>
-<li><p>cached: For the page cache, used by file systems.</p>
-</li>
-</ul>
-<p>若buffers和cached接近0，说明I/O的使用率过高，系统存在性能问题。<br>Linux中会用free内存作为cache，若应用程序需要分配内存，系统能够快速的将cache占用的内存回收，因此free的内存包含cache占用的部分。</p>
-<h3 id="sar-n-DEV-1"><a href="#sar-n-DEV-1" class="headerlink" title="sar -n DEV 1"></a>sar -n DEV 1</h3><p>sar是System Activity Reporter的缩写，系统活动状态报告。</p>
-<p>-n { keyword [,…] | ALL }，用于报告网络统计数据。keyword可以是以下的一个或者多个： DEV, EDEV, NFS, NFSD, SOCK, IP, EIP, ICMP, EICMP, TCP, ETCP, UDP, SOCK6, IP6, EIP6, ICMP6, EICMP6 和UDP6。</p>
-<p>-n DEV 1, 每秒统计一次网络的使用情况；<br>-n EDEV 1，每秒统计一次错误的网络信息；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ sar -n DEV 1</span><br><span class="line">Linux 3.10.0-229.el7.x86_64 (localhost.localdomain)     05/31/2018  _x86_64_    (16 CPU)</span><br><span class="line"></span><br><span class="line">03:54:57 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s</span><br><span class="line">03:54:58 PM     ens32   3286.00   7207.00    283.34  18333.90      0.00      0.00      0.00</span><br><span class="line">03:54:58 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">03:54:58 PM vethe915e51      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">03:54:58 PM   docker0      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line"></span><br><span class="line">03:54:58 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s</span><br><span class="line">03:54:59 PM     ens32   3304.00   7362.00    276.89  18898.51      0.00      0.00      0.00</span><br><span class="line">03:54:59 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">03:54:59 PM vethe915e51      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">03:54:59 PM   docker0      0.00      0.00      0.00      0.00      0.00      0.00      0.00</span><br><span class="line">^C123456789101112131415</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>IFACE ，网络接口名称；</p>
-</li>
-<li><p>rxpck/s ，每秒接收到包数；</p>
-</li>
-<li><p>txpck/s ，每秒传输的报数；(transmit packages)</p>
-</li>
-<li><p>rxkB/s ，每秒接收的千字节数；</p>
-</li>
-<li><p>txkB/s ，每秒发送的千字节数；</p>
-</li>
-<li><p>rxcmp/s ，每秒接收的压缩包的数量；</p>
-</li>
-<li><p>txcmp/s ，每秒发送的压缩包的数量；</p>
-</li>
-<li><p>rxmcst/s，每秒接收的组数据包数量；</p>
-</li>
-</ul>
-<h3 id="sar-n-TCP-ETCP-1"><a href="#sar-n-TCP-ETCP-1" class="headerlink" title="sar -n TCP,ETCP 1"></a>sar -n TCP,ETCP 1</h3><p>该命令可以用于粗略的判断网络的吞吐量，如发起的网络连接数量和接收的网络连接数量；</p>
-<ul>
-<li><p>TCP, 报告关于TCPv4网络流量的统计信息;</p>
-</li>
-<li><p>ETCP, 报告有关TCPv4网络错误的统计信息;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ sar -n TCP,ETCP 1</span><br><span class="line">Linux 3.10.0-514.26.2.el7.x86_64 (aushop)   05/31/2018  _x86_64_    (2 CPU)</span><br><span class="line"></span><br><span class="line">04:16:27 PM  active/s passive/s    iseg/s    oseg/s</span><br><span class="line">04:16:44 PM      0.00      2.00     15.00     13.00</span><br><span class="line">04:16:45 PM      0.00      3.00    126.00    203.00</span><br><span class="line">04:16:46 PM      0.00      0.00     99.00     99.00</span><br><span class="line">04:16:47 PM      0.00      0.00     18.00      9.00</span><br><span class="line">04:16:48 PM      0.00      0.00      5.00      6.00</span><br><span class="line">04:16:49 PM      0.00      0.00      1.00      1.00</span><br><span class="line">04:16:50 PM      0.00      1.00      4.00      4.00</span><br><span class="line">04:16:51 PM      0.00      3.00    171.00    243.00</span><br><span class="line">^C12345678910111213</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>检测的列：</p>
-<ul>
-<li><p>active/s: Number of locally-initiated TCP connections per second (e.g., via connect())，发起的网络连接数量；</p>
-</li>
-<li><p>passive/s: Number of remotely-initiated TCP connections per second (e.g., via accept())，接收的网络连接数量；</p>
-</li>
-<li><p>retrans/s: Number of TCP retransmits per second，重传的数量；</p>
-</li>
-</ul>
-<h3 id="top"><a href="#top" class="headerlink" title="top"></a>top</h3><p>top命令包含更多的指标统计，相当于一个综合命令。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ top</span><br><span class="line">top - 00:15:40 up 21:56,  1 user,  load average: 31.09, 29.87, 29.92</span><br><span class="line">Tasks: 871 total,   1 running, 868 sleeping,   0 stopped,   2 zombie</span><br><span class="line">%Cpu(s): 96.8 us,  0.4 sy,  0.0 ni,  2.7 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st</span><br><span class="line">KiB Mem:  25190241+total, 24921688 used, 22698073+free,    60448 buffers</span><br><span class="line">KiB Swap:        0 total,        0 used,        0 free.   554208 cached Mem</span><br><span class="line"></span><br><span class="line">   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND</span><br><span class="line"> 20248 root      20   0  0.227t 0.012t  18748 S  3090  5.2  29812:58 java</span><br><span class="line">  4213 root      20   0 2722544  64640  44232 S  23.5  0.0 233:35.37 mesos-slave</span><br><span class="line"> 66128 titancl+  20   0   24344   2332   1172 R   1.0  0.0   0:00.07 top</span><br><span class="line">  5235 root      20   0 38.227g 547004  49996 S   0.7  0.2   2:02.74 java</span><br><span class="line">  4299 root      20   0 20.015g 2.682g  16836 S   0.3  1.1  33:14.42 java</span><br><span class="line">     1 root      20   0   33620   2920   1496 S   0.0  0.0   0:03.82 init</span><br><span class="line">     2 root      20   0       0      0      0 S   0.0  0.0   0:00.02 kthreadd</span><br><span class="line">     3 root      20   0       0      0      0 S   0.0  0.0   0:05.35 ksoftirqd/0</span><br><span class="line">     5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H</span><br><span class="line">     6 root      20   0       0      0      0 S   0.0  0.0   0:06.94 kworker/u256:0</span><br><span class="line">     8 root      20   0       0      0      0 S   0.0  0.0   2:38.05 rcu_sched12345678910111213141516171819</span><br></pre></td></tr></table></figure></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>下面的图片很好的展示了各个命令的主要作用，如使用vmstat查看系统的整体性能，mpstat用于查看cpu的性能，pidstat用于查看进程的状态，iostat用于查看io的状态，free用于产看内存的状态，sar用于产看网络的状态等。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv02i850jgj30o90d8gmo.jpg" alt="image"></p>
-<p><strong>Linux常用性能工具一览</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv02iq7vyxj30p00hiwgu.jpg" alt=""></p>
-<blockquote>
-<p>转载自<a href="https://medium.com/netflix-techblog/linux-performance-analysis-in-60-000-milliseconds-accc10403c55" target="_blank" rel="noopener">https://medium.com/netflix-techblog/linux-performance-analysis-in-60-000-milliseconds-accc10403c55</a></p>
-</blockquote>
-<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            uptime12$ uptime23:51:26 up 21:31, 1 user, load average: 30.02, 26.43, 19.0212
+该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。
+dme
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/09/06/Linux性能检测常用的10个基本命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3801,7 +3801,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg" rel="gallery_cjlrzq3ig0002okwa30mhjmc7"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg" rel="gallery_cjlrzuznr0006ykwavfgopicc"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg" itemprop="contentUrl"/>
               </a>
@@ -3816,16 +3816,16 @@
 
       
         
-          <span itemprop="articleBody"><p>首先要有一个GitHub账户，这是必须的。<br>然后我们访问<a href="https://github.com/new" target="_blank" rel="noopener">https://github.com/new</a> ，开始在GitHub网站上创建一个新的仓库。<br>其中对其中三个选项具体说明一下。<br><code>Initialize this repository with a README</code>: 在 Initialize this repository with a README选项上打钩，随后 GitHub会自动初始化仓库并设置README文件，让用户可以立刻clone这个仓库。如果想向GitHub添加手中已有的Git仓库，建议不要勾选，直接手动 push。<br>我在此为仓库添加了README.md文件<br><code>Add .gitignore</code>:  该文件用来描述 Git 仓库中不需管理的文件与目录。<br>通过它可以在初始化时自动生 成.gitignore文件A。这个设定会帮我们把不需要在Git仓库中进行版本管 理的文件记录在.gitignore文件中，省去了每次根据框架进行设置的麻 烦。下拉菜单中包含了主要的语言及框架，选择今后将要使用的即可。<br><code>Add a license</code>: 择要添加的许可协议文件。如果这个仓库中 包含的代码已经确定了许可协议，那么请在这里进行选择。随后将自动 生成包含许可协议内容的LICENSE文件，用来表明该仓库内容的许可协议。<br>我在此添加了MIT协议。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyv1n71vlj30wk0k4dha.jpg" alt=""><br>点击“Create repository”后，就成功创建了一个仓库。<br>README.md在初始化时已经生成好了。README.md文件的内容 会自动显示在仓库的首页当中。其中README.md和Issue、Wiki等都是需要用到GFM(GitHub Flavored Markdown)语法的，这是GitHub自家基于markdown的扩展语法。一般情况下只要按照原本的Markdown语法进行描述就可以。<br>然后我们克隆到本地。<br>打开git(如果你不会安装git，请百度)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/lengyue1024/ubuntu-guide.git</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyicgrvej30ds02l748.jpg" alt=""><br>然后，我们进入/ubuntu-guide目录创建一个文件，并写入一点东西进去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ touch ubuntu-wiki.md</span><br><span class="line">$ vim ubuntu-wiki.md</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyjmzyy4j30fy08wjrh.jpg" alt=""><br>操作方式和Linux基本一致。保存退出后，我们可以查看一下是否已经成功写入。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cat ubuntu-wiki.md</span><br><span class="line">ubuntu是一款以桌面应用为主的开源GNU/Linux操作系统</span><br></pre></td></tr></table></figure></p>
-<p>我们可以查看一下当前的状态。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyz5nm03lj30fa045749.jpg" alt=""><br>可以从中看出我们新建的<code>ubuntu-wiki.md</code>还未提交。<br>然后我们需要关联远程仓库，使本地的git和GitHub关联在一起，以便我们可以在本地管理并提交代码到GitHub上去<br>初次使用的时候，需要先进行连接。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@email.com&quot;</span><br></pre></td></tr></table></figure></p>
-<p>一直回车即可。<br>git会提示你key的目录，你进入该目录，找到<code>id_rsa.pub</code>文件，打开即可看到key了。id_rsa.pub 是公开密钥。<br>我们打开后，把里面的内容全部复制粘贴进<a href="https://github.com/settings/ssh/new" target="_blank" rel="noopener">https://github.com/settings/ssh/new</a>中的key里，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>你需要手动输入一下你的GitHub的登陆密码。<br>如图所示，已经成功连接。<br> <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyypxwwxfj30g001zwed.jpg" alt=""><br> 现在我们可以把我们刚才新建的<code>ubuntu-wiki.md</code>提交到GitHub上去了。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add .  #  向暂存区中添加文件，.表示提交全部文件，你也可以后跟具体文件名，指定只提交某个文件</span><br><span class="line">$ git commit -m &quot;添加描述&quot;  # 添加描述是为了以后方便进行版本回退，找到历史版本</span><br><span class="line">$ git push  # 提交暂存区到仓库区</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyu8axh8j30gr07g3z1.jpg" alt=""><br>我们刷新一下GitHub的页面，可以看到已经把新建的<code>ubuntu-wiki.md</code>文件提交到了GitHub上去。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyya1zdmj31170j275o.jpg" alt=""><br>我们以后需要做的就是，在本地写好代码，然后继续按照<code>git add .</code>——<code>git commit -m &quot;描述&quot;</code> —–<code>git push</code>的顺序提交给GitHub上去就可以了。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            首先要有一个GitHub账户，这是必须的。然后我们访问https://github.com/new ，开始在GitHub网站上创建一个新的仓库。其中对其中三个选项具体说明一下。Initialize this repository with a README: 在 Initialize this re
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/09/05/Git创建远程仓库/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3908,7 +3908,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fv02a9o6wgj30jg06e76k.jpg" rel="gallery_cjlrzq3or008tokwae23u3k4w"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fv02a9o6wgj30jg06e76k.jpg" rel="gallery_cjlrzuzu20092ykwasq60npyh"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv02a9o6wgj30jg06e76k.jpg" itemprop="contentUrl"/>
               </a>
@@ -3923,74 +3923,22 @@
 
       
         
-          <span itemprop="articleBody"><blockquote>
-<p>几天前，Linux迎来了它的27岁生日。从最初诞生在芬兰的一间卧室里，到现在成为，全球网民都离不开的操作系统。绝对堪称神话般的存在！  </p>
-</blockquote>
-<h3 id="先来看个Linux牛X简史"><a href="#先来看个Linux牛X简史" class="headerlink" title="先来看个Linux牛X简史"></a>先来看个Linux牛X简史</h3><p>迄今为止，在全球范围内：</p>
-<ul>
-<li>80%以上智能手机，均使用基于Linux内核的Android系统。</li>
-<li>全球排名前500超算中，98%在用Linux。</li>
-<li>纽交所、纳斯达克等证券交易市场，都在用Linux。</li>
-<li>75%的云计算企业报告平台，也在用Linux。</li>
-<li>全球主机行业33.8%的服务器用Linux。</li>
-<li>亚马逊、沃尔玛等电商平台都在用Linux。</li>
-</ul>
-<p>可以说，每一次程序员的女票去淘宝“败家”，都受恩惠于Linux。</p>
-<p>不过，Linux，却被一位来自圣诞老人故乡芬兰的60后大叔，因着Just for fun的缘故，开发于“一个窗帘紧闭黑灯瞎火的芬兰少年的卧室中”。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01lulig4j30hs0gstba.jpg" alt=""><br>芬兰风光</p>
-<p>如今，Linux的父亲——李纳斯·本纳第克特·托瓦兹（Linus Benedict Torvalds，以下简称“李纳斯”），也已49岁。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01n6kmtfj30k00bv0tk.jpg" alt=""><br>李纳斯近照</p>
-<p>能亲眼见证自己的“儿子”，如此惠及全球，一定很有成就感。然而，他开发出Linux，却不过是兴趣使然。</p>
-<h3 id="一个有电脑的外公"><a href="#一个有电脑的外公" class="headerlink" title="一个有电脑的外公"></a>一个有电脑的外公</h3><p>李纳斯的外公，在赫尔辛基大学当教授，近水楼台先得月，李纳斯因此可以使用外公单位发的电脑。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01nu832pj30hs092aab.jpg" alt=""><br>小李纳斯</p>
-<p>这台Commodore VIC-20计算机，唯一能做的事，就是用Basic语言，在上面编程序。</p>
-<p>外公经常在上面做数学运算，因为眼花就让李纳斯，帮自己录程序。而这也建立了李纳斯的数学认知，并学会了编写小游戏。</p>
-<p>整个中学年代，李纳斯都是在电脑前度过的，期间还掌握了汇编语言。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01q2y9bgj30k00dfq4e.jpg" alt=""><br>李纳斯年轻时用过的电脑</p>
-<h3 id="一本书，一辈子"><a href="#一本书，一辈子" class="headerlink" title="一本书，一辈子"></a>一本书，一辈子</h3><p>考入赫尔辛基大学后，他遇到了影响一生的那本书——《操作系统：设计和实现》，作者是Andrew S. Tanenbaum。李纳斯曾如此美誉该书，“这本书把我推上了生命的高峰”。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01tsu9zqj30k00k0wfv.jpg" alt=""><br>《操作系统：设计和实现》中文版</p>
-<p>那时， Unix已开发出来。Unix最早是用汇编写的，开发过程中，Unix的两位创始人肯·汤普逊和丹尼斯·里奇，觉得用汇编写程序，实在太痛苦了！<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01ubelcsj30k00k03za.jpg" alt=""><br>于是，哥俩决定用高级语言，来完成下一个版本，他们先后尝试了Fortran和B语言，却只遇见了成功他妈——失败！</p>
-<p>这其中，哥俩中的丹尼斯，收拾好情绪，继续改造 B 语言。丹尼斯为B增加了数据类型，并让B语言，能直接编译为机器码，然后又以「New B」来命名这门语言（好名字O(∩_∩)O）。</p>
-<p>后来，丹尼斯把「New B」改为C语言，并用C语言，重新编写Unix的内核，从此，Unix与C白首不相离。</p>
-<p>尽管Unix可以完成很多操作，但是必须由人来完成。正是这一bug，催促着灵魂不安分的李纳斯，想去优化它。</p>
-<h3 id="抛砖引玉：Unix的不完美，催生“宝玉”Linux"><a href="#抛砖引玉：Unix的不完美，催生“宝玉”Linux" class="headerlink" title="抛砖引玉：Unix的不完美，催生“宝玉”Linux"></a>抛砖引玉：Unix的不完美，催生“宝玉”Linux</h3><p>1991年初，22岁的李纳斯，花3500美元，分期付款买了台杂牌组装电脑，然后又买了MINIX（Mini Unix的缩写）操作系统。</p>
-<p>李纳斯在摸清MINIX 的优点缺点后，把MINIX系统改成了自己得心应手的「战斗机」。也就是在这台电脑上，Linux的初始版本诞生了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01uq4j3gj30go0k0wfn.jpg" alt=""><br>Linux的形象是一个企鹅，之所以用企鹅，是因为李纳斯曾被企鹅咬过</p>
-<p>事后回忆这段经历，李纳斯说，“这花费了我大量的精力：编程-睡觉-编程-睡觉-编程-吃饭（饼干）-编程-睡觉-编程-洗澡（冲冲了事）-编程”。</p>
-<p>熬了四五个月昏天黑地的日子后，这位刚过弱冠之年的北欧大鼻子青年，开发出了Linux 0.01。自此，他成了那个时代，被追捧的程序员偶像。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01v9unqrj30hs0a474m.jpg" alt=""><br>青年李纳斯</p>
-<p>不过，比生孩子更重要的，是养孩子。Linux之所以成功，主要凭借它的开源特点。</p>
-<p>Linux从出生，就打着开源的烙印，这对Linux的后续发展至关重要。从1991年，内核0.01版本发布，到1994年1.0版本登场，世界各地无数的开发者，都为Linux提交了代码。</p>
-<p>李纳斯还为Linux建立了讨论组comp.os.linux，吸引全世界的程序员，不断地推进Linux长成巨人。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01vm1wq6j30k006sdgh.jpg" alt=""><br>comp.os.linux讨论组截图</p>
-<p>对于Linux的成功，他“归功”于自己的缺点：1.他很懒散；2.他喜欢授权给其他人。</p>
-<p>作为版权所有者，李纳斯如此制定Linux规则：1.可免费使用该操作系统，但不得将它作为商品。2.对其所作的改动和改进，必须以源代码的形式，将其公开（而不是二进制，这是不公开的）。3.如不同意以上规定，则无权对它进行复制或从事任何行为。</p>
-<h3 id="硅谷多了个小李子"><a href="#硅谷多了个小李子" class="headerlink" title="硅谷多了个小李子"></a>硅谷多了个小李子</h3><p>1996年底，李纳斯在接到Transmeta（全美达）这家在美国并不知名的公司的offer后，离开芬兰飞赴美国。在全美达，一待就是六年。</p>
-<p>某种程度上，这六年，严重影响了Linux操作系统的前进，因为李纳斯成了“硅谷小李子·没时间·分身乏术打工男”。</p>
-<p>好在李纳斯在离开全美达后，开始为开放源代码开发实验室（OSDL : Open Source Development Labs, Inc）工作。</p>
-<p>这一次，Linux终于迎来系统人生第二春。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01vxavg0j30k00jqaaw.jpg" alt=""><br>交恶微软，拒绝苹果</p>
-<p>Linux出现前，桌面操作系统基本由微软和苹果控制。Linux出现后，桌面操作系统的蛋糕格局，依旧变化甚小，但服务器端市场却是瞬息万变。</p>
-<p>最初，微软希望在服务器领域，复制桌面操作系统的辉煌，然而半路杀出的 Linux竟在后来，占据了服务器市场半壁江山。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01wko4o6j30k00f0q3k.jpg" alt=""><br>商场如战场，李纳斯也因此，和微软结下梁子。他的头像，被钉在了微软公司的飞镖靶心上。李纳斯对此调侃道，“一定是我的大鼻子太好瞄准了。”<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01wuz99oj30fz0cz3z1.jpg" alt=""><br>大鼻子·李</p>
-<p>而李纳斯和苹果之间，就没那么剑拔弩张，毕竟Linux和OS X也算是一起从前辈Unix那里一起学（mo）过（fang）的同门师兄。</p>
-<p>而且，他还收到了乔布斯发来的工作邀约，前提是——停止开发Linux。</p>
-<p>面对乔帮主邀约，李纳斯果然没有……接受，他说，“为什么我要关心这些？为什么我要对苹果公司的故事表现出兴趣？我不觉得苹果公司所做的事情有什么吸引我的地方。我一生的目标也不是占领什么面操作系统的市场（的确，虽然我马上就要做到这点了，但这从来就不是我的生活目标）。”</p>
-<p>这次“谈判”虽不愉快，却影响了后续的IT格局。被拒了的苹果，从关注Linux转向BSD。</p>
-<p>与此同时，Linux的开源模式，也红得发紫。Linux 1.0版本推出后，很多基于Linux操作系统的公司纷纷冒出，“红帽”公司便是典型代表，连IBM和英特尔，也给Linux打call。1999年，IBM还花费10亿美元来推广Linux。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01x6rvvgj30hc0hst9b.jpg" alt=""><br>本鹅就是这么红，红红红红</p>
-<p>Linux以开源、独立、自由之风，在服务器端大获成功，甚至可以说，没有Linux，就没有互联网的今天。</p>
-<p>再后来，移动互联网时代来了。OS X发出了新枝——iOS，Linux则诞生了 Android，而这两位共同的祖父，就是Unix。</p>
-<p>或许，这就是命吧！</p>
-<p>当初，乔布斯和李纳斯的一次不愉快谈话，让OS X和Linux井水不犯河水。十几年后的今天，它们的“后代”，终于还是成了肩并肩行走在移动互联网时代的双子星。</p>
-<p>不爱名利爱代码</p>
-<p>凭借Linux，李纳斯获得了无数成就和荣誉。其中，曾两次给李纳斯颁发奖项的美国《时代》周刊，对其给出了极高的评价：</p>
-<p>“有些人生来就具有统率百万人的领袖风范；另一些人则是为写出颠覆世界的软件而生。唯一一个能同时做到这两者的人，就是托瓦兹（李纳斯的姓氏）”。</p>
-<p>甚至，在《时代》周刊根据读者投票，评选出的二十世纪100位最重要人物中，林纳斯竟排到第15位，而从20世纪的最后几年，就开始霸占全球首富称号的比尔·盖茨，是第17位。</p>
-<p>然而，他却是一个不像名人的名人，他和妻子——芬兰空手道冠军托夫、以及两个女儿，住在圣克拉拉的一个公寓里。对于“Linux之父”的美誉，他声称自己发明LINUX“只是为了好玩”。</p>
-<p>而他的名为《Just for Fun》的自传，也呼应了他的淡泊。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01xlzxdrj30b40dot9a.jpg" alt=""><br>李纳斯的自传《Just for Fun》</p>
-<p>如果说他有啥缺点的话，大概就是会在社交媒体爆粗口、以及会因为技术问题而在演讲中竖中指。</p>
-<p>在中国，有无可能成为“XX之父”？</p>
-<p>中国晚于欧美“触网”，所以国内也相对缺少，能成为程序员们的压倒性偶像的人物。</p>
-<p>不过在中国，比李纳斯大5岁的、有着“WPS之父”之称的求伯君，曾于1988年，独自开发出WPS，时年仅24岁。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01xzonisj30k00f50tw.jpg" alt=""><br>求伯君</p>
-<p>巧合是，两个人创立传奇的工具都是386电脑，或许，是时代造就了李纳斯和求伯君这样的独立软件英雄。</p>
-<p>当然，仁者见仁，或许每个程序员心中，都有一个专属自己的榜样。</p>
-<p>当下，中国已是仅次于美国的互联网第二大国，没准看文章的你，就是下一个“XX之父”呢？愿未来可期！</p>
-<p>最后，生日快乐，Linux！<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv01yzc7hzg30500504ck.gif" alt=""></p>
-<blockquote>
-<p>本文转载自: <a href="https://zhuanlan.zhihu.com/p/43241810" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/43241810</a><br>本文简述了Linus创造出Linux的故事，又正值Linux生日，特转载记录。</p>
-</blockquote>
-<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            
+几天前，Linux迎来了它的27岁生日。从最初诞生在芬兰的一间卧室里，到现在成为，全球网民都离不开的操作系统。绝对堪称神话般的存在！  
+
+先来看个Linux牛X简史迄今为止，在全球范围内：
+
+80%以上智能手机，均使用基于Linux内核的Android系统。
+全球排名前500超算中，98%在用L
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/09/01/交恶微软、拒绝乔布斯，21岁的他是如何开发出Linux的？/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4073,7 +4021,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1fublf0arquj30jg06h0te.jpg" rel="gallery_cjlrzq3ib0000okwa1hi8bqia"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1fublf0arquj30jg06h0te.jpg" rel="gallery_cjlrzuznb0000ykwarixactx5"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1fublf0arquj30jg06h0te.jpg" itemprop="contentUrl"/>
               </a>
@@ -4088,9 +4036,16 @@
 
       
         
-          <span itemprop="articleBody"><p>Windows平台上有很多的编辑器，但是我个人认为<code>atom</code>是最好用的编辑器，我本人也是一直在用。atom支持markdown语法，插件丰富，可以连接GitHub账户，可谓是优点多多。<br>但是不知道各位发现了没有，你打开atom，在编辑器里总是会出现一个竖线。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fublfb90saj311u0i8t9f.jpg" alt="1"><br>为什么会出现这个竖线呢？<br>其实这个竖线是<code>wrap-guide</code>插件引起的，该插件为atom默认安装的插件。<br>如何关闭atom中的这个竖线呢？<br>我们可以在“设置”—“扩展”—“已安装扩展”中找到wrap-guide插件。点击“关闭”按钮就不会再出现竖线了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fublfl6mfoj30e306dmxa.jpg" alt="1"><br>这个竖线有什么用呢？<br>这个竖线其实是一个规则亦或是标准，也许说是一个标尺更为合适，它表示了代码到了这里该换行，有些语言每行字符是不能超过80个字符的。<br>我们可以打开“设置”—“编辑器设置”—“一行的长度”，可以看到默认是80个，我们可以修改数字来改变这个默认值。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fublfqlwkrj30dm02ajr9.jpg" alt="1"><br>其实，当我们真正理解这个竖线的意义的时候，我们可能会改变去掉这个竖线的念头，它对于我们并不是没有任何意义的。这个竖线给了我们一个标准，我们可以通过该竖线来适当换行。现在不论是写什么，我都会在遇到这个竖线的时候另起一行。这样写的东西也会更加工作整齐。</p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu39r0zuavj30b40b4gme.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            Windows平台上有很多的编辑器，但是我个人认为atom是最好用的编辑器，我本人也是一直在用。atom支持markdown语法，插件丰富，可以连接GitHub账户，可谓是优点多多。但是不知道各位发现了没有，你打开atom，在编辑器里总是会出现一个竖线。为什么会出现这个竖线呢？其实这个竖线是wrap
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/08/31/Atom编辑器里的中间虚线的意义何在/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4173,7 +4128,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fup6uipdj6j312w0mi7wi.jpg" rel="gallery_cjlrzq3pd009yokwadgr73w94"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fup6uipdj6j312w0mi7wi.jpg" rel="gallery_cjlrzuzur009zykwa58qcphjc"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fup6uipdj6j312w0mi7wi.jpg" itemprop="contentUrl"/>
               </a>
@@ -4188,77 +4143,19 @@
 
       
         
-          <span itemprop="articleBody"><p>在互联网技术日益革新、产品快速迭代的今天，如何在提高资源使用率、提升效率的同时又兼顾互不干涉、安全隔离的原则，促使了虚拟化技术和容器技术的相继诞生。</p>
-<p>虚拟化技术有KVM、VMWare等并驾齐驱，容器技术为docker独领风骚。</p>
-<p>传统虚拟化技术与容器虚拟化技术的简要技术架构对比如下：<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fup6snf4yxj30fs08x0t0.jpg" alt=""></p>
-<h3 id="Part-1-虚拟化技术"><a href="#Part-1-虚拟化技术" class="headerlink" title="Part.1 虚拟化技术"></a>Part.1 虚拟化技术</h3><p>虚拟化技术是指在同一台计算机上通过hypervisor虚拟出多个包括完整虚拟机系统镜像，每个虚拟机拥有独立的操作系统和硬件资源。</p>
-<p>以KVM为例，下面初探一下虚拟化技术的实现原理。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fup6sue8zoj30b9059dgb.jpg" alt=""></p>
-<h3 id="1-1-KVM虚拟化技术"><a href="#1-1-KVM虚拟化技术" class="headerlink" title="1.1 KVM虚拟化技术"></a>1.1 KVM虚拟化技术</h3><p>KVM虚拟化的实现，主要是通过嵌入linux内核的kvm模块与QEMU相互配合实现全虚拟化，而两者的通信主要通过一系列针对特殊设备文件/dev/kvm的IOCTL调用实现。</p>
-<p>Kvm模块的主要功能为cpu虚拟化+内存虚拟化，在提供虚拟化功能时，它会暴露一个/dev/kvm的接口，这个接口主要是用来创建和运行vCPU(虚拟CPU)以及分配虚拟内存空间、vCPU寄存器的读写。</p>
-<p>而QEMU则是以动态二进制转换来创建和管理各种设备，通过IOCTL调用kvm的接口将部分CPU指令交给vCPU执行，kvm也依赖qemu模拟IO设备（磁盘，网卡，显卡等），从而实现完整意义上的全虚拟化。</p>
-<p>从下图QEMU简化的内核代码可以管中窥豹领略两者的联系。</p>
-<p>Qemu启动代码：<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fup6t8oxubj30ir0az74s.jpg" alt=""><br>可以看到，kvm提供了一个设备/dev/kvm，对kvm的控制要通过这个设备提供的io_ctl接口实现。</p>
-<p>Kvm内核在主机上虚拟出vCPU,虚拟内存，再通过QEMU创建和管理各个虚拟I/O设备包括虚拟网卡，磁盘等，安装上OS（操作系统），实现虚拟机创建的每个虚拟机相当于独立出来的计算机。</p>
-<h3 id="1-2-举个例子"><a href="#1-2-举个例子" class="headerlink" title="1.2 举个例子"></a>1.2 举个例子</h3><p>从技术上无法理解的童鞋可以不看上面的原理，我用通俗的语言说明一下，好比我们有一个冷藏室，我有很多种类的食物需要冷藏，但是为了空间利用，快速分类和互不串味，虚拟化技术的实现就是将冷藏室隔成各个小库房，并且把冷冻机拆开组装成多个小制冷机每个房间放一个，这样小房间温度也可控，而且味道也不会串。<br>Part.2 容器技术</p>
-<p>容器技术是后于虚拟化技术出现的，如果说虚拟化技术的出现主要是为了解决资源调配和隔离的问题，那么容器技术解决的是应用开发、测试和部署等提升效率的问题。而Docker在众多容器解决方案中脱颖而出，俨然成为了容器技术的代表，现在就以Docker为例，介绍一下容器技术的实现原理。</p>
-<h3 id="2-1-Docker"><a href="#2-1-Docker" class="headerlink" title="2.1 Docker"></a>2.1 Docker</h3><p>Docker的理念为“Build,Ship and Run Any App,Anywhere”，非常美好的愿景。为了实现这个目标，Docker通过Namespace分离进程，隔离网络接口、挂载点和进程间通信，使用Croups将CPU和内存等物理资源隔离开，这样就将一个完全对宿主机“一无所知”而且拥有“独立”资源的容器构造出来了，相比虚拟化技术，实际上容器还是容器之间共享同一个系统内核。</p>
-<h4 id="2-1-1-Namespace"><a href="#2-1-1-Namespace" class="headerlink" title="2.1.1 Namespace"></a>2.1.1 Namespace</h4><p>Namespace的目的为通过抽象方法使得namespace 中的进程看起来拥有它们自己的隔离的全局系统资源实例，linux内核实现了六种namespace：Mount namespaces，UTS namespaces，IPC namespaces，PID namespaces，Network namespaces，User namespaces，分别的功能为:隔离文件系统、定义hostname和domainame、特定的进程间通信资源、独立进程ID结构、独立网络设备、用户和组ID空间。</p>
-<p>Docker在创建一个容器的时候，会创建以上六种Namespace实例，然后将隔离的系统资源放入到相应的Namespace中，使得每个容器只能看到自己独立的系统资源。</p>
-<p>以PID namespaces为例，Docker是怎么使容器拥有独立的PID空间的：</p>
-<p>Linux内核中通过pid_namespace隔离PID，首先来看下pid_namespace的简要数据结构：</p>
-<p>struct pid_namespace {</p>
-<p>struct kref kref;</p>
-<p>//引用计数</p>
-<p>struct pidmap pidmap[PIDMAP_ENTRIES];</p>
-<p>//pid分配的bitmap，如果位为1，表示这个pid已经分配了</p>
-<p>int last_pid;</p>
-<p>//记录上次分配的pid，理论上，当前分配的pid=last_pid+1</p>
-<p>struct task_struct *child_reaper;</p>
-<p>//表示进程结束后，需要这个child_reaper进程对这个进程进行托管</p>
-<p>struct kmem_cache *pid_cachep;</p>
-<p>unsigned int level;</p>
-<p>//记录这个pid namespace的深度</p>
-<p>struct pid_namespace *parent;</p>
-<p>//记录父pid namespace</p>
-<p>struct fs_pin *bacct;</p>
-<p>#endif</p>
-<p>};</p>
-<p>其中数组pidmap记录了PID的分配情况，每一位代表了对应偏移量的PID是否分配，保证了PID不重复。</p>
-<p>每一个进程都会生成一个task_struct，task_struct的简单数据结构如下：</p>
-<p>struct task_struct</p>
-<p>{</p>
-<p>………….</p>
-<p>pid_t pid;</p>
-<p>struct pid_link pids[PIDTYPE_MAX];</p>
-<p>………….</p>
-<p>}</p>
-<p>其中pid的简单数据结构如下：</p>
-<p>struct pid</p>
-<p>{</p>
-<p>unsigned int level;</p>
-<p>//这个pid所在的层级</p>
-<p>struct hlist_head tasks[PIDTYPE_MAX];</p>
-<p>//一个hash表,又三个表头,分别是pid表头,进程组id表头,会话id表头,用于和task_struct进行关联</p>
-<p>struct upid numbers[1];</p>
-<p>//这个pid对应的命名空间,一个pid不仅要包含当前的pid,还有包含父命名空间,默认大小为1,所以就处于根命名空间中</p>
-<p>};</p>
-<p>可以看出来，PID namespace主要通过以上三种数据结构的关联，将容器内部也就是独立的namespace中的uPID与宿主机上的PID建立起查找关系。</p>
-<p>具体的做法为，task_struct结构体中的pid_link成员的node字段就被邻接到pid中的upid。upid通过pid_hash和pid数值关联了起来，这样就可以通过pid数值快速的找到所有命名空间的upid结构，numbers是一个struct pid的最后一个成员，利用可变数组来表示这个pid结构当前有多少个命名空间．这样Docker就实现了容器进程间PID的隔离。</p>
-<p>其它系统资源的实现方式虽然与PID隔离有所差异，但是总体来说大同小异，都是通过linux内核的namespace实现资源隔离。</p>
-<h4 id="2-1-2-Croups"><a href="#2-1-2-Croups" class="headerlink" title="2.1.2 Croups"></a>2.1.2 Croups</h4><p>前面介绍了Docker如何将系统资源进行隔离，下面简单介绍一下Docker如何利用Croups控制各个容器使用系系统资源。</p>
-<p>Croups也是linux内核中提供一种机制，它的功能主要是限制、记录、隔离进程所使用的物理资源，比如：CPU、mermory、IO、network等，下面我们就看看它是如何做到的吧。</p>
-<p>简单来说，Cgroups在接收到调用时，会给指定的进程挂上钩子，这个钩子会在资源被使用的时候触发，触发时会根据资源的类别（CPU,mermory,io等）使用对应的方法进行限制。</p>
-<p>Croups中有一个术语叫做subsystem（子系统），也就是一个资源调度控制器，CPU subsystem负责CPU的时间分配，mermory subsystem负责mermory的使用量等。Cgroups的资源控制单位为组称之为cgroup，每个cgroup都包含一个或者多个subsystem。当一个任务加入了某个cgroup，cgroup对应的subsystem就开始工作，像上文提到的钩子就会触发subsystem进行资源的限制。</p>
-<p>Docker 启动一个容器后，会在/sys/fs/cgroup目录下生成带有此容器ID的文件夹，里面就是调用Croups的配置文件，从而实现通过cgroups限制容器的资源使用率。</p>
-<h3 id="2-2-举个例子"><a href="#2-2-举个例子" class="headerlink" title="2.2 举个例子"></a>2.2 举个例子</h3><p>结合最开始虚拟化的例子，我们有一个冷藏室，容器化技术就好比将冷藏室隔成各个小房间（namespace），然后用导管和阀门（cgroups）将冷气输送到各个房间。相比与之前提到的“虚拟化冷藏”，这种方式占用更少的资源和扩展启动速度更快的优点。</p>
-<h3 id="Part-3-总结"><a href="#Part-3-总结" class="headerlink" title="Part.3 总结"></a>Part.3 总结</h3><p>综上，虚拟化技术为用户提供了一个完整的虚拟机：包括内核在内的一个完整的系统镜像。容器化技术为应用程序提供了隔离的运行空间：每个容器内都包含一个独享的完整用户环境空间，容器之间共享同一个系统内核。</p>
-<p>两种技术都有各自的优点，比如虚拟化有更佳的隔离性和安全性，容器化快速扩展、灵活性和易用性。也有各自的缺点，比如虚拟化技术实施难度高、更新和升级困难、相比容器过于笨重。容器化技术也存在较差的隔离性、安全性不高（宿主机被感染，所有容器受到影响）等缺点。</p>
-<p>虽然两者的出现希望解决相同的问题，但是目前看来，并无孰优孰劣的定论。反而将两种技术结合起来，一个容器中运行一个虚拟机或者一个虚拟机中运行多个容器。这样，既保证了强隔离性和安全性的同时，也有了快速扩展、灵活性和易用性。所以说，除了世界上最好的语言PHP，技术都是不完美的，但是不能阻挡我们追求完美的步伐，就酱.</p>
-<blockquote>
-<p><a href="http://it.sohu.com/20180827/n547645424.shtml" target="_blank" rel="noopener">转载文章</a></p>
-</blockquote>
-<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            在互联网技术日益革新、产品快速迭代的今天，如何在提高资源使用率、提升效率的同时又兼顾互不干涉、安全隔离的原则，促使了虚拟化技术和容器技术的相继诞生。
+虚拟化技术有KVM、VMWare等并驾齐驱，容器技术为docker独领风骚。
+传统虚拟化技术与容器虚拟化技术的简要技术架构对比如下：
+Part.1 虚
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/08/28/容器与虚拟化技术实现原理对比/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4341,7 +4238,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fulx8zqbrwj30qo0f0q4p.jpg" rel="gallery_cjlrzq3ix000hokwawuqzaoms"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fulx8zqbrwj30qo0f0q4p.jpg" rel="gallery_cjlrzuzo5000hykwa6b9xz07o"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fulx8zqbrwj30qo0f0q4p.jpg" itemprop="contentUrl"/>
               </a>
@@ -4356,92 +4253,16 @@
 
       
         
-          <span itemprop="articleBody"><p>我属于那种懒癌症晚期的人，所以只要可以省点力气就会千方百计的省。<br>最近发现在写博客，新建文章时候，每次都要手动添加<code>categories</code>和<code>photos</code>标签。我实在受不了啊(苦恼＞︿＜)<br>在我不懈的努力下，终于找到了解决办法。<br>在博客的<code>scaffolds</code>文件夹里有个post.md文件，添加上需要的配置就行了。<br>默认是只有<code>tags</code>标签。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fulx9dzt9xj30lt04cq31.jpg" alt="1"><br>我们新建一篇文章后，可以看到也是只有tags标签，我们只能手动添加categories和photos标签。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fulx9nii9jj30lw05v3ys.jpg" alt="1"><br>我们在post.md中添加需要的配置信息即可。<br>下面是我个人的配置，你只需要按照你个人的需求设置即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">photos:</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fulx9x2dv8j30fo059weh.jpg" alt="1"><br>然后我们打开Git。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 清除静态页面缓存（清除 public 文件夹）</span><br><span class="line">git clean</span><br><span class="line"># 在本地生成静态页面（生成 public 文件夹）</span><br><span class="line">git g</span><br></pre></td></tr></table></figure></p>
-<p>你现在可以使用<code>hexo new “new_blogname”</code>新建一篇文章,并测试一下效果。<br><strong>部署</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 启动本地服务 http://localhost:4000，进行预览调试</span><br><span class="line">hexo s</span><br><span class="line"># 远程部署，同步到 GitHub</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<p>下面我感觉十分有必要说说该模板文件的具体配置。(这部分属于进阶，你可以忽略不看，但是看完过后你对hexo一定会有个 更深刻的认识的)<br>在hexo中文章的<code>—</code>分割区域属于<code>Front-matter</code>，用于指定个别文件的变量。<br>以下是预先定义的参数，我们可在模板中使用这些参数值并加以利用。<br>
-<table>
-  <tr>
-    <th>参数</th>
-    <th>描述</th>
-    <th>默认值</th>
-  </tr>
-  <tr>
-    <td>layout</td>
-    <td>布局</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>title</td>
-    <td>标题</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>date</td>
-    <td>建立日期</td>
-    <td>文件建立日期</td>
-  </tr>
-  <tr>
-    <td>updated</td>
-    <td>更新日期</td>
-    <td>文件更新日期</td>
-  </tr>
-  <tr>
-    <td>comments</td>
-    <td>开启文章的评论功能</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>tags</td>
-    <td>标签（不适用于分页）</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>categories</td>
-    <td>分类（不适用于分页）</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>permalink</td>
-    <td>覆盖文章网址</td>
-    <td></td>
-  </tr>
-</table>
-<br><code>Hexo</code>中有一个模板文件夹<code>scaffolds</code>。该文件夹主要用于设置文章的布局。注意：这不是博客网页的布局。<br>我们刚才在设置<code>post.md</code>时候，里面的参数就需要从此表格中选定，我们不能随便添加额外的参数，这样会导致博客出现混乱现象。<br>更多说明请移步:<a href="https://hexo.io/zh-cn/docs/front-matter.html#%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE" target="_blank" rel="noopener">hexo Front-matter</a><br>关于Scaffold文件夹的更多信息可查阅<a href="https://hexo.io/zh-cn/api/scaffolds" target="_blank" rel="noopener">hexo模板</a><br>打开scaffold文件夹可以看到三个文件。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fulxgtydx1j30gi02w3yi.jpg" alt="1"><br>三个文件各司其职。<br>
-<table>
-  <tr>
-    <th>布局</th>
-    <th>解释</th>
-    <th>路径</th>
-    <th>注释</th>
-  </tr>
-  <tr>
-    <td>post</td>
-    <td>文章</td>
-    <td>source/_posts</td>
-    <td><a>新建一个文章文件</a></td>
-  </tr>
-  <tr>
-    <td>draft</td>
-    <td>草稿</td>
-    <td>source/_drafts</td>
-    <td><a>新建一个草稿文件</a></td>
-  </tr>
-    <tr>
-    <td>page</td>
-    <td>页面</td>
-    <td>source</td>
-    <td><a>新建一个页面文件</a></td>
-  </tr>
-</table>
-</p>
-<p>不过需要注意的是<code>source</code>文件夹里默认是没有draft和page文件的，你可以去主题的_config.yml中配置就有了。</p>
-<blockquote>
-<p>参考:<a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener">hexo写作</a></p>
-</blockquote>
-<p>所以我们可以看出，我们只需要修改<code>post.md</code>即可配置出发表文章的模板来。  </p>
-<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
-</span>
+          <span itemprop="articleBody">
+            
+            我属于那种懒癌症晚期的人，所以只要可以省点力气就会千方百计的省。最近发现在写博客，新建文章时候，每次都要手动添加categories和photos标签。我实在受不了啊(苦恼＞︿＜)在我不懈的努力下，终于找到了解决办法。在博客的scaffolds文件夹里有个post.md文件，添加上需要的配置就行了。
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/08/25/Hexo再新建文章时候怎么默认在-md文件中添加categories标签/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4524,7 +4345,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fulplnr5lsj31hc0fkwgi.jpg" rel="gallery_cjlrzq3io0007okwaps3ga7uv"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fulplnr5lsj31hc0fkwgi.jpg" rel="gallery_cjlrzuznx000aykwan3bh3jqt"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fulplnr5lsj31hc0fkwgi.jpg" itemprop="contentUrl"/>
               </a>
@@ -4539,57 +4360,27 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="Github名词释义"><a href="#Github名词释义" class="headerlink" title="Github名词释义"></a>Github名词释义</h2><ul>
-<li>master: 默认开发分支</li>
-<li>origin: 默认远程版本库</li>
-<li>Index / Stage：暂存区</li>
-<li>Workspace：工作区</li>
-<li>Repository：仓库区（或本地仓库）</li>
-<li>Remote：远程仓库  </li>
-</ul>
-<h2 id="Git原理"><a href="#Git原理" class="headerlink" title="Git原理"></a>Git原理</h2><ul>
-<li>分布式版本控制  </li>
-<li>直接记录快照，而非差异比较  </li>
-<li>五个工作区域：工作区，暂存区、本地代码库、本地远程代码库、远程远程代码库  </li>
-<li>四种文件状态：未修改，已修改、已暂存、已提交，已推送（已推送=未修改）</li>
-</ul>
-<h2 id="Git操作"><a href="#Git操作" class="headerlink" title="Git操作"></a>Git操作</h2><h3 id="新建代码仓库"><a href="#新建代码仓库" class="headerlink" title="新建代码仓库"></a>新建代码仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 在当前目录新建一个Git代码库</span><br><span class="line"></span><br><span class="line">$ git init</span><br><span class="line"></span><br><span class="line"># 新建一个目录，将其初始化为Git代码库</span><br><span class="line"></span><br><span class="line">$ git init [project-name]</span><br><span class="line"></span><br><span class="line"># 下载一个项目和它的整个代码历史</span><br><span class="line"></span><br><span class="line">$ git clone [url]</span><br></pre></td></tr></table></figure>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"># 显示当前的Git配置</span><br><span class="line"></span><br><span class="line">$ git config --list</span><br><span class="line"></span><br><span class="line"># 编辑Git配置文件</span><br><span class="line"></span><br><span class="line">$ git config -e [--global]</span><br><span class="line"></span><br><span class="line"># 设置提交代码时的用户信息</span><br><span class="line"></span><br><span class="line">$ git config [--global] user.name &quot;[name]&quot;  # 修改用户名</span><br><span class="line"></span><br><span class="line">$ git config [--global] user.email &quot;[email address]&quot;  # 修改邮箱地址</span><br><span class="line"></span><br><span class="line"># 修改编译器为 vim</span><br><span class="line"></span><br><span class="line">$ git config --global core.editor vim</span><br><span class="line"></span><br><span class="line"># status 缩写为 st</span><br><span class="line"></span><br><span class="line">$ git config --global alias.st status</span><br><span class="line"></span><br><span class="line"># checkout 缩写为 co</span><br><span class="line"></span><br><span class="line">$ git config --global alias.co checkout</span><br><span class="line"></span><br><span class="line"># branch 缩写为 br</span><br><span class="line"></span><br><span class="line">$ git config --global alias.br branch</span><br><span class="line"></span><br><span class="line"># commit 缩写为 ci</span><br><span class="line"></span><br><span class="line">$ git config --global alias.ci commit</span><br></pre></td></tr></table></figure></p>
-<h3 id="增加-删除-修改文件"><a href="#增加-删除-修改文件" class="headerlink" title="增加/删除/修改文件"></a>增加/删除/修改文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">#查看状态</span><br><span class="line"></span><br><span class="line">$ git status        </span><br><span class="line"></span><br><span class="line">#查看变更内容</span><br><span class="line"></span><br><span class="line">$ git diff          </span><br><span class="line"></span><br><span class="line"># 添加指定文件到暂存区</span><br><span class="line"></span><br><span class="line">$ git add [file1] [file2] ...</span><br><span class="line"></span><br><span class="line"># 添加指定目录到暂存区，包括子目录</span><br><span class="line"></span><br><span class="line">$ git add [dir]</span><br><span class="line"></span><br><span class="line"># 添加当前目录的所有文件到暂存区</span><br><span class="line"></span><br><span class="line">$ git add .</span><br><span class="line"></span><br><span class="line"># 添加每个变化前，都会要求确认</span><br><span class="line"></span><br><span class="line"># 对于同一个文件的多处变化，可以实现分次提交</span><br><span class="line"></span><br><span class="line">$ git add -p</span><br><span class="line"></span><br><span class="line"># 删除工作区文件，并且将这次删除放入暂存区</span><br><span class="line"></span><br><span class="line">$ git rm [file1] [file2] ...</span><br><span class="line"></span><br><span class="line"># 停止追踪指定文件，但该文件会保留在工作区</span><br><span class="line"></span><br><span class="line">$ git rm --cached [file]</span><br><span class="line"></span><br><span class="line"># 改名文件，并且将这个改名放入暂存区</span><br><span class="line"></span><br><span class="line">$ git mv [file-original] [file-renamed]</span><br></pre></td></tr></table></figure>
-<h3 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># 提交暂存区到仓库区,message代表说明信息</span><br><span class="line"></span><br><span class="line">$ git commit -m [message]</span><br><span class="line"></span><br><span class="line"># 提交暂存区的指定文件到仓库区</span><br><span class="line"></span><br><span class="line">$ git commit [file1] [file2] ... -m [message]</span><br><span class="line"></span><br><span class="line"># 提交工作区自上次commit之后的变化，直接到仓库区</span><br><span class="line"></span><br><span class="line">$ git commit -a</span><br><span class="line"></span><br><span class="line"># 提交时显示所有diff信息</span><br><span class="line"></span><br><span class="line">$ git commit -v</span><br><span class="line"></span><br><span class="line"># 使用一次新的commit，替代上一次提交</span><br><span class="line"></span><br><span class="line"># 如果代码没有任何新变化，则用来改写上一次commit的提交信息</span><br><span class="line"></span><br><span class="line">$ git commit --amend -m [message]</span><br><span class="line"></span><br><span class="line"># 重做上一次commit，并包括指定文件的新变化</span><br><span class="line"></span><br><span class="line">$ git commit --amend [file1] [file2] ...</span><br></pre></td></tr></table></figure>
-<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">#显示所有本地分支</span><br><span class="line"></span><br><span class="line">$ git branch                   </span><br><span class="line"></span><br><span class="line"># 列出所有远程分支</span><br><span class="line"></span><br><span class="line">$ git branch -r</span><br><span class="line"></span><br><span class="line"># 列出所有本地分支和远程分支</span><br><span class="line"></span><br><span class="line">$ git branch -a</span><br><span class="line"></span><br><span class="line"># 新建一个分支，但依然停留在当前分支</span><br><span class="line"></span><br><span class="line">$ git branch [branch-name]</span><br><span class="line"></span><br><span class="line"># 新建一个分支，与指定的远程分支建立追踪关系</span><br><span class="line"></span><br><span class="line">$ git branch --track [branch] [remote-branch]</span><br><span class="line"></span><br><span class="line"># 删除分支</span><br><span class="line"></span><br><span class="line">$ git branch -d [branch-name]</span><br><span class="line"></span><br><span class="line"># 删除远程分支</span><br><span class="line"></span><br><span class="line">$ git push origin --delete [branch-name]</span><br><span class="line"></span><br><span class="line">$ git branch -dr [remote/branch]</span><br><span class="line"></span><br><span class="line"># 撤销某一个文件当前的修改</span><br><span class="line"></span><br><span class="line">$ git chechout [FILE]</span><br><span class="line"></span><br><span class="line"># 新建一个分支，并切换到该分支</span><br><span class="line"></span><br><span class="line">$ git checkout -b [branch]</span><br><span class="line"></span><br><span class="line"># 切换到指定分支，并更新工作区</span><br><span class="line"></span><br><span class="line">$ git checkout [branch-name]</span><br><span class="line"></span><br><span class="line"># 切换到上一个分支</span><br><span class="line"></span><br><span class="line">$ git checkout -</span><br><span class="line"></span><br><span class="line"># 建立追踪关系，在现有分支与指定的远程分支之间</span><br><span class="line"></span><br><span class="line">$ git branch --set-upstream [branch] [remote-branch]</span><br><span class="line"></span><br><span class="line"># 合并指定分支到当前分支</span><br><span class="line"></span><br><span class="line">$ git merge [branch]</span><br><span class="line"></span><br><span class="line">#衍合指定分支到当前分支</span><br><span class="line"></span><br><span class="line">$ git rebase &lt;branch&gt;       </span><br><span class="line"></span><br><span class="line"># 选择一个commit，合并进当前分支</span><br><span class="line"></span><br><span class="line">$ git cherry-pick [commit]</span><br></pre></td></tr></table></figure>
-<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git tag                      #列出所有本地标签</span><br><span class="line"></span><br><span class="line">$ git tag &lt;tagname&gt;            #基于最新提交创建标签</span><br><span class="line"></span><br><span class="line">$ git tag -a [tagname] -m [message] # 创建标签，基于最新版本提交，附带注释信息</span><br><span class="line"></span><br><span class="line">$ git tag -a [tagname] -m [message] [CommitID]  # 创建标签，基于指定的Commit，附带注释信息</span><br><span class="line"></span><br><span class="line">$ git tag -d &lt;tagname&gt;         #删除标签</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 删除远程tag</span><br><span class="line"></span><br><span class="line">$ git push origin :refs/tags/[tagName]</span><br><span class="line"></span><br><span class="line"># 查看tag信息</span><br><span class="line"></span><br><span class="line">$ git show [tag]</span><br><span class="line"></span><br><span class="line"># 提交指定tag</span><br><span class="line"></span><br><span class="line">$ git push [remote] [tag]</span><br><span class="line"></span><br><span class="line"># 提交所有tag</span><br><span class="line"></span><br><span class="line">$ git push [remote] --tags</span><br><span class="line"></span><br><span class="line"># 配合Gerrit使用</span><br><span class="line"></span><br><span class="line">$ git push origin [tagname]:refs/tags/[tagname]</span><br><span class="line"></span><br><span class="line"># 新建一个分支，指向某个tag</span><br><span class="line"></span><br><span class="line">$ git checkout -b [branch] [tag]</span><br></pre></td></tr></table></figure>
-<h3 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"># 显示有变更的文件</span><br><span class="line"></span><br><span class="line">$ git status</span><br><span class="line"></span><br><span class="line"># 查看指定文件状态</span><br><span class="line"></span><br><span class="line">$ git status [FILE]</span><br><span class="line"></span><br><span class="line"># 显示当前分支的版本历史</span><br><span class="line"></span><br><span class="line">$ git log</span><br><span class="line"></span><br><span class="line"># 显示commit历史，以及每次commit发生变更的文件</span><br><span class="line"></span><br><span class="line">$ git log --stat</span><br><span class="line"></span><br><span class="line"># 搜索提交历史，根据关键词</span><br><span class="line"></span><br><span class="line">$ git log -S [keyword]</span><br><span class="line"></span><br><span class="line"># 显示某个commit之后的所有变动，每个commit占据一行</span><br><span class="line"></span><br><span class="line">$ git log [tag] HEAD --pretty=format:%s</span><br><span class="line"></span><br><span class="line"># 显示某个commit之后的所有变动，其&quot;提交说明&quot;必须符合搜索条件</span><br><span class="line"></span><br><span class="line">$ git log [tag] HEAD --grep feature</span><br><span class="line"></span><br><span class="line"># 显示某个文件的版本历史，包括文件改名</span><br><span class="line"></span><br><span class="line">$ git log --follow [file]</span><br><span class="line"></span><br><span class="line">$ git whatchanged [file]</span><br><span class="line"></span><br><span class="line"># 显示指定文件相关的每一次diff</span><br><span class="line"></span><br><span class="line">$ git log -p [file]</span><br><span class="line"></span><br><span class="line"># 显示过去5次提交</span><br><span class="line"></span><br><span class="line">$ git log -5 --pretty --oneline</span><br><span class="line"></span><br><span class="line"># 显示所有提交过的用户，按提交次数排序</span><br><span class="line"></span><br><span class="line"># 查看代码库日志，简洁有图</span><br><span class="line"></span><br><span class="line">$ git log --graph --pretty=oneline --abbrev-commit -20</span><br><span class="line"></span><br><span class="line">$ git shortlog -sn</span><br><span class="line"></span><br><span class="line"># 显示指定文件是什么人在什么时间修改过</span><br><span class="line"></span><br><span class="line">$ git blame [file]</span><br><span class="line"></span><br><span class="line"># 显示暂存区和工作区的差异</span><br><span class="line"></span><br><span class="line">$ git diff</span><br><span class="line"></span><br><span class="line"># 显示暂存区和上一个commit的差异</span><br><span class="line"></span><br><span class="line">$ git diff --cached [file]</span><br><span class="line"></span><br><span class="line"># 显示工作区与当前分支最新commit之间的差异</span><br><span class="line"></span><br><span class="line">$ git diff HEAD</span><br><span class="line"></span><br><span class="line"># 查看变更内容，对比本地代码库与本地远程代码库，origin代表远程的意思</span><br><span class="line"></span><br><span class="line">$ git diff master origin/master</span><br><span class="line"></span><br><span class="line"># 显示两次提交之间的差异</span><br><span class="line"></span><br><span class="line">$ git diff [first-branch]...[second-branch]</span><br><span class="line"></span><br><span class="line"># 显示今天你写了多少行代码</span><br><span class="line"></span><br><span class="line">$ git diff --shortstat &quot;@&#123;0 day ago&#125;&quot;</span><br><span class="line"></span><br><span class="line"># 显示某次提交的元数据和内容变化</span><br><span class="line"></span><br><span class="line">$ git show [commit]</span><br><span class="line"></span><br><span class="line"># 显示某次提交发生变化的文件</span><br><span class="line"></span><br><span class="line">$ git show --name-only [commit]</span><br><span class="line"></span><br><span class="line"># 显示某次提交时，某个文件的内容</span><br><span class="line"></span><br><span class="line">$ git show [commit]:[filename]</span><br><span class="line"></span><br><span class="line"># 显示当前分支的最近几次提交</span><br><span class="line"></span><br><span class="line">$ git reflog</span><br></pre></td></tr></table></figure>
-<h3 id="远程操作"><a href="#远程操作" class="headerlink" title="远程操作"></a>远程操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"># 下载远程仓库的所有变动</span><br><span class="line"></span><br><span class="line">$ git fetch [remote]</span><br><span class="line"></span><br><span class="line"># 取回远程仓库的变化，并与本地分支合并</span><br><span class="line"></span><br><span class="line">$ git pull [remote] [branch]</span><br><span class="line"></span><br><span class="line"># 显示所有远程仓库</span><br><span class="line"></span><br><span class="line">$ git remote -v</span><br><span class="line"></span><br><span class="line"># 显示某个远程仓库的信息</span><br><span class="line"></span><br><span class="line">$ git remote show [remote]</span><br><span class="line"></span><br><span class="line"># 增加一个新的远程仓库，并命名</span><br><span class="line"></span><br><span class="line">$ git remote add [shortname] [url]</span><br><span class="line"></span><br><span class="line"># 从远程远程库获取代码到本地远程库</span><br><span class="line"></span><br><span class="line">$ git fetch [remote]</span><br><span class="line"></span><br><span class="line"># 上传本地指定分支到远程仓库</span><br><span class="line"></span><br><span class="line">$ git push [remote] [branch]</span><br><span class="line"></span><br><span class="line"># 强行推送当前分支到远程仓库，即使有冲突</span><br><span class="line"></span><br><span class="line">$ git push [remote] --force</span><br><span class="line"></span><br><span class="line"># 推送所有分支到远程仓库</span><br><span class="line"></span><br><span class="line">$ git push [remote] --all</span><br><span class="line"></span><br><span class="line"># 下载代码及快速合并</span><br><span class="line"></span><br><span class="line">$ git pull [remote] [branch]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git push [remote] [branch] # 上传代码及快速合并，把所有文件从本地仓库推送进远程仓库</span><br><span class="line"></span><br><span class="line">$ git push &lt;remote&gt; :&lt;branch/tag-name&gt;  # 删除远程分支或标签</span><br><span class="line"></span><br><span class="line">$ git push --tags                       # 上传所有标签</span><br></pre></td></tr></table></figure>
-<h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD      # 撤销工作目录中所有未提交文件的修改内容</span><br><span class="line"></span><br><span class="line">$ git checkout HEAD &lt;file&gt;   # 撤销指定的未提交文件的修改内容</span><br><span class="line"></span><br><span class="line">$ git revert &lt;commit&gt;        # 撤销指定的提交</span><br><span class="line"></span><br><span class="line">$ git clean -xfd             # 清除所有非GIT跟踪文件，例如编译生成的内容</span><br><span class="line"></span><br><span class="line">$ git log --before=&quot;1 days&quot;  # 退回到之前1天的版本</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"># 恢复暂存区的指定文件到工作区</span><br><span class="line"></span><br><span class="line">$ git checkout [file]</span><br><span class="line"></span><br><span class="line"># 恢复某个commit的指定文件到暂存区和工作区</span><br><span class="line"></span><br><span class="line">$ git checkout [commit] [file]</span><br><span class="line"></span><br><span class="line"># 恢复暂存区的所有文件到工作区</span><br><span class="line"></span><br><span class="line">$ git checkout .</span><br><span class="line"></span><br><span class="line"># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span><br><span class="line"></span><br><span class="line">$ git reset [file]</span><br><span class="line"></span><br><span class="line"># 将文件从暂存区中回退到工作区，git add的反操作</span><br><span class="line"></span><br><span class="line">$ git reset HEAD</span><br><span class="line"></span><br><span class="line"># 只改变提交点，工作目录与暂存区中内容都不改变</span><br><span class="line"></span><br><span class="line">$ git reset --soft HEAD</span><br><span class="line"></span><br><span class="line"># 回撤到指定版本</span><br><span class="line"></span><br><span class="line">$ git reset 版本号（前七位）</span><br><span class="line"></span><br><span class="line"># 回撤到当前版本，撤销工作目录与暂存区中的所有内容</span><br><span class="line"></span><br><span class="line">$ git reset --hard HEAD</span><br><span class="line"></span><br><span class="line"># 回撤到上一个版本</span><br><span class="line"></span><br><span class="line">$ git reset --hard HEAD^</span><br><span class="line"></span><br><span class="line"># 回撤到上上一个版本</span><br><span class="line"></span><br><span class="line">$ git reset --hard HEAD^^</span><br><span class="line"></span><br><span class="line"># 重置暂存区与工作区，与上一次commit保持一致</span><br><span class="line"></span><br><span class="line">$ git reset --hard</span><br><span class="line"></span><br><span class="line"># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span><br><span class="line"></span><br><span class="line">$ git reset [commit]</span><br><span class="line"></span><br><span class="line"># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span><br><span class="line"></span><br><span class="line">$ git reset --hard [commit]</span><br><span class="line"></span><br><span class="line"># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span><br><span class="line"></span><br><span class="line">$ git reset --keep [commit]</span><br><span class="line"></span><br><span class="line"># 新建一个commit，用来撤销指定commit</span><br><span class="line"></span><br><span class="line"># 后者的所有变化都将被前者抵消，并且应用到当前分支</span><br><span class="line"></span><br><span class="line">$ git revert [commit]</span><br><span class="line"></span><br><span class="line"># 暂时将未提交的变化移除，稍后再移入</span><br><span class="line"></span><br><span class="line">$ git stash</span><br><span class="line"></span><br><span class="line">$ git stash pop</span><br></pre></td></tr></table></figure>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git archive    # 生成一个可供发布的压缩包</span><br><span class="line"></span><br><span class="line">$ git log --graph --pretty=oneline --abbrev-commit -20</span><br><span class="line"></span><br><span class="line">$ git push origin master:refs/for/master</span><br></pre></td></tr></table></figure>
-<h2 id="Gerrit日常开发"><a href="#Gerrit日常开发" class="headerlink" title="Gerrit日常开发"></a>Gerrit日常开发</h2><ul>
-<li>master 常驻分支，要求常驻分支时刻可用  </li>
-<li>feature-XXX 功能分支，新建分支用于开发新功能  </li>
-<li>bugfix-XXX 问题分支，新建分支用于修改问题<h3 id="下载版本-BASE-IPC-HI3518EV200-SPC040"><a href="#下载版本-BASE-IPC-HI3518EV200-SPC040" class="headerlink" title="下载版本 BASE_IPC_HI3518EV200_SPC040"></a>下载版本 BASE_IPC_HI3518EV200_SPC040</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &amp; scp</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b feature-XXX master</span><br></pre></td></tr></table></figure>
-<h3 id="在新分支上完成功能修改和测试验证"><a href="#在新分支上完成功能修改和测试验证" class="headerlink" title="在新分支上完成功能修改和测试验证"></a>在新分支上完成功能修改和测试验证</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit -m &quot;XXX&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="将功能合并到master"><a href="#将功能合并到master" class="headerlink" title="将功能合并到master"></a>将功能合并到master</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master # 切换到master分支</span><br><span class="line"></span><br><span class="line">git pull --rebase  # 更新代码</span><br></pre></td></tr></table></figure>
-<p>合并操作有如下四种方式：</p>
-<ul>
-<li><code>git merge --no-ff -m &quot;XXXX&quot; feature-XXX/bugfix-XXX</code><br> 合并修改到master并commit，在master中可以查看到分支的log历史。如果产生冲突，通过<code>git status</code> 查看冲突文件，手动解决冲突后 <code>git add</code>，<code>git commit</code>  </li>
-<li><code>git merge --squash -m &quot;XXXX&quot; feature-XXX/bugfix-XXX</code><br> 合并修改到master分支并commit，分支的所有修改一次commit到master，无法在master中查看分支的log历史，需要稍后手动 <code>git commit</code>  </li>
-<li><code>git rebase feature-XXX/bugfix-XXX</code><br> 合并修改到master分支，master的修改和commit将接在分支修改的末端，合并后log中无法查看到分支的存在</li>
-<li><code>git cherry-pick [Commit-ID]....</code><br> 合并指定的修改到master分支，分支修改会合并到master历史log的末端，如果发生冲突，手动解决冲突后 <code>git add</code>，<code>git cherry-pick --continue -m &quot;XXXX&quot;`</code>  </li>
-<li><code>git branch -d feature-XXX/bugfix-XXX `</code><br> 删除指定分支  </li>
-</ul>
-<h3 id="上传远程服务器"><a href="#上传远程服务器" class="headerlink" title="上传远程服务器"></a>上传远程服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master:refs/for/master</span><br></pre></td></tr></table></figure>
-<p>git push origin master:refs/for/master</p>
-<blockquote>
-<p>参考文章：<a href="https://mp.weixin.qq.com/s/xezQTCV9s-L0sjqkXgtCog" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/xezQTCV9s-L0sjqkXgtCog</a></p>
-</blockquote>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu39r0zuavj30b40b4gme.jpg" alt=""></p>
-</span>
+          <span itemprop="articleBody">
+            
+            Github名词释义
+master: 默认开发分支
+origin: 默认远程版本库
+Index / Stage：暂存区
+Workspace：工作区
+Repository：仓库区（或本地仓库）
+Remote：远程仓库  
+
+Git原理
+分布式版本控制  
+直接记录快照，而非差异比较  
+五个工作区域：
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/08/24/Git常用命令速查表/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4672,7 +4463,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fujx92todjj30jg06egqk.jpg" rel="gallery_cjlrzq3qf00bsokwa5wl7ep9u"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fujx92todjj30jg06egqk.jpg" rel="gallery_cjlrzuzvz00boykwayx1h29ep"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fujx92todjj30jg06egqk.jpg" itemprop="contentUrl"/>
               </a>
@@ -4687,39 +4478,36 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><blockquote>
-<ul>
-<li><strong>Windows:</strong><ul>
-<li><a href="https://raw.githubusercontent.com/cdtmirrors/yhc/master/yhc.exe" target="_blank" rel="noopener">安装版</a> | <a href="https://raw.githubusercontent.com/cdtmirrors/yhc/master/greenyhc.ex" target="_blank" rel="noopener">单文件版</a></li>
-</ul>
-</li>
-<li><strong>Android 4.0.3 及以上:</strong><ul>
-<li><a href="https://raw.githubusercontent.com/cdtmirrors/yhc/master/yhc.apk" target="_blank" rel="noopener">直接下载</a> | <a href="https://play.google.com/store/apps/details?id=org.gofirefly.android.vpn" target="_blank" rel="noopener">Google Play</a></li>
-</ul>
-</li>
-<li><strong>iOS 9.3 及以上:</strong><ul>
-<li><a href="https://itunes.apple.com/cn/app/%E5%B0%BC%E9%A9%AC%E4%BB%A3%E7%90%86/id1260125306?mt=8" target="_blank" rel="noopener">中国 App Store</a> | <a href="https://itunes.apple.com/us/app/mudhorse-proxy/id1260125306" target="_blank" rel="noopener">US App Store</a></li>
-</ul>
-</li>
-<li><strong>OSX:</strong><ul>
-<li><a href="https://raw.githubusercontent.com/cdtmirrors/yhc/master/yhc.dmg" target="_blank" rel="noopener">安装版</a> | <a href="https://github.com/yinghuocho/download/blob/master/firefly_darwin_amd64?raw=true" target="_blank" rel="noopener">单文件版</a></li>
-</ul>
-</li>
-<li><strong>Ubuntu 64位:</strong><ul>
-<li><a href="https://github.com/yinghuocho/download/blob/master/firefly_linux_amd64_install.deb?raw=true" target="_blank" rel="noopener">安装版</a> | <a href="https://github.com/yinghuocho/download/blob/master/firefly_linux_amd64?raw=true" target="_blank" rel="noopener">单文件版</a></li>
-</ul>
-</li>
-<li><strong>Ubuntu 32位:</strong><ul>
-<li><a href="https://github.com/yinghuocho/download/blob/master/firefly_linux_386_install.deb?raw=true" target="_blank" rel="noopener">安装版</a> | <a href="https://github.com/yinghuocho/download/blob/master/firefly_linux_amd64?raw=true" target="_blank" rel="noopener">单文件版</a>  </li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<p><strong>项目地址:</strong> <a href="https://github.com/yinghuocho/firefly-proxy" target="_blank" rel="noopener">https://github.com/yinghuocho/firefly-proxy</a>  </p>
-<p>以Ubuntu版本为例说明。<br>首先直接下载.deb安装包，然后进行安装。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo dpkg -i firefly_linux_amd64_install.deb</span><br></pre></td></tr></table></figure></p>
-<p>然后终端输入<code>firefly</code>打开即可使用。<br>至于速度方面，我个人认为还是很可以的。<br>动图演示：<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fujugdoltlg30ly0gnb2d.gif" alt="1"></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu39r0zuavj30b40b4gme.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            下载
+
+Windows:
+安装版 | 单文件版
+
+
+Android 4.0.3 及以上:
+直接下载 | Google Play
+
+
+iOS 9.3 及以上:
+中国 App Store | US App Store
+
+
+OSX:
+安装版 | 单文件版
+
+
+Ubuntu 64位:
+安装版 | 单文件版
+
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/08/23/科学上网教程5-全平台软件萤火虫/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4769,30 +4557,30 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">你指尖跃动的电光，是我此生不变的信仰。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/">
+            <a href="/archives">
               <span class="site-state-item-count">128</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
-            
+            <a href="/tags">
               <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">标签</span>
-              
+              </a>
           </div>
 
         </nav>
@@ -4803,11 +4591,35 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
+                <a href="http://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945 || github" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
               </span>
             
           
@@ -4818,7 +4630,19 @@
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
               </span>
             
           
@@ -4828,7 +4652,7 @@
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -4863,7 +4687,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -4921,7 +4745,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -4929,17 +4753,23 @@ tpwidget("show");</script>
     
   
   
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-  <script type="text/javascript" src="//helpers.js?v="></script>
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
   
 
-  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="//nav-toggle.js?v="></script>
-  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
@@ -4960,15 +4790,17 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="//lazyload.js"></script>
+  <script type="text/javascript" src="/js/lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "//loading.gif",
+        placeholder: "/images/loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>

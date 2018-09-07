@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next  ">
+<html class="theme-next use-motion theme-next-mala">
 <head>
   
 
@@ -17,19 +17,25 @@
 
 
 
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-<link rel="stylesheet" type="text/css" href="//main.css?v="/>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
     <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。" />
 
 
 
+  <meta name="keywords" content="Hexo,Mala" />
 
 
 
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="你指尖跃动的电光，是我此生不变的信仰。">
@@ -46,10 +52,18 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
-    sidebar: ''
+    scheme: 'Mala',
+    sidebar: 'post'
   };
 </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
 
 
   <title> 冰羽の博客 </title>
@@ -109,11 +123,78 @@
   
 
   
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
 
   
     <div class="site-search">
       
   
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -3239,7 +3320,7 @@
 
 </style>
 
-<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -3412,17 +3493,16 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="什么是CDN加速？"><a href="#什么是CDN加速？" class="headerlink" title="什么是CDN加速？"></a>什么是CDN加速？</h2><h3 id="CDN的全称是Content-Delivery-Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学-MIT-的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。"><a href="#CDN的全称是Content-Delivery-Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学-MIT-的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。" class="headerlink" title="CDN的全称是Content Delivery Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学(MIT)的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。"></a>CDN的全称是Content Delivery Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学(MIT)的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。</h3><h2 id="CDN有什么作用？"><a href="#CDN有什么作用？" class="headerlink" title="CDN有什么作用？"></a>CDN有什么作用？</h2><h3 id="CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。"><a href="#CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。" class="headerlink" title="CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。"></a>CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。</h3><h3 id="CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。"><a href="#CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。" class="headerlink" title="CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。"></a>CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。</h3><p>对用户来说，如果一个网站开启了CDN，用户访问速度或者下载速度相比之前会更快。一般来说，网站开启CDN之后，可以提升用户体验。</p>
-<h2 id="对网站有什么好处？"><a href="#对网站有什么好处？" class="headerlink" title="对网站有什么好处？"></a>对网站有什么好处？</h2><h3 id="首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。"><a href="#首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。" class="headerlink" title="首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。"></a>首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。</h3><p>其次，由于CDN节点的阻挡防护，可以更好的保护员服务器的安全。具体来说，CDN其实是充当了一个替身的角色，无论服务器是渗透还是DDoS攻击，攻击的目标都将是CDN节点，这样一来便间接的保护了网站本身。</p>
-<h2 id="怎么查看一个网站开启了CDN呢？"><a href="#怎么查看一个网站开启了CDN呢？" class="headerlink" title="怎么查看一个网站开启了CDN呢？"></a>怎么查看一个网站开启了CDN呢？</h2><h3 id="方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。"><a href="#方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。" class="headerlink" title="方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。"></a>方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。</h3><h3 id="也可以使用一个在线的工具，ping-chinaz-com"><a href="#也可以使用一个在线的工具，ping-chinaz-com" class="headerlink" title="也可以使用一个在线的工具，ping.chinaz.com"></a>也可以使用一个在线的工具，ping.chinaz.com</h3><p>这是一个使用了CDN的网站<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppe8kva8gj30kg022qac.jpg" alt="1"><br>这是一个没有使用CDN的网站<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppe7s5xpvj30kj021qac.jpg" alt="2"></p>
-<h3 id="还可以使用kali工具查询"><a href="#还可以使用kali工具查询" class="headerlink" title="还可以使用kali工具查询"></a>还可以使用kali工具查询</h3><p>dnsenum是一款域名信息收集工具<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#  dnsenum -o /root/baidu.com -t 30 --threads 30 baidu.com</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppea94mmqj30m00cpqac.jpg" alt="1"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppeb77p1sj30m40d542k.jpg" alt="2"><br>dnsrecon是一款很强大的dns信息手机工具<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># dnsrecon -d baidu.com -n 114.114.114.114 --threads 15 --lifetime 30 --xml /root/baidu.com1</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppebq93afj30lu0drqac.jpg" alt="2"><br>这2款工具都是可以验证一个网站是否运用了CDN技术。</p>
-<h2 id="怎么绕过CDN查找真实IP呢？"><a href="#怎么绕过CDN查找真实IP呢？" class="headerlink" title="怎么绕过CDN查找真实IP呢？"></a>怎么绕过CDN查找真实IP呢？</h2><h3 id="二级域名法"><a href="#二级域名法" class="headerlink" title="二级域名法"></a>二级域名法</h3><p>目标站点一般不会把所有的二级域名放cdn上，比如试验性质地二级域名。Google site一下目标的域名，看有没有二级域名出现，挨个排查，确定了没使用cdn的二级域名后，本地将目标域名绑定到同ip，能访问就说明目标站与此二级域名在同一个服务器上。不在同一服务器也可能在同C段，扫描C段所有开80端口的ip，挨个试。如果google搜不到也不代表没有，我们拿常见的二级域名构造一个字典，猜出它的二级域名。比如mail、cache、img。</p>
-<h3 id="nslookup法"><a href="#nslookup法" class="headerlink" title="nslookup法"></a>nslookup法</h3><p>大部分CDN提供商只针对国内市场，而对国外市场几乎是不做CDN，所以有很大的几率会直接解析到真实IP。其实这个方法根本不用上国外vpn，因为你上国外vpn的ping本质，就是使用国外dns(那台vpn服务器使用的dns)查询域名而已，所以只需要：nslookup<a href="http://xxx.com" target="_blank" rel="noopener">http://xxx.com</a> 国外dns，就行了，例如：nslookup <a href="http://xxx.com" target="_blank" rel="noopener">http://xxx.com</a> 8.8.8.8，提示：你要找冷门国外DNS才行，像谷歌的DNS，国内用的人越来越多了，很多CDN提供商都把谷歌DNS作为国内市场之一，所以，你查到的结果会和国内差不了多少，或者查询域名的NS记录，其域名记录中的MX记录，TXT记录等很有可能指向的是真实ip或同C段服务器。</p>
-<h3 id="ping法"><a href="#ping法" class="headerlink" title="ping法"></a>ping法</h3><p>ping 命令这样写 ping <a href="http://xxx.com" target="_blank" rel="noopener">http://xxx.com</a> 而不是 ping www. xxx .com，ping <a href="http://xxx.com一般都会是真实IP，因为了解到现有很多CDN厂商基本只要求把" target="_blank" rel="noopener">http://xxx.com一般都会是真实IP，因为了解到现有很多CDN厂商基本只要求把</a> www. xxx .com cname到cdn主服务器上去。www. xxx .com和<a href="http://xxx.com" target="_blank" rel="noopener">http://xxx.com</a> 是两条独立的解析记录 一般只会把 www. xxx .com 做 CDN。或者使用国外的多节点ping工具，例如just-ping，全世界几十个节点ping目标域名，很有可能找到真实ip。域名：CA App Synthetic Monitor website monitoring</p>
-<h3 id="使用在线工具查询"><a href="#使用在线工具查询" class="headerlink" title="使用在线工具查询"></a>使用在线工具查询</h3><p><a href="https://myssl.com/cdn_check.html" target="_blank" rel="noopener">https://myssl.com/cdn_check.html</a><br>Tips： 如果你需要更多的在线工具可以<a href="http://www.bingyublog.com/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" target="_blank" rel="noopener">点此</a>获取本博客提供的在线工具<br><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            什么是CDN加速？CDN的全称是Content Delivery Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学(MIT)的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。CDN有什么作用？C
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/25/绕过cdn，查找真实IP/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3503,15 +3583,17 @@
 
       
         
-          <span itemprop="articleBody"><p>MD5：Message Digest Algorithm MD5（中文名为消息摘要算法第五版）为计算机安全领域广泛使用的一种散列函数，用以提供消息的完整性保护。<br>MD5的前身有MD2、MD3和MD4。</p>
-<p>MD5算法具有以下特点：<br>1、压缩性：任意长度的数据，算出的MD5值长度都是固定的。<br>2、容易计算：从原数据计算出MD5值很容易。<br>3、抗修改性：对原数据进行任何改动，哪怕只修改1个字节，所得到的MD5值都有很大区别。<br>4、强抗碰撞：已知原数据和其MD5值，想找到一个具有相同MD5值的数据（即伪造数据）是非常困难的。</p>
-<p>今天不是要你们来看这些百科中的词条的，今天要说的是md5的解密原理，了解了原理，你以后在做解密工作的时候或者自己用python写一个破解md5的脚本的时候才可以做的更好。</p>
-<p>MD5是不可逆算法，目前看来只能通过暴力破解的方式才可以进行解密。在写软件的时候也会用到MD5，实现一些数据的加密，如果你的应用需要可逆的加密方法，请考虑使用 DES,3DES,AES,RSA 等加密算法。</p>
-<p>众所周知，MD5是不可逆的，也就是加密后不能再根据加密的秘钥去解密，那么那些解密网站是怎么进行解密的呢？<br>因为MD5是不可逆的，所以我们不能直接解密出MD5对应的值。但是不同的字符串生成的md5值都是唯一的，我们在校验软件的完整度的时候，通常都是用md5进行比对来测试 也是这个原理。我们不能直接进行解密，因为没有什么解密字典与md5码对应，我们只能从反面来做，自己加密一个字符串，生成一个md5值，然后再与加密的md5进行比对，也就是用已知的MD5值不断与未知的MD5值进行碰撞，如果两者对比后相同，就认定该MD5的值就是该明文了，也就是解密出来了。在众多的MD5中，总会有一些MD5值是符合的。这其实算是一种逆向思维了。但是应用md5加密容易，来进行对比就很难了，因为有些密码我们可能还没有加密比对过，这也是为什么有些md5还解密不出来的原因。</p>
-<p>密码之所以用MD5加密，就是为了不可解密。<br>正常有良心的设计，不能让用户的密码可以解开，因为人的懒惰是天生的，所以大部份的人只会用两三个常用密码。所以外国的密码设计是这样的，你输入一个密码（明文），用MD5加密后保存在数据库中。下次要验证密码也好办，把用户的输入用MD5加密后，与数据库中加密过的数据对比，相同的话，就表示密码正确。<br>这样的设计还有另外一个好处，就是可以一定程度上防止SQL注入。网上的暴力破解其实也是利用这个原理，他把许多已知明文的，用MD5加密后，保存起来。你要反查，他实际上是在数据库中查找加密过的，是否有与你查询的MD5串相同，如果相同的话，就把明文给你看。这样的设计表达的是一个互相尊重的理念，系统管理员/开发员是无权知道用户的密码的。如果用户忘记密码，管理员只能用重置密码的方式。所以现在很多软件在你忘记密码的时候，你只能选择进行身份验证后重置密码。</p>
-<p>在安全领域中，加密数据随处可见。而在这些数据中，重要的数据往往采用哈希算法进行加密。例如，Linux密码使用sha512，Windows密码采用LM、NTLM，而网站密码采用MD5。这些常见哈希算法有几十种。虽然每种密文都有一定规律，但是单纯靠记忆和经验来的判断就比较困难了。而且如果你连加密的方式都不知道的话，你又如何进行快速解密呢？<br>kali linux提供工具hash-identifier来实现这个功能。大家只要运行该命令，然后输入哈希密文，就可以得到密文所使用的哈希算法类型。有了这个算法类型，再选择对应的工具或者彩虹表，获取密码明文就容易多了。<br>打开终端，直接输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># hash-identifier</span></span><br></pre></td></tr></table></figure></p>
-<p>就可以打开hash-identifier了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpo8cd01v1j30m80b4acq.jpg" alt="1"><br>然后我们输入你需要解密的密码<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpo8d2wxg8j30m70fuaei.jpg" alt="2"><br>它就会列出可能的加密方法，这样更便于你进行解密。<br>如果你要进行解密MD5，你可以<a href="http://www.bingyublog.com/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" target="_blank" rel="noopener">点击此链接</a>到本站提供的在线工具进行解密，解密网站很多，总有一款适合你的。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            MD5：Message Digest Algorithm MD5（中文名为消息摘要算法第五版）为计算机安全领域广泛使用的一种散列函数，用以提供消息的完整性保护。MD5的前身有MD2、MD3和MD4。
+MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的MD5值长度都是固定的。2、容易计算：从原
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/23/详解MD5解密原理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3592,11 +3674,16 @@
 
       
         
-          <span itemprop="articleBody"><p>头文件stdio.h ，为C语言中的标准头文件，这是一个名字为stdio，后缀名为.h的文件。以VC6为例，可以找到VC6编译器下VC6.0 完整绿色版\VC98\Include\目录，即可看到stdio.h文件。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplze8ufzxj30hs0d4t9j.jpg" alt="1"><br>也可以直接在程序当中，右键头文件点击打开，也可以直接打开stdio.h的内容，如下图：<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplzfl1ljij30hs0cewez.jpg" alt="2"><br>打开stdio.h文件后，如下图:<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplzhata6jj30hs0btdg6.jpg" alt="3"></p>
-<h2 id="头文件的作用"><a href="#头文件的作用" class="headerlink" title="头文件的作用"></a>头文件的作用</h2><p>那么看清之后，接下来我们来说一说，头文件的作用<br>还是以hello world这个程序为例，相信很多朋友想过：明明就显示一句话”Hello world”竟然足足写了五六行代码，而真正有用的可能就那句printf了，其他都是什么鬼，比如第一句那个#include&lt;stdio.h&gt; ，它是什么鬼？写它有用吗？ 我删了它一样运行显示Hello world啊！<br>没错，在VC6环境下，即使Hello world这个程序去掉第一行的文件包含也就是#include&lt;stdio.h&gt;这句话程序仍然可以编译成功并且运行！但不同的是大家需要注意这个时候编译是有一个警告的！<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplzibze4hj30fe02x3yc.jpg" alt="4"><br>怎么样？看懂了吗? 是提示你printf这个函数没有定义！ (printf并不属于C语言本身，不懂的同学请自行补脑)这是因为在stdio.h这个头文件中有关于printf的定义，也就是printf这个函数是定义在stdio这个文件里，printf并不是C语言的函数，不属于函数本身。<br>可以这么打个比方：编译器好比是你的管家，负责家(程序)的安全，一经发现任何可疑的人员都禁止进屋！而printf就这么被抓住了！你既然想让它进屋，能做的，就是提前告诉管家我要让它进来，也就是提前声明。可时间一长，你发现有很多这样的人想让进来，每次都一个个声明太累了，索性就建立一个白名单，把想让进屋的人都写进去，都声明起来，到时候让管家看白名单得了！于是乎，就有了头文件的样子，也就是包含头文件。#include&lt;stdio.h&gt;这句话。<br>但凡想用到谁，就包含含有谁的头文件。<br>比如你用printf函数打印东西，那你就要包含stdio.h的头文件<br>如果你用pow函数算多立方，那你就要包含math.h的头文件<br>如果你要用strcmp函数接收一个字符，那你就要包含string.h的头文件</p>
-<p>（3）头文件如何被包含？<br>最后，在看一个C语言是如何”包含”这些头文件的，答案就是#include这个预处理命令！<br>所谓预处理，即可以在编译器编译之前，做一些预先要做的准备工作，比如宏替换、展开等等，而包含头文件其实也就是把头文件里的内容原封不动的放到程序的最前面，仅此而已！<br>还不信？来动手试试，依旧以Hello world为例<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line">int  main()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(“hello world!\n”);</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>先删除掉#include&lt;stdio.h&gt;这句话，然后将stdio.h中的内容复制到你的主函数前面，变成这样：<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplzj83sn2j30hs0d0q3i.jpg" alt="5"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            头文件stdio.h ，为C语言中的标准头文件，这是一个名字为stdio，后缀名为.h的文件。以VC6为例，可以找到VC6编译器下VC6.0 完整绿色版\VC98\Include\目录，即可看到stdio.h文件。也可以直接在程序当中，右键头文件点击打开，也可以直接打开stdio.h的内容，如下图：
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/22/详解C语言头文件stdio-h/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3677,20 +3764,16 @@
 
       
         
-          <span itemprop="articleBody"><p>HTTP：是Hyper Text Transfer Protocol的缩写，即 超文本传输协议，是一种请求/响应式的协议。<br>具有灵活的特点，可以运行任意类型的数据，该数据的类型由Content-Type加以标记。<br>属于无状态协议，即对事物处理没有记忆能力，如果后续处理需要前面的信息，则必须重新传输。<br>现在通用的一般都是HTTP1.0和HTTP1.1这2个版本。介绍一下这两个版本的区别：</p>
-<ul>
-<li>HTTP1.0在传输数据的时候，客户端与服务器端建立连接后，每次只能处理一个HTTP请求。</li>
-<li>HTTP1.1在建立连接后，可以传送多个HTTP请求和响应，从而减少了建立和关闭连接的消耗和耗时。</li>
-</ul>
-<p>HTTP地址即网页地址，也就是URL（统一资源定位符），在浏览器的地址栏上就是。<br>URL格式：<a href="http://host[:port][abs_path]或者https://host[:port][abs_path]。" target="_blank" rel="noopener">http://host[:port][abs_path]或者https://host[:port][abs_path]。</a><br>在上述格式中，http即http协议，https是加密了的http协议。host是Internet主机域名或者IP地址。port是端口号，一般是空，默认的是80端口，有时候也会出现8080端口。abs_path是请求资源的URI，就是主机上资源的目录。</p>
-<h2 id="HTTP的8种请求方式"><a href="#HTTP的8种请求方式" class="headerlink" title="HTTP的8种请求方式"></a>HTTP的8种请求方式</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplxvv02hpj30gi067qac.jpg" alt="1"><br>最常用的请求方式是get和post。他们的区别为：</p>
-<ul>
-<li>GET方式的请求传输的数据不能超过1kb。而且如果浏览器请求的URL中含有参数，在浏览器生成的请求消息中，参数部分将附加在请求行中的资源路径后面。会在url地址栏以明文显示。</li>
-<li>POST传输的数据无大小限制，是通过实体内容传递数据的。而且请求方式比GET方式更安全。post请求方式传递的参数隐藏在实体内容中，用户是看不到的，即不会再url地址栏以铭文显示。</li>
-</ul>
-<p>http的5种状态码:<br>1xx：指示信息–表示请求已接收，继续处理<br>2xx：成功–表示请求已被成功接收、理解、接受<br>3xx：重定向–要完成请求必须进行更进一步的操作<br>4xx：客户端错误–请求有语法错误或请求无法实现<br>5xx：服务器端错误–服务器未能实现合法的请求</p>
-<p>几个web开发中常见的http状态码:(最好可以记住)<br> 200:服务器成功处理了客户端的请求。<br> 204:请求被受理但没有资源可以返回.<br> 206:客户端只是请求资源的一部分，服务器只对请求的部分资源执行GET方法，相应报文中通过Content-Range指定范围的资源。<br> 302:临时重定向，请求的资源临时从不同的url响应请求，但请求者应继续使用原有位置来进行以后的请求。例如：在请求重定向中，临时uri应该是响应的Location头字段所指向的资源。<br> 303:与302状态码有相似功能，只是它希望客户端在请求一个URI的时候，能通过GET方法重定向到另一个URI上。<br> 304:发送附带条件的请求时，条件不满足时返回，与重定向无关。<br> 307:临时重定向，与302类似，只是强制要求使用POST方法。<br> 400:请求报文语法有误，服务器无法识别。<br> 401:请求需要认证。<br> 403:资源不可用。服务器理解客户的请求，但拒绝处理它，通常由于服务器上文件或目录的权限设置导致的WEB访问错误。请求的对应资源禁止被访问。<br> 404:服务器找不到请求的资源。例如：访问服务器不存在的网页经常返回此状态码。<br> 500:服务器发生错误，无法处理客户端的请求。<br> 503：服务器正忙。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            HTTP：是Hyper Text Transfer Protocol的缩写，即 超文本传输协议，是一种请求/响应式的协议。具有灵活的特点，可以运行任意类型的数据，该数据的类型由Content-Type加以标记。属于无状态协议，即对事物处理没有记忆能力，如果后续处理需要前面的信息，则必须重新传输。现在
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/22/详解HTTP协议/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3771,14 +3854,17 @@
 
       
         
-          <span itemprop="articleBody"><p>kali自带的源是国外的，我们在进行安装软件和更新软件的时候非常缓慢。<br>这个时候我们需要换一下源，换成国内速度较快的一些源。<br>打开终端,用gedit打开源文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# gedit /etc/apt/sources.list</span><br></pre></td></tr></table></figure></p>
-<p>打开后把一下软件源复制粘贴进去。<br>Tips：强烈建议你复制粘贴进去，如果你已经安装了vm-tools，复制粘贴很容易的，请不要手动输入源进行添加，你写对的几率很小，多一个空格或者少一个字母，你的源就不能正常使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#中科大</span><br><span class="line">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line"></span><br><span class="line">#阿里云</span><br><span class="line">#deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line"></span><br><span class="line">#清华大学</span><br><span class="line">#deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line"></span><br><span class="line">#浙大</span><br><span class="line">#deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line"></span><br><span class="line">#东软大学</span><br><span class="line">#deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line">#deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line"></span><br><span class="line">#官方源</span><br><span class="line">#deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line"></span><br><span class="line">#重庆大学</span><br><span class="line">#deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure></p>
-<p>然后保存退出。<br>warning：你最好不要删除自带的源，如果你添加的源有问题的话，也不至于你的系统没有源列表可进行更新。<br>然后运行以下命令，进行更新源列表和更新软件包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get dist-upgrade</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fphb91ll0fj30lt0ddqac.jpg" alt="2"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fphb9biuu5j30ly0bqqac.jpg" alt="3"><br>warning:在进行更新操作前，请确认你的网络环境良好，因为如果你的网络不稳定或者延迟很严重的话，在更新源的时候有些软件包可能下载不了，或者依赖不能正常下载安装，导致一些软件的运行环境出现问题，后续不能正常操作，会出现很多的问题。</p>
-<p>Tips：如果你的系统需要很多更新的软件包很多的话，会花费很长时间进行更新，过程会很漫长，还请你耐心等待。但是请不要在中途中断操作，比如关机或直接ctr+c，退出终端，这样会给你的系统造成很大的伤害。</p>
-<p>如图是更新完成。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fphb9mps7pj30jy0b4qac.jpg" alt="4"></p>
-<p>最后简单的说明以下，如果在更新的时候，出现404 not found,请按照报错尝试检测一下你添加的源是不是存在，或者已经不可用了。<br>你需要做的是把源的url复制进浏览器的地址栏，然后打开就可以了。<br>如果可以正常访问，就说明那个源是正常可以使用的。<br>如图所示，是我对清华大学的一个源的检测，你们也可以这样做。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fphb8gzbalj30xa0dxqac.jpg" alt="5"><br>ok！</p>
-</span>
+          <span itemprop="articleBody">
+            
+            kali自带的源是国外的，我们在进行安装软件和更新软件的时候非常缓慢。这个时候我们需要换一下源，换成国内速度较快的一些源。打开终端,用gedit打开源文件。1root@kali:~# gedit /etc/apt/sources.list
+打开后把一下软件源复制粘贴进去。Tips：强烈建议你复制粘贴
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/18/kali更新源设置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3859,11 +3945,16 @@
 
       
         
-          <span itemprop="articleBody"><p>kali下除了安装搜狗拼音输入法外，还可以选择谷歌拼音输入法，谷歌拼音输入法其实还是非常智能的。想用它的可以看看本教程安装一下。<br>安装环境:虚拟机环境下的Kali Linux 64 Bit 2018.1<br>先更新一下软件源列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get update &amp;&amp; apt-get upgrade</span><br></pre></td></tr></table></figure></p>
-<p>记住一定要更新一下!!!<br>首先安装fcitx(小企鹅输入法框架)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get install fcitx</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9airtfgj30lj0ahtdt.jpg" alt="1"><br>然后安装谷歌拼音输入法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get install fcitx-googlepinyin</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9qaijbyj30lt0b4qac.jpg" alt="2"><br>安装后，搜索fcitx进行设置。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9el7tnij30lj07iqac.jpg" alt="5"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpha34djrij30g20d9qac.jpg" alt="6"><br>按ctr+空格，召唤出谷歌拼音输入法。<br>下面是安装好的样子<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpha3je2ubj30m60gkqac.jpg" alt="7"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            kali下除了安装搜狗拼音输入法外，还可以选择谷歌拼音输入法，谷歌拼音输入法其实还是非常智能的。想用它的可以看看本教程安装一下。安装环境:虚拟机环境下的Kali Linux 64 Bit 2018.1先更新一下软件源列表1root@kali:~# apt-get update &amp;&amp; 
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/18/kali安装谷歌拼音输入法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3944,13 +4035,17 @@
 
       
         
-          <span itemprop="articleBody"><p>安装环境:虚拟机环境下的Kali Linux 64 Bit 2018.1<br>先更新一下软件源列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get update &amp;&amp; apt-get upgrade</span><br></pre></td></tr></table></figure></p>
-<p>记住一定要更新一下!!!<br>首先安装fcitx(小企鹅输入法框架)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get install fcitx</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9airtfgj30lj0ahtdt.jpg" alt="1"><br>接着安装，因为搜狗拼音输入法是依赖这些软件包的，所以先进行安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt install libopencc1 fcitx-libs fcitx-libs-qt</span><br></pre></td></tr></table></figure></p>
-<p>在安装的时候会报错，如下图所示<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9ddqpoxj30lv068tdt.jpg" alt="2"><br>按照提示运行一下提示的命令进行修复一下即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt --fix-broken install</span><br></pre></td></tr></table></figure></p>
-<p>然后再出什么报错，例如：软件包libopencc1 libopencc2未安装啥的，请自动忽略吧，你自己是根本安装不了的。<br>你别管它，直接继续进行就可以了。<br>下面打开浏览器下载搜狗拼音输入法。<br>官方地址：<a href="https://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="noopener">https://pinyin.sogou.com/linux/?r=pinyin</a><br>选择适合自己kali型号的即可。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9ds9sqxj31190jaqac.jpg" alt="3"><br>然后我们开始安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# dpkg -i sogoupinyin_2.2.0.0102_amd64.deb</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9e9q1agj30iv05iqac.jpg" alt="4"><br>安装后，搜索fcitx进行设置。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9el7tnij30lj07iqac.jpg" alt="5"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9f5e8e7j30m40gpqac.jpg" alt="6"><br>然后按ctr+空格，召唤出搜狗拼音输入法。<br>如图所示就是安装好的样子。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9ju5bdkj30m40eyqac.jpg" alt="7"><br>我是没有重启kali直接就可以使用了。<br>如果你的没反应的话，请输入reboot，重启kali再继续操作。<br>ok,教程结束，撒花花(●’◡’●)</p>
-</span>
+          <span itemprop="articleBody">
+            
+            安装环境:虚拟机环境下的Kali Linux 64 Bit 2018.1先更新一下软件源列表1root@kali:~# apt-get update &amp;&amp; apt-get upgrade
+记住一定要更新一下!!!首先安装fcitx(小企鹅输入法框架)。1root@kali:~# ap
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/18/kali安装搜狗输入法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4031,14 +4126,16 @@
 
       
         
-          <span itemprop="articleBody"><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpgtc2bu0vj30ef08lglm.jpg" alt="0"><br>itchat是一个开源的微信个人号接口，使用python调用微信从未如此简单。<br>使用不到三十行的代码，你就可以完成一个能够处理所有信息的微信机器人。<br>这是itchat项目的官网：<a href="http://itchat.readthedocs.io/zh/latest/" target="_blank" rel="noopener">http://itchat.readthedocs.io/zh/latest/</a><br>大家有兴趣的可以去上面了解看看。上面的用法介绍都很全面的，希望大家可以学到很多。<br>下面我来做个简单的示范。<br>首先你需要一个图灵机器人的账号，这样就可以获取一个api的key了。<br>这是图灵机器人的官网:<a href="http://www.tuling123.com/" target="_blank" rel="noopener">http://www.tuling123.com/</a><br>登陆进去后，进入机器人设置里找到apikey，稍后会用到。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg44ko4hgj310u0fm483.jpg" alt="1"><br>现在我们需要一个python2的环境。<br>我是在自己的Ubuntu系统里写的python代码，Ubuntu已经自带了python2.7和python3.5的环境。本次的代码是用的python2.7。<br>这次的python代码需要用到itchat和requests模块。<br>其中requests模块是python2.7已经默认安装的了。<br>所以我们需要安装itchat模块。<br>我们采用pip安装，也建议大家以后再安装python模块的时候用pip进行安装，可以获取到最新的最官方的模块。<br>我们先安装pip。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt install python-pip</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg46ifkksj30kc0bfk0v.jpg" alt="2"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg46wdetrj30jv0bf483.jpg" alt="3"><br>然后开始用pip安装itchat模块。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ pip install itchat</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg479jq4zj30k70bhth5.jpg" alt="4"><br>现在准备工作已经做好了，我们开始写代码。<br>创建一个.py的文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ touch wechat_robot.py</span><br></pre></td></tr></table></figure></p>
-<p>然后进行编辑代码。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ gedit wechat_robot.py</span><br></pre></td></tr></table></figure></p>
-<p>代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line">#coding:utf-8  </span><br><span class="line">import itchat</span><br><span class="line">import requests</span><br><span class="line">def get_response(msg):</span><br><span class="line">    apiUrl = &apos;http://www.tuling123.com/openapi/api&apos;</span><br><span class="line">    data = &#123;</span><br><span class="line">        &apos;key&apos;: &apos;f8d0336b17a94258906188a9fc51933a&apos;,  # Tuling ApiKey</span><br><span class="line">        &apos;info&apos;: msg,  # 这是我们发出去的消息</span><br><span class="line">        &apos;userid&apos;: &apos;wechat-robot&apos;,  # 这里你想改什么都可以</span><br><span class="line">    &#125;</span><br><span class="line">    # 我们通过如下命令发送一个post请求</span><br><span class="line">    r = requests.post(apiUrl, data=data).json()</span><br><span class="line">    return r.get(&apos;text&apos;)</span><br><span class="line">@itchat.msg_register(itchat.content.TEXT)</span><br><span class="line">def print_content(msg):</span><br><span class="line">    return get_response(msg[&apos;Text&apos;])</span><br><span class="line">@itchat.msg_register([itchat.content.TEXT], isGroupChat=True)</span><br><span class="line">def print_content(msg):</span><br><span class="line">    return get_response(msg[&apos;Text&apos;])</span><br><span class="line">itchat.auto_login(True)</span><br><span class="line">itchat.run()</span><br></pre></td></tr></table></figure></p>
-<p>Tips:我们在key那里把自己申请的apikey复制粘贴进去就可以了，其他的代码不需要改动。<br>保存后，我们开始运行程序。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ python wechat_robot.py</span><br></pre></td></tr></table></figure></p>
-<p>此时会出现一个二维码，和你登陆电脑板的微信的二维码差不多，会要你扫描二维码后在手机上确认登陆微信网页版。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg4qja1iaj30kd0do483.jpg" alt="5"><br>以下是在终端下的提示。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg483judbj30gq03d483.jpg" alt="6"><br>当我们成功登陆后，微信就可以自动回复了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg48jfzkfj30jm04cwf0.jpg" alt="7"><br>你可以要你的微信好友和你一起测试以下。<br>而且在微信群里也是可以自动回复的。<br>以下是我测试的截图。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg4jmzi9cj30do0qoaj7.jpg" alt="8"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            itchat是一个开源的微信个人号接口，使用python调用微信从未如此简单。使用不到三十行的代码，你就可以完成一个能够处理所有信息的微信机器人。这是itchat项目的官网：http://itchat.readthedocs.io/zh/latest/大家有兴趣的可以去上面了解看看。上面的用法介绍都
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/17/用python制作微信聊天机器人/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4119,9 +4216,16 @@
 
       
         
-          <span itemprop="articleBody"><p>有时候我们在使用win10的时候会在锁屏界面突然出现蓝屏问题。<br>我们可以尝试输入cmd命令解决一下。<br>win+X，然后按一下A键，打开Windows power shell(管理员)<br>。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdxlx0i8hj30np0ck483.jpg" alt="1"><br>输入以下命令。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> exist <span class="string">"%SystemRoot%\System32\InputMethod\CHS\ChsIME.exe"</span> (</span><br><span class="line"></span><br><span class="line">takeown /f <span class="string">"%SystemRoot%\System32\InputMethod\CHS\ChsIME.exe"</span> /A</span><br><span class="line"></span><br><span class="line">icacls <span class="string">"%SystemRoot%\System32\InputMethod\CHS\ChsIME.exe"</span> /deny <span class="string">"NT AUTHORITY\SYSTEM:RX"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
-<p>以上就是Win10锁屏蓝屏的原因与解决办法，希望对大家有所帮助。另外，如果以上方法无法解决，可以尽量少锁屏或者尝试系统重置、系统还原、重装系统解决。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            有时候我们在使用win10的时候会在锁屏界面突然出现蓝屏问题。我们可以尝试输入cmd命令解决一下。win+X，然后按一下A键，打开Windows power shell(管理员)。输入以下命令。123456if exist "%SystemRoot%\System32\InputMethod\CHS
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/15/cmd命令解决蓝屏问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4202,12 +4306,17 @@
 
       
         
-          <span itemprop="articleBody"><p>前提：需要网卡支持收发信号，当然笔记本都支持了现在。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan show networks mode=bssid</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdww1m80lj30cp078483.jpg" alt="1"><br>如果你输入命令后，显示如下界面。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwwjm65rj30bs00x483.jpg" alt="2"><br>你只需要打开wlan的服务就可以了。<br>win+R,打开运行程序，输入services.msc.<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwwzgv5bj30b606b483.jpg" alt="3"><br>在打开的选项卡中双击服务和应用——服务。<br>在中间的服务栏目中找到WLAN AutoConfig，如果没有启动，点击启动。如果已经启动，点击重新启动。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwxdht4qj30bk0c9483.jpg" alt="4"><br>双击打开。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwxpd9kbj30it0d1483.jpg" alt="5"><br>然后点击确定。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwxpd9kbj30it0d1483.jpg" alt="6"><br>好了，现在就已经开启wlan服务了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan show profiles</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdx08jwrxj30em071483.jpg" alt="7"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan show drivers</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdx12his0j30jf0ha483.jpg" alt="8"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> /f <span class="string">"skip=10 tokens=1,2 delims=:"</span> %i <span class="keyword">in</span> (<span class="string">'netsh wlan show profiles'</span>) <span class="keyword">do</span> @<span class="keyword">for</span> /f <span class="string">"tokens=1-2 delims=:"</span> %k <span class="keyword">in</span> (<span class="string">'netsh wlan show profiles %j key ^= clear ^|findstr /i "关键内容"'</span>) <span class="keyword">do</span> @<span class="built_in">echo</span> %j,%l&gt;&gt; %USERPROFILE%\desktop\1.txt</span><br></pre></td></tr></table></figure></p>
-<p>可以生成一个txt文本，查看连接过的WiFi及密码。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            前提：需要网卡支持收发信号，当然笔记本都支持了现在。1netsh wlan show networks mode=bssid
+如果你输入命令后，显示如下界面。你只需要打开wlan的服务就可以了。win+R,打开运行程序，输入services.msc.在打开的选项卡中双击服务和应用——服务。在中间的服
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/03/15/cmd命令下的WiFi/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4257,30 +4366,30 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">你指尖跃动的电光，是我此生不变的信仰。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/">
+            <a href="/archives">
               <span class="site-state-item-count">128</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
-            
+            <a href="/tags">
               <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">标签</span>
-              
+              </a>
           </div>
 
         </nav>
@@ -4291,11 +4400,35 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
+                <a href="http://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945 || github" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
               </span>
             
           
@@ -4306,7 +4439,19 @@
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
               </span>
             
           
@@ -4316,7 +4461,7 @@
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -4351,7 +4496,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -4409,7 +4554,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -4417,17 +4562,23 @@ tpwidget("show");</script>
     
   
   
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-  <script type="text/javascript" src="//helpers.js?v="></script>
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
   
 
-  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="//nav-toggle.js?v="></script>
-  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
@@ -4448,15 +4599,17 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="//lazyload.js"></script>
+  <script type="text/javascript" src="/js/lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "//loading.gif",
+        placeholder: "/images/loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>
