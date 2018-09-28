@@ -47,7 +47,7 @@
 <meta property="og:description" content="虚拟机其实已经自带了文件共享功能。这其实是一种映射关系，把宿主机的文件夹通过vm-tools映射到了虚拟机系统里。这种功能与使用ftp等来进行传输文件以达到共享文件的方法更为简单高效。首先保证你的虚拟机已经安装并可以成功运行”vm-tools”。你可以按照kali安装vm-tools 来安装并运行”vm-tools”，Linux主流版本均可按照此教程进行设置。首先对虚拟机进行设置。打开VMware">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvpeo34cytj30jg06e10j.jpg">
-<meta property="og:updated_time" content="2018-09-28T10:07:16.552Z">
+<meta property="og:updated_time" content="2018-09-28T10:14:22.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟机中Linux与主机文件共享">
 <meta name="twitter:description" content="虚拟机其实已经自带了文件共享功能。这其实是一种映射关系，把宿主机的文件夹通过vm-tools映射到了虚拟机系统里。这种功能与使用ftp等来进行传输文件以达到共享文件的方法更为简单高效。首先保证你的虚拟机已经安装并可以成功运行”vm-tools”。你可以按照kali安装vm-tools 来安装并运行”vm-tools”，Linux主流版本均可按照此教程进行设置。首先对虚拟机进行设置。打开VMware">
@@ -415,7 +415,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvpeo34cytj30jg06e10j.jpg" rel="gallery_cjmlufyzx007gdowahjnl91k4"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvpeo34cytj30jg06e10j.jpg" rel="gallery_cjmlupcf6007jkswaeh05mplt"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpeo34cytj30jg06e10j.jpg" itemprop="contentUrl"/>
               </a>
@@ -434,17 +434,15 @@
 <p>但是有一点需要提醒，设置”只读”权限是为了保证安全，防止你共享的文件在宿主机上具有可操作的权限，只读权限可以在一定限度内保证虚拟机与宿主机之间的安全隔离。但是虽然安全了，由于是”只读”权限，一些文件在共享时候会遇到不能共享的问题。当然这个属性也是可以随时修改的。一定要记得传输一些安全可控的文件。</p>
 </blockquote>
 <p>现在打开虚拟机里的系统。<br>然后我们需要查看一下Linux的内核版本。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ uname -r</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdjxc4brj30ig0320t7.jpg" alt=""><br>然后根据你的内核版本号来确定使用下表哪个命令。<br>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdjxc4brj30ig0320t7.jpg" alt=""><br>然后根据你的内核版本号来确定使用下表哪个命令。<br><strong>命令语法</strong><br>
 <table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
 	<tbody>
 		<tr>
 			<td align="center">
 				<strong>4.0 之前的 Linux 内核</strong><br>
 			</td>
-			<td>
-				<p class="p" id="GUID-AB5C80FE-9B8A-4899-8186-3DB8201B1758__d299t69" align="center">
+			<td align="center">
 					<strong>4.0 及更高版本的 Linux 内核</strong>
-				</p>
 <br>
 			</td>
 			<td align="center">
