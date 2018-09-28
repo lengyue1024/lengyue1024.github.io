@@ -29,7 +29,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Linux,VMware," />
 
 
 
@@ -38,20 +38,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="我个人建议您是最好不要使用该功=功能的，因为确实不太安全。通常大部分人会用kali制作一些木马或者在虚拟机中打开一些十分危险的文件，自以为虚拟机很安全，可是不作死就不会死的道理我想你应该还是需要明白的。在使用这个功能后 ，你的虚拟机就已经不安全了，你的虚拟机相当于和你的主机是一体的了，你不-根本无法避免虚拟机中的一些病毒文件传播进主机，如果你的主机主动杀死了还行，可是万一不行呢?既然我说了这么多，">
-<meta name="keywords" content="Linux">
+<meta name="description" content="虚拟机其实已经自带了文件共享功能。这其实是一种映射关系，把宿主机的文件夹通过vm-tools映射到了虚拟机系统里。这种功能与使用ftp等来进行传输文件以达到共享文件的方法更为简单高效。首先保证你的虚拟机已经安装并可以成功运行”vm-tools”。你可以按照kali安装vm-tools 来安装并运行”vm-tools”，Linux主流版本均可按照此教程进行设置。首先对虚拟机进行设置。打开VMware">
+<meta name="keywords" content="Linux,VMware">
 <meta property="og:type" content="article">
 <meta property="og:title" content="虚拟机中Linux与主机文件共享">
 <meta property="og:url" content="http://bingyublog.com/2018/09/28/linux共享/index.html">
 <meta property="og:site_name" content="冰羽の博客">
-<meta property="og:description" content="我个人建议您是最好不要使用该功=功能的，因为确实不太安全。通常大部分人会用kali制作一些木马或者在虚拟机中打开一些十分危险的文件，自以为虚拟机很安全，可是不作死就不会死的道理我想你应该还是需要明白的。在使用这个功能后 ，你的虚拟机就已经不安全了，你的虚拟机相当于和你的主机是一体的了，你不-根本无法避免虚拟机中的一些病毒文件传播进主机，如果你的主机主动杀死了还行，可是万一不行呢?既然我说了这么多，">
+<meta property="og:description" content="虚拟机其实已经自带了文件共享功能。这其实是一种映射关系，把宿主机的文件夹通过vm-tools映射到了虚拟机系统里。这种功能与使用ftp等来进行传输文件以达到共享文件的方法更为简单高效。首先保证你的虚拟机已经安装并可以成功运行”vm-tools”。你可以按照kali安装vm-tools 来安装并运行”vm-tools”，Linux主流版本均可按照此教程进行设置。首先对虚拟机进行设置。打开VMware">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg">
-<meta property="og:updated_time" content="2018-09-28T09:30:32.138Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvpeo34cytj30jg06e10j.jpg">
+<meta property="og:updated_time" content="2018-09-28T10:07:16.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟机中Linux与主机文件共享">
-<meta name="twitter:description" content="我个人建议您是最好不要使用该功=功能的，因为确实不太安全。通常大部分人会用kali制作一些木马或者在虚拟机中打开一些十分危险的文件，自以为虚拟机很安全，可是不作死就不会死的道理我想你应该还是需要明白的。在使用这个功能后 ，你的虚拟机就已经不安全了，你的虚拟机相当于和你的主机是一体的了，你不-根本无法避免虚拟机中的一些病毒文件传播进主机，如果你的主机主动杀死了还行，可是万一不行呢?既然我说了这么多，">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg">
+<meta name="twitter:description" content="虚拟机其实已经自带了文件共享功能。这其实是一种映射关系，把宿主机的文件夹通过vm-tools映射到了虚拟机系统里。这种功能与使用ftp等来进行传输文件以达到共享文件的方法更为简单高效。首先保证你的虚拟机已经安装并可以成功运行”vm-tools”。你可以按照kali安装vm-tools 来安装并运行”vm-tools”，Linux主流版本均可按照此教程进行设置。首先对虚拟机进行设置。打开VMware">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvpeo34cytj30jg06e10j.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -415,9 +415,9 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg" rel="gallery_cjmlt50zs00748cwa2uqbu9im"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvpeo34cytj30jg06e10j.jpg" rel="gallery_cjmlufyzx007gdowahjnl91k4"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg" itemprop="contentUrl"/>
+                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpeo34cytj30jg06e10j.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -429,11 +429,11 @@
       
 
       
-        <span itemprop="articleBody"><p>我个人建议您是最好不要使用该功=功能的，因为确实不太安全。通常大部分人会用kali制作一些木马或者在虚拟机中打开一些十分危险的文件，自以为虚拟机很安全，可是不作死就不会死的道理我想你应该还是需要明白的。在使用这个功能后 ，你的虚拟机就已经不安全了，你的虚拟机相当于和你的主机是一体的了，你不-根本无法避免虚拟机中的一些病毒文件传播进主机，如果你的主机主动杀死了还行，可是万一不行呢?<br>既然我说了这么多，那么请你一定要仔细斟酌后再决定是否使用，是否不用还是什么时候使用，一定要记得再你传输一些正规自己可控的文件。<br>首先介绍一下虚拟机的几个重要文件。这些文件构建了整个虚拟机系统。<br>首先保证你的虚拟机已经按照并可以成功运行”vm-tools”。<br>你可以根据<a href=""></a>来安装并运行”vm-tools”，Linux主流版本均可按照此教程进行设置。<br>首先对虚拟机进行设置。<br>打开VMware虚拟机，打开需要进行文件共享的虚拟机。<br>双击”硬盘”，<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpc6wy4e6j30md0jz404.jpg" alt=""><br>依次选择”选项”，”共享文件夹”。共享文件夹默认是禁用的，我们需要手动启用。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpc7evycnj30ka0jit9k.jpg" alt=""><br>选择”总是启用”，点击”添加”。<br>我们到自己电脑硬盘上自己创建一个用于给虚拟机共享文件的文件夹。<br>我个人在E盘创建了一个名为”share”的文件夹用于共享文件。<br>在”主机路径”里选择你创建用于共享文件的那个文件夹。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpc7jpee2j30dt0bawek.jpg" alt=""><br>然后点击”下一步”，设置共享文件夹的属性,”只读”这个属性按照个人需求进行选择(这里我选择了”只读”)。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpc7qy2qwj30ds0b5jrf.jpg" alt=""></p>
+        <span itemprop="articleBody"><p>虚拟机其实已经自带了文件共享功能。这其实是一种映射关系，把宿主机的文件夹通过vm-tools映射到了虚拟机系统里。这种功能与使用ftp等来进行传输文件以达到共享文件的方法更为简单高效。<br>首先保证你的虚拟机已经安装并可以成功运行”vm-tools”。<br>你可以按照<a href="https://www.bingyublog.com/2018/02/20/kali2017-3%E5%AE%89%E8%A3%85vm-tools/" target="_blank" rel="noopener">kali安装vm-tools </a>来安装并运行”vm-tools”，Linux主流版本均可按照此教程进行设置。<br>首先对虚拟机进行设置。<br>打开VMware虚拟机，打开需要进行文件共享的虚拟机。<br>双击”硬盘”<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpc6wy4e6j30md0jz404.jpg" alt=""><br>依次选择”选项”，”共享文件夹”。共享文件夹默认是禁用的，我们需要手动启用。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpc7evycnj30ka0jit9k.jpg" alt=""><br>选择”总是启用”，点击”添加”。<br>我们到自己电脑硬盘上自己创建一个用于给虚拟机共享文件的文件夹。<br>我个人在E盘创建了一个名为”share”的文件夹用于共享文件。<br>在”主机路径”里选择你创建用于共享文件的那个文件夹。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpc7jpee2j30dt0bawek.jpg" alt=""><br>然后点击”下一步”，设置共享文件夹的属性,”只读”这个属性按照个人需求进行选择(这里我选择了”只读”)。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpc7qy2qwj30ds0b5jrf.jpg" alt=""></p>
 <blockquote>
-<p>但是有一点我个人需要提醒，设置”只读”权限是为了保证安全，防止你共享的文件在宿主机上具有可操作的权限，只读权限可以在一定限度内保证虚拟机与宿主机之间的这一“虚拟与现实”之间的安全隔离。<br>但是虽然安全了，由于是”只读”权限，一些文件在共享时候会遇到不能共享的问题。当然这个属性 也是可以随时修改的。</p>
+<p>但是有一点需要提醒，设置”只读”权限是为了保证安全，防止你共享的文件在宿主机上具有可操作的权限，只读权限可以在一定限度内保证虚拟机与宿主机之间的安全隔离。但是虽然安全了，由于是”只读”权限，一些文件在共享时候会遇到不能共享的问题。当然这个属性也是可以随时修改的。一定要记得传输一些安全可控的文件。</p>
 </blockquote>
-<p>这其实是一种映射关系。把宿主机的文件夹通过vm-tools映射到了虚拟机系统里。<br>现在打开虚拟机里的系统。<br>然后我们需要查看一下Linux的内核版本。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure></p>
+<p>现在打开虚拟机里的系统。<br>然后我们需要查看一下Linux的内核版本。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ uname -r</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdjxc4brj30ig0320t7.jpg" alt=""><br>然后根据你的内核版本号来确定使用下表哪个命令。<br>
 <table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
 	<tbody>
@@ -497,10 +497,10 @@
 		</tr>
 	</tbody>
 </table>
-<br>我们此时需要在Linux上也创建一个用于共享的目录。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir share</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpda5t56ij30ia03ntah.jpg" alt=""><br>我是高于4.0的内核版本。对于 Linux 内核版本 4.0 或更高版本，输入命令 <code>/usr/bin/vmhgfs-fuse -h</code> 可列出可用的选项。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/bin/vmhgfs-fuse .host:/ /home/bingyu/share -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdac7l6nj30ij043759.jpg" alt=""><br>此时，已经完全设置完毕，我们可以试试看。<br>我现在把一张图片复制到windows上的share文件夹。(当然任何文件都是可以共享的)<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdahy2i1j30ip05saa8.jpg" alt=""><br>我们进入Linux的share目录看看有没有。(这个时候会多出一层目录)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /share/share</span><br><span class="line">ls</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdatnqb8j30id02kaaz.jpg" alt=""><br>我们可以打开看看是不是刚才的图片。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eog TIM图片20180917104312.jpg</span><br></pre></td></tr></table></figure></p>
+<br>我们此时需要在Linux上也创建一个用于共享的目录。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo mkdir share</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpda5t56ij30ia03ntah.jpg" alt=""><br>我是高于4.0的内核版本。对于 Linux 内核版本 4.0 或更高版本，输入命令 <code>/usr/bin/vmhgfs-fuse -h</code> 可列出可用的选项。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo /usr/bin/vmhgfs-fuse .host:/ /home/bingyu/share -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdac7l6nj30ij043759.jpg" alt=""><br>此时，已经完全设置完毕，我们可以试试看。<br>我现在把一张图片复制到windows上的share文件夹。(当然任何文件都是可以共享的)<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdahy2i1j30ip05saa8.jpg" alt=""><br>我们进入Linux的share目录看看有没有。(这个时候会多出一层目录)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ cd /share/share</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdatnqb8j30id02kaaz.jpg" alt=""><br>我们可以打开看看是不是刚才的图片。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ eog TIM图片20180917104312.jpg</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvpdb3sbsuj31090g8wnj.jpg" alt=""></p>
 <p>关于共享文件的更多用法可以参考<a href="https://docs.vmware.com/cn/VMware-Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-AACE0935-4B43-43BA-A935-FC71ABA17803.html" target="_blank" rel="noopener">https://docs.vmware.com/cn/VMware-Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-AACE0935-4B43-43BA-A935-FC71ABA17803.html</a></p>
 <p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
@@ -527,6 +527,8 @@
           
             <a href="/tags/Linux/" rel="tag"><i class="fa tag"></i> Linux</a>
           
+            <a href="/tags/VMware/" rel="tag"><i class="fa tag"></i> VMware</a>
+          
         </div>
       
 
@@ -538,7 +540,7 @@
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/28/ubuntu包管理1/" rel="next"></a>
+              <a href="/2018/09/22/ubuntu安装Tim/" rel="next">Ubuntu18.04安装QQ</a>
             
           </div>
         </div>
@@ -744,7 +746,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">133</span>
+              <span class="site-state-item-count">132</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
