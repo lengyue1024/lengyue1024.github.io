@@ -29,7 +29,7 @@
 
 
 
-  <meta name="keywords" content="Git,GitHub," />
+  <meta name="keywords" content="GitHub,Git," />
 
 
 
@@ -39,7 +39,7 @@
 
 
 <meta name="description" content="首先说几个基本概念，明白这些概念对你以后使用GitHub帮助会很大。  工作区：就是你在电脑里能看到的目录。暂存区：英文叫stage或index。一般存放在 “.git目录下” 下的index文件(.git/index)中，所以我们把暂存区有时也叫作索引（index）。版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。   首先要有一个GitHub账户，这是必须的。然后我们">
-<meta name="keywords" content="Git,GitHub">
+<meta name="keywords" content="GitHub,Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git创建远程仓库">
 <meta property="og:url" content="http://bingyublog.com/2018/09/05/Git创建远程仓库/index.html">
@@ -47,7 +47,7 @@
 <meta property="og:description" content="首先说几个基本概念，明白这些概念对你以后使用GitHub帮助会很大。  工作区：就是你在电脑里能看到的目录。暂存区：英文叫stage或index。一般存放在 “.git目录下” 下的index文件(.git/index)中，所以我们把暂存区有时也叫作索引（index）。版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。   首先要有一个GitHub账户，这是必须的。然后我们">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg">
-<meta property="og:updated_time" content="2018-09-28T02:42:47.316Z">
+<meta property="og:updated_time" content="2018-09-30T11:52:59.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git创建远程仓库">
 <meta name="twitter:description" content="首先说几个基本概念，明白这些概念对你以后使用GitHub帮助会很大。  工作区：就是你在电脑里能看到的目录。暂存区：英文叫stage或index。一般存放在 “.git目录下” 下的index文件(.git/index)中，所以我们把暂存区有时也叫作索引（index）。版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。   首先要有一个GitHub账户，这是必须的。然后我们">
@@ -415,7 +415,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg" rel="gallery_cjmorrnpb0007rkwa0kucgdbb"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg" rel="gallery_cjmoxbyze0002q8waor69ns8l"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuzzs0f7jcj30jg06en0c.jpg" itemprop="contentUrl"/>
               </a>
@@ -435,8 +435,8 @@
 </blockquote>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvp1exqvhwj30jk0f30xl.jpg" alt="图示"></p>
 <p>首先要有一个GitHub账户，这是必须的。<br>然后我们访问<a href="https://github.com/new" target="_blank" rel="noopener">https://github.com/new</a> ，开始在GitHub网站上创建一个新的仓库。<br>其中对其中三个选项具体说明一下。<br><code>Initialize this repository with a README</code>: 在 Initialize this repository with a README选项上打钩，随后 GitHub会自动初始化仓库并设置README文件，让用户可以立刻clone这个仓库。如果想向GitHub添加手中已有的Git仓库，建议不要勾选，直接手动 push。<br>我在此为仓库添加了README.md文件<br><code>Add .gitignore</code>:  该文件用来描述 Git 仓库中不需管理的文件与目录。<br>通过它可以在初始化时自动生 成.gitignore文件A。这个设定会帮我们把不需要在Git仓库中进行版本管 理的文件记录在.gitignore文件中，省去了每次根据框架进行设置的麻 烦。下拉菜单中包含了主要的语言及框架，选择今后将要使用的即可。<br><code>Add a license</code>: 择要添加的许可协议文件。如果这个仓库中 包含的代码已经确定了许可协议，那么请在这里进行选择。随后将自动 生成包含许可协议内容的LICENSE文件，用来表明该仓库内容的许可协议。<br>我在此添加了MIT协议。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyv1n71vlj30wk0k4dha.jpg" alt=""><br>点击“Create repository”后，就成功创建了一个仓库。<br>README.md在初始化时已经生成好了。README.md文件的内容 会自动显示在仓库的首页当中。其中README.md和Issue、Wiki等都是需要用到GFM(GitHub Flavored Markdown)语法的，这是GitHub自家基于markdown的扩展语法。一般情况下只要按照原本的Markdown语法进行描述就可以。</p>
-<p>此时我们需要安装<code>git</code> ，下载地址：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a> 。<br>具体安装过程百度即可，但是有一点需要提醒的是 <strong>把git添加到全局环境变量中</strong> 。<br>然后需要设置一下，才能使用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"Your Name"</span>  <span class="comment"># Your Name填GitHub用户名</span></span><br><span class="line">git config --global user.email <span class="string">"email@example.com"</span>  <span class="comment"># email@example.com填你注册GitHub的邮箱</span></span><br></pre></td></tr></table></figure></p>
-<p>打开git，把版本库克隆到本地。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/lengyue1024/ubuntu-guide.git</span><br></pre></td></tr></table></figure></p>
+<p>此时我们需要安装<code>git</code> ，下载地址：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a> 。<br>具体安装过程百度即可，但是有一点需要提醒的是 <strong>把git添加到全局环境变量中</strong> 。<br>初次运行git需要配置一下，才能使用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"Your Name"</span>  <span class="comment"># Your Name填GitHub用户名</span></span><br><span class="line">git config --global user.email <span class="string">"email@example.com"</span>  <span class="comment"># email@example.com填你注册GitHub的邮箱</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvrt5kbi6cj30d1014dg0.jpg" alt=""><br>打开git，把版本库克隆到本地。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/lengyue1024/ubuntu-guide.git</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyicgrvej30ds02l748.jpg" alt=""><br>然后，我们进入/ubuntu-guide目录创建一个文件，并写入一点东西进去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ touch ubuntu-wiki.md</span><br><span class="line">$ vim ubuntu-wiki.md</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fuyyjmzyy4j30fy08wjrh.jpg" alt=""><br>操作方式和Linux基本一致。保存退出后，我们可以查看一下是否已经成功写入。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cat ubuntu-wiki.md</span><br><span class="line">ubuntu是一款以桌面应用为主的开源GNU/Linux操作系统</span><br></pre></td></tr></table></figure></p>
 <p>我们可以查看一下当前的状态。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure></p>
@@ -470,9 +470,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Git/" rel="tag"><i class="fa tag"></i> Git</a>
-          
             <a href="/tags/GitHub/" rel="tag"><i class="fa tag"></i> GitHub</a>
+          
+            <a href="/tags/Git/" rel="tag"><i class="fa tag"></i> Git</a>
           
         </div>
       
@@ -693,7 +693,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">133</span>
+              <span class="site-state-item-count">132</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
