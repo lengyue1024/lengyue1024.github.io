@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next use-motion theme-next-mala">
+<html class="theme-next  ">
 <head>
   
 
@@ -17,25 +17,19 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+<link rel="stylesheet" type="text/css" href="//main.css?v="/>
 
 
     <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→" />
 
 
 
-  <meta name="keywords" content="Hexo,Mala" />
 
 
 
-
-
-  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→">
@@ -52,18 +46,10 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: 'Mala',
-    sidebar: 'post'
+    scheme: '',
+    sidebar: ''
   };
 </script>
-
-  <script>
-  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
-  daovoice('init', {
-      app_id: "fb883a64"
-    });
-  daovoice('update');
-  </script>
 
 
   <title> 冰羽の博客 </title>
@@ -123,78 +109,11 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            <i class="menu-item-icon icon-next-home"></i> <br />
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-next-categories"></i> <br />
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-next-archives"></i> <br />
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            <i class="menu-item-icon icon-next-tags"></i> <br />
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            <i class="menu-item-icon icon-next-about"></i> <br />
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-kali">
-          <a href="/kali linux tools" rel="section">
-            <i class="menu-item-icon icon-next-kali"></i> <br />
-            Kali Linux Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-something">
-          <a href="/在线工具" rel="section">
-            <i class="menu-item-icon icon-next-something"></i> <br />
-            在线工具
-          </a>
-        </li>
-      
-
-      
-      
-    </ul>
-  
 
   
     <div class="site-search">
       
 	  
-  <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -3320,7 +3239,7 @@
 
 </style>
 
-<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -3444,6 +3363,95 @@
           
           
             
+              <a class="post-title-link" href="/2018/04/05/给win10子系统换源/" itemprop="url">
+                给win10子系统换源
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2018-04-05T14:05:48+08:00" content="2018-04-05">
+            2018-04-05
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/ubuntu/" itemprop="url" rel="index">
+                  <span itemprop="name">ubuntu</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>由于我只在自己的win10上安装了Ubuntu，其他版本的子系统没安装，所以我只演示Ubuntu换源的方法。其余版本的子系统可以参考本教程，找到国内的软件源进行更换就可以了。<br>这些子系统默认的源都是国外的，你在下载软件或者更新系统的时候特别缓慢，所以换源是你使用Linux系统必不可少的一步。<br>接下来介绍2种方法用于换源，你只需学会一种就可以了。</p>
+<h2 id="win10文件换源"><a href="#win10文件换源" class="headerlink" title="win10文件换源"></a>win10文件换源</h2><p>win10子系统的源文件路径为<br>C:\Users\Username\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\etc\apt\sources.list  (Username替换为你的主机的用户名)<br>这些是隐藏文件，需要打开隐藏文件才可以找得到。<br>你用编辑器打开,就可以看到那些默认的源了。<br>你把原来的源用#注释掉，注意请不要直接删除原来的源，然后把下面的源复制进去，保存就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure></p>
+<p>以上是中科大的最新的16.04的源，用的是HTTP协议。我看到有人说Win10的子系统，并没有安装apt-transport-https，所以说不支持HTTPS，但这个源我用的是http协议的，所以你不必为此而发愁。</p>
+<p>在终端执行以下命令进行更新即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get dist-upgrade</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1t0qruhuj30l50e0t9m.jpg" alt="1"></p>
+<h2 id="终端换源"><a href="#终端换源" class="headerlink" title="终端换源"></a>终端换源</h2><h3 id="在终端输入以下命令"><a href="#在终端输入以下命令" class="headerlink" title="在终端输入以下命令"></a>在终端输入以下命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<h3 id="点击’i’进入vim的插入模式"><a href="#点击’i’进入vim的插入模式" class="headerlink" title="点击’i’进入vim的插入模式"></a>点击’i’进入vim的插入模式</h3><h3 id="把刚才的源编辑进去，然后按esc，用：wq保存即可。"><a href="#把刚才的源编辑进去，然后按esc，用：wq保存即可。" class="headerlink" title="把刚才的源编辑进去，然后按esc，用：wq保存即可。"></a>把刚才的源编辑进去，然后按esc，用：wq保存即可。</h3><h3 id="然后开始更新源列表及更新系统"><a href="#然后开始更新源列表及更新系统" class="headerlink" title="然后开始更新源列表及更新系统"></a>然后开始更新源列表及更新系统</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get dist-upgrade</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1t0qruhuj30l50e0t9m.jpg" alt="1"><br>初次更新也许时间会久一点，耐心等待就可以了。</p>
+</span>
+        
+      
+    </div>
+    <div>
+   
+    </div>
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2018/04/05/Win10子系统安装图形化界面/" itemprop="url">
                 Win10子系统安装图形化界面
               </a>
@@ -3493,19 +3501,21 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            Tips：在你开始操作之前，请确认你已经更换过软件源了，如果没有，点此链接查看换源操作。因为不换源的话，你会发现好多东西根本安装不了，下载速度巨慢。
-安装xorgxorg是xfce桌面需要的一个基础依赖性质东西，开机时候提供登陆界面.1sudo apt-get install xorg
-
-安装xfc
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/04/05/Win10子系统安装图形化界面/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>Tips：在你开始操作之前，请确认你已经更换过软件源了，如果没有，点此<a href="http://www.bingyublog.com/2018/04/05/%E7%BB%99win10%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%8D%A2%E6%BA%90/" target="_blank" rel="noopener">链接</a>查看换源操作。因为不换源的话，你会发现好多东西根本安装不了，下载速度巨慢。</p>
+<h2 id="安装xorg"><a href="#安装xorg" class="headerlink" title="安装xorg"></a>安装xorg</h2><p>xorg是xfce桌面需要的一个基础依赖性质东西，开机时候提供登陆界面.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install xorg</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1vq12mbcj30ky0ecdgj.jpg" alt="1"></p>
+<h2 id="安装xfce4桌面系统"><a href="#安装xfce4桌面系统" class="headerlink" title="安装xfce4桌面系统"></a>安装xfce4桌面系统</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install xfce4</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1vq8nlemj30l10eldgo.jpg" alt="3"></p>
+<h2 id="安装xrdp"><a href="#安装xrdp" class="headerlink" title="安装xrdp"></a>安装xrdp</h2><p>Xrdp允许Windows或Linux系统通过远程桌面的方式来访问另外一台主机，特别适合本地虚拟机使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install xrdp</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1vqf9kp5j30l40ezdgh.jpg" alt="4"></p>
+<h2 id="设置使用3390为远程端口"><a href="#设置使用3390为远程端口" class="headerlink" title="设置使用3390为远程端口"></a>设置使用3390为远程端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i &apos;s/port=3389/port=3390/g&apos; /etc/xrdp/xrdp.ini</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1vr2459mj30j500xgle.jpg" alt="5"></p>
+<h2 id="向xsession中写入xfce4-session"><a href="#向xsession中写入xfce4-session" class="headerlink" title="向xsession中写入xfce4-session"></a>向xsession中写入xfce4-session</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo echo xfce4-session &gt;~/.xsession</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1vriiqr2j30gy00z3ya.jpg" alt="6"></p>
+<h2 id="重启xrdp服务"><a href="#重启xrdp服务" class="headerlink" title="重启xrdp服务"></a>重启xrdp服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service xrdp restart</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1vrrpk8ij30ky050a9x.jpg" alt="7"><br>好了，完成，现在开始远程连接桌面。<br>win+R,输入mstsc.<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1vuy12a3j30cr07paah.jpg" alt="8"><br>查看你电脑的IP地址，必须是内网IP地址啊，并且输入刚才设置的3390远程端口。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1vvlxcvmj30db0gr3za.jpg" alt="9"><br>然后进行连接。<br>接下来开始登陆。<br>WARNING:由于远程后就无法使用截图了，所以我拍照展示，拍照水平渣，将就看。<br>输入你的用户名和密码，登陆进去即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1w5ysad2j31hc140adt.jpg" alt="10"><br>以后你再次远程的时候，一定要先执行sudo service xrdp restart，开启远程服务。</p>
+<p>以下是我登陆进去后的图片，参考使用。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1w6dsa3dj30zk0qodig.jpg" alt="11"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1w6s9m9oj30zk0qoac1.jpg" alt="12"></p>
+</span>
         
       
     </div>
@@ -3586,17 +3596,33 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            教各位打造一个仿Mac OS X界面的Ubuntu。当然你如果侧重点是Linux的实用性，并不在意系统的颜值，可以不看本教程。以前的Linux并不做桌面的，只是这些年来做了仿windows的桌面。在真正的运维工作中也没有必要搞这些没用的东西是吧，自己在下面玩玩就可以了。好了，不说废话，直接开始。
-安
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/04/04/Ubuntu桌面美化教程2-把Ubuntu改造为Mac OS X/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq10w1tjioj30xm0jljz4.jpg" alt="1"><br>教各位打造一个仿Mac OS X界面的Ubuntu。当然你如果侧重点是Linux的实用性，并不在意系统的颜值，可以不看本教程。以前的Linux并不做桌面的，只是这些年来做了仿windows的桌面。<br>在真正的运维工作中也没有必要搞这些没用的东西是吧，自己在下面玩玩就可以了。<br>好了，不说废话，直接开始。</p>
+<h2 id="安装macbuntu主题与图标"><a href="#安装macbuntu主题与图标" class="headerlink" title="安装macbuntu主题与图标"></a>安装macbuntu主题与图标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:noobslab/macbuntu  ## 添加ppa仓库</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sap44d0j30jc07c0tu.jpg" alt="1"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get update  ## 更新使之生效</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install macbuntu-os-icons-lts-v7   ##安装mac图标</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sefq89tj30id0a0abu.jpg" alt="2"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get install macbuntu-os-ithemes-lts-v7  ## 安装mac主题</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sbrztzlj30k40d6mzv.jpg" alt="3"></p>
+<h2 id="安装-Slingscold-替代Launchpad"><a href="#安装-Slingscold-替代Launchpad" class="headerlink" title="安装 Slingscold(替代Launchpad)"></a>安装 Slingscold(替代Launchpad)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:noobslab/macbuntu</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get update</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install slingscold</span><br></pre></td></tr></table></figure>
+<h2 id="安装Albert-Spotlight-替代-Mac-Spotlight"><a href="#安装Albert-Spotlight-替代-Mac-Spotlight" class="headerlink" title="安装Albert Spotlight(替代 Mac Spotlight)"></a>安装Albert Spotlight(替代 Mac Spotlight)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:noobslab/macbuntu</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get update  </span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install albert</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sfk3obij30ia0frtc0.jpg" alt="4"></p>
+<h2 id="安装-Plank-Dock"><a href="#安装-Plank-Dock" class="headerlink" title="安装 Plank Dock"></a>安装 Plank Dock</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get install plank</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sfsqfv3j30if0f5775.jpg" alt="5"></p>
+<h2 id="安装-Plank-主题"><a href="#安装-Plank-主题" class="headerlink" title="安装 Plank 主题"></a>安装 Plank 主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:noobslab/macbuntu</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get update</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install macbuntu-os-plank-theme-lts-v7</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sh08ydfj30ih0bcwgb.jpg" alt="6"></p>
+<h2 id="设置plank"><a href="#设置plank" class="headerlink" title="设置plank"></a>设置plank</h2><p>安装后搜索plank，鼠标点击plank，然后在图标上按住‘Ctrl’，点击鼠标右键，会出现菜单，选择perference就会出现下面的界面了，改成我们喜欢的theme。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1shn0ld6j30vv0b2qbc.jpg" alt="7"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sjxwp8wj30hn08x74u.jpg" alt="8"></p>
+<h2 id="将面板上的‘Ubuntu-Desktop’文字换成‘Mac-OS-X’"><a href="#将面板上的‘Ubuntu-Desktop’文字换成‘Mac-OS-X’" class="headerlink" title="将面板上的‘Ubuntu Desktop’文字换成‘Mac OS X’"></a>将面板上的‘Ubuntu Desktop’文字换成‘Mac OS X’</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ cd &amp;&amp; wget -O Mac.po http://drive.noobslab.com/data/Mac/change-name-on-panel/mac.po</span><br><span class="line">lengyue@ubuntu:~$ cd /usr/share/locale/en/LC_MESSAGES</span><br><span class="line">lengyue@ubuntu:~$ sudo msgfmt -o unity.mo ~/Mac.po</span><br><span class="line">lengyue@ubuntu:~$ rm ~/Mac.po</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1skq5mmkj30ik070757.jpg" alt="9"><br>这个会在重启后才会生效，但是你不必现在重启，等会全部设置完毕后再重启就可以了。</p>
+<h2 id="启动器换苹果LOGO"><a href="#启动器换苹果LOGO" class="headerlink" title="启动器换苹果LOGO"></a>启动器换苹果LOGO</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ wget -O launcher_bfb.png http://drive.noobslab.com/data/Mac/launcher-logo/apple/launcher_bfb.png</span><br><span class="line">lengyue@ubuntu:~$ sudo mv launcher_bfb.png /usr/share/unity/icons/</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sntbgywj30il074jsi.jpg" alt="10"></p>
+<h2 id="配置-Mac-字体"><a href="#配置-Mac-字体" class="headerlink" title="配置 Mac 字体"></a>配置 Mac 字体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ wget -O mac-fonts.zip http://drive.noobslab.com/data/Mac/macfonts.zip</span><br><span class="line">lengyue@ubuntu:~$ sudo unzip mac-fonts.zip -d /usr/share/fonts</span><br><span class="line">lengyue@ubuntu:~$ sudo fc-cache -f -v</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sr45mi1j30kb06t0to.jpg" alt="11"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1srjqu45j30kq09zq4t.jpg" alt="12"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1srtpiiuj30kp0bfwgp.jpg" alt="13"><br>需要在unity-tweak-tool中进行修改，但是我个人认为还是Ubuntu自带的字体好看，你也可以根据自己喜好进行设置。</p>
+<h2 id="设置主题与图标"><a href="#设置主题与图标" class="headerlink" title="设置主题与图标"></a>设置主题与图标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ unity-tweak-tool</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1ssrwoudj30lq0ib75d.jpg" alt="14"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1ssyk0q5j30ls0iat9t.jpg" alt="15"><br>在<em>Fonts</em>选项里修改字体。</p>
+<h2 id="修改启动界面"><a href="#修改启动界面" class="headerlink" title="修改启动界面"></a>修改启动界面</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:noobslab/themes  </span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get update  </span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install macbuntu-os-bscreen-lts-v7</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sublgbvj30hp0jcjub.jpg" alt="16"></p>
+<h2 id="重启系统"><a href="#重启系统" class="headerlink" title="重启系统"></a>重启系统</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ reboot</span><br></pre></td></tr></table></figure>
+<p>再次打开就是Mac OS X的样子了。<br>我看到有人还有写修改Libreoffice图标的，我个人感觉没用，所以略去不写了，虽然这个office软件确实很好，但是并没有必要对他美化，保持原来的样子就可以了。</p>
+<h2 id="最好附几张我个人完成的桌面系统图片，仅供参考"><a href="#最好附几张我个人完成的桌面系统图片，仅供参考" class="headerlink" title="最好附几张我个人完成的桌面系统图片，仅供参考"></a>最好附几张我个人完成的桌面系统图片，仅供参考</h2><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sxop9jdj30zk0jvb29.jpg" alt="17"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sxzel61j30zk0jze2v.jpg" alt="18"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1sy5xamxj30zk0jzavm.jpg" alt="19"></p>
+</span>
         
       
     </div>
@@ -3677,17 +3703,23 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            Linux的桌面美化其实比Windows系统的简单的多，当然服务器版是不需要桌面自然也是不需要美化的。但是我们作为普通用户，对桌面系统进行美化也是无可厚非的。我本人就不太喜欢Ubuntu默认的桌面。对于一个有强迫症的人来说，不美化用着都感觉难受，所以我安装系统后第一件事就是进行美化。
-下载安装Ubu
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/04/04/Ubuntu桌面美化教程1-安装flatabulous扁平化主题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>Linux的桌面美化其实比Windows系统的简单的多，当然服务器版是不需要桌面自然也是不需要美化的。但是我们作为普通用户，对桌面系统进行美化也是无可厚非的。我本人就不太喜欢Ubuntu默认的桌面。对于一个有强迫症的人来说，不美化用着都感觉难受，所以我安装系统后第一件事就是进行美化。</p>
+<h2 id="下载安装Ubuntu主题配置工具unity-tweak-tool"><a href="#下载安装Ubuntu主题配置工具unity-tweak-tool" class="headerlink" title="下载安装Ubuntu主题配置工具unity-tweak-tool"></a>下载安装Ubuntu主题配置工具unity-tweak-tool</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get install  unity-tweak-tool</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0pq470kmj30kb0byacc.jpg" alt="6"></p>
+<h2 id="添加arc-flatabulous-theme主题资源"><a href="#添加arc-flatabulous-theme主题资源" class="headerlink" title="添加arc-flatabulous-theme主题资源"></a>添加arc-flatabulous-theme主题资源</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:noobslab/themes</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0pqna0wkj30hs07mqac.jpg" alt="1"></p>
+<h2 id="添加ultra-flat-icons图标主题资源"><a href="#添加ultra-flat-icons图标主题资源" class="headerlink" title="添加ultra-flat-icons图标主题资源"></a>添加ultra-flat-icons图标主题资源</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:noobslab/icons</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0pr1t110j30k8073qac.jpg" alt="2"></p>
+<h2 id="更新源列表并且使资源生效"><a href="#更新源列表并且使资源生效" class="headerlink" title="更新源列表并且使资源生效"></a>更新源列表并且使资源生效</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get  update</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0prctxopj30ke0a2qac.jpg" alt="3"></p>
+<h2 id="安装flatabulous-theme主题"><a href="#安装flatabulous-theme主题" class="headerlink" title="安装flatabulous-theme主题"></a>安装flatabulous-theme主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get install arc-flatabulous-theme</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0prmoe08j30k909pqac.jpg" alt="4"></p>
+<h2 id="安装ultra-flat-icons图标主题"><a href="#安装ultra-flat-icons图标主题" class="headerlink" title="安装ultra-flat-icons图标主题"></a>安装ultra-flat-icons图标主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get install ultra-flat-icons</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0pry3btej30kf09dqac.jpg" alt="5"></p>
+<h2 id="打开unity-tweak-tool"><a href="#打开unity-tweak-tool" class="headerlink" title="打开unity-tweak-tool"></a>打开unity-tweak-tool</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ unity-tweak-tool</span><br></pre></td></tr></table></figure>
+<p>回车即可打开。</p>
+<h2 id="配置主题与桌面图标和鼠标指针"><a href="#配置主题与桌面图标和鼠标指针" class="headerlink" title="配置主题与桌面图标和鼠标指针"></a>配置主题与桌面图标和鼠标指针</h2><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0pt1ry63j30ji0inqac.jpg" alt="8"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0ptkvh0kj30je0i9qac.jpg" alt="9"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0ptw5dy5j30j90idjs8.jpg" alt="11"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0q1t39gbj30kp08i74m.jpg" alt="12"><br>配置完成后立即生效，不需要重启系统。<br>我本人一直用的就是这个主题，而且是gnome桌面。<br>最后附上2张完成后的图片作为参考<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0q2dw5n4j30ms0gm1by.jpg" alt="9"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq0pukxbwwj30zk0j41by.jpg" alt="10"><br>最后放一个主题链接:<a href="http://www.noobslab.com/" target="_blank" rel="noopener">http://www.noobslab.com/</a><br>这上面有很多主题可以用于Ubuntu的美化，可以自己尝试一下。</p>
+</span>
         
       
     </div>
@@ -3768,16 +3800,10 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            ubuntu使用man的时候默认是黑底灰字的.但是我们可以手动修改配置文件，让其彩色高亮显示。做法如下:12345678910lengyue@ubuntu:~$ gedit ~/.bashrc #打开配置文件# 在打开的文件中添加以下内容export LESS_TERMCAP_mb=$'\E[01;
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/04/02/man手册彩色高亮显示/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>ubuntu使用man的时候默认是黑底灰字的.但是我们可以手动修改配置文件，让其彩色高亮显示。<br>做法如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ gedit ~/.bashrc <span class="comment">#打开配置文件</span></span><br><span class="line"><span class="comment"># 在打开的文件中添加以下内容</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_mb=$<span class="string">'\E[01;31m'</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_md=$<span class="string">'\E[01;31m'</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_me=$<span class="string">'\E[0m'</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_se=$<span class="string">'\E[0m'</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_so=$<span class="string">'\E[01;44;33m'</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_ue=$<span class="string">'\E[0m'</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_us=$<span class="string">'\E[01;32m'</span></span><br><span class="line">lengyue@ubuntu:~$ <span class="built_in">source</span> .bashrc <span class="comment">#使之生效</span></span><br></pre></td></tr></table></figure></p>
+<p>然后我们运行一下man命令，查看一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ man ls</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpy6nn9wkmj30ka0bfq3j.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -3858,16 +3884,10 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            今天在kali上安装一款软件的时候遇到了“E: 软件包 sogoupinyin 需要重新安装，但是我无法找到相应的安装文件。”所以就此问题总结一下解决此问题的方法，我以自己的问题进行讲解，当然也适用于其他软件包，你如果遇到同样的问题，你只需要把sogoupinyin替换为你的软件即可。12345ro
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/04/01/E-软件包xxx需要重新安装，但是我无法找到相应的安装文件。/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>今天在kali上安装一款软件的时候遇到了“E: 软件包 sogoupinyin 需要重新安装，但是我无法找到相应的安装文件。”<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpx5qzh2zlj30h9022mxy.jpg" alt="1"><br>所以就此问题总结一下解决此问题的方法，我以自己的问题进行讲解，当然也适用于其他软件包，你如果遇到同样的问题，你只需要把sogoupinyin替换为你的软件即可。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#  cd /var/lib/dpkg/info  ## 进入/var/lib/dpkg/info目录</span></span><br><span class="line">root@kali:/var/lib/dpkg/info<span class="comment"># ls sogoupinyin*   ## 列出当前目录下的带有sogoupinyin字样的文件，以*通配符进行快速匹配</span></span><br><span class="line">root@kali:/var/lib/dpkg/info<span class="comment"># rm -rf sogoupinyin*  ##删除所有当前目录下匹配到的sogoupinyin的文件</span></span><br><span class="line">root@kali:/var/lib/dpkg/info<span class="comment"># cd ##回到主目录下</span></span><br><span class="line">root@kali:~<span class="comment"># dpkg --remove --force-remove-reinstreq sogoupinyin  ##强制移除出错的deb包的安装文件</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpx625y1wwj30e3034aaf.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpx69z5wtej30iv032756.jpg" alt="2"><br>现在你再安装其他软件或者进行更新就不会出任何问题了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fpx6avvj62j30hh01haaa.jpg" alt="3"></p>
+<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -3948,16 +3968,18 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            今天提到的软件是rarcrack，该软件用于暴力破解压缩文件的密码，最新的版本支持RAR, ZIP, 7Z这三种类型的压缩包，其特点是可以使用多线程，而且可以随时暂停与继续(暂停时会在当前目录生成一个xml文件，里面显示了正在尝试的一个密码)。其官方主页: http://rarcrack.sourc
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/31/Linux下使用rarcrack暴力破解RAR，ZIP，7Z压缩包/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>今天提到的软件是rarcrack，该软件用于暴力破解压缩文件的密码，最新的版本支持RAR, ZIP, 7Z这三种类型的压缩包，其特点是可以使用多线程，而且可以随时暂停与继续(暂停时会在当前目录生成一个xml文件，里面显示了正在尝试的一个密码)。<br>其官方主页: <a href="http://rarcrack.sourceforge.net/" target="_blank" rel="noopener">http://rarcrack.sourceforge.net/</a><br>其下载地址: <a href="https://sourceforge.net/projects/rarcrack/?source=typ_redirect" target="_blank" rel="noopener">https://sourceforge.net/projects/rarcrack/?source=typ_redirect</a><br>Tips: 打开网站的时候可能会被浏览器识别为危险网站，拒绝打开，你只需要在高级设置里把网站加入白名单就可以了。</p>
+<h2 id="安装rarcrack"><a href="#安装rarcrack" class="headerlink" title="安装rarcrack"></a>安装rarcrack</h2><h3 id="官方给出的安装方法"><a href="#官方给出的安装方法" class="headerlink" title="官方给出的安装方法:"></a>官方给出的安装方法:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ tar -xjf rarcrack-VERSION.tar.bz2</span><br><span class="line">$ <span class="built_in">cd</span> rarcrack-VERSION</span><br><span class="line">$ make <span class="comment">#你需要C编译器（GCC或任何编辑Makefile CC = your_c_compiler）</span></span><br><span class="line">$ make install</span><br><span class="line">```		</span><br><span class="line"><span class="comment">### 但是我个人还是推荐直接使用apt软件管理包进行安装的，因为在安装的时候会自动解决一些依赖问题。很方便也很快捷。这个软件是需要c编译环境的，如果你不能make安装，那么请检查你的环境是不是支持c编译环境，官方主页有需要的运行环境。</span></span><br><span class="line">下面我在自己的Ubuntu中进行下载安装。</span><br><span class="line">``` bash</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install rarcrack</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tgy1fpwb729gu4j30ju0dqqac.jpg" alt="1"><br>查看帮助:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ rarcrack --<span class="built_in">help</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tgy1fpwb6jvn9qj30jw06eqac.jpg" alt="2"><br>可以看到只有三个参数:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--help: 查看帮助信息</span><br><span class="line">--type: 指定破解的压缩文件的类型</span><br><span class="line">--threads: 指定线程数</span><br></pre></td></tr></table></figure></p>
+<p>我事先准备了一个测试使用的zip文件，密码设置为123456.(如果你是下载的官网的bz2包的话，解压后会有三个供你测试使用的压缩文件)如图:<br><img src="http://ww1.sinaimg.cn/large/006DGX4tgy1fpwb7j6pn4j30im01iqac.jpg" alt="2"></p>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明:"></a>使用说明:</h2><h3 id="在rarcrack运行的时候，会为你自动创建一个-xml文件。该文件与你破解的压缩文件在同一目录下。你也可以自己自定义该文件，使破解更加快速，以下是我导出的在初次使用自动创建的-xml文件。"><a href="#在rarcrack运行的时候，会为你自动创建一个-xml文件。该文件与你破解的压缩文件在同一目录下。你也可以自己自定义该文件，使破解更加快速，以下是我导出的在初次使用自动创建的-xml文件。" class="headerlink" title="在rarcrack运行的时候，会为你自动创建一个.xml文件。该文件与你破解的压缩文件在同一目录下。你也可以自己自定义该文件，使破解更加快速，以下是我导出的在初次使用自动创建的.xml文件。"></a>在rarcrack运行的时候，会为你自动创建一个.xml文件。该文件与你破解的压缩文件在同一目录下。你也可以自己自定义该文件，使破解更加快速，以下是我导出的在初次使用自动创建的.xml文件。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ cat test.zip.xml</span><br><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;rarcrack&gt;</span><br><span class="line">  &lt;abc&gt;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;/abc&gt;</span><br><span class="line">  &lt;current&gt;y8x&lt;/current&gt;</span><br><span class="line">  &lt;good_password&gt;&lt;/good_password&gt;</span><br><span class="line">&lt;/rarcrack&gt;</span><br></pre></td></tr></table></figure>
+<p>线程数默认为2，最大线程数为12，请不要随便添加线程数以及超过该线程数。</p>
+<h2 id="纠正几点错误，很重要，仔细看。"><a href="#纠正几点错误，很重要，仔细看。" class="headerlink" title="纠正几点错误，很重要，仔细看。"></a>纠正几点错误，很重要，仔细看。</h2><h3 id="你如果查看过该软件的相关教程，你如果照做就会发现你会出很多错误。"><a href="#你如果查看过该软件的相关教程，你如果照做就会发现你会出很多错误。" class="headerlink" title="你如果查看过该软件的相关教程，你如果照做就会发现你会出很多错误。"></a>你如果查看过该软件的相关教程，你如果照做就会发现你会出很多错误。</h3><p>1.线程数设置过大，官方说明最大线程数为12，不知道他们哪来的几十的线程数。<br>2.命令格式不对。eg：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rarcrack test.zip -threads 3 -type zip</span><br></pre></td></tr></table></figure></p>
+<p>有很多人会遇到下面的情况。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tgy1fpwb90zox7j30gw02gqac.jpg" alt="2"><br>这只是因为命令格式与参数不对，并不是什么没有提前设置.xml文件。原因就是根本没有阅读过官方文档或者help过。</p>
+<h2 id="接下来我演示正确的操作姿势"><a href="#接下来我演示正确的操作姿势" class="headerlink" title="接下来我演示正确的操作姿势"></a>接下来我演示正确的操作姿势</h2><p>先自定义.xml文件，使破解效率更高。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ gedit test.zip.xml</span><br><span class="line"></span><br><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span><br><span class="line">&lt;rarcrack&gt;</span><br><span class="line">  &lt;abc&gt;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;/abc&gt;</span><br><span class="line">  &lt;current&gt;12345&lt;/current&gt;</span><br><span class="line">  &lt;good_password&gt;&lt;/good_password&gt;</span><br><span class="line">&lt;/rarcrack&gt;</span><br><span class="line"></span><br><span class="line">lengyue@ubuntu:~$ rarcrack --threads 10 --<span class="built_in">type</span> zip test.zip</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tgy1fpwb9yet14j30h904uqac.jpg" alt="4"><br>我通过修改&lt;current&gt; &lt;/current&gt;中的值来提高效率，使之从12345开始进行枚举密码。<br>你也可以修改&lt;abc&gt; &lt;/abc&gt;中的字符使枚举密码更加快速，比如我这个测试的文件密码为123456，你可以在知道密码信息的前提下，修改为0123456789，这样就不会去穷举大小写字母了，速度会更快。<br>下面是破解成功的样子。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tgy1fpwbadm2llj30by00nqac.jpg" alt="2"><br><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -4038,16 +4060,14 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            首先说一句，不要认为关机就是直接关闭电源，很简单。如果你做运维的话，你就知道这种做法对你的服务器有多大伤害了。当然一个服务器是很少遇到关机的操作的，但是也许就会遇到特殊情况呢。因为Linux后台有很多进程正在运行，用户的数据还没有进行存储，强行关机会导致进程数据丢失，所以应该等数据全部写入再进行关机
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/30/关于Linux关机与重启的那些事/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpv8ehrk7aj30hs0dcdg4.jpg" alt="1"><br>首先说一句，不要认为关机就是直接关闭电源，很简单。如果你做运维的话，你就知道这种做法对你的服务器有多大伤害了。当然一个服务器是很少遇到关机的操作的，但是也许就会遇到特殊情况呢。<br>因为Linux后台有很多进程正在运行，用户的数据还没有进行存储，强行关机会导致进程数据丢失，所以应该等数据全部写入再进行关机才是最正确的做法，并且强制关机还会影响系统的稳定性，还有可能造成系统的硬件损坏。</p>
+<h2 id="首先不管是重启系统还是关闭系统，首先要运行sync命令，把内存中的数据写到磁盘中，然后再运行以下提到的关机与重启命令。"><a href="#首先不管是重启系统还是关闭系统，首先要运行sync命令，把内存中的数据写到磁盘中，然后再运行以下提到的关机与重启命令。" class="headerlink" title="首先不管是重启系统还是关闭系统，首先要运行sync命令，把内存中的数据写到磁盘中，然后再运行以下提到的关机与重启命令。"></a>首先不管是重启系统还是关闭系统，首先要运行sync命令，把内存中的数据写到磁盘中，然后再运行以下提到的关机与重启命令。</h2><p>下面讲解一下关机与重启的命令</p>
+<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><p>init命令是Linux下的进程初始化工具，init进程是所有Linux进程的父进程，它的进程号为1。init命令是Linux操作系统中不可缺少的程序之一，init进程是Linux内核引导运行的，是系统中的第一个进程。<br>init定义了7个运行级别（runlevel），分别是：<br>0  停机（千万不能把initdefault 设置为0）<br>1  单用户模式<br>2  多用户，没有 NFS(和级别3相似，会停止部分服务)<br>3  完全多用户模式<br>4  没有用到<br>5  x11(Xwindow)<br>6  重新启动（千万不要把initdefault 设置为6）<br>实例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">init 0 <span class="comment">#关机</span></span><br><span class="line">init 6 <span class="comment">#重启</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a>shutdown</h2><p>重要参数:<br>[-t] 在改变到其它runlevel之前﹐告诉init多久以后关机。<br>[-r] 重启计算器。<br>[-k] 并不真正关机﹐只是送警告信号给每位登录者〔login〕。<br>[-h] 关机后关闭电源〔halt〕。<br>[-c] 取消目前正在执行的关机程序。、<br>[-f] 在重启计算器〔reboot〕时忽略fsck<br>[-F] 在重启计算器〔reboot〕时强迫fsck。<br>[-time] 设定关机〔shutdown〕前的时间。<br>实例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">shutdown -h now <span class="comment">#指定现在立刻关机</span></span><br><span class="line">shutdown +5 <span class="comment">#5分钟后自动关机</span></span><br><span class="line">shutdown -r <span class="comment">#关机后重启</span></span><br><span class="line">shutdown 16:00 <span class="comment">#16:00关机</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="reboot"><a href="#reboot" class="headerlink" title="reboot"></a>reboot</h2><p>实例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot <span class="comment">#立即重启</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="halt"><a href="#halt" class="headerlink" title="halt"></a>halt</h2><p>实例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">halt  <span class="comment">#关闭系统后关闭电源。</span></span><br><span class="line">halt -d <span class="comment">#关闭系统，但不留下纪录</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="poweroff"><a href="#poweroff" class="headerlink" title="poweroff"></a>poweroff</h2><p>重要参数:<br>-n：关闭操作系统时不执行sync操作；<br>-w：不真正关闭操作系统，仅在日志文件“/var/log/wtmp”中；<br>-d：关闭操作系统时，不将操作写入日志文件“/var/log/wtmp”中添加相应的记录；<br>-f：强制关闭操作系统；<br>-i：关闭操作系统之前关闭所有的网络接口；<br>-h：关闭操作系统之前将系统中所有的硬件设置为备用模式。<br>实例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">poweroff <span class="comment">#立即关闭系统</span></span><br></pre></td></tr></table></figure></p>
+</span>
         
       
     </div>
@@ -4128,16 +4148,10 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            FCrackZip是一款快速免费的zip压缩文档密码破解工具,FCrackZip是一款开放源代码的软件,因此你可以依据自己的需求自由定制。FCrackZip 网站 : http://software.schmorp.de/pkg/fcrackzip.htmlFCrackZip的破解速度相当快，据说密
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/29/用kali破解zip文件密码/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>FCrackZip是一款快速免费的zip压缩文档密码破解工具,FCrackZip是一款开放源代码的软件,因此你可以依据自己的需求自由定制。<br>FCrackZip 网站 : <a href="http://software.schmorp.de/pkg/fcrackzip.html" target="_blank" rel="noopener">http://software.schmorp.de/pkg/fcrackzip.html</a><br>FCrackZip的破解速度相当快，据说密码小于10位以下的，秒秒钟就能破解掉。<br>主要参数:<br>[-b|–brute-force]            use brute force algorithm　暴破<br>        [-D|–dictionary]             use a dictionary　字典模式<br>        [-B|–benchmark]              execute a small benchmark　速度测试<br>        [-c|–charset characterset]   use characters from charset　指定字符类型（数字，字母，混合等）<br>        [-h|–help]                   显示帮助信息<br>        [–version]                   显示fcrackzip的版本<br>        [-V|–validate]               验证算法<br>        [-v|–verbose]                可以更详细的显示破解信息<br>        [-p|–init-password string]   use string as initial password/file　指定开始字符（比如要只记得密码是５开头的６位纯数字，可以指定从５００００００开始破解，节约时间）<br>        [-l|–length min-max]         check password with length min to max　（指定密码长度区间）<br>        [-u|–use-unzip]              use unzip to weed out wrong passwords　　（这个选项很很重要，很重要，可以显示出破解出的密码）<br>        [-m|–method num]             use method number “num” (see below)　（指定破解类型）<br>        [-2|–modulo r/m]             only calculcate 1/m of the password<br>        file…                    the zipfiles to crack<br>下面我展示一下简答的操作姿势:<br>我事先压缩了一个图片作为测试使用，密码设置为12345678.<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu3jc7uxfj30me0cdqac.jpg" alt="1"><br>然后打开kali进行破解。<br>输入以下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># fcrackzip -b -l 1-8 -u -c1 测试.zip -v</span></span><br></pre></td></tr></table></figure></p>
+<p>在这里我指定了一些重要的参数，必要的参数可以提高你的破解速度和正确性。<br>-l 1-8  #指定密码长度为1-8位的<br>-u #指定解压出来<br>-c1 #指定密码类型为纯数字<br>-v #指定了显示破解的详细信息<br>基本没有用到一分钟就已经破解出来了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu41heuj8j30ma046qac.jpg" alt="1"><br>当然有时候我们得到的一些zip文件是根本不知道密码的任何信息的，那么我们只能指定-b参数进行破解了，这样的情况下由于并不知道密码的一些信息，所以破解是相当费时间的，需要耐心等待。</p>
+<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -4218,106 +4232,9 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            随着 2018 年 4 月 24 日稳定版正式发布日期的临近，也是时候来仔细研究下 Canonical 最新 Linux 发行版 Ubuntu 18.04 LTS「Bionic Beaver」的最新功能特性了。LTS 版本每两年发布一次，而 Ubuntu 18.04 是自 2016 年以来的第一个长
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/29/升级到-Ubuntu-18-04-LTS-的理由，大波新特性到来/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    <div>
-   
-    </div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2018/03/28/Ubuntu的管理员运行机制/" itemprop="url">
-                Ubuntu的管理员运行机制
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2018-03-28T23:00:45+08:00" content="2018-03-28">
-            2018-03-28
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/ubuntu/" itemprop="url" rel="index">
-                  <span itemprop="name">ubuntu</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-
-        
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            Ubuntu并不像其他的Linux操作系统，在安装系统的时候自动为你分配一个root用户，Ubuntu的使用者都知道Ubuntu并没有分配root用户。在安装Ubuntu的时候会要你自己设置一个账户，该账户即是系统的管理员。在你初次打开终端的时候，会自动出现以下界面。该句话的意思是运行sudo命令作
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/28/Ubuntu的管理员运行机制/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>随着 2018 年 4 月 24 日稳定版正式发布日期的临近，也是时候来仔细研究下 Canonical 最新 Linux 发行版 Ubuntu 18.04 LTS「Bionic Beaver」的最新功能特性了。<br>LTS 版本每两年发布一次，而 Ubuntu 18.04 是自 2016 年以来的第一个长期支持版本。Ubuntun 长期支持版本可以获得 Canonical 官方长达五年的技术支持，这意味着在 2023 年之前所有用户都可以放心使用 Ubuntu 18.04 LTS。<br>Ubuntu 18.04 LTS 被 Canonical 创始人 Mark Shuttleworth 命名为「Bionic Beaver，仿生海狸」，这主要是为了纪念 Ubuntu 人孜孜不倦的辛劳工作。所以，以海狸充满活力的态度，勤劳的本性，此次版本更新周期以这种哺乳动物作为吉祥物进行命名。<br>我们为什么要升级到 Ubuntu 18.04 LTS 呢？ 让我们来看看系统极客为大家总结的<strong>8</strong>大理由。<br>Ubuntu 18.04 中最有趣的新功能<br>1.安全性增强<br>首先，所有用户都应该定期升级当前的 Ubuntu 版本，以便从最新的安全补丁中受益。（系统更新可能适用于操作系统、驱动程序甚至底层硬件）<br>值得指出的是，所有操作系统都是如此，无论是基于 Linux、Windows 还是macOS，定期更新都可以提高您计算机的安全性。<br>但有一个潜在的安全问题应该注意，与微软的 Windows 10 操作系统类似，Canonical 打算从 Ubuntu 18.04 LTS 开始从用户的计算机收集一些数据。所收集的这些数据并不标示任何用户身份，只是建立计算机硬件、运行的 Ubuntu 版本、位置信息（可选）和一些其它数据的档案。<br>2.GNOME正式抵达<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0taccy9j30im0czwex.jpg" alt="1"><br>Ubuntu 18.04 LTS 发布的同时也带来了 GNOME 3.28，由于 GNOME 在 Ubuntu 17.10 中已经取代了 Unity（尽管 Unity 并未完全挂掉），因此 GNOME 也已经成为了 Ubuntu 系统默认的桌面环境。<br>当然，如果你不喜欢使用 GNOME，其他 Ubuntu 桌面环境也是可用的，如：MATE。<br>GNOME 正式来到 Ubuntu 18.04 LTS 桌面也标志着新统一风格定制的 GNOME 3.0 桌面在长期支持版本上得到支持，这也是升级到 Ubuntu 18.04 系统一个很好的理由。说明一句，在Ubuntu16.04 LTS中默认的还是unity桌面，但是我更喜欢gnome桌面。<br>3.全新的图标集<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0va5rgxj30iq0cydh4.jpg" alt="2"><br>开源图标项目 Suru 已被纳入到 Ubuntu 18.04 LTS 操作系统当中，这些图标最初出现在现已废弃的 Ubuntu Touch 移动操作系统当中。（现在 UBPorts.com 的控制下）<br>正如 Suru 官网所述，原始的移动应用程序图标已被重新用于与 GNOME 主题图标相对应。基于未发布的 Suru 概念，还添加了文件夹和文件类型图标。 此外，还创建了一个完整的符号图标集，其中有许多基于原始 Suru 系统的图标。<br>4.彩色Emojis<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0vugq6aj30in0egdic.jpg" alt="3"><br>表情符号在个人 Linux 功能愿望清单中需求度可能不会很高，但不能否认表情符号现在是现代数字通信的一个重要组成部分。包括 Fedora 在内的许多其他流行 Linux 发行版很久以前就获得了对 emoji 的支持，在 Ubuntu 18.04 LTS 正式发布时，Ubuntu 用户也终于可以享受桌面应用程序中对彩色表情符号的开箱即用支持了。<br>为确保平台之间的一致性， Ubuntu 18.04 LTS 将使用 Noto Color Emoji 字体，该字体支持最新 Unicode 版本中定义的所有表情符号。<br>最新版本 Android 操作系统中使用了相同的表情符号字体，并且可以在 Noto Emoji GitHub 存储库中找到它的所有源图像。<br>在 Ubuntu 18.04 LTS 中的 GTK 应用程序中添加表情符号将很简单，因为 Ubuntu 用户将能够唤出可搜索的表情符号选择器，所以无需记住其 Unicode 代码或名称即可轻松输入字形。<br>5.新的「待办事项」应用程序<br>「GNOME To Do」这一简单的应用程序已经成为上游 GNOME 核心体验的一部分，它将在 Ubuntu 18.04 LTS 中推出对应的「待办事项」应用程序，以帮助Ubuntu 用户管理个人任务。<br>「GNOME To Do」的设计目的不是妨碍用户使用，它提供最基本的功能来实现，包括：快速编辑、管理列表，以及使用拖放重新排序任务。 每个任务可以分配不同的优先级和颜色以简化组织，并且「GNOME To Do」还能与 GNOME Online Accounts 集成，允许同步多个在线服务。<br>6.「最小安装」选项<br>不要将「Minimal Install 」最小化安装选项与 Ubuntu 18.04 最小化版本相混淆，Ubuntu 18.04 Ubiquity 安装程序增加了一个全新的「Minimal Install 」最小化安装选项，它可以将 Ubuntu 压缩为只有 30MB 的 containers/Docker、嵌入式 Linux 环境和其他相关用例，只需使用浏览器和实用程序即可安装最少的桌面环境。<br>此安装选项可以除去 Thunderbird、Transmission、Rhythmbox、LibreOffice（包括语言包）、Cheese 和 Shotwell 等 80 项功能，在应用程序启动器中只留下 Firefox、Nautilus、Ubuntu 软件和帮助。<br>7.Linux Kernel 4.15<br>Ubuntu 18.04 LTS 还将附带了 Linux Kernel 4.15，其中包含针对 Spectre 和 Meltdown 错误的修复程序。<br>除了 Specter 和 Meltdown 错误修复之外，Linux Kernel 4.15 还为 Raspberry Pi 7 英寸触摸屏提供原生支持，并支持安全加密虚拟化。<br>8.Xorg显示服务器回归<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpu0x80d04j30ht0ajdic.jpg" alt="4"><br>在过去几年中，Ubuntu 经历了一段艰难的时期，随着其移动版本的退出以及 Unity 的支持结束。 最大的障碍之一是在 Ubuntu 17.10 中默认切换到了 Wayland 显示服务器。 虽然它继续被指定为未来的显示服务器，但因缺少对 Wayland 应用程序的支持，导致不少用户切换回 Xorg 显示服务器。<br>因此，Ubuntu 18.04 LTS 将 Xorg 恢复为了默认显示服务器。 但是，通过登录屏幕上的齿轮图标还是可以切换回 Wayland 滴。</p>
+<p>注明:本篇文章为转载内容<a href="https://zixun.html5.qq.com/coolread/share?ch=060000&amp;tabId=0&amp;tagId=0&amp;docId=3064771459895666214&amp;url=http%3A%2F%2Fkuaibao.qq.com%2Fs%2F20180329A0MB2G00&amp;clientWidth=360&amp;sc_id=&amp;dataSrc=" target="_blank" rel="noopener">点此可查看原文</a><br>最后补充几句个人想法，我本人是非常喜欢Ubuntu的，属于Ubuntu的忠实粉丝，不论是哪个版本发布，我都一直在关注，本次的18.04属于LTS版本，可以获得5年的技术支持，所以如果各位喜欢Ubuntu的话， 一定要下载这个版本，我也会在第一时间尝鲜的，到时候一定写篇关于新版Ubuntu的特点的文章来，也希望各位多多支持Ubuntu，Ubuntu是家庭桌面版排名第一的版本，非常适合使用。</p>
+</span>
         
       
     </div>
@@ -4367,30 +4284,30 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">132</span>
+            <a href="/">
+              <span class="site-state-item-count">133</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            <a href="/categories">
+            
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              </a>
+              
           </div>
 
           <div class="site-state-item site-state-tags">
-            <a href="/tags">
+            
               <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">标签</span>
-              </a>
+              
           </div>
 
         </nav>
@@ -4401,35 +4318,11 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://weibo.com/u/6083310945" target="_blank">微博</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
               </span>
             
           
@@ -4440,19 +4333,7 @@
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
               </span>
             
           
@@ -4462,7 +4343,7 @@
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -4497,7 +4378,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
 </div>
 
 <!-- busuanzi -->
@@ -4555,7 +4436,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -4563,23 +4444,17 @@ tpwidget("show");</script>
     
   
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="//helpers.js?v="></script>
   
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
 
 
 
 
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="//nav-toggle.js?v="></script>
+  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
@@ -4600,17 +4475,15 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript" src="//lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
+        placeholder: "//loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>

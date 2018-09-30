@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next use-motion theme-next-mala">
+<html class="theme-next  ">
 <head>
   
 
@@ -17,25 +17,19 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+<link rel="stylesheet" type="text/css" href="//main.css?v="/>
 
 
     <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→" />
 
 
 
-  <meta name="keywords" content="Hexo,Mala" />
 
 
 
-
-
-  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→">
@@ -52,18 +46,10 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: 'Mala',
-    sidebar: 'post'
+    scheme: '',
+    sidebar: ''
   };
 </script>
-
-  <script>
-  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
-  daovoice('init', {
-      app_id: "fb883a64"
-    });
-  daovoice('update');
-  </script>
 
 
   <title> 冰羽の博客 </title>
@@ -123,78 +109,11 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            <i class="menu-item-icon icon-next-home"></i> <br />
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-next-categories"></i> <br />
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-next-archives"></i> <br />
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            <i class="menu-item-icon icon-next-tags"></i> <br />
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            <i class="menu-item-icon icon-next-about"></i> <br />
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-kali">
-          <a href="/kali linux tools" rel="section">
-            <i class="menu-item-icon icon-next-kali"></i> <br />
-            Kali Linux Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-something">
-          <a href="/在线工具" rel="section">
-            <i class="menu-item-icon icon-next-something"></i> <br />
-            在线工具
-          </a>
-        </li>
-      
-
-      
-      
-    </ul>
-  
 
   
     <div class="site-search">
       
 	  
-  <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -3320,7 +3239,7 @@
 
 </style>
 
-<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -3444,6 +3363,91 @@
           
           
             
+              <a class="post-title-link" href="/2018/03/18/kali安装谷歌拼音输入法/" itemprop="url">
+                kali安装谷歌拼音输入法
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2018-03-18T13:41:20+08:00" content="2018-03-18">
+            2018-03-18
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Kali/" itemprop="url" rel="index">
+                  <span itemprop="name">Kali</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>kali下除了安装搜狗拼音输入法外，还可以选择谷歌拼音输入法，谷歌拼音输入法其实还是非常智能的。想用它的可以看看本教程安装一下。<br>安装环境:虚拟机环境下的Kali Linux 64 Bit 2018.1<br>先更新一下软件源列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get update &amp;&amp; apt-get upgrade</span><br></pre></td></tr></table></figure></p>
+<p>记住一定要更新一下!!!<br>首先安装fcitx(小企鹅输入法框架)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get install fcitx</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9airtfgj30lj0ahtdt.jpg" alt="1"><br>然后安装谷歌拼音输入法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get install fcitx-googlepinyin</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9qaijbyj30lt0b4qac.jpg" alt="2"><br>安装后，搜索fcitx进行设置。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9el7tnij30lj07iqac.jpg" alt="5"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpha34djrij30g20d9qac.jpg" alt="6"><br>按ctr+空格，召唤出谷歌拼音输入法。<br>下面是安装好的样子<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpha3je2ubj30m60gkqac.jpg" alt="7"></p>
+</span>
+        
+      
+    </div>
+    <div>
+   
+    </div>
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2018/03/18/kali安装搜狗输入法/" itemprop="url">
                 kali安装搜狗输入法
               </a>
@@ -3493,17 +3497,13 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            安装环境:虚拟机环境下的Kali Linux 64 Bit 2018.1先更新一下软件源列表1root@kali:~# apt-get update &amp;&amp; apt-get upgrade
-记住一定要更新一下!!!首先安装fcitx(小企鹅输入法框架)。1root@kali:~# ap
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/18/kali安装搜狗输入法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>安装环境:虚拟机环境下的Kali Linux 64 Bit 2018.1<br>先更新一下软件源列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get update &amp;&amp; apt-get upgrade</span><br></pre></td></tr></table></figure></p>
+<p>记住一定要更新一下!!!<br>首先安装fcitx(小企鹅输入法框架)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get install fcitx</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9airtfgj30lj0ahtdt.jpg" alt="1"><br>接着安装，因为搜狗拼音输入法是依赖这些软件包的，所以先进行安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt install libopencc1 fcitx-libs fcitx-libs-qt</span><br></pre></td></tr></table></figure></p>
+<p>在安装的时候会报错，如下图所示<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9ddqpoxj30lv068tdt.jpg" alt="2"><br>按照提示运行一下提示的命令进行修复一下即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt --fix-broken install</span><br></pre></td></tr></table></figure></p>
+<p>然后再出什么报错，例如：软件包libopencc1 libopencc2未安装啥的，请自动忽略吧，你自己是根本安装不了的。<br>你别管它，直接继续进行就可以了。<br>下面打开浏览器下载搜狗拼音输入法。<br>官方地址：<a href="https://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="noopener">https://pinyin.sogou.com/linux/?r=pinyin</a><br>选择适合自己kali型号的即可。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9ds9sqxj31190jaqac.jpg" alt="3"><br>然后我们开始安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# dpkg -i sogoupinyin_2.2.0.0102_amd64.deb</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9e9q1agj30iv05iqac.jpg" alt="4"><br>安装后，搜索fcitx进行设置。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9el7tnij30lj07iqac.jpg" alt="5"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9f5e8e7j30m40gpqac.jpg" alt="6"><br>然后按ctr+空格，召唤出搜狗拼音输入法。<br>如图所示就是安装好的样子。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph9ju5bdkj30m40eyqac.jpg" alt="7"><br>我是没有重启kali直接就可以使用了。<br>如果你的没反应的话，请输入reboot，重启kali再继续操作。<br>ok,教程结束，撒花花(●’◡’●)</p>
+</span>
         
       
     </div>
@@ -3584,16 +3584,14 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            itchat是一个开源的微信个人号接口，使用python调用微信从未如此简单。使用不到三十行的代码，你就可以完成一个能够处理所有信息的微信机器人。这是itchat项目的官网：http://itchat.readthedocs.io/zh/latest/大家有兴趣的可以去上面了解看看。上面的用法介绍都
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/17/用python制作微信聊天机器人/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpgtc2bu0vj30ef08lglm.jpg" alt="0"><br>itchat是一个开源的微信个人号接口，使用python调用微信从未如此简单。<br>使用不到三十行的代码，你就可以完成一个能够处理所有信息的微信机器人。<br>这是itchat项目的官网：<a href="http://itchat.readthedocs.io/zh/latest/" target="_blank" rel="noopener">http://itchat.readthedocs.io/zh/latest/</a><br>大家有兴趣的可以去上面了解看看。上面的用法介绍都很全面的，希望大家可以学到很多。<br>下面我来做个简单的示范。<br>首先你需要一个图灵机器人的账号，这样就可以获取一个api的key了。<br>这是图灵机器人的官网:<a href="http://www.tuling123.com/" target="_blank" rel="noopener">http://www.tuling123.com/</a><br>登陆进去后，进入机器人设置里找到apikey，稍后会用到。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg44ko4hgj310u0fm483.jpg" alt="1"><br>现在我们需要一个python2的环境。<br>我是在自己的Ubuntu系统里写的python代码，Ubuntu已经自带了python2.7和python3.5的环境。本次的代码是用的python2.7。<br>这次的python代码需要用到itchat和requests模块。<br>其中requests模块是python2.7已经默认安装的了。<br>所以我们需要安装itchat模块。<br>我们采用pip安装，也建议大家以后再安装python模块的时候用pip进行安装，可以获取到最新的最官方的模块。<br>我们先安装pip。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt install python-pip</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg46ifkksj30kc0bfk0v.jpg" alt="2"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg46wdetrj30jv0bf483.jpg" alt="3"><br>然后开始用pip安装itchat模块。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ pip install itchat</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg479jq4zj30k70bhth5.jpg" alt="4"><br>现在准备工作已经做好了，我们开始写代码。<br>创建一个.py的文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ touch wechat_robot.py</span><br></pre></td></tr></table></figure></p>
+<p>然后进行编辑代码。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ gedit wechat_robot.py</span><br></pre></td></tr></table></figure></p>
+<p>代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line">#coding:utf-8  </span><br><span class="line">import itchat</span><br><span class="line">import requests</span><br><span class="line">def get_response(msg):</span><br><span class="line">    apiUrl = &apos;http://www.tuling123.com/openapi/api&apos;</span><br><span class="line">    data = &#123;</span><br><span class="line">        &apos;key&apos;: &apos;f8d0336b17a94258906188a9fc51933a&apos;,  # Tuling ApiKey</span><br><span class="line">        &apos;info&apos;: msg,  # 这是我们发出去的消息</span><br><span class="line">        &apos;userid&apos;: &apos;wechat-robot&apos;,  # 这里你想改什么都可以</span><br><span class="line">    &#125;</span><br><span class="line">    # 我们通过如下命令发送一个post请求</span><br><span class="line">    r = requests.post(apiUrl, data=data).json()</span><br><span class="line">    return r.get(&apos;text&apos;)</span><br><span class="line">@itchat.msg_register(itchat.content.TEXT)</span><br><span class="line">def print_content(msg):</span><br><span class="line">    return get_response(msg[&apos;Text&apos;])</span><br><span class="line">@itchat.msg_register([itchat.content.TEXT], isGroupChat=True)</span><br><span class="line">def print_content(msg):</span><br><span class="line">    return get_response(msg[&apos;Text&apos;])</span><br><span class="line">itchat.auto_login(True)</span><br><span class="line">itchat.run()</span><br></pre></td></tr></table></figure></p>
+<p>Tips:我们在key那里把自己申请的apikey复制粘贴进去就可以了，其他的代码不需要改动。<br>保存后，我们开始运行程序。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ python wechat_robot.py</span><br></pre></td></tr></table></figure></p>
+<p>此时会出现一个二维码，和你登陆电脑板的微信的二维码差不多，会要你扫描二维码后在手机上确认登陆微信网页版。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg4qja1iaj30kd0do483.jpg" alt="5"><br>以下是在终端下的提示。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg483judbj30gq03d483.jpg" alt="6"><br>当我们成功登陆后，微信就可以自动回复了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg48jfzkfj30jm04cwf0.jpg" alt="7"><br>你可以要你的微信好友和你一起测试以下。<br>而且在微信群里也是可以自动回复的。<br>以下是我测试的截图。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpg4jmzi9cj30do0qoaj7.jpg" alt="8"></p>
+</span>
         
       
     </div>
@@ -3674,16 +3672,9 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            有时候我们在使用win10的时候会在锁屏界面突然出现蓝屏问题。我们可以尝试输入cmd命令解决一下。win+X，然后按一下A键，打开Windows power shell(管理员)。输入以下命令。123456if exist "%SystemRoot%\System32\InputMethod\CHS
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/15/cmd命令解决蓝屏问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>有时候我们在使用win10的时候会在锁屏界面突然出现蓝屏问题。<br>我们可以尝试输入cmd命令解决一下。<br>win+X，然后按一下A键，打开Windows power shell(管理员)<br>。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdxlx0i8hj30np0ck483.jpg" alt="1"><br>输入以下命令。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> exist <span class="string">"%SystemRoot%\System32\InputMethod\CHS\ChsIME.exe"</span> (</span><br><span class="line"></span><br><span class="line">takeown /f <span class="string">"%SystemRoot%\System32\InputMethod\CHS\ChsIME.exe"</span> /A</span><br><span class="line"></span><br><span class="line">icacls <span class="string">"%SystemRoot%\System32\InputMethod\CHS\ChsIME.exe"</span> /deny <span class="string">"NT AUTHORITY\SYSTEM:RX"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<p>以上就是Win10锁屏蓝屏的原因与解决办法，希望对大家有所帮助。另外，如果以上方法无法解决，可以尽量少锁屏或者尝试系统重置、系统还原、重装系统解决。</p>
+</span>
         
       
     </div>
@@ -3764,17 +3755,12 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            前提：需要网卡支持收发信号，当然笔记本都支持了现在。1netsh wlan show networks mode=bssid
-如果你输入命令后，显示如下界面。你只需要打开wlan的服务就可以了。win+R,打开运行程序，输入services.msc.在打开的选项卡中双击服务和应用——服务。在中间的服
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/15/cmd命令下的WiFi/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>前提：需要网卡支持收发信号，当然笔记本都支持了现在。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan show networks mode=bssid</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdww1m80lj30cp078483.jpg" alt="1"><br>如果你输入命令后，显示如下界面。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwwjm65rj30bs00x483.jpg" alt="2"><br>你只需要打开wlan的服务就可以了。<br>win+R,打开运行程序，输入services.msc.<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwwzgv5bj30b606b483.jpg" alt="3"><br>在打开的选项卡中双击服务和应用——服务。<br>在中间的服务栏目中找到WLAN AutoConfig，如果没有启动，点击启动。如果已经启动，点击重新启动。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwxdht4qj30bk0c9483.jpg" alt="4"><br>双击打开。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwxpd9kbj30it0d1483.jpg" alt="5"><br>然后点击确定。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdwxpd9kbj30it0d1483.jpg" alt="6"><br>好了，现在就已经开启wlan服务了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan show profiles</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdx08jwrxj30em071483.jpg" alt="7"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan show drivers</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdx12his0j30jf0ha483.jpg" alt="8"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> /f <span class="string">"skip=10 tokens=1,2 delims=:"</span> %i <span class="keyword">in</span> (<span class="string">'netsh wlan show profiles'</span>) <span class="keyword">do</span> @<span class="keyword">for</span> /f <span class="string">"tokens=1-2 delims=:"</span> %k <span class="keyword">in</span> (<span class="string">'netsh wlan show profiles %j key ^= clear ^|findstr /i "关键内容"'</span>) <span class="keyword">do</span> @<span class="built_in">echo</span> %j,%l&gt;&gt; %USERPROFILE%\desktop\1.txt</span><br></pre></td></tr></table></figure></p>
+<p>可以生成一个txt文本，查看连接过的WiFi及密码。</p>
+</span>
         
       
     </div>
@@ -3855,16 +3841,8 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            很多Linux都有live模式，大部分都是在安装界面的第一个选项。这个live模式就是进行用户体验的，你在里面进行的任何操作都是不会保留的。当你退出系统后，马上又会变回原来的样子。你做的任何改动立刻消失。Ubuntu官方更为人性化，做了一个在线虚拟化的Ubuntu进行体验。如果你有使用Ubuntu的
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/15/在线体验Ubuntu系统/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1521354142506&amp;di=6b90eca1cbd4c27b89688f44a90e76b2&amp;imgtype=0&amp;src=http%3A%2F%2Fwallarthd.com%2Fwp-content%2Fuploads%2F2014%2F09%2FBest-Gray-ubuntu-Wallpaper-Desktop.jpg" alt="0"><br>很多Linux都有live模式，大部分都是在安装界面的第一个选项。<br>这个live模式就是进行用户体验的，你在里面进行的任何操作都是不会保留的。当你退出系统后，马上又会变回原来的样子。你做的任何改动立刻消失。<br>Ubuntu官方更为人性化，做了一个在线虚拟化的Ubuntu进行体验。<br>如果你有使用Ubuntu的想法，但是对Ubuntu的特点并不了解，你感觉下载Ubuntu并且进行安装很麻烦。当你对此举棋不定的时候，那么你可以使用Ubuntu官方提供的在线体验Ubuntu系统。<a href="http://tour.ubuntu.com/en/" target="_blank" rel="noopener">点此</a>进入在线体验。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpdtv4lyuyj311m0gu483.jpg" alt="1"><br>当然这只是在线的一个Ubuntu系统，你并不能进行太多的操作，你只能查看一些Ubuntu自带的软件，你是不能修改里面的软件的。你仅仅可以根据这个在线Ubuntu大致浏览一些Ubuntu的基础功能。如果你想更深入的了解或者使用Ubuntu，你可以下载Ubuntu并且进行安装。<br>你可以安装到虚拟机中，也可以使用Windows的子系统Ubuntu。<a href="http://www.bingyublog.com/2018/02/24/Windows%E4%B8%8A%E5%AE%89%E8%A3%85Ubuntu%E5%AD%90%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">点此</a>查看Windows安装Ubuntu。<br>如果你想试试Ubuntu系统，那么就现在立马开始体验这个在线Ubuntu系统吧。<br>PS:Ubuntu官网:<a href="https://www.ubuntu.com/" target="_blank" rel="noopener">https://www.ubuntu.com/</a><br>   Ubuntu下载:<a href="http://www.ubuntu.org.cn/download/desktop" target="_blank" rel="noopener">http://www.ubuntu.org.cn/download/desktop</a><br>              <a href="https://www.ubuntu.com/download/desktop" target="_blank" rel="noopener">https://www.ubuntu.com/download/desktop</a></p>
+</span>
         
       
     </div>
@@ -3945,17 +3923,12 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            W3M是Linux的终端网络浏览器,也是一个开源的文字式网页浏览器。W3M只支持文字，如果你想获取图像支持，需要安装w3m-img软件包。下面开始安装。1lengyue@ubuntu:~$ sudo apt-get install w3m w3m-img
-安装完成后，查看一下帮助手册。1lengyu
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/11/Ubuntu之终端浏览器/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>W3M是Linux的终端网络浏览器,也是一个开源的文字式网页浏览器。<br>W3M只支持文字，如果你想获取图像支持，需要安装w3m-img软件包。<br>下面开始安装。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get install w3m w3m-img</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpcjfjzp6dj30k30d542m.jpg" alt="1"><br>安装完成后，查看一下帮助手册。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ man w3m</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpcjfjzp6dj30k30d542m.jpg" alt="2"><br>操作姿势：<br>在操作中，我们可以使用pageup和pagedown来进行翻页，用↑↓来进行上下滑动查看网页。如果我们需要退出w3m浏览器，我们按一下q,然后再按一下y,就可以成功退出了。在打开的网页中，蓝色的字体为链接，我们可以按下enter键来打开该链接。在打开的时候，在终端的左下角会出现一个http状态码，如果为200，则表明可以正常打开网页。<br><img src="http://img03.sogoucdn.com/app/a/100520146/1888d0046d47e974046bc97a04dcf0dd" alt="1"><br>现在开始简单的示范一下怎么浏览网页。<br>比如打开百度首页。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ w3m baidu.com</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpm0fjvvccj30k80d2jsq.jpg" alt="3">打开我的博客首页。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu：～$ w3m www.bingyublog.com</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpm0govt40j30k70d1wfp.jpg" alt="w"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpm0hggollj30kb0d2whs.jpg" alt="w"><br>好了，基本操作就这些，其他的操作姿势可以在使用过程中自己摸索。</p>
+</span>
         
       
     </div>
@@ -4036,16 +4009,13 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            Telnet属于TCP/IP协议，是Internet远程登陆服务的标准协议和主要方式。它为用户提供了在本地计算机上完成远程主机工作的能力。在终端使用者的电脑上使用telnet程序，用它连接到服务器。终端使用者可以在telnet程序中输入命令，这些命令会在服务器上运行，就像直接在服务器的控制台上输入一
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/11/Ubuntu配置Telnet服务/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>Telnet属于TCP/IP协议，是Internet远程登陆服务的标准协议和主要方式。它为用户提供了在本地计算机上完成远程主机工作的能力。在终端使用者的电脑上使用telnet程序，用它连接到服务器。终端使用者可以在telnet程序中输入命令，这些命令会在服务器上运行，就像直接在服务器的控制台上输入一样。可以在本地就能控制服务器。要开始一个telnet会话，必须输入用户名和密码来登录服务器。<br>Telnet是常用的远程控制Web服务器的方法。Telnet命令用于登录远程主机，对远程主机进行管理。telnet因为采用明文传送报文，安全性不好，很多Linux服务器都不开放telnet服务，而改用更安全的ssh方式了。但仍然有很多别的系统可能采用了telnet方式来提供远程登录。<br>下面开始安装Telnet服务。<br>首先我们需要验证一下自己的Linux系统是否已经安装了telnet服务。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ netstat -a | grep telnet</span><br></pre></td></tr></table></figure></p>
+<p>如果出现空。就说明并没有安装telnet服务。<br>下面我们开始安装telnet服务。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get install openbsd-inetd</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install telnetd</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpcoktu01kj30k008142m.jpg" alt="1"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpcol9jcsqj30k708i42m.jpg" alt="2"><br>然后我们开始重启telnet服务使之生效。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ /etc/init.d/openbsd-inetd restart</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpcol9jcsqj30k708i42m.jpg" alt="3"><br>输入密码认证一下。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpcom47044j30i101442m.jpg" alt="4"><br>然后我们现在查看一下telnet的运行状态。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ netstat -a | grep  telnet</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpcomi6lcpj30jm01442m.jpg" alt="5"><br>好了，安装成功！</p>
+<p>查看一下manual手册：<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpcomyj64hj30jy0c842m.jpg" alt="6"><br>介绍一些常用的命令参数：(不需要都记住，用的时候可以随时查看man手册就可以了)<br>-8：允许使用8位字符资料，包括输入与输出；<br>-a：尝试自动登入远端系统；<br>-b&lt;主机别名&gt;：使用别名指定远端主机名称；<br>-c：不读取用户专属目录里的.telnetrc文件；<br>-d：启动排错模式；<br>-e&lt;脱离字符&gt;：设置脱离字符；<br>-E：滤除脱离字符；<br>-f：此参数的效果和指定”-F”参数相同；<br>-F：使用Kerberos V5认证时，加上此参数可把本地主机的认证数据上传到远端主机；<br>-k&lt;域名&gt;：使用Kerberos认证时，加上此参数让远端主机采用指定的领域名，而非该主机的域名；<br>-K：不自动登入远端主机；<br>-l&lt;用户名称&gt;：指定要登入远端主机的用户名称；<br>-L：允许输出8位字符资料；<br>-n&lt;记录文件&gt;：指定文件记录相关信息；<br>-r：使用类似rlogin指令的用户界面；<br>-S&lt;服务类型&gt;：设置telnet连线所需的ip TOS信息；<br>-x：假设主机有支持数据加密的功能，就使用它；<br>-X&lt;认证形态&gt;：关闭指定的认证形态。</p>
+</span>
         
       
     </div>
@@ -4126,16 +4096,9 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            输入重定向是指把文件导入到命令中，而输出重定向则是指把原本要输出到屏幕的数据信息写入到指定文件中。在日常的学习和工作中，相较于输入重定向，我们使用输出重定向的频率更高，所以又将输出重定向分为了标准输出重定向和错误输出重定向两种不同的技术，以及清空写入与追加写入两种模式。将文件1作为命令的标准输入并将
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/11/Linux之输入输出重定向/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpgtgwkfhtj30go0b4mx7.jpg" alt="0"><br>输入重定向是指把文件导入到命令中，而输出重定向则是指把原本要输出到屏幕的数据信息写入到指定文件中。<br>在日常的学习和工作中，相较于输入重定向，我们使用输出重定向的频率更高，所以又将输出重定向分为了标准输出重定向和错误输出重定向两种不同的技术，以及清空写入与追加写入两种模式。<br>将文件1作为命令的标准输入并将标准输出到文件2<br>➢标准输入重定向（STDIN，文件描述符为0）：默认从键盘输入，也可从其他文件或命令中输入。<br>➢标准输出重定向（STDOUT，文件描述符为1）：默认输出到屏幕。<br>➢错误输出重定向（STDERR，文件描述符为2）：默认输出到屏幕。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph5z0vvk6j30io03sq2y.jpg" alt="1"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fph607y3x6j30iu05f0t0.jpg" alt="2"><br>输入输出重定向在编写shell脚本的时候特别重要，而且十分有用。<br>下面我写个简单的shell脚本，示范一下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line"><span class="comment"># 简单的重定向脚本实例</span></span><br><span class="line">ls /home/lengyue/ &gt; read.txt</span><br><span class="line">cat read.txt</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fphbplhhqfj30jw0d0qac.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -4216,109 +4179,18 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            pstree是linux很有用的一个命令，显示正在运行的进程树,用来打印系统当前各个进程父子关系。然而linux下安装的软件包并不是叫 pstree：
-On Mac OS安装方法:brew install pstree  
-On Fedora/Red Hat/CentOS安装方法:yum insta
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/10/Ubuntu安装pstree/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    <div>
-   
-    </div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2018/03/08/关于Ubuntu的那些常识/" itemprop="url">
-                关于Ubuntu的那些常识
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2018-03-08T22:04:55+08:00" content="2018-03-08">
-            2018-03-08
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/ubuntu/" itemprop="url" rel="index">
-                  <span itemprop="name">ubuntu</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-
-        
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            Ubuntu的命名规则Ubuntu版本的命名规则是根据正式版发布的年月命名，例如：Ubuntu 16.04 LTS也就意味着2016年4月发布的这款Ubuntu，而LTS是英语Long Term Support的简写，意味着长时间支持这款版本的Ubuntu。
-Ubuntu的开发代号的三个特点都是动物
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/08/关于Ubuntu的那些常识/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>pstree是linux很有用的一个命令，显示正在运行的进程树,用来打印系统当前各个进程父子关系。<br>然而linux下安装的软件包并不是叫 pstree：</p>
+<h1 id="On-Mac-OS"><a href="#On-Mac-OS" class="headerlink" title="On Mac OS"></a>On Mac OS</h1><p>安装方法:brew install pstree  </p>
+<h1 id="On-Fedora-Red-Hat-CentOS"><a href="#On-Fedora-Red-Hat-CentOS" class="headerlink" title="On Fedora/Red Hat/CentOS"></a>On Fedora/Red Hat/CentOS</h1><p>安装方法:yum install psmisc</p>
+<h1 id="On-Ubuntu-Debian-APT"><a href="#On-Ubuntu-Debian-APT" class="headerlink" title="On Ubuntu/Debian APT"></a>On Ubuntu/Debian APT</h1><p>安装方法:apt-get install psmisc</p>
+<p>Linux虽然内建有查看当前进程的工具ps,Processes Status的缩写。<br>但是我个人感觉还是pstree以树状图的方式展示出来的效果更好些。<br>下面我示范在Ubuntu下安装。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get install psmisc</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fp80au3mfkj30jr0a0mzw.jpg" alt="1"><br>查看一些命令的参数及其说明。<br>Tips:在我们安装 一些命令的时候，一定要先查看一下manual手册，以便可以更好的了解该命令和使用该命令及其参数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ man pstree</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fp80gsanb0j30jx0d3mzw.jpg" alt="2"><br>以下是我导出的一些重要参数说明，大家可以看一下。<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-a：显示每个程序的完整指令，包含路径，参数或是常驻服务的标示；</span><br><span class="line">-c：不使用精简标示法；</span><br><span class="line">-G：使用VT100终端机的列绘图字符；</span><br><span class="line">-h：列出树状图时，特别标明现在执行的程序；</span><br><span class="line">-H&lt;程序识别码&gt;：此参数的效果和指定<span class="string">"-h"</span>参数类似，但特别标明指定的程序；</span><br><span class="line">-l：采用长列格式显示树状图；</span><br><span class="line">-n：用程序识别码排序。预设是以程序名称来排序；</span><br><span class="line">-p：显示程序进程ID，为十进制数字；</span><br><span class="line">-u：显示用户名称；</span><br><span class="line">-U：使用UTF-8列绘图字符；</span><br><span class="line">-V：显示版本信息。</span><br></pre></td></tr></table></figure></p>
+<p>简单操作:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ pstree</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fp80ne7ycvj30ip0b90tr.jpg" alt="3"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ pstree -a</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fp80ptmvawj30k10awmzw.jpg" alt="4"><br>可以显示出一些隐藏的进程。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ pstree -p</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fp80st9i4kj30it0asmzw.jpg" alt="5"><br>然后如果我们发现什么可疑的进程，可以使用kill杀死进程就可以了。<br>好了，如果还有什么不懂的可以<a href="https://jq.qq.com/?_wv=1027&amp;k=5jTg5dW" target="_blank" rel="noopener">进群</a>问我。</p>
+</span>
         
       
     </div>
@@ -4368,30 +4240,30 @@ Ubuntu的开发代号的三个特点都是动物
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">132</span>
+            <a href="/">
+              <span class="site-state-item-count">133</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            <a href="/categories">
+            
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              </a>
+              
           </div>
 
           <div class="site-state-item site-state-tags">
-            <a href="/tags">
+            
               <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">标签</span>
-              </a>
+              
           </div>
 
         </nav>
@@ -4402,35 +4274,11 @@ Ubuntu的开发代号的三个特点都是动物
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://weibo.com/u/6083310945" target="_blank">微博</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
               </span>
             
           
@@ -4441,19 +4289,7 @@ Ubuntu的开发代号的三个特点都是动物
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
               </span>
             
           
@@ -4463,7 +4299,7 @@ Ubuntu的开发代号的三个特点都是动物
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -4498,7 +4334,7 @@ Ubuntu的开发代号的三个特点都是动物
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
 </div>
 
 <!-- busuanzi -->
@@ -4556,7 +4392,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -4564,23 +4400,17 @@ tpwidget("show");</script>
     
   
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="//helpers.js?v="></script>
   
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
 
 
 
 
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="//nav-toggle.js?v="></script>
+  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
@@ -4601,17 +4431,15 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript" src="//lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
+        placeholder: "//loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next use-motion theme-next-mala">
+<html class="theme-next  ">
 <head>
   
 
@@ -17,25 +17,19 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+<link rel="stylesheet" type="text/css" href="//main.css?v="/>
 
 
     <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→" />
 
 
 
-  <meta name="keywords" content="Hexo,Mala" />
 
 
 
-
-
-  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→">
@@ -52,18 +46,10 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: 'Mala',
-    sidebar: 'post'
+    scheme: '',
+    sidebar: ''
   };
 </script>
-
-  <script>
-  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
-  daovoice('init', {
-      app_id: "fb883a64"
-    });
-  daovoice('update');
-  </script>
 
 
   <title> 冰羽の博客 </title>
@@ -123,78 +109,11 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            <i class="menu-item-icon icon-next-home"></i> <br />
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-next-categories"></i> <br />
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-next-archives"></i> <br />
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            <i class="menu-item-icon icon-next-tags"></i> <br />
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            <i class="menu-item-icon icon-next-about"></i> <br />
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-kali">
-          <a href="/kali linux tools" rel="section">
-            <i class="menu-item-icon icon-next-kali"></i> <br />
-            Kali Linux Tools
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-something">
-          <a href="/在线工具" rel="section">
-            <i class="menu-item-icon icon-next-something"></i> <br />
-            在线工具
-          </a>
-        </li>
-      
-
-      
-      
-    </ul>
-  
 
   
     <div class="site-search">
       
 	  
-  <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -3320,7 +3239,7 @@
 
 </style>
 
-<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -3444,6 +3363,96 @@
           
           
             
+              <a class="post-title-link" href="/2018/03/28/Ubuntu的管理员运行机制/" itemprop="url">
+                Ubuntu的管理员运行机制
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2018-03-28T23:00:45+08:00" content="2018-03-28">
+            2018-03-28
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/ubuntu/" itemprop="url" rel="index">
+                  <span itemprop="name">ubuntu</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>Ubuntu并不像其他的Linux操作系统，在安装系统的时候自动为你分配一个root用户，Ubuntu的使用者都知道Ubuntu并没有分配root用户。<br>在安装Ubuntu的时候会要你自己设置一个账户，该账户即是系统的管理员。<br>在你初次打开终端的时候，会自动出现以下界面。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpsxvg5ifmj30if02uqac.jpg" alt="1"><br>该句话的意思是运行sudo命令作为系统管理员(root用户)，详情可以查看man sudo_root。<br>现在我们输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ man sudo_root</span><br></pre></td></tr></table></figure></p>
+<p>查看详细信息。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpsy04qcq6j30k90d5qac.jpg" alt="2"><br>我本人已经将sudo_root的manual手册做了翻译，并且进行了以下几点总结:<br>默认情况下，用户“root”的密码（系统管理员）被锁定。这意味着您不能以root身份登录或使用su命令。相反，该安装程序将设置sudo允许过程中创建的用户安装运行所有管理命令。<br>这意味着，当需要root权限的时候在终端可以使用sudo命令。菜单中的所有程序都将使用图形。<br>使用sudo命令的时候会提示输入密码。当sudo需要密码，它需要您的密码，这意味着不需要root密码。<br>要运行一个需要root权限的命令，仅仅在该命令前面加上sudo就可以了。<br>而你如果想要得到一个交互式的root shell，可以使用sudo -i.<br>像下面这样。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo -i</span><br><span class="line">[sudo] lengyue 的密码： <span class="comment">#在此输入你的用户密码确认即可</span></span><br><span class="line">root@ubuntu:~<span class="comment">#</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpsyg2d4jdj30k003tqac.jpg" alt="3"><br>然后使用exit命令注销退出root。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~<span class="comment"># exit</span></span><br><span class="line">注销</span><br><span class="line">lengyue@ubuntu:~$</span><br></pre></td></tr></table></figure></p>
+<p>默认情况下，只有安装系统的用户才可以运行sudo。<br>你如果需要添加更多的管理员，即其他用户也可以运行sudo，你要添加这些用户到sudo的group中。<br>我们可以按照以下步骤进行操作:<br>在终端中运行以下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo adduser username sudo</span><br></pre></td></tr></table></figure></p>
+<p>在图像界面下，进行设置找到<strong>用户</strong>选项，<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpsyp59qsej30mb0geqac.jpg" alt="5"><br>先解锁所在用户。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpsyrxyh5aj30e00a1dgc.jpg" alt="6"><br>然后按照提示进行添加管理员，但是值得注意的是必须将你新设置的用户添加到管理员的group中，如图所示<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpsyujozlnj30lt0gcqac.jpg" alt="7"><br>最后进行保存就可以了。<br>Ubuntu禁用root用户的优点:<br>1.用户不必记住一个额外的密码，它们是可能忘记。<br>2.安装程序可以少问问题。<br>3.它避免了“我可以做任何事”交互式登录默认情况下-你<br>4.在发生重大更改之前，将提示输入密码，这会让你考虑你的后果。<br>5.Sudo增加了一个命令的日志条目（S）运行（/var/log/messages中验证日志）。如果你陷入困境，你可以看到什么命令<br>6.每一个试图用暴力强行进入你的系统的攻击者知道它有一个名为root的帐户，并且将首先尝试它。因为他们不知道你的其他用户的用户名是什么。<br>7.允许短期或长期的管理权轻松转让。期间，通过添加和从组中删除用户而不是sudo。当您使用单个root密码，只有授权用户才是去更改根密码<br>8.sudo可以设立一个更细致的安全策略。<br>9.所述认证自动失效后很短的时间（可设置至期望的或0)；所以如果你离开后在终端运行命令，作为root用户使用sudo，不可能会离开你的根终端开放。<br>但是我们也是可以重新启用root用户的(其实我个人一点也不推荐你这么做，因为根本没有必要还要承受很大的风险)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo passwd root</span><br><span class="line">[sudo] lengyue 的密码：</span><br><span class="line">输入新的 UNIX 密码：</span><br><span class="line">重新输入新的 UNIX 密码：</span><br><span class="line">passwd：已成功更新密码</span><br></pre></td></tr></table></figure></p>
+<p>然后我们进入root用户:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ su root</span><br><span class="line">密码：</span><br><span class="line">root@ubuntu:/home/lengyue<span class="comment">#</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpsz8o9fn0j30k7062qac.jpg" alt="8"><br>我们也可以重新禁用root用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo passwd -dl root</span><br></pre></td></tr></table></figure></p>
+<p>如果这个时候你再次进入root用户的话，你会发现你设置的root密码已经不能用了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpszapc248j30f402edg2.jpg" alt="3"></p>
+<p>官网中有更为细致的介绍: 以下是地址<br><a href="https://help.ubuntu.com/community/RootSudo#Downsides_of_using_sudo" target="_blank" rel="noopener">https://help.ubuntu.com/community/RootSudo#Downsides_of_using_sudo</a></p>
+<h2 id="总的来说，Ubuntu的管理运行机制是非常人性化的，我个人是很认同这种管理机制的，确实很方便也很安全。"><a href="#总的来说，Ubuntu的管理运行机制是非常人性化的，我个人是很认同这种管理机制的，确实很方便也很安全。" class="headerlink" title="总的来说，Ubuntu的管理运行机制是非常人性化的，我个人是很认同这种管理机制的，确实很方便也很安全。"></a>总的来说，Ubuntu的管理运行机制是非常人性化的，我个人是很认同这种管理机制的，确实很方便也很安全。</h2></span>
+        
+      
+    </div>
+    <div>
+   
+    </div>
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2018/03/27/Ubuntu显示网络已禁用/" itemprop="url">
                 Ubuntu显示网络已禁用
               </a>
@@ -3493,16 +3502,9 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            今天在本地搭建wordpress的时候，Ubuntu突然断网，我本人的Ubuntu网络连接是用的NAT模式。随后我赶紧查看是否是自己的主机不能上网了，但是主机是完全可以上网的。然后我决定采用桥接模式试试，但是还是不行。而且我发现在Ubuntu登陆界面显示的是网络已禁用。但是我本人并没有手动禁用网络。
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/27/Ubuntu显示网络已禁用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>今天在本地搭建wordpress的时候，Ubuntu突然断网，我本人的Ubuntu网络连接是用的NAT模式。随后我赶紧查看是否是自己的主机不能上网了，但是主机是完全可以上网的。<br>然后我决定采用桥接模式试试，但是还是不行。<br>而且我发现在Ubuntu登陆界面显示的是网络已禁用。但是我本人并没有手动禁用网络。<br>也就是说并不是本地网络的问题，是Ubuntu自身的网络连接出现了问题。<br>随后我开始查找各种解决姿势。<br>终于完美解决了这个问题。下面进行一下总结。<br>WARNING:这个方法适用于解决网络突然从可用变不可用的情况(多是非正常关机的原因)，如果本来网络不可用。那么这个方法不适用。<br>Tips:其原理就是删除原来的网络设置，然后让系统自动重建新的网络设置。<br>在终端下输入如下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service network-manager stop <span class="comment">#关闭network-manager网络设置</span></span><br><span class="line">sudo rm /var/lib/NetworkManager/NetworkManager.state <span class="comment">#删除network-manager网络设置</span></span><br><span class="line">sudo service network-manager start <span class="comment">#重启network-manager网络设置服务</span></span><br></pre></td></tr></table></figure></p>
+<p>随后你不需要重启Ubuntu就可以看到你的网络已经连接上了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fprrexppmdj30kf0cu429.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -3583,16 +3585,10 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            https://github.com/trustedsec/social-engineer-toolkit1234567root@kali:~# git clone https://github.com/trustedsec/social-engineer-toolkit/ set/root@kal
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/26/Kali制作钓鱼网站/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p><a href="https://github.com/trustedsec/social-engineer-toolkit" target="_blank" rel="noopener">https://github.com/trustedsec/social-engineer-toolkit</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># git clone https://github.com/trustedsec/social-engineer-toolkit/ set/</span></span><br><span class="line">root@kali:~<span class="comment"># ls</span></span><br><span class="line">root@kali:~<span class="comment"># cd set/</span></span><br><span class="line">root@kali:~/<span class="built_in">set</span><span class="comment"># ls</span></span><br><span class="line">modules  README.md         seautomate  setoolkit  seupdate</span><br><span class="line">readme   requirements.txt  seproxy     setup.py   src</span><br><span class="line">root@kali:~/<span class="built_in">set</span><span class="comment"># python setup.py install</span></span><br></pre></td></tr></table></figure></p>
+<p>安装完成，现在运行该程序。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># setoolkit</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -3673,16 +3669,15 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            今天教大家在安卓上部署kali工具集。当然大家一定看过那些在手机上安装kali系统的教程，那些教程都是需要root。而今天这个教程是不需要root手机的。其实你如果不是什么玩机的高手的话，最好不要root手机，root后很多应用就会获得更高的权限，你的个人信息与数据就不安全了呢!首先你的手机需要安装
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/26/无需ROOT在安卓手机上部署kali工具集/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><h2 id="今天教大家在安卓上部署kali工具集。"><a href="#今天教大家在安卓上部署kali工具集。" class="headerlink" title="今天教大家在安卓上部署kali工具集。"></a>今天教大家在安卓上部署kali工具集。</h2><p>当然大家一定看过那些在手机上安装kali系统的教程，那些教程都是需要root。而今天这个教程是不需要root手机的。其实你如果不是什么玩机的高手的话，最好不要root手机，root后很多应用就会获得更高的权限，你的个人信息与数据就不安全了呢!<br>首先你的手机需要安装一个叫做Termux的软件，这个软件在我看来简直是神器，比那些所谓的Linux模拟器好上100倍，而且他的操作姿势很多，还支持apt、pkg软件包管理，和Ubuntu的操作类似，这是官网:<a href="https://termux.com/" target="_blank" rel="noopener">https://termux.com/</a> ，然后你可以通过阅读官方文档:<a href="https://wiki.termux.com/wiki/Main_Page" target="_blank" rel="noopener">https://wiki.termux.com/wiki/Main_Page</a> 了解操作方法。<br>你只能通过以下两种方式进行安装。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpraal8qjfj30tc08zaaz.jpg" alt="1"><br>这是F-Droid中的截图，以下都是需要进行安装的，这一套软件包才可以要你的termux使用起来更加简便轻快。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpraaqv7vrj30k2140acc.jpg" alt="2"><br>下面开始安装toolss<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/AnonHackerr/toolss.git</span><br><span class="line"><span class="built_in">cd</span> toolss</span><br><span class="line">chmod +x Tools.py</span><br><span class="line">python Tools.py</span><br></pre></td></tr></table></figure></p>
+<h2 id="以下是安装视频。"><a href="#以下是安装视频。" class="headerlink" title="以下是安装视频。"></a>以下是安装视频。</h2><iframe height="498" width="510" src="http://player.youku.com/embed/XMzYwMzk0NDM3Ng==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<h2 id="然后我演示一下安装nmap。"><a href="#然后我演示一下安装nmap。" class="headerlink" title="然后我演示一下安装nmap。"></a>然后我演示一下安装nmap。</h2><iframe height="498" width="510" src="http://player.youku.com/embed/XMzQ5MjM5MDYzMg==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<h2 id="安装sqlmap。"><a href="#安装sqlmap。" class="headerlink" title="安装sqlmap。"></a>安装sqlmap。</h2><p><a href="http://player.youku.com/player.php/sid/XMzYwMzk0NTQ2OA==/v.swf" target="_blank" rel="noopener">http://player.youku.com/player.php/sid/XMzYwMzk0NTQ2OA==/v.swf</a></p>
+<p>安装sqlmap有点慢，就不展示完了，你们自己在下面慢慢的安装就可以了。</p>
+<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -3763,17 +3758,10 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            首先从GitHub上clone下来1root@kali:~# git clone https://github.com/bdblackhat/admin-panel-finder.git
-然后我们开始运行该程序。123root@kali:~# lsroot@kali:~# cd admin-pane
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/25/kali寻找网站后台/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>首先从GitHub上clone下来<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># git clone https://github.com/bdblackhat/admin-panel-finder.git</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpphk2vyy1j30m7047q40.jpg" alt="1"><br>然后我们开始运行该程序。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># ls</span></span><br><span class="line">root@kali:~<span class="comment"># cd admin-panel-finder/</span></span><br><span class="line">root@kali:~/admin-panel-finder<span class="comment"># python admin_panel_finder.py</span></span><br></pre></td></tr></table></figure></p>
+<p>然后在此处输入你要寻找后台的网站。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpphl72t5lj30ls04bjrg.jpg" alt="2"><br>静静等待就可以了。<br>其实这个东西原理特别简单，在GitHub上放的有源码，有兴趣的可以去看看，这是地址：<a href="https://github.com/bdblackhat/admin-panel-finder" target="_blank" rel="noopener">https://github.com/bdblackhat/admin-panel-finder</a><br>就是穷举法破解网站后台，也就是用字典吧算是，把许多常用的管理后台地址放到程序里，然后用python脚本自动进行爆破后台，成功的几率还是在于字典的强大与否，如果你也懂python的话，你可以在这个程序的源码中添加自己的字典，可以使成功的几率变得更大。<br>这个程序目前应该可能是已经不维护了吧，代码还是5年前上传的，所以如果你有兴趣，又对python很在行的话，可以来丰富完善一下该程序。<br><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -3854,16 +3842,17 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            什么是CDN加速？CDN的全称是Content Delivery Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学(MIT)的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。CDN有什么作用？C
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/25/绕过cdn，查找真实IP/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><h2 id="什么是CDN加速？"><a href="#什么是CDN加速？" class="headerlink" title="什么是CDN加速？"></a>什么是CDN加速？</h2><h3 id="CDN的全称是Content-Delivery-Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学-MIT-的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。"><a href="#CDN的全称是Content-Delivery-Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学-MIT-的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。" class="headerlink" title="CDN的全称是Content Delivery Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学(MIT)的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。"></a>CDN的全称是Content Delivery Network，即内容分发网络，这个概念是1998年提出的。当时美国麻省理工大学(MIT)的一批研究生通过分析当时Internet的网络状况，提出了一套能够实现用户就近访问的解决方案，最终设计并实现了其独有的系统。</h3><h2 id="CDN有什么作用？"><a href="#CDN有什么作用？" class="headerlink" title="CDN有什么作用？"></a>CDN有什么作用？</h2><h3 id="CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。"><a href="#CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。" class="headerlink" title="CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。"></a>CDN基本思路就是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。</h3><h3 id="CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。"><a href="#CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。" class="headerlink" title="CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。"></a>CDN核心目的就是使用户可就近访问网络，取得所需内容，解决网络拥挤的状况，明显提高用户访问网站的响应速度或者用户下载速度。</h3><p>对用户来说，如果一个网站开启了CDN，用户访问速度或者下载速度相比之前会更快。一般来说，网站开启CDN之后，可以提升用户体验。</p>
+<h2 id="对网站有什么好处？"><a href="#对网站有什么好处？" class="headerlink" title="对网站有什么好处？"></a>对网站有什么好处？</h2><h3 id="首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。"><a href="#首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。" class="headerlink" title="首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。"></a>首先，开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，这样可以减少网站服务器宽带资源，降低服务器压力。这也就是大家都在ping百度，但是不同地区得到的反馈ip不一样的原因。</h3><p>其次，由于CDN节点的阻挡防护，可以更好的保护员服务器的安全。具体来说，CDN其实是充当了一个替身的角色，无论服务器是渗透还是DDoS攻击，攻击的目标都将是CDN节点，这样一来便间接的保护了网站本身。</p>
+<h2 id="怎么查看一个网站开启了CDN呢？"><a href="#怎么查看一个网站开启了CDN呢？" class="headerlink" title="怎么查看一个网站开启了CDN呢？"></a>怎么查看一个网站开启了CDN呢？</h2><h3 id="方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。"><a href="#方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。" class="headerlink" title="方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。"></a>方法很简单，只要在不同的地区ping网址就可以了。我们可以使用网上的一些提供免费代理的网站，挂一个代理，就可以获取不同地区的IP了，然后你再去ping就可以了。</h3><h3 id="也可以使用一个在线的工具，ping-chinaz-com"><a href="#也可以使用一个在线的工具，ping-chinaz-com" class="headerlink" title="也可以使用一个在线的工具，ping.chinaz.com"></a>也可以使用一个在线的工具，ping.chinaz.com</h3><p>这是一个使用了CDN的网站<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppe8kva8gj30kg022qac.jpg" alt="1"><br>这是一个没有使用CDN的网站<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppe7s5xpvj30kj021qac.jpg" alt="2"></p>
+<h3 id="还可以使用kali工具查询"><a href="#还可以使用kali工具查询" class="headerlink" title="还可以使用kali工具查询"></a>还可以使用kali工具查询</h3><p>dnsenum是一款域名信息收集工具<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#  dnsenum -o /root/baidu.com -t 30 --threads 30 baidu.com</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppea94mmqj30m00cpqac.jpg" alt="1"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppeb77p1sj30m40d542k.jpg" alt="2"><br>dnsrecon是一款很强大的dns信息手机工具<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># dnsrecon -d baidu.com -n 114.114.114.114 --threads 15 --lifetime 30 --xml /root/baidu.com1</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fppebq93afj30lu0drqac.jpg" alt="2"><br>这2款工具都是可以验证一个网站是否运用了CDN技术。</p>
+<h2 id="怎么绕过CDN查找真实IP呢？"><a href="#怎么绕过CDN查找真实IP呢？" class="headerlink" title="怎么绕过CDN查找真实IP呢？"></a>怎么绕过CDN查找真实IP呢？</h2><h3 id="二级域名法"><a href="#二级域名法" class="headerlink" title="二级域名法"></a>二级域名法</h3><p>目标站点一般不会把所有的二级域名放cdn上，比如试验性质地二级域名。Google site一下目标的域名，看有没有二级域名出现，挨个排查，确定了没使用cdn的二级域名后，本地将目标域名绑定到同ip，能访问就说明目标站与此二级域名在同一个服务器上。不在同一服务器也可能在同C段，扫描C段所有开80端口的ip，挨个试。如果google搜不到也不代表没有，我们拿常见的二级域名构造一个字典，猜出它的二级域名。比如mail、cache、img。</p>
+<h3 id="nslookup法"><a href="#nslookup法" class="headerlink" title="nslookup法"></a>nslookup法</h3><p>大部分CDN提供商只针对国内市场，而对国外市场几乎是不做CDN，所以有很大的几率会直接解析到真实IP。其实这个方法根本不用上国外vpn，因为你上国外vpn的ping本质，就是使用国外dns(那台vpn服务器使用的dns)查询域名而已，所以只需要：nslookup<a href="http://xxx.com" target="_blank" rel="noopener">http://xxx.com</a> 国外dns，就行了，例如：nslookup <a href="http://xxx.com" target="_blank" rel="noopener">http://xxx.com</a> 8.8.8.8，提示：你要找冷门国外DNS才行，像谷歌的DNS，国内用的人越来越多了，很多CDN提供商都把谷歌DNS作为国内市场之一，所以，你查到的结果会和国内差不了多少，或者查询域名的NS记录，其域名记录中的MX记录，TXT记录等很有可能指向的是真实ip或同C段服务器。</p>
+<h3 id="ping法"><a href="#ping法" class="headerlink" title="ping法"></a>ping法</h3><p>ping 命令这样写 ping <a href="http://xxx.com" target="_blank" rel="noopener">http://xxx.com</a> 而不是 ping www. xxx .com，ping <a href="http://xxx.com一般都会是真实IP，因为了解到现有很多CDN厂商基本只要求把" target="_blank" rel="noopener">http://xxx.com一般都会是真实IP，因为了解到现有很多CDN厂商基本只要求把</a> www. xxx .com cname到cdn主服务器上去。www. xxx .com和<a href="http://xxx.com" target="_blank" rel="noopener">http://xxx.com</a> 是两条独立的解析记录 一般只会把 www. xxx .com 做 CDN。或者使用国外的多节点ping工具，例如just-ping，全世界几十个节点ping目标域名，很有可能找到真实ip。域名：CA App Synthetic Monitor website monitoring</p>
+<h3 id="使用在线工具查询"><a href="#使用在线工具查询" class="headerlink" title="使用在线工具查询"></a>使用在线工具查询</h3><p><a href="https://myssl.com/cdn_check.html" target="_blank" rel="noopener">https://myssl.com/cdn_check.html</a><br>Tips： 如果你需要更多的在线工具可以<a href="http://www.bingyublog.com/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" target="_blank" rel="noopener">点此</a>获取本博客提供的在线工具<br><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
+</span>
         
       
     </div>
@@ -3944,17 +3933,15 @@
 
       
         
-          <span itemprop="articleBody">
-            
-            MD5：Message Digest Algorithm MD5（中文名为消息摘要算法第五版）为计算机安全领域广泛使用的一种散列函数，用以提供消息的完整性保护。MD5的前身有MD2、MD3和MD4。
-MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的MD5值长度都是固定的。2、容易计算：从原
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/23/详解MD5解密原理/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>MD5：Message Digest Algorithm MD5（中文名为消息摘要算法第五版）为计算机安全领域广泛使用的一种散列函数，用以提供消息的完整性保护。<br>MD5的前身有MD2、MD3和MD4。</p>
+<p>MD5算法具有以下特点：<br>1、压缩性：任意长度的数据，算出的MD5值长度都是固定的。<br>2、容易计算：从原数据计算出MD5值很容易。<br>3、抗修改性：对原数据进行任何改动，哪怕只修改1个字节，所得到的MD5值都有很大区别。<br>4、强抗碰撞：已知原数据和其MD5值，想找到一个具有相同MD5值的数据（即伪造数据）是非常困难的。</p>
+<p>今天不是要你们来看这些百科中的词条的，今天要说的是md5的解密原理，了解了原理，你以后在做解密工作的时候或者自己用python写一个破解md5的脚本的时候才可以做的更好。</p>
+<p>MD5是不可逆算法，目前看来只能通过暴力破解的方式才可以进行解密。在写软件的时候也会用到MD5，实现一些数据的加密，如果你的应用需要可逆的加密方法，请考虑使用 DES,3DES,AES,RSA 等加密算法。</p>
+<p>众所周知，MD5是不可逆的，也就是加密后不能再根据加密的秘钥去解密，那么那些解密网站是怎么进行解密的呢？<br>因为MD5是不可逆的，所以我们不能直接解密出MD5对应的值。但是不同的字符串生成的md5值都是唯一的，我们在校验软件的完整度的时候，通常都是用md5进行比对来测试 也是这个原理。我们不能直接进行解密，因为没有什么解密字典与md5码对应，我们只能从反面来做，自己加密一个字符串，生成一个md5值，然后再与加密的md5进行比对，也就是用已知的MD5值不断与未知的MD5值进行碰撞，如果两者对比后相同，就认定该MD5的值就是该明文了，也就是解密出来了。在众多的MD5中，总会有一些MD5值是符合的。这其实算是一种逆向思维了。但是应用md5加密容易，来进行对比就很难了，因为有些密码我们可能还没有加密比对过，这也是为什么有些md5还解密不出来的原因。</p>
+<p>密码之所以用MD5加密，就是为了不可解密。<br>正常有良心的设计，不能让用户的密码可以解开，因为人的懒惰是天生的，所以大部份的人只会用两三个常用密码。所以外国的密码设计是这样的，你输入一个密码（明文），用MD5加密后保存在数据库中。下次要验证密码也好办，把用户的输入用MD5加密后，与数据库中加密过的数据对比，相同的话，就表示密码正确。<br>这样的设计还有另外一个好处，就是可以一定程度上防止SQL注入。网上的暴力破解其实也是利用这个原理，他把许多已知明文的，用MD5加密后，保存起来。你要反查，他实际上是在数据库中查找加密过的，是否有与你查询的MD5串相同，如果相同的话，就把明文给你看。这样的设计表达的是一个互相尊重的理念，系统管理员/开发员是无权知道用户的密码的。如果用户忘记密码，管理员只能用重置密码的方式。所以现在很多软件在你忘记密码的时候，你只能选择进行身份验证后重置密码。</p>
+<p>在安全领域中，加密数据随处可见。而在这些数据中，重要的数据往往采用哈希算法进行加密。例如，Linux密码使用sha512，Windows密码采用LM、NTLM，而网站密码采用MD5。这些常见哈希算法有几十种。虽然每种密文都有一定规律，但是单纯靠记忆和经验来的判断就比较困难了。而且如果你连加密的方式都不知道的话，你又如何进行快速解密呢？<br>kali linux提供工具hash-identifier来实现这个功能。大家只要运行该命令，然后输入哈希密文，就可以得到密文所使用的哈希算法类型。有了这个算法类型，再选择对应的工具或者彩虹表，获取密码明文就容易多了。<br>打开终端，直接输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># hash-identifier</span></span><br></pre></td></tr></table></figure></p>
+<p>就可以打开hash-identifier了。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpo8cd01v1j30m80b4acq.jpg" alt="1"><br>然后我们输入你需要解密的密码<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fpo8d2wxg8j30m70fuaei.jpg" alt="2"><br>它就会列出可能的加密方法，这样更便于你进行解密。<br>如果你要进行解密MD5，你可以<a href="http://www.bingyublog.com/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" target="_blank" rel="noopener">点击此链接</a>到本站提供的在线工具进行解密，解密网站很多，总有一款适合你的。</p>
+</span>
         
       
     </div>
@@ -4035,16 +4022,11 @@ MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的M
 
       
         
-          <span itemprop="articleBody">
-            
-            头文件stdio.h ，为C语言中的标准头文件，这是一个名字为stdio，后缀名为.h的文件。以VC6为例，可以找到VC6编译器下VC6.0 完整绿色版\VC98\Include\目录，即可看到stdio.h文件。也可以直接在程序当中，右键头文件点击打开，也可以直接打开stdio.h的内容，如下图：
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/22/详解C语言头文件stdio-h/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>头文件stdio.h ，为C语言中的标准头文件，这是一个名字为stdio，后缀名为.h的文件。以VC6为例，可以找到VC6编译器下VC6.0 完整绿色版\VC98\Include\目录，即可看到stdio.h文件。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplze8ufzxj30hs0d4t9j.jpg" alt="1"><br>也可以直接在程序当中，右键头文件点击打开，也可以直接打开stdio.h的内容，如下图：<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplzfl1ljij30hs0cewez.jpg" alt="2"><br>打开stdio.h文件后，如下图:<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplzhata6jj30hs0btdg6.jpg" alt="3"></p>
+<h2 id="头文件的作用"><a href="#头文件的作用" class="headerlink" title="头文件的作用"></a>头文件的作用</h2><p>那么看清之后，接下来我们来说一说，头文件的作用<br>还是以hello world这个程序为例，相信很多朋友想过：明明就显示一句话”Hello world”竟然足足写了五六行代码，而真正有用的可能就那句printf了，其他都是什么鬼，比如第一句那个#include&lt;stdio.h&gt; ，它是什么鬼？写它有用吗？ 我删了它一样运行显示Hello world啊！<br>没错，在VC6环境下，即使Hello world这个程序去掉第一行的文件包含也就是#include&lt;stdio.h&gt;这句话程序仍然可以编译成功并且运行！但不同的是大家需要注意这个时候编译是有一个警告的！<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplzibze4hj30fe02x3yc.jpg" alt="4"><br>怎么样？看懂了吗? 是提示你printf这个函数没有定义！ (printf并不属于C语言本身，不懂的同学请自行补脑)这是因为在stdio.h这个头文件中有关于printf的定义，也就是printf这个函数是定义在stdio这个文件里，printf并不是C语言的函数，不属于函数本身。<br>可以这么打个比方：编译器好比是你的管家，负责家(程序)的安全，一经发现任何可疑的人员都禁止进屋！而printf就这么被抓住了！你既然想让它进屋，能做的，就是提前告诉管家我要让它进来，也就是提前声明。可时间一长，你发现有很多这样的人想让进来，每次都一个个声明太累了，索性就建立一个白名单，把想让进屋的人都写进去，都声明起来，到时候让管家看白名单得了！于是乎，就有了头文件的样子，也就是包含头文件。#include&lt;stdio.h&gt;这句话。<br>但凡想用到谁，就包含含有谁的头文件。<br>比如你用printf函数打印东西，那你就要包含stdio.h的头文件<br>如果你用pow函数算多立方，那你就要包含math.h的头文件<br>如果你要用strcmp函数接收一个字符，那你就要包含string.h的头文件</p>
+<p>（3）头文件如何被包含？<br>最后，在看一个C语言是如何”包含”这些头文件的，答案就是#include这个预处理命令！<br>所谓预处理，即可以在编译器编译之前，做一些预先要做的准备工作，比如宏替换、展开等等，而包含头文件其实也就是把头文件里的内容原封不动的放到程序的最前面，仅此而已！<br>还不信？来动手试试，依旧以Hello world为例<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line">int  main()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(“hello world!\n”);</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>先删除掉#include&lt;stdio.h&gt;这句话，然后将stdio.h中的内容复制到你的主函数前面，变成这样：<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplzj83sn2j30hs0d0q3i.jpg" alt="5"></p>
+</span>
         
       
     </div>
@@ -4125,16 +4107,20 @@ MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的M
 
       
         
-          <span itemprop="articleBody">
-            
-            HTTP：是Hyper Text Transfer Protocol的缩写，即 超文本传输协议，是一种请求/响应式的协议。具有灵活的特点，可以运行任意类型的数据，该数据的类型由Content-Type加以标记。属于无状态协议，即对事物处理没有记忆能力，如果后续处理需要前面的信息，则必须重新传输。现在
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/22/详解HTTP协议/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>HTTP：是Hyper Text Transfer Protocol的缩写，即 超文本传输协议，是一种请求/响应式的协议。<br>具有灵活的特点，可以运行任意类型的数据，该数据的类型由Content-Type加以标记。<br>属于无状态协议，即对事物处理没有记忆能力，如果后续处理需要前面的信息，则必须重新传输。<br>现在通用的一般都是HTTP1.0和HTTP1.1这2个版本。介绍一下这两个版本的区别：</p>
+<ul>
+<li>HTTP1.0在传输数据的时候，客户端与服务器端建立连接后，每次只能处理一个HTTP请求。</li>
+<li>HTTP1.1在建立连接后，可以传送多个HTTP请求和响应，从而减少了建立和关闭连接的消耗和耗时。</li>
+</ul>
+<p>HTTP地址即网页地址，也就是URL（统一资源定位符），在浏览器的地址栏上就是。<br>URL格式：<a href="http://host[:port][abs_path]或者https://host[:port][abs_path]。" target="_blank" rel="noopener">http://host[:port][abs_path]或者https://host[:port][abs_path]。</a><br>在上述格式中，http即http协议，https是加密了的http协议。host是Internet主机域名或者IP地址。port是端口号，一般是空，默认的是80端口，有时候也会出现8080端口。abs_path是请求资源的URI，就是主机上资源的目录。</p>
+<h2 id="HTTP的8种请求方式"><a href="#HTTP的8种请求方式" class="headerlink" title="HTTP的8种请求方式"></a>HTTP的8种请求方式</h2><p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fplxvv02hpj30gi067qac.jpg" alt="1"><br>最常用的请求方式是get和post。他们的区别为：</p>
+<ul>
+<li>GET方式的请求传输的数据不能超过1kb。而且如果浏览器请求的URL中含有参数，在浏览器生成的请求消息中，参数部分将附加在请求行中的资源路径后面。会在url地址栏以明文显示。</li>
+<li>POST传输的数据无大小限制，是通过实体内容传递数据的。而且请求方式比GET方式更安全。post请求方式传递的参数隐藏在实体内容中，用户是看不到的，即不会再url地址栏以铭文显示。</li>
+</ul>
+<p>http的5种状态码:<br>1xx：指示信息–表示请求已接收，继续处理<br>2xx：成功–表示请求已被成功接收、理解、接受<br>3xx：重定向–要完成请求必须进行更进一步的操作<br>4xx：客户端错误–请求有语法错误或请求无法实现<br>5xx：服务器端错误–服务器未能实现合法的请求</p>
+<p>几个web开发中常见的http状态码:(最好可以记住)<br> 200:服务器成功处理了客户端的请求。<br> 204:请求被受理但没有资源可以返回.<br> 206:客户端只是请求资源的一部分，服务器只对请求的部分资源执行GET方法，相应报文中通过Content-Range指定范围的资源。<br> 302:临时重定向，请求的资源临时从不同的url响应请求，但请求者应继续使用原有位置来进行以后的请求。例如：在请求重定向中，临时uri应该是响应的Location头字段所指向的资源。<br> 303:与302状态码有相似功能，只是它希望客户端在请求一个URI的时候，能通过GET方法重定向到另一个URI上。<br> 304:发送附带条件的请求时，条件不满足时返回，与重定向无关。<br> 307:临时重定向，与302类似，只是强制要求使用POST方法。<br> 400:请求报文语法有误，服务器无法识别。<br> 401:请求需要认证。<br> 403:资源不可用。服务器理解客户的请求，但拒绝处理它，通常由于服务器上文件或目录的权限设置导致的WEB访问错误。请求的对应资源禁止被访问。<br> 404:服务器找不到请求的资源。例如：访问服务器不存在的网页经常返回此状态码。<br> 500:服务器发生错误，无法处理客户端的请求。<br> 503：服务器正忙。</p>
+</span>
         
       
     </div>
@@ -4215,107 +4201,14 @@ MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的M
 
       
         
-          <span itemprop="articleBody">
-            
-            kali自带的源是国外的，我们在进行安装软件和更新软件的时候非常缓慢。这个时候我们需要换一下源，换成国内速度较快的一些源。打开终端,用gedit打开源文件。1root@kali:~# gedit /etc/apt/sources.list
-打开后把一下软件源复制粘贴进去。Tips：强烈建议你复制粘贴
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/18/kali更新源设置/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    <div>
-   
-    </div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2018/03/18/kali安装谷歌拼音输入法/" itemprop="url">
-                kali安装谷歌拼音输入法
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2018-03-18T13:41:20+08:00" content="2018-03-18">
-            2018-03-18
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Kali/" itemprop="url" rel="index">
-                  <span itemprop="name">Kali</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-
-        
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            kali下除了安装搜狗拼音输入法外，还可以选择谷歌拼音输入法，谷歌拼音输入法其实还是非常智能的。想用它的可以看看本教程安装一下。安装环境:虚拟机环境下的Kali Linux 64 Bit 2018.1先更新一下软件源列表1root@kali:~# apt-get update &amp;&amp; 
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2018/03/18/kali安装谷歌拼音输入法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><p>kali自带的源是国外的，我们在进行安装软件和更新软件的时候非常缓慢。<br>这个时候我们需要换一下源，换成国内速度较快的一些源。<br>打开终端,用gedit打开源文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# gedit /etc/apt/sources.list</span><br></pre></td></tr></table></figure></p>
+<p>打开后把一下软件源复制粘贴进去。<br>Tips：强烈建议你复制粘贴进去，如果你已经安装了vm-tools，复制粘贴很容易的，请不要手动输入源进行添加，你写对的几率很小，多一个空格或者少一个字母，你的源就不能正常使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#中科大</span><br><span class="line">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line"></span><br><span class="line">#阿里云</span><br><span class="line">#deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line"></span><br><span class="line">#清华大学</span><br><span class="line">#deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line"></span><br><span class="line">#浙大</span><br><span class="line">#deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line"></span><br><span class="line">#东软大学</span><br><span class="line">#deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line">#deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line"></span><br><span class="line">#官方源</span><br><span class="line">#deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line"></span><br><span class="line">#重庆大学</span><br><span class="line">#deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure></p>
+<p>然后保存退出。<br>warning：你最好不要删除自带的源，如果你添加的源有问题的话，也不至于你的系统没有源列表可进行更新。<br>然后运行以下命令，进行更新源列表和更新软件包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get dist-upgrade</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fphb91ll0fj30lt0ddqac.jpg" alt="2"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fphb9biuu5j30ly0bqqac.jpg" alt="3"><br>warning:在进行更新操作前，请确认你的网络环境良好，因为如果你的网络不稳定或者延迟很严重的话，在更新源的时候有些软件包可能下载不了，或者依赖不能正常下载安装，导致一些软件的运行环境出现问题，后续不能正常操作，会出现很多的问题。</p>
+<p>Tips：如果你的系统需要很多更新的软件包很多的话，会花费很长时间进行更新，过程会很漫长，还请你耐心等待。但是请不要在中途中断操作，比如关机或直接ctr+c，退出终端，这样会给你的系统造成很大的伤害。</p>
+<p>如图是更新完成。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fphb9mps7pj30jy0b4qac.jpg" alt="4"></p>
+<p>最后简单的说明以下，如果在更新的时候，出现404 not found,请按照报错尝试检测一下你添加的源是不是存在，或者已经不可用了。<br>你需要做的是把源的url复制进浏览器的地址栏，然后打开就可以了。<br>如果可以正常访问，就说明那个源是正常可以使用的。<br>如图所示，是我对清华大学的一个源的检测，你们也可以这样做。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fphb8gzbalj30xa0dxqac.jpg" alt="5"><br>ok！</p>
+</span>
         
       
     </div>
@@ -4365,30 +4258,30 @@ MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的M
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">132</span>
+            <a href="/">
+              <span class="site-state-item-count">133</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            <a href="/categories">
+            
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              </a>
+              
           </div>
 
           <div class="site-state-item site-state-tags">
-            <a href="/tags">
+            
               <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">标签</span>
-              </a>
+              
           </div>
 
         </nav>
@@ -4399,35 +4292,11 @@ MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的M
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://weibo.com/u/6083310945" target="_blank">微博</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
               </span>
             
           
@@ -4438,19 +4307,7 @@ MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的M
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
               </span>
             
           
@@ -4460,7 +4317,7 @@ MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的M
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -4495,7 +4352,7 @@ MD5算法具有以下特点：1、压缩性：任意长度的数据，算出的M
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
 </div>
 
 <!-- busuanzi -->
@@ -4553,7 +4410,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -4561,23 +4418,17 @@ tpwidget("show");</script>
     
   
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="//helpers.js?v="></script>
   
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
 
 
 
 
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="//nav-toggle.js?v="></script>
+  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
@@ -4598,17 +4449,15 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript" src="//lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
+        placeholder: "//loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>
