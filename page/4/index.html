@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="theme-next  ">
+<html class="theme-next use-motion theme-next-mala">
 <head>
   
 
@@ -17,19 +17,25 @@
 
 
 
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-<link rel="stylesheet" type="text/css" href="//main.css?v="/>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
     <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→" />
 
 
 
+  <meta name="keywords" content="Hexo,Mala" />
 
 
 
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→">
@@ -46,10 +52,18 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
-    sidebar: ''
+    scheme: 'Mala',
+    sidebar: 'post'
   };
 </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
 
 
   <title> 冰羽の博客 </title>
@@ -109,11 +123,78 @@
   
 
   
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
 
   
     <div class="site-search">
       
 	  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -3239,7 +3320,7 @@
 
 </style>
 
-<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript">
     // 浮动圆点展开与收缩
     /*
@@ -3414,7 +3495,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftmbda1rbaj30xc0f00xa.jpg" rel="gallery_cjmopr11r003q5owal31nmgly"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftmbda1rbaj30xc0f00xa.jpg" rel="gallery_cjmoq0ju5003we4wapt0hgx2o"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftmbda1rbaj30xc0f00xa.jpg" itemprop="contentUrl"/>
               </a>
@@ -3429,23 +3510,19 @@
 
       
         
-          <span itemprop="articleBody"><table><br><tbody><br><tr><br><td style="padding: 5px 12px; width: 25px; font-size: 22px; text-align: center; background: #E8E8E8; line-height: 30px; color: #999;">导读</td><br><td style="padding: 10px 10px 12px; line-height: 20px;"><strong>Lightbot是一款由加拿大学生Danny Yaroslavski编写的关于计算机编程的迷宫游戏，游戏的目标是让机器人举起所有的蓝色瓷砖，当然它还会为孩子提供各种各样的指导和提示，直到完成目标。</strong></td><br></tr><br></tbody><br></table>
+          <span itemprop="articleBody">
+            
+            导读Lightbot是一款由加拿大学生Danny Yaroslavski编写的关于计算机编程的迷宫游戏，游戏的目标是让机器人举起所有的蓝色瓷砖，当然它还会为孩子提供各种各样的指导和提示，直到完成目标。
 
 
-<p>安装nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install pcre pcre-devel zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.6.2.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="搭建Nginx静态服务器"><a href="#搭建Nginx静态服务器" class="headerlink" title="搭建Nginx静态服务器"></a><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>搭建Nginx静态服务器</strong></div></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~# sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo /etc/init.d/nginx start</span><br><span class="line">[ ok ] Starting nginx (via systemctl): nginx.service.</span><br></pre></td></tr></table></figure>
-<div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>安装MySQL数据库</strong></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br></pre></td></tr></table></figure><br><br>安装过程中会出现如下图所示的界面，你只需要一直回车就可以了。<br><img src="" alt="1"><br><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>搭建PHP环境</strong></div>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-add-repository ppa:ondrej/php</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install php7.1-cli php7.1-cgi php7.1-mysql</span><br><span class="line">sudo apt-get install php7.1-fpm</span><br></pre></td></tr></table></figure>
-<div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>配置Nginx并运行PHP程序</strong></div>
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>本文参考: <a href="http://wiki.ubuntu.org.cn/Nginx" target="_blank" rel="noopener">http://wiki.ubuntu.org.cn/Nginx</a></p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+安装nginx1yum -y install pcre pcre-devel zlib zli
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/25/Ubuntu搭建LNMP环境/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3528,7 +3605,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftkxscloi5j30xc0f00up.jpg" rel="gallery_cjmopr15q007f5owaf8aeqv9u"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1ftkxscloi5j30xc0f00up.jpg" rel="gallery_cjmoq0jwd007he4wa6cnvdhny"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkxscloi5j30xc0f00up.jpg" itemprop="contentUrl"/>
               </a>
@@ -3543,17 +3620,16 @@
 
       
         
-          <span itemprop="articleBody"><p>扫描的时候为了方便查看扫描的结果，那么需要开启数据库服务。metasploit默认的数据库是postgresql数据库。<br>首先开启postgresql数据库服务。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# /etc/init.d/postgresql start</span><br><span class="line">[ ok ] Starting postgresql (via systemctl): postgresql.service.</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkx4pogbgj30ft01hjrl.jpg" alt="1"><br>下面打开msfconsole，查看一下是否已连接数据库。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# msfconsole</span><br><span class="line">msf &gt; db_status</span><br><span class="line">[*] postgresql selected, no connection</span><br></pre></td></tr></table></figure></p>
-<p>表明未连接上postgresql数据库。</p>
-<p>下面初始化一下meatsploit的数据库。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf &gt; msfdb init</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkx5j4k1uj30m1071gnt.jpg" alt="1"><br>查看数据库的配置文件(主要是查看数据库名，用户名，密码)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# cat /usr/share/metasploit-framework/config/database.yml</span><br><span class="line">development:</span><br><span class="line">  adapter: postgresql</span><br><span class="line">  database: msf</span><br><span class="line">  username: msf</span><br><span class="line">  password: LlvOHTrjwhh52tjZWdNNIqDA2hHrkr4d90vGCg1+LEg=</span><br><span class="line">  host: localhost</span><br><span class="line">  port: 5432</span><br><span class="line">  pool: 5</span><br><span class="line">  timeout: 5</span><br><span class="line"></span><br><span class="line">production:</span><br><span class="line">  adapter: postgresql</span><br><span class="line">  database: msf</span><br><span class="line">  username: msf</span><br><span class="line">  password: LlvOHTrjwhh52tjZWdNNIqDA2hHrkr4d90vGCg1+LEg=</span><br><span class="line">  host: localhost</span><br><span class="line">  port: 5432</span><br><span class="line">  pool: 5</span><br><span class="line">  timeout: 5</span><br><span class="line"></span><br><span class="line">test:</span><br><span class="line">  adapter: postgresql</span><br><span class="line">  database: msf_test</span><br><span class="line">  username: msf</span><br><span class="line">  password: LlvOHTrjwhh52tjZWdNNIqDA2hHrkr4d90vGCg1+LEg=</span><br><span class="line">  host: localhost</span><br><span class="line">  port: 5432</span><br><span class="line">  pool: 5</span><br><span class="line">  timeout: 5</span><br></pre></td></tr></table></figure></p>
-<p>然后开始连接数据库。格式为:db_connect 用户名:密码@localhost:5432/数据库名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msf &gt; db_connect msf:LlvOHTrjwhh52tjZWdNNIqDA2hHrkr4d90vGCg1+LEg=@localhost:5432/msf</span><br><span class="line">[*] Rebuilding the module cache in the background...</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkx646s4gj30hn01dmxk.jpg" alt="1"></p>
-<p>我们再次查看一下数据库状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msf &gt; db_status</span><br><span class="line">[*] postgresql connected to msf</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1ftkx7j1gr6j30bj01e74e.jpg" alt="1"><br>如图所示，我们已经成功连接上了数据库，如果你想连接其他的数据库，需要先断开当前已经连接的数据库，可以直接在msfconsole下执行 <em>msf&gt;</em> 。<br>如果你在使用search参数查找模块的时候出现 <strong>Module database cache not built yet, using slow search</strong> ，那么你首先应该查看是否已经连接数据库，然后重新构建数据库缓存,只需要运行 <em>db_rebuild_cache</em> 即可。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            扫描的时候为了方便查看扫描的结果，那么需要开启数据库服务。metasploit默认的数据库是postgresql数据库。首先开启postgresql数据库服务。12root@kali:~# /etc/init.d/postgresql start[ ok ] Starting postgresql 
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/24/metasploit初始化配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3636,7 +3712,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft68nekeu5j30xc0f043i.jpg" rel="gallery_cjmopr16o008h5owaaevy29ml"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft68nekeu5j30xc0f043i.jpg" rel="gallery_cjmoq0jwz008ne4waqtgnxfce"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft68nekeu5j30xc0f043i.jpg" itemprop="contentUrl"/>
               </a>
@@ -3651,14 +3727,17 @@
 
       
         
-          <span itemprop="articleBody"><p>Dagon是一是一种先进的哈希破解工具，支持多种哈希类型的暴力破解，支持自定义字符字典进行暴力，可以自动验证散列所用算法，从Unicode到ASCII的随机slat生成，等等。<br>GitHub地址: <a href="https://github.com/Ekultek/Dagon" target="_blank" rel="noopener">https://github.com/Ekultek/Dagon</a></p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>安装</strong></div><br>运行环境:python2.7.x<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># git clone https://github.com/ekultek/dagon.git</span></span><br><span class="line">root@kali:~<span class="comment"># cd Dagon/</span></span><br><span class="line">root@kali:~/Dagon<span class="comment"># pip install -r requirements.txt   # 安装所需依赖的库</span></span><br><span class="line">![1](https://ws1.sinaimg.cn/large/006DGX4tly1ft66vh89p0j31kw18tamj.jpg)</span><br></pre></td></tr></table></figure></p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>基本用法</strong></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">python dagon.py -h  这将运行“帮助”菜单，并提供所有可能的标志</span><br><span class="line">python dagon.py -c &lt;HASH&gt; --bruteforce  这将为给定散列暴力破解尝试</span><br><span class="line">python dagon.py -l &lt;FILE-PATH&gt; --bruteforce  这将尝试暴力破解给定文件的散列(每行一个)</span><br><span class="line">python dagon.py -v &lt;HASH&gt;   这将检验hash的加密类型</span><br><span class="line">python dagon.py -V &lt;FILE-PATH&gt;  这将尝试验证每个文件的散列中，每行一个</span><br><span class="line">以上只是这个工具几个较为常用的参数，更多参数可以通过 *-h* 选项获取帮助。</span><br></pre></td></tr></table></figure></p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>使用</strong></div><br>查看hash加密类型<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Dagon<span class="comment"># python dagon.py -v 49ba59abbe56e057 -L</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft68a8bhxaj31560v80v9.jpg" alt="1"><br>破解单个加密的hash值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Dagon<span class="comment"># python dagon.py -c 49ba59abbe56e057 --bruteforce</span></span><br></pre></td></tr></table></figure></p>
-<p>以上只是最简单的操作，其余操作还需要你自己摸索。首先有必要说明一点，工具到底好不好用，hash值的破解率到底高不高，还是需要你经过测试才能知道的，而且对于MD5等加密算法，本身破解就十分有难度，目前根本不存在可以破解任何MD5加密的密码的工具。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            Dagon是一是一种先进的哈希破解工具，支持多种哈希类型的暴力破解，支持自定义字符字典进行暴力，可以自动验证散列所用算法，从Unicode到ASCII的随机slat生成，等等。GitHub地址: https://github.com/Ekultek/Dagon
+安装运行环境:python2.7.x1
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/11/一款先进的hash破解工具/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3741,7 +3820,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjmopr1a000c25owa6odm3qri"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjmoq0jyx00c2e4waockqls7m"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" itemprop="contentUrl"/>
               </a>
@@ -3756,9 +3835,16 @@
 
       
         
-          <span itemprop="articleBody"><p>实在要说一句’对不起，各位’，上次写的<a href="https://www.bingyublog.com/2018/06/29/利用云虚拟主机搭建typecho博客/" target="_blank" rel="noopener">利用云虚拟主机搭建typecho博客</a>的教程，有一些错误在里面，所以在此进行一些修正。如果各位看了那篇文章，就知道我建的那个博客显示”该网站不能正常访问”的问题了。其实我也是最近才知道不能正常访问的。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2tz3v0q7j30nv0dxdgl.jpg" alt="1"><br>但是我根据提示来排查错误，一直找不到原因。<br>首先并不是需要备案的原因，”主机屋”的这个免费云主机是不需要备案的就可以正常访问的。<br>其次，我将其加入白名单也是不可以的，因为这个是免费云主机，其IP是公共的故不能加入白名单。<br>那就剩网站域名解析错误合格原因了。但是我检查了多次，发现并没有任何错误。解析是正常的，但是不能正常访问，那么说明解析的记录值也许是不正确的。<br>后来，我在云虚拟主机的控制台找到了这个小细节。首先有必要说明一下，该记录值是根据用户自动分配的，也就是说不同用户的解析的记录值是不一样的，你需要根据自己的记录值来解析。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2ty90byhj30i80cmjrx.jpg" alt="1"><br>果然是解析的记录值不正确。需要按照提示进行解析。在建站教程中，我是以ipv4作为记录值解析的，当时解析的IP地址就是FTP地址。其实这样解析正不正确，大家可以验证一下，如果解析正确的话，直接在浏览器输入该IP地址，也是可以正常访问到网站的，但是你会看到如下界面，则说明解析的是不正确的，该地址是没有映射到网站上去的。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2tyn3bdqj30md0fu0w0.jpg" alt="1"><br>那么，我们正确解析上去就可以了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2tyxst6sj30qt03p3yo.jpg" alt="1"><br>解析完毕后，也许不能立即生效，我们稍等一小会，再次刷新网页，就可以正常访问网站了。<br><a href="http://lengyue1024.cn/" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2tqfsbrij311l0hkarb.jpg"></a><br>ok，成功解决问题!!!网址: <a href="http://lengyue1024.cn/" target="_blank" rel="noopener">http://lengyue1024.cn/</a> ,欢迎各位的访问。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            实在要说一句’对不起，各位’，上次写的利用云虚拟主机搭建typecho博客的教程，有一些错误在里面，所以在此进行一些修正。如果各位看了那篇文章，就知道我建的那个博客显示”该网站不能正常访问”的问题了。其实我也是最近才知道不能正常访问的。但是我根据提示来排查错误，一直找不到原因。首先并不是需要备案的原
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/07/08/解决一下利用免费云主机暂时不能访问的问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3841,7 +3927,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fstlorpb61j30xc0f0thv.jpg" rel="gallery_cjmopr16w008t5owa93zsarfw"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fstlorpb61j30xc0f0thv.jpg" rel="gallery_cjmoq0jx6008ze4waooocb20v"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fstlorpb61j30xc0f0thv.jpg" itemprop="contentUrl"/>
               </a>
@@ -3856,14 +3942,16 @@
 
       
         
-          <span itemprop="articleBody"><p>软件官方主页: <a href="http://www.giuspen.com/cherrytree/" target="_blank" rel="noopener">http://www.giuspen.com/cherrytree/</a><br>GitHub项目地址: <a href="https://github.com/giuspen/cherrytree" target="_blank" rel="noopener">https://github.com/giuspen/cherrytree</a><br><strong>CherryTree</strong> 是一款轻型笔记软件应用，配有丰富的文字和语法高亮显示、数据存储在单个XML文件或Sqlite。一个层级式笔记记录程序，具有富文本和代码高亮的功能。<br>同时支持Windows平台和Linux平台，支持纯文本，富文本，markdown，支持代码高亮显示。今天只说Linux平台上。支持Debian、Ubuntu以及其衍生版本，支持Redhat以及其衍生版本。<br>这款编辑神器很值得你拥有。我曾多次在国外的视频教程中看到那些大佬使用CherryTree作为教学记录笔记使用。</p>
-<p>安装(以Ubuntu16.04 LTS演示)<br>第一种方法：<br>首先进入官网下载 ，然后直接用dpkg软件包管理工具安装即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo dpkg -i cherrytree_0.38.4-0_all.deb</span><br></pre></td></tr></table></figure></p>
-<p>有可能会遇到缺少依赖的问题，你只需运行以下命令即可成功安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo apt-get -f install</span><br></pre></td></tr></table></figure></p>
-<p>第二钟方法:<br>添加ppa仓库，然后再安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo add-apt-repository ppa:giuspen/ppa</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install cherrytree</span><br></pre></td></tr></table></figure></p>
-<p>打开运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ cherrytree</span><br></pre></td></tr></table></figure></p>
-<p>使用<br>点击左上角的那个樱桃🍒图标即可新建文本，然后根据自己需求设置格式，最后点击确定即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fstic4sm3bj311w0hzgna.jpg" alt="1"><br>以下是演示文本<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsti8q7t71j311y0hs0tu.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsti8xcakqj311y0hywgm.jpg" alt="2"><br>好了，更多操作可以自己摸索，哪里不会可以联系我询问。</p>
-<p><strong>扫码进群，我等到你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            软件官方主页: http://www.giuspen.com/cherrytree/GitHub项目地址: https://github.com/giuspen/cherrytreeCherryTree 是一款轻型笔记软件应用，配有丰富的文字和语法高亮显示、数据存储在单个XML文件或Sqlite。一
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/06/30/一款运行在Linux平台的轻型笔记软件CherryTree/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3946,7 +4034,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjmopr17n009n5owazv0qu9mk"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjmoq0jxj009ne4wabxjqxg84"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" itemprop="contentUrl"/>
               </a>
@@ -3961,9 +4049,16 @@
 
       
         
-          <span itemprop="articleBody"><p>首先晒一下自己做的站，网址: <a href="http://lengyue1024.cn/" target="_blank" rel="noopener">http://lengyue1024.cn/</a><br>(没解析出wwww类型的网址，所以不能访问<a href="http://www.lengyue1024.cn" target="_blank" rel="noopener">http://www.lengyue1024.cn</a>)<br>利用的是前天领取的免费云虚拟主机做的网站，仅仅是为了做一些测试以及练习建站，并没有作为主站使用，首先各位也可以参照本教程来搭建一个博客或者个人网站。<br>OK，开始！<br>首先下载typecho博客系统.<br>官方地址: <a href="http://typecho.org/download" target="_blank" rel="noopener">http://typecho.org/download</a><br>官方文档: <a href="http://docs.typecho.org/doku.php" target="_blank" rel="noopener">http://docs.typecho.org/doku.php</a><br>主题网站: <a href="https://typecho.me/" target="_blank" rel="noopener">https://typecho.me/</a><br>插件网站: <a href="https://plugins.typecho.me/" target="_blank" rel="noopener">https://plugins.typecho.me/</a><br>首先下载FTP软件，我个人用的是“8uftp”,然后Linux系统上我推荐的是filezilla ，然后可以直接 <em>sudo apt-get install filezilla</em> 即可完成安装。<br>我们首先进入主机屋的控制台页面，然后找到自己的FTP账号与FTP地址，你需要自己设置一个FTP密码用于连接FTP服务 。然后运行8uftp软件，填写FTP地址、账号、密码，连接上。如下图即为连接成功的样子。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssei72da3j30qt0gxwk3.jpg" alt="1"><br>其中web文件存放网站程序文件，log文件为缓存的日志文件，data为备份文件。<br>我们把下载好的typecho文件解压出来，然后把解压出来的文件全部上传到web文件中。还有一点一定要记住，你不要把web文件的上层目录也一同传进去，这样你打开网站的时候，会找不到主页，多了一层目录，就需要多访问一个目录才能进入网站主页。同时把web目录默认存在的index.htm也要删除了。做的类似我图中所示这样即可。然后右击上传即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsseosascyj30qq0gudhc.jpg" alt="1"><br>此时你点击主机屋默认为你分配的网站域名，即可看到网站安装页面了。如果你看到如下图所示。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssesblzhmj311y0gwglv.jpg" alt="1"><br>该主机默认的PHP版本是5.2.9,我们需要调整一下PHP版本才可以，<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf0l5mbxj30ve0a8weg.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf0sbunfj30ia09xjr9.jpg" alt="1"><br>调整为如图所示，才可以。<br>然后刷新一下页面，好了，安装页面出来了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf20ad6hj311r0hmq45.jpg" alt="1"><br>然后可以点击”开始下一步”，进行安装。<br>这个时候我们需要MySQL数据库的信息，我们需要初始化数据库。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf6gqzgsj30vp0bj74a.jpg" alt="1"><br>即可看到数据库的信息了，我们需要设置一个数据库的密码，自己一定要记住这个密码，一会会用到。<br>我们开始填写配置信息，数据库地址设置为127.0.0.1，数据库名称、账号、密码均在数据库基本信息这里，按照你的MySQL数据库基本信息填写即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsursrcu7hj311y0lcabf.jpg" alt="1"><br>然后设置博客后台登陆账号、密码。这些一定要仔细填写，并且记住，以方便后期进入后台管理自己的博客。<br>然后即可看到安装成功的界面了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssff1dbm4j311x0hg74b.jpg" alt="1"><br>然后我们可以进入首页访问自己的博客<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssfhwk15hj311y0hp74u.jpg" alt="1"><br>这里我换个主题,将下载好的主题解压出来。 上传到/Web/usr/themes/文件夹下。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssfl5bwf8j30qk0h10uu.jpg" alt="1"><br>然后进入后台管理界面，启用刚才安装的主题即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssfm7rnj8j311w0hd3zp.jpg" alt="1"><br>刷新一下页面，即可看到新主题已经上线，嘿嘿~~~<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssgq9ezhlj311y0lcn1y.jpg" alt="1"><br>如果你需要安装什么新的插件的话，你首先下载解压出来，然后上传到/Web/usr/plugins/目录下，再到后台启用即可。<br>一切都设置好的话，我们可以自己买个域名，我这里有几个域名，都是在阿里云购买的，解析了，开始解析并绑定域名。<br>点击”域名绑定”，输入你购买的域名。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssgqe5qvej30v20adglk.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fst3cgvx8oj30i90cpt99.jpg" alt="1"><br>再进入阿里云控制台，开始解析域名，我这里解析出一个www和@类型。如果你是初次建站，你也许不理解这是什么意思，但是这里不做过多解释了，你只需按照我图示操作即可。还有一点就是，你解析出来的是什么类型的网址，你就绑定什么类型的。一定要全部绑定，否则不能正常访问。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssgptb756j30ib0cldg4.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fst3cgvx8oj30i90cpt99.jpg" alt="1"><br>其中的记录值即为FTP地址。解析成功后，点击你的域名即可打开你的博客了。<br>好了，整个过程就是这样，如果你还有哪里不懂的，可以<a href="http://shang.qq.com/open_webaio.html?sigt=eb13918e3cce45e958ba98cb6d54121ab735cb57303bfef30138cb855dfbb55c91f394d6298b31ea64a3fd9b6c049303&amp;sigu=5cb936229f2bdf3826fb23cb98883e973603d3ca92c6dce9a76944340bb2a9b534fcb423d256130b&amp;tuin=3433951572" target="_blank" rel="noopener">加我QQ</a>与我讨论。<br>我所用到的软件以及主题都传到群文件了，如果你需要的话，可以加群。</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            首先晒一下自己做的站，网址: http://lengyue1024.cn/(没解析出wwww类型的网址，所以不能访问http://www.lengyue1024.cn)利用的是前天领取的免费云虚拟主机做的网站，仅仅是为了做一些测试以及练习建站，并没有作为主站使用，首先各位也可以参照本教程来搭建一个博
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/06/29/利用云虚拟主机搭建typecho博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4046,7 +4141,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fsraclq7eej30uk05mt8l.jpg" rel="gallery_cjmopr148005m5owa16mfu4bf"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fsraclq7eej30uk05mt8l.jpg" rel="gallery_cjmoq0jva005pe4waxxkly6pg"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsraclq7eej30uk05mt8l.jpg" itemprop="contentUrl"/>
               </a>
@@ -4061,15 +4156,19 @@
 
       
         
-          <span itemprop="articleBody"><table><br><tbody><br><tr><br><td style="padding: 5px 12px; width: 25px; font-size: 22px; text-align: center; background: #E8E8E8; line-height: 30px; color: #B40404;">导读</td><br><td style="padding: 10px 10px 12px; line-height: 20px;"><strong>Hash Buster是一个调用了多个API接口去查询并破解hash的自动化工具，速度快且成功率很高。识别并破解单个hash值仅仅在3秒以下</strong></td><br></tr><br></tbody><br></table>
+          <span itemprop="articleBody">
+            
+            导读Hash Buster是一个调用了多个API接口去查询并破解hash的自动化工具，速度快且成功率很高。识别并破解单个hash值仅仅在3秒以下
 
-<p>GitHub项目地址: <a href="https://github.com/s0md3v/Hash-Buster" target="_blank" rel="noopener">https://github.com/s0md3v/Hash-Buster</a></p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>0x01   特点</strong></div><br>  自动标识hash加密类型<br>  支持MD5、SHA1、SHA2加密<br>  支持从文件中提取hash密码并且破解<br>  支持以wordlist形式存储的hash值<br>  同时调用了6个API接口</p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>0x02   安装</strong></div><br>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# git clone https://github.com/s0md3v/Hash-Buster</span><br><span class="line">root@kali:~# make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>0x03   选项</strong></div><br>选项<br>  -s HASH     hashed string   # hash值<br>  -f PATH     file containing hashes   # 包含hash值的文件<br>  -d DIR      directory containing hashes   # 包含hash值的字典文件</p>
-<p><div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>0x04   使用</strong></div><br>(以下仅仅是我为测试而使用的hash加密过的值)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Hash-Buster# python hash.py -s 7cec85c75537840dad40251576e5b757</span><br><span class="line">|__| |__| [__  |__|    |__] |  | [__   |  |___ |__/</span><br><span class="line">|  | |  | ___] |  |    |__] |__| ___]  |  |___ |  \  v2.0</span><br><span class="line"></span><br><span class="line">[!] Hash function : MD5</span><br><span class="line">12356</span><br><span class="line"></span><br><span class="line">root@kali:~/Hash-Buster# python hash.py -s 9fe2839c7d19fe2511ef5cc3d63bd475b139fc83</span><br><span class="line">_  _ ____ ____ _  _    ___  _  _ ____ ___ ____ ____</span><br><span class="line">|__| |__| [__  |__|    |__] |  | [__   |  |___ |__/</span><br><span class="line">|  | |  | ___] |  |    |__] |__| ___]  |  |___ |  \  v2.0</span><br><span class="line"></span><br><span class="line">[!] Hash function : SHA1</span><br><span class="line">12356</span><br></pre></td></tr></table></figure></p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
-</span>
+GitHub项目地址: https://github.com/s0md3v/Hash-Buster
+0x01   特点  自动标识hash加密类型  支
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/06/28/hash查询破解工具Hash-Buster/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4152,7 +4251,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fspi5m7lgnj30xc0f0ast.jpg" rel="gallery_cjmopr1a900cf5owa1h2twubr"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fspi5m7lgnj30xc0f0ast.jpg" rel="gallery_cjmoq0jz400cie4wangs1w4xo"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fspi5m7lgnj30xc0f0ast.jpg" itemprop="contentUrl"/>
               </a>
@@ -4167,9 +4266,16 @@
 
       
         
-          <span itemprop="articleBody"><p>其实主机屋早就有这个活动了，只是今天才知道，但还是有必要写出来给不知道的同学玩玩的。该主机只适合做测试或者简单学习使用，不要存储数据，也不要利用它做网站。免费的没好货，你明白这一点就不要抱怨这台主机的各种缺点了。<br>网址: <a href="http://www.zhujiwu.com" target="_blank" rel="noopener">http://www.zhujiwu.com</a><br>首先注册账户，这些不必多说什么，需要手机号、 QQ号。<br>然后进入免费专区，选择”免费虚拟主机”。需要绑定微信号。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsozne8uq3j30tm06w74t.jpg" alt="1"><br>然后进入控制台，在左侧栏点击”产品”就可以看到自己的虚拟主机了。这是一台Windows NT主机。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsozmhwll9j30uq05xmxj.jpg" alt="1"><br>然后点击”管理”就可以管理自己的云虚拟主机了。<br>首先要设置一个密码，记住你的主机的IP地址、账号、密码。方便以后登陆管理。默认只有30天使用时间，但是可以免费延期，你可以提交申请延期，具体步骤看网站即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsozu0227gj30sf0exwfg.jpg" alt="1"><br>点击网站域名即可登陆进去。当然你需要利用FTP软件进行上传网站程序上去才可以。上传点你写的网页还是可以的。<br>忠心提醒: <strong>不适合做个人网站或者博客</strong> 还请你一定记住。但是你可以利用该主机学习一下建站，但也只是做测试而已，别想着做太多事。s</p>
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
-</span>
+          <span itemprop="articleBody">
+            
+            其实主机屋早就有这个活动了，只是今天才知道，但还是有必要写出来给不知道的同学玩玩的。该主机只适合做测试或者简单学习使用，不要存储数据，也不要利用它做网站。免费的没好货，你明白这一点就不要抱怨这台主机的各种缺点了。网址: http://www.zhujiwu.com首先注册账户，这些不必多说什么，需要
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/06/27/领取免费虚拟主机/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4252,7 +4358,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fsoy4zze9rj30xc0f4gvt.jpg" rel="gallery_cjmopr17u009w5owap5v32zds"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fsoy4zze9rj30xc0f4gvt.jpg" rel="gallery_cjmoq0jxl009te4waqend0ud2"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsoy4zze9rj30xc0f4gvt.jpg" itemprop="contentUrl"/>
               </a>
@@ -4267,18 +4373,19 @@
 
       
         
-          <span itemprop="articleBody"><p>演示环境: Ubuntu16.04(LTS)<br>如果你是其他的系统，你可以去<a href="https://github.com/darknessomi/musicbox?utm_source=qq&amp;utm_medium=social&amp;utm_oi=870932217017270272" target="_blank" rel="noopener">GitHub地址</a> 寻找安装方法。</p>
-<div style="font-size: 14pt; color: white; background-color: black; border-left: red 10px solid; padding-left: 14px; margin-bottom: 20px; margin-top: 20px;"><strong>功能特性</strong></div>
+          <span itemprop="articleBody">
+            
+            演示环境: Ubuntu16.04(LTS)如果你是其他的系统，你可以去GitHub地址 寻找安装方法。
+功能特性
 
-<p>  ➢  320kbps的高品质音乐<br>  ➢  歌曲，艺术家，专辑检索<br>  ➢  网易22个歌曲排行榜<br>  ➢  网易新碟推荐<br>  ➢  网易精选歌单<br>  ➢  网易主播电台<br>  ➢  私人歌单，每日推荐<br>  ➢  随心打碟<br>  ➢  本地收藏，随时加❤<br>  ➢  播放进度及播放模式显示<br>  ➢  现在播放及桌面歌词显示<br>  ➢  歌曲评论显示<br>  ➢  一键进入歌曲专辑<br>  ➢  定时退出<br>  ➢  Vimer式快捷键让操作丝般顺滑<br>  ➢  可使用数字快捷键<br>  ➢  可使用自定义全局快捷键</p>
-<p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo pip install NetEase-MusicBox</span><br><span class="line">lengyue@ubuntu:~$ sudo apt-get install mpg123</span><br></pre></td></tr></table></figure></p>
-<p>如果你遇到以下情况<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsohq5e7hxj311j02wgm8.jpg" alt="1"><br>请使用以下命令进行安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo -H pip install NetEase-MusicBox</span><br></pre></td></tr></table></figure></p>
-<p>安装成功后，就可以直接使用了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ musicbox</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsohsn3b8rj311k0kyta0.jpg" alt="1"><br>由于该工具完全依赖于终端，所以指南使用快捷键方式来进行操作，类似于vim的命令行模式。</p>
-<table><br>    <tr> <td>J</td> <td>Down</td> <td>下移</td> </tr><br>    <tr> <td>K</td> <td>Up</td> <td>上移</td> </tr><br>    <tr> <td>H</td> <td>Back</td> <td>后退</td> </tr><br>    <tr> <td>L</td> <td>Forword</td> <td>前进</td> </tr><br>    <tr> <td>U</td> <td>Prev page</td> <td>上一页</td> </tr><br>    <tr> <td>D</td> <td>Next page</td> <td>下一页</td> </tr><br>    <tr> <td>F</td> <td>Search</td> <td>快速搜索</td> </tr><br>    <tr> <td>[</td> <td>Prev song</td> <td>上一曲</td> </tr><br>    <tr> <td>]</td> <td>Next song</td> <td>下一曲</td> </tr><br>    <tr> <td>=</td> <td>Volume +</td> <td>音量增加</td> </tr><br>    <tr> <td>-</td> <td>Volume -</td> <td>音量减少</td> </tr><br>    <tr> <td>Space</td> <td>Play/Pause</td> <td>播放/暂停</td> </tr><br>  <tr> <td>?</td> <td>Shuffle</td> <td>手气不错</td> </tr><br>    <tr> <td>M</td> <td>Menu</td> <td>主菜单</td> </tr><br>    <tr> <td>P</td> <td>Present/History</td> <td>当前/历史播放列表</td> </tr><br>    <tr> <td>I</td> <td>Music Info</td> <td>当前音乐信息</td> </tr><br>    <tr> <td>⇧+P</td> <td>Playing Mode</td> <td>播放模式切换</td> </tr><br>    <tr> <td>A</td> <td>Add</td> <td>添加曲目到打碟</td> </tr><br>    <tr> <td>⇧+A</td> <td>Enter album</td> <td>进入专辑</td> </tr><br>    <tr> <td>G</td> <td>To the first</td> <td>跳至首项</td> </tr><br>    <tr> <td>⇧+G</td> <td>To the end</td> <td>跳至尾项</td> </tr><br>    <tr> <td>Z</td> <td>DJ list</td> <td>打碟列表</td> </tr><br>    <tr> <td>S</td> <td>Star</td> <td>添加到收藏</td> </tr><br>    <tr> <td>C</td> <td>Collection</td> <td>收藏列表</td> </tr><br>    <tr> <td>R</td> <td>Remove</td> <td>删除当前条目</td> </tr><br>    <tr> <td>⇧+J</td> <td>Move Down</td> <td>向下移动当前项目</td> </tr><br>    <tr> <td>⇧+K</td> <td>Move Up</td> <td>向上移动当前项目</td> </tr><br>    <tr> <td>⇧+C</td> <td>Cache</td> <td>缓存歌曲到本地</td> </tr><br>    <tr> <td>,</td> <td>Like</td> <td>喜爱</td> </tr><br>    <tr> <td>.</td> <td>Trash FM</td> <td>删除 FM</td> </tr><br>    <tr> <td>/</td> <td>Next FM</td> <td>下一FM</td> </tr><br>    <tr> <td>Q</td> <td>Quit</td> <td>退出</td> </tr><br>    <tr> <td>T</td> <td>Timing Exit</td> <td>定时退出</td> </tr><br>    <tr> <td>W</td> <td>Quit&amp;Clear</td> <td>退出并清除用户信息</td> </tr><br></table>
-
-<p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg" alt="1"></p>
-</span>
+  ➢  320kbps的高品质音乐  ➢  歌曲，艺术家，专辑检索  ➢  网易22个歌曲排行榜  ➢  网易新碟推荐  ➢  网易精选歌单  ➢  网易主播电台  ➢  私人歌单
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/06/26/在Linux终端听网易云音乐/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -4361,7 +4468,7 @@
         
           <p><a href="https://www.bingyublog.com/2018/06/25/Linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E6%9F%A5%E7%9C%8B%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/#more" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsncn5no77j30xc0f0gtp.jpg"></a><br><strong>wttr.in</strong> 是一个面向控制台的天气预报服务，支持各种信息表示方法像终端面向ANSI-序列用于HTTP客户端控制台例如curl、wgethttpie,HTML的web浏览器或用于PNG图形。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2018/06/25/Linux终端下查看天气预报/" rel="contents">
+            <a class="btn" href="/2018/06/25/Linux终端下查看天气预报/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -4414,30 +4521,30 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="//default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
           <p class="site-author-name" itemprop="name">冰羽</p>
         </div>
         <p class="site-description motion-element" itemprop="description">想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/">
+            <a href="/archives">
               <span class="site-state-item-count">133</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
-            
+            <a href="/tags">
               <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">标签</span>
-              
+              </a>
           </div>
 
         </nav>
@@ -4448,11 +4555,35 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://github.com/lengyue1024" target="_blank">GitHub</a>
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://weibo.com/6083310945/" target="_blank">Weibo</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
               </span>
             
           
@@ -4463,7 +4594,19 @@
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-              <a href="https://www.bingyublog.com/about/" target="_blank">About</a>
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
               </span>
             
           
@@ -4473,7 +4616,7 @@
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
-              <img src="//cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
@@ -4508,7 +4651,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io"></a>
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -4566,7 +4709,7 @@ tpwidget("show");</script>
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -4574,17 +4717,23 @@ tpwidget("show");</script>
     
   
   
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
-  <script type="text/javascript" src="//helpers.js?v="></script>
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
   
 
-  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="//nav-toggle.js?v="></script>
-  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
@@ -4605,15 +4754,17 @@ tpwidget("show");</script>
   
 
   
-  <script type="text/javascript" src="//lazyload.js"></script>
+  <script type="text/javascript" src="/js/lazyload.js"></script>
   <script type="text/javascript">
     $(function () {
       $("#posts").find('img').lazyload({
-        placeholder: "//loading.gif",
+        placeholder: "/images/loading.gif",
         effect: "fadeIn"
       });
     });
   </script>
   
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>
