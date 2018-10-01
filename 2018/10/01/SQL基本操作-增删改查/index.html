@@ -58,9 +58,13 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2x6774j30is04qt8q.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvso8n00wgj30fx040gli.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvso90y6hpj30iy03uweg.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2qenfm0j30ce03za9x.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2qrrrtxj30bz043a9y.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2x6774j30is04qt8q.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2udwb8ij30h103raal.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2wqkmpmj30en044gli.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg">
-<meta property="og:updated_time" content="2018-10-01T14:00:15.588Z">
+<meta property="og:updated_time" content="2018-10-01T14:16:18.757Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL基本操作-增删改查">
 <meta name="twitter:description" content="首先我们登录MySQL。1mysql -u root -p 查询目前已存在的数据库。1sql&amp;gt; show databases; 下面我们开始进行增删改查的操作。  本文按照 增删改查 的顺序进行说明和演示，每个分类又分别按照对数据库，对表，对数据操作进行。但是实际操作中不一定是按照此顺序进行的，所以请根据实际情况进行操作。  增增加数据库语法：create database + 数据库名称">
@@ -453,7 +457,7 @@
 <li>存储引擎：engine+具体存储引擎，默认为InnoDB，常用的还有MyISAM。<br>表是依附于数据库的，在创建表的时候，都必须先指定具体的数据库。<br>指定数据库：<code>use database_name;</code><br>示例：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> blog;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsnkd3zhgj30f7018a9u.jpg" alt=""><br>示例:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; create table if not exists (</span><br><span class="line">    -&gt; name varchar(10),</span><br><span class="line">    -&gt; id int,</span><br><span class="line">    -&gt; age int)charset utf8;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsnkd3zhgj30f7018a9u.jpg" alt=""><br>示例:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; create table if not exists user(</span><br><span class="line">    -&gt; name varchar(10),</span><br><span class="line">    -&gt; id int,</span><br><span class="line">    -&gt; age int)charset utf8;</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso9ajnoaj30ht02w748.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso9y8bvfj30gf08emxd.jpg" alt=""></p>
 <h4 id="增加数据"><a href="#增加数据" class="headerlink" title="增加数据"></a>增加数据</h4><p>语法：<code>insert into + 表名 + values(值列表)[,(值列表)];</code><br>示例:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into user values('bingyu',1,10);</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2qw0mjj30ia05omx7.jpg" alt=""></p>
@@ -493,17 +497,20 @@
 </ul>
 <p>查看数据库的创建语句 –&gt; 基本语法：show create database + 数据库名称;</p>
 <p>在这里，查看的结果有可能与咱们书写的 SQL 语句不同，这是因为数据库在执行 SQL 语句之前会优化 SQL，系统保存的是优化后的结果。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso8n00wgj30fx040gli.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso90y6hpj30iy03uweg.jpg" alt=""></p>
-<h4 id="查表"><a href="#查表" class="headerlink" title="查表"></a>查表</h4><p>查看全部基本语法：<code>show tables;</code><br>查看部分()模糊查询)基本语法：<code>show tables like &#39;pattern&#39;;</code><br>其中，pattern是匹配模式，有两种，分别为：</p>
+<h4 id="查表"><a href="#查表" class="headerlink" title="查表"></a>查表</h4><p>查看全部基本语法：<code>show tables;</code><br>示例：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show tables;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2qenfm0j30ce03za9x.jpg" alt=""></p>
+<p>查看部分()模糊查询)基本语法：<code>show tables like &#39;pattern&#39;;</code><br>其中，pattern是匹配模式，有两种，分别为：</p>
 <ul>
 <li>%：表示匹配多个字符；  </li>
 <li>_：表示匹配单个字符。</li>
 </ul>
-<p>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span> <span class="keyword">like</span> <span class="string">'%er'</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="" alt=""></p>
-<p>describe table;<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2x6774j30is04qt8q.jpg" alt=""></p>
+<p>示例：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show tables like '%er'</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2qrrrtxj30bz043a9y.jpg" alt=""></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; describe table;</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2x6774j30is04qt8q.jpg" alt=""></p>
 <h4 id="查数据"><a href="#查数据" class="headerlink" title="查数据"></a>查数据</h4><p>查看全部语法：<code>select * from + 表名 + [where 条件];</code><br>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span>;</span><br></pre></td></tr></table></figure></p>
-<p>查看部分语法：<code>select + 字段名称[,字段名称] + from + 表名 + [where 条件];</code><br>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>,<span class="keyword">id</span> <span class="keyword">from</span> blog <span class="keyword">where</span> age = <span class="string">'20'</span>;</span><br></pre></td></tr></table></figure></p>
-<p><img src="" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2udwb8ij30h103raal.jpg" alt=""><br>查看部分语法：<code>select + 字段名称[,字段名称] + from + 表名 + [where 条件];</code><br>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>,<span class="keyword">id</span> <span class="keyword">from</span> blog <span class="keyword">where</span> age=<span class="number">10</span>;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2wqkmpmj30en044gli.jpg" alt=""></p>
 <p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
