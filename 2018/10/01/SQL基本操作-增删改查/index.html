@@ -47,7 +47,7 @@
 <meta property="og:description" content="首先我们登录MySQL。1mysql -u root -p 查询目前已存在的数据库。1sql&amp;gt; show databases; 下面我们开始进行增删改查的操作。  本文按照 增删改查 的顺序进行说明和演示，每个分类又分别按照对数据库，对表，对数据操作进行。但是实际操作中不一定是按照此顺序进行的，所以请根据实际情况进行操作。  增增加数据库语法：create database + 数据库名称">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvt340ta2yj30jg06ejsy.jpg">
-<meta property="og:updated_time" content="2018-10-01T14:50:12.948Z">
+<meta property="og:updated_time" content="2018-10-01T15:06:33.333Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL基本操作-增删改查">
 <meta name="twitter:description" content="首先我们登录MySQL。1mysql -u root -p 查询目前已存在的数据库。1sql&amp;gt; show databases; 下面我们开始进行增删改查的操作。  本文按照 增删改查 的顺序进行说明和演示，每个分类又分别按照对数据库，对表，对数据操作进行。但是实际操作中不一定是按照此顺序进行的，所以请根据实际情况进行操作。  增增加数据库语法：create database + 数据库名称">
@@ -415,7 +415,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvt340ta2yj30jg06ejsy.jpg" rel="gallery_cjmqevcvn003828was5w7ph02"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvt340ta2yj30jg06ejsy.jpg" rel="gallery_cjmqfgk92003620wamhrgixbd"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt340ta2yj30jg06ejsy.jpg" itemprop="contentUrl"/>
               </a>
@@ -459,7 +459,7 @@
 </ul>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsnkd3zhgj30f7018a9u.jpg" alt=""><br>示例:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> <span class="keyword">user</span>(</span><br><span class="line">   -&gt; <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">10</span>),</span><br><span class="line">   -&gt; <span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">   -&gt; age <span class="built_in">int</span>)<span class="keyword">charset</span> utf8;</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso9y8bvfj30gf08emxd.jpg" alt=""></p>
-<h4 id="增加数据"><a href="#增加数据" class="headerlink" title="增加数据"></a>增加数据</h4><p>语法：<code>insert into + 表名 + values(值列表)[,(值列表)];</code><br>示例:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="string">'bingyu'</span>,<span class="number">1</span>,<span class="number">10</span>);</span><br></pre></td></tr></table></figure></p>
+<h4 id="增加数据"><a href="#增加数据" class="headerlink" title="增加数据"></a>增加数据</h4><p>语法：<code>insert into + 表名 + values(值列表)[,(值列表)];</code><br>示例:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="string">'bingyu'</span>,<span class="number">1</span>,<span class="number">20</span>);</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2qw0mjj30ia05omx7.jpg" alt=""></p>
 <h3 id="删"><a href="#删" class="headerlink" title="删"></a>删</h3><h4 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h4><p>基本语法：<code>drop database + 数据库名称;</code></p>
 <p>在这里，需要注意：在删除数据库之前，应该先进行备份操作，因为删除为不可逆操作，所以不要随意删除数据库。<br>示例:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">database</span> blog;</span><br></pre></td></tr></table></figure></p>
@@ -477,16 +477,16 @@
 <li>collate[=] 校对集;<br>示例：<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter database blog charset gbk; # 修改此数据库的字符集编码为gbk.</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="改表"><a href="#改表" class="headerlink" title="改表"></a>改表</h4><p>对表的修改包括新增、修改、重命名和删除字段。<br>新增字段语法: <code>alter table + 表名 + add + [column] + 字段名 + 数据类型 + [列属性][位置];</code><br>修改字段语法：<code>alter table + 表名 + modify + 字段名 + 数据类型 + [列属性][位置];`</code></p>
-<pre><code>其中，位置表示此字段存储的位置，分为first（第一个位置）和after + 字段名（指定的字段后，默认为最后一个位置）.  
-</code></pre><p>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">user</span> <span class="keyword">modify</span> <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">after</span> age;</span><br></pre></td></tr></table></figure></p>
+<h4 id="改表"><a href="#改表" class="headerlink" title="改表"></a>改表</h4><p>对表的修改包括新增、修改、重命名和删除字段。<br>新增字段语法: <code>alter table + 表名 + add + [column] + 字段名 + 数据类型 + [列属性][位置];</code><br>修改字段语法：<code>alter table + 表名 + modify + 字段名 + 数据类型 + [列属性][位置];</code></p>
+<p>其中，位置表示此字段存储的位置，分为first（第一个位置）和after + 字段名（指定的字段后，默认为最后一个位置）.<br>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">user</span> <span class="keyword">modify</span> <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">after</span> age;</span><br></pre></td></tr></table></figure></p>
 <p>重命名字段语法：<code>alter table + 表名 + change + 旧字段名 + 新字段名 + 数据类型 + [列属性][位置];</code><br>其中，位置表示此字段存储的位置，分为first（第一个位置）和after + 字段名（指定的字段后，默认为最后一个位置）.<br>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">user</span> <span class="keyword">change</span> <span class="keyword">id</span> <span class="keyword">ID</span> <span class="built_in">int</span>;</span><br></pre></td></tr></table></figure></p>
 <p>删除字段语法：<code>alter table + 表名 + drop+ 字段名;</code><br>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">user</span> <span class="keyword">drop</span> age;</span><br></pre></td></tr></table></figure></p>
 <h4 id="改数据"><a href="#改数据" class="headerlink" title="改数据"></a>改数据</h4><p>语法：<code>update + 表名 + set + 字段 = 值 + [where 条件];</code></p>
 <blockquote>
 <p>改数据其实是更新数据。</p>
 </blockquote>
-<p>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> age = <span class="number">18</span> <span class="keyword">where</span> <span class="keyword">id</span> = <span class="string">'1'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> age = <span class="number">18</span> <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">1</span>;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt49k47jzj30g205ymx7.jpg" alt=""></p>
 <h3 id="查"><a href="#查" class="headerlink" title="查"></a>查</h3><h4 id="查数据库"><a href="#查数据库" class="headerlink" title="查数据库"></a>查数据库</h4><p>查看全部数据库语法：show databases;<br>示例:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt372ju48j30ei062weg.jpg" alt=""><br>查看部分(模糊查询)基本语法：<code>show databases like &#39;pattern&#39;;</code><br>其中，pattern是匹配模式，有两种，分别为：</p>
 <ul>
@@ -494,8 +494,8 @@
 <li>_ ：表示匹配单个字符。<br>示例：<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases like 'blog';  # 表示匹配所有blog开头的数据库。</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt37x5gksj30hm03yq2u.jpg" alt=""><br>查看数据库的创建语句 –&gt; 基本语法：show create database + 数据库名称;</p>
-<p>在这里，查看的结果有可能与咱们书写的 SQL 语句不同，这是因为数据库在执行 SQL 语句之前会优化 SQL，系统保存的是优化后的结果。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso8n00wgj30fx040gli.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso90y6hpj30iy03uweg.jpg" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt37x5gksj30hm03yq2u.jpg" alt=""><br>查看数据库的创建语法：<code>show create database + 数据库名称;</code></p>
+<p>在这里，查看的结果有可能与咱们书写的 SQL 语句不同，这是因为数据库在执行 SQL 语句之前会优化 SQL，系统保存的是优化后的结果。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso90y6hpj30iy03uweg.jpg" alt=""></p>
 <h4 id="查表"><a href="#查表" class="headerlink" title="查表"></a>查表</h4><p>查看全部基本语法：<code>show tables;</code><br>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2qenfm0j30ce03za9x.jpg" alt=""></p>
 <p>查看部分()模糊查询)基本语法：<code>show tables like &#39;pattern&#39;;</code><br>其中，pattern是匹配模式，有两种，分别为：</p>
@@ -510,6 +510,9 @@
 <h4 id="查数据"><a href="#查数据" class="headerlink" title="查数据"></a>查数据</h4><p>查看全部语法：<code>select * from + 表名 + [where 条件];</code><br>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span>;</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2udwb8ij30h103raal.jpg" alt=""><br>查看部分语法：<code>select + 字段名称[,字段名称] + from + 表名 + [where 条件];</code><br>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>,<span class="keyword">id</span> <span class="keyword">from</span> blog <span class="keyword">where</span> age=<span class="number">10</span>;</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvt2wqkmpmj30en044gli.jpg" alt=""></p>
+<blockquote>
+<p>以上内容收集于网上，由我本人重新整理排版而成，如果哪里有误还请反馈于我，以便我及时更正。</p>
+</blockquote>
 <p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
