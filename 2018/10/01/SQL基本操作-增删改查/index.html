@@ -29,7 +29,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,Mala" />
+  <meta name="keywords" content="MySQL," />
 
 
 
@@ -38,17 +38,32 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="欢迎来到我的博客，这是一篇受博主重视的加密文章，你可以通过联系博主来解除封印">
+<meta name="description" content="首先我们登录MySQL。1mysql -u root -p 查询目前已存在的数据库。1sql&amp;gt; show databases; 下面我们开始进行增删改查的操作。  本文按照 增删改查 的顺序进行说明和演示，每个分类又分别按照对数据库，对表，对数据操作进行。但是实际操作中不一定是按照此顺序进行的，所以请根据实际情况进行操作。  增增加数据库语法：create database + 数据库名称">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL基本操作-增删改查">
 <meta property="og:url" content="http://bingyublog.com/2018/10/01/SQL基本操作-增删改查/index.html">
 <meta property="og:site_name" content="冰羽の博客">
-<meta property="og:description" content="欢迎来到我的博客，这是一篇受博主重视的加密文章，你可以通过联系博主来解除封印">
+<meta property="og:description" content="首先我们登录MySQL。1mysql -u root -p 查询目前已存在的数据库。1sql&amp;gt; show databases; 下面我们开始进行增删改查的操作。  本文按照 增删改查 的顺序进行说明和演示，每个分类又分别按照对数据库，对表，对数据操作进行。但是实际操作中不一定是按照此顺序进行的，所以请根据实际情况进行操作。  增增加数据库语法：create database + 数据库名称">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T08:33:54.574Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvso7wpm1sj30gj05hq2w.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvso8g3qlfj30ew07kt8s.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvsnkd3zhgj30f7018a9u.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvso9ajnoaj30ht02w748.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvso9y8bvfj30gf08emxd.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2qw0mjj30ia05omx7.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvsnfvpsxnj30j306o3yl.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvsqofsx9tj30ev030dfq.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvsqonjz1jj30fs02ua9y.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2x6774j30is04qt8q.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvso8n00wgj30fx040gli.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvso90y6hpj30iy03uweg.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg">
+<meta property="og:updated_time" content="2018-10-01T13:12:10.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL基本操作-增删改查">
-<meta name="twitter:description" content="欢迎来到我的博客，这是一篇受博主重视的加密文章，你可以通过联系博主来解除封印">
+<meta name="twitter:description" content="首先我们登录MySQL。1mysql -u root -p 查询目前已存在的数据库。1sql&amp;gt; show databases; 下面我们开始进行增删改查的操作。  本文按照 增删改查 的顺序进行说明和演示，每个分类又分别按照对数据库，对表，对数据操作进行。但是实际操作中不一定是按照此顺序进行的，所以请根据实际情况进行操作。  增增加数据库语法：create database + 数据库名称">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvso7wpm1sj30gj05hq2w.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -378,6 +393,21 @@
         </span>
 
         
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/SQL/" itemprop="url" rel="index">
+                  <span itemprop="name">SQL</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
 
         
           
@@ -394,20 +424,61 @@
       
 
       
-        <span itemprop="articleBody"><script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<div id="security">
-  <div class="input-container">
-  <input type="password" class="form-control" id="pass" placeholder="请输入密码(不要尝试暴力破解，没用的)" />
-    <label for="pass">请输入密码(不要尝试暴力破解，没用的)</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-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
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css"></span>
+        <span itemprop="articleBody"><p>首先我们登录MySQL。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></p>
+<p>查询目前已存在的数据库。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sql&gt; show databases;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso7wpm1sj30gj05hq2w.jpg" alt=""><br>下面我们开始进行增删改查的操作。</p>
+<blockquote>
+<p>本文按照 <strong>增删改查</strong> 的顺序进行说明和演示，每个分类又分别按照对数据库，对表，对数据操作进行。但是实际操作中不一定是按照此顺序进行的，所以请根据实际情况进行操作。</p>
+</blockquote>
+<h3 id="增"><a href="#增" class="headerlink" title="增"></a>增</h3><h4 id="增加数据库"><a href="#增加数据库" class="headerlink" title="增加数据库"></a>增加数据库</h4><p>语法：create database + 数据库名称 + [库选项];<br>中，库选项是用来约束数据库的，为可选项（有默认值），共有两种，分别为：</p>
+<pre><code>字符集设定：charset/ character set+ 具体字符集，用来表示数据存储的编码格式，常用的字符集包括GBK和UTF8等。
+校对集设定：collate+ 具体校对集，表示数据比较的规则，其依赖字符集。
+</code></pre><p>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> blog <span class="keyword">charset</span> utf8;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso8g3qlfj30ew07kt8s.jpg" alt=""><br>注意：这里的字符编码应该写作utf8，不能写作utf-8。</p>
+<h4 id="增加表"><a href="#增加表" class="headerlink" title="增加表"></a>增加表</h4><p>表是依附于数据库的，在创建表的时候，都必须先指定具体的数据库。<br>指定数据库：use database_name;<br>eg：<br>use blog;<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsnkd3zhgj30f7018a9u.jpg" alt=""></p>
+<p>create table [if not exists] + 表名(<br>    字段名称 数据类型,<br>    ……<br>    字段名称 数据类型    /<em> 最后后一行，不需要加逗号 \</em>/<br>)[表选项];</p>
+<p>其中，if not exists表示如果表名不存在，就执行创建代码；如果表名存在，则不执行创建代码。(强烈建议你使用<code>if not exists</code>选项，因为当数据库中出现大量表时候，你很难判断该表是否存在，使用该选项可以避免很多的麻烦问题。)</p>
+<p>表选项则是用来控制表的表现形式的，共有三种，分别为：</p>
+<pre><code>字符集设定：charset/ character set+ 具体字符集，用来表示数据存储的编码格式，常用的字符集包括GBK和UTF8等。
+校对集设定：collate+ 具体校对集，表示数据比较的规则，其依赖字符集。
+存储引擎：engine+具体存储引擎，默认为InnoDB，常用的还有MyISAM.
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; create table if not exists (</span><br><span class="line">    -&gt; name varchar(10),</span><br><span class="line">    -&gt; id int,</span><br><span class="line">    -&gt; age int)charset utf8;</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso9ajnoaj30ht02w748.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso9y8bvfj30gf08emxd.jpg" alt=""></p>
+<h4 id="增加数据"><a href="#增加数据" class="headerlink" title="增加数据"></a>增加数据</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into user values('bingyu',1,10);</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2qw0mjj30ia05omx7.jpg" alt=""></p>
+<h3 id="删"><a href="#删" class="headerlink" title="删"></a>删</h3><h4 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h4><p>基本语法：drop database + 数据库名称;</p>
+<p>在这里，需要注意：在删除数据库之前，应该先进行备份操作，因为删除为不可逆操作，所以不要随意删除数据库。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; drop database blog;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsnfvpsxnj30j306o3yl.jpg" alt=""></p>
+<h4 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h4><p>基本语法：</p>
+<p>– 可以一次删除多张表<br>drop table + 表1, 表2 … ;</p>
+<p>在这里，需要注意：此删除为不可逆操作，希望大家谨慎使用。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; drop table user;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsqofsx9tj30ev030dfq.jpg" alt=""></p>
+<h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h4><p>基本语法：delete from + 表名 + [where 条件];<br>当然，我们也可以用drop来实现删除操作，不过与delete相比，drop的威力更强，其在执行删除操作的时候，不仅会删除数据，还会删除定义并释放存储空间；而delete在执行删除操作的时候，仅会删除数据，并不会删除定义和释放存储空间</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">user</span>;</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsqonjz1jj30fs02ua9y.jpg" alt=""></p>
+<h3 id="改"><a href="#改" class="headerlink" title="改"></a>改</h3><h4 id="改数据库"><a href="#改数据库" class="headerlink" title="改数据库"></a>改数据库</h4><p>数据库的修改仅限库选项，即字符集和校对集（校对集依赖字符集）。<br>基本语法：alter database + 数据库名称 + [库选项];</p>
+<pre><code>charset/character set[=] 字符集;
+collate[=] 校对集;
+</code></pre><p>示例：alter database TBL_ERROR_CODE charset gbk;表示修改此数据库的字符集为gbk.</p>
+<p>describe table;<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvsq2x6774j30is04qt8q.jpg" alt=""></p>
+<h4 id="改表"><a href="#改表" class="headerlink" title="改表"></a>改表</h4><h4 id="改数据"><a href="#改数据" class="headerlink" title="改数据"></a>改数据</h4><h3 id="查"><a href="#查" class="headerlink" title="查"></a>查</h3><h4 id="查数据库"><a href="#查数据库" class="headerlink" title="查数据库"></a>查数据库</h4><p>查看全部 –&gt; 基本语法：show databases;</p>
+<p>查看部分（模糊查询）–&gt; 基本语法：show databases like ‘pattern’;<br>其中，pattern是匹配模式，有两种，分别为：</p>
+<pre><code>% ：表示匹配多个字符；
+_ ：表示匹配单个字符。
+</code></pre><p>示例：show databases like ‘blog’;表示匹配所有blog开头的数据库。</p>
+<p>查看数据库的创建语句 –&gt; 基本语法：show create database + 数据库名称;</p>
+<p>在这里，查看的结果有可能与咱们书写的 SQL 语句不同，这是因为数据库在执行 SQL 语句之前会优化 SQL，系统保存的是优化后的结果。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso8n00wgj30fx040gli.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvso90y6hpj30iy03uweg.jpg" alt=""></p>
+<h4 id="查表"><a href="#查表" class="headerlink" title="查表"></a>查表</h4><h4 id="查数据"><a href="#查数据" class="headerlink" title="查数据"></a>查数据</h4><p>查看全部 –&gt; 基本语法：select * from + 表名 + [where 条件];</p>
+<pre><code>示例：select * from test;
+</code></pre><p>查看部分 –&gt; 基本语法：select + 字段名称[,字段名称] + from + 表名 + [where 条件];</p>
+<pre><code>示例：select name,age,grade from test where age = &apos;18&apos;;
+</code></pre><p>更新数据</p>
+<p>基本语法：update + 表名 + set + 字段 = 值 + [where 条件];</p>
+<pre><code>示例：update test set age = 20 where name = &apos;guo&apos;;
+</code></pre><p>在这里，建议尽量加上where条件，否则的话，操作的就是全表数据。</p>
+<p>此外，判断更新操作是否成功，并不是看 SQL 语句是否执行成功，而是看是否有记录受到影响，即affected的数量大于1时，才是真正的更新成功。</p>
+<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
+</span>
       
     </div>
     <div>
@@ -425,6 +496,12 @@ U2FsdGVkX1+a7mf8t8A7TLUN94xs0fWU52evCCFo/c35fRnIGVBwgd3ksr9DOV7ftV1jKH43ADM0+hmf
    
     </div>
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MySQL/" rel="tag"><i class="fa tag"></i> MySQL</a>
+          
+        </div>
       
 
       
@@ -650,14 +727,14 @@ U2FsdGVkX1+a7mf8t8A7TLUN94xs0fWU52evCCFo/c35fRnIGVBwgd3ksr9DOV7ftV1jKH43ADM0+hmf
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -748,7 +825,7 @@ U2FsdGVkX1+a7mf8t8A7TLUN94xs0fWU52evCCFo/c35fRnIGVBwgd3ksr9DOV7ftV1jKH43ADM0+hmf
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#增"><span class="nav-number">1.</span> <span class="nav-text">增</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#增加数据库"><span class="nav-number">1.1.</span> <span class="nav-text">增加数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加表"><span class="nav-number">1.2.</span> <span class="nav-text">增加表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加数据"><span class="nav-number">1.3.</span> <span class="nav-text">增加数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删"><span class="nav-number">2.</span> <span class="nav-text">删</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#删除数据库"><span class="nav-number">2.1.</span> <span class="nav-text">删除数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除表"><span class="nav-number">2.2.</span> <span class="nav-text">删除表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除数据"><span class="nav-number">2.3.</span> <span class="nav-text">删除数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改"><span class="nav-number">3.</span> <span class="nav-text">改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#改数据库"><span class="nav-number">3.1.</span> <span class="nav-text">改数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改表"><span class="nav-number">3.2.</span> <span class="nav-text">改表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改数据"><span class="nav-number">3.3.</span> <span class="nav-text">改数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查"><span class="nav-number">4.</span> <span class="nav-text">查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查数据库"><span class="nav-number">4.1.</span> <span class="nav-text">查数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查表"><span class="nav-number">4.2.</span> <span class="nav-text">查表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查数据"><span class="nav-number">4.3.</span> <span class="nav-text">查数据</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
