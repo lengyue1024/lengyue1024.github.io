@@ -29,7 +29,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Hexo,Mala" />
 
 
 
@@ -38,17 +38,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="keywords" content="Linux">
+<meta name="description" content="Linux发行版本很多，但是他们共同的特征就是使用了Linux内核。Linux内核是基于C语言编写的符合POSIX标准的类unix操作系统。内核是操作系统最基本的部分，也是核心部分。Linux内核于1991年由当时的芬兰大学生Linus Torvalds开发。目前linus仍然致力于内核的设计、开发和维护，目前通过https://www.kernel.org网站发布与提供Linux所有版本的内核以">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux简单命令总结">
-<meta property="og:url" content="http://bingyublog.com/2018/05/06/Linux简单命令小总结/index.html">
+<meta property="og:title" content="Linux内核编译">
+<meta property="og:url" content="http://bingyublog.com/2018/10/02/Linux内核编译/index.html">
 <meta property="og:site_name" content="冰羽の博客">
+<meta property="og:description" content="Linux发行版本很多，但是他们共同的特征就是使用了Linux内核。Linux内核是基于C语言编写的符合POSIX标准的类unix操作系统。内核是操作系统最基本的部分，也是核心部分。Linux内核于1991年由当时的芬兰大学生Linus Torvalds开发。目前linus仍然致力于内核的设计、开发和维护，目前通过https://www.kernel.org网站发布与提供Linux所有版本的内核以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fs7ncfavsgj30sg0hstjh.jpg">
-<meta property="og:updated_time" content="2018-08-28T11:09:02.647Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvtqs22dkij30ia054js7.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvtqvkw0iwj30ee010745.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvtsjm3a00j30hf01kt8m.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg">
+<meta property="og:updated_time" content="2018-10-02T06:54:40.828Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux简单命令总结">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fs7ncfavsgj30sg0hstjh.jpg">
+<meta name="twitter:title" content="Linux内核编译">
+<meta name="twitter:description" content="Linux发行版本很多，但是他们共同的特征就是使用了Linux内核。Linux内核是基于C语言编写的符合POSIX标准的类unix操作系统。内核是操作系统最基本的部分，也是核心部分。Linux内核于1991年由当时的芬兰大学生Linus Torvalds开发。目前linus仍然致力于内核的设计、开发和维护，目前通过https://www.kernel.org网站发布与提供Linux所有版本的内核以">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvtqs22dkij30ia054js7.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -67,7 +72,7 @@
   </script>
 
 
-  <title> Linux简单命令总结 | 冰羽の博客 </title>
+  <title> Linux内核编译 | 冰羽の博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -363,7 +368,7 @@
           
           
             
-              Linux简单命令总结
+              Linux内核编译
             
           
         </h1>
@@ -372,26 +377,11 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2018-05-06T22:08:47+08:00" content="2018-05-06">
-            2018-05-06
+          <time itemprop="dateCreated" datetime="2018-10-02T11:34:54+08:00" content="2018-10-02">
+            2018-10-02
           </time>
         </span>
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Linux/" itemprop="url" rel="index">
-                  <span itemprop="name">Linux</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
         
 
         
@@ -409,18 +399,19 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fs7ncfavsgj30sg0hstjh.jpg" alt="1"><br><a id="more"></a><br>Linux命令它们与英语口语十分相似，其命令格式如下：<br>命令 [选项] [参数]（command [options] [arguments]）<br><strong>命令</strong>：告诉linux操作系统执行什么。<br><strong>选项</strong>：说明命令的方式。选项如果是单个英语字母是以“-”字符开始，如果是多个英语字母基本都是以“–”字符开始。<br><strong>参数</strong>：说明命令影响的是什么（如一个文件、一个目录、一段正文文字）</p>
-<p><strong>查看的命令</strong><br>whoami 命令的功能是列出目前您操作系统所使用的用户名<br>who 目前有几个用户在操作系统上工作，比whoami多了系统上工作的其他用户<br>users 目前有哪些用户登陆了linux系统<br>tty 目前用户登陆linux系统所使用的终端</p>
-<p>uname 显示当前的操作系统<br>uname -n显示目前操作系统的主机名（n是nodename的第一个字符可看成缩写）<br>uname -i显示目前操作系统所使用的硬件平台名（i是information第一个字符可看成缩写）<br>uname -r显示目前操作系统发布的版本信息（r是release的第一个字符）<br>uname -s显示目前操作系统名（r是release的第一个字符）<br>uname -m显示目前机器硬件名（m是machine的第一个字符）<br>uname -p显示中央处理器的类型（p是processor的第一个字符）<br>uname -a显示所有信息（a是all的第一个字符）<br><em>这里-n、-i、-r、-s等等都是选项.即说明命令的方式。选项部分是以“-”字符开始。</em><br>uname -m -s -r空格隔开同时显示信息<br>uname -msr也能同时显示信息<br>uname –help查看uname的全部选项</p>
-<p>date 显示当前系统的日期和时间<br>cal 显示某月的日历，直接输入cal显示本月的日历（cal为calendar的前三个字符）<br>cal 8 2008显示2008年8月的日历（第一个参数为月份8，第二个参数为年2008）<br>clear 清楚窗口中的显示信息，即清屏作用(也可以使用快捷键CTR+L)</p>
-<p>获得帮助信息<br>whatis 命令获得linux命令的帮助信息<br>eg:<br>whatis uname显示uname命令的用法，这里uname被看做一个参数（whatis获得）<br>whatis who显示who命令的含义作用</p>
-<p>man是manual（手册）的前三个字符。（linux大哥有小弟无数，分堂无数。man是花名册，可以查看任何到任何小弟的名字）每个命令都对应着说明文件，这些说明文件叫做Man Pages。提供命令详细描述和使用方法。<br>man的命令格式如下<br>man []<br>eg: man su<br>浏览Man Pages<br>箭头上下左右End最后一页Home第一页<br>：/string向前查找字符串, q键为退出</p>
-<p>info以网页的结构显示命令的信息，是一种基于正文的帮助系统<br>info的命令格式如下<br>info []<br>eg: info who<br>使用控制n键转到下一小节u键跳转到上层的章节<br>输入s屏底出现“Search for string[]:”提示，此时输入要查找的字符串<br>q为退出</p>
-<p>cd切换进入目录<br>pwd显示当前目录的绝对路径（print working directory打印工作目录）</p>
-<p>ls列出当前目录<br>ls [options] [directories|files]选项目录|文件<br>ls.当前目录<br>Ls..当前目录的上级目录<br>ls . ..同屏分别同时显示这两个目录中的内容<br>ls -F参数显示类型<br>ls -l参数显示所有目录中所有非隐藏文件的细节<br>ls -ld只想知道本身的属性用d</p>
-<p><strong>创建文件</strong><br>mkdir目录名创建一个新目录（make directory，伟大随心的缩写）<br>mkdir -p目录名可以创建指定路径中所有不存在的目录<br>touch文件名创建一个新文件或多个文件，可以绝对路径可以使相对路径，touch目录名1目录名2目录名3<br>如果目标文件已存在就会修改文件的时间戳</p>
-<p><strong>复制文件</strong><br>cp[-option(s)]source(s)target<br>source（源）:可以是一个或者多个文件和目录<br>target（目的）：可以是一个文件或者一个目录<br>-i（interactive，交互的），覆盖文件给出提示信息<br>-r（recursive，递归的）复制一个目录时，复制当前目录中所有内容，包括复制其下子目录的所有内容。<br>-p（presever，维持）保留一些特性，如时间戳<br>-f（force，强制）若目标文件存在，并不咨询直接覆盖原来所有文件</p>
-<p><strong>移动文件</strong><br>mv（move的缩写）<br>mv a b从a移动到b包括移动及修改文件和目录名</p>
+        <span itemprop="articleBody"><p>Linux发行版本很多，但是他们共同的特征就是使用了Linux内核。Linux内核是基于C语言编写的符合POSIX标准的类unix操作系统。内核是操作系统最基本的部分，也是核心部分。Linux内核于1991年由当时的芬兰大学生Linus Torvalds开发。目前linus仍然致力于内核的设计、开发和维护，目前通过<a href="https://www.kernel.org" target="_blank" rel="noopener">https://www.kernel.org</a>网站发布与提供Linux所有版本的内核以及补丁。在GitHub上也有一份Linux 内核的镜像文件，地址:<a href="https://github.com/torvalds/linux" target="_blank" rel="noopener">https://github.com/torvalds/linux</a>。不过Linus 本人根本不想从 GitHub 接受 PR，因为质量太烂。各位可以拿来看看，但是不要随便发issue。</p>
+<p>内核简介：<br>内核指的是一个提供硬件抽象层、磁盘及文件系统控制、多任务等功能的系统软件。一个内核并不是一套完整的操作系统。内核负责管理系统的进程，内存，设备驱动程序，文件和网络系统，决定着系统的性能和稳定性。<br>当前系统的内核存放到/boot/目录，我们可以进入该目录查看。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvtqs22dkij30ia054js7.jpg" alt=""><br>uname -r可以查看当前系统的内核版本。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvtqvkw0iwj30ee010745.jpg" alt=""><br>说明：<br>4.15.0-34-generic<br>4代表的是内核主版本号；15代表的是次版本号，为不稳定版本(偶数是稳定版本，奇数是过渡版本)<br>0代表的是末版本号，属于修订版本号(扩展版本号)，表示修改次数。<br>(这是最新的内核版本命名方式，为第三种命名方式)<br>34为建立(build)号，每个建立可以增加少量新的驱动程序或缺陷修复。<br>generic 为通用版本的意思。 “pp”，就是“pre－patch”的意思，是个内核的测试版本。<br>首先下载内核。<br>我是需要提醒你的是，你最好在虚拟机中做这个实验，而且最好给虚拟机开快照，以便你编译出错的时候还可以回退回来。不至于重新再次安装系统。<br>网站：<a href="https://mirrors.edge.kernel.org/pub/linux/kernel/" target="_blank" rel="noopener">https://mirrors.edge.kernel.org/pub/linux/kernel/</a><br>这里我选择<a href="https://mirrors.edge.kernel.org/pub/linux/kernel/v4.x/" target="_blank" rel="noopener">https://mirrors.edge.kernel.org/pub/linux/kernel/v4.x/</a>中的4.18.11最新稳定版。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvtsjm3a00j30hf01kt8m.jpg" alt=""><br>其中每个版本的内核都有2种不同的压缩方式，还有一个扩展名为sign的文件用于内核验证。<br>首先确定你的网络环境良好，你的磁盘容量足够。<br>先执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></p>
+<p>解压进/usr/src目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo tar xvf linux-4.18.11.tar.xz -C /usr/src</span><br></pre></td></tr></table></figure></p>
+<p>编译内核，目前我已知的有4种方式。<br>x config 该方法适合新手使用。基于图形化，编译起来更加简单易操作。<br>这里将的是make menuconfig方式编译。这种是最常用的编译内核的方式。<br>首先搭建环境。<br>安装gcc。<br>sudo apt-get install gcc<br>bingyu@ubuntu:~$ sudo apt-get install ncurses-dev</p>
+<p>sudo apt-get install make<br>安装运行库</p>
+<p>sudo apt-get install libncurses*<br>在正式编译内核之前，我们首先必须配置需要包含哪些模块。实际上，有一些非常简单的方式来配置。使用一个命令，你能拷贝当前内核的配置文件，然后使用可靠的 menuconfig 命令来做任何必要的更改。使用如下命令来完成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /boot/config-$(uname -r) .config</span><br></pre></td></tr></table></figure></p>
+<p>sudo make menuconfig<br>生产配置文件。<br><a href="http://ftp.gnu.org/gnu/ncurses/" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/ncurses/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf ncurses-6.0.tar.gz</span><br><span class="line">cd ncurses-6.0</span><br><span class="line">./configure --with-shared --without-debug --without-ada --enable-overwrite</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install kernel-package build-essential libncurses5-dev fakeroot</span><br></pre></td></tr></table></figure>
+<p>这个会消耗很长的时间，中途一定不要终止。</p>
+<p>在编译完成后，可能会生成一大堆的附属文件，这些文件对系统本身是没有用的，所以是可以删除的。<br><a href="https://linux.cn/article-9665-1.html" target="_blank" rel="noopener">https://linux.cn/article-9665-1.html</a><br><a href="https://www.kernel.org/doc/html/latest/translations/zh_CN/coding-style.html" target="_blank" rel="noopener">https://www.kernel.org/doc/html/latest/translations/zh_CN/coding-style.html</a><br><a href="https://www.jianshu.com/p/1411a3dbb939" target="_blank" rel="noopener">https://www.jianshu.com/p/1411a3dbb939</a><br><a href="https://www.jianshu.com/p/5e37d91bfbbe" target="_blank" rel="noopener">https://www.jianshu.com/p/5e37d91bfbbe</a></p>
+<blockquote>
+</blockquote>
+<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
     </div>
@@ -440,24 +431,16 @@
     </div>
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag"><i class="fa tag"></i> Linux</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/07/注意注意！说一件重要的事/" rel="prev">注意注意！说一件重要的事</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/05/Linux必备神器-系统监测和优化器/" rel="next">Linux必备神器-系统监测和优化器</a>
+              <a href="/2018/10/01/SQL基本操作-增删改查/" rel="next">SQL基本操作-增删改查</a>
             
           </div>
         </div>
