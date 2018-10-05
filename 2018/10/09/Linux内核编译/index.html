@@ -47,7 +47,7 @@
 <meta property="og:description" content="编译环境: 虚拟机下的 Ubuntu18.04.1(LTS)  内核知识简述首先简单介绍一些有关Linux内核的知识，这些知识可以要你对Linux有一个全新的认识。 Linux内核历史Linux发行版本很多，但是他们共同的特征就是使用了Linux内核。Linux内核是基于C语言编写的符合POSIX标准的类Unix操作系统。内核是操作系统最基本的部分，也是最核心的部分。Linux内核于1991年由">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvx9qnrs5vj30jg06e3zh.jpg">
-<meta property="og:updated_time" content="2018-10-05T07:01:11.719Z">
+<meta property="og:updated_time" content="2018-10-05T07:07:20.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux内核编译">
 <meta name="twitter:description" content="编译环境: 虚拟机下的 Ubuntu18.04.1(LTS)  内核知识简述首先简单介绍一些有关Linux内核的知识，这些知识可以要你对Linux有一个全新的认识。 Linux内核历史Linux发行版本很多，但是他们共同的特征就是使用了Linux内核。Linux内核是基于C语言编写的符合POSIX标准的类Unix操作系统。内核是操作系统最基本的部分，也是最核心的部分。Linux内核于1991年由">
@@ -415,7 +415,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvx9qnrs5vj30jg06e3zh.jpg" rel="gallery_cjmvnwgno001d00way1ddp1xw"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvx9qnrs5vj30jg06e3zh.jpg" rel="gallery_cjmvo3h1k001dvcwam7rc90na"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvx9qnrs5vj30jg06e3zh.jpg" itemprop="contentUrl"/>
               </a>
@@ -489,8 +489,8 @@
 <p>使用这个命令来安装内核：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo make install</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvv8o97a97j311y0lcn70.jpg" alt=""><br>这个命令仍然会花费很长时间，你可以去做其他的事。</p>
 <p>启用内核作为引导<br>使用这个命令来实现：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo update-initramfs -c -k 4.18-rc2</span><br></pre></td></tr></table></figure></p>
-<p>其中的4.18替换为你编译的内核版本号。<br>更新grub<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo update-grub</span><br></pre></td></tr></table></figure></p>
-<p>好了，现在全部工作已经做完， 你可以重启系统了。<br>当我们再次进入系统后，你可以再次运行<code>uname -r</code>来查看一下内核版本，是否和你安装的内核版本一致。<br>在编译完成后，可能会生成一大堆的附属文件，这些文件对系统本身是没有用的，所以是可以删除的，但是如果你不确定这个文件是否需要删除，那么就保留。</p>
+<p>其中的<code>4.18</code>替换为你编译的内核版本号。<br>更新grub<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo update-grub</span><br></pre></td></tr></table></figure></p>
+<p>好了，现在全部工作已经做完， 你可以重启系统了。<br>当我们再次进入系统后，你可以再次运行<code>uname -r</code>来查看一下内核版本，是否和你重新编译的内核版本一致。<br>在编译完成后，可能会生成一大堆的附属文件，这些文件对系统本身是没有用的，所以是可以删除的，但是如果你不确定这个文件是否需要删除，那么就保留。</p>
 <p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
