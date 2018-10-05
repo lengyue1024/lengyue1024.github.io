@@ -42,12 +42,12 @@
 <meta name="keywords" content="Linux,Ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux内核编译">
-<meta property="og:url" content="http://bingyublog.com/2018/10/07/Linux内核编译/index.html">
+<meta property="og:url" content="http://bingyublog.com/2018/10/09/Linux内核编译/index.html">
 <meta property="og:site_name" content="冰羽の博客">
 <meta property="og:description" content="编译环境: 虚拟机下的 Ubuntu18.04.1(LTS)  内核知识简述首先简单介绍一些有关Linux内核的知识，这些知识可以要你对Linux有一个全新的认识。 Linux内核历史Linux发行版本很多，但是他们共同的特征就是使用了Linux内核。Linux内核是基于C语言编写的符合POSIX标准的类Unix操作系统。内核是操作系统最基本的部分，也是最核心的部分。Linux内核于1991年由">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvx9qnrs5vj30jg06e3zh.jpg">
-<meta property="og:updated_time" content="2018-10-05T06:49:21.067Z">
+<meta property="og:updated_time" content="2018-10-05T06:57:01.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux内核编译">
 <meta name="twitter:description" content="编译环境: 虚拟机下的 Ubuntu18.04.1(LTS)  内核知识简述首先简单介绍一些有关Linux内核的知识，这些知识可以要你对Linux有一个全新的认识。 Linux内核历史Linux发行版本很多，但是他们共同的特征就是使用了Linux内核。Linux内核是基于C语言编写的符合POSIX标准的类Unix操作系统。内核是操作系统最基本的部分，也是最核心的部分。Linux内核于1991年由">
@@ -375,8 +375,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2018-10-07T23:34:54+08:00" content="2018-10-07">
-            2018-10-07
+          <time itemprop="dateCreated" datetime="2018-10-09T23:34:54+08:00" content="2018-10-09">
+            2018-10-09
           </time>
         </span>
 
@@ -415,7 +415,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvx9qnrs5vj30jg06e3zh.jpg" rel="gallery_cjmvngi6e001dk0wadv8k360g"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvx9qnrs5vj30jg06e3zh.jpg" rel="gallery_cjmvnqj40001df8wajcw0xm06"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvx9qnrs5vj30jg06e3zh.jpg" itemprop="contentUrl"/>
               </a>
@@ -449,8 +449,9 @@
 <li>为计算机更换超越原内核负载能力的硬件</li>
 <li>需要更改无法用/proc/sys来变更的内核运行参数</li>
 <li>更好的匹配用户计算机上的硬件特质</li>
-<li>从根本上更好的定制系统，使系统更加符合自己的风格，这种方式是最彻底最高效的<br>通常新的内核会支持更多的硬件，具备更好的进程管理能力，运行速度更快，更稳定，并且会修复老版本中的漏洞。  </li>
+<li>从根本上更好的定制系统，使系统更加符合自己的风格，这种方式是最彻底最高效的  </li>
 </ol>
+<p>通常新的内核会支持更多的硬件，具备更好的进程管理能力，运行速度更快，更稳定，并且会修复老版本中的漏洞。  </p>
 <p>以上都是关于重新编译内核的好处，当然也有弊端。<br>以下是我从实践中总结的几点：</p>
 <ol>
 <li>难度较大，不适合Linux新手</li>
@@ -466,8 +467,12 @@
 <li>make oldconfig   #  在原来内核配置基础上修改一些小地方  </li>
 </ol>
 <p>编译的整个原理和操作方法是十分复杂的，如果你有兴趣的话，可以去看看一些关于内核编写的书。</p>
-<h2 id="编译内核"><a href="#编译内核" class="headerlink" title="编译内核"></a>编译内核</h2><p>本文采用最普遍最常用的编译内核方式：<code>make menuconfig</code><br>这里只是给出了较为简单的编译内核方式，如果要真实的编译内核，你需要根据具体的需求来配置不同的参数进行编译。</p>
-<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>保证网络环境良好；系统磁盘容量足够(40~60g，编译的选项越多占用磁盘容量越大)；保证系统文件完整，也就是你没有删除过任何的系统自带的文件系统(在编译时候很可能因为文件系统不完整而出错)。</p>
+<h2 id="配置内核"><a href="#配置内核" class="headerlink" title="配置内核"></a>配置内核</h2><p>本文采用最普遍最常用的编译内核方式：<code>make menuconfig</code><br>这里只是给出了较为简单的编译内核方式，如果要真实的编译内核，你需要根据具体的需求来配置不同的参数进行编译。</p>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ol>
+<li>保证网络环境良好</li>
+<li>系统磁盘容量足够(40~60g，编译的选项越多占用磁盘容量越大)</li>
+<li>保证系统文件完整，也就是你没有删除过任何的系统自带的文件系统(在编译时候很可能因为文件系统不完整而出错)</li>
+</ol>
 <blockquote>
 <p>需要提醒你的是，你最好在虚拟机中做这个实验，而且最好给虚拟机开快照，以便你编译出错的时候还可以回退回来,不至于重新安装系统。</p>
 </blockquote>
@@ -476,9 +481,9 @@
 <p>安装gcc编译器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gcc</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvu9kuojavj311x0jngqu.jpg" alt=""><br>如果你的系统已经自带了gcc，就不用安装了。使用<code>gcc -version</code>查看是否已经安装。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxbwqp87nj30oq02v0ss.jpg" alt=""><br>安装运行库。这个会消耗很长的时间，中途一定不要终止。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison</span><br></pre></td></tr></table></figure></p>
 <p>安装过程中会弹出这个：<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvtwj20spoj30ih0atgm2.jpg" alt=""><br>直接enter确定即可。<br>如果你全部安装成功，是不会出现任何报错信息的。<br>如下图即为安装成功。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvtwk6aubrj30x60e3n0l.jpg" alt=""><br>如果你安装失败的话，你可以重新运行以上安装命令再次安装一下。</p>
-<h3 id="配置内核"><a href="#配置内核" class="headerlink" title="配置内核"></a>配置内核</h3><p>在正式编译内核之前，我们首先必须配置需要包含哪些模块。当然，我们初次编译时，可以采取一些简单的方式来进行配置。我们可以把原来内核拥有的配置文件直接拿来用。<br>使用如下命令来完成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo cp /boot/config-4.15.0-34-generic/.config /usr/src/linux-4.18.11/</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置内核-1"><a href="#配置内核-1" class="headerlink" title="配置内核"></a>配置内核</h3><p>在正式编译内核之前，我们首先必须配置需要包含哪些模块。当然，我们初次编译时，可以采取一些简单的方式来进行配置。我们可以把原来内核拥有的配置文件直接拿来用。<br>使用如下命令来完成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo cp /boot/config-4.15.0-34-generic/.config /usr/src/linux-4.18.11/</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvu9oh1dexj30id013jr7.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvu9nszxi8j30ia05kaar.jpg" alt=""></p>
-<h3 id="配置内核-1"><a href="#配置内核-1" class="headerlink" title="配置内核"></a>配置内核</h3><p>此处我个人建议你开虚拟机全屏，并且把终端也是全屏显示。不然会出现如下报错(你的显示器太小，无法运行menuconfig)。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvu4rokpidj30x60eytda.jpg" alt=""><br>OK，打开是这样的。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxbo1nx8wj311v0lc76m.jpg" alt=""><br>在此窗口下，使用上下左右键进行选择，选择哪一项，回车即可。<br>然后我们需要小心的配置，如果你不确定哪一步怎么做，就放弃操作，不要瞎点。<br>此处由于我们已经把配置文件复制过去了，所以我们不需要一个一个的点了。如果你要一个一个去设置的话，应该需要一个月时间。<br>我们不进行选择，直接选择“save”，然后回车，会提示你<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxbojjp13j311y0jujrb.jpg" alt=""><br>然后再回车即可退出。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxbosk0ssj311y0js746.jpg" alt=""><br>最后选择e退出menuconfig窗口。<br>定制完内核后，我们所设置的编译选项全部会保存到.config文件，用ls-a查看。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxblcyvc3j30ia05k0sq.jpg" alt=""><br>你也可以使用<code>cat</code>命令查看其内容。<br>下面开始编译。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo make</span><br></pre></td></tr></table></figure></p>
+<p>此处我个人建议你开虚拟机全屏，并且把终端也是全屏显示。不然会出现如下报错(你的显示器太小，无法运行menuconfig)。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvu4rokpidj30x60eytda.jpg" alt=""><br>OK，打开是这样的。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxbo1nx8wj311v0lc76m.jpg" alt=""><br>在此窗口下，使用上下左右键进行选择，选择哪一项，回车即可。<br>然后我们需要小心的配置，如果你不确定哪一步怎么做，就放弃操作，不要瞎点。<br>此处由于我们已经把配置文件复制过去了，所以我们不需要一个一个的点了。如果你要一个一个去设置的话，应该需要一个月时间。<br>我们不进行选择，直接选择“save”，然后回车，会提示你<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxbojjp13j311y0jujrb.jpg" alt=""><br>然后再回车即可退出。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxbosk0ssj311y0js746.jpg" alt=""><br>最后选择e退出menuconfig窗口。<br>定制完内核后，我们所设置的编译选项全部会保存到.config文件，用ls-a查看。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxblcyvc3j30ia05k0sq.jpg" alt=""><br>你也可以使用<code>cat</code>命令查看其内容。<br>下面开始编译。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo make</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxbpb5hzjj311y0lc400.jpg" alt=""><br>应该会需要2~5小时吧。你现在可以做其他事。再次提醒保证你的磁盘容量足够，不然中途会因磁盘满而停止，就前功尽弃了,40-60g应该是足够的。<br>此刻就不要再用你的计算机了，而且记着关闭其他正在运行的软件。只保留终端即可。<br>下图是我编译结束的样子，花费了差不多4个小时。(这个过程的时间长短与你编译的选项多少有关，如果你省略了大部分的编译选项，那么编译将会很快完成。)<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvxbqomf6cj311y0lc407.jpg" alt=""></p>
 <h2 id="编译和安装"><a href="#编译和安装" class="headerlink" title="编译和安装"></a>编译和安装</h2><p>用如下的命令安装那些之前启用的模块：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo make modules_install</span><br></pre></td></tr></table></figure></p>
 <p>使用这个命令来安装内核：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo make install</span><br></pre></td></tr></table></figure></p>
@@ -834,7 +839,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内核知识简述"><span class="nav-number">1.</span> <span class="nav-text">内核知识简述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux内核历史"><span class="nav-number">1.1.</span> <span class="nav-text">Linux内核历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux内核简介"><span class="nav-number">1.2.</span> <span class="nav-text">Linux内核简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux内核版本号说明"><span class="nav-number">1.3.</span> <span class="nav-text">linux内核版本号说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译内核的优劣"><span class="nav-number">2.</span> <span class="nav-text">编译内核的优劣</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内核编译方式"><span class="nav-number">3.</span> <span class="nav-text">内核编译方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译内核"><span class="nav-number">4.</span> <span class="nav-text">编译内核</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">4.1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载内核"><span class="nav-number">4.2.</span> <span class="nav-text">下载内核</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建环境"><span class="nav-number">4.3.</span> <span class="nav-text">搭建环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置内核"><span class="nav-number">4.4.</span> <span class="nav-text">配置内核</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置内核-1"><span class="nav-number">4.5.</span> <span class="nav-text">配置内核</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译和安装"><span class="nav-number">5.</span> <span class="nav-text">编译和安装</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内核知识简述"><span class="nav-number">1.</span> <span class="nav-text">内核知识简述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux内核历史"><span class="nav-number">1.1.</span> <span class="nav-text">Linux内核历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux内核简介"><span class="nav-number">1.2.</span> <span class="nav-text">Linux内核简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux内核版本号说明"><span class="nav-number">1.3.</span> <span class="nav-text">linux内核版本号说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译内核的优劣"><span class="nav-number">2.</span> <span class="nav-text">编译内核的优劣</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内核编译方式"><span class="nav-number">3.</span> <span class="nav-text">内核编译方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置内核"><span class="nav-number">4.</span> <span class="nav-text">配置内核</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">4.1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载内核"><span class="nav-number">4.2.</span> <span class="nav-text">下载内核</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建环境"><span class="nav-number">4.3.</span> <span class="nav-text">搭建环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置内核-1"><span class="nav-number">4.4.</span> <span class="nav-text">配置内核</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译和安装"><span class="nav-number">5.</span> <span class="nav-text">编译和安装</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
