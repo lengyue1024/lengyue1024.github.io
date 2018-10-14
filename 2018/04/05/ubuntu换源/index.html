@@ -38,25 +38,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Ubuntu的换源相对于其他版本的Linux容易的多，你不必打开源文件，可以直接去软件中心就可以修改了。打开软件中心，点击左上角，有个软件与更新，点击进去。接下来按图示操作。他会自动为你测试最合适的软件源。但是这里有必要说明一点，就是你的虚拟机如果用的是nat模式的话，它不能检测出最合适的软件源，所以网络连接使用桥接模式。测试完成后，你可以选择那个软件源进行设置，这个时候你需要输入用户口令进行认证">
+<meta name="description" content="Ubuntu换源有2种方法：    直接手动添加源进列表 利用软件进行换源  方法1直接向源列表的文件写入添加的源即可，适合Debian及其衍生的发行版本。1bingyu@ubuntu:~$ sudo gedit /etc/apt/sources.list 直接向该文件加入源即可。然后保存退出，然后使用如下命令刷新一下源列表。1bingyu@ubuntu:~$ sudo apt-get updat">
 <meta name="keywords" content="Ubuntu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu换源">
+<meta property="og:title" content="Ubuntu换源">
 <meta property="og:url" content="http://bingyublog.com/2018/04/05/ubuntu换源/index.html">
 <meta property="og:site_name" content="冰羽の博客">
-<meta property="og:description" content="Ubuntu的换源相对于其他版本的Linux容易的多，你不必打开源文件，可以直接去软件中心就可以修改了。打开软件中心，点击左上角，有个软件与更新，点击进去。接下来按图示操作。他会自动为你测试最合适的软件源。但是这里有必要说明一点，就是你的虚拟机如果用的是nat模式的话，它不能检测出最合适的软件源，所以网络连接使用桥接模式。测试完成后，你可以选择那个软件源进行设置，这个时候你需要输入用户口令进行认证">
+<meta property="og:description" content="Ubuntu换源有2种方法：    直接手动添加源进列表 利用软件进行换源  方法1直接向源列表的文件写入添加的源即可，适合Debian及其衍生的发行版本。1bingyu@ubuntu:~$ sudo gedit /etc/apt/sources.list 直接向该文件加入源即可。然后保存退出，然后使用如下命令刷新一下源列表。1bingyu@ubuntu:~$ sudo apt-get updat">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uj78muqj30zp0bgq5d.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fq1ujhk42zj30f2057t8q.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uk0fek7j30em09d74q.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uxw3pfbj30em09d74q.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uptirdij30gd073t92.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uwt8zdkj30hi05j3yu.jpg">
-<meta property="og:updated_time" content="2018-08-28T11:09:02.172Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvzkcd37anj30jg06e0vq.jpg">
+<meta property="og:updated_time" content="2018-10-07T04:59:28.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ubuntu换源">
-<meta name="twitter:description" content="Ubuntu的换源相对于其他版本的Linux容易的多，你不必打开源文件，可以直接去软件中心就可以修改了。打开软件中心，点击左上角，有个软件与更新，点击进去。接下来按图示操作。他会自动为你测试最合适的软件源。但是这里有必要说明一点，就是你的虚拟机如果用的是nat模式的话，它不能检测出最合适的软件源，所以网络连接使用桥接模式。测试完成后，你可以选择那个软件源进行设置，这个时候你需要输入用户口令进行认证">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uj78muqj30zp0bgq5d.jpg">
+<meta name="twitter:title" content="Ubuntu换源">
+<meta name="twitter:description" content="Ubuntu换源有2种方法：    直接手动添加源进列表 利用软件进行换源  方法1直接向源列表的文件写入添加的源即可，适合Debian及其衍生的发行版本。1bingyu@ubuntu:~$ sudo gedit /etc/apt/sources.list 直接向该文件加入源即可。然后保存退出，然后使用如下命令刷新一下源列表。1bingyu@ubuntu:~$ sudo apt-get updat">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvzkcd37anj30jg06e0vq.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -75,7 +70,7 @@
   </script>
 
 
-  <title> ubuntu换源 | 冰羽の博客 </title>
+  <title> Ubuntu换源 | 冰羽の博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -371,7 +366,7 @@
           
           
             
-              ubuntu换源
+              Ubuntu换源
             
           
         </h1>
@@ -415,9 +410,34 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvzkcd37anj30jg06e0vq.jpg" rel="gallery_cjn90r5n4008xgswa5p2c697x"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvzkcd37anj30jg06e0vq.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+
+        </div>
+      
 
       
-        <span itemprop="articleBody"><p>Ubuntu的换源相对于其他版本的Linux容易的多，你不必打开源文件，可以直接去软件中心就可以修改了。<br>打开软件中心，点击左上角，有个<em>软件与更新</em>，点击进去。接下来按图示操作。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uj78muqj30zp0bgq5d.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1ujhk42zj30f2057t8q.jpg" alt="2"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uk0fek7j30em09d74q.jpg" alt="3"><br>他会自动为你测试最合适的软件源。但是这里有必要说明一点，就是你的虚拟机如果用的是nat模式的话，它不能检测出最合适的软件源，所以网络连接使用桥接模式。<br>测试完成后，你可以选择那个软件源进行设置，这个时候你需要输入用户口令进行认证一下。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uxw3pfbj30em09d74q.jpg" alt="6"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uptirdij30gd073t92.jpg" alt="4"><br>然后你选择close，会提示你要从新添加或更改的源安装软件和更新，您必须重新加载有关可用软件的信息。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fq1uwt8zdkj30hi05j3yu.jpg" alt="5"><br>你选择reload，重新载入进行更新，然后默默等待更新完成就可以了。</p>
+        <span itemprop="articleBody"><p>Ubuntu换源有2种方法：  </p>
+<ol>
+<li>直接手动添加源进列表</li>
+<li>利用软件进行换源</li>
+</ol>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>直接向源列表的文件写入添加的源即可，适合Debian及其衍生的发行版本。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo gedit /etc/apt/sources.list</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvzkb0p5iej30p40ju0wl.jpg" alt=""><br>直接向该文件加入源即可。然后保存退出，然后使用如下命令刷新一下源列表。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ sudo apt-get update</span><br></pre></td></tr></table></figure></p>
+<h2 id="方法2-推荐"><a href="#方法2-推荐" class="headerlink" title="方法2(推荐)"></a>方法2(推荐)</h2><p>Ubuntu的换源相对于其他版本的Linux容易的多，你可以不必打开源文件，可以直接去软件中心就可以修改了。此方法是最好用的，不会出现“无法安全地用该源进行更新”这种源的签名错误问题。而且所选用的源是最快速最安全的。<strong>强烈推荐此方法</strong>。<br>打开软件中心，点击左上角，有个<em>软件与更新</em>，点击进去。接下来按图示操作。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvzk7b2jjuj30xc0jv0vg.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvzk7ngkncj30fj0fb402.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvzk7u2oz7j30e90a0t99.jpg" alt=""><br>经过一系列的测试，Ubuntu会自动为你选择最佳的服务器。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvzk84rlsuj30e709yjs6.jpg" alt=""><br>他会自动为你测试最合适的软件源。但是这里有必要说明一点，就是你的虚拟机如果用的是nat模式的话，它有可能不能能检测出最合适的软件源，所以网络连接使用桥接模式。<br>测试完成后，你可以选择那个软件源进行设置，这个时候你需要输入用户口令进行认证一下。</p>
+<p>然后你选择“关闭”，会提示你要从新添加或更改的源安装软件和更新，您必须重新加载有关可用软件的信息。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvzkistgyej30g306u3z6.jpg" alt="5"><br>你选择重新载入进行更新，然后默默等待更新完成就可以了。</p>
 </span>
       
     </div>
@@ -660,21 +680,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">139</span>
+              <span class="site-state-item-count">141</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-count">25</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -765,7 +785,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法1"><span class="nav-number">1.</span> <span class="nav-text">方法1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法2-推荐"><span class="nav-number">2.</span> <span class="nav-text">方法2(推荐)</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
