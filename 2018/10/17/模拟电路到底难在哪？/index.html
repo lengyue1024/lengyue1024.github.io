@@ -29,7 +29,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="电子," />
 
 
 
@@ -38,20 +38,31 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="在 Linux系统中 TCP/IP 网络是通过若干个文本文件进行配置的 需要编辑 这些文件来完成联网工作 系统中重要的有关网络配置文件为/etc/sysconfig/network/etc/hosts/etc/services/etc/host.conf/etc/nsswitch.conf/etc/resolv.conf/etc/xinetd.conf/etc/modules.conf/etc/s">
-<meta name="keywords" content="Linux">
+<meta name="description" content="在子类专业中，模拟电路是一门非常重要，并且不少人觉得很难的一门课。这里我来说一说我对模拟电路这门课的理解，希望能对大家有所帮助。 1.工程思想如果说到考试成绩，我的考试成绩一般，并非什么高分；但如果说到对模拟电路的理解和应用，倒是用模拟电路做过一些东西，也参加过一些竞赛。模拟电路是一门工程性质的课程，学习它的重点在于掌握其中的工程思想，同时最好能用于实践，而不只是为了做题考试。 何为工程思想呢？百">
+<meta name="keywords" content="电子">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux的网络配置文件介绍">
-<meta property="og:url" content="http://bingyublog.com/2018/10/05/Linux的网络配置文件介绍/index.html">
+<meta property="og:title" content="模拟电路到底难在哪？">
+<meta property="og:url" content="http://bingyublog.com/2018/10/17/模拟电路到底难在哪？/index.html">
 <meta property="og:site_name" content="冰羽の博客">
-<meta property="og:description" content="在 Linux系统中 TCP/IP 网络是通过若干个文本文件进行配置的 需要编辑 这些文件来完成联网工作 系统中重要的有关网络配置文件为/etc/sysconfig/network/etc/hosts/etc/services/etc/host.conf/etc/nsswitch.conf/etc/resolv.conf/etc/xinetd.conf/etc/modules.conf/etc/s">
+<meta property="og:description" content="在子类专业中，模拟电路是一门非常重要，并且不少人觉得很难的一门课。这里我来说一说我对模拟电路这门课的理解，希望能对大家有所帮助。 1.工程思想如果说到考试成绩，我的考试成绩一般，并非什么高分；但如果说到对模拟电路的理解和应用，倒是用模拟电路做过一些东西，也参加过一些竞赛。模拟电路是一门工程性质的课程，学习它的重点在于掌握其中的工程思想，同时最好能用于实践，而不只是为了做题考试。 何为工程思想呢？百">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwbl91ftdbj30hs05pdfv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwbla123zkj309c03vdfy.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwblab04xmj30d105umxr.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwblb5y67lj303f031748.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwblbadv00j304x01ymx0.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwblbfpbq3j302y01kdfn.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwblbjlajyj306w028t8n.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwblbt7nvvj303i01cmwy.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwblddz2spj305p01yt8k.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwblhs2nsqj302s00xgle.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwbldjy5o4j30a70bb3z1.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg">
-<meta property="og:updated_time" content="2018-10-05T14:41:08.835Z">
+<meta property="og:updated_time" content="2018-10-17T14:44:24.353Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux的网络配置文件介绍">
-<meta name="twitter:description" content="在 Linux系统中 TCP/IP 网络是通过若干个文本文件进行配置的 需要编辑 这些文件来完成联网工作 系统中重要的有关网络配置文件为/etc/sysconfig/network/etc/hosts/etc/services/etc/host.conf/etc/nsswitch.conf/etc/resolv.conf/etc/xinetd.conf/etc/modules.conf/etc/s">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg">
+<meta name="twitter:title" content="模拟电路到底难在哪？">
+<meta name="twitter:description" content="在子类专业中，模拟电路是一门非常重要，并且不少人觉得很难的一门课。这里我来说一说我对模拟电路这门课的理解，希望能对大家有所帮助。 1.工程思想如果说到考试成绩，我的考试成绩一般，并非什么高分；但如果说到对模拟电路的理解和应用，倒是用模拟电路做过一些东西，也参加过一些竞赛。模拟电路是一门工程性质的课程，学习它的重点在于掌握其中的工程思想，同时最好能用于实践，而不只是为了做题考试。 何为工程思想呢？百">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwbl91ftdbj30hs05pdfv.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -70,7 +81,7 @@
   </script>
 
 
-  <title> Linux的网络配置文件介绍 | 冰羽の博客 </title>
+  <title> 模拟电路到底难在哪？ | 冰羽の博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -366,7 +377,7 @@
           
           
             
-              Linux的网络配置文件介绍
+              模拟电路到底难在哪？
             
           
         </h1>
@@ -375,8 +386,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2018-10-05T22:40:22+08:00" content="2018-10-05">
-            2018-10-05
+          <time itemprop="dateCreated" datetime="2018-10-17T22:20:00+08:00" content="2018-10-17">
+            2018-10-17
           </time>
         </span>
 
@@ -385,8 +396,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Linux/" itemprop="url" rel="index">
-                  <span itemprop="name">Linux</span>
+                <a href="/categories/电子/" itemprop="url" rel="index">
+                  <span itemprop="name">电子</span>
                 </a>
               </span>
 
@@ -412,7 +423,78 @@
       
 
       
-        <span itemprop="articleBody"><p>在 Linux系统中 TCP/IP 网络是通过若干个文本文件进行配置的 需要编辑 这些文件来完成联网工作 系统中重要的有关网络配置文件为<br>/etc/sysconfig/network<br>/etc/hosts<br>/etc/services<br>/etc/host.conf<br>/etc/nsswitch.conf<br>/etc/resolv.conf<br>/etc/xinetd.conf<br>/etc/modules.conf<br>/etc/sysconfig/network-scripts/ifcfg-ethN </p>
+        <span itemprop="articleBody"><p>在子类专业中，模拟电路是一门非常重要，并且不少人觉得很难的一门课。这里我来说一说我对模拟电路这门课的理解，希望能对大家有所帮助。</p>
+<h3 id="1-工程思想"><a href="#1-工程思想" class="headerlink" title="1.工程思想"></a>1.工程思想</h3><p>如果说到考试成绩，我的考试成绩一般，并非什么高分；但如果说到对模拟电路的理解和应用，倒是用模拟电路做过一些东西，也参加过一些竞赛。模拟电路是一门工程性质的课程，学习它的重点在于掌握其中的工程思想，同时最好能用于实践，而不只是为了做题考试。</p>
+<p>何为工程思想呢？百度百科的解释是这样的：</p>
+<p>工程是科学和数学的某种应用，通过这一应用，使自然界的物质和能源的特性能够通过各种结构、机器、产品、系统和过程，是以最短的时间和精而少的人力做出高效、可靠且对人类有用的东西。于是工程的概念就产生了，并且它逐渐发展为一门独立的学科和技艺。</p>
+<p>例如在模拟电路中，有个非常重要的工程思想——近似。中学物理课上，我们学的很多电路都是理想电路，导线电阻始终为0，变压器的效率是100%，理想电压表内阻无穷大，理想电流表内阻为0等。你可以发现，很多时候模拟电路中的计算会常常省略掉一两个比较小的项，而且直接用等号而不是约等号。</p>
+<p>为什么要用近似呢？说白了就是人类科学对自然的理解还不够全面，无法绝对精确的描述自然现象；或者是人的理解力有限，精确描述代价太大。通过近似的手段，不仅对解决问题没有明显的影响，而且大大简化了步骤，节约了时间和精力。运用这种思想，人类科学取得了很多成果，也充分证明了其可靠性。</p>
+<h3 id="2-概要"><a href="#2-概要" class="headerlink" title="2.概要"></a>2.概要</h3><p>模电本身是一个非常复杂的学科，而模电课程只是其中最基础的东西。模拟电路（Analog Circuit）的含义是处理模拟信号的电子电路。自然界中绝大多数信号都是模拟信号，它们有连续的幅度值，比如说话时的声音信号。模拟电路可以对这样的信号直接处理（当然需要先转换成电信号），比如功放能放大声音信号，广播电台能将模拟的声音信号、图像信号进行发送。甚至可以认为，所有电路的基础都是模拟电路（即使是数字电路，其底层原理也是基于模拟电路的）。其重要性不言而喻。</p>
+<p>由于数字电路、可编程器件的迅速发展，体现了很多优越特性。很多电子设备都慢慢数字化，但始终还是离不开模拟电路。</p>
+<p>目前模拟电路中最重要的器件，则非半导体器件莫属。最基本和常用的半导体器件有二极管、三极管、场效应管和运算放大器。</p>
+<p>二极管的作用很多，如普通二极管可用于整流，发光二极管可用于指示灯和照明，稳压管可进行稳压，变容二极管可用来进行信号调制等。模电课程中，涉及到二极管的部分相对比较简单，而场效应管的很多特性类似三极管，所以常以三极管或运放为主体进行讲解。</p>
+<h3 id="3-三极管与放大器"><a href="#3-三极管与放大器" class="headerlink" title="3.三极管与放大器"></a>3.三极管与放大器</h3><p>三极管的基本功能是放大，通过这一特性，三极管构成各种电路，体现出了很多工程思想。</p>
+<p>三极管基本电路就是放大器，例如功放就是一个放大器，输入的声音很小，输出的声音却很大。放大器的输出和输入电压（或电流）之比称为放大倍数，又叫做增益。</p>
+<p>对于一个电压来说，如果以时间为横轴、电压为纵轴作图，这个图形则为这个电压的波形。</p>
+<p>如果一个放大倍数为5的放大器，输入恒定的1V电压（波形如下左图），则输出应该始终是5V（波形如下中图），既不会随时间改变，也不会随温度而变化，输出和输入的电压形状完全一样。但如果放大倍数不稳定，不断变化，原先输入的信号就会变形（如下右图），信号可能由一条水平直线变成了一条曲线。这种波形变化叫做失真。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwbl91ftdbj30hs05pdfv.jpg" alt=""></p>
+<p>一个理想的放大器，希望其放大倍数是恒定值。如果功放的放大倍数不稳定，声音就会忽大忽小，波形变化还会导致声音发生变化，即失真。</p>
+<p>现实总是和理想相违背。很不幸，三极管的特性并不理想，它在放大电路中工作时，放大倍数不仅受输入电压、电源电压影响，而且自身发热导致温度变化，也会影响它的放大倍数。这实在是让很多工程师头疼，如果不能找到有效的方法，减少这一特性带来的影响，三极管很难应用到实际中来。</p>
+<h3 id="4-负反馈"><a href="#4-负反馈" class="headerlink" title="4.负反馈"></a>4.负反馈</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>于是一些非常厉害的人找到了好方法：负反馈。什么是负反馈呢？</p>
+<p>反馈是指将系统的输出又返回到输入端而影响输入，从而对系统整体输出产生作用。反馈可分为正反馈和负反馈。负反馈是使输出起到与输入相反的作用，使系统输出趋于稳定。</p>
+<p>上面的解释不好理解，我举两个例子。</p>
+<p>1.玩倒立摆时，我们用手支撑起一个倒立的木棍，当木棍往某个方向倾斜时，我们通过将手移动到木棍倾斜的方向来抵消这种变化，使得木棍能在手上平衡。</p>
+<p>2.高中的时候经常月考，我发现有些同学有这样的习惯：当一次成绩考得比较差的时候，就会开始好好学习，然后下次成绩就上涨；而考得比较好时，接下来的一个月又会松懈，于是成绩又会降下来，如此周而复始。</p>
+<p>这两个例子都充分说明，负反馈可以让系统更稳定。</p>
+<h4 id="负反馈放大器"><a href="#负反馈放大器" class="headerlink" title="负反馈放大器"></a>负反馈放大器</h4><p>我们忽略具体电路，只画一个简单的框图，来说明三极管放大电路是如何利用负反馈的。</p>
+<p>下面三角形表示一个三极管构成的放大器，放大倍数为 A，输入为 I ，则输出 O=A*I ，由于放大倍数A不稳定，所以输出波形会有失真。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwbla123zkj309c03vdfy.jpg" alt=""><br>在电路中添加了一些器件如下。</p>
+<p>紫色的圆形是相加器，结合紫色的“+”、“-”符号，表示其输出 Y=(+I)+(-X)=I-X ，在实际电路中用电阻就可以实现；</p>
+<p>方框F是反馈器件，表示从输出O取出信号，并将其与F相乘，得到 X ，所以 X=0*F ，这里 F＜1 （这个部分在实际电路中可以用电阻实现）；</p>
+<p>三角形表示的放大器A，主要用三极管构成，满足 O=A*Y ，且A的放大倍数不稳定，很容易受干扰。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwblab04xmj30d105umxr.jpg" alt=""><br>可以列出方程组：<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwblb5y67lj303f031748.jpg" alt=""></p>
+<p>解得整个电路的放大倍数：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwblbadv00j304x01ymx0.jpg" alt=""></p>
+<p>如果设计电路让放大倍数A非常大，同时F不至于很小，则</p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwblbfpbq3j302y01kdfn.jpg" alt=""></p>
+<p>符号”&gt;&gt;”表示远大于</p>
+<p>根据近似的思想，上述整个电路放大倍数：<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwblbjlajyj306w028t8n.jpg" alt=""></p>
+<p>由于反馈器件可由电阻实现，普通电阻的阻值不容易受外界干扰，因此F的值很稳定，于是整个电路的放大倍数就很稳定。我们成功的通过负反馈解决了三极管的放大倍数稳定性问题。</p>
+<p>可以看到这里的反馈部分和放大部分构成了一个环形，所以将整个电路的放大倍数称为环路增益，或者闭环增益；而把增加反馈之前，电路的放大倍数A称为开环增益。由于是负反馈，虽然电路增益稳定性提高了，但也有代价：<br>由于<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwblbt7nvvj303i01cmwy.jpg" alt=""><br>于是 A&gt;&gt;1/F</p>
+<p>即开环增益远大于闭环增益，也就是放大器增益大大降低。但总的来说，为了稳定性，这样做是值得的。</p>
+<h3 id="5-运算放大器"><a href="#5-运算放大器" class="headerlink" title="5.运算放大器"></a>5.运算放大器</h3><p>在上面的电路中，为了实际制造出开环增益A很大的放大器，往往要用多级三极管放大电路串联的方式设计。由于这种高增益放大器的需求很常见，于是历史上有人就把它们做成一个成品电路板模块，要用的时候直接当成一个元件用就行了，非常方便。这就是最初的运算放大器，简称运放。</p>
+<p>集成电路的发展，使得大量晶体管元器件集成在一个小芯片上成为可能，于是就有了今天十分常用的集成运算放大器。</p>
+<p>“运算放大器”由于最初用于模拟计算机上进行数学运算而得名。尽管现在广泛使用的数字计算机不再用运放进行计算操作，但名称还是保留了下来。而今天，运放在模拟电路中发挥着十分重要的作用，也成为模电课程的重点之一。</p>
+<h3 id="6-运放的虚短虚断特性"><a href="#6-运放的虚短虚断特性" class="headerlink" title="6.运放的虚短虚断特性"></a>6.运放的虚短虚断特性</h3><p>通常运放有两个输入端U+和U−，一个输出端Uo，它们之间满足</p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwblddz2spj305p01yt8k.jpg" alt=""></p>
+<p>运放开环增益A常常高达几十万~几百万，但运放的输出电压受电源电压限制，不能超出电源电压。于是运放的输入-输出关系类似下图形状。</p>
+<p>图中横轴是<img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwblhs2nsqj302s00xgle.jpg" alt="">，纵轴是U。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwbldjy5o4j30a70bb3z1.jpg" alt=""></p>
+<p>在中间那一段直线区域，运放在正常放大状态，称为线性区，满足</p>
+<p>Uo=A∗(U+−U−)</p>
+<p>而当输入的绝对值稍大一点时，输出就会受到电源限制，不再满足上述关系式，Uo的值通常比电源电压范围略小（注意运放可以用双电源，即电源电压范围可以在一个负值和一个正值之间），称为非线性区。</p>
+<p>轨对轨运放的输出可以达到电源电压，有兴趣可以自行在网上搜索学习。</p>
+<p>当运放工作在线性区时，Uo的值很有限，但是A很大，所以U+−U−=UoA≈0</p>
+<p>即U+≈U−</p>
+<p>此时运放正负输入端电压几乎相等，就像短路了一样，称为虚短。所以只有当运放工作在放大区才会有“虚短”的特点，而非运放自身固有属性。</p>
+<p>另一方面，由于运放内部结构特性，其输入阻抗很大。</p>
+<p>输入阻抗可以简单理解为 输入阻抗 = 输入端电压 / 输入端电流</p>
+<p>输入阻抗大，意味着运放输入端只需很小的电流就能正常工作。正因为如此，运放才能用于一些微弱电流的检测，比如人体的脑电波、肌电波，其最高电压值只有几mV，电流值也非常小。</p>
+<p>运放这一特性被称为虚断，也就是输入端和断路一样，几乎没有电流流入。</p>
+<p>与虚短不同，虚断是运放自身固有属性，不会随着电路的不同而改变。</p>
+<h3 id="7-运放的非理想特性"><a href="#7-运放的非理想特性" class="headerlink" title="7.运放的非理想特性"></a>7.运放的非理想特性</h3><p>运放由三极管构成，显然和三极管一样，也会有很多不理想的特性。前面讲的都是理想运放的特点。而实际运放，它不会完全满足虚短虚断特性，正常工作时输入端需要电流流入，这个电流便被称作输入偏置电流。同样运放还有输入偏置电压、输入失调电压、输入失调电流等非理想参数。</p>
+<p>这些非理想特性，比如输入偏置电流虽然很小，但有时候却会对电路造成很大影响，导致电路无法工作。因此则需要通过一些手段减小这些因素造成的影响。在实际应用中，运放的非理想特性是一个非常重要的问题。运放非理想特性的消除有很多方法，这里不做介绍。</p>
+<h3 id="8-其他内容"><a href="#8-其他内容" class="headerlink" title="8.其他内容"></a>8.其他内容</h3><p>模电课程的核心就是三极管和运放。围绕这些器件，讲解多种电路，包括：</p>
+<p>●放大电路的计算分析、多级放大电路、放大器的频率特性、反馈的思想；</p>
+<p>●功率放大电路；</p>
+<p>●比较器、振荡器、积分器、微分器、波形发生等；</p>
+<p>●信号运算处理；</p>
+<p>●滤波器；</p>
+<p>●集成稳压电源电路等。</p>
+<h3 id="9-运放和三极管的比较"><a href="#9-运放和三极管的比较" class="headerlink" title="9.运放和三极管的比较"></a>9.运放和三极管的比较</h3><p>在实际设计电路时，运放比三极管用的相对会多一些。因为运放的很多特性比三极管要优秀，电路设计简单，而且往往运放的成本并不高。很多时候用三极管和运放实现同样的效果，使用运放的成本反而更低。因为运放是将大量晶体管集成在一块的，平均每个晶体管的制造成本非常低。</p>
+<p>例如一个常规音频前级放大器，一个通用运放就能搞定，成本可能是0.2元，而用三极管实现同样的效果，可能需要10个甚至更多三极管，成本或许要0.5元，并且设计时所花费的人力成本远比运放方案高。</p>
+<p>当然三极管也有其优势。在一些非常简单的电路中，并不严格要求放大倍数的稳定性，一两个三极管就能完成任务，往往会用三极管以节省成本。另外在一些比较极端的条件下，比如工作在高频率、大功率的环境下（例如射频信号发射电路），设计良好的三极管电路的性能会比运放效果好很多，或者成本低很多，甚至有些情况下只有直接使用晶体管才能完成，这时就需要使用三极管来搭建电路了。</p>
+<h3 id="10-结尾"><a href="#10-结尾" class="headerlink" title="10.结尾"></a>10.结尾</h3><p>模电课程的介绍到此为止。但是我想说的是，模拟电路是一门非常复杂的学科，涉及的知识远不止书上的那些。书上都是按照工作原理大致介绍，简化了很多难以理解但实际中必须考虑的问题，因此实际电路和书上的差距非常之大。比如模电书中用运放搭建的三角波发生器，用于实际电路十有八九不能工作。不过实际电路的主要原理和书中描述是一致的。因此设计模拟电路往往需要大量的经验，有很多东西甚至难以解释无法计算得出。</p>
+<blockquote>
+<p>转载自<a href="https://mp.weixin.qq.com/s/2eYNlbItNPqMacK-pOpZ5w" target="_blank" rel="noopener">都说模电难，但到底难在哪？这位高手讲透了</a></p>
+</blockquote>
 <p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
@@ -435,7 +517,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"><i class="fa tag"></i> Linux</a>
+            <a href="/tags/电子/" rel="tag"><i class="fa tag"></i> 电子</a>
           
         </div>
       
@@ -444,13 +526,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/07/Linux系统修复/" rel="prev">Linux文件系统检测与修复</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/04/umack/" rel="next">Linux的umask操作</a>
+              <a href="/2018/10/11/人民日报痛批沉睡中的大学生，你不失业，天理难容/" rel="next">人民日报痛批沉睡中的大学生，你不失业，天理难容</a>
             
           </div>
         </div>
@@ -761,7 +841,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-工程思想"><span class="nav-number">1.</span> <span class="nav-text">1.工程思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-概要"><span class="nav-number">2.</span> <span class="nav-text">2.概要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-三极管与放大器"><span class="nav-number">3.</span> <span class="nav-text">3.三极管与放大器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-负反馈"><span class="nav-number">4.</span> <span class="nav-text">4.负反馈</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">4.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#负反馈放大器"><span class="nav-number">4.2.</span> <span class="nav-text">负反馈放大器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-运算放大器"><span class="nav-number">5.</span> <span class="nav-text">5.运算放大器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-运放的虚短虚断特性"><span class="nav-number">6.</span> <span class="nav-text">6.运放的虚短虚断特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-运放的非理想特性"><span class="nav-number">7.</span> <span class="nav-text">7.运放的非理想特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-其他内容"><span class="nav-number">8.</span> <span class="nav-text">8.其他内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-运放和三极管的比较"><span class="nav-number">9.</span> <span class="nav-text">9.运放和三极管的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-结尾"><span class="nav-number">10.</span> <span class="nav-text">10.结尾</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
