@@ -47,7 +47,7 @@
 <meta property="og:description" content="在前天的时候，我浏览我博客的时候，我就发现博客最下方的访问量不能正确显示了。但是实在忙的要命，天天都是课，根本没时间去管这些事。便一直搁置到现在。今天终于有时间来解决一下了。特此记录一下，同时也给各位使用hexo博客的用户提供一个解决办法。相信这几天使用hexo的大部分用户的博客都不能正常显示访问量了吧。基本使用不蒜子统计的，都不能正常显示了。这其实不是不蒜子统计的锅。我也是今天开始着手解决这个问">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fwdx5y0666j30jg06ewh7.jpg">
-<meta property="og:updated_time" content="2018-10-20T06:49:28.474Z">
+<meta property="og:updated_time" content="2018-10-20T06:52:26.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决Hexo博客的访问量无法显示">
 <meta name="twitter:description" content="在前天的时候，我浏览我博客的时候，我就发现博客最下方的访问量不能正确显示了。但是实在忙的要命，天天都是课，根本没时间去管这些事。便一直搁置到现在。今天终于有时间来解决一下了。特此记录一下，同时也给各位使用hexo博客的用户提供一个解决办法。相信这几天使用hexo的大部分用户的博客都不能正常显示访问量了吧。基本使用不蒜子统计的，都不能正常显示了。这其实不是不蒜子统计的锅。我也是今天开始着手解决这个问">
@@ -180,6 +180,14 @@
           <a href="/在线工具" rel="section">
             <i class="menu-item-icon icon-next-something"></i> <br />
             在线工具
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-wiki">
+          <a href="/wiki" rel="section">
+            <i class="menu-item-icon icon-next-wiki"></i> <br />
+            wiki
           </a>
         </li>
       
@@ -415,7 +423,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fwdx5y0666j30jg06ewh7.jpg" rel="gallery_cjnh3385400dts4wascf7fa2b"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fwdx5y0666j30jg06ewh7.jpg" rel="gallery_cjnkfj2in00e404wadj3ny5h6"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwdx5y0666j30jg06ewh7.jpg" itemprop="contentUrl"/>
               </a>
@@ -433,8 +441,7 @@
 <p>现在不蒜子统计的官方网址为<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a><br>我们首先找到不蒜子统计调用的js代码所在的文件。这个代码是在Hexo主题文件夹的 <code>\layout\_partials\footer.swig</code>里。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fweniwo0wnj30k006k74f.jpg" alt=""><br>其中的这个js <a href="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" target="_blank" rel="noopener">https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js</a>，我们可以打开试试看，已经不行了。</p>
 <p>所以我们可以直接替换掉原来不能用的js即可。这个js代码因主题不同而位置不同。我的打开后可以直接看到就在第一行。你直接把src中的那个链接替换为下面的即可。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js</span></span><br></pre></td></tr></table></figure></p>
 <p>然后我们提交部署代码。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p>
-<p>然后刷新一下你的博客。我们就可以看到已经恢复正常了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwenkghbz6j30d801z3ya.jpg" alt=""></p>
-<p>至于你是如何布局，是使用pv还是uv，是记录访问量还是访客人数等，这些都不在讨论的范围内，而且较为简单，也没必要专门写出来。如果你还有哪里不会直接联系我就行了。</p>
+<p>然后刷新一下你的博客。我们就可以看到已经恢复正常了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fwenkghbz6j30d801z3ya.jpg" alt=""><br>更改之后，博客的访问量不会回到初始的访问量为0的状态，还是会以以前的数值继续增长。<br>至于你是如何布局，是使用pv还是uv，是记录访问量还是访客人数等，这些都不在讨论的范围内，而且较为简单，也没必要专门写出来。如果你还有哪里不会直接联系我就行了。</p>
 <p>好了，写完了，又到凌晨了，各位晚安(￣o￣) . z Z</p>
 <p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
