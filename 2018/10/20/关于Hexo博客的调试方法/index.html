@@ -38,19 +38,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂这些，请你一定要三思后再去调试。不然你的博客可能会整个瘫痪。然后有了这些基础后，你还需要懂得html，js，css这些知识，你不需要会写代码，但是你一定要可以看懂基础的代码。其实在hexo中，出错率最高的是js，所以你一定要先排查js，然后排查其他原因。然后你需要会">
+<meta name="description" content="本文的关注点在于博客后期的优化，维护上，而不是博客的运行修复，配置，更新上。调试的前提是你已经安装并成功运行了hexo博客，而且是已经成功发布了博文。而且对于博客的优化，美化等工作是长期的，不可能一蹴而就，这些工作往往需要花费我们更多的时间以及精力来完善博客。  下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Hexo博客的调试方法">
 <meta property="og:url" content="https://bingyublog.com/2018/10/20/关于Hexo博客的调试方法/index.html">
 <meta property="og:site_name" content="冰羽の博客">
-<meta property="og:description" content="下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂这些，请你一定要三思后再去调试。不然你的博客可能会整个瘫痪。然后有了这些基础后，你还需要懂得html，js，css这些知识，你不需要会写代码，但是你一定要可以看懂基础的代码。其实在hexo中，出错率最高的是js，所以你一定要先排查js，然后排查其他原因。然后你需要会">
+<meta property="og:description" content="本文的关注点在于博客后期的优化，维护上，而不是博客的运行修复，配置，更新上。调试的前提是你已经安装并成功运行了hexo博客，而且是已经成功发布了博文。而且对于博客的优化，美化等工作是长期的，不可能一蹴而就，这些工作往往需要花费我们更多的时间以及精力来完善博客。  下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg">
-<meta property="og:updated_time" content="2018-10-20T06:49:58.189Z">
+<meta property="og:updated_time" content="2018-11-08T15:04:52.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Hexo博客的调试方法">
-<meta name="twitter:description" content="下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂这些，请你一定要三思后再去调试。不然你的博客可能会整个瘫痪。然后有了这些基础后，你还需要懂得html，js，css这些知识，你不需要会写代码，但是你一定要可以看懂基础的代码。其实在hexo中，出错率最高的是js，所以你一定要先排查js，然后排查其他原因。然后你需要会">
+<meta name="twitter:description" content="本文的关注点在于博客后期的优化，维护上，而不是博客的运行修复，配置，更新上。调试的前提是你已经安装并成功运行了hexo博客，而且是已经成功发布了博文。而且对于博客的优化，美化等工作是长期的，不可能一蹴而就，这些工作往往需要花费我们更多的时间以及精力来完善博客。  下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg">
 
 
@@ -415,7 +415,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg" rel="gallery_cjo06pp6s00d1ycwawxcwhtn8"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg" rel="gallery_cjo8qmt4e00ace8wa60928t3u"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg" itemprop="contentUrl"/>
               </a>
@@ -429,15 +429,77 @@
       
 
       
-        <span itemprop="articleBody"><p>下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂这些，请你一定要三思后再去调试。不然你的博客可能会整个瘫痪。<br>然后有了这些基础后，你还需要懂得html，js，css这些知识，你不需要会写代码，但是你一定要可以看懂基础的代码。其实在hexo中，出错率最高的是js，所以你一定要先排查js，然后排查其他原因。<br>然后你需要会使用浏览器的开发者工具。<br>F12大法永远是你调试网站最有力的工具。<br>我以火狐浏览器为例简要说明一下。<br>打开控制台后，首先调整到“错误”一栏，然后刷先网页。你查看报错信息即可。如果你看不懂报错信息，就把报错信息全部复制粘贴进搜索框，网上会有解决办法。<br>然后你再去你的博客的配置文件中，找到该段代码所在的文件，你打开后找到该代码，进行分析即可。一般来说，出错的原因都是因为调用不到，这个时候你只需要查找代码的位置，然后使用相对于代码的位置来使代码可以成功调用即可。还有就是也有可能一些代码已经不维护了，或者关闭了。比如网易跟帖的评论系统，jiathis的分享功能等。这些就只能换其他的了。</p>
+        <span itemprop="articleBody"><blockquote>
+<p>本文的关注点在于博客后期的优化，维护上，而不是博客的运行修复，配置，更新上。调试的前提是你已经安装并成功运行了hexo博客，而且是已经成功发布了博文。而且对于博客的优化，美化等工作是长期的，不可能一蹴而就，这些工作往往需要花费我们更多的时间以及精力来完善博客。</p>
+</blockquote>
+<p>下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂这些，请你一定要三思后再去调试。不然你的博客可能会整个瘫痪。官方的hexo文档是最权威的，请仔细阅读后再做调试。</p>
+<blockquote>
+<p>Hexo文档地址:<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
+</blockquote>
+<p>然后有了这些基础后，你还需要懂得html，js，css这些知识，你不需要会写代码，但是你一定要可以看懂一些基础简单的代码。其实在hexo中，出错率最高的是js，所以你一定要先排查js，然后排查html和css的原因。在网页中html负责 <strong>结构</strong>，CSS负责 <strong>样式</strong>，js负责 <strong>功能</strong>。</p>
+<p>然后你需要会使用浏览器的开发者工具。F12大法永远是你调试网站最有力的工具。</p>
+<p>我以火狐浏览器为例简要说明一下。</p>
+<p>打开你的博客，然后安装“F12”,打开控制台后，首先调整到“错误”一栏，然后刷先网页。你查看报错信息即可。如果你看不懂报错信息，就把报错信息全部复制粘贴进搜索框，网上会有解决办法。</p>
+<p>然后你再去你的博客的配置文件中，找到该段代码所在的文件。你打开后找到该段代码，进行分析即可。一般来说，出错的原因都是因为调用不到，这个时候你只需要查找代码的位置，然后使用相对于代码的位置来使代码可以成功调用即可。但是有一点必须要说明一下。就是这个调用的代码也许是在本地的配置文件中，也有可能是调用的cdn的代码。(那么什么是cdn调用的代码呢？在最下面我有讲到)如果是cdn的代码，你需要测试一下是否可以正常使用，并且需要查看一下是http的还是https的，你的博客支不支持调用等。因为就是很有可能一些代码已经不维护了，或者关闭了。比如网易跟帖的评论系统，jiathis的分享功能等。这些就只能换其他的了。</p>
 <p>我使用hexo也才刚半年的时间，所以说，提供的方法可能不到位，还请各位给我多多反馈意见和建议。</p>
-<p>并且我还要唠叨几句关于cdn加速的问题。<br>引用的两种方式：</p>
-<p>1 下载代码文件至本地项目中，引入。</p>
-<p>2 通过 CDN（内容分发网络） 引用它<br>使用CDN引用的一个好处：许多用户在访问其他站点时，已经从百度、又拍云、新浪、谷歌或微软加载过 jQuery。所有结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。<br>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。</p>
+<p>下面我讲几句关于cdn加速的问题。</p>
+<p>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。</p>
+<p>网页中引用代码的两种方式：</p>
+<ol>
+<li><p>下载代码文件至本地项目中引入。</p>
+</li>
+<li><p>通过 CDN（内容分发网络）引用。</p>
+</li>
+</ol>
+<p>使用CDN引用的一个好处：许多用户在访问其他站点时，已经从百度、又拍云、新浪、谷歌或微软加载过 jQuery。所有结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。减少等待时间,增加网页的同时载入速度,更好的缓存,内容分发，解决网络拥挤和提供网站相应速度。</p>
 <p>CDN公共库是指将常用的JS库存放在CDN节点，以方便广大开发者直接调用。与将JS库存放在服务器单机上相比，CDN公共库更加稳定、高速。一般的CDN公共库都会包含全球所有最流行的开源JavaScript库。</p>
-<p>减少等待时间,增加网页的同时载入速度,更好的缓存,内容分发，解决网络拥挤和提供网站相应速度。<br>CDN公共库是指将常用的JS库存放在CDN节点，以方便广大开发者直接调用。与将JS库存放在服务器单机上相比，CDN公共库更加稳定、高速。一般的CDN公共库都会包含全球所有最流行的开源JavaScript库。</p>
-<p>免费的js库：<a href="https://blog.csdn.net/weixin_38023551/article/details/78677486?utm_source=blogxgwz0" target="_blank" rel="noopener">https://blog.csdn.net/weixin_38023551/article/details/78677486?utm_source=blogxgwz0</a></p>
+<p>免费的js库：</p>
+<ol>
+<li>BootCDN</li>
+</ol>
+<p><a href="http://www.bootcdn.cn/" target="_blank" rel="noopener">http://www.bootcdn.cn/</a> 目前前端开源的项目几乎都涵盖了，支持http和https。</p>
+<ol>
+<li>百度静态资源公共库</li>
+</ol>
+<p><a href="http://cdn.code.baidu.com/一个是稳定，快速，全面，开源的国内CDN加速服务。" target="_blank" rel="noopener">http://cdn.code.baidu.com/一个是稳定，快速，全面，开源的国内CDN加速服务。</a></p>
+<ol>
+<li>Staticfile CDN</li>
+</ol>
+<p><a href="https://www.staticfile.org/基于CDN" target="_blank" rel="noopener">https://www.staticfile.org/基于CDN</a> 加速由七牛云提供包括 JS、CSS、image 和 swf 等静态文件的，支持http和https。</p>
+<ol>
+<li>来自微软的问候（发现并不这么好用）</li>
+</ol>
+<p><a href="https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview资源不太全不如以上几个。可能是业务的原因吧。" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview资源不太全不如以上几个。可能是业务的原因吧。</a></p>
+<ol>
+<li>一个基于github的cdn库，无论是数量还是质量都是不错的。</li>
+</ol>
+<p><a href="https://cdnjs.com/一个公益项目。英文的网站，但是加载速度还是可以的。" target="_blank" rel="noopener">https://cdnjs.com/一个公益项目。英文的网站，但是加载速度还是可以的。</a></p>
+<ol>
+<li>一个只有jQuery的cdn。</li>
+</ol>
+<p><a href="http://code.jquery.com/" target="_blank" rel="noopener">http://code.jquery.com/</a></p>
+<ol>
+<li>基于百度云的资源站</li>
+</ol>
+<p><a href="https://cloud.baidu.com/doc/Developer/index.html；各种开发语言的sdk均可以免费下载，是程序员不可多得福利站。" target="_blank" rel="noopener">https://cloud.baidu.com/doc/Developer/index.html；各种开发语言的sdk均可以免费下载，是程序员不可多得福利站。</a></p>
+<ol>
+<li>又拍云的js库（资源较少）</li>
+</ol>
+<p><a href="http://jscdn.upai.com/" target="_blank" rel="noopener">http://jscdn.upai.com/</a></p>
+<ol>
+<li>360网站卫士常用前端公共库CDN服务（比较卡，资源丰富）</li>
+</ol>
+<p><a href="http://libs.useso.com/资源丰富" target="_blank" rel="noopener">http://libs.useso.com/资源丰富</a> 提供Google公共库、Google字体库替换服务有时在国外无法加载，导致网页加载被阻塞。</p>
+<ol>
+<li>今日头条静态资源公共库</li>
+</ol>
+<p><a href="https://cdn.bytedance.com/" target="_blank" rel="noopener">https://cdn.bytedance.com/</a> 支持：https、http，支持 combo；代码查看；资源丰富，支持字体、css、png 等；更新频繁；</p>
+<ol>
+<li>CDNJS.NET</li>
+</ol>
+<p><a href="http://cdnjs.net/" target="_blank" rel="noopener">http://cdnjs.net/</a></p>
 <p>我在博客的<a href="https://www.bingyublog.com/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" target="_blank" rel="noopener">在线工具</a>里已经添加了一些不错的js库，大家有需要的话，可以拿来用。</p>
+<p>未完待续…</p>
 <p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
@@ -681,7 +743,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">149</span>
+              <span class="site-state-item-count">148</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
