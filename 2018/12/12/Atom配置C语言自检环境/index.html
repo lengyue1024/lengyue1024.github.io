@@ -47,7 +47,7 @@
 <meta property="og:description" content="环境：Windows 10   Atom 的安装就不需要说了。 首先我们需要配置好GCC环境。并保证已经配置到全局变量了。Windows上需要使用MinGW来配置GCC环境，下载链接为： https://sourceforge.net/projects/mingw/files/latest/download，然后按照提示安装就可以了。但是最重要的是需要设置环境变量。桌面－》鼠标右键单击我的电脑－》">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fy4e1x5np9j31ip0u0n50.jpg">
-<meta property="og:updated_time" content="2018-12-13T14:30:45.119Z">
+<meta property="og:updated_time" content="2018-12-14T03:27:46.267Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Atom配置C语言代码编译环境">
 <meta name="twitter:description" content="环境：Windows 10   Atom 的安装就不需要说了。 首先我们需要配置好GCC环境。并保证已经配置到全局变量了。Windows上需要使用MinGW来配置GCC环境，下载链接为： https://sourceforge.net/projects/mingw/files/latest/download，然后按照提示安装就可以了。但是最重要的是需要设置环境变量。桌面－》鼠标右键单击我的电脑－》">
@@ -415,7 +415,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fy4e1x5np9j31ip0u0n50.jpg" rel="gallery_cjpmr3fui0001wkwaskcp5van"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fy4e1x5np9j31ip0u0n50.jpg" rel="gallery_cjpnku31d00050cwaf8d651t7"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fy4e1x5np9j31ip0u0n50.jpg" itemprop="contentUrl"/>
               </a>
@@ -439,7 +439,7 @@
 </ul>
 <p>下面给atom安装扩展，搜索=并安装“linter-gcc”与“linter”两个插件。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fy4dne9u11j30nf06uglv.jpg" alt=""><br>在安装过程中，可能会提示你需要安装依赖，那么你点击安装即可。<br>下面我们需要设置一下插件。选择“linter-gcc”—–“setting” 。<br>将路径改为“gcc”或“g++”。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fy4doqa4w7j30j203j0sq.jpg" alt=""><br>并且勾选“Lint on-the-fly”(表示在书写的同时编译)。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fy4dpsm82yj30hz04pdfv.jpg" alt=""><br>如果不勾选此项，只有在文件被保存时才编译代码。如果勾选了“Lint on-the-fly”，只要写代码时有停顿的时候，软件就会自动编译整个程序并显示错误，停顿的等待时间可以在“Lint on-the-fly”选项下面的文本框中键入，单位是ms。 如果你输入了错误的代码后，atom就会动态显示错误个数并且能在错误那行代码前面显示红点。在下面可以设置检错的时间，以ms为单位，默认为300，为了提高速度，我在此改为了100，大家根据需要修改即可。</p>
 <p>为了让程序真正的跑起来，我们还可以安装“gcc-make-run”插件，安装完成后，按“F6”即可编译并运行程序。这不是本文重点，在此便略去不说了。<br>下面我演示一下效果，以便各位能自检插件是否设置成功以及快速上手该自检功能。我这里是随便打开一个自己写好的C程序并且做出一些错误来验证是否可以成功检错。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fy4du5r6o2g30p50icjze.gif" alt=""><br>并且我们可以看到，所有的error都会自动在该行显示红色图标，所有的warning都会显示黄色图标。</p>
-<p>如果你写的是python，那么你可以使用 <a href="https://atom.io/packages/linter-python-pep8" target="_blank" rel="noopener">linter-python-pep8</a> 这个插件；如果你写的是Java，你可以使用 <a href="https://atom.io/packages/linter-javac" target="_blank" rel="noopener">linter-javac</a> 其设置方法和linter-gcc类似。</p>
+<p>如果你写的是python，那么你可以使用 <a href="https://atom.io/packages/linter-python-pep8" target="_blank" rel="noopener">linter-python-pep8</a> 这个插件；如果你写的是Java，你可以使用 <a href="https://atom.io/packages/linter-javac" target="_blank" rel="noopener">linter-javac</a> 。其设置方法和linter-gcc类似。</p>
 <p>好了，各位如果哪里有不懂得或者按照步骤没有成功的可以加群联系我，欢迎与我讨论。</p>
 <p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
@@ -473,6 +473,8 @@
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/14/atom写C语言乱码问题解决/" rel="prev">atom写C语言乱码问题解决</a>
             
           </div>
 
@@ -684,7 +686,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">150</span>
+              <span class="site-state-item-count">151</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
