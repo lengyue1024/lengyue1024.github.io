@@ -38,19 +38,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="cut命令可以从一个文本文件或文本流中cut截取字符串在Linux系统中，我们可以通过’man cut’或者’cut –help’ 来查看cut的相关使用手册。我在这里做出一些总结： 参数说明 -b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。 -c ：以字符为单位进行分割。 -d ：自定义分隔符，默认为制表符。 -f ：与-d一起使用，指定显示哪个区域。">
+<meta name="description" content="cut命令可以从一个文本文件或文本流中提取文本列。cut命令将所有命令行参数理解为要执行操作的文件的文件名，如果没有参数，就对标准输入流进行操作。 在Linux系统中，我们可以通过’man cut’或者’cut –help’ 来查看cut的相关使用手册。我在这里做出一些总结： 参数说明 -b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。 -c ：以字符为单位">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="提取文本---cut命令">
 <meta property="og:url" content="https://bingyublog.com/2018/12/31/提取和组合文本：cut和paste命令/index.html">
 <meta property="og:site_name" content="冰羽の博客">
-<meta property="og:description" content="cut命令可以从一个文本文件或文本流中cut截取字符串在Linux系统中，我们可以通过’man cut’或者’cut –help’ 来查看cut的相关使用手册。我在这里做出一些总结： 参数说明 -b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。 -c ：以字符为单位进行分割。 -d ：自定义分隔符，默认为制表符。 -f ：与-d一起使用，指定显示哪个区域。">
+<meta property="og:description" content="cut命令可以从一个文本文件或文本流中提取文本列。cut命令将所有命令行参数理解为要执行操作的文件的文件名，如果没有参数，就对标准输入流进行操作。 在Linux系统中，我们可以通过’man cut’或者’cut –help’ 来查看cut的相关使用手册。我在这里做出一些总结： 参数说明 -b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。 -c ：以字符为单位">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fyq4wkb1hjj30k007g3yi.jpg">
-<meta property="og:updated_time" content="2018-12-31T11:52:45.801Z">
+<meta property="og:updated_time" content="2018-12-31T14:43:03.068Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="提取文本---cut命令">
-<meta name="twitter:description" content="cut命令可以从一个文本文件或文本流中cut截取字符串在Linux系统中，我们可以通过’man cut’或者’cut –help’ 来查看cut的相关使用手册。我在这里做出一些总结： 参数说明 -b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。 -c ：以字符为单位进行分割。 -d ：自定义分隔符，默认为制表符。 -f ：与-d一起使用，指定显示哪个区域。">
+<meta name="twitter:description" content="cut命令可以从一个文本文件或文本流中提取文本列。cut命令将所有命令行参数理解为要执行操作的文件的文件名，如果没有参数，就对标准输入流进行操作。 在Linux系统中，我们可以通过’man cut’或者’cut –help’ 来查看cut的相关使用手册。我在这里做出一些总结： 参数说明 -b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。 -c ：以字符为单位">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fyq4wkb1hjj30k007g3yi.jpg">
 
 
@@ -415,7 +415,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fyq4wkb1hjj30k007g3yi.jpg" rel="gallery_cjqc9oo2y00bt9gwao50hjxdx"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fyq4wkb1hjj30k007g3yi.jpg" rel="gallery_cjqcfofz000bzzowa54dmsi5u"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fyq4wkb1hjj30k007g3yi.jpg" itemprop="contentUrl"/>
               </a>
@@ -429,7 +429,8 @@
       
 
       
-        <span itemprop="articleBody"><p>cut命令可以从一个文本文件或文本流中<br>cut截取字符串<br>在Linux系统中，我们可以通过’man cut’或者’cut –help’ 来查看cut的相关使用手册。我在这里做出一些总结：</p>
+        <span itemprop="articleBody"><p>cut命令可以从一个文本文件或文本流中提取文本列。cut命令将所有命令行参数理解为要执行操作的文件的文件名，如果没有参数，就对标准输入流进行操作。</p>
+<p>在Linux系统中，我们可以通过’man cut’或者’cut –help’ 来查看cut的相关使用手册。我在这里做出一些总结：</p>
 <p>参数说明</p>
 <pre><code>-b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。
 -c ：以字符为单位进行分割。
@@ -440,24 +441,14 @@
 <pre><code>第一，字节（bytes），用选项-b
 第二，字符（characters），用选项-c
 第三，域（fields），用选项-f
-</code></pre><p>字符串截取操作cut，cut以行为单位进行操作。<br>cut命令主要是接受三个定位方法：<br>第一，字节（bytes），用选项-b<br>第二，字符（characters），用选项-c<br>第三，域（fields），用选项-f</p>
-<p>cut -f</p>
-<p>为什么会有“域”的提取呢，因为刚才提到的-b和-c只能在固定格式的文档中提取信息，而对于非固定格式的信息则束手无策。</p>
-<p>这时候“域”就派上用场了。如果你观察过/etc/passwd文件，你会发现，它并不像who的输出信息那样具有固定格式，而是比较零散的排放。</p>
-<p>但是，冒号在这个文件的每一行中都起到了非常重要的作用，冒号用来隔开每一个项。</p>
-<p>我们很幸运，cut命令提供了这样的提取方式，具体的说就是设置“间隔符”，再设置“提取第几个域”，就OK了！</p>
-<p>在cut -d中用什么符号来设定制表符或空格</p>
+</code></pre><p>字符串截取操作时候，cut以行为单位进行操作。其中在cut在进行截取字符串操作的时候，以-f选项使用最多，也是最好用的一个选项。下面就对-f选项进行详细讲解。-f选项是针对“域”信息的提取，为什么会有“域”的提取呢，因为-b和-c选项只能在固定格式的文档中提取信息，而对于非固定格式的信息则束手无策。 这时候就应该用“域”。 cut命令提供了这样的提取方式，具体的说就是设置“间隔符”，再设置“提取第几个域”，就OK了<br>什么是“域”呢？其实就是用分隔符分割的区域而已。<br>首先要使用“域”，必须选定一个分隔符来进行界定“域”的存在。这个时候需要-d选项，所以使用-f选项的时候，通常会先使用-d选项。</p>
 <p>cut的-d选项的默认间隔符就是制表符，所以当你就是要使用制表符的时候，完全就可以省略-d选项，而直接用－f来取域就可以了。</p>
-<p>OK，现在我们要实战一下，cut的用法。随便找个常用的例子来说吧。就拿获取IP地址来举例。我们通过grep来过滤IP地址，但是注意的是grep过滤的是那一行。所以我们需要用cut来截取字符串，当然你可以用其他的方法来截取。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ ifconfig lo | grep &quot;inet&quot; | cut -d &quot;:&quot; -f 2 | cut -d &quot; &quot; -f 1</span><br></pre></td></tr></table></figure></p>
-<p>好了，这个命令看起来有那么一点长，但是其实很好理解，并且这些我们不论是在日常的工作中，还是在写shell程序时候，这个都是可以用得到的。<br>下面我就来解释一下这个命令是怎么写的，并且是什么意思。<br>之间使用管道命令来表示上一条命令的输出，作为下一条命令参数。<br>首先我们使用ifconfig lo来输出本地的IP地址，当然你可以输出任何你计算机上的IP地址。<br>然后使用grep来过滤掉不必要的字符，我们只想要包含IP地址的字符串。注意的是grep只能过滤掉包含所需信息的那一行。所以其他信息我们便不能通过grep来过滤了，此时我们需要用到一些特殊命令来截取字符串，这个时候我们使用cut命令来进行字符串的截取。我们只想要IP地址，我们只盯紧目标即可。我们需要观察我们目前所得到的这一行信息，然后利用规律以及可实现的方法来进去提取有效信息。我们会发现这些信息之间都是用“：”老i作为分割的。所以我们需要用到cut命令的域。我们把分割方式设置为”:”。此时，信息就被 分割为了3处，也就是三个域了。 此时我们需要提取第二个域，也就是使用参数”-f 2”来截取。然而这还不够，此时我们输出一下信息可以看到，还包含了我们不需要的一些信息，比如“mask”。所以我们需要把这些不需要的字符也过滤掉。也就是把他们也截取到。然后我们又会发现IP地址和”mask”之间多了一个空格，所以我们可以再次把它分为2个域，只截取空格前面的字符，即是IP地址了。但是这是我这个终端下的演示，也许你换个其他形式的终端或者换个操作系统就不行了。为什么呢？因为</p>
-<p><strong>cut的缺陷和不足</strong></p>
-<p>处理多空格…..</p>
-<p>如果文件里面的某些域是由若干个空格来间隔的，那么用cut就有点麻烦了，因为cut只擅长处理“以一个字符间隔”的文本内容。</p>
-<p>当你对本篇文章的内容全部理解后，我想你在什么地方使用cut命令，什么时候使用，怎么使用，已经有了一个基础的了解。这里我要 再说一句，没有万能的命令，也没有不存在却缺陷的命令，我们需要做的是在适合的时候，使用恰当的命令。包括组合命令。</p>
-<details><br><summary>隐藏彩蛋,点击打开</summary><br><a>这是2018年的最后一篇博文了，希望各位2019年一切安好，心想事成。从2018年2月建站开始，截止到我写完这篇文章，已经历经了10个月，我写了153篇文章。基本全部是本人原创文章。谢谢各位的陪伴，2019年，我会做的更好。你也是啊 (0^◇^0)/</a><br></details>
+<p>OK，现在我们要实战一下cut的域的用法。随便找个常用的例子来说吧，就还拿获取IP地址来举例。我们通过grep来过滤IP地址，但是注意的是grep过滤的是那一行信息。所以我们需要用cut来截取字符串，当然你可以用其他的方法来截取。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bingyu@ubuntu:~$ ifconfig lo | grep &quot;inet&quot; | cut -d &quot;:&quot; -f 2 | cut -d &quot; &quot; -f 1</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fyqaoil7ukj30tt0addh6.jpg" alt=""><br>好了，这个命令看起来有那么一点长，但是其实很好理解，并且这些我们不论是在日常的工作中，还是在写shell程序时候，这个都是可以用得到的。<br>下面我就来解释一下这个命令是怎么写的，并且是什么意思。<br>命令之间使用管道命令来表示上一条命令的输出，作为下一条命令参数。<br>首先我们使用ifconfig lo来输出本地的IP地址，当然你可以输出任何你计算机上的IP地址。<br>然后使用grep来过滤掉不必要的字符，我们只想要包含IP地址的字符串。注意的是grep只能过滤掉包含所需信息的那一行。所以其他信息我们便不能通过grep来过滤了，此时我们需要用到一些特殊命令来截取字符串，这个时候我们使用cut命令来进行字符串的截取。我们只想要IP地址，我们只盯紧目标即可。我们需要观察我们目前所得到的这一行信息，然后利用规律以及可实现的方法来进去提取有效信息。我们会发现这些信息之间都是用“：”老i作为分割的。所以我们需要用到cut命令的域。我们把分割方式设置为”:”。此时，信息就被 分割为了3处，也就是三个域了。 此时我们需要提取第二个域，也就是使用参数”-f 2”来截取。然而这还不够，此时我们输出一下信息可以看到，还包含了我们不需要的一些信息，比如“mask”。所以我们需要把这些不需要的字符也过滤掉。也就是把他们也截取到。然后我们又会发现IP地址和”mask”之间多了一个空格，所以我们可以再次把它分为2个域，只截取空格前面的字符，即是IP地址了。但是这是在我zsh终端下的演示，也许你换个其他形式的终端或者换个操作系统就不行了。为什么呢？因为在我这个终端下显示的有冒号，可以利用冒号进行分域。比如下面的这个终端没有出现冒号，全部是用空格来分割的。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fyqars0wnoj30jw04qt9q.jpg" alt=""><br>此时，我们不能自然不能使用“：”来进行分割域，也许你会想到使用空格来分割域，但是这样是不行的，这就需要我们了解到cut的缺陷与不足了。<br><strong>cut的缺陷和不足</strong> ：处理多空格，如果文件里面的某些域是由若干个空格来间隔的，那么用cut就不行了，因为cut只擅长处理“以一个字符间隔”的文本内容。</p>
+<p>当你对本篇文章的内容全部理解后，我想你在什么地方使用cut命令，什么时候使用，怎么使用，已经有了一个基础的了解。这里我要再说一句，没有万能的命令，也没有不存在缺陷的命令，我们需要做的是在适合的时候，使用恰当的命令，包括组合命令。一个命令显然不能胜任任何需求，此时我们就需要组合命令来满足需求。</p>
+<details><br><summary>隐藏彩蛋,点击打开</summary><br><a>彩蛋其实就是我对各位的新年祝福，嘿嘿(≧∇≦)ﾉ这是2018年的最后一篇博文了，希望各位2019年一切安好，心想事成。从2018年2月建站开始，截止到我写完这篇文章，这个时候是2018/12/31 22：41.已经历经了10个月，我写了153篇文章，基本全部是我本人原创文章。期间也收到了许多读者的反馈，谢谢各位的支持，谢谢各位的陪伴，2019年，我会做的更好。你也要加油啊 \(0^◇^0)/</a><br></details>
 
-
-<p><a href="https://blog.csdn.net/yangshangwei/article/details/52563123" target="_blank" rel="noopener">https://blog.csdn.net/yangshangwei/article/details/52563123</a><br><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
+<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
 </span>
       
     </div>
