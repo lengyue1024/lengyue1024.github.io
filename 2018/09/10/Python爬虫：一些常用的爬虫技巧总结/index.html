@@ -1,0 +1,1119 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→" />
+
+
+
+  <meta name="keywords" content="python," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="基本抓取网页get方法1234import urllib2url  &quot;http://www.baidu.com&quot;respons = urllib2.urlopen(url)print response.read() post方法123456789import urllibimport urllib2url = &quot;http://abcde.com&quot;form = &amp;#123;&apos;name&apos;:&apos;abc&apos;,">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python爬虫：一些常用的爬虫技巧总结">
+<meta property="og:url" content="https://bingyublog.com/2018/09/10/Python爬虫：一些常用的爬虫技巧总结/index.html">
+<meta property="og:site_name" content="冰羽の博客">
+<meta property="og:description" content="基本抓取网页get方法1234import urllib2url  &quot;http://www.baidu.com&quot;respons = urllib2.urlopen(url)print response.read() post方法123456789import urllibimport urllib2url = &quot;http://abcde.com&quot;form = &amp;#123;&apos;name&apos;:&apos;abc&apos;,">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvajma9ahqj30jg06e0t5.jpg">
+<meta property="og:updated_time" content="2018-09-16T15:20:41.248Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python爬虫：一些常用的爬虫技巧总结">
+<meta name="twitter:description" content="基本抓取网页get方法1234import urllib2url  &quot;http://www.baidu.com&quot;respons = urllib2.urlopen(url)print response.read() post方法123456789import urllibimport urllib2url = &quot;http://abcde.com&quot;form = &amp;#123;&apos;name&apos;:&apos;abc&apos;,">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fvajma9ahqj30jg06e0t5.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title> Python爬虫：一些常用的爬虫技巧总结 | 冰羽の博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7b451f13126c1ccdebfa8d48ee43a5d0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">冰羽の博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+	  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'xxx','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Python爬虫：一些常用的爬虫技巧总结
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2018-09-10T21:03:50+08:00" content="2018-09-10">
+            2018-09-10
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/python/" itemprop="url" rel="index">
+                  <span itemprop="name">python</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fvajma9ahqj30jg06e0t5.jpg" rel="gallery_cjqdgxt5h003ogcway3ma6fvw"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvajma9ahqj30jg06e0t5.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+
+        </div>
+      
+
+      
+        <span itemprop="articleBody"><h3 id="基本抓取网页"><a href="#基本抓取网页" class="headerlink" title="基本抓取网页"></a>基本抓取网页</h3><h4 id="get方法"><a href="#get方法" class="headerlink" title="get方法"></a>get方法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line">url  <span class="string">"http://www.baidu.com"</span></span><br><span class="line">respons = urllib2.urlopen(url)</span><br><span class="line"><span class="keyword">print</span> response.read()</span><br></pre></td></tr></table></figure>
+<h4 id="post方法"><a href="#post方法" class="headerlink" title="post方法"></a>post方法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"></span><br><span class="line">url = <span class="string">"http://abcde.com"</span></span><br><span class="line">form = &#123;<span class="string">'name'</span>:<span class="string">'abc'</span>,<span class="string">'password'</span>:<span class="string">'1234'</span>&#125;</span><br><span class="line">form_data = urllib.urlencode(form)</span><br><span class="line">request = urllib2.Request(url,form_data)</span><br><span class="line">response = urllib2.urlopen(request)</span><br><span class="line"><span class="keyword">print</span> response.read()</span><br></pre></td></tr></table></figure>
+<h3 id="使用代理IP"><a href="#使用代理IP" class="headerlink" title="使用代理IP"></a>使用代理IP</h3><p>在开发爬虫过程中经常会遇到IP被封掉的情况，这时就需要用到代理IP；</p>
+<p>在urllib2包中有ProxyHandler类，通过此类可以设置代理访问网页，如下代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"></span><br><span class="line">proxy = urllib2.ProxyHandler(&#123;<span class="string">'http'</span>: <span class="string">'127.0.0.1:8087'</span>&#125;)</span><br><span class="line">opener = urllib2.build_opener(proxy)</span><br><span class="line">urllib2.install_opener(opener)</span><br><span class="line">response = urllib2.urlopen(<span class="string">'http://www.baidu.com'</span>)</span><br><span class="line"><span class="keyword">print</span> response.read()</span><br></pre></td></tr></table></figure></p>
+<h3 id="Cookies处理"><a href="#Cookies处理" class="headerlink" title="Cookies处理"></a>Cookies处理</h3><p>cookies是某些网站为了辨别用户身份、进行session跟踪而储存在用户本地终端上的数据(通常经过加密)，python提供了cookielib模块用于处理cookies，cookielib模块的主要作用是提供可存储cookie的对象，以便于与urllib2模块配合使用来访问Internet资源.<br>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib2, cookielib</span><br><span class="line"></span><br><span class="line">cookie_support= urllib2.HTTPCookieProcessor(cookielib.CookieJar())</span><br><span class="line">opener = urllib2.build_opener(cookie_support)</span><br><span class="line">urllib2.install_opener(opener)</span><br><span class="line">content = urllib2.urlopen(<span class="string">'http://XXXX'</span>).read()</span><br></pre></td></tr></table></figure></p>
+<p>关键在于CookieJar()，它用于管理HTTP cookie值、存储HTTP请求生成的cookie、向传出的HTTP请求添加cookie的对象。整个cookie都存储在内存中，对CookieJar实例进行垃圾回收后cookie也将丢失，所有过程都不需要单独去操作。</p>
+<h4 id="手动添加cookie"><a href="#手动添加cookie" class="headerlink" title="手动添加cookie"></a>手动添加cookie</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cookie = <span class="string">"PHPSESSID=91rurfqm2329bopnosfu4fvmu7; kmsign=55d2c12c9b1e3; KMUID=b6Ejc1XSwPq9o756AxnBAg="</span></span><br><span class="line"></span><br><span class="line">request.add_header(<span class="string">"Cookie"</span>, cookie)</span><br></pre></td></tr></table></figure>
+<h3 id="伪装成浏览器"><a href="#伪装成浏览器" class="headerlink" title="伪装成浏览器"></a>伪装成浏览器</h3><p>某些网站反感爬虫的到访，于是对爬虫一律拒绝请求。所以用urllib2直接访问网站经常会出现HTTP Error 403: Forbidden的情况。<br>对有些 header 要特别留意，Server 端会针对这些 header 做检查：  </p>
+<ul>
+<li>User-Agent 有些 Server 或 Proxy 会检查该值，用来判断是否是浏览器发起的 Request  </li>
+<li>Content-Type 在使用 REST 接口时，Server 会检查该值，用来确定 HTTP Body 中的内容该怎样解析    </li>
+</ul>
+<p>这时可以通过修改http包中的header来实现，代码片段如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">   <span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'</span></span><br><span class="line">&#125;</span><br><span class="line">request = urllib2.Request(</span><br><span class="line">   url = <span class="string">'http://my.oschina.net/jhao104/blog?catalog=3463517'</span>,</span><br><span class="line">   headers = headers</span><br><span class="line">)</span><br><span class="line"><span class="keyword">print</span> urllib2.urlopen(request).read()</span><br></pre></td></tr></table></figure></p>
+<h3 id="页面解析"><a href="#页面解析" class="headerlink" title="页面解析"></a>页面解析</h3><p>对于页面解析最强大的当然是正则表达式，这个对于不同网站不同的使用者都不一样，就不用过多的说明，附两个比较好的网址：  </p>
+<ul>
+<li>正则表达式入门：<a href="http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html" target="_blank" rel="noopener">http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html</a>    </li>
+<li>正则表达式在线测试：<a href="http://tool.oschina.net/regex/" target="_blank" rel="noopener">http://tool.oschina.net/regex/</a>    </li>
+</ul>
+<p>其次就是解析库了，常用的有两个lxml和BeautifulSoup，对于这两个的使用介绍两个比较好的网站：  </p>
+<ul>
+<li>lxml：<a href="http://my.oschina.net/jhao104/blog/639448" target="_blank" rel="noopener">http://my.oschina.net/jhao104/blog/639448</a>  </li>
+<li>BeautifulSoup：<a href="http://cuiqingcai.com/1319.html" target="_blank" rel="noopener">http://cuiqingcai.com/1319.html</a>  </li>
+</ul>
+<p>这两个库，都是HTML/XML的处理库，Beautifulsoup纯python实现，效率低，但是功能实用，比如能用通过结果搜索获得某个HTML节点的源码；lxmlC语言编码，高效，支持Xpath。</p>
+<h3 id="验证码的处理"><a href="#验证码的处理" class="headerlink" title="验证码的处理"></a>验证码的处理</h3><p>对于一些简单的验证码，可以进行简单的识别。本人也只进行过一些简单的验证码识别。但是有些反人类的验证码，比如12306，可以通过打码平台进行人工打码，当然这是要付费的。</p>
+<h3 id="gzip压缩"><a href="#gzip压缩" class="headerlink" title="gzip压缩"></a>gzip压缩</h3><p>有没有遇到过某些网页，不论怎么转码都是一团乱码。哈哈，那说明你还不知道许多web服务具有发送压缩数据的能力，这可以将网络线路上传输的大量数据消减 60% 以上。这尤其适用于 XML web 服务，因为 XML 数据 的压缩率可以很高。<br>但是一般服务器不会为你发送压缩数据，除非你告诉服务器你可以处理压缩数据。<br>于是需要这样修改代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib2, httplib</span><br><span class="line"></span><br><span class="line">request = urllib2.Request(<span class="string">'http://xxxx.com'</span>)</span><br><span class="line">request.add_header(<span class="string">'Accept-encoding'</span>, <span class="string">'gzip'</span>)        </span><br><span class="line">opener = urllib2.build_opener()</span><br><span class="line">f = opener.open(request)</span><br></pre></td></tr></table></figure></p>
+<p>这是关键:创建Request对象，添加一个 Accept-encoding 头信息告诉服务器你能接受 gzip 压缩数据。<br>然后就是解压缩数据：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> StringIO</span><br><span class="line"><span class="keyword">import</span> gzip</span><br><span class="line"></span><br><span class="line">compresseddata = f.read()</span><br><span class="line">compressedstream = StringIO.StringIO(compresseddata)</span><br><span class="line">gzipper = gzip.GzipFile(fileobj=compressedstream)</span><br><span class="line"><span class="keyword">print</span> gzipper.read()</span><br></pre></td></tr></table></figure></p>
+<h3 id="多线程并发抓取"><a href="#多线程并发抓取" class="headerlink" title="多线程并发抓取"></a>多线程并发抓取</h3><p>单线程太慢的话，就需要多线程了，这里给个简单的线程池模板 这个程序只是简单地打印了1-10，但是可以看出是并发的。<br>虽然说python的多线程很鸡肋，但是对于爬虫这种网络频繁型，还是能一定程度提高效率的。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br><span class="line"><span class="keyword">from</span> Queue <span class="keyword">import</span> Queue</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="comment"># q是任务队列</span></span><br><span class="line"><span class="comment">#NUM是并发线程总数</span></span><br><span class="line"><span class="comment">#JOBS是有多少任务</span></span><br><span class="line">q = Queue()</span><br><span class="line">NUM = <span class="number">2</span></span><br><span class="line">JOBS = <span class="number">10</span></span><br><span class="line"><span class="comment">#具体的处理函数，负责处理单个任务</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_somthing_using</span><span class="params">(arguments)</span>:</span></span><br><span class="line">   <span class="keyword">print</span> arguments</span><br><span class="line"><span class="comment">#这个是工作进程，负责不断从队列取数据并处理</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">working</span><span class="params">()</span>:</span></span><br><span class="line">   <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">       arguments = q.get()</span><br><span class="line">       do_somthing_using(arguments)</span><br><span class="line">       sleep(<span class="number">1</span>)</span><br><span class="line">       q.task_done()</span><br><span class="line"><span class="comment">#fork NUM个线程等待队列</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(NUM):</span><br><span class="line">   t = Thread(target=working)</span><br><span class="line">   t.setDaemon(<span class="keyword">True</span>)</span><br><span class="line">   t.start()</span><br><span class="line"><span class="comment">#把JOBS排入队列</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(JOBS):</span><br><span class="line">   q.put(i)</span><br><span class="line"><span class="comment">#等待所有JOBS完成</span></span><br><span class="line">q.join()</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>转载自：<a href="http://my.oschina.net/jhao104/blog/647308?fromerr=KzH2VGaK" target="_blank" rel="noopener">http://my.oschina.net/jhao104/blog/647308?fromerr=KzH2VGaK</a></p>
+</blockquote>
+<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
+</span>
+      
+    </div>
+    <div>
+   
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+
+   
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa tag"></i> python</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/11/Vim无法退出怎么办-显示recording/" rel="prev">Vim无法退出怎么办(显示recording) </a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/08/Linux文件目录/" rel="next">Linux常见文件目录解析</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        如果本文对您有帮助，还望赞赏一下，谢谢
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fvbbd19985j30b40b476c.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                    style="float:left;margin-left:25%;margin-right:10px;">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvbbd19985j30b40b476c.jpg" title="" height="164px" width="164px">
+                </a> 
+              
+
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fvbc7rlxo3j30b40b4tav.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvbc7rlxo3j30b40b4tav.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fvbbd19985j30b40b476c.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                                style="float:left;margin-left:25%;margin-right:10px;">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvbbd19985j30b40b476c.jpg" title="" height="164px" width="164px">
+                            </a> 
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fvbc7rlxo3j30b40b4tav.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvbc7rlxo3j30b40b4tav.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">冰羽</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">153</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://hackfun.org/" target="_blank">HackFun</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本抓取网页"><span class="nav-number">1.</span> <span class="nav-text">基本抓取网页</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#get方法"><span class="nav-number">1.1.</span> <span class="nav-text">get方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#post方法"><span class="nav-number">1.2.</span> <span class="nav-text">post方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用代理IP"><span class="nav-number">2.</span> <span class="nav-text">使用代理IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookies处理"><span class="nav-number">3.</span> <span class="nav-text">Cookies处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#手动添加cookie"><span class="nav-number">3.1.</span> <span class="nav-text">手动添加cookie</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪装成浏览器"><span class="nav-number">4.</span> <span class="nav-text">伪装成浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面解析"><span class="nav-number">5.</span> <span class="nav-text">页面解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证码的处理"><span class="nav-number">6.</span> <span class="nav-text">验证码的处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gzip压缩"><span class="nav-number">7.</span> <span class="nav-text">gzip压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多线程并发抓取"><span class="nav-number">8.</span> <span class="nav-text">多线程并发抓取</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+  
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; &nbsp;  2018 - 
+  <span itemprop="copyrightYear">2019
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冰羽
+  </span>
+
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UA50F9B4D7",
+    "hash": "7cce0e84b501ad9c874106f70967e299"
+});
+tpwidget("show");</script>
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2017,12,17,00,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML="本站已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  }, 1000);
+
+</script>
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
+</html>
