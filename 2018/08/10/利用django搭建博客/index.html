@@ -1,0 +1,1120 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→" />
+
+
+
+  <meta name="keywords" content="python," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="django说明8月1日，Django 2.1发布了。此次发布有以下几个重点：最低支持Python3.5，Python3.4正式被丢弃。如果你想了解更多的更新新特性，可以查阅更新日志：https://docs.djangoproject.com/en/2.1/releases/2.1/Django 是一个python的web框架。其实django架站挺复杂的。就是20篇文章也说不完整个过程。所以今">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用Django搭建博客">
+<meta property="og:url" content="https://bingyublog.com/2018/08/10/利用django搭建博客/index.html">
+<meta property="og:site_name" content="冰羽の博客">
+<meta property="og:description" content="django说明8月1日，Django 2.1发布了。此次发布有以下几个重点：最低支持Python3.5，Python3.4正式被丢弃。如果你想了解更多的更新新特性，可以查阅更新日志：https://docs.djangoproject.com/en/2.1/releases/2.1/Django 是一个python的web框架。其实django架站挺复杂的。就是20篇文章也说不完整个过程。所以今">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gposf36j30xc0f0n32.jpg">
+<meta property="og:updated_time" content="2018-08-28T11:09:02.781Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用Django搭建博客">
+<meta name="twitter:description" content="django说明8月1日，Django 2.1发布了。此次发布有以下几个重点：最低支持Python3.5，Python3.4正式被丢弃。如果你想了解更多的更新新特性，可以查阅更新日志：https://docs.djangoproject.com/en/2.1/releases/2.1/Django 是一个python的web框架。其实django架站挺复杂的。就是20篇文章也说不完整个过程。所以今">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gposf36j30xc0f0n32.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title> 利用Django搭建博客 | 冰羽の博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7b451f13126c1ccdebfa8d48ee43a5d0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">冰羽の博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+	  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'xxx','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              利用Django搭建博客
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2018-08-10T23:37:42+08:00" content="2018-08-10">
+            2018-08-10
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/python/" itemprop="url" rel="index">
+                  <span itemprop="name">python</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gposf36j30xc0f0n32.jpg" rel="gallery_cjqdglmgd00bkf0wa8k6rsgzu"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gposf36j30xc0f0n32.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+
+        </div>
+      
+
+      
+        <span itemprop="articleBody"><h2 id="django说明"><a href="#django说明" class="headerlink" title="django说明"></a>django说明</h2><p>8月1日，Django 2.1发布了。此次发布有以下几个重点：<br>最低支持Python3.5，Python3.4正式被丢弃。如果你想了解更多的更新新特性，可以查阅更新日志：<a href="https://docs.djangoproject.com/en/2.1/releases/2.1/" target="_blank" rel="noopener">https://docs.djangoproject.com/en/2.1/releases/2.1/</a><br><strong>Django</strong> 是一个python的web框架。其实django架站挺复杂的。就是20篇文章也说不完整个过程。所以今天只是简述一个过程，但是你可以放心，按照本教程操作，是可以搭建出一个简易网站的，有多简易呢？只有简单的静态html网页当然美化需要后期进行处理。我们只是做出一个样板来。<br>但是这已经是整个过程中最重要的一步了。以后美化也只是在现有基础上进行改进工作而已。<br>首先准备一个python环境。我以Linux环境为例介绍，但是其他操作系统也可按照此方法进行搭建。<br>本人操作环境: Ubuntu 16.04 (LTS) [本人并没有用Mac系统，只是给Ubuntu安装了Mac主题]，python2.7，django1.1.<br>各位，以自己的实际环境为准,首先说明一点，django 1.x和django2.x的存在很大的区别，而且各版本之间存在很大的差异，不向下兼容。一切以你的环境为主。<br>首先你应该验证一下你的python环境是否符合该django版本。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ python -V</span><br><span class="line">python 2.7</span><br></pre></td></tr></table></figure></p>
+<p>Django对Python版本的依赖关系如下表所示<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu390i16i7j30ih04rdfp.jpg" alt="1"><br>Django本身的版本支持路线图如下所示<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu39bvio85j30sm0dc755.jpg" alt="1"></p>
+<h2 id="下载安装django"><a href="#下载安装django" class="headerlink" title="下载安装django"></a>下载安装django</h2><p>首先下载django框架，适用pip包管理工具进行下载，并指定版本号为1.11，因为这个版本号是LTS的，可以得到很长时间的技术支持，而且该版本存在大量的学习文档，方便学习与使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ sudo -H pip install django==1.11</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2e5hdy8xj30m70gtwf6.jpg" alt="1"><br>我们从图中可以看到已经成功安装，我们还可以通过以下2个命令来进行查看是否成功安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ python -m django --version</span><br><span class="line">lengyue@ubuntu:~$ python</span><br><span class="line">&gt;&gt;&gt; import django</span><br><span class="line">&gt;&gt;&gt; print(django.get_version())</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2ec04nh2j30j204aq2t.jpg" alt="1"></p>
+<h2 id="创建myblog项目"><a href="#创建myblog项目" class="headerlink" title="创建myblog项目"></a>创建myblog项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ django-admin startproject myblog</span><br><span class="line">lengyue@ubuntu:~$ ls</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2eb28eksj30jb04ct8p.jpg" alt="1"><br>下面切换到myblog目录，并创建blog应用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ cd myblog/</span><br><span class="line">lengyue@ubuntu:~/myblog$ ls</span><br><span class="line">manage.py  myblog</span><br><span class="line">lengyue@ubuntu:~/myblog$ sudo python manange.py startapp blog</span><br><span class="line">lengyue@ubuntu:~/myblog$ ls</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2eg4sozvj30m60gqwev.jpg" alt="1"></p>
+<h2 id="项目结构说明"><a href="#项目结构说明" class="headerlink" title="项目结构说明"></a>项目结构说明</h2><p>然后我们来看一下项目目录结构图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~$ tree myblog</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2emc1gcej30lf0f7a9y.jpg" alt="1"><br>以下是项目的目录介绍,如果你想学习django的话，那么下面每个文件的作用都要十分的清晰。<br>目录介绍：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">manage.py ： Django项目里面的工具，通过它可以调用django shell和数据库等。</span><br><span class="line"></span><br><span class="line">myblog/</span><br><span class="line">| ---  settings.py ： 包含了项目的默认设置，包括数据库信息，调试标志以及其他一些工作的变量。</span><br><span class="line"></span><br><span class="line">| ---  urls.py ： 负责把URL模式映射到应用程序。</span><br><span class="line"></span><br><span class="line">| --- wsgi.py :  用于项目部署。</span><br><span class="line"></span><br><span class="line">blog /</span><br><span class="line"></span><br><span class="line">| --- admin.py  :  django 自带admin后面管理，将models.py 中表映射到后台。</span><br><span class="line"></span><br><span class="line">| --- apps.py :  blog 应用的相关配置。</span><br><span class="line"></span><br><span class="line">| --- models.py  : Django 自带的ORM，用于设计数据库表。</span><br><span class="line"></span><br><span class="line">| --- tests.py  :  用于编写Django单元测试。</span><br><span class="line"></span><br><span class="line">| --- veiws.py ：视图文件，用于编写功能的主要处理逻辑。</span><br></pre></td></tr></table></figure></p>
+<p>我们到 myblog/myblog/目录下，找到settings.py文件，这是django的主要配置文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog$ cd myblog/</span><br><span class="line">lengyue@ubuntu:~/myblog/myblog$ ls</span><br><span class="line">__init__.py  __init__.pyc  settings.py  settings.pyc  urls.py  wsgi.py</span><br></pre></td></tr></table></figure></p>
+<p>打开settings.py配置文件，添加blog应用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog/myblog$ sudo gedit settings.py</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2etlzbo2j30me0gsmxv.jpg" alt="1"></p>
+<h2 id="初始化数据库"><a href="#初始化数据库" class="headerlink" title="初始化数据库"></a>初始化数据库</h2><p>然后我们需要初始化数据库，记得一定要初始化数据库。<br>Python 自带SQLite3数据库，Django同意也是默认使用SQLite3数据库，如果你使用其它数据库可以在settings.py文件中进行设置。<br>此时回退到myblog目录,然后我们需要执行数据库同步，把相关表生成出来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog/myblog$ cd ..</span><br><span class="line">lengyue@ubuntu:~/myblog$  sudo python manage.py migrate</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2exoqbkij30m80gp3z6.jpg" alt="1"><br>然后我们需要为自己的博客创建一个后台账户，以方便以后的管理，键入你创建的账户名称和密码。(一定要记住你的登陆密码)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog$ sudo python manage.py createsuperuser</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2f4lt69zj30jb030wen.jpg" alt="1"></p>
+<h2 id="启动应用-amp-访问admin后台"><a href="#启动应用-amp-访问admin后台" class="headerlink" title="启动应用&amp;访问admin后台"></a>启动应用&amp;访问admin后台</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog$ sudo python manage.py runserver</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2f3ul7s9j30ja03twet.jpg" alt="1"><br>现在打开浏览器，地址栏输入 <a href="http://127.0.0.1:8000" target="_blank" rel="noopener">http://127.0.0.1:8000</a><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2f5715dxj311r0lcq4v.jpg" alt="1"><br>现在访问一下后台: <a href="http://127.0.0.1:8000/admin" target="_blank" rel="noopener">http://127.0.0.1:8000/admin</a>  ,输入刚才创建的账户即可登陆进去。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2f5iz6lhj311x0lcwgf.jpg" alt="1"><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2f5yha8kj311w0lcgns.jpg" alt="2"><br>OK,一切成功，你已经做成功了最重要的步骤。下一步就是开始配置自己的博客了。<br>我们可以看到默认的网站是英文的，而且时间也是错乱，和本机时间对不上的。其实django默认的时区是<code>America/Chicago</code>。<br>现在我们开始通过配置文件来修改这些信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog$ cd myblog</span><br><span class="line">lengyue@ubuntu:~/myblog/myblog$ sudo gedit settings.py</span><br></pre></td></tr></table></figure></p>
+<p>把其中的相关配置设置为如下所示。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LANGUAGE_CODE = &apos;zh-hans&apos;</span><br><span class="line">TIME_ZONE = &apos;Asia/Shanghai&apos;</span><br><span class="line">USE_TZ = False</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2f917xr8j311y0lc0yl.jpg" alt="1"><br>保存退出后，我们现在刷新一下界面，OK！<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2fapg4p8j311w0lcjvy.jpg" alt="1"></p>
+<h2 id="创建Model-即设计数据库表"><a href="#创建Model-即设计数据库表" class="headerlink" title="创建Model(即设计数据库表)"></a>创建Model(即设计数据库表)</h2><p>创建blog表。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog$ cd blog</span><br><span class="line">lengyue@ubuntu:~/myblog/blog$ sudo gedit models.py</span><br></pre></td></tr></table></figure></p>
+<p>打开后，将如下内容复制进去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class BlogsPost(models.Model):</span><br><span class="line">    title = models.CharField(max_length = 150)  # 博客标题</span><br><span class="line">    body = models.TextField()                   # 博客正文</span><br><span class="line">    timestamp = models.DateTimeField()          # 创建时间</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2fpi91hmj311y0lcwge.jpg" alt="1"><br>在该app下建立<code>migrations</code>目录，该目录包含了我们创建的模型，并且指出这个类的成员属性id,name,以及他们的属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog$ sudo python manage.py makemigrations blog</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2fwcub1mj311i03z3yi.jpg" alt="1"><br>执行数据库同步，将该改动作用到数据库文件，使模型类对应的数据表。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog$ sudo python manage.py migrate</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2fxx413kj30mc0gpt9s.jpg" alt="1"></p>
+<h2 id="创建模板"><a href="#创建模板" class="headerlink" title="创建模板"></a>创建模板</h2><p>在blog项目下创建templates目录（myblog/blog/templates/）。(<strong>注意：</strong> 文件名一定需要是templates，其他任何名字都会报错),不然会出现如下所示错误。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gkgb4iij311y0iu0uw.jpg" alt="1"><br>并在templates目录下创建模板文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lengyue@ubuntu:~/myblog$ cd blog</span><br><span class="line">lengyue@ubuntu:~/myblog/blog$ sudo mkdir templates</span><br><span class="line">lengyue@ubuntu:~/myblog/blog$ cd templates</span><br><span class="line">lengyue@ubuntu:~/myblog/blog/templates$ sudo touch index.html</span><br></pre></td></tr></table></figure></p>
+<p>将以下内容复制粘贴进去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for blog in blog_list %&#125;</span><br><span class="line">    &lt;h2&gt;&#123;&#123; blog.title &#125;&#125;&lt;/h2&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; blog.timestamp &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; blog.body &#125;&#125;&lt;/p&gt;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gdnx8qgj30m60gqgm1.jpg" alt="1"></p>
+<h2 id="创建视图函数"><a href="#创建视图函数" class="headerlink" title="创建视图函数"></a>创建视图函数</h2><p>打开myblog/blog/views.py文件，向其中添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from blog.models import BlogsPost</span><br><span class="line"></span><br><span class="line">def blog_index(request):</span><br><span class="line">    blog_list = BlogsPost.objects.all()  # 获取所有数据</span><br><span class="line">    return render(request,&apos;index.html&apos;, &#123;&apos;blog_list&apos;:blog_list&#125;)   # 返回index.html页面</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gdxwhcrj30m80gnt9y.jpg" alt="1"><br>blog_list = BlogPost.objects.all() ：获取数据库里面所拥有BlogPost对象。<br>render返回一个页面(index.html)，顺带把数据库中查询出来的所有博客内容（blog_list）也一并返回。</p>
+<h2 id="创建blog的URL模式"><a href="#创建blog的URL模式" class="headerlink" title="创建blog的URL模式"></a>创建blog的URL模式</h2><p>我们需要blog可以索引到我们的发布的文章。<br>在myblog/urls.py文件里添加blog的url，将下面内容复制粘贴进文件的对应地方，注意缩进。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from blog import views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(r&apos;^admin/&apos;, admin.site.urls),</span><br><span class="line">    path(r&apos;^blog/&apos;, views.blog_index),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gevzc23j30mb0gwdh7.jpg" alt="1"><br>刷新网页，访问blog应用（<a href="http://127.0.0.1:8000/blog/）。" target="_blank" rel="noopener">http://127.0.0.1:8000/blog/）。</a><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2g69k5brj30m90h5gmk.jpg" alt="1"><br>好了，现在我们已经做出一个最基本的博客了，虽然整体界面实在太简洁了，好像除了文字没有任何东西了，但是你已经做出了一个blog最基础的模样了。<br>我们可以发布一篇文章来试试看是否已经成功创建出一个博客框架了。<br>点击’Blogs posts’中的’增加’按钮，向其中任意写入内容。然后点击’保存’.<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gbnnbr2j311y0lcabn.jpg" alt="1"><br>我们即可看到如下界面。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gaieiilj311y0lcdhg.jpg" alt="1"><br>然后我们去博客主页看是否已经成功发布到主页。地址：<a href="http://127.0.0.1:8000/blog/" target="_blank" rel="noopener">http://127.0.0.1:8000/blog/</a><br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu2gibbmk6j311y0lcdhe.jpg" alt="1"><br>接下来，我们应该做的就是对自己的blog进行美化了。当然美化也是需要更为系统的知识的。你需要了解django的样式结构，了解HTML,CSS,JavaSprite,BootStrap等前端知识。<br>本文参考《Django web开发指南》，如果你需要本书，可以扫描下方二维码进群获取。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fu39r0zuavj30b40b4gme.jpg" alt="1"></p>
+</span>
+      
+    </div>
+    <div>
+   
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+
+   
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa tag"></i> python</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/13/Git命令汇总/" rel="prev">Git常用命令汇总</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/10/mysql基础命令汇总/" rel="next">Mysql基础命令汇总</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        如果本文对您有帮助，还望赞赏一下，谢谢
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fvbbd19985j30b40b476c.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                    style="float:left;margin-left:25%;margin-right:10px;">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvbbd19985j30b40b476c.jpg" title="" height="164px" width="164px">
+                </a> 
+              
+
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fvbc7rlxo3j30b40b4tav.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvbc7rlxo3j30b40b4tav.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fvbbd19985j30b40b476c.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                                style="float:left;margin-left:25%;margin-right:10px;">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvbbd19985j30b40b476c.jpg" title="" height="164px" width="164px">
+                            </a> 
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fvbc7rlxo3j30b40b4tav.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fvbc7rlxo3j30b40b4tav.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">冰羽</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">153</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://hackfun.org/" target="_blank">HackFun</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#django说明"><span class="nav-number">1.</span> <span class="nav-text">django说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载安装django"><span class="nav-number">2.</span> <span class="nav-text">下载安装django</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建myblog项目"><span class="nav-number">3.</span> <span class="nav-text">创建myblog项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目结构说明"><span class="nav-number">4.</span> <span class="nav-text">项目结构说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化数据库"><span class="nav-number">5.</span> <span class="nav-text">初始化数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动应用-amp-访问admin后台"><span class="nav-number">6.</span> <span class="nav-text">启动应用&amp;访问admin后台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Model-即设计数据库表"><span class="nav-number">7.</span> <span class="nav-text">创建Model(即设计数据库表)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建模板"><span class="nav-number">8.</span> <span class="nav-text">创建模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建视图函数"><span class="nav-number">9.</span> <span class="nav-text">创建视图函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建blog的URL模式"><span class="nav-number">10.</span> <span class="nav-text">创建blog的URL模式</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+  
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; &nbsp;  2018 - 
+  <span itemprop="copyrightYear">2019
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冰羽
+  </span>
+
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UA50F9B4D7",
+    "hash": "7cce0e84b501ad9c874106f70967e299"
+});
+tpwidget("show");</script>
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2017,12,17,00,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML="本站已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  }, 1000);
+
+</script>
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
+</html>
