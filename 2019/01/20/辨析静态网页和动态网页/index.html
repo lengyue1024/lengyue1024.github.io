@@ -1,0 +1,1125 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→" />
+
+
+
+  <meta name="keywords" content="建站," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="摘要 : 本文主要讲解静态网页、动态网页的区别、特点以及如何分辨。不论你是站长、前端工作者、SEO优化抑或是架构师、后端程序员等职业，只要你涉及到web层面，该文对你都会有所帮助。了解这些知识，可以更便于你设计和优化网站。  静态网页概念在网站设计中， 纯HTML格式的网页(包含图片、 视频、js(前端功能实现)、css (样式)等)通常被称为 “静态网页” ，静态网页是相对于动态网页而言的，">
+<meta name="keywords" content="建站">
+<meta property="og:type" content="article">
+<meta property="og:title" content="辨析静态网页和动态网页">
+<meta property="og:url" content="https://bingyublog.com/2019/01/20/辨析静态网页和动态网页/index.html">
+<meta property="og:site_name" content="冰羽の博客 | A Blog focused on Technology">
+<meta property="og:description" content="摘要 : 本文主要讲解静态网页、动态网页的区别、特点以及如何分辨。不论你是站长、前端工作者、SEO优化抑或是架构师、后端程序员等职业，只要你涉及到web层面，该文对你都会有所帮助。了解这些知识，可以更便于你设计和优化网站。  静态网页概念在网站设计中， 纯HTML格式的网页(包含图片、 视频、js(前端功能实现)、css (样式)等)通常被称为 “静态网页” ，静态网页是相对于动态网页而言的，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fzl8lkzacuj30jg06e0wq.jpg">
+<meta property="og:updated_time" content="2019-01-27T08:46:46.859Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="辨析静态网页和动态网页">
+<meta name="twitter:description" content="摘要 : 本文主要讲解静态网页、动态网页的区别、特点以及如何分辨。不论你是站长、前端工作者、SEO优化抑或是架构师、后端程序员等职业，只要你涉及到web层面，该文对你都会有所帮助。了解这些知识，可以更便于你设计和优化网站。  静态网页概念在网站设计中， 纯HTML格式的网页(包含图片、 视频、js(前端功能实现)、css (样式)等)通常被称为 “静态网页” ，静态网页是相对于动态网页而言的，">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fzl8lkzacuj30jg06e0wq.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "fb883a64"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title> 辨析静态网页和动态网页 | 冰羽の博客 | A Blog focused on Technology </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7b451f13126c1ccdebfa8d48ee43a5d0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">冰羽の博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+	  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'xxx','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              辨析静态网页和动态网页
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2019-01-20T20:03:28+08:00" content="2019-01-20">
+            2019-01-20
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Web/" itemprop="url" rel="index">
+                  <span itemprop="name">Web</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl8lkzacuj30jg06e0wq.jpg" rel="gallery_cjrepjjj200f3rgwafc0uo32m"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl8lkzacuj30jg06e0wq.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+
+        </div>
+      
+
+      
+        <span itemprop="articleBody"><blockquote>
+<p><strong>摘要</strong> : 本文主要讲解静态网页、动态网页的区别、特点以及如何分辨。不论你是站长、前端工作者、SEO优化抑或是架构师、后端程序员等职业，只要你涉及到web层面，该文对你都会有所帮助。了解这些知识，可以更便于你设计和优化网站。</p>
+</blockquote>
+<h2 id="静态网页概念"><a href="#静态网页概念" class="headerlink" title="静态网页概念"></a>静态网页概念</h2><p>在网站设计中， 纯HTML格式的网页(包含图片、 视频、js(前端功能实现)、css (样式)等)通常被称为 “静态网页” ，静态网页是相对于动态网页而言的， 是指没有后台数据库、 不含程序(如PHP、 JSP、 ASP)、 不可交互(这里的交互并不单纯是人与网站的交互，也是服务端、客户端数据之间的交互)的网页。</p>
+<h2 id="静态网页资源特点"><a href="#静态网页资源特点" class="headerlink" title="静态网页资源特点"></a>静态网页资源特点</h2><p>静态网页的维护和更新相对比较麻烦，每个不同的网页都需要单独编辑更新。你可能会说现在有很多网站模板系统,比如Hexo、Jekyll等只需要修改配置文件就可以实现批量化更新，但是这依然是我们从网页的文件本身入手的。<br>静态网页一般适用于更新较少的宣传展示型网站，是早期很多中小网站展示的形式。  </p>
+<h2 id="静态网页资源几个重要的特征"><a href="#静态网页资源几个重要的特征" class="headerlink" title="静态网页资源几个重要的特征"></a>静态网页资源几个重要的特征</h2><ol>
+<li>每个页面都有一个固定的URL地址， 且URL一般以.htm、.html、.shtml等常见形式为后缀，而且地址中不含有问号”?” 或”&amp;” 等特殊符号。</li>
+<li>网页内容一经发布到网站服务器上， 无论是否有用户访间， 每个网页的内容都是保存在网站服务器文件系统上的，静态网页是实实在在保存在服务器上的文件实体， 每个网页都是一个独立的文件。</li>
+<li>网页内容是固定不变的，因此，容易被搜索引擎收录(容易被用户找到)(优点)。</li>
+<li>因为网页没有数据库的支持，所以在网站制作和维护方面的工作量较大， 当网<br>站信息量很大时， 完全依靠静态网页比较困难(缺点)</li>
+<li>网页的交互性较差，在程序的功能实现方面有较大的限制(缺点)。</li>
+<li>网页程序在用户浏览器端解析，程序解析效率很高， 由于服务器端不进行解析， 并且不需要读取数据库，因此服务器端可以接受更多的并发访问。 当客户端向服务器请求数据时，服务器会直接从磁盘文件系统上返回数据(不做任何解析)，待客户端拿到数据后，在浏览器端解析并展现出来(优点)。</li>
+</ol>
+<p>综上所述，网站静态页面的特点就相当于在餐馆吃火锅， 餐馆把原材料和工具都给你准备好，你自己只需要涮着吃就行，不需要大厨给你炒菜做菜了。 因此，对于餐馆来讲，服务顾客的效率大大提高了。由于静态页面不需要在服务器端解析，因此服务器的压力也大大减轻了。常见的静态网页语言有 HTML 、 JS 、 CSS 、 XML 、 SHTML 等。</p>
+<h2 id="静态网页的核心特点"><a href="#静态网页的核心特点" class="headerlink" title="静态网页的核心特点"></a>静态网页的核心特点</h2><ol>
+<li>客户浏览器端解析程序。</li>
+<li>不需要读取数据库， 性能和效率很高。</li>
+<li>后端没有数据库支待， 和用户的交互性差， 功能实现很差。</li>
+</ol>
+<h2 id="动态网页"><a href="#动态网页" class="headerlink" title="动态网页"></a>动态网页</h2><p>所谓的动态网页是与静态网页相对而言的， 也就是说， 动态网页的URL后缀不是 .btm、 .html、 .sbtml、 .xml 、JS、 .css 等静态网页的常见扩展名形式， 而是 .asp 、.aspx 、 pbp 、 .js 、 .do 、 .cgi 等形式的， 并且一般在动态网页网址中会有标志性的符号”?,&amp;”。此外，在大多数情况下后端都需要有数据库支持。</p>
+<h2 id="动态网页资源特点"><a href="#动态网页资源特点" class="headerlink" title="动态网页资源特点"></a>动态网页资源特点</h2><ol>
+<li>网页扩展名后缀常见为： .asp 、 .aspx 、 .php、 .jsp、 .do、 .cgi 等。 2. 网页一般以数据库技术为基础，大大降低了网站维护的工作量。</li>
+<li>采用动态网页技术的网站可以实现更多的功能，如用户注册、用户登录、在线调查、用户管理、订单管理、发博文等。</li>
+<li>动态网页并不是独立存在于服务器上的网页文件，当用户请求服务器上的动态程序时，服务器解析这些程序并可能通过读取数据库来返回一个完整的网页内容。</li>
+<li>动态网页中的”?”在搜索引擎的收录方面存在一定的问题，搜索引擎一般不会从一个网站的数据库中访问全部网页，或者出于技术等方面的考虑，搜索蜘蛛一般不会去抓取网址中”?”后面的内容，因此在企业通过搜索引擎进行推广时，需要针对采用动态网页的网站做一定的技术处理(伪静态技术)，以便适应搜索引擎的抓取要求。</li>
+</ol>
+<p>程序在服务器端解析， 这相当于顾客点餐，饭店厨师做饭做菜，耗时长、效率低。在这个过程中，会消耗大量的CPU和内存、IO等资源，并且多数还要提供读取数据库等服务，因此，其访问效率远不如静态网页。在服务器端解析动态程序的服务常见的有PHP引擎、Java容器(Tomcat、Resin、Jboss、Weblogic)等。</p>
+<h2 id="有关动态网页的架构思想"><a href="#有关动态网页的架构思想" class="headerlink" title="有关动态网页的架构思想"></a>有关动态网页的架构思想</h2><p>一般来说， 静态网页的性能效率是动态网页的10-30倍。 且动态网站效率很差，并发能力也很低，在高并发场景中，应尽可能转换成静态网页提供服务。动态转静态几乎是所有高并发网站必备的架构方案思路，也是高级架构师的职责所在。<br>此外， 动态转静态也要根据业务需求设计，例如，对于更新频繁的网站，如果设计不好就可能会产生数据不一致的情况，即用户看到的数据不是网站最新的内容，而是静态的内容。</p>
+<h2 id="伪静态网页"><a href="#伪静态网页" class="headerlink" title="伪静态网页"></a>伪静态网页</h2><p>伪静态就是通过某些技术(如 rewrite)把动态网页的URL地址伪装成静态网页URL地址，但实质上用户访问的还是动态网页，只不过看起来是符合静态网页地址特征的，因此，用户及某些搜索引擎会误认为是静态网页。</p>
+<h2 id="伪静态网页特点"><a href="#伪静态网页特点" class="headerlink" title="伪静态网页特点"></a>伪静态网页特点</h2><p>从网站的URL地址看， 伪静态表面上看起来是静态内容(如地址结尾带html), 但这其实是通过rewrite规则实现的URL地址重写。 改写后的URL地址规范、 美观， 有利于搜索引擎抓取，并且大大提升了用户的访问体验。但是伪静态网页终究还是动态网页， 所以从性能上考虑，伪静态功能不但没有提升网站性能，反而会降低网站的性能。</p>
+<p>为什么动态网页不能直接转成静态网页呢？伪静态网页作用由于搜索引擎无法正确读取带参数的动态网页内容， 以致网页中很多具有丰富信息的页面无法被搜索引擎收录， 因此就有了伪静态技术。 它的作用是把动态网页URL改写成静态网页的URL, 虽然消除了动态网页中的参数， 但是并不需要生成任何网页， 仅仅是改变了网页地址路径。 这样做的主要目的有两个， 一是让搜索引擎收录网站内容， 让更多的用户访问企业网站内容。 二是提升用户访问体验， 动态地址带特殊符号等的URL看起来也不如静态网页地址简洁美观。</p>
+<h3 id="伪静态网页的缺点"><a href="#伪静态网页的缺点" class="headerlink" title="伪静态网页的缺点"></a>伪静态网页的缺点</h3><p>动态网页伪装成静态网页，虽然可以让搜索引擎收录，并且可提升用户访问体验，但伪静态网页并不能提升网站的访问效率，从理论上说还会降低网站的性能，没有动态转静态网页效率高，不过，对于一些并发不是很大的网站来说，或者是硬件资源充足的 网站来说，伪静态还是一个不错的功能。<br>现在很多大型的网站都采用了动态网页生成静态网页的技术，用于消除动态网页中 的参数，使搜索引擎收录更多的内容，达到优化网站的效果。当网站遇到访问瓶颈时， 如果有技术力量将动态网页转化成静态网页，那就再好不过了，但是有些更新频率很快的业务并不适合这么做。此外，如果将动态转为静态有很大难度，这时也可以考虑将其设置伪静态。</p>
+<p>伪静态网页小结<br>□ 利用rewrite技术将动态网页伪装成静态网页(URL地址改写)。<br>□    便于搜索引擎搜录，提升用户访问掀及用户体验。<br>□    访问性能没有提升， 并且转换成伪静态会消耗资源， 因此性能反而会下降。<br>□    尽可能地将动态网页转换成真正的静态页面。<br>□    并发址不是很大或动态更新过于频繁时， 用rewrite实现伪静态也是不错的。 D伪静态网页的实现过程， 一般由产品运营提出需求， 开发和运维共同实现。</p>
+<p>总结：这里的”动静”并不是移动、静止的意思，并不是网页上有特效在动就算是动态网页了，这里的动是指交互。</p>
+<blockquote>
+<p>本文参考《Linux运维:集群实战》</p>
+</blockquote>
+<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt=""></a></p>
+</span>
+      
+    </div>
+    <div>
+   
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+
+   
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/建站/" rel="tag"><i class="fa tag"></i> 建站</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/20/禁止Linux系统被ping/" rel="prev">禁止Linux系统被ping</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/31/提取和组合文本：cut和paste命令/" rel="next">提取文本---cut命令</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        如果本文对您有帮助，还望赞赏一下，谢谢
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                    style="float:left;margin-left:25%;margin-right:10px;">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="" height="164px" width="164px">
+                </a> 
+              
+
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                                style="float:left;margin-left:25%;margin-right:10px;">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="" height="164px" width="164px">
+                            </a> 
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">冰羽</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">157</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://command.bingyublog.com" target="_blank">Linux命令查询</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态网页概念"><span class="nav-number">1.</span> <span class="nav-text">静态网页概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态网页资源特点"><span class="nav-number">2.</span> <span class="nav-text">静态网页资源特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态网页资源几个重要的特征"><span class="nav-number">3.</span> <span class="nav-text">静态网页资源几个重要的特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态网页的核心特点"><span class="nav-number">4.</span> <span class="nav-text">静态网页的核心特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态网页"><span class="nav-number">5.</span> <span class="nav-text">动态网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态网页资源特点"><span class="nav-number">6.</span> <span class="nav-text">动态网页资源特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有关动态网页的架构思想"><span class="nav-number">7.</span> <span class="nav-text">有关动态网页的架构思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪静态网页"><span class="nav-number">8.</span> <span class="nav-text">伪静态网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪静态网页特点"><span class="nav-number">9.</span> <span class="nav-text">伪静态网页特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#伪静态网页的缺点"><span class="nav-number">9.1.</span> <span class="nav-text">伪静态网页的缺点</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+  
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; &nbsp;  2018 - 
+  <span itemprop="copyrightYear">2019
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冰羽
+  </span>
+
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UA50F9B4D7",
+    "hash": "7cce0e84b501ad9c874106f70967e299"
+});
+tpwidget("show");</script>
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2017,12,17,00,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML="本站已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  }, 1000);
+
+</script>
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
+</html>
