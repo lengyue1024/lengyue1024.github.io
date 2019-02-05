@@ -43,7 +43,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="kali安装vm-tools">
 <meta property="og:url" content="https://bingyublog.com/2018/02/20/kali2017-3安装vm-tools/index.html">
-<meta property="og:site_name" content="冰羽の博客 | A Blog focused on Technology">
+<meta property="og:site_name" content="冰羽の博客 | A Blog Focused on Technology">
 <meta property="og:description" content="本教程适用于kali、ubuntu、debian、centos等发行版本 。 点击虚拟机，选择安装vm-tools。 建立个新的目录用于挂载vm-tools。1root@kali:~# mkdir /mnt/cdrom  将vm-tools挂载到/mnt/cdrom/目录下。看到如图所示就表明挂载成功。12root@kali:~# mount /dev/cdrom /mnt/cdrommount:">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fop95ion7bj30m202rq4k.jpg">
@@ -51,13 +51,12 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fop98m0x96j30i4013wg1.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fop998ssrjj309i00gwg1.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fop9aahy7dj30jh01owg1.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fop9cdpokoj30jr08e0z4.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fop9cqzxyxj30dy00i0z4.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fop9d6rzz6j30jh0120z4.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fop9dtu5x4j30ht03h0z4.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DGX4tly1fop9eecpb4j30jz03s0z4.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fqkmn5ca7jj30f00fqadb.jpg">
-<meta property="og:updated_time" content="2018-09-28T08:32:05.082Z">
+<meta property="og:updated_time" content="2019-01-31T10:19:40.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kali安装vm-tools">
 <meta name="twitter:description" content="本教程适用于kali、ubuntu、debian、centos等发行版本 。 点击虚拟机，选择安装vm-tools。 建立个新的目录用于挂载vm-tools。1root@kali:~# mkdir /mnt/cdrom  将vm-tools挂载到/mnt/cdrom/目录下。看到如图所示就表明挂载成功。12root@kali:~# mount /dev/cdrom /mnt/cdrommount:">
@@ -80,7 +79,7 @@
   </script>
 
 
-  <title> kali安装vm-tools | 冰羽の博客 | A Blog focused on Technology </title>
+  <title> kali安装vm-tools | 冰羽の博客 | A Blog Focused on Technology </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -432,8 +431,7 @@
 <p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fop998ssrjj309i00gwg1.jpg" alt="4"></p>
 <h3 id="列出该目录下的文件。"><a href="#列出该目录下的文件。" class="headerlink" title="列出该目录下的文件。"></a>列出该目录下的文件。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/mnt/cdrom<span class="comment"># ls</span></span><br></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fop9aahy7dj30jh01owg1.jpg" alt="5"></p>
-<h3 id="进行解压，解压到-该目录下。"><a href="#进行解压，解压到-该目录下。" class="headerlink" title="进行解压，解压到/该目录下。"></a>进行解压，解压到/该目录下。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/mnt/cdrom<span class="comment"># tar zxvf VMwareTools-10.1.6-5214329.tar.gz -C /</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fop9cdpokoj30jr08e0z4.jpg" alt="6"></p>
+<h3 id="进行解压。"><a href="#进行解压。" class="headerlink" title="进行解压。"></a>进行解压。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/mnt/cdrom<span class="comment"># tar zxvf VMwareTools-10.1.6-5214329.tar.gz</span></span><br></pre></td></tr></table></figure>
 <h3 id="此时vm-tools已经被解压了，并且生成了一个vmware-tools-distrib的文件夹。"><a href="#此时vm-tools已经被解压了，并且生成了一个vmware-tools-distrib的文件夹。" class="headerlink" title="此时vm-tools已经被解压了，并且生成了一个vmware-tools-distrib的文件夹。"></a>此时vm-tools已经被解压了，并且生成了一个vmware-tools-distrib的文件夹。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/mnt/cdrom<span class="comment"># cd /vmware-tools-distrib/</span></span><br></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/006DGX4tly1fop9cqzxyxj30dy00i0z4.jpg" alt="7"></p>
 <h3 id="查看一下该目录下的文件。"><a href="#查看一下该目录下的文件。" class="headerlink" title="查看一下该目录下的文件。"></a>查看一下该目录下的文件。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/vmware-tools-distrib<span class="comment"># ls</span></span><br></pre></td></tr></table></figure>
@@ -686,7 +684,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">157</span>
+              <span class="site-state-item-count">158</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -791,7 +789,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#点击虚拟机，选择安装vm-tools。"><span class="nav-number">1.</span> <span class="nav-text">点击虚拟机，选择安装vm-tools。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立个新的目录用于挂载vm-tools。"><span class="nav-number">2.</span> <span class="nav-text">建立个新的目录用于挂载vm-tools。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将vm-tools挂载到-mnt-cdrom-目录下。看到如图所示就表明挂载成功。"><span class="nav-number">3.</span> <span class="nav-text">将vm-tools挂载到/mnt/cdrom/目录下。看到如图所示就表明挂载成功。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换进入-mnt-cdrom-目录。"><span class="nav-number">4.</span> <span class="nav-text">切换进入/mnt/cdrom/目录。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出该目录下的文件。"><span class="nav-number">5.</span> <span class="nav-text">列出该目录下的文件。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进行解压，解压到-该目录下。"><span class="nav-number">6.</span> <span class="nav-text">进行解压，解压到/该目录下。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#此时vm-tools已经被解压了，并且生成了一个vmware-tools-distrib的文件夹。"><span class="nav-number">7.</span> <span class="nav-text">此时vm-tools已经被解压了，并且生成了一个vmware-tools-distrib的文件夹。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看一下该目录下的文件。"><span class="nav-number">8.</span> <span class="nav-text">查看一下该目录下的文件。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行该脚本（-pl是Perl脚本的后缀名）进行安装。一直回车点击确定即可。"><span class="nav-number">9.</span> <span class="nav-text">运行该脚本（.pl是Perl脚本的后缀名）进行安装。一直回车点击确定即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如图所示就是安装成功的界面。此时我们可以执行reboot命令重启系统即可。"><span class="nav-number">10.</span> <span class="nav-text">如图所示就是安装成功的界面。此时我们可以执行reboot命令重启系统即可。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#点击虚拟机，选择安装vm-tools。"><span class="nav-number">1.</span> <span class="nav-text">点击虚拟机，选择安装vm-tools。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立个新的目录用于挂载vm-tools。"><span class="nav-number">2.</span> <span class="nav-text">建立个新的目录用于挂载vm-tools。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将vm-tools挂载到-mnt-cdrom-目录下。看到如图所示就表明挂载成功。"><span class="nav-number">3.</span> <span class="nav-text">将vm-tools挂载到/mnt/cdrom/目录下。看到如图所示就表明挂载成功。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换进入-mnt-cdrom-目录。"><span class="nav-number">4.</span> <span class="nav-text">切换进入/mnt/cdrom/目录。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出该目录下的文件。"><span class="nav-number">5.</span> <span class="nav-text">列出该目录下的文件。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进行解压。"><span class="nav-number">6.</span> <span class="nav-text">进行解压。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#此时vm-tools已经被解压了，并且生成了一个vmware-tools-distrib的文件夹。"><span class="nav-number">7.</span> <span class="nav-text">此时vm-tools已经被解压了，并且生成了一个vmware-tools-distrib的文件夹。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看一下该目录下的文件。"><span class="nav-number">8.</span> <span class="nav-text">查看一下该目录下的文件。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行该脚本（-pl是Perl脚本的后缀名）进行安装。一直回车点击确定即可。"><span class="nav-number">9.</span> <span class="nav-text">运行该脚本（.pl是Perl脚本的后缀名）进行安装。一直回车点击确定即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如图所示就是安装成功的界面。此时我们可以执行reboot命令重启系统即可。"><span class="nav-number">10.</span> <span class="nav-text">如图所示就是安装成功的界面。此时我们可以执行reboot命令重启系统即可。</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
