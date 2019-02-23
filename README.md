@@ -2,7 +2,10 @@
 
 # 冰羽の博客
 
- <a href="https://cyc2018.github.io/CS-Notes"> <img src="https://img.shields.io/badge/>-read-4ab8a1.svg"></a>  <a href="https://xiaozhuanlan.com/CyC2018"> <img src="https://img.shields.io/badge/_-more-4ab8a1.svg"></a>
+[![changelog](https://img.shields.io/badge/>-read-4ab8a1.svg)](#pencil-change-log--更新日志)
+[![blog](https://img.shields.io/badge/_-more-4ab8a1.svg)](https://www.bingyublog.com)
+[![github](https://wangchujiang.com/sb/github/green-alt.svg)](https://github.com/lengyue1024)
+[![progress](https://wangchujiang.com/sb/progressed/68.svg)]
 
 ## :pencil: Change Log | 更新日志
 
@@ -31,7 +34,7 @@
 
 - 网站名称: 冰羽の博客
 - 网站描述: A Blog Focused on Technology
-- 网站地址: <https://www.bingyublog.com/>
+- 网站地址: <https://www.bingyublog.com>
 
 ## :snowman: About Author | 关于博主
 
