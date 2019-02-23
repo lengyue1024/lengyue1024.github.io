@@ -1,4 +1,4 @@
-<img align="right" src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gorvqurlj30e808w7ba.jpg">
+<img align="right" src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gou9f92gj30be07478z.jpg">
 
 ## :pencil: Change Log | 更新日志
 
