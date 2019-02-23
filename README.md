@@ -1,4 +1,4 @@
-<img align="right" src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gou9f92gj30be07478z.jpg">
+<img align="right" src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gp0zsj85j30a0069djc.jpg">
 
 # 冰羽の博客
 
@@ -11,12 +11,12 @@
   - 添加了看板娘 *z16*
 
 3. [2019/2/22]:
-  - 添加网站运行时间统计
-  - 添加字数统计、阅读时长功能
-  - 添加版权说明
+  - 添加了网站运行时间统计
+  - 添加了字数统计、阅读时长功能
+  - 添加了版权说明
 
 4. [2019/2/23]:
-  - 添加文章阅读量统计功能
+  - 添加了文章阅读量统计功能
   - 为GitHub的博文仓库添加了README
 
 ## :snowflake: About Blog | 关于博客
