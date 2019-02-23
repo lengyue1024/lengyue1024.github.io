@@ -1,6 +1,6 @@
 <img align="right" src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gp0zsj85j30a0069djc.jpg">
 
-# 冰羽の博客
+# :octocat: 冰羽の博客
 
 ## :pencil: Change Log | 更新日志
 
