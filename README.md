@@ -25,6 +25,8 @@
 
 - 昵称: 冰羽
 - 描述: 想把自己培养成技术型宅男，宅和男已经具备，就差技术了→\_→
+- 状态: 大三在读ing[2019.2]<sup>1</sup>
+- 专业: 电子科学与技术
 - Email: [xzhxpx@qq.com](mailto:xzhxpx@qq.com)
 
 ## :blue_book: About README | 关于README文件
