@@ -2,6 +2,8 @@
 
 # 冰羽の博客
 
+ <a href="https://cyc2018.github.io/CS-Notes"> <img src="https://img.shields.io/badge/>-read-4ab8a1.svg"></a>  <a href="https://xiaozhuanlan.com/CyC2018"> <img src="https://img.shields.io/badge/_-more-4ab8a1.svg"></a>
+
 ## :pencil: Change Log | 更新日志
 
 1. [2018/2/18]:
