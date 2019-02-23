@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="theme-next use-motion theme-next-mala">
 <head>
@@ -395,6 +394,37 @@
 
               
               
+                 <span id="/2018/02/23/使用ssltrip突破ssl加密截获密码/" class="leancloud_visitors" data-flag-title="使用ssltrip突破ssl加密截获密码">
+                 &nbsp; | &nbsp;
+                   <span class="post-meta-divider">阅读次数:</span>
+                   <span class="post-meta-item-icon">
+                     <i class="fa fa-eye"></i>
+                   </span>
+                   
+                     <span class="leancloud-visitors-count"></span>
+                 </span>
+              
+
+          <span class="post-time">
+            &nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+            <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">字数统计:</span>
+          <span class="post-count">1.3k(字)</span>
+          </span>
+
+          <span class="post-time">
+           	&nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+          <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">阅读时长≈</span>
+          <span class="post-count">4(分)</span>
+          </span>
+
+              
+              
 
             
           </span>
@@ -403,11 +433,6 @@
         
           
         
-
-        
-        
-      </div>
-    </header>
 
     <div class="post-body">
 
@@ -426,6 +451,7 @@
 <h2 id="本次实验环境："><a href="#本次实验环境：" class="headerlink" title="本次实验环境："></a>本次实验环境：</h2><p>攻击者：kali Linux(2018.1.8),ip:192.168.1.131 ,网关:192.168.1.1<br>被攻击者: windows7,ip:192.168.1.105,网关:192.168.1.1</p>
 <h3 id="我们使用ettercap的GTK-GUI图像界面"><a href="#我们使用ettercap的GTK-GUI图像界面" class="headerlink" title="我们使用ettercap的GTK+ GUI图像界面"></a>我们使用ettercap的GTK+ GUI图像界面</h3><p>输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># ettercap -G</span></span><br></pre></td></tr></table></figure></p>
 <p>打开后是这样。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1forn6xo9ynj30me0ehtaf.jpg" alt="1"><br>打开ettercap之后，选择Sniff—-Unified-sniffing，然后选择网卡：eth0(我这里是eth0，大家根据情况选择)。<br>然后Hosts——Scan for hosts——Hosts list，此时找到我们的目标主机ip(192.168.1.105).<br>选定目标主机，然后点add to target 1,将目标主机添加到目标1;选定路由，点add to target 2,将路由添加到目标2.<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1forn7cn2nwj30ma04hq37.jpg" alt="2"><br>添加成功后，点击Mitm——ARP posoning ，勾选sniff remote connections。<br>之后start——start sniffing开始监听。<br>点击view——connections查看被攻击机访问的IP，端口，协议，发送和接收的数据包大小。点击view——profiles查看被攻击机访问的链接。<br>在下方可以查看更清晰的链接访问情况。<br>当然你也可以通过双击链接来查看profiles details，即访问网站的具体情况。<br>在这里，如果被攻击机输入密码登陆某一网站，我们可以检测到登陆的用户名及其密码。<br>这是刚刚检测到的一个用户名和登陆密码。这个网站完全没有对密码进行加密操作，出来的结果也是明文显示的。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1forn7tt3plj306h00g3ya.jpg" alt="3"><br>这是另外一个站检测出来的，对密码进行了加密。<br><img src="http://ww1.sinaimg.cn/large/006DGX4tly1forn8hy09dj30l2015747.jpg" alt="4"><br>实在对不起，网站的细节并不能展示出来，大家只要明白操作姿势就可以了。<br>其实我为了测试设置的密码都只是123456，但是因为进行了加密，还是很难解密的出来。<br>Tips：其实一个网站如果使用的都是https协议，那么安全性绝对做的很好，他们的数据都是进行了加密的，也就是说你即使已经把https降低为http，即使捕获到了密码，你也不可能轻易解密的出来。<br>好了，ettercap已经截获到了密码，教程到此结束。</p>
+<p><strong>本文作者</strong>：冰羽<br><strong>本文地址</strong>： <a href="https://bingyublog.com/2018/02/23/使用ssltrip突破ssl加密截获密码/">https://bingyublog.com/2018/02/23/使用ssltrip突破ssl加密截获密码/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
 </span>
       
     </div>
@@ -668,7 +694,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">158</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -806,7 +832,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+  主题-- <a class="theme-link" href="https://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -815,7 +841,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
-  本站访问量:<span id="busuanzi_value_site_pv"></span>
+  &nbsp; | &nbsp;本站访问量:<span id="busuanzi_value_site_pv"></span>
 </span>
 </div>
 <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
@@ -1079,7 +1105,117 @@ tpwidget("show");</script>
     });
   </script>
   
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("fq3aics801iEftdGyUK0emtG-gzGzoHsz", "ojpgVjlcRKxhoAjMoMDIhk5v");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>

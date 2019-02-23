@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="theme-next use-motion theme-next-mala">
 <head>
@@ -390,6 +389,37 @@
 
               
               
+                 <span id="/2018/02/28/linux之父与GitHub的那些事/" class="leancloud_visitors" data-flag-title="linux之父与GitHub的那些事">
+                 &nbsp; | &nbsp;
+                   <span class="post-meta-divider">阅读次数:</span>
+                   <span class="post-meta-item-icon">
+                     <i class="fa fa-eye"></i>
+                   </span>
+                   
+                     <span class="leancloud-visitors-count"></span>
+                 </span>
+              
+
+          <span class="post-time">
+            &nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+            <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">字数统计:</span>
+          <span class="post-count">3.3k(字)</span>
+          </span>
+
+          <span class="post-time">
+           	&nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+          <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">阅读时长≈</span>
+          <span class="post-count">11(分)</span>
+          </span>
+
+              
+              
 
             
           </span>
@@ -398,11 +428,6 @@
         
           
         
-
-        
-        
-      </div>
-    </header>
 
     <div class="post-body">
 
@@ -420,6 +445,7 @@
 <h2 id="为什么Git能在Linux上工作得如此好？"><a href="#为什么Git能在Linux上工作得如此好？" class="headerlink" title="为什么Git能在Linux上工作得如此好？"></a>为什么Git能在Linux上工作得如此好？</h2><p>Torvalds:好吧，很明显的它就是为了我们的工作流程而设计，因此他本身就是Linux的一部分。我已经多次提到完全“分布式”的部分，但它值得一再提及。它被设计得在面对像Linux的大型项目时有足够的效率，并且它被设计得去完成在它之前人们认为很“难”的任务——因为那些事情“我”每天都在做。<br>只举一个例子：代码合并的概念在多数源码管理工具中通常被认为是非常痛苦和困难的。你会计划你的代码合并，因为那是重大的决定。那样的情况对我而言不能接受，自从我一天在合并的窗口前做数十次的代码合并之后，最头疼的的问题不是代码合并工作本身，最重要的应该是检查其结果。Git中，代码合并只会花费数秒，编写代码合并的注释文字却会花费我很长时间。<br>因此，Git基本上按照我的需求设计和编码，也这样工作的。</p>
 <h2 id="有人说Git只是为聪明人设计的，甚至连Andrew-Morton都说：“Git经过特意设计，以便让你感到自己不够聪明。”您对此有何回应？"><a href="#有人说Git只是为聪明人设计的，甚至连Andrew-Morton都说：“Git经过特意设计，以便让你感到自己不够聪明。”您对此有何回应？" class="headerlink" title="有人说Git只是为聪明人设计的，甚至连Andrew Morton都说：“Git经过特意设计，以便让你感到自己不够聪明。”您对此有何回应？"></a>有人说Git只是为聪明人设计的，甚至连Andrew Morton都说：“Git经过特意设计，以便让你感到自己不够聪明。”您对此有何回应？</h2><p>Torvalds：我想在以前确实如此，但现在不同了。因为某些原因，人们觉得git难用，但我认为现在只剩一个原因，那就是：你可以用很多种方法完成一件事。<br>通过git你可以完成很多事请，git要求人们遵守许多规则，这些规则并非出于技术上的限制，而是为了让人们可以更好的合作。git是一个强大的工具，开始使用时你会感觉很困难，这通常是因为你可以用不同方法完成一件事，而且这些方法都能工作！一般说来，学习git最好的方法可能是，你先用它做最基本的事情，直到你熟悉这些基本操作，再去了解git的其它用法。<br> git的复杂有一些历史原因，其中之一是：它过去就很复杂！git的早期用户是那些为Kernel编程的人，他们不得不学习一系列非常难用的脚本。把绝大多数的精力花费在让git能用，而不是更易用。所以早期git给大家的印象（确实就）是，你必须很清楚自己在做什么。当然，在最初的半年或一年里，事实确实如此。<br>人们感觉git复杂的另一个原因：git不同以往的SCM。许多人使用CVS十年甚至二十年，但git不是CVS，它们一点也不像。git和CVS的设计理念不同，命令也不同。git从来没有想过模仿CVS，甚至相反。如果你曾经长时间使用CVS风格的SCM系统，就会感觉git很复杂，并且觉得那些和CVS不同的设计没有存在的必要。奇怪的修订编号会让你分心，你心想：为什么git的修订编号不能像CVS的1.3.1那样累加，而要选择一个奇怪的40字节的十六进制数呢？<br>但git并不是要故意标新立异。git确实和CVS存在差异，因为人们有不同的知识背景，所以这些差异使人们感觉其中一个比另一个复杂。CVS背景的东西正在渐渐远去，可能现在很多用过git的人从来没有用过CVS，他们就会不习惯CVS的使用方式。</p>
 <h2 id="你认为没有git，Linux-Kernel能达到目前的开发速度吗？"><a href="#你认为没有git，Linux-Kernel能达到目前的开发速度吗？" class="headerlink" title="你认为没有git，Linux Kernel能达到目前的开发速度吗？"></a>你认为没有git，Linux Kernel能达到目前的开发速度吗？</h2><p>Torvalds：呃，没有git，我认为可以。但那意味着需要有人写出与git相似的工具：一个像git一样高效的分布式的SCM。没错，我们确实需要像git这样的东西。<br>本篇文章为转载内容，具体原文可以查看以下内容。<br> <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137402760310626208b4f695940a49e5348b689d095fc000" target="_blank" rel="noopener">原文1</a><br> <a href="https://www.oschina.net/translate/10-years-of-git-an-interview-with-git-creator-linus-torvalds" target="_blank" rel="noopener">原文2</a></p>
+<p><strong>本文作者</strong>：冰羽<br><strong>本文地址</strong>： <a href="https://bingyublog.com/2018/02/28/linux之父与GitHub的那些事/">https://bingyublog.com/2018/02/28/linux之父与GitHub的那些事/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
 </span>
       
     </div>
@@ -662,7 +688,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">158</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -800,7 +826,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+  主题-- <a class="theme-link" href="https://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -809,7 +835,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
-  本站访问量:<span id="busuanzi_value_site_pv"></span>
+  &nbsp; | &nbsp;本站访问量:<span id="busuanzi_value_site_pv"></span>
 </span>
 </div>
 <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
@@ -1073,7 +1099,117 @@ tpwidget("show");</script>
     });
   </script>
   
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("fq3aics801iEftdGyUK0emtG-gzGzoHsz", "ojpgVjlcRKxhoAjMoMDIhk5v");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>

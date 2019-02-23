@@ -1,0 +1,1247 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→" />
+
+
+
+  <meta name="keywords" content="Hexo," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="前言本教程以next主题为例进行演示说明，但是对于以next主题为基础修改的主题或者其他类似主题也是同样适用的。 配置LeanCloud首先注册LeanCloud帐号,网址:https://leancloud.cn. 创建应用然后依次是：新应用名称(自定义) → 选中开发版 → 点击创建即可。 Class在创建的应用上点击存储.数据栏中，_开头的都是系统预定义好的表，为了区分，新建一张表来保存数据">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo添加文章阅读量统计功能">
+<meta property="og:url" content="https://bingyublog.com/2019/02/23/Hexo添加文章阅读量统计功能/index.html">
+<meta property="og:site_name" content="冰羽の博客 | A Blog Focused on Technology">
+<meta property="og:description" content="前言本教程以next主题为例进行演示说明，但是对于以next主题为基础修改的主题或者其他类似主题也是同样适用的。 配置LeanCloud首先注册LeanCloud帐号,网址:https://leancloud.cn. 创建应用然后依次是：新应用名称(自定义) → 选中开发版 → 点击创建即可。 Class在创建的应用上点击存储.数据栏中，_开头的都是系统预定义好的表，为了区分，新建一张表来保存数据">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1g0garzo092j30mc0bkafe.jpg">
+<meta property="og:updated_time" content="2019-02-23T07:33:11.182Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo添加文章阅读量统计功能">
+<meta name="twitter:description" content="前言本教程以next主题为例进行演示说明，但是对于以next主题为基础修改的主题或者其他类似主题也是同样适用的。 配置LeanCloud首先注册LeanCloud帐号,网址:https://leancloud.cn. 创建应用然后依次是：新应用名称(自定义) → 选中开发版 → 点击创建即可。 Class在创建的应用上点击存储.数据栏中，_开头的都是系统预定义好的表，为了区分，新建一张表来保存数据">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1g0garzo092j30mc0bkafe.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+
+  <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/fb883a64.js","daovoice")
+    daovoice('init', {
+    app_id: "fb883a64"
+    });
+    daovoice('update');
+  </script>
+
+
+  <title> Hexo添加文章阅读量统计功能 | 冰羽の博客 | A Blog Focused on Technology </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7b451f13126c1ccdebfa8d48ee43a5d0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">冰羽の博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+	  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'xxx','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Hexo添加文章阅读量统计功能
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2019-02-23T21:56:57+08:00" content="2019-02-23">
+            2019-02-23
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Hexo/" itemprop="url" rel="index">
+                  <span itemprop="name">Hexo</span>
+                </a>
+              </span>
+
+              
+              
+                 <span id="/2019/02/23/Hexo添加文章阅读量统计功能/" class="leancloud_visitors" data-flag-title="Hexo添加文章阅读量统计功能">
+                 &nbsp; | &nbsp;
+                   <span class="post-meta-divider">阅读次数:</span>
+                   <span class="post-meta-item-icon">
+                     <i class="fa fa-eye"></i>
+                   </span>
+                   
+                     <span class="leancloud-visitors-count"></span>
+                 </span>
+              
+
+          <span class="post-time">
+            &nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+            <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">字数统计:</span>
+          <span class="post-count">2.4k(字)</span>
+          </span>
+
+          <span class="post-time">
+           	&nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+          <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">阅读时长≈</span>
+          <span class="post-count">9(分)</span>
+          </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+    <div class="post-body">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1g0garzo092j30mc0bkafe.jpg" rel="gallery_cjsh64yru000sngwarv3xki5j"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0garzo092j30mc0bkafe.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+
+        </div>
+      
+
+      
+        <span itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本教程以next主题为例进行演示说明，但是对于以next主题为基础修改的主题或者其他类似主题也是同样适用的。</p>
+<h3 id="配置LeanCloud"><a href="#配置LeanCloud" class="headerlink" title="配置LeanCloud"></a>配置<a href="https://leancloud.cn" target="_blank" rel="noopener">LeanCloud</a></h3><p>首先注册LeanCloud帐号,网址:<a href="https://leancloud.cn" target="_blank" rel="noopener">https://leancloud.cn</a>.</p>
+<h4 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h4><p><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gb2bh317j30ed06h3yk.jpg" alt=""><br>然后依次是：新应用名称(自定义) → 选中开发版 → 点击创建即可。</p>
+<h4 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h4><p>在创建的应用上点击<code>存储</code>.<br>数据栏中，_开头的都是系统预定义好的表，为了区分，新建一张表来保存数据。为了保证对NexT主题的修改兼容，新建Class名字必须为 <strong>Counter</strong>。为了避免权限问题导致次数统计显示不正常，选择无限制，创建Class。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gb718nefj30r40hnwg4.jpg" alt=""></p>
+<h4 id="获取App-ID和App-Key"><a href="#获取App-ID和App-Key" class="headerlink" title="获取App ID和App Key"></a>获取App ID和App Key</h4><p>Class创建完成后，选择界面最左侧的设置 → 应用Key，复制App ID和App Key<br>![]<a href="https://ws1.sinaimg.cn/large/006DGX4tly1g0gba2wjjbj30we0dzmyn.jpg" target="_blank" rel="noopener">https://ws1.sinaimg.cn/large/006DGX4tly1g0gba2wjjbj30we0dzmyn.jpg</a>)</p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><h4 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改_config.yml文件</h4><p>打开博客根目录<code>/themes/next/</code>下的<code>_config.yml</code>文件<br>添加以下内容。(在新版的next主题中已经包含了此字段)<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show number of visitors to each article.</span></span><br><span class="line"><span class="comment"># You can visit https://leancloud.cn get AppID and AppKey.</span></span><br><span class="line"><span class="attr">leancloud_visitors:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  app_id:</span> <span class="comment">#&lt;AppID&gt;</span></span><br><span class="line"><span class="attr">  app_key:</span> <span class="comment">#&lt;AppKEY&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>填写复制来的App ID和App Key。</p>
+<h4 id="添加lean-analytics-swig文件"><a href="#添加lean-analytics-swig文件" class="headerlink" title="添加lean-analytics.swig文件"></a>添加lean-analytics.swig文件</h4><p>在<code>themes\next\layout\_scripts</code>路径下，新建一个lean-analytics.swig文件，并向里面添加以下内容<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.leancloud_visitors.enable %&#125;</span><br><span class="line"></span><br><span class="line">  &#123;# custom analytics part create by xiamo #&#125;</span><br><span class="line">  &lt;script src=<span class="string">"https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script&gt;AV.initialize(<span class="string">"&#123;&#123;theme.leancloud_visitors.app_id&#125;&#125;"</span>, <span class="string">"&#123;&#123;theme.leancloud_visitors.app_key&#125;&#125;"</span>);&lt;/script&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">showTime</span>(<span class="params">Counter</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> query = <span class="keyword">new</span> AV.Query(Counter);</span><br><span class="line">      <span class="keyword">var</span> entries = [];</span><br><span class="line">      <span class="keyword">var</span> $visitors = $(<span class="string">".leancloud_visitors"</span>);</span><br><span class="line"></span><br><span class="line">      $visitors.each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        entries.push( $(<span class="keyword">this</span>).attr(<span class="string">"id"</span>).trim() );</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      query.containedIn(<span class="string">'url'</span>, entries);</span><br><span class="line">      query.find()</span><br><span class="line">        .done(<span class="function"><span class="keyword">function</span> (<span class="params">results</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">var</span> COUNT_CONTAINER_REF = <span class="string">'.leancloud-visitors-count'</span>;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">if</span> (results.length === <span class="number">0</span>) &#123;</span><br><span class="line">            $visitors.find(COUNT_CONTAINER_REF).text(<span class="number">0</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; results.length; i++) &#123;</span><br><span class="line">            <span class="keyword">var</span> item = results[i];</span><br><span class="line">            <span class="keyword">var</span> url = item.get(<span class="string">'url'</span>);</span><br><span class="line">            <span class="keyword">var</span> time = item.get(<span class="string">'time'</span>);</span><br><span class="line">            <span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(url);</span><br><span class="line"></span><br><span class="line">            $(element).find(COUNT_CONTAINER_REF).text(time);</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; entries.length; i++) &#123;</span><br><span class="line">            <span class="keyword">var</span> url = entries[i];</span><br><span class="line">            <span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(url);</span><br><span class="line">            <span class="keyword">var</span> countSpan = $(element).find(COUNT_CONTAINER_REF);</span><br><span class="line">            <span class="keyword">if</span>( countSpan.text() == <span class="string">''</span>) &#123;</span><br><span class="line">              countSpan.text(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        .fail(<span class="function"><span class="keyword">function</span> (<span class="params">object, error</span>) </span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">"Error: "</span> + error.code + <span class="string">" "</span> + error.message);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addCount</span>(<span class="params">Counter</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> $visitors = $(<span class="string">".leancloud_visitors"</span>);</span><br><span class="line">      <span class="keyword">var</span> url = $visitors.attr(<span class="string">'id'</span>).trim();</span><br><span class="line">      <span class="keyword">var</span> title = $visitors.attr(<span class="string">'data-flag-title'</span>).trim();</span><br><span class="line">      <span class="keyword">var</span> query = <span class="keyword">new</span> AV.Query(Counter);</span><br><span class="line"></span><br><span class="line">      query.equalTo(<span class="string">"url"</span>, url);</span><br><span class="line">      query.find(&#123;</span><br><span class="line">        success: <span class="function"><span class="keyword">function</span>(<span class="params">results</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">if</span> (results.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> counter = results[<span class="number">0</span>];</span><br><span class="line">            counter.fetchWhenSave(<span class="literal">true</span>);</span><br><span class="line">            counter.increment(<span class="string">"time"</span>);</span><br><span class="line">            counter.save(<span class="literal">null</span>, &#123;</span><br><span class="line">              success: <span class="function"><span class="keyword">function</span>(<span class="params">counter</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> $element = $(<span class="built_in">document</span>.getElementById(url));</span><br><span class="line">                $element.find(<span class="string">'.leancloud-visitors-count'</span>).text(counter.get(<span class="string">'time'</span>));</span><br><span class="line">              &#125;,</span><br><span class="line">              error: <span class="function"><span class="keyword">function</span>(<span class="params">counter, error</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'Failed to save Visitor num, with error message: '</span> + error.message);</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">var</span> newcounter = <span class="keyword">new</span> Counter();</span><br><span class="line">            <span class="comment">/* Set ACL */</span></span><br><span class="line">            <span class="keyword">var</span> acl = <span class="keyword">new</span> AV.ACL();</span><br><span class="line">            acl.setPublicReadAccess(<span class="literal">true</span>);</span><br><span class="line">            acl.setPublicWriteAccess(<span class="literal">true</span>);</span><br><span class="line">            newcounter.setACL(acl);</span><br><span class="line">            <span class="comment">/* End Set ACL */</span></span><br><span class="line">            newcounter.set(<span class="string">"title"</span>, title);</span><br><span class="line">            newcounter.set(<span class="string">"url"</span>, url);</span><br><span class="line">            newcounter.set(<span class="string">"time"</span>, <span class="number">1</span>);</span><br><span class="line">            newcounter.save(<span class="literal">null</span>, &#123;</span><br><span class="line">              success: <span class="function"><span class="keyword">function</span>(<span class="params">newcounter</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> $element = $(<span class="built_in">document</span>.getElementById(url));</span><br><span class="line">                $element.find(<span class="string">'.leancloud-visitors-count'</span>).text(newcounter.get(<span class="string">'time'</span>));</span><br><span class="line">              &#125;,</span><br><span class="line">              error: <span class="function"><span class="keyword">function</span>(<span class="params">newcounter, error</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'Failed to create'</span>);</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        error: <span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'Error:'</span> + error.code + <span class="string">" "</span> + error.message);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> Counter = AV.Object.extend(<span class="string">"Counter"</span>);</span><br><span class="line">      <span class="keyword">if</span> ($(<span class="string">'.leancloud_visitors'</span>).length == <span class="number">1</span>) &#123;</span><br><span class="line">        addCount(Counter);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="string">'.post-title-link'</span>).length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        showTime(Counter);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="修改post-swig文件"><a href="#修改post-swig文件" class="headerlink" title="修改post.swig文件"></a>修改post.swig文件</h4><p>在<code>themes\next\layout\_macro</code>路径下，打开<code>post.swig</code>文件.<br>我个人将阅读统计功能加到文章分类后面，所以就找到包含有<code>post-category</code>字样的代码段。<br>然后将以下内容复制粘贴到其后即可。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;# LeanCould PageView #&#125;</span><br><span class="line">&#123;% <span class="keyword">if</span> theme.leancloud_visitors.enable %&#125;</span><br><span class="line">   &lt;span id=<span class="string">"&#123;&#123; url_for(post.path) &#125;&#125;"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"leancloud_visitors"</span> data-flag-title=<span class="string">"&#123;&#123; post.title &#125;&#125;"</span>&gt;</span><br><span class="line">   &amp;nbsp; | &amp;nbsp;</span><br><span class="line">     &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-divider"</span>&gt;阅读次数:&lt;/span&gt;</span><br><span class="line">     &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-item-icon"</span>&gt;</span><br><span class="line">       &lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-eye"</span>&gt;&lt;/i&gt;</span><br><span class="line">     &lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">     &#123;% if theme.post_meta.item_text %&#125;</span></span><br><span class="line"><span class="regexp">       &lt;span class="post-meta-item-text"&gt;&#123;&#123;__('post.visitors')&#125;&#125;&amp;#58;&lt;/</span>span&gt;</span><br><span class="line">     &#123;% endif %&#125;</span><br><span class="line">       &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"leancloud-visitors-count"</span>&gt;&lt;/span&gt;</span><br><span class="line">   &lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">&#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="修改layout-swig文件"><a href="#修改layout-swig文件" class="headerlink" title="修改layout.swig文件"></a>修改layout.swig文件</h4><p>在<code>themes\magiclamp\layout</code>路径下，打开 _layout.swig文件，在<code>&lt;/body&gt;</code>上方添加如下内容：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.leancloud_visitors.enable %&#125;</span><br><span class="line">  &#123;% include <span class="string">'_scripts/lean-analytics.swig'</span> %&#125;</span><br><span class="line">&#123;%  endif %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>添加完成之后，文件内容如下图所示：<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gdj0c8j1j30nz09e0th.jpg" alt=""></p>
+<h4 id="修改zh-Hans-yml文件"><a href="#修改zh-Hans-yml文件" class="headerlink" title="修改zh-Hans.yml文件"></a>修改zh-Hans.yml文件</h4><p>打开在NexT目录的languages路径下的<code>zh-Hans.yml</code>文件，在post:结点下添加<code>visitors: 阅读次数</code>，如下所示：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post:</span></span><br><span class="line"><span class="attr">  posted:</span> <span class="string">发表于</span></span><br><span class="line"><span class="attr">  visitors:</span> <span class="string">阅读次数</span></span><br><span class="line"><span class="attr">  updated:</span> <span class="string">更新于</span></span><br><span class="line"><span class="attr">  in:</span> <span class="string">分类于</span></span><br><span class="line"><span class="attr">  read_more:</span> <span class="string">阅读全文</span></span><br><span class="line"><span class="attr">  untitled:</span> <span class="string">未命名</span></span><br><span class="line"><span class="attr">  toc_empty:</span> <span class="string">此文章未包含目录</span></span><br></pre></td></tr></table></figure></p>
+<p>这个时候重新生成部署Hexo博客，应该就可以正常使用文章阅读量统计的功能了。<br>需要特别说明的是：记录文章访问量的唯一标识符是文章的 <strong>发布日期以及文章的标题</strong>，因此应该确保这两个数值组合的唯一性，如果你更改了这两个数值，会造成文章阅读数值的清零重计。所以我们最好在发布之前就应该提前设置好发布日期以及文章的标题。</p>
+<h3 id="LeanCloud管理"><a href="#LeanCloud管理" class="headerlink" title="LeanCloud管理"></a>LeanCloud管理</h3><p>当你配置部分完成之后，初始的文章统计量显示为0，但是这个时候我们LeanCloud对应的应用的Counter表中并没有相应的记录，只是单纯的显示为0而已，当博客文章在配置好阅读量统计服务之后第一次打开时，便会自动向服务器发送数据来创建一条数据，该数据会被记录在对应的应用的Counter表中。</p>
+<h4 id="伪造阅读量"><a href="#伪造阅读量" class="headerlink" title="伪造阅读量"></a>伪造阅读量</h4><blockquote>
+<p>虽然该方法可行性很高，但我本人并不认同，这只是达到了欺骗自己欺骗读者的目的，并不能真正提高自己博客的知名度，个人认为还是真正做好自己的技术，写好自己的技术文章即可。</p>
+</blockquote>
+<p>我们可以修改其中的time字段的数值来达到修改某一篇文章的访问量的目的。有两种操作方式:</p>
+<ol>
+<li>双击具体的数值，修改之后使用组合键<code>Ctr+Enter</code>即可保存。</li>
+<li>选中<code>time</code>字段的单元格，然后点击”编辑单元格”<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gduwoky8j30rg02twej.jpg" alt=""><br>向其中写入数值，然后点击”保存”即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gdv2vrgnj30go08qweh.jpg" alt=""><h4 id="Web安全"><a href="#Web安全" class="headerlink" title="Web安全"></a>Web安全</h4>因为AppID以及AppKey是暴露在外的，因此如果一些别用用心之人知道了之后用于其它目的是得不偿失的。(比如一些人使用你个人的AppID以及AppKey，那样流过的数据就流入了你的leancloud存储里)为了确保只用于我们自己的博客，建议开启Web安全选项，这样就只能通过我们自己的域名才有权访问后台的数据了，可以进一步提升安全性。<br>选择应用的设置的安全中心选项卡,在Web 安全域名中填入我们自己的博客域名，来确保数据调用的安全:<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0ge49hgy0j30t80gl0ub.jpg" alt=""></li>
+</ol>
+<p>当你已经按照教程正常配置之后，如果还是没有出现，那么你现在需要做的不是重新看教程。而是应该自己调试。关于调试的放方法我之前说过。可以查看。<br>我本人一直使用的火狐浏览器，所以我也只用火狐浏览器调试为例进行说明，但是要知道的是调试的方法都大致相同。而火狐已经更新了好多个版本了。<br>可以看到403报错，这个状态码说明了403错误，表示资源不可用。服务器理解客户的请求，但拒绝处理它，通常由于服务器上文件或目录的权限设置导致的WEB访问错误。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0g91gphjhj30tb00q3yc.jpg" alt=""><br>此时我使用的是Firefox 65.0.1 (64 位)。这个教程的火狐浏览器的版本已经很老旧了，火狐调整了控制台的一些选项和参数，但是基本的还是没有变化的。所以我们可以放心正常调试。<br>F12打开控制台。</p>
+<p>ok，调试之后，状态码变成了200。已经可以使用了，我们在此刷新网页，已经可以看到了出现了<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0g9e4id1fj30z100w0sm.jpg" alt=""><br>我们随便打开一篇文字来看，是否能成功记录阅读次数。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0g9vstzc4j30gs038t8s.jpg" alt=""><br>ok，成功。<br>凑着这几日还未开学，所以赶快趁着时间优化一下博客给博客增加一些好玩的新功能。<br>之前一直没时间做，所以一直不敢做优化。这次时间重组，就赶快做。<br>但是我需要给各位使用hexo以及其他类似于hexo博客的使用者说一句，并不是功能越多就越有趣。相反的，你增多了功能，反而会遏制博客打开的速度。很多插件看着是只有几行代码，短小精悍，其实你要是知道功能越花哨越复杂，代码量就会越多。当你一味的增大功能的时候，hexo需要调用很多api，外部的css等，这样反而弄巧成龊，把你的博客搞得速度很慢，那么访客的浏览体验就会下降。至少对于我来说，20秒还打不开一个网页的话，我便会丢弃使用。<br>所以你只需要做的是提高个人技术，写好博文，让更多的技术爱好者受益，并可以真正解决别人的问题。这是我做博客的一点体验。</p>
+<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt="qqgroup"></a></p>
+<p><strong>本文作者</strong>：冰羽<br><strong>本文地址</strong>： <a href="https://bingyublog.com/2019/02/23/Hexo添加文章阅读量统计功能/">https://bingyublog.com/2019/02/23/Hexo添加文章阅读量统计功能/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
+</span>
+      
+    </div>
+    <div>
+   
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+
+   
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"><i class="fa tag"></i> Hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/22/Hexo添加版权说明/" rel="next">Hexo添加版权说明</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        如果本文对您有帮助，还望赞赏一下，谢谢
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                    style="float:left;margin-left:25%;margin-right:10px;">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="" height="164px" width="164px">
+                </a> 
+              
+
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                                style="float:left;margin-left:25%;margin-right:10px;">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="" height="164px" width="164px">
+                            </a> 
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">冰羽</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">162</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://command.bingyublog.com" target="_blank">Linux命令查询</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置LeanCloud"><span class="nav-number">2.</span> <span class="nav-text">配置LeanCloud</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建应用"><span class="nav-number">2.1.</span> <span class="nav-text">创建应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Class"><span class="nav-number">2.2.</span> <span class="nav-text">Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取App-ID和App-Key"><span class="nav-number">2.3.</span> <span class="nav-text">获取App ID和App Key</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置主题"><span class="nav-number">3.</span> <span class="nav-text">配置主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-config-yml文件"><span class="nav-number">3.1.</span> <span class="nav-text">修改_config.yml文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加lean-analytics-swig文件"><span class="nav-number">3.2.</span> <span class="nav-text">添加lean-analytics.swig文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改post-swig文件"><span class="nav-number">3.3.</span> <span class="nav-text">修改post.swig文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改layout-swig文件"><span class="nav-number">3.4.</span> <span class="nav-text">修改layout.swig文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改zh-Hans-yml文件"><span class="nav-number">3.5.</span> <span class="nav-text">修改zh-Hans.yml文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LeanCloud管理"><span class="nav-number">4.</span> <span class="nav-text">LeanCloud管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#伪造阅读量"><span class="nav-number">4.1.</span> <span class="nav-text">伪造阅读量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Web安全"><span class="nav-number">4.2.</span> <span class="nav-text">Web安全</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+  
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; &nbsp;  2018 - 
+  <span itemprop="copyrightYear">2019
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冰羽
+  </span>
+
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题-- <a class="theme-link" href="https://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  &nbsp; | &nbsp;本站访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UA50F9B4D7",
+    "hash": "7cce0e84b501ad9c874106f70967e299"
+});
+tpwidget("show");</script>
+
+<span>本站已运行<span id="showDays"></span></span>
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2018,02,20,14,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML=""+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }, 1000);
+</script>
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+  
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("fq3aics801iEftdGyUK0emtG-gzGzoHsz", "ojpgVjlcRKxhoAjMoMDIhk5v");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
+</html>

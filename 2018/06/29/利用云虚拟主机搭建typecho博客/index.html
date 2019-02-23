@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="theme-next use-motion theme-next-mala">
 <head>
@@ -392,6 +391,37 @@
 
               
               
+                 <span id="/2018/06/29/利用云虚拟主机搭建typecho博客/" class="leancloud_visitors" data-flag-title="利用云虚拟主机搭建typecho博客">
+                 &nbsp; | &nbsp;
+                   <span class="post-meta-divider">阅读次数:</span>
+                   <span class="post-meta-item-icon">
+                     <i class="fa fa-eye"></i>
+                   </span>
+                   
+                     <span class="leancloud-visitors-count"></span>
+                 </span>
+              
+
+          <span class="post-time">
+            &nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+            <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">字数统计:</span>
+          <span class="post-count">1.2k(字)</span>
+          </span>
+
+          <span class="post-time">
+           	&nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+          <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">阅读时长≈</span>
+          <span class="post-count">4(分)</span>
+          </span>
+
+              
+              
 
             
           </span>
@@ -400,11 +430,6 @@
         
           
         
-
-        
-        
-      </div>
-    </header>
 
     <div class="post-body">
 
@@ -415,7 +440,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjseqyghm00bgpgwaqjw7yesa"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" rel="gallery_cjsh64zjn00brngwa0qyt6vde"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1ft2twht5vuj30xc0f0aqk.jpg" itemprop="contentUrl"/>
               </a>
@@ -431,6 +456,7 @@
       
         <span itemprop="articleBody"><p>首先晒一下自己做的站，网址: <a href="http://lengyue1024.cn/" target="_blank" rel="noopener">http://lengyue1024.cn/</a><br>(没解析出wwww类型的网址，所以不能访问<a href="http://www.lengyue1024.cn" target="_blank" rel="noopener">http://www.lengyue1024.cn</a>)<br>利用的是前天领取的免费云虚拟主机做的网站，仅仅是为了做一些测试以及练习建站，并没有作为主站使用，首先各位也可以参照本教程来搭建一个博客或者个人网站。<br>OK，开始！<br>首先下载typecho博客系统.<br>官方地址: <a href="http://typecho.org/download" target="_blank" rel="noopener">http://typecho.org/download</a><br>官方文档: <a href="http://docs.typecho.org/doku.php" target="_blank" rel="noopener">http://docs.typecho.org/doku.php</a><br>主题网站: <a href="https://typecho.me/" target="_blank" rel="noopener">https://typecho.me/</a><br>插件网站: <a href="https://plugins.typecho.me/" target="_blank" rel="noopener">https://plugins.typecho.me/</a><br>首先下载FTP软件，我个人用的是“8uftp”,然后Linux系统上我推荐的是filezilla ，然后可以直接 <em>sudo apt-get install filezilla</em> 即可完成安装。<br>我们首先进入主机屋的控制台页面，然后找到自己的FTP账号与FTP地址，你需要自己设置一个FTP密码用于连接FTP服务 。然后运行8uftp软件，填写FTP地址、账号、密码，连接上。如下图即为连接成功的样子。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssei72da3j30qt0gxwk3.jpg" alt="1"><br>其中web文件存放网站程序文件，log文件为缓存的日志文件，data为备份文件。<br>我们把下载好的typecho文件解压出来，然后把解压出来的文件全部上传到web文件中。还有一点一定要记住，你不要把web文件的上层目录也一同传进去，这样你打开网站的时候，会找不到主页，多了一层目录，就需要多访问一个目录才能进入网站主页。同时把web目录默认存在的index.htm也要删除了。做的类似我图中所示这样即可。然后右击上传即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsseosascyj30qq0gudhc.jpg" alt="1"><br>此时你点击主机屋默认为你分配的网站域名，即可看到网站安装页面了。如果你看到如下图所示。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssesblzhmj311y0gwglv.jpg" alt="1"><br>该主机默认的PHP版本是5.2.9,我们需要调整一下PHP版本才可以，<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf0l5mbxj30ve0a8weg.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf0sbunfj30ia09xjr9.jpg" alt="1"><br>调整为如图所示，才可以。<br>然后刷新一下页面，好了，安装页面出来了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf20ad6hj311r0hmq45.jpg" alt="1"><br>然后可以点击”开始下一步”，进行安装。<br>这个时候我们需要MySQL数据库的信息，我们需要初始化数据库。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssf6gqzgsj30vp0bj74a.jpg" alt="1"><br>即可看到数据库的信息了，我们需要设置一个数据库的密码，自己一定要记住这个密码，一会会用到。<br>我们开始填写配置信息，数据库地址设置为127.0.0.1，数据库名称、账号、密码均在数据库基本信息这里，按照你的MySQL数据库基本信息填写即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fsursrcu7hj311y0lcabf.jpg" alt="1"><br>然后设置博客后台登陆账号、密码。这些一定要仔细填写，并且记住，以方便后期进入后台管理自己的博客。<br>然后即可看到安装成功的界面了。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssff1dbm4j311x0hg74b.jpg" alt="1"><br>然后我们可以进入首页访问自己的博客<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssfhwk15hj311y0hp74u.jpg" alt="1"><br>这里我换个主题,将下载好的主题解压出来。 上传到/Web/usr/themes/文件夹下。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssfl5bwf8j30qk0h10uu.jpg" alt="1"><br>然后进入后台管理界面，启用刚才安装的主题即可。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssfm7rnj8j311w0hd3zp.jpg" alt="1"><br>刷新一下页面，即可看到新主题已经上线，嘿嘿~~~<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssgq9ezhlj311y0lcn1y.jpg" alt="1"><br>如果你需要安装什么新的插件的话，你首先下载解压出来，然后上传到/Web/usr/plugins/目录下，再到后台启用即可。<br>一切都设置好的话，我们可以自己买个域名，我这里有几个域名，都是在阿里云购买的，解析了，开始解析并绑定域名。<br>点击”域名绑定”，输入你购买的域名。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssgqe5qvej30v20adglk.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fst3cgvx8oj30i90cpt99.jpg" alt="1"><br>再进入阿里云控制台，开始解析域名，我这里解析出一个www和@类型。如果你是初次建站，你也许不理解这是什么意思，但是这里不做过多解释了，你只需按照我图示操作即可。还有一点就是，你解析出来的是什么类型的网址，你就绑定什么类型的。一定要全部绑定，否则不能正常访问。<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fssgptb756j30ib0cldg4.jpg" alt="1"><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fst3cgvx8oj30i90cpt99.jpg" alt="1"><br>其中的记录值即为FTP地址。解析成功后，点击你的域名即可打开你的博客了。<br>好了，整个过程就是这样，如果你还有哪里不懂的，可以<a href="http://shang.qq.com/open_webaio.html?sigt=eb13918e3cce45e958ba98cb6d54121ab735cb57303bfef30138cb855dfbb55c91f394d6298b31ea64a3fd9b6c049303&amp;sigu=5cb936229f2bdf3826fb23cb98883e973603d3ca92c6dce9a76944340bb2a9b534fcb423d256130b&amp;tuin=3433951572" target="_blank" rel="noopener">加我QQ</a>与我讨论。<br>我所用到的软件以及主题都传到群文件了，如果你需要的话，可以加群。</p>
 <p><strong>扫码进群，我等待你的加入</strong><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fqbczhv6i7j30f00fqadb.jpg" alt="1"></p>
+<p><strong>本文作者</strong>：冰羽<br><strong>本文地址</strong>： <a href="https://bingyublog.com/2018/06/29/利用云虚拟主机搭建typecho博客/">https://bingyublog.com/2018/06/29/利用云虚拟主机搭建typecho博客/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
 </span>
       
     </div>
@@ -673,7 +699,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">158</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -811,7 +837,7 @@
 </div>
 
 <div class="theme-info">
-  主题-- <a class="theme-link" href="http://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+  主题-- <a class="theme-link" href="https://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
 </div>
 
 <!-- busuanzi -->
@@ -820,7 +846,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
-  本站访问量:<span id="busuanzi_value_site_pv"></span>
+  &nbsp; | &nbsp;本站访问量:<span id="busuanzi_value_site_pv"></span>
 </span>
 </div>
 <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
@@ -1084,7 +1110,117 @@ tpwidget("show");</script>
     });
   </script>
   
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("fq3aics801iEftdGyUK0emtG-gzGzoHsz", "ojpgVjlcRKxhoAjMoMDIhk5v");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
 </html>
