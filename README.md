@@ -19,11 +19,13 @@
 
 - 网站名称: 冰羽の博客
 - 网站描述: A Blog Focused on Technology
+- 网站地址: <https://www.bingyublog.com/>
 
 ## :snowman: About Author | 关于博主
 
 - 昵称: 冰羽
 - 描述: 想把自己培养成技术型宅男，宅和男已经具备，就差技术了→\_→
+- Email: <mailto:xzhxpx@qq.com>
 
 ## :blue_book: About README | 关于README文件
 
@@ -40,7 +42,9 @@ $ git commit -m ":pencil: add README"
 $ git push
 ```
 
-## :mouse: Agreement | 守则
+## :lollipop: Agreement | 守则
 1. 本README文件为了统一格式，规定除了汉字之外,其余符号以及文字全部使用英文格式.
 2. 所有博客更新细节全部记录在此README文件中.
-3.
+
+## :paperclip: License | 协议
+均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议
