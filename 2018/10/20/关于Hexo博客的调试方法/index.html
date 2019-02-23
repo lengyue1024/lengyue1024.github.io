@@ -46,7 +46,7 @@
 <meta property="og:description" content="前言本文的关注点在于博客后期的优化，维护上，而不是博客的运行修复，配置，更新上。调试的前提是你已经安装并成功运行了hexo博客，而且是已经成功发布了博文。而且对于博客的优化，美化等工作是长期的，不可能一蹴而就，这些工作往往需要花费我们更多的时间以及精力来完善博客。本篇教程将会处于长期更新状态，所以你需要不定时查看。  这个教程的火狐浏览器的版本已经很老旧了，火狐调整了控制台的一些选项和参数，但是基">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg">
-<meta property="og:updated_time" content="2019-02-23T09:53:42.127Z">
+<meta property="og:updated_time" content="2019-02-23T10:05:48.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Hexo博客的调试方法">
 <meta name="twitter:description" content="前言本文的关注点在于博客后期的优化，维护上，而不是博客的运行修复，配置，更新上。调试的前提是你已经安装并成功运行了hexo博客，而且是已经成功发布了博文。而且对于博客的优化，美化等工作是长期的，不可能一蹴而就，这些工作往往需要花费我们更多的时间以及精力来完善博客。本篇教程将会处于长期更新状态，所以你需要不定时查看。  这个教程的火狐浏览器的版本已经很老旧了，火狐调整了控制台的一些选项和参数，但是基">
@@ -408,7 +408,7 @@
             <i class="fa fa-calendar-o"></i>
           </span>
           <span class="post-meta-item-text">字数统计:</span>
-          <span class="post-count">1.9k(字)</span>
+          <span class="post-count">2.1k(字)</span>
           </span>
 
           <span class="post-time">
@@ -417,7 +417,7 @@
           <i class="fa fa-calendar-o"></i>
           </span>
           <span class="post-meta-item-text">阅读时长≈</span>
-          <span class="post-count">6(分)</span>
+          <span class="post-count">7(分)</span>
           </span>
 
               
@@ -440,7 +440,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg" rel="gallery_cjshbfe7200ahg8wapibiyl45"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg" rel="gallery_cjshlec1l00bayowa9pely32i"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg" itemprop="contentUrl"/>
               </a>
@@ -458,7 +458,7 @@
 <blockquote>
 <p>这个教程的火狐浏览器的版本已经很老旧了，火狐调整了控制台的一些选项和参数，但是基本的功能和调试方式还是没有变化的。所以我们还是可以按照本教程放心正常调试。</p>
 </blockquote>
-<p>下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂这些，请你一定要三思后再去调试。不然你的博客可能会整个瘫痪。官方的hexo文档是最权威的，请仔细阅读后再做调试。</p>
+<h2 id="Hexo调试"><a href="#Hexo调试" class="headerlink" title="Hexo调试"></a>Hexo调试</h2><p>下面说几个对hexo的调试方法。首先你应该了解hexo的运行原理，然后清楚hexo的目录结构以及作用。这些都是你调试的基础。如果你不懂这些，请你一定要三思后再去调试。不然你的博客可能会整个瘫痪。官方的hexo文档是最权威的，请仔细阅读后再做调试。</p>
 <blockquote>
 <p>Hexo文档地址:<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
 </blockquote>
@@ -471,7 +471,8 @@
 <p>打开你的博客，然后按“F12”,打开控制台后，首先调整到“错误”一栏，然后刷先网页。你查看报错信息即可。如果你看不懂报错信息，就把报错信息全部复制粘贴进搜索框，网上会有解决办法。</p>
 <p>然后你再去你的博客的配置文件中，找到该段代码所在的文件。你打开后找到该段代码，进行分析即可。一般来说，出错的原因都是因为调用不到，这个时候你只需要查找代码的位置，然后使用相对于代码的位置来使代码可以成功调用即可。但是有一点必须要说明一下。就是这个调用的代码也许是在本地的配置文件中，也有可能是调用的cdn的代码。(那么什么是cdn调用的代码呢？在最下面我有讲到)如果是cdn的代码，你需要测试一下是否可以正常使用，并且需要查看一下是http的还是https的，你的博客支不支持调用等。因为就是很有可能一些代码已经不维护了，或者关闭了。比如网易跟帖的评论系统，jiathis的分享功能等。这些就只能换其他的了。</p>
 <p>我使用hexo也才刚半年的时间，所以说，提供的方法可能不到位，还请各位给我多多反馈意见和建议。</p>
-<p>下面我讲几句关于cdn加速的问题。</p>
+<h2 id="衷心提醒"><a href="#衷心提醒" class="headerlink" title="衷心提醒"></a>衷心提醒</h2><p>但是我需要给各位使用hexo以及其他类似于hexo博客的使用者说一句，并不是功能越多就越有趣。相反的，你增多了功能，反而会遏制博客打开的速度。很多插件看着是只有几行代码，短小精悍，其实你要是知道功能越花哨越复杂，代码量就会越多。当你一味的增大功能的时候，hexo需要调用很多api，外部的css等，这样反而弄巧成龊，把你的博客搞得速度很慢，那么访客的浏览体验就会下降。至少对于我来说，20秒还打不开一个网页的话，我便会丢弃使用。<br>所以你只需要做的是提高个人技术，写好博文，让更多的技术爱好者受益，并可以真正解决别人的问题。这是我做博客的一点体验。</p>
+<h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p>下面我讲几句关于cdn加速的问题。</p>
 <p>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。</p>
 <p>网页中引用代码的两种方式：</p>
 <ol>
@@ -881,7 +882,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo调试"><span class="nav-number">2.</span> <span class="nav-text">Hexo调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#衷心提醒"><span class="nav-number">3.</span> <span class="nav-text">衷心提醒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CDN"><span class="nav-number">4.</span> <span class="nav-text">CDN</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
