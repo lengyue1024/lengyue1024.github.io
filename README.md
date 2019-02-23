@@ -11,9 +11,9 @@
 - [2019/2/23]:
   - 添加文章阅读量统计功能
 
-## :octocat: About Blog | 关于博客
+## :snowflake: About Blog | 关于博客
 
-## :snowflake: About Author | 关于博主
+## :snowman: About Author | 关于博主
 
 ## :blue_book: About README | 关于README文件
 
