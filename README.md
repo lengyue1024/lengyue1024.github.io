@@ -10,12 +10,18 @@
 2. [2018/9/16]:
   - 添加了看板娘 *z16*
 
-3. [2019/2/22]:
+3. [2019/9/27]:
+  - 增加了kali linux tools独立页面
+
+4. [2018/10/27]:
+  - 修改了网站logo
+
+5. [2019/2/22]:
   - 添加了网站运行时间统计
   - 添加了字数统计、阅读时长功能
   - 添加了版权说明
 
-4. [2019/2/23]:
+6. [2019/2/23]:
   - 添加了文章阅读量统计功能
   - 为GitHub的博文仓库添加了README
 
@@ -52,6 +58,15 @@ $ git push
 1. 本README文件为了统一格式，规定除了汉字之外,其余符号以及文字全部使用英文格式.
 2. 所有博客更新细节全部记录在此README文件中.
 3. 博客与该README文件处于不定时更新中.
+
+## :email: Contact | 联系我
+
+[![facebook](https://wangchujiang.com/sb/ico/facebook.svg)](https://www.facebook.com/ibingyu)
+[![qq](https://wangchujiang.com/sb/ico/qq.svg)](http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes)
+[![qq-group](https://wangchujiang.com/sb/ico/group.svg)](https://jq.qq.com/?_wv=1027&k=5MttUBq)
+[![blog](https://wangchujiang.com/sb/ico/linux.svg)](https://www.bingyublog.com) [![email](https://wangchujiang.com/sb/ico/email.svg)](mailto:xzhxpx@qq.com)
+[![weibo](https://wangchujiang.com/sb/ico/weibo.svg)](https://weibo.com/u/6083310945)
+[![gitter](https://wangchujiang.com/sb/ico/gitter.svg)](https://gitter.im/bingyux/Lobby)
 
 ## :paperclip: License | 协议
 本博客采用 [![CC BY-NC-SA](https://ws1.sinaimg.cn/large/006DGX4tly1g0gk74ljiij302800f3y9.jpg)](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议
