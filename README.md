@@ -17,7 +17,13 @@
 
 ## :snowflake: About Blog | 关于博客
 
+- 网站名称: 冰羽の博客
+- 网站描述: A Blog Focused on Technology
+
 ## :snowman: About Author | 关于博主
+
+- 昵称: 冰羽
+- 描述: 想把自己培养成技术型宅男，宅和男已经具备，就差技术了→\_→
 
 ## :blue_book: About README | 关于README文件
 
