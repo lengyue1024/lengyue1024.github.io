@@ -34,7 +34,7 @@ $ git commit -m ":pencil: add README"
 $ git push
 ```
 
-## Agreement | 守则
-1. 本README文件除了汉字之外,其余符号以及文字全部使用英文格式.
+## :mouse: Agreement | 守则
+1. 本README文件为了统一格式，规定除了汉字之外,其余符号以及文字全部使用英文格式.
 2. 所有博客更新细节全部记录在此README文件中.
-3. 
+3.
