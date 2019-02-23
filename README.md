@@ -25,7 +25,7 @@
 
 - 昵称: 冰羽
 - 描述: 想把自己培养成技术型宅男，宅和男已经具备，就差技术了→\_→
-- Email: <mailto:xzhxpx@qq.com>
+- Email: [xzhxpx@qq.com](mailto:xzhxpx@qq.com)
 
 ## :blue_book: About README | 关于README文件
 
@@ -45,6 +45,7 @@ $ git push
 ## :lollipop: Agreement | 守则
 1. 本README文件为了统一格式，规定除了汉字之外,其余符号以及文字全部使用英文格式.
 2. 所有博客更新细节全部记录在此README文件中.
+3. 博客与该README文件处于不定时更新中.
 
 ## :paperclip: License | 协议
 本博客采用 [![CC BY-NC-SA](https://ws1.sinaimg.cn/large/006DGX4tly1g0gk74ljiij302800f3y9.jpg)](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议
