@@ -47,4 +47,4 @@ $ git push
 2. 所有博客更新细节全部记录在此README文件中.
 
 ## :paperclip: License | 协议
-均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议
+本博客采用 [![CC BY-NC-SA](https://ws1.sinaimg.cn/large/006DGX4tly1g0gk74ljiij302800f3y9.jpg)](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议
