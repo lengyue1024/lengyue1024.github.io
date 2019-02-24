@@ -2,7 +2,7 @@
 
 # 冰羽の博客
 
-[![](https://badgen.net/badge/author/%E5%86%B0%E7%BE%BD/cyan?icon=circleci)](https://octocathub.github.io/)
+![author](https://badgen.net/badge/author/%E5%86%B0%E7%BE%BD/cyan?icon=circleci)
 [![github](https://wangchujiang.com/sb/github/green-alt.svg)](https://github.com/lengyue1024)
 ![state](https://wangchujiang.com/sb/progressed/68.svg)
 [![changelog](https://img.shields.io/badge/>-read-4ab8a1.svg)](#pencil-change-log--更新日志)
