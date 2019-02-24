@@ -2,10 +2,11 @@
 
 # 冰羽の博客
 
+[![](https://badgen.net/badge/author/%E5%86%B0%E7%BE%BD/cyan?icon=circleci)](https://octocathub.github.io/)
+[![github](https://wangchujiang.com/sb/github/green-alt.svg)](https://github.com/lengyue1024)
+![state](https://wangchujiang.com/sb/progressed/68.svg)
 [![changelog](https://img.shields.io/badge/>-read-4ab8a1.svg)](#pencil-change-log--更新日志)
 [![blog](https://img.shields.io/badge/_-more-4ab8a1.svg)](https://www.bingyublog.com)
-[![github](https://wangchujiang.com/sb/github/green-alt.svg)](https://github.com/lengyue1024)
-![progress](https://wangchujiang.com/sb/progressed/68.svg)
 
 ## :pencil: Change Log | 更新日志
 
@@ -40,7 +41,7 @@
 - 网站名称: 冰羽の博客
 - 网站描述: A Blog Focused on Technology
 - 网站地址: <https://www.bingyublog.com>
-- 网站状态: 持续更新ing...
+- 网站状态: 持续更新ing ...
 
 ## :snowman: About Author | 关于博主
 
@@ -48,7 +49,8 @@
 - 描述: 想把自己培养成技术型宅男，宅和男已经具备，就差技术了→\_→
 - 状态: 大三在读ing<sup>[2019.2]</sup>
 - 专业: 电子科学与技术
-- Email: [xzhxpx@qq.com](mailto:xzhxpx@qq.com)
+- 组织: [OctocatHub](https://octocathub.github.io/)
+- 邮箱: [xzhxpx@qq.com](mailto:xzhxpx@qq.com)
 
 ## :blue_book: About README | 关于README文件
 
