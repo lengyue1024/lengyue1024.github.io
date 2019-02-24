@@ -30,11 +30,17 @@
   - 添加了文章阅读量统计功能
   - 为GitHub的博文仓库添加了README
 
+## :mag: Wish | 需求
+
+1. 增加评论系统
+2. 增加站内搜索
+
 ## :snowflake: About Blog | 关于博客
 
 - 网站名称: 冰羽の博客
 - 网站描述: A Blog Focused on Technology
 - 网站地址: <https://www.bingyublog.com>
+- 网站状态: 持续更新ing...
 
 ## :snowman: About Author | 关于博主
 
