@@ -46,7 +46,7 @@
 <meta property="og:description" content="前言本文的关注点在于博客后期的优化，维护上，而不是博客的运行修复，配置，更新上。调试的前提是你已经安装并成功运行了hexo博客，而且是已经成功发布了博文。而且对于博客的优化，美化等工作是长期的，不可能一蹴而就，这些工作往往需要花费我们更多的时间以及精力来完善博客。本篇教程将会处于长期更新状态，所以你需要不定时查看。  这个教程的火狐浏览器的版本已经很老旧了，火狐调整了控制台的一些选项和参数，但是基">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg">
-<meta property="og:updated_time" content="2019-02-24T06:11:39.101Z">
+<meta property="og:updated_time" content="2019-02-25T03:39:49.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Hexo博客的调试方法">
 <meta name="twitter:description" content="前言本文的关注点在于博客后期的优化，维护上，而不是博客的运行修复，配置，更新上。调试的前提是你已经安装并成功运行了hexo博客，而且是已经成功发布了博文。而且对于博客的优化，美化等工作是长期的，不可能一蹴而就，这些工作往往需要花费我们更多的时间以及精力来完善博客。本篇教程将会处于长期更新状态，所以你需要不定时查看。  这个教程的火狐浏览器的版本已经很老旧了，火狐调整了控制台的一些选项和参数，但是基">
@@ -69,8 +69,6 @@
   </script>
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
   <title> 关于Hexo博客的调试方法 | 冰羽の博客 | A Blog Focused on Technology </title>
 </head>
 
@@ -393,6 +391,16 @@
 
               
               
+                 <span id="/2018/10/20/关于Hexo博客的调试方法/" class="leancloud_visitors" data-flag-title="关于Hexo博客的调试方法">
+                 &nbsp; | &nbsp;
+                   <span class="post-meta-divider">阅读次数:</span>
+                   <span class="post-meta-item-icon">
+                     <i class="fa fa-eye"></i>
+                   </span>
+                   
+                     <span class="leancloud-visitors-count"></span>
+                 </span>
+              
 
           <span class="post-time">
             &nbsp; | &nbsp;
@@ -400,7 +408,7 @@
             <i class="fa fa-calendar-o"></i>
           </span>
           <span class="post-meta-item-text">字数统计:</span>
-          <span class="post-count">2.2k(字)</span>
+          <span class="post-count">2.7k(字)</span>
           </span>
 
           <span class="post-time">
@@ -409,7 +417,7 @@
           <i class="fa fa-calendar-o"></i>
           </span>
           <span class="post-meta-item-text">阅读时长≈</span>
-          <span class="post-count">7(分)</span>
+          <span class="post-count">9(分)</span>
           </span>
 
               
@@ -443,7 +451,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg" rel="gallery_cjsjqqe1800baa0waku7y1ath"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg" rel="gallery_cjsjsqu9e00bg40wand6poipu"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fweofgmcobj30jg06eaaq.jpg" itemprop="contentUrl"/>
               </a>
@@ -477,6 +485,8 @@
 <p>打开你的博客，然后按“F12”,打开控制台后，首先调整到“错误”一栏，然后刷先网页。你查看报错信息即可。如果你看不懂报错信息，就把报错信息全部复制粘贴进搜索框，网上会有解决办法。</p>
 <p>然后你再去你的博客的配置文件中，找到该段代码所在的文件。你打开后找到该段代码，进行分析即可。一般来说，出错的原因都是因为调用不到，这个时候你只需要查找代码的位置，然后使用相对于代码的位置来使代码可以成功调用即可。但是有一点必须要说明一下。就是这个调用的代码也许是在本地的配置文件中，也有可能是调用的cdn的代码。(那么什么是cdn调用的代码呢？在最下面我有讲到)如果是cdn的代码，你需要测试一下是否可以正常使用，并且需要查看一下是http的还是https的，你的博客支不支持调用等。因为就是很有可能一些代码已经不维护了，或者关闭了。比如网易跟帖的评论系统，jiathis的分享功能等。这些就只能换其他的了。</p>
 <p>我使用hexo也才刚半年的时间，所以说，提供的方法可能不到位，还请各位给我多多反馈意见和建议。</p>
+<p>还有就是当你运行<code>hexo d</code>和<code>hexo g</code>命令时候，如果出现了很多的报错，那么就将你刚才更改的文件再更改过来，然后重新审核你更改的代码，是否出现了比如”字母大小写，中文符号或者多了字母或多了空格”等问题。<br>还有就是即使你的代码运行时没有出现报错，而且按照教程做的也全都对，但是并没有出现特殊的效果。<br>有可能是出现了逻辑错误。比如，我曾经给博客加valine评论，我已经严格按照教程进行了设置了，但是最会出现逻辑错误。下面讲解一个我遇到的问题。特别麻烦，几乎折腾了我一天一夜。我各种百度谷歌，各种查找教程。当我准备放弃的时候，突然看到了这么一条语句，终于开窍了，原来是逻辑判断造成的。<br><img src="" alt=""><br>这个红线所示的代码是我在增加阅读统计功能时候加上去的，本来放上去是没有任何问题的。但是后来我在做valine评论的时候，直接将这么一条语句也放到了他的后面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line">  enable: false</span><br></pre></td></tr></table></figure></p>
+<p>  这段话的意思就是当此选项设置为true时候，才会加载valine文件和lean文件，然后才能出现评论和阅读统计。当设置为false时候，无论你的valine如何设置，都不会出现评论，我在调试过程中，也发现了此问题，但是一直没搞明白。这一下子终于明白了。其实和我们 些代码一样，即使没有任何的报错，还是会出现逻辑错误。而逻辑错误恰好是编译器查找不出来的。所以也希望各位多多重视一下此问题。</p>
 <h2 id="衷心提醒"><a href="#衷心提醒" class="headerlink" title="衷心提醒"></a>衷心提醒</h2><p>但是我需要给各位使用hexo以及其他类似于hexo博客的使用者说一句，并不是功能越多就越有趣。相反的，你增多了功能，反而会遏制博客打开的速度。很多插件看着是只有几行代码，短小精悍，其实你要是知道功能越花哨越复杂，代码量就会越多。当你一味的增大功能的时候，hexo需要调用很多api，外部的css等，这样反而弄巧成龊，把你的博客搞得速度很慢，那么访客的浏览体验就会下降。至少对于我来说，20秒还打不开一个网页的话，我便会丢弃使用。<br>所以你只需要做的是提高个人技术，写好博文，让更多的技术爱好者受益，并可以真正解决别人的问题。这是我做博客的一点体验。</p>
 <h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p>下面我讲几句关于cdn加速的问题。</p>
 <p>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。</p>
@@ -1193,4 +1203,36 @@ tpwidget("show");</script>
       });
     });
   </script>
+
   
+
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = '';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'fq3aics801iEftdGyUK0emtG-gzGzoHsz',
+        appKey: 'ojpgVjlcRKxhoAjMoMDIhk5v',
+        placeholder: '留下正确邮箱可以第一时间获取博主回复',
+        avatar:'monsterid',
+        visitor: true,
+        meta:guest,
+        pageSize:'' || 10,
+    });
+  </script>
+
+
+  
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
+</html>
