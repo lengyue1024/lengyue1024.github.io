@@ -4,7 +4,9 @@
 
 ![author](https://badgen.net/badge/author/%E5%86%B0%E7%BE%BD/cyan?icon=circleci)
 [![github](https://wangchujiang.com/sb/github/green-alt.svg)](https://github.com/lengyue1024)
-![state](https://wangchujiang.com/sb/progressed/68.svg)
+![progress](https://wangchujiang.com/sb/progressed/68.svg)
+![platform](https://badgen.net/badge//Linux/cyan?icon=terminal)
+![platform](https://badgen.net/badge//git/4ab8a1?icon=git)
 [![changelog](https://img.shields.io/badge/>-read-4ab8a1.svg)](#pencil-change-log--更新日志)
 [![blog](https://img.shields.io/badge/_-more-4ab8a1.svg)](https://www.bingyublog.com)
 
