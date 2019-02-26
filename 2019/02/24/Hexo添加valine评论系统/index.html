@@ -1,0 +1,1189 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→" />
+
+
+
+  <meta name="keywords" content="Hexo," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="前言我本人使用主题为 MagicLamp,所以该教程适用于使用 MagicLamp 主题或者next主题或以next主题为基础修改的主题等。 费了我一天力气，终于把评论系统添加上了。唉，心酸，一言难尽啊( ╯□╰ ). 关于评论系统我其实一直都在关注中。可是不是这个倒闭就是那个需要翻墙。唯独valine对于我来说是最合适的，可无奈的是我使用的这个主题，很多功能都被阉割了(当然这套主题还是很酷的，我">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo添加valine评论系统">
+<meta property="og:url" content="https://bingyublog.com/2019/02/24/Hexo添加valine评论系统/index.html">
+<meta property="og:site_name" content="冰羽の博客 | A Blog Focused on Technology">
+<meta property="og:description" content="前言我本人使用主题为 MagicLamp,所以该教程适用于使用 MagicLamp 主题或者next主题或以next主题为基础修改的主题等。 费了我一天力气，终于把评论系统添加上了。唉，心酸，一言难尽啊( ╯□╰ ). 关于评论系统我其实一直都在关注中。可是不是这个倒闭就是那个需要翻墙。唯独valine对于我来说是最合适的，可无奈的是我使用的这个主题，很多功能都被阉割了(当然这套主题还是很酷的，我">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1g0ils0ozt9j30jg05uqb2.jpg">
+<meta property="og:updated_time" content="2019-02-26T05:52:39.286Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo添加valine评论系统">
+<meta name="twitter:description" content="前言我本人使用主题为 MagicLamp,所以该教程适用于使用 MagicLamp 主题或者next主题或以next主题为基础修改的主题等。 费了我一天力气，终于把评论系统添加上了。唉，心酸，一言难尽啊( ╯□╰ ). 关于评论系统我其实一直都在关注中。可是不是这个倒闭就是那个需要翻墙。唯独valine对于我来说是最合适的，可无奈的是我使用的这个主题，很多功能都被阉割了(当然这套主题还是很酷的，我">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006DGX4tly1g0ils0ozt9j30jg05uqb2.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+
+  <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/fb883a64.js","daovoice")
+    daovoice('init', {
+    app_id: "fb883a64"
+    });
+    daovoice('update');
+  </script>
+
+
+  <title> Hexo添加valine评论系统 | 冰羽の博客 | A Blog Focused on Technology </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7b451f13126c1ccdebfa8d48ee43a5d0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">冰羽の博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-kali">
+          <a href="/kali linux tools" rel="section">
+            <i class="menu-item-icon icon-next-kali"></i> <br />
+            Kali Linux Tools
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/在线工具" rel="section">
+            <i class="menu-item-icon icon-next-something"></i> <br />
+            在线工具
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'xxx','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Hexo添加valine评论系统
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2019-02-24T16:58:19+08:00" content="2019-02-24">
+            2019-02-24
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Hexo/" itemprop="url" rel="index">
+                  <span itemprop="name">Hexo</span>
+                </a>
+              </span>
+
+              
+              
+                 <span id="/2019/02/24/Hexo添加valine评论系统/" class="leancloud_visitors" data-flag-title="Hexo添加valine评论系统">
+                 &nbsp; | &nbsp;
+                   <span class="post-meta-divider">阅读次数:</span>
+                   <span class="post-meta-item-icon">
+                     <i class="fa fa-eye"></i>
+                   </span>
+                   
+                     <span class="leancloud-visitors-count"></span>
+                 </span>
+              
+
+          <span class="post-time">
+            &nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+            <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">字数统计:</span>
+          <span class="post-count">1.6k(字)</span>
+          </span>
+
+          <span class="post-time">
+           	&nbsp; | &nbsp;
+          <span class="post-meta-item-icon">
+          <i class="fa fa-calendar-o"></i>
+          </span>
+          <span class="post-meta-item-text">阅读时长≈</span>
+          <span class="post-count">6(分)</span>
+          </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+              <span class="post-meta-divider">评论:</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              <a href="/2019/02/24/Hexo添加valine评论系统/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count valine-comment-count" data-xid="/2019/02/24/Hexo添加valine评论系统/" itemprop="commentCount"></span>
+              </a>
+            </span>
+          
+        
+
+    <div class="post-body">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://ws1.sinaimg.cn/large/006DGX4tly1g0ils0ozt9j30jg05uqb2.jpg" rel="gallery_cjsld5toj0017z0waqff3txf2"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0ils0ozt9j30jg05uqb2.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+
+        </div>
+      
+
+      
+        <span itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我本人使用主题为 <strong>MagicLamp</strong>,所以该教程适用于使用 <strong>MagicLamp</strong> 主题或者next主题或以next主题为基础修改的主题等。</p>
+<p>费了我一天力气，终于把评论系统添加上了。唉，心酸，一言难尽啊( ╯□╰ ). 关于评论系统我其实一直都在关注中。可是不是这个倒闭就是那个需要翻墙。唯独valine对于我来说是最合适的，可无奈的是我使用的这个主题，很多功能都被阉割了(当然这套主题还是很酷的，我很喜欢)。该套主题只保留了disqus评论系统，但是不能用，原因在于需要翻墙。<br>网上的部分教程也根本不好用(纯粹瞎几把凑字数)。都是使用的已经集成好valine的主题，或者干脆让你升级到已经集成valine的版本，要是这样都能解决问题的话，我还瞎搞个毛啊?<br>所以关于本博客的优化我只能一点点读这个主题的代码，一点点理解，一点点改进了。<br>所幸，我自己做优化做美化也做的多了，所以关于next主题和hexo框架的整体结构我也有些大致的了解了，今天我终于解决这个难题了。<br>开心，兴奋。在开学之前，总算有点成就了，这个寒假没白过。嗯，就是这样。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>打开<code>next/_config.yml</code>文件，在合适位置加入以下代码(注意缩进)。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  appid:</span> <span class="comment"># your leancloud application appid</span></span><br><span class="line"><span class="attr">  appkey:</span>  <span class="comment"># your leancloud application appkey</span></span><br><span class="line"><span class="attr">  avatar:</span> <span class="string">monsterid</span></span><br><span class="line"><span class="attr">  notify:</span> <span class="literal">false</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line"><span class="attr">  verify:</span> <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line"><span class="attr">  visitor:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  placeholder:</span> <span class="string">Just</span> <span class="string">go</span> <span class="string">go</span></span><br></pre></td></tr></table></figure></p>
+<p>打开<code>themes/next/layout/_macro/post.swig</code>文件 ，加入以下代码。</p>
+<p><iframe src="https://carbon.now.sh/embed/?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&code=%257B%2525%2520elseif%2520theme.valine.enable%2520and%2520theme.valine.appid%2520and%2520theme.valine.appkey%2520%2525%257D%250A%2520%2520%253Cspan%2520class%253D%2522post-comments-count%2522%253E%250A%2520%2520%2526nbsp%253B%2520%257C%2520%2526nbsp%253B%250A%2520%2520%2520%2520%253Cspan%2520class%253D%2522post-meta-divider%2522%253E%25E8%25AF%2584%25E8%25AE%25BA%253A%253C%252Fspan%253E%250A%2520%2520%2520%2520%253Cspan%2520class%253D%2522post-meta-item-icon%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ci%2520class%253D%2522fa%2520fa-comment-o%2522%253E%253C%252Fi%253E%250A%2520%2520%2520%2520%253C%252Fspan%253E%250A%2520%2520%2520%2520%253Ca%2520href%253D%2522%257B%257B%2520url_for(post.path)%2520%257D%257D%2523comments%2522%2520itemprop%253D%2522discussionUrl%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522post-comments-count%2520valine-comment-count%2522%2520data-xid%253D%2522%257B%257B%2520url_for(post.path)%2520%257D%257D%2522%2520itemprop%253D%2522commentCount%2522%253E%253C%252Fspan%253E%250A%2520%2520%2520%2520%253C%252Fa%253E%250A%2520%2520%253C%252Fspan%253E%250A&es=2x&wm=false" style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe><br>如图:<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0jrtn54a0j322e0u0wkd.jpg" alt=""></p>
+<p>在<code>themes/next/layout/_third-party/comments</code>文件夹下新建<code>valine.swig</code>文件，向该文件写入以下代码。</p>
+<p><iframe align="center" src="https://carbon.now.sh/embed/?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=javascript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&code=%257B%2525%2520if%2520theme.valine.enable%2520and%2520theme.valine.appid%2520and%2520theme.valine.appkey%2520%2525%257D%250A%2520%2520%253Cscript%2520src%253D%2522%252F%252Fcdn1.lncld.net%252Fstatic%252Fjs%252F3.0.4%252Fav-min.js%2522%253E%253C%252Fscript%253E%250A%2520%2520%253Cscript%2520src%253D%2522%252F%252Funpkg.com%252Fvaline%252Fdist%252FValine.min.js%2522%253E%253C%252Fscript%253E%250A%250A%2520%2520%253Cscript%2520type%253D%2522text%252Fjavascript%2522%253E%250A%2520%2520%2520%2520var%2520GUEST%2520%253D%2520%255B'nick'%252C'mail'%252C'link'%255D%253B%250A%2520%2520%2520%2520var%2520guest%2520%253D%2520'%257B%257B%2520theme.valine.guest_info%2520%257D%257D'%253B%250A%2520%2520%2520%2520guest%2520%253D%2520guest.split('%252C').filter(item%253D%253E%257B%250A%2520%2520%2520%2520%2520%2520return%2520GUEST.indexOf(item)%253E-1%253B%250A%2520%2520%2520%2520%257D)%253B%250A%2520%2520%2520%2520new%2520Valine(%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520el%253A%2520'%2523comments'%2520%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520verify%253A%2520%257B%257B%2520theme.valine.verify%2520%257D%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520notify%253A%2520%257B%257B%2520theme.valine.notify%2520%257D%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520appId%253A%2520'%257B%257B%2520theme.valine.appid%2520%257D%257D'%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520appKey%253A%2520'%257B%257B%2520theme.valine.appkey%2520%257D%257D'%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520placeholder%253A%2520'%257B%257B%2520theme.valine.placeholder%2520%257D%257D'%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520avatar%253A'%257B%257B%2520theme.valine.avatar%2520%257D%257D'%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520visitor%253A%2520%257B%257B%2520theme.valine.visitor%2520%257D%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520meta%253Aguest%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520pageSize%253A'%257B%257B%2520theme.valine.pageSize%2520%257D%257D'%2520%257C%257C%252010%252C%250A%2520%2520%2520%2520%257D)%253B%250A%2520%2520%253C%252Fscript%253E%250A%257B%2525%2520endif%2520%2525%257D&es=4x&wm=false" style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"><br></iframe><br>如图:<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0jrvf52hzj30zo0u0q60.jpg" alt=""></p>
+<p>向<code>themes/next/layout/_layout.swig</code>文件的<code>&lt;\body&gt;</code>上方加入以下代码。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include <span class="string">'_third-party/comments/valine.swig'</span> %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如图:<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0jrx249j7j31l80l4jsw.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0immi25bfj30co0640t1.jpg" alt=""></p>
+<p>这里我是直接加载了valine.swig文件，因为我已经决定只使用valine了。但是如果你有可能使用其他的评论系统的话。可以在该文件中加入{% include '_third-party/comments/index.swig' %}代码，然后向<code>index.swig</code>文件加入{% include 'valine.swig' %}，以便被引用到valine评论系统。</p>
+<h2 id="配置LeanCloud"><a href="#配置LeanCloud" class="headerlink" title="配置LeanCloud"></a>配置LeanCloud</h2><p>我们需要给valine创建一个class。<br>具体做法，可以参考<a href="https://www.bingyublog.com/2019/02/23/Hexo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">Hexo添加文章阅读量统计功能</a>。<br>我们只需要把class命名为 <strong>Comment</strong> 即可。<br>然后把appid和appkey的数值复制粘贴到<code>next/_config.yml</code>文件。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>运行以下命令开始测试并发布<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean  // 清除缓存</span><br><span class="line">$ hexo g      // 生成文件</span><br><span class="line">$ hexo s      // 本地部署</span><br><span class="line">$ hexo d      // 部署到网站上</span><br></pre></td></tr></table></figure></p>
+<h2 id="F-amp-Q"><a href="#F-amp-Q" class="headerlink" title="F&amp;Q"></a>F&amp;Q</h2><ol>
+<li>我设置完valine，tags和categories页面也有评论，怎么处理？<br>解决办法: 打开网站根目录的<code>source/categories/index.md</code>和<code>source/tags/index.md</code>文件，向其中加入<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如图所示:<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0in3pb4b1j309303dt8l.jpg" alt=""></p>
+<ol>
+<li>出现”Code 403: 访问被api域名白名单拒绝，请检查你的安全域名设置.”字样，怎么办?<br>如图所示:<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0in6jt9gxj30nn0bz74n.jpg" alt=""><br>解决办法: 这是因为你设置的安全域名不正确，或者你已经开启了安全域名，但是你还在本地调试，此时本地已经被禁止了获取api接口，所以会被拒绝。<br>首先，如果你只需要向安全域名那里写入你的网站首页地址即可，默认443端口。<br>如图:<br><img src="https://ws1.sinaimg.cn/large/006DGX4tly1g0inab50g6j30tv06rdfz.jpg" alt=""><br>如果没有开启https，就写为”<a href="http://www.domain.com:80&quot;。如果依然不能成功运行，就不要设置了。保存为空即可。" target="_blank" rel="noopener">http://www.domain.com:80&quot;。如果依然不能成功运行，就不要设置了。保存为空即可。</a></li>
+<li>怎么更改头像?<br>不同用户头像需要自己创建<a href="http://cn.gravatar.com/" target="_blank" rel="noopener">Gravatar</a>账户，并上传头像即可，评论显示的是自己上传的头像。如果没有上传就是默认头像。<br>可以查阅官方教程:[头像配置]<a href="https://valine.js.org/avatar.html" target="_blank" rel="noopener">https://valine.js.org/avatar.html</a>.<br>但是还需要注意的是: 如果你修改了头像后发现没有更新，请不要慌张，因为gravatar.cat.net 有七天的缓存期.所以设置后可能并不能直接出现效果，安静等待即可。</li>
+<li>Valine评论系统中的邮件提醒怎么设置?<br>可以查看官方教程:<a href="https://valine.js.org/notify.html" target="_blank" rel="noopener">https://valine.js.org/notify.html</a><br>如果你对Valine自带的邮件提醒不满意，其实还使用更完善的第三方邮件提醒：<a href="https://github.com/zhaojun1998/Valine-Admin" target="_blank" rel="noopener">https://github.com/zhaojun1998/Valine-Admin</a><br>这些官方都讲解的很清楚了，我便不多说了。</li>
+</ol>
+<blockquote>
+<p>更多问题可以点击下方入群，进群问我，也可以直接在下方评论，但是留下你的邮箱，方便我回复。你还可以直接到GitHub给作者提issue或者查阅issue，看看是否有人也出现了和你相同的问题，地址:<a href="https://github.com/xCss/Valine" target="_blank" rel="noopener">https://github.com/xCss/Valine</a></p>
+</blockquote>
+<h2 id="如何自定义valine评论"><a href="#如何自定义valine评论" class="headerlink" title="如何自定义valine评论"></a>如何自定义valine评论</h2><p>首先我们到该地址<a href="https://unpkg.com/valine/dist/Valine.min.js" target="_blank" rel="noopener">https://unpkg.com/valine/dist/Valine.min.js</a>把源码下载到本地，然后根据自己的喜好在文本编辑器里修改语句，然后再把修改后的js文件放到 <code>themes/next/source/js</code>文件夹中，修改好后把上面js的链接由作者的提供的地址改成链接到自己目录下就行。然后就可以从此路径中加载该js文件了。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>那些想要测试评论系统的去<a href="https://valine.js.org" target="_blank" rel="noopener">https://valine.js.org</a>，不要在我这里测试评论，有想要讨论的麻烦留下正确邮箱地址。<br>对于那些测试或者恶意诽谤等的评论，我会及时删除，还请各位遵守一下规则，谢谢合作！</p>
+<p>首先说一句，感谢next主题的作者。这个主题之所以能一直蝉联第一，不是没有原因的。<br>而原因我认为并在于next的颜值(不然网上也不会出现那么多定制next主题的和修改的了)。<br>重点在于next主题真的做的可自定义性太高了。即使不懂js，不懂css，只要你了解了next主题的结构，基本上就可以实现自己的定制了。<br>next主题全部是模块化的，只需要我们简单的修改即可完成所有的配置和自我定制。</p>
+<blockquote>
+<p>参考:</p>
+<ul>
+<li><a href="https://valine.js.org" target="_blank" rel="noopener">https://valine.js.org</a></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next/pull/1983" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next/pull/1983</a></li>
+</ul>
+</blockquote>
+<p><strong>扫码进群，我等待你的加入</strong><br><a href="https://jq.qq.com/?_wv=1027&amp;k=5J0jTCx" target="_blank" rel="noopener"><img src="https://ws1.sinaimg.cn/large/006DGX4tly1fv00kx89lrj30go09cgoi.jpg" alt="qqgroup"></a></p>
+<p><strong>本文作者</strong>：冰羽<br><strong>本文地址</strong>： <a href="https://bingyublog.com/2019/02/24/Hexo添加valine评论系统/">https://bingyublog.com/2019/02/24/Hexo添加valine评论系统/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
+</span>
+      
+    </div>
+    <div>
+   
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+
+   
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"><i class="fa tag"></i> Hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/25/怎么给Hexo博客添加一个README文件/" rel="prev">怎么给Hexo博客添加一个README文件</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/23/Hexo添加文章阅读量统计功能/" rel="next">Hexo添加文章阅读量统计功能</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        如果本文对您有帮助，还望赞赏一下，谢谢
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                    style="float:left;margin-left:25%;margin-right:10px;">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="" height="164px" width="164px">
+                </a> 
+              
+
+            
+                <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                                style="float:left;margin-left:25%;margin-right:10px;">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fjy1fzj30jg0c0die.jpg" title="" height="164px" width="164px">
+                            </a> 
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="https://ws1.sinaimg.cn/large/006DGX4tly1fzl0fssawnj30jg0c0tbh.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冰羽" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">冰羽</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">想把自己培养成技术型宅男，宅和男已经具备，就差技术了→_→</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">166</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lengyue1024" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=3433951572&site=qq&menu=yes" target="_blank">QQ</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://blog.csdn.net/bingyu1024" target="_blank">CSDN</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/ibingyu" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/ibingyu" target="_blank">SegmentFault</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6083310945" target="_blank">微博</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/bing-yu-77-78/activities" target="_blank">知乎</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/users/0902425adc04" target="_blank">简书</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://octocathub.github.io" target="_blank">OctocatHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://bbskali.cn/forum.php" target="_blank">kali linux论坛</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://command.bingyublog.com" target="_blank">Linux命令查询</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.ihuiji.cn/" target="_blank">灰机blog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.heikeblog.com/" target="_blank">黑客入门</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置LeanCloud"><span class="nav-number">3.</span> <span class="nav-text">配置LeanCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署"><span class="nav-number">4.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-amp-Q"><span class="nav-number">5.</span> <span class="nav-text">F&amp;Q</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何自定义valine评论"><span class="nav-number">6.</span> <span class="nav-text">如何自定义valine评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">7.</span> <span class="nav-text">后记</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+  
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; &nbsp;  2018 - 
+  <span itemprop="copyrightYear">2019
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冰羽
+  </span>
+
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题-- <a class="theme-link" href="https://www.bingyublog.com">bingyu</a>.<a class="theme-link" href="https://github.com/lengyue1024/lengyue1024.github.io">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  &nbsp; | &nbsp;本站访问量:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UA50F9B4D7",
+    "hash": "7cce0e84b501ad9c874106f70967e299"
+});
+tpwidget("show");</script>
+
+<span>本站已运行<span id="showDays"></span></span>
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2018,02,20,14,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML=""+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }, 1000);
+</script>
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+
+  
+
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = '';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'fq3aics801iEftdGyUK0emtG-gzGzoHsz',
+        appKey: 'ojpgVjlcRKxhoAjMoMDIhk5v',
+        placeholder: '留下正确邮箱可以第一时间获取博主回复',
+        avatar:'monsterid',
+        visitor: true,
+        meta:guest,
+        pageSize:'' || 10,
+    });
+  </script>
+
+
+  
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":false},"log":false});</script></body>
+</html>
