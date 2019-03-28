@@ -36,6 +36,10 @@
 7. [2019/2/25]:
   - 增加了valine评论系统
 
+8. [2019/3/27]:
+  - 取消了[天气插件]()
+  - 增加了[GitHub Corner](http://tholman.com/github-corners/)
+
 ## :mag: Wish | 需求
 
 1. - [x] 增加评论系统
