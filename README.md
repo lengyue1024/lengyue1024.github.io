@@ -1,4 +1,4 @@
-<img align="right" src="https://ws1.sinaimg.cn/large/006DGX4tly1g0gp0zsj85j30a0069djc.jpg">
+<img align="right" src="https://ww3.inaimg.cn/large/006DGX4tly1g0gp0zsj85j30a0069djc.jpg">
 
 # 冰羽の博客
 
